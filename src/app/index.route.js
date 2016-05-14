@@ -1,4 +1,4 @@
-export function routerConfig ($stateProvider, $urlRouterProvider) {
+export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvider) {
   'ngInject';
   $stateProvider
     .state('home', {
@@ -19,6 +19,7 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
     .state('home.contact',{
       url:'/contact',
       template:'Work in porgress...'
-    })
+    });
+    $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
 }
