@@ -35,24 +35,6 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-.ui-view-container {
-  position: relative;
-}
-[ui-view].ng-enter,
-[ui-view].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-[ui-view].ng-enter {
-  -webkit-animation: slideInRight 0.5s;
-  animation: slideInRight 0.5s;
-}
-/*[ui-view].ng-enter-active {}*/
-[ui-view].ng-leave {
-  -webkit-animation: slideOutLeft 0.5s;
-  animation: slideOutLeft 0.5s;
-}
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
