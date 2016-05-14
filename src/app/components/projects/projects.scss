@@ -1,0 +1,29 @@
+.velov.mdl-card {
+  background: url('../assets/images/velov.jpg') center / cover;
+}
+.velov > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+.velov a {
+  color: #fff;
+}
+.cuttingstock > .mdl-card__title {
+  color: #fff;
+  height: 250px;
+  background: url('../assets/images/cuttingstock.jpg') center / cover;
+}
+.tron > .mdl-card__title {
+  color: #fff;
+  height: 350px;
+  background: url('../assets/images/tron.jpg') center / cover;
+}
+.tron > .mdl-card__supporting-text {
+  margin-bottom: auto;
+}
+.permispiste > .mdl-card__title {
+  height: 200px;
+  background: url('../assets/images/permispiste.jpg') center / cover;
+}

@@ -1,0 +1,30 @@
+landing-page .profil-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 200px;
+  background: url('../assets/images/profil.jpg') center / cover;
+}
+
+landing-page .kotlin-card-wide > .mdl-card__title {
+  height: 200px;
+  background: url('https://kotlinlang.org/assets/images/twitter-card/kotlin_800x320.png') center / cover;
+}
+
+landing-page .mix-it.mdl-card {
+  background: url('../assets/images/mix-it2016.jpg') center / cover;
+}
+
+landing-page .mix-it > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+landing-page .mix-it a{
+  color: #fff;
+}
+
+landing-page .sido > .mdl-card__title {
+  color: #fff;
+  height: 200px;
+  background: url('../assets/images/sido.jpg') center / cover;
+}

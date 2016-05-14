@@ -1,0 +1,30 @@
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Antoine Caron</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" ui-sref="home.landingpage">Blog</a>
+        <a class="mdl-navigation__link" ui-sref="home.curriculum">Curriculum</a>
+        <a class="mdl-navigation__link" ui-sref="home.projects">Projects</a>
+        <a class="mdl-navigation__link" ui-sref="home.contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Antoine Caron</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" ui-sref="home.landingpage">Blog</a>
+      <a class="mdl-navigation__link" ui-sref="home.curriculum">Curriculum</a>
+      <a class="mdl-navigation__link" ui-sref="home.projects">Projects</a>
+      <a class="mdl-navigation__link" ui-sref="home.contact">Contact</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content ui-view-container">
+    <div class="page-content" ui-view>
+    </div>
+  </main>
+</div>
