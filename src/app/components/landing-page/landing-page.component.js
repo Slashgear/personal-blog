@@ -12,6 +12,6 @@ export class LandingPageController {
 
 
 export let LandingPageComponent = {
-  templateUrl: './app/components/landing-page/landing-page.html',
+  templateUrl: 'app/components/landing-page/landing-page.html',
   controller: LandingPageController
 };
