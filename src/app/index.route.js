@@ -18,7 +18,7 @@ export function routerConfig ($stateProvider, $urlRouterProvider, $locationProvi
     })
     .state('home.contact',{
       url:'/contact',
-      template:'Work in porgress...'
+      templateUrl:'app/components/contact/contact.html'
     });
     $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
