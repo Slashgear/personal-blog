@@ -4,13 +4,23 @@
   background: url('../assets/images/polytech.jpg') center / cover;
 }
 
-.curriculum .work-experiences-card-wide > .mdl-card__title {
-  color: #45b;
-  height: 200px;
-  background: url('../assets/images/work-experiences.jpg') center / cover;
+.curriculum .zenika > .mdl-card__title {
+  height: 100px;
+  background: url("../assets/images/zenika.png") center/cover;
+  margin-top: 15px;
 }
 
-.curriculum .work-experiences-card-wide .mdl-card__title-text {
+.curriculum .worldline > .mdl-card__title {
+  height: 200px;
+  background: url('../assets/images/worldline.png') center / cover;
+}
+
+.curriculum .eolane > .mdl-card__title {
+  height: 200px;
+  background: url('../assets/images/eolane.png') center / cover;
+}
+
+.curriculum .polytech-card-wide .mdl-card__title-text {
   font-size: 56px;
 }
 
