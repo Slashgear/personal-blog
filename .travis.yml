@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '5'
+  - '4'
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./scripts/deploy.sh
+  'on':
+    branch: master
+    node: '5'
+env:
+  global:
+    - secure: >-
+        rYz1hD54ftawbPht/Zx84S+eZsqI4W659Gr/ZjvNiqo9lHBJlgtF6QwQfDCnn73EPY0H9IIU0zAvb5DEdwVBvVhGIKql0Pd/q5TOLfy/JckWFh8Kesjawd2dk84+G79uVxdwKMnpayWLi6N7XdMuMjVXbNCAiKuGE0orevb6fcPU0xDJ6wYr4OOpjqu5e1bHjrYSxQmT5B26HbrB4y+Y3od1B9KQ/n7/QW1H/zVyHv+LFK7UV4yMsrk1J9AQFxfiUev9RQZqwIrX/45AazgBbn5+gGIZem8sWu0H8JvLKmVNRWbWnkv0LaTDyuAJN116Dtn6As8u5hTTG2JqhCQulg347QikwME3jxKXHc3fWHGjsbctuu8cuytPbNW3kQvbdlLEqe+AhniIGfxdJS/BHa6UTGwqFvwqMZJEwU3OtSVSBjSG1C9sie/D7EAmWMVtXDgELG3Oe8XkxNXpuFIH9hPAAsfYz/fTigraIbCl0DQ0oNkDe3lsqpnhhfJVE/VPogNTOTVLrZ9QycGHGgUunMvREd0NekDzYrHdz8Bq6sCStZWoDJs1Atv18RQVKdDGTV9+4Li1a2wA8XklnNaUSoWs8QVDIu6wfJ5XFQWF5weIBF9F171DWCy11/UDEyMi6UXOyE8aTou1/4X4TuxLZa5XeDbySWNUjYB3sKV7O+Q=
