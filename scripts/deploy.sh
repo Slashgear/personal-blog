@@ -3,8 +3,8 @@
 if [ "$TRAVIS" = "true" ]
 then
   # git need this, on Travis-CI nobody is defined
-  git config --global user.name "Slashgear" && \
-  git config --global user.email "antoine395.caron@gmail.com"
+  git config --global user.name "Travis CI" && \
+  git config --global user.email "travis@travis-ci.org"
 fi
 
 cd dist && \

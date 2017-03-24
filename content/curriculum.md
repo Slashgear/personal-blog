@@ -5,15 +5,11 @@ description: My curriclum
 hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
 ---
 
-![Zenika](/assets/zenika.png)
-
 # Zenika
 
 I'm currently working for Zenika Lyon as Web consultant.
 
 ---
-
-![Worldline](/assets/worldline.png)
 
 # Worldline
 
@@ -29,8 +25,6 @@ I worked on:
 * Shorten Url
 
 ---
-
-![Éolane](/assets/eolane.png)
 
 # Éolane
 
