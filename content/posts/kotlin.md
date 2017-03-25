@@ -1,5 +1,5 @@
 ---
-title: Kotlin in action (French)
+title: Kotlin in action
 description: In the Mix-IT, I followed a conference by Hadi Hariri on the new langague Kotlin. Here are my impressions of this programming language .
 date: 2016-04-26
 hero: /assets/kotlin/kotlin.png
