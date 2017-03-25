@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO}
 
 if [ "$TRAVIS" = "true" ]
 then
@@ -12,4 +13,4 @@ $(npm bin)/rimraf .git && \
 git init && \
 git add . && \
 git commit -m "Deploy to GitHub Pages" && \
-git push --force "https://github.com/Slashgear/slashgear.github.io.git" master:master
+git push --force "${GIT_DEPLOY_REPO}" master:master
