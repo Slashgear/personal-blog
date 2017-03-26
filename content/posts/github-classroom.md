@@ -25,7 +25,7 @@ je préfère faire une petite liste des problèmes que j'ai pu rencontrer en tan
 ou même en tant qu'étudiant lors de la réalisation d'un TP.
 
 * **Démarrer votre TP en 5 minutes avec vos étudiants, impossible**
-Il est clair que passer une clé usb de PC en PCpour distribuer soit les sources du TP ou
+Il est clair que passer une clé usb de PC en PC pour distribuer soit les sources du TP ou
 le sujet ce n'est pas pratique. On observe facilement que certains étudiants
 ne commencent alors leur TP qu'au bout de 15/20 minutes.
 
