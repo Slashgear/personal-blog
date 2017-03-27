@@ -1,38 +1,49 @@
-import React, { PropTypes } from "react"
+import React, {PropTypes} from "react"
 
 import LatestPosts from "../../components/LatestPosts"
 import Page from "../Page"
+import ReactDisqusThread from "react-disqus-thread"
 
 import styles from "./index.css"
 
-const Post = (props) => {
-  // it's up to you to choose what to do with this layout ;)
-  const pageDate = props.head.date ? new Date(props.head.date) : null
+const isClient = typeof window !== "undefined";
 
-  return (
-    <Page
-      { ...props }
-      header={
-        <div>
-          <header className={ styles.header }>
-            {
-              pageDate &&
-              <time key={ pageDate.toISOString() }>
-                { pageDate.toDateString() }
-              </time>
+
+const Post = (props) => {
+    // it's up to you to choose what to do with this layout ;)
+    const pageDate = props.head.date ? new Date(props.head.date) : null
+
+    return (
+        <Page
+            { ...props }
+            header={
+                <div>
+                    <header className={ styles.header }>
+                        {
+                            pageDate &&
+                            <time key={ pageDate.toISOString() }>
+                                { pageDate.toDateString() }
+                            </time>
+                        }
+                    </header>
+                </div>
             }
-          </header>
-        </div>
-      }
-    >
-      <hr />
-      <LatestPosts />
-    </Page>
-  )
+        >
+            {
+                isClient &&
+                <ReactDisqusThread
+                    shortname="https-slashgear-github-io"
+                    identifier={window.location.pathname}
+                    url={window.location.href}/>
+            }
+            <hr />
+            <LatestPosts />
+        </Page>
+    )
 }
 
 Post.propTypes = {
-  head: PropTypes.object.isRequired,
+    head: PropTypes.object.isRequired,
 }
 
 export default Post
