@@ -8,7 +8,7 @@ layout: Post
 
 # Github classroom, pourquoi vous devriez l'utiliser
 
-**Lorsque j'ai commencé d'enseigner en septembre dernier, je recherchais une solution
+**Lorsque j'ai commencé à enseigner en septembre dernier, je recherchais une solution
 pour pouvoir suivre facilement l'avancée des étudiants pendant leur TP. J'ai d'abord songé à leur
 demander l'accès à leur repository Github/Bitbucket... mais je me suis vite rendu compte que ça
 n'allait pas être gérable durablement. J'ai alors cherché une solution clé en main.**
