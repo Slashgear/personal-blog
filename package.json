@@ -4,6 +4,7 @@
   "homepage": "http://slashgear.github.io",
   "twitter": "Slashgear_",
   "repository": "https://github.com/Slashgear",
+  "googleAnalytics": "UA-77930802-1",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",
@@ -134,5 +135,9 @@
     "warning": "^3.0.0",
     "webpack": "^1.11.0",
     "whatwg-fetch": "^0.11.0"
+  },
+  "dependencies": {
+    "react-ga": "^2.1.2",
+    "react-google-analytics": "^0.2.0"
   }
 }

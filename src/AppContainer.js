@@ -1,4 +1,4 @@
-import React, { PropTypes } from "react"
+import React, {PropTypes} from "react"
 
 import "./index.global.css"
 import "./highlight.global.css"
@@ -8,20 +8,24 @@ import DefaultHeadMeta from "./components/DefaultHeadMeta"
 import Header from "./components/Header"
 import Content from "./components/Content"
 import Footer from "./components/Footer"
+import GoogleAnalyticsTracker from "./components/GoogleAnalyticsTracker"
 
 const AppContainer = (props) => (
-  <Container>
-    <DefaultHeadMeta />
-    <Header />
-    <Content>
-      { props.children }
-    </Content>
-    <Footer />
-  </Container>
+    <GoogleAnalyticsTracker params={ props.params }>
+    <Container>
+        <DefaultHeadMeta />
+        <Header />
+        <Content>
+            { props.children }
+        </Content>
+        <Footer />
+    </Container>
+    </GoogleAnalyticsTracker>
 )
 
 AppContainer.propTypes = {
-  children: PropTypes.node,
+    children: PropTypes.node,
+    params: PropTypes.object,
 }
 
 export default AppContainer
