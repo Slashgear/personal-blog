@@ -22,7 +22,7 @@ I was able to work alone or in teams for several years.This site lists
 many of the IT skills acquired Polytech but some have not been presented
 here.
 
-I am currently working for [Zenika](http://zenika.com/) as Junior Developer.
+I am currently working for [Zenika](http://zenika.com/) as Web Developer.
 
 On this blog you will see articles in French and in English about technologies I use and appreciate.
 I may share my experience as a teacher in the university of Lyon.
