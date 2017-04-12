@@ -17,7 +17,8 @@
     "imagemin": "./node_modules/.bin/imagemin content/assets/*  --out-dir=content/assets"
   },
   "phenomic": {
-    "CNAME": false
+    "CNAME": false,
+    "offline": true
   },
   "#babel": "webpack-(development|production) are useful for webpack 2, otherwise use development|production",
   "babel": {
