@@ -14,7 +14,7 @@
     "pretest": "npm run lint",
     "test": "npm run build",
     "deploy": "./scripts/deploy.sh",
-    "imagemin": "./node_modules/.bin/imagemin content/assets/*  --out-dir=content/assets"
+    "imagemin": "node ./scripts/imagemin.js"
   },
   "phenomic": {
     "CNAME": false,
@@ -112,7 +112,12 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "history": "^2.0.0",
+    "imagemin": "^5.2.2",
     "imagemin-cli": "^3.0.0",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.0",
+    "imagemin-svgo": "^5.2.1",
     "json-loader": "^0.5.2",
     "npm-run-all": "^1.7.0",
     "phenomic": "^0.20.4",

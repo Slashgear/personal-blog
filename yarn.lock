@@ -3079,7 +3079,7 @@ imagemin-cli@^3.0.0:
     imagemin-optipng "^5.0.0"
     imagemin-svgo "^5.0.0"
 
-imagemin-gifsicle@^5.0.0:
+imagemin-gifsicle@^5.0.0, imagemin-gifsicle@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/imagemin-gifsicle/-/imagemin-gifsicle-5.1.0.tgz#2e4ddcda2a109b221cabaec498e1e2dd28ca768f"
   dependencies:
@@ -3087,7 +3087,7 @@ imagemin-gifsicle@^5.0.0:
     gifsicle "^3.0.0"
     is-gif "^1.0.0"
 
-imagemin-jpegtran@^5.0.0:
+imagemin-jpegtran@^5.0.0, imagemin-jpegtran@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/imagemin-jpegtran/-/imagemin-jpegtran-5.0.2.tgz#e6882263b8f7916fddb800640cf75d2e970d2ad6"
   dependencies:
@@ -3103,14 +3103,22 @@ imagemin-optipng@^5.0.0:
     is-png "^1.0.0"
     optipng-bin "^3.0.0"
 
-imagemin-svgo@^5.0.0:
+imagemin-pngquant@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/imagemin-pngquant/-/imagemin-pngquant-5.0.0.tgz#7d72405778caba9c510eb3cb4590c8413383560e"
+  dependencies:
+    exec-buffer "^3.0.0"
+    is-png "^1.0.0"
+    pngquant-bin "^3.0.0"
+
+imagemin-svgo@^5.0.0, imagemin-svgo@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/imagemin-svgo/-/imagemin-svgo-5.2.1.tgz#74d593ce4cbe1b87efdb3d06a4a56078f71a8147"
   dependencies:
     is-svg "^2.0.0"
     svgo "^0.7.0"
 
-imagemin@^5.0.0:
+imagemin@^5.0.0, imagemin@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/imagemin/-/imagemin-5.2.2.tgz#e14a0f357f8810266875eda38634eeb96f6fbd16"
   dependencies:
@@ -4708,6 +4716,14 @@ plur@^2.0.0, plur@^2.1.2:
 pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
+
+pngquant-bin@^3.0.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/pngquant-bin/-/pngquant-bin-3.1.1.tgz#d124d98a75a9487f40c1640b4dbfcbb2bd5a1fd1"
+  dependencies:
+    bin-build "^2.0.0"
+    bin-wrapper "^3.0.0"
+    logalot "^2.0.0"
 
 portfinder@^1.0.2:
   version "1.0.13"
