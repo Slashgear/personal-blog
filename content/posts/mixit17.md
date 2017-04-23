@@ -5,7 +5,7 @@ description:
  j'ai pu suivre des talks sur des domaines très variés allant de l'ergonomie, au CSS, à l'organisation du temps
  de travail, aux nouveaux langages etc... Comme toujours Mixit a tenu ses promesses.
 date: 2017-04-20
-hero: /assets/mixit17/mixit-17.jpg
+hero: /assets/mixit17/mixit17.jpg
 layout: Post
 ---
 
@@ -92,7 +92,7 @@ alors foncez la voir si pour vous les PWA sont un monde obscure.
 
 ## La soirée à l'hotel de ville
 
-![Soirée Mix-it 2017](/assets/mixit17/soirée.jpg)
+![Soirée Mix-it 2017](/assets/mixit17/soiree.jpg)
 
 ## Jour 2
 
