@@ -145,6 +145,7 @@ Je reste quand même sur ma faim avec certaines keynotes, mais le cru 2017 reste
 bonne année.
 
 _Merci [@npayot](https://twitter.com/npayot) (aka flipper le dauphin) serial blagueur et photographe à ses heures perdues pour la photo de l'article_
+
 _Merci à [@hdurix](https://twitter.com/hdurix) pour la revue_
 
 
