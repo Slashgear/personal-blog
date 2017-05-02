@@ -25,6 +25,8 @@ Tout a commencé avec une super introduction musicale autour de la gestion de gr
 géré d'une main de maître ...du moins d'une baguette de chef d'orchestre par Samuel Couffignal.
 Très bel exemple de l'autogestion d'un groupe et du pouvoir d'action qu'un leader peut avoir sur un groupe.
 
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215505962" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 Je vous passe l'anecdotique présentation de la monnaie locale : *[La gonette](http://www.lagonette.org/)*
 
 ## Jour 1
@@ -37,6 +39,8 @@ Beaucoup d'avantages sur cette plateforme, notamment le compilateur qui a vraime
 L'analyse d'erreur de compilation est très fine et donne beaucoup d'informations sur la résolution de l'erreur.
 Je reste cependant pas du tout convaincu par la syntaxe que je trouve beaucoup trop concise
 et du coup pas forcément lisible. Et oui ceci est une fonction qui fait juste une addition.
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215620393" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
 ```elm
 add x y =
@@ -54,6 +58,7 @@ Difficile de rentrer dans certains détails qui font polémique notamment la con
 des resources, mais cette présentation sait nous montrer les bases pour qu'on puisse commencer à faire joujou
 avec Electron.
 
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215528389" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
 ### Éthique et tac !
 
@@ -62,6 +67,9 @@ La conférence a abordé des thématiques comme les responsabilisations du déve
 Sans parler d'un monde à la _Mister Robot,_ on peut quand même faire le constat que notre sphère privée et intime
 ne nous appartient aujourd'hui plus tout à fait. A voir absolument, surtout si un complotiste sommeille en vous.
 
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215558307" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 ### 🦄 is awesome!!
 
 Dans le monde du web journalisme on parle souvent de titre putaclick et ce talk aurait
@@ -69,6 +77,8 @@ quand même eu un prix pour son nom : _Css is awesome!_
 Derrière ce titre très racoleur se cachait une intervention très bien détaillée sur la puissance propre de CSS.
 Par des exemples simples, Igor Labori nous partage quelques tricks CSS bien pratiques mais également quelques
 balises HTML5 oubliées.
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215621504" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
 <details>
     <summary>Sérieusement vous connaissez cette balise ?</summary>
@@ -83,12 +93,17 @@ Outre la présentation des approximatives prochaines features (non-beta) de Kotl
 son expérience de créateur de langage. A voir si on veut se tenir au courant des nouveautés de Kotlin et si
 on s'intéresse à la conception de langage.
 
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215556547" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 ### Progressive Web Apps, rien de nouveau
 
 Un peu déçu de la présentation sur les progressive web apps, je ne m'attendais pas
 à une initiation PWA en 2017 sachant que ces concepts avaient été déjà présentés à MiXiT
 il y a 2 ans. Mais après je fais mon difficile, la présentation était très complète pour une initiation
 alors foncez la voir si pour vous les PWA sont un monde obscure.
+
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215625792" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 
 ## La soirée à l'hotel de ville
 
@@ -147,5 +162,6 @@ bonne année.
 _Merci [@npayot](https://twitter.com/npayot) (aka flipper le dauphin) serial blagueur et photographe à ses heures perdues pour la photo de l'article_
 
 _Merci à [@hdurix](https://twitter.com/hdurix) pour la revue_
+_Crédit vidéo MiXiT_
 
 
