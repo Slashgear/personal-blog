@@ -129,6 +129,8 @@ Quand un passioné nous montre son bébé/son chef d'oeuvre autour de CSS et de 
 seul `div` et uniquement du CSS, c'est quand même beau. Le talk est en plus très bien conçu pour pouvoir comprendre la démarche
 et les solutions techniques mises en place. ([Le lien vers la page de ses drapeaux](https://pixelastic.github.io/css-flags/))
 
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/216848472" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
 ![Fun with flags](/assets/mixit17/fun.gif)
 
 ### Un revenu universel démystifié
@@ -137,6 +139,7 @@ Quand on voit cette conf on se dit que la fête de l'huma ça a bien changé, at
 Ce talk, qu'on pourrait critiquer dans le contexte actuel des élections cache en fait une présentation assez claire sur ce qu'est
 concrêtement le revenu universel.
 
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/217015501" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
 ### Random talk => se libérer du temps
 
@@ -145,6 +148,7 @@ Est on prêt à se passer de 20% de notre salaire pour enfin avoir du temps pour
 Tout cela était le sujet du random talk auquel j'ai eu le droit de participer le deuxième jour.
 Une belle introduction au *travailler autrement*.
 
+<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/217023172" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
 ### Cosmogonie, informatique et trou noir, un super vrai 👽 pour finir
 
