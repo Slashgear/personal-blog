@@ -5,9 +5,30 @@ description: My curriclum
 hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
 ---
 
-# Zenika
 
-I'm currently working for Zenika Lyon as Web consultant.
+
+# Aya
+
+I'm currently working for [Aya](http://aya-experience.com), the digital agency of Zenika. I'm working on end user
+interfaces with framework (Angular, React).
+
+Example :
+
+<div style="position:relative;height:0;padding-bottom:56.25%">
+<iframe src="//unkipple.com" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0"></iframe>
+</div>
+
+---
+
+# Engineering school teacher
+
+I work for Polytech Lyon a consultant in order to teach students some recent technologies.
+Last courses were :
+- [Angular2 workshop](/posts/angular-training)
+- [Docker workshop](/posts/docker-training)
+- How to setup Continuous Integration and Continuous Delivery on Cloud Plateforms
+- Design Pattern in Java
+- Clean Code and Tests
 
 ---
 

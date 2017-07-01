@@ -6,7 +6,7 @@ import Page from "../Page"
 const Homepage = (props) => {
   return (
     <Page { ...props }>
-      <LatestPosts />
+      <LatestPosts numberOfPosts={30} />
     </Page>
   )
 }
