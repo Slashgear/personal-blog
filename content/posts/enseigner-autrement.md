@@ -15,11 +15,13 @@ les méthodes d'enseignement que j'ai pu tester avec mes 80 étudiants.
 
 Je vois aujourd'hui deux soucis dans l'enseignement supérieur (mais cela reste valable à plusieurs niveaux)
 
-**Les étudiants dans la majorité visent la moyenne et le passage de leur année plutôt que d'essayer réèlement de comprendre.**
+**Les étudiants dans la majorité visent la moyenne et le passage de leur année. Ils devraient plutôt essayer de comprendre ce qu'ils font et pourquoi ils le font.**
 
 Les étudiants se focalisent trop sur la note et pas assez sur les connaissances et compétences qu'ils peuvent acquérir.
 La note devrait refleter les compétences de l'étudiant, au final, on s'en sert juste pour discerner
 les étudiants qui travaillent et ceux qui ne font rien.
+La note ne reflète plus vraiment ce que l'étudiant maîtrise, mais plutôt son "classement" dans le groupe d'élève auquel il
+appartient.
 
 **On teste la compréhension des étudiants quand il est trop tard.**
 
@@ -42,7 +44,7 @@ Les quizz sont un super outil pour analyser votre TD, ce qui a été compris ou 
 Mais ils permettent également de contraindre les étudiants à écouter/ participer. En effet, s'ils ne suivent pas pendant le cours,
 ils vont difficilement pouvoir répondre.
 
-Une petite astuce que j'utilise pour mes quizz:
+Petites astuces que j'utilise pour mes quizz:
 - Les étudiants ont accès à Internet, leurs notes pendant le cours, les slides etc.
 - 1 min 30 par question
 - Les étudiants ne peuvent pas communiquer entre eux, si j'ai le moindre doute au prochain quizz ils auront moitié moins de temps que les autres.
@@ -91,11 +93,11 @@ Ainsi, pour le deuxième TP, ils joueront naturellement le jeu.
 N'hésitez pas à ne pas corriger le travail d'un élève si il vous fournit un travail non terminé ou baclé.
 
 
-# Conseils pour futur professeurs
+# Conseils pour futurs professeurs
 
-Si vous aussi, vous avez l'envie de partager vos compétences, votre passion avec des étudiants, je ne peux que vous incitez à
+Si vous aussi, vous avez l'envie de partager vos compétences, votre passion avec des étudiants, je ne peux que vous inciter à
 tenter l'aventure. N'hésitez pas à contacter vos anciennes écoles, ou bien les écoles proches de chez vous et voir avec eux s'ils recherchent
-des interventions. Je suis presque sûr que si vous le proposez un sujet qui vous passione, ils trouveront un créneau pour que vous puissiez faire un
+des interventions. Je suis presque sûr que si vous proposez un sujet qui vous passione, ils trouveront un créneau pour que vous puissiez faire un
 atelier avec les étudiants.
 
 **Commencez petit avec des interventions de 4h ou 8h maximum.**
