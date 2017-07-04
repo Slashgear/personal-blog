@@ -15,7 +15,7 @@ interfaces with framework (Angular, React).
 Example :
 
 <div style="position:relative;height:0;padding-bottom:56.25%">
-<iframe src="//unkipple.com" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0"></iframe>
+<iframe src="http://unkipple.com" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0"></iframe>
 </div>
 
 ---
