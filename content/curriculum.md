@@ -12,12 +12,6 @@ hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
 I'm currently working for [Aya](http://aya-experience.com), the digital agency of Zenika. I'm working on end user
 interfaces with framework (Angular, React).
 
-Example :
-
-<div style="position:relative;height:0;padding-bottom:56.25%">
-<iframe src="http://unkipple.com" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0"></iframe>
-</div>
-
 ---
 
 # Engineering school teacher
