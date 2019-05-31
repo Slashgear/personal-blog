@@ -2,7 +2,7 @@
 title: Enseigner autrement
 description: Etant jeune prof à l'université, j'ai la volonté de proposer des cours intéressants pour les étudiants tout en appliquant de nouvelles pratiques d'enseignement. Voici mes retours sur ma première année en temps que professeur à temps partiel.
 date: 2017-06-30
-hero: /assets/william-iven-19843.jpg
+hero: ./assets/william-iven-19843.jpg
 layout: Post
 ---
 

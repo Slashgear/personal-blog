@@ -2,11 +2,9 @@
 title: Generator Rancher Catalog
 description: If you want to generate your Rancher catalog entry simply, this yeoman generator is here for you, so give it a try.
 date: 2016-06-20
-hero: /assets/rancher.jpg
+hero: ./assets/rancher.jpg
 layout: Post
 ---
-
-# Generator Rancher Catalog
 
 You can add private catalog entry in your Rancher instances, but creating
 configuration files could be really hard.

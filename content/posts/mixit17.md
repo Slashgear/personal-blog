@@ -9,8 +9,6 @@ hero: /assets/mixit17/mixit17.jpg
 layout: Post
 ---
 
-## MiXiT 2017
-
 Cette fin de semaine c'était la nouvelle édition de la super _conférence
 lyonnaise avec des crêpes et du coeur._ Malgré le tirage au sort (très contesté) mis en place cette année,
 j'ai réussi a obtenir le _golden ticket_.

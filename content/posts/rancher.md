@@ -2,11 +2,9 @@
 title: Rancher - How to
 description: I use the Rancher service for one of my projects. In order to share this cool discovery, I've made an article about "How to deploy applications with Rancher"
 date: 2016-06-13
-hero: /assets/rancher.jpg
+hero: ./assets/rancher.jpg
 layout: Post
 ---
-
-# Rancher, un orchestrateur petit mais puissant
 
 Mon expérience en tant que stagiaire chez Zenika m’a amené à utiliser
 Rancher pour orchestrer mes conteneurs Docker. Je vous présente ici un
@@ -50,7 +48,7 @@ car l’accès est par défaut ouvert à tous. Par la suite,  vous pourrez
 activer l’authentification,et ainsi facilement configurer des comptes
 pour vos utilisateurs.
 
-![Interface graphique de Rancher](/assets/rancher/Environnement.png)
+![Interface graphique de Rancher](./assets/rancher/environnement.png)
 
 ### Déployer une application simple avec Rancher
 
@@ -72,7 +70,7 @@ avec Rancher par l’intermédiaire d’un outil en ligne de commande
 Dans un premier temps il faut définir des machines sur lesquelles
 déployer votre application.
 
-![Création de machines](/assets/rancher/machine.png)
+![Création de machines](./assets/rancher/machine.png)
 
 Rancher propose des connecteurs à plusieurs services cloud du web comme
 Amazon EC2, Azure, Digital Ocean, mais vous pouvez également ajouter
@@ -83,14 +81,14 @@ Pour l’exemple, j’ai ajouté deux machines au cluster nommées node1 et
 node2, et j’ai ajouté l’hôte Rancher lui-même self
 (c’est possible mais non recommandé).
 
-![Hosts](/assets/rancher/host.png)
+![Hosts](./assets/rancher/host.png)
 
 #### Créer son service
 
 Il faut maintenant créer une stack pour accueillir notre service whoami.
 Dans la logique Rancher, une stack est un ensemble de services.
 
-![Stack](/assets/rancher/stack.png)
+![Stack](./assets/rancher/stack.png)
 
 On peut remarquer que pour l’ajout d’une stack, on peut importer un
 fichier `docker-compose.yml` et un fichier `rancher-compose.yml`.
@@ -111,7 +109,7 @@ Une fois la stack créée en lui donnant uniquement un nom, il faut
 ajouter notre service whoami. Pour cela il suffit de cliquer sur
 “Add service” et de le définir comme cela.
 
-![Whoami example](/assets/rancher/whoami.png)
+![Whoami example](./assets/rancher/whoami.png)
 
 On remarque que seul le nom du service, l’image docker et le “port map”
 ont été définis (ie: c’est un exemple simple, vous pouvez voir par les
@@ -134,7 +132,7 @@ Mesos mais pour cet article, je me suis limité à l’utilisation de Cattle.
 Après quelques temps de démarrage, votre service whoami devrait être
 disponible.
 
-![Start](/assets/rancher/start.png)
+![Start](./assets/rancher/start.png)
 
 Si vous cliquez sur le “80”, vous devez accéder au service whoami.
 Il vous donnera plusieurs informations sur lui-même, notamment son nom.
@@ -158,7 +156,7 @@ Une fois le port libéré , il faut donc créer un loadbalancer qui
 distribue la charge entre les instances de whoami. Dans la stack,
 cliquez sur “Add Load Balancer”
 
-![Load balancer](/assets/rancher/loadb.png)
+![Load balancer](./assets/rancher/loadb.png)
 
 Une fois le loadbalancer créé, on peut donc augmenter la scale de son
 application sans avoir de problème d’allocation de port. Si vous cliquez
@@ -168,7 +166,7 @@ application sans avoir de problème d’allocation de port. Si vous cliquez
 A ce stade du déploiement, on peut se demander, ce qu’il en est de
 l’infrastructure des machines  créées plus tôt.
 
-![Hosts](/assets/rancher/host2.png)
+![Hosts](./assets/rancher/host2.png)
 
 Rancher a déployé les conteneurs docker de façon équilibrée entre les
 différentes machines. On peut définir nos propres règles de déploiement
@@ -186,7 +184,7 @@ architectures plus complexes grâce à Rancher, et c’est là tout son
 intérêt. Voici l’architecture des services de l’un des projets que j’ai
 déployé grâce à lui.
 
-![Hosts](/assets/rancher/microservices.png)
+![Hosts](./assets/rancher/microservices.png)
 
 
 ### Un « blue/green deployement »  et une “rolling upgrade” en 5 minutes
@@ -202,7 +200,7 @@ services :
 
 #### La rolling upgrade (remplacement d’un service par un autre)
 
-![Hosts](/assets/rancher/indiana.gif)
+![Hosts](./assets/rancher/indiana.gif)
 
 #### Le blue/green deployement
 
@@ -232,7 +230,7 @@ chaque nouveau container qu’il crée. Cela a plusieurs avantages:
 
 ### Un catalogue qui s’enrichit
 
-![Rancher catalogue](/assets/rancher/catalogue.png)
+![Rancher catalogue](./assets/rancher/catalogue.png)
 
 
 Rancher possède son propre catalogue d’applications, ces applications

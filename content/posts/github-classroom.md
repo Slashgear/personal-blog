@@ -2,11 +2,9 @@
 title: Github classroom - un outil à tester
 description: J'ai récemment essayé Github Classroom avec mes étudiants de 4ème année de l'école Polytech Lyon. Je vous propose ici mes retours sur cet outil à destination des enseignants pour le suivi de TP.
 date: 2017-03-25
-hero: /assets/github-classroom/logo.jpg
+hero: ./assets/github-classroom/logo.jpg
 layout: Post
 ---
-
-# Github classroom, pourquoi vous devriez l'utiliser
 
 **Lorsque j'ai commencé à enseigner en septembre dernier, je recherchais une solution
 pour pouvoir suivre facilement l'avancée des étudiants pendant leur TP. J'ai d'abord songé à leur
@@ -117,7 +115,7 @@ Pour terminer, [voici un exemple de TP que j'ai configuré pour mes étudiants.]
 Une fois votre TP déposé sur un dépôt Github, il ne vous reste plus qu'à définir une `instance`
 de TP depuis l'interface de Github Classroom.
 
-![Créer un assignement](/assets/github-classroom/create-assignement.png)
+![Créer un assignement](./github-classroom/create-assignement.png)
 
 Quelques petites astuces pour créer vos _assignements_ :
 

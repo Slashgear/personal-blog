@@ -1,15 +1,13 @@
 language: node_js
-node_js:
-  - '7'
+
+script:
+  - yarn build
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: ./scripts/deploy.sh
-  'on':
+  provider: pages
+  skip-cleanup: true
+  local_dir: public
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  target_branch: master
+  on:
     branch: src
-    node: '7'
-env:
-  global:
-    - secure: >-
-        scK9ZM9Qkd+2cGstROrBkWHHk5rLPVoo/+y1l7Jyi+uLzarPxi+dx11Mqoh9lNQlbhLJJ6J26Z2mgn5g/RJq80k856NHI+SjBMwBPymrz96YikLCa6bSuofGhQVWEokIQNEJD6l1joJhVgcTZQuly/kzvTF/TvwLUOZZPYxPRji3PY2lrbP2JEOt/aV850xPQQ+1eusx66CW0pTH+hVA8ZW15iyFEXgxkGUlLoL7pTrznQW1RpUT+oInYYF+At1ixS6yyJOjf2U93fflDEeXBRDLkV6eb2/sXiCx/FX6GNNs8avxOkfJa7HI4WGFT65rqX3jEgRfjaDB+q6oIB27BBKGT6UakEAjrFG0ANP4wltC1YaQMhxfB2eEe0ah4jU9kXCH01cVY9xsRLKxXaeKU803knnUIfI6j6Yv9OOzgtIyK+XyoX6HgmMMU739+yvos1W0PECu4/RLclCuIcsUC4wHaOk5k/dyPWgKeudLFun35JzwMJQuwZgERngGiBXlh+Z83JpbIyGPgQyz/68QwQaI2wJZGHxLhODhr87k9XahF7ZgMSe+xjG/cfpudiDxF9W0HGnUqcO3z21mDRmT6gIrgEyie4/+XMSP6YPQDuTDq0njuj2OwZ6l24eM++Ty7zdxpAoo645mJBiehw533BMXdvqeBRZmCgjT4N1sC7w=
-    - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/Slashgear/slashgear.github.io.git

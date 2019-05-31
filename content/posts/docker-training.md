@@ -2,11 +2,9 @@
 title: Docker basics
 description: As a teacher in Polytech Lyon, I had the opportunity to give course about Docker as an initiation. Here are the slides made with RevealJS.
 date: 2016-09-10
-hero: /assets/docker-training/igor-ovsyannykov-151127.jpg
+hero: ./assets/docker-training/igor-ovsyannykov-151127.jpg
 layout: Post
 ---
-
-# Docker basics
 
 Those are my slides for the course I gave about docker to students of Polytech Lyon in september 2016.
 
