@@ -12,7 +12,7 @@ Instead, I would like to warn people of a trend that is endangering the web as w
 
 # TL;DR
 
-> I don't think Dev.to is a problem but more the way authors use it. They should not post their content only on dev.to.
+I don't think Dev.to is a problem but how authors use it. Authors should not post their content only on dev.to. You should not publish content on Dev.to. You should **share** content on Dev.to.
 
 ## "Actually, what's your problem with Dev.to ?"
 
@@ -62,6 +62,6 @@ All authors should have their own personal blog where they publish the content. 
 
 Dev.to has this feature, which is very rare. **I would really like this feature to be highlighted** so that the authors are aware of the problem.
 
-For example, this post is available on my personal blog and its content is shared here on Dev.to. 
+For example, this post is available on [my personal blog](https://slashgear.github.io/posts/stop-dev-to/) and its content is shared here on Dev.to. 
 
 I also worked on a project for an open source syndication platform named ["Open Blog"](https://open-blog.dev/) in order to raise awareness about not being the owner of your content. If you liked this article, come take a look at it.
