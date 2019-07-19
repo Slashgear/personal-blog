@@ -12,7 +12,7 @@ Instead, I would like to alert people to a trend that is endangering the web as 
 
 # TL;DR
 
-> I don't think Dev.to is a problem but how authors use it. Authors should not post their content only on dev.to.
+> I don't think Dev.to is a problem but how authors use it. Authors should not post their content only on dev.to. You should not publish content on Dev.to. You should **share** content on Dev.to.
 
 ## "But in fact, what's your problem with Dev.to ?"
 
@@ -56,10 +56,10 @@ It is necessary to be responsible for the publication of its content on the Inte
 - To promote your blog
 - To avoid having your copyrights stolen
 
-All authors should have their own personal blog where they publish the content. They can then share it on other platforms by indicating a `canonical url` pointing to their blog page.
+All authors should have their own personal blog where they publish the content. They can then share it on other platforms by setting a `canonical url` targeting to their blog page.
 
 Dev.to has this feature, which is very rare. **I would really like this feature to be highlighted** so that the authors are aware of the problem.
 
-For example, this post is available on my personal blog and this content is shared here on Dev.to. 
+For example, this post is available on [my personal blog](https://slashgear.github.io/posts/stop-dev-to/) and this content is shared here on Dev.to. 
 
 I also worked on a project a side project for an open source syndication platform named ["Open Blog"](https://open-blog.dev/) in order to raise awareness about not being the owner of your content. If you liked this article, don't hesitate to take a look at it.
