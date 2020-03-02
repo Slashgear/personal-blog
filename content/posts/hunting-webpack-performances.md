@@ -1,12 +1,14 @@
 ---
-title: How did I cut the time to webpack build for my project in half?
+title: How to boost the speed of your webpack build?
 description: A story of performance optimization and application of the Pareto principle for a webpack build that has become far too long.
 date: 2020-03-01
 hero: ./assets/hunting-webpack-performances/julian-hochgesang-0Y_YNPW5qds-unsplash.jpg
 layout: Post
 ---
 
-Who never complained about the infinite duration of a webpack build on a project that got older or fatter?
+# How did I cut the time to webpack build for my project in half?
+
+Who never complained about the infinite duration of a webpack build on a project ?
 I'm currently working on a big web application coded in React/Redux with server side rendering.
 The application exists since 2015 and it has evolved a lot since then ([Our company blog](https://tech.m6web.fr/)).
 
@@ -17,26 +19,28 @@ The application exists since 2015 and it has evolved a lot since then ([Our comp
 > Never, ever, ever, ever work on performance improvements without monitoring!
 
 If you want to optimize the duration of a job, **you have to monitor precisely** the duration of it and all its sub-steps.
-By doing that, then you can really focus on what really takes biggest amount of time.
+By doing that, you can really focus on the most expensive task.
 This will save you from wasting time on optimizations that will have little impact on the system as a whole.
 
 **Use existing monitoring tools! Create them if they don't exist!**
 
 ## What was the problem ?
 
-For several weeks/months my colleagues had been complaining about the length of our `yarn build' command. 
-The purpose of this command is to build the distributable package of our application in a production target with webpack.
+For several weeks/months my colleagues had been complaining about the length of our `yarn build` command. 
+The purpose of this command is to build the distributable package of our application in a production target with _webpack_.
 
 I even heard:
-> "This command, I don't run it locally anymore, it takes too much time."
-
-> "My computer starts ventilating heavily every time I run this command. There's nothing else I can do!"
+* "This command, I don't run it locally anymore, it takes too much time."
+* "My computer starts ventilating heavily every time I run this command. There's nothing else I can do!"
 
 Depending on the machine on which the build was launched, it took **between 5 and 12 minutes**.
+It is not possible to have a build that takes so long.
+`webpack` is not a slow bundler. 
+It is our use of `webpack` that is not convenient.
 
 ## The primary pitfall is the bias
 
-Since this command launches a webpack build in `production' mode, I figured that the culprit was webpack.
+Since this command launches a webpack build in `production` mode, I figured that the culprit was webpack.
 Given that I've dug deep into webpack to design a complete workshop to learn how to use it from scratch (https://webpack-workshop.netlify.com), I thought it would be interesting to focus on this performance concern.
 Fortunately, every month, one day is dedicated to R&D. So at the end of January I tried to improve the situation.
 
@@ -50,6 +54,7 @@ I started off with a preconceived notion,
 >"This is definitely the stage that takes the longest."
 
 Nothing was objective in my analysis.
+To improve the performance of an application it is necessary to focus on objective facts.
 
 ## Pareto principle
 
@@ -127,7 +132,8 @@ I observe that for 2222 Javascript modules, webpack takes 2mins **but** for only
 
 Once the migration from `node-sass` to `sass` (new Sass re-implementation) and the update of `sass-loader`, I was shocked!
 It took me about 10 minutes because there were few breaking changes and I **gained more than 1min30** on the build time.
-The sadness of telling me that I had lost a morning was quickly replaced by the joy of having managed to reduce the build time by a quarter.
+
+I lost a morning on gaining 17 seconds and I spent 10 minutes to win 1min30.🤣
 
 ### IgnorePlugin, TerserPlugin
 
