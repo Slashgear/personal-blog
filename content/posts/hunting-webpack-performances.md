@@ -14,7 +14,7 @@ The application exists since 2015 and it has evolved a lot since then ([Our comp
 
 ## TLDR;
 
-> Never, ever, ever, ever,ever work on performance improvements without monitoring!
+> Never, ever, ever, ever work on performance improvements without monitoring!
 
 If you want to optimize the duration of a job, **you have to monitor precisely** the duration of it and all its sub-steps.
 By doing that, then you can really focus on what really takes biggest amount of time.
