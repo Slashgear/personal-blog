@@ -66,7 +66,7 @@ Then I remembered the Pareto principle.
 There is probably one step that takes up most of the webpack build time.
 Pareto principle adapted to webpack could mean _"80% of the build time is caused by 20% of the config"_
 
-*Let's find the cultprit ! 🎉*
+*Let's find the culprit ! 🎉*
 
 I had to determine the build time of each loader, of each plugin.
 I was very lucky, the webpack community has already proposed a plugin that allows to measure everything.
