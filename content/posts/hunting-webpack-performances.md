@@ -25,14 +25,14 @@ This will save you from wasting time on optimizations that will have little impa
 
 ## What was the problem with webpack ?
 
-For several weeks/months my colleagues had been complaining about the duration of our `yarn build` command. 
+For several weeks/months my colleagues have been complaining about the duration of our `yarn build` command. 
 The purpose of this command is to build the distributable package of our application in a production target with _webpack_.
 
 I even heard:
 * "This command, I don't run it locally anymore, it takes too much time."
 * "My computer starts ventilating heavily every time I run this command. There's nothing else I can do!"
 
-Depending on the machine on which the build was launched, it took **between 5 and 12 minutes**.
+Depending on the machine on which the build was launched, it tooks **between 5 and 12 minutes**.
 It is not possible to have a build that takes so long.
 `webpack` is not a slow bundler. 
 It is our use of `webpack` that makes it slow.
