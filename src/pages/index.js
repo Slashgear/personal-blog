@@ -36,6 +36,26 @@ const BlogIndex = ({ data, location }) => {
                   __html: node.frontmatter.description || node.excerpt,
                 }}
               />
+              {node.frontmatter.hero && (
+                <picture>
+                  <source
+                    srcSet={node.frontmatter.hero.childImageSharp.fluid.srcSetWebp}
+                    sizes="30vw"
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={node.frontmatter.hero.childImageSharp.fluid.srcSet}
+                    sizes="30vw"
+                    type="image/png"
+                  />
+                  <img
+                    className="article-item__picture"
+                    src={node.frontmatter.hero.childImageSharp.fluid.src}
+                    alt={title}
+                    width="100%"
+                  />
+                </picture>
+              )}
             </section>
           </article>
         )
@@ -65,6 +85,13 @@ export const pageQuery = graphql`
             title
             description
             lang
+            hero {
+                childImageSharp {
+                    fluid(maxWidth: 600) {
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
+                    }
+                }
+            }
           }
         }
       }

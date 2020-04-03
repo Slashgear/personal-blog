@@ -37,6 +37,27 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           >
             {post.frontmatter.date}
           </p>
+
+          {post.frontmatter.hero && (
+            <picture>
+              <source
+                srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSetWebp}
+                sizes="30vw"
+                type="image/webp"
+              />
+              <source
+                srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSet}
+                sizes="30vw"
+                type="image/png"
+              />
+              <img
+                className="article-item__picture"
+                src={post.frontmatter.hero.childImageSharp.fluid.src}
+                alt={post.frontmatter.title}
+                width="100%"
+              />
+            </picture>
+          )}
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -61,14 +82,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={`posts${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={`posts${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -96,6 +117,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        hero {
+            childImageSharp {
+                fluid(maxWidth: 600) {
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+            }
+        }
       }
     }
   }

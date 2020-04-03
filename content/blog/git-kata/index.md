@@ -2,6 +2,7 @@
 title: Announcing Git Kata
 description: As a part-time computer science teacher, I often give workshops to learn about computers and their tools.
 date: 2019-07-21
+hero: ./git.jpeg
 lang: en
 ---
 

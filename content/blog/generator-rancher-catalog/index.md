@@ -2,6 +2,7 @@
 title: Generator Rancher Catalog
 description: If you want to generate your Rancher catalog entry simply, this yeoman generator is here for you, so give it a try.
 date: 2016-06-20
+hero: ./catalogue.png
 lang: en
 ---
 
