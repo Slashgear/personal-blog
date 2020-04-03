@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "12"
+script:
+  - yarn build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: public
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  target_branch: deploy
+  on:
+    branch: master

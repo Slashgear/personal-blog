@@ -24,8 +24,8 @@ const BlogIndex = ({ data, location }) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
+                <Link style={{ boxShadow: `none` }} to={`posts/${node.fields.slug}`}>
+                  {node.frontmatter.lang === 'en' ? '🇬🇧' : '🇫🇷' } {title}
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
@@ -64,6 +64,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            lang
           }
         }
       }

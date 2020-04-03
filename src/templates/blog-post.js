@@ -16,6 +16,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        lang={post.frontmatter.lang}
       />
       <article>
         <header>
