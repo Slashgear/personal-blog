@@ -79,6 +79,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-advanced-sitemap`
+    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-styled-components`,
   ],
 }

@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import { TableOfContents } from "../components/tableOfContents"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -60,6 +61,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </picture>
           )}
         </header>
+        {post.headings.length > 1  &&<TableOfContents tableOfContents={post.tableOfContents} />}
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -114,6 +116,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents
+      headings {
+        value
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
