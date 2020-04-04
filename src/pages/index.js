@@ -28,7 +28,9 @@ const BlogIndex = ({ data, location }) => {
                   {node.frontmatter.lang === 'en' ? '🇬🇧' : '🇫🇷' } {title}
                 </Link>
               </h3>
+
               <small>{node.frontmatter.date}</small>
+              <small style={{margin: '0 1rem'}}><span role="img" aria-label="Time to read">🕐</span>{node.timeToRead} min</small>
             </header>
             <section>
               <p
@@ -80,6 +82,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
