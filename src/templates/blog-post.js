@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         lang={post.frontmatter.lang}
+        image={post.frontmatter.hero ? post.frontmatter.hero.childImageSharp.image : null}
       />
       <article>
         <header>
@@ -121,6 +122,10 @@ export const pageQuery = graphql`
             childImageSharp {
                 fluid(maxWidth: 600) {
                     ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+                image: fixed(fit: FILL, width: 1080, jpegProgressive: true, jpegQuality: 60) {
+                    src
+                    width
                 }
             }
         }
