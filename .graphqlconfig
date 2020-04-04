@@ -1,0 +1,12 @@
+{
+  "name": "Personal Blog",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "http://localhost:8000/___graphql",
+        "introspect": true
+      }
+    }
+  }
+}
