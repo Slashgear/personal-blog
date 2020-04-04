@@ -19,6 +19,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
             title
             description
             social { twitter }
+            siteUrl
           }
         }
       }
@@ -32,15 +33,19 @@ const SEO = ({ description, lang, meta, title, image }) => {
     imageTags = [
       {
         property: "og:image",
-        content: image.src,
+        content: site.siteMetadata.siteUrl + image.src,
       },
       {
         name: "twitter:image",
-        content: image.src,
+        content: site.siteMetadata.siteUrl + image.src,
       },
       {
         name: "og:image:width",
         content: image.width,
+      },
+      {
+        name: "og:image:height",
+        content: image.height,
       },
     ]
   }
