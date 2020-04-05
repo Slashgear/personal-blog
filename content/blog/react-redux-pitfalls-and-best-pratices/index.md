@@ -17,21 +17,89 @@ _This article is not an introduction to React or Redux. I recommend [this docume
 
 ## Eviter d'avoir qu'un seul reducer
 
-- découpage modulaire
-- combiner les reducers
-- découpage fonctionel de votre application
-- On a pu supprimer du store du code mort fonctionellement
+Le `reducer` est la fonction qui est en charge de construire à chaque `action`.
+On pourrait être tenté de manipuler qu'un seul reducer.
+Dans le cas d'une petite application, ce n'est pas un problème.
+Pour des applications exprimant un métier complexe et qui évolue beaucoup, il faut mieux opter pour la solution `combineReducers`.
 
-## Proxyfier les accès au state
+Cette feature de `redux` permet de manipuler, non pas un mais plusieurs `reducer` qui agissent respectivement sur le state.
 
-- usage des _selectors_
+> Quand et comment découper son application ?
 
-## Nommer ses actions
+Ce que je recommande, c'est un découpage fonctionel de l'application.
+Un dossier _modules_ qui regroupe les différents dossiers associées au feature de votre application.
+
+```txt
+app/
+  modules/
+    user/
+      __tests__/
+        user.reducer.spec.js
+      components/
+      user.reducer.js
+    product/
+      __tests__/
+        product.reducer.spec.js
+      components/
+      product.reducer.js
+    account/
+      __tests__/
+      account.reducer.spec.js
+      components/
+      account.reducer.js
+  store.js
+  index.js
+```
+
+Ainsi dans `store.js` il suffit de combiner vos différents reducers.
+
+```js
+import { createStore, combineReducers } from "redux"
+import { user } from "./modules/user/user.reducer.js"
+import { product } from "./modules/user/product.reducer.js"
+import { account } from "./modules/user/account.reducer.js"
+
+export const store = createStore(combineReducers({ user, product, account }))
+```
+
+En suivant ce pattern, vous pourrez:
+
+- conserver des reducer lisibles car ayant un scope moins large
+- structurer et définir les fonctionnalités de ton application
+- faciliter le testing de vos reducers
+
+Historiquement, ce découpage nous a permis de supprimer des pans d'application complet sans avoir des imapcts sur toute la codebase.
+Il suffit de supprimer le dossier du `module` associées à la feature.
+
+### Proxyfier les accès au state
+
+Vos reducers ainsi placés dans les `module` fonctionel, il faut maintenant permettre à vos composants d'accéder au state par le biais de `selector`.
+Un `selector` est une fonction qui a en paramètres, le `state` et qui récupère les informations.
+
+```js
+export const getUserName = ({ user: { lastName }) => lastName
+```
+On peut également passer des paramètres à un `selector` en le wrappant par une fonction;
+
+```js
+export const getProduct = productId => ({ product: { list }) => list.find(product => product.id === productId)
+```
+Cela vous permettra de les utiliser dans vos composants grâce au hook [`useSelector`](https://redux.js.org/recipes/usage-with-typescript#typing-the-useselector-hook).
+
+```js
+
+const MyComponent = () => {
+    const product = useSelector(getProduct(12))
+    return <div>{product.name}</div>
+}
+```
+
+### Nommer ses actions
 
 - nommer leur impacte dans le state
 - préfixer par le nom du store
 
-## Tester vos reducers
+### Tester vos reducers
 
 Les `reducer` sont les porteurs du métier de votre application.
 Ils manipulent l'état de votre application ainsi que modifications qu'on peut lui apporter.
@@ -47,8 +115,6 @@ Ils manipulent l'état de votre application ainsi que modifications qu'on peut l
 Bonne nouvelle, ce code est relativement facile à tester. Un `reducer`, c'est une unique fonction qui prend 2 paramètres.
 Cette fonction va retourner un nouveau `state` en fonction du type d'action et de ces paramètres.
 
-Vous pouvez également
-
 Voilà la structure standard de test de `reducer` avec Jest:
 
 ```js
@@ -57,6 +123,7 @@ describe("ReducerName", () => {
     // Init a new state
   })
   describe("ACTION", () => {
+    // Group tests by action type
     it("should test action with some params", () => {})
     it("should test action with other params", () => {})
   })
@@ -110,10 +177,11 @@ const newState = {
 Pour éviter cela, la team Bedrock a publié un package qui permet de `set` un attribut imbriqué tout en garantissant l'immutabilité: [immutable-set](https://www.npmjs.com/package/immutable-set)
 
 ```js
-import set from 'immutable-set'
+import set from "immutable-set"
 
-const newState = set(state, 'a.y.A', 'B')
+const newState = set(state, "a.y.A", "B")
 ```
+
 ## Ne pas utiliser le cas `default`
 
 L'implémentation d'un reducer `redux` consiste très souvent en un `switch` où chaque `case` correspond à une `action`.
@@ -260,8 +328,3 @@ La donnée dans le state doit être directement à afficher
 
 Les nouveaux hooks sont cool, on est parfois tenté de faire un store grâce à `useReducer`.
 Redux est mieux car Devtools, middlewares,
-
-## Manipuler un seul store Redux
-
-- Possible d'avoir plusieurs store
-- Chiant à débugger
