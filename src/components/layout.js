@@ -61,7 +61,10 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <LanguageSwitcher language={config.frontmatter.language} translations={translations}/>
+        <LanguageSwitcher
+          language={config.frontmatter.language}
+          translations={translations}
+        />
         {header}
         {children}
       </div>

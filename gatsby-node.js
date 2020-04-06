@@ -13,8 +13,8 @@ exports.createPages = ({ graphql, actions }) => {
         `
           {
             allMarkdownRemark(
-                filter: {frontmatter: {type: {eq: "language"}}}
-              ) {
+              filter: { frontmatter: { type: { eq: "language" } } }
+            ) {
               edges {
                 node {
                   frontmatter {
@@ -32,9 +32,9 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create blog posts pages.
-        const configs = result.data.allMarkdownRemark.edges;
+        const configs = result.data.allMarkdownRemark.edges
 
-        _.each(configs, (config) => {
+        _.each(configs, config => {
           language = config.node.frontmatter.language
           const path = language == 'en' ? '/' : `/${language}`
           createPage({
@@ -49,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
     )
 
     const blogPost = path.resolve('./src/templates/blog-post.js')
-    _.each(['en', 'fr'], (language) => {
+    _.each(['en', 'fr'], language => {
       resolve(
         graphql(
           `
@@ -81,11 +81,12 @@ exports.createPages = ({ graphql, actions }) => {
           }
 
           // Create blog posts pages.
-          const posts = result.data.allMarkdownRemark.edges;
+          const posts = result.data.allMarkdownRemark.edges
 
           _.each(posts, (post, index) => {
-            const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-            const next = index === 0 ? null : posts[index - 1].node;
+            const previous =
+              index === posts.length - 1 ? null : posts[index + 1].node
+            const next = index === 0 ? null : posts[index - 1].node
 
             createPage({
               path: post.node.fields.slug,

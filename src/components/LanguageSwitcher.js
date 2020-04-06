@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql } from 'gatsby'
 
 class LanguageSwitcher extends React.Component {
   render() {
@@ -8,7 +8,9 @@ class LanguageSwitcher extends React.Component {
       <StaticQuery
         query={graphql`
           query LanguageSwitcherQuery {
-            allMarkdownRemark(filter: { frontmatter: { type: {eq: "language"}}}) {
+            allMarkdownRemark(
+              filter: { frontmatter: { type: { eq: "language" } } }
+            ) {
               edges {
                 node {
                   fields {
@@ -31,17 +33,26 @@ class LanguageSwitcher extends React.Component {
               } else {
                 let translationLink = node.fields.slug
                 if (translations) {
-                  const translationIndex = translations.findIndex(v => v == node.frontmatter.language)
+                  const translationIndex = translations.findIndex(
+                    v => v == node.frontmatter.language
+                  )
                   if (translationIndex !== -1) {
-                    translationLink = translations[translationIndex+1]
+                    translationLink = translations[translationIndex + 1]
                   }
                 }
                 return (
-                  <li key={translationLink} style={{ display: `inline-block`, margin: `0 1rem 0 0` }}>
-                    <Link style={{
-                      boxShadow: 'none',
-                      textDecoration: 'none',
-                    }} to={translationLink}>
+                  <li
+                    key={translationLink}
+                    style={{ display: `inline-block`, margin: `0 1rem 0 0` }}
+                  >
+                    <Link
+                      style={{
+                        boxShadow: 'none',
+                        textDecoration: 'none',
+                      }}
+                      to={translationLink}
+                      hrefLang={node.frontmatter.language}
+                    >
                       {node.frontmatter.language_label}
                     </Link>
                   </li>

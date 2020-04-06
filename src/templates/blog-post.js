@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link,graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Bio from '../components/bio'
@@ -18,15 +18,25 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} config={this.props.data.config} translations={post.frontmatter.translations}>
+      <Layout
+        location={this.props.location}
+        config={this.props.data.config}
+        translations={post.frontmatter.translations}
+      >
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           lang={post.frontmatter.lang}
-          image={post.frontmatter.hero ? post.frontmatter.hero.childImageSharp.image : null}
+          image={
+            post.frontmatter.hero
+              ? post.frontmatter.hero.childImageSharp.image
+              : null
+          }
         />
         <h1>{post.frontmatter.title}</h1>
-        {post.headings.length > 1  && <TableOfContents tableOfContents={post.tableOfContents} />}
+        {post.headings.length > 1 && (
+          <TableOfContents tableOfContents={post.tableOfContents} />
+        )}
         <p
           style={{
             ...scale(-1 / 5),
@@ -77,20 +87,18 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <li>
-            {
-              previous &&
+            {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
-            }
+            )}
           </li>
           <li>
-            {
-              next &&
+            {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
-            }
+            )}
           </li>
         </ul>
       </Layout>
@@ -101,46 +109,51 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-    query BlogPostBySlug($slug: String!, $language: String!) {
-        config:markdownRemark(frontmatter: {
-            language: { eq: $language }
-            type: { eq: "language" }
-        }) {
-            html
-            fields {
-                slug
-            }
-            frontmatter {
-                title
-                language
-            }
-        }
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-            id
-            excerpt
-            html
-            headings {
-              value
-            }
-            tableOfContents
-            frontmatter {
-                title
-                date(formatString: "MMMM DD, YYYY")
-                translations
-                description
-                hero {
-                    childImageSharp {
-                        fluid(maxWidth: 600) {
-                            ...GatsbyImageSharpFluid_withWebp_noBase64
-                        }
-                        image: fixed(fit: COVER, width: 1080, jpegProgressive: true, jpegQuality: 60, height: 1080) {
-                            src
-                            height
-                            width
-                        }
-                    }
-                }
-            }
-        }
+  query BlogPostBySlug($slug: String!, $language: String!) {
+    config: markdownRemark(
+      frontmatter: { language: { eq: $language }, type: { eq: "language" } }
+    ) {
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        language
+      }
     }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      excerpt
+      html
+      headings {
+        value
+      }
+      tableOfContents
+      frontmatter {
+        title
+        date(formatString: "MMMM DD, YYYY")
+        translations
+        description
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+            image: fixed(
+              fit: COVER
+              width: 1080
+              jpegProgressive: true
+              jpegQuality: 60
+              height: 1080
+            ) {
+              src
+              height
+              width
+            }
+          }
+        }
+      }
+    }
+  }
 `
