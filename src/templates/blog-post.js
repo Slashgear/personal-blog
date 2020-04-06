@@ -1,85 +1,88 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import Helmet from 'react-helmet'
+import { Link, graphql } from 'gatsby'
+import get from 'lodash/get'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
-import { TableOfContents } from "../components/tableOfContents"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import { rhythm, scale } from '../utils/typography'
+import { TableOfContents } from '../components/tableOfContents'
+import SEO from '../components/seo'
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+class BlogPostTemplate extends React.Component {
+  render() {
+    const post = this.props.data.markdownRemark
+    const siteTitle = get(this.props, `data.config.frontmatter.title`)
+    const siteBio = get(this, 'props.data.config.html')
+    const siteDescription = post.excerpt
+    const { previous, next } = this.props.pageContext
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        lang={post.frontmatter.lang}
-        image={post.frontmatter.hero ? post.frontmatter.hero.childImageSharp.image : null}
-      />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
-
-          {post.frontmatter.hero && (
-            <picture>
-              <source
-                srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSetWebp}
-                sizes="30vw"
-                type="image/webp"
-              />
-              <source
-                srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSet}
-                sizes="30vw"
-                type="image/png"
-              />
-              <img
-                className="article-item__picture"
-                src={post.frontmatter.hero.childImageSharp.fluid.src}
-                alt={post.frontmatter.title}
-                width="100%"
-              />
-            </picture>
-          )}
-        </header>
-        {post.headings.length > 1  &&<TableOfContents tableOfContents={post.tableOfContents} />}
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+    return (
+      <Layout
+        location={this.props.location}
+        config={this.props.data.config}
+        translations={post.frontmatter.translations}
+      >
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+          lang={post.frontmatter.lang}
+          image={
+            post.frontmatter.hero
+              ? post.frontmatter.hero.childImageSharp.image
+              : null
+          }
+        />
+        <h1>{post.frontmatter.title}</h1>
+        {post.headings.length > 1 && (
+          <TableOfContents tableOfContents={post.tableOfContents} />
+        )}
+        <p
+          style={{
+            ...scale(-1 / 5),
+            display: 'block',
+            marginBottom: rhythm(1),
+            marginTop: rhythm(-1),
+          }}
+        >
+          {post.frontmatter.date}
+        </p>
+        {post.frontmatter.hero && (
+          <picture>
+            <source
+              srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSetWebp}
+              sizes="30vw"
+              type="image/webp"
+            />
+            <source
+              srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSet}
+              sizes="30vw"
+              type="image/png"
+            />
+            <img
+              className="article-item__picture"
+              src={post.frontmatter.hero.childImageSharp.fluid.src}
+              alt={post.frontmatter.title}
+              width="100%"
+            />
+          </picture>
+        )}
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
-        <footer>
-          <Bio />
-        </footer>
-      </article>
+        <Bio>
+          <div dangerouslySetInnerHTML={{ __html: siteBio }} />
+        </Bio>
 
-      <nav>
         <ul
           style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            listStyle: 'none',
             padding: 0,
           }}
         >
@@ -98,43 +101,57 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             )}
           </li>
         </ul>
-      </nav>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
 
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
+  query BlogPostBySlug($slug: String!, $language: String!) {
+    config: markdownRemark(
+      frontmatter: { language: { eq: $language }, type: { eq: "language" } }
+    ) {
+      html
+      fields {
+        slug
+      }
+      frontmatter {
         title
+        language
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt
       html
-      tableOfContents
       headings {
         value
       }
+      tableOfContents
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        translations
         description
         hero {
-            childImageSharp {
-                fluid(maxWidth: 600) {
-                    ...GatsbyImageSharpFluid_withWebp_noBase64
-                }
-                image: fixed(fit: COVER, width: 1080, jpegProgressive: true, jpegQuality: 60, height: 1080) {
-                    src
-                    height
-                    width
-                }
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
+            image: fixed(
+              fit: COVER
+              width: 1080
+              jpegProgressive: true
+              jpegQuality: 60
+              height: 1080
+            ) {
+              src
+              height
+              width
+            }
+          }
         }
       }
     }

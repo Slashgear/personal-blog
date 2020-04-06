@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const SEO = ({ description, lang, meta, title, image }) => {
   const { site } = useStaticQuery(
@@ -18,7 +18,9 @@ const SEO = ({ description, lang, meta, title, image }) => {
           siteMetadata {
             title
             description
-            social { twitter }
+            social {
+              twitter
+            }
             siteUrl
           }
         }
@@ -32,24 +34,23 @@ const SEO = ({ description, lang, meta, title, image }) => {
   if (image) {
     imageTags = [
       {
-        property: "og:image",
+        property: 'og:image',
         content: site.siteMetadata.siteUrl + image.src,
       },
       {
-        name: "twitter:image",
+        name: 'twitter:image',
         content: site.siteMetadata.siteUrl + image.src,
       },
       {
-        name: "og:image:width",
+        name: 'og:image:width',
         content: image.width,
       },
       {
-        name: "og:image:height",
+        name: 'og:image:height',
         content: image.height,
       },
     ]
   }
-
 
   return (
     <Helmet
@@ -97,8 +98,8 @@ const SEO = ({ description, lang, meta, title, image }) => {
         },
         ...imageTags,
         {
-          name: "google-site-verification",
-          content: "h1uQ_z8fdlLI60AmxP8vjy1H-bKSDlv0n5XolWfeDIo"
+          name: 'google-site-verification',
+          content: 'h1uQ_z8fdlLI60AmxP8vjy1H-bKSDlv0n5XolWfeDIo',
         },
       ].concat(meta)}
     />
