@@ -5,7 +5,7 @@ description:
   Good practices and mistakes to be avoided have been gathered in this article.
 date: 2020-04-04
 hero: ./redux.jpg
-lang: en
+language: en
 ---
 
 After 2 years using React with Redux for the video platform [6play](https://6play.fr), I was able to identify good practices and pitfalls to avoid at all costs.
