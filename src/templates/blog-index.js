@@ -3,8 +3,8 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
+import Bio from '../components/bio'
+import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
@@ -39,7 +39,28 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
+              <small style={{margin: '0 1rem'}}><span role="img" aria-label="Time to read">🕐</span>{node.timeToRead} min</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              {node.frontmatter.hero && (
+                <picture>
+                  <source
+                    srcSet={node.frontmatter.hero.childImageSharp.fluid.srcSetWebp}
+                    sizes="30vw"
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={node.frontmatter.hero.childImageSharp.fluid.srcSet}
+                    sizes="30vw"
+                    type="image/png"
+                  />
+                  <img
+                    className="article-item__picture"
+                    src={node.frontmatter.hero.childImageSharp.fluid.src}
+                    alt={node.frontmatter.title}
+                    width="100%"
+                  />
+                </picture>
+              )}
             </div>
           )
         })}
@@ -51,40 +72,54 @@ class BlogIndex extends React.Component {
 export default BlogIndex
 
 export const blogIndexFragment = graphql`
-  query BlogPost($language: String!) {
-    config:markdownRemark(frontmatter: {
-      language: { eq: $language }
-      type: { eq: "language" }
-    }) {
-      html
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        language
-        description
-      }
-    }
-    allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: {
-          language: { eq: $language }
-          type: { eq: null }
-        }}
-      ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "LL")
-            title
-          }
+    query BlogPost($language: String!) {
+        config:markdownRemark(frontmatter: {
+            language: { eq: $language }
+            type: { eq: "language" }
+        }) {
+            html
+            fields {
+                slug
+            }
+            frontmatter {
+                title
+                language
+                description
+            }
         }
-      }
+        allMarkdownRemark(
+            sort: { fields: [frontmatter___date], order: DESC }
+            filter: { frontmatter: {
+                language: { eq: $language }
+                type: { eq: null }
+            }}
+        ) {
+            edges {
+                node {
+                    excerpt
+                    fields {
+                        slug
+                    }
+                    timeToRead
+                    frontmatter {
+                        title
+                        date(formatString: "MMMM DD, YYYY")
+                        description
+                        hero {
+                            childImageSharp {
+                                fluid(maxWidth: 600) {
+                                    ...GatsbyImageSharpFluid_withWebp_noBase64
+                                }
+                                image: fixed(fit: COVER, width: 1080, jpegProgressive: true, jpegQuality: 60, height: 1080) {
+                                    src
+                                    height
+                                    width
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 `

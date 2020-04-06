@@ -2,10 +2,9 @@
 type: language
 language: en
 language_label: "English"
-title: "Gatsby Starter Blog"
-description: "A starter blog demonstrating what Gatsby can do."
+title: "Antoine Caron"
+description: "Antoine Caron personal blog where you can read news about his open-source courses, packages."
 ---
 
-Written by **Kyle Mathews** who lives and works in San
-Francisco building useful things.
-[You should follow him on Twitter](https://twitter.com/kylemathews)
+Written by **Antoine Caron** who lives and works in Lyon (France) building useful things at [Bedrock](https://www.bedrockstreaming.com/).
+You should follow him [on Twitter](https://twitter.com/Slashgear_)

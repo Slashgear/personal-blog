@@ -11,19 +11,13 @@ module.exports = {
       twitter: `Slashgear_`,
     },
   },
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
         name: `pages`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
       },
     },
     {
@@ -68,7 +62,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `darkgrey`,
         display: `minimal-ui`,
-        icon: `content/assets/profile-pic.jpg`,
+        icon: `src/assets/profile-pic.jpg`,
       },
     },
     `gatsby-plugin-react-helmet`,
