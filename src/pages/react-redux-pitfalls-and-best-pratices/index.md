@@ -1,5 +1,5 @@
 ---
-title: "React/Redux: pitfalls and best practices"
+title: 'React/Redux: pitfalls and best practices'
 description:
   We use React and Redux for almost 4 years at Bedrock on our video platform named 6play.
   Good practices and mistakes to be avoided have been gathered in this article.
@@ -54,10 +54,10 @@ app/
 Ainsi dans `store.js` il suffit de combiner vos différents reducers.
 
 ```js
-import { createStore, combineReducers } from "redux"
-import { user } from "./modules/user/user.reducer.js"
-import { product } from "./modules/user/product.reducer.js"
-import { account } from "./modules/user/account.reducer.js"
+import { createStore, combineReducers } from 'redux'
+import { user } from './modules/user/user.reducer.js'
+import { product } from './modules/user/product.reducer.js'
+import { account } from './modules/user/account.reducer.js'
 
 export const store = createStore(combineReducers({ user, product, account }))
 ```
@@ -79,25 +79,57 @@ Un `selector` est une fonction qui a en paramètres, le `state` et qui récupèr
 ```js
 export const getUserName = ({ user: { lastName }) => lastName
 ```
+
 On peut également passer des paramètres à un `selector` en le wrappant par une fonction;
 
 ```js
 export const getProduct = productId => ({ product: { list }) => list.find(product => product.id === productId)
 ```
+
 Cela vous permettra de les utiliser dans vos composants grâce au hook [`useSelector`](https://redux.js.org/recipes/usage-with-typescript#typing-the-useselector-hook).
 
 ```js
-
 const MyComponent = () => {
-    const product = useSelector(getProduct(12))
-    return <div>{product.name}</div>
+  const product = useSelector(getProduct(12))
+  return <div>{product.name}</div>
 }
+```
+
+```txt
+app/
+  modules/
+    user/
+      __tests__/
+        user.reducer.spec.js
+      components/
+      user.reducer.js
+      user.selectors.js <--- This is where all module selectors are exported
 ```
 
 ### Nommer ses actions
 
-- nommer leur impacte dans le state
-- préfixer par le nom du store
+A Bedrock, on suit ces conventions de nommage pour les actions redux.
+
+Les actions sont en majuscules séparées par des '\_'.
+Exemple avec cette action: `SET_USERS`.
+
+```txt
+app/
+  modules/
+    user/
+      __tests__/
+        user.reducer.spec.js
+      components/
+      user.actions.js <--- This is where all module action creator are exported
+      user.reducer.js
+      user.selectors.js 
+```
+
+Les noms d'action sont préfixés par le nom du `module` dans lequel il se trouve.
+Cela donne un nom complet: `user/SET_USERS`.
+Gros avantage de cette règle de nommage, vous pourrez facilement filtrer le actions dans les [redux-devtools](https://github.com/reduxjs/redux-devtools).
+
+//TODO insérer screenshot redux devtools
 
 ### Tester vos reducers
 
@@ -118,17 +150,17 @@ Cette fonction va retourner un nouveau `state` en fonction du type d'action et d
 Voilà la structure standard de test de `reducer` avec Jest:
 
 ```js
-describe("ReducerName", () => {
+describe('ReducerName', () => {
   beforeEach(() => {
     // Init a new state
   })
-  describe("ACTION", () => {
+  describe('ACTION', () => {
     // Group tests by action type
-    it("should test action with some params", () => {})
-    it("should test action with other params", () => {})
+    it('should test action with some params', () => {})
+    it('should test action with other params', () => {})
   })
-  describe("SECOND_ACTION", () => {
-    it("should test action with some params", () => {})
+  describe('SECOND_ACTION', () => {
+    it('should test action with some params', () => {})
   })
 })
 ```
@@ -149,15 +181,15 @@ Cependant, dans le cas ou le `state` a une structure compliquée et profonde, il
 const state = {
   a: {
     z: {
-      A: "A",
+      A: 'A',
     },
     y: {
-      A: "A",
+      A: 'A',
     },
   },
   b: {
     z: {
-      A: "A",
+      A: 'A',
     },
   },
 }
@@ -168,7 +200,7 @@ const newState = {
   a: {
     ...state.z,
     y: {
-      A: "B",
+      A: 'B',
     },
   },
 }
@@ -177,9 +209,9 @@ const newState = {
 Pour éviter cela, la team Bedrock a publié un package qui permet de `set` un attribut imbriqué tout en garantissant l'immutabilité: [immutable-set](https://www.npmjs.com/package/immutable-set)
 
 ```js
-import set from "immutable-set"
+import set from 'immutable-set'
 
-const newState = set(state, "a.y.A", "B")
+const newState = set(state, 'a.y.A', 'B')
 ```
 
 ## Ne pas utiliser le cas `default`
@@ -191,19 +223,19 @@ Imaginons le reduce suivant:
 
 ```js
 const initialState = {
-  value: "bar",
+  value: 'bar',
   index: 0,
 }
 
 function reducer(initialState, action) {
   switch (action.type) {
-    case "FOO":
+    case 'FOO':
       return {
-        value: "foo",
+        value: 'foo',
       }
     default:
       return {
-        value: "bar",
+        value: 'bar',
       }
   }
 }
@@ -225,13 +257,13 @@ Si on veut modifier le state avec un action d'un autre module, on le faire en aj
 ```js
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case "FOO":
+    case 'FOO':
       return {
-        value: "foo",
+        value: 'foo',
       }
-    case "otherModule/BAR":
+    case 'otherModule/BAR':
       return {
-        value: "bar",
+        value: 'bar',
       }
     default:
       return state
@@ -248,15 +280,15 @@ L'exemple le plus commun, c'est la gestion des appels HTTP lors d'une action qui
 
 ```js
 export const foo = () =>
-  fetch("https://example.com/api/foo")
-    .then(data => ({ type: "FOO", data }))
+  fetch('https://example.com/api/foo')
+    .then(data => ({ type: 'FOO', data }))
     .catch(error => {
       // Do something
     })
 
 export const bar = () =>
-  fetch("https://example.com/api/bar")
-    .then(data => ({ type: "BAR", data }))
+  fetch('https://example.com/api/bar')
+    .then(data => ({ type: 'BAR', data }))
     .catch(error => {
       // Do something
     })
@@ -295,9 +327,9 @@ const store = createStore(exampleApp, applyMiddleware(http))
 Ainsi les deux action précendentes pourrait s'écrire bien plus simplement:
 
 ```js
-export const foo = () => ({ type: "FOO", http: "https://example.com/api/foo" })
+export const foo = () => ({ type: 'FOO', http: 'https://example.com/api/foo' })
 
-export const bar = () => ({ type: "BAR", http: "https://example.com/api/bar" })
+export const bar = () => ({ type: 'BAR', http: 'https://example.com/api/bar' })
 ```
 
 Les gros avantages de l'utilisation des middlewares dans une application complexe:
@@ -310,9 +342,41 @@ Les gros avantages de l'utilisation des middlewares dans une application complex
 
 ## Eviter les rerender
 
+Le piège quand on utilise redux, c'est déclencher des re-rendu des composants quand on les connecte au state.
+Même si [les re-rendu ne sont pas toujours un problème](https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render),
+les re-rendu causé par l'usage de redux sont vraiment à éviter.
+Il suffit de se méfier des pièges suivants.
+
 ### le piège avec useSelector
 
+Pour connecter le state redux à un composant React, avec `react-redux`, on utilise le _hook_ `useSelector`.
+Voici un exemple basique d'utilisation.
+
+```js
+import React from 'react'
+import { useSelector } from 'react-redux'
+
+const getUser = state => state.user
+
+const MyComponent = () => {
+  const user = useSelector(getUser)
+
+  return <div>{user.firstName}</div>
+}
+```
+
 #### default values
+
+Imaginons le _selector_ suivant:
+
+```js
+const getUserById = userId => state => state.users.find(user => user.id === userId) || {};
+```
+
+Le développeur a ici voulu garantir que son _selector_ soit null-safe et retourne toujours un _object_.
+C'est quelque chose qu'on voit assez fréquement dans les selectors; vouloir retourner une valeur par défaut.
+
+
 
 #### appeler `filter` ou `reduce`
 
