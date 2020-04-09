@@ -365,6 +365,10 @@ const MyComponent = () => {
 }
 ```
 
+Ce qu'il faut savoir sur `useSelector` c'est que le hook est déclenché à chaque `dispatch` redux.
+Il est optimisé de la sorte que si la référence de la valeur retourné par le selector est identique il ne déclenche pas de rerendu du composant qui l'utilise.
+Dans le cas ou la valeur est différente, il est normal de refaire un rendu pour afficher le changement.
+
 #### default values
 
 Imaginons le _selector_ suivant:
@@ -375,8 +379,25 @@ const getUserById = userId => state => state.users.find(user => user.id === user
 
 Le développeur a ici voulu garantir que son _selector_ soit null-safe et retourne toujours un _object_.
 C'est quelque chose qu'on voit assez fréquement dans les selectors; vouloir retourner une valeur par défaut.
+Cependant dans le cas d'un objet, comme dans l'exemple ci-dessus (ou d'un tableau), la référence de cette valeur par défaut est nouvelle à chaque exécution du selector.
 
+De même pour les valeur par défaut dans le destructuring, il ne faut jamais faire ça :
 
+```js
+const getUsers = () => ({ users: [] }) => users;
+```
+
+Que faire alors ? Lorsque c'est possible, les valeurs par défaut doivent être stocké dans le reducer. Sinon, il faut extraire la valeur par défaut dans une constante pour que la référence reste la même.
+
+### curing reducer
+
+Pour continuer dans l'esprit du point précédent, il est important que `useSelector` ne retourne pas de fonction.
+En gros il ne faut jamais faire ça :
+```js
+const getUserById = state => userId => state.users.find(user => user.id === userId);
+
+const uider = useSelector(getUserById)(userId);
+```
 
 #### appeler `filter` ou `reduce`
 
