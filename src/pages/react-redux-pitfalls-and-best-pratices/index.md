@@ -95,6 +95,9 @@ const MyComponent = () => {
 }
 ```
 
+Il est indiqué dans la doc de `react-redux` que le _selector_ est appélé à chaque rendu du composant.
+Si la référence de la fonction `selector` ne change pas, une version cachée de l'objet peut être retournée directement.
+
 ```txt
 app/
   modules/
@@ -122,14 +125,14 @@ app/
       components/
       user.actions.js <--- This is where all module action creator are exported
       user.reducer.js
-      user.selectors.js 
+      user.selectors.js
 ```
 
 Les noms d'action sont préfixés par le nom du `module` dans lequel il se trouve.
 Cela donne un nom complet: `user/SET_USERS`.
 Gros avantage de cette règle de nommage, vous pourrez facilement filtrer le actions dans les [redux-devtools](https://github.com/reduxjs/redux-devtools).
 
-//TODO insérer screenshot redux devtools
+![redux devtools screenshot](./redux-devtools.png)
 
 ### Tester vos reducers
 
@@ -347,7 +350,7 @@ Même si [les re-rendu ne sont pas toujours un problème](https://kentcdodds.com
 les re-rendu causé par l'usage de redux sont vraiment à éviter.
 Il suffit de se méfier des pièges suivants.
 
-### le piège avec useSelector
+### `useSelector`
 
 Pour connecter le state redux à un composant React, avec `react-redux`, on utilise le _hook_ `useSelector`.
 Voici un exemple basique d'utilisation.
@@ -365,30 +368,97 @@ const MyComponent = () => {
 }
 ```
 
-#### default values
+#### Utiliser des valeurs par défaut dans les _selector_
 
 Imaginons le _selector_ suivant:
 
 ```js
-const getUserById = userId => state => state.users.find(user => user.id === userId) || {};
+const getUserById = userId => state =>
+  state.users.find(user => user.id === userId) || {}
 ```
 
 Le développeur a ici voulu garantir que son _selector_ soit null-safe et retourne toujours un _object_.
-C'est quelque chose qu'on voit assez fréquement dans les selectors; vouloir retourner une valeur par défaut.
+C'est quelque chose qu'on voit assez fréquent.
 
+Le problème que cela va générer est assez simple.
+À chaque fois que ce selecteur va être appelé pour un `user` non présent dans le state, il va retourner un nouvel objet, une nouvelle référence.
 
+> With useSelector(), returning a new object every time will always force a re-render by default.
+> [Doc of react-redux](https://react-redux.js.org/api/hooks#equality-comparisons-and-updates)
 
-#### appeler `filter` ou `reduce`
+Pour éviter cela, vous pouvez essayer de stocker une référence unique à cette valeure par défaut afin d'éviter de la changer.
+
+```js
+const defaultUser = {}
+
+const getUserById = userId => state =>
+  state.users.find(user => user.id === userId) || defaultUser
+```
+
+#### Eviter d'appeler `filter` ou `reduce` dans un selector
+
+Il en va de même pour l'usage de selecteur que retournent une nouvelle ref à chaque appel.
+L'usage de la fonction `filter` retourne une nouveau tableau à chaque fois une nouvelle référence même si les conditions de filtre n'ont pas changés.
+
+Un selector ne devrait pas retourner une _view_ (une copy) du state mais directement ce qu'il contient.
+En respectant ce principe, vos composants ne se rerenderont que si une action vient à modifier le state.
+
+A Bedrock, on évite ces soucis en ne stockant dans les state les infos telles qu'on souhaite les afficher.
+
+Des utilitaires comme [`reselect`](https://www.npmjs.com/package/reselect) peuvent permettre d'imlementer des selecteurs avec une systeme de mémoization.
 
 ### transformer des données dans le rendu
 
-La donnée dans le state doit être directement à afficher
+Il arrive parfois que lorsqu'on écrit un composant, on se rend compte que la donnée qu'on souhaite afficher n'est pas au format qu'on aurait souhaiter.
 
-### Normaliser vos données
+```js
+const MyComponent = () => {
+  const user = useSelector(getUser)
 
-- présentation rapide du normaliser
+  return (
+    <div>
+      <h1>{user.name}</h1>
+      <img src={`https://profil-pic.com/${user.id}`} />
+    </div>
+  )
+}
+```
 
-## useReducer !== redux
+Ici, l'url de l'image est dynamiquement calculée dans le composant, et donc à chaque rendu.
+Nous préférons largement modifié nos reducers afin d'y intégrer un attribut `profilUrl` pour que cette info soit accessible directement.
 
-Les nouveaux hooks sont cool, on est parfois tenté de faire un store grâce à `useReducer`.
-Redux est mieux car Devtools, middlewares,
+```js
+switch (action.type) {
+  case `user/SET_USER`:
+    return {
+      ...state,
+      user: {
+        ...action.user,
+        profilUrl: `https://profil-pic.com/${action.user.id}`,
+      },
+    }
+}
+```
+
+Cette information est alors calculée une fois par action et non pas à chaque rendu.
+
+## `useReducer` !== redux
+
+Depuis l'arrivée des hooks avec React, on a bien plus d'outils fournis directement par React pour gérer le state de nos composants.
+Le hook `useReducer` permet de mettre en place un état qui peut être modifié par l'intermédiaire d'actions.
+On est vraiment très très proche d'un state redux qu'on peu associer à un composant, c'est super.
+
+Cependant, si vous utiliser redux dans votre application, il semble assez étrange de devoir utiliser `useReducer`.
+Vous avez déjà tout ce qu'il faut pour manipuler un _state_ complexe.
+
+De plus, en utilisant Redux plutôt que le hook `useReducer` vous profiter par exemple:
+- de devtools vraiment efficaces
+- de middlewares
+
+
+---
+
+## Useful resources
+
+- [redux flow animated by Dan Abramov](https://github.com/reduxjs/redux/issues/653#issuecomment-216844781)
+  ![redux flow animated by Dan Abramov](./redux-flow.gif)
