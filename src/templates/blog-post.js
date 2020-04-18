@@ -60,6 +60,7 @@ class BlogPostTemplate extends React.Component {
               type="image/png"
             />
             <img
+              loading="lazy"
               className="article-item__picture"
               src={post.frontmatter.hero.childImageSharp.fluid.src}
               alt={post.frontmatter.title}

@@ -61,6 +61,7 @@ class BlogIndex extends React.Component {
                     type="image/png"
                   />
                   <img
+                    loading="lazy"
                     className="article-item__picture"
                     src={node.frontmatter.hero.childImageSharp.fluid.src}
                     alt={node.frontmatter.title}
