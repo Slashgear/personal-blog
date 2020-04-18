@@ -456,3 +456,5 @@ Moreover, by using redux instead of the [useReducer] hook you can take advantage
 [reducer]: https://redux.js.org/basics/reducers
 [immutable.js]: https://immutable-js.github.io/immutable-js/
 [Redux offical style guide]: https://redux.js.org/style-guide/style-guide
+
+_Thanks to the reviewers:... _
