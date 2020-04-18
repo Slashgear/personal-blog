@@ -15,19 +15,22 @@ So here are my tips for maintaining and using React and Redux in your applicatio
 
 _This article is not an introduction to React or Redux. I recommend [this documentation](https://redux.js.org/basics/usage-with-react) if you want to see how to implement it in your applications._
 
-## Eviter d'avoir qu'un seul reducer
+## Avoid having only one reducer
 
-Le `reducer` est la fonction qui est en charge de construire à chaque `action`.
-On pourrait être tenté de manipuler qu'un seul reducer.
-Dans le cas d'une petite application, ce n'est pas un problème.
-Pour des applications exprimant un métier complexe et qui évolue beaucoup, il faut mieux opter pour la solution `combineReducers`.
+The [reducer] is the function that is in charge of building at each `action`.
+One might be tempted to manipulate only one reducer.
+In the case of a small application, this is not a problem.
+For applications expressing a complex and evolving business, it is better to opt for the [combineReducers] solution.
 
-Cette feature de `redux` permet de manipuler, non pas un mais plusieurs `reducer` qui agissent respectivement sur le state.
+This feature of `redux` allows you to manipulate not one but several [reducer]s which act respectively on the state.
 
-> Quand et comment découper son application ?
+> When and how to split its application?
 
-Ce que je recommande, c'est un découpage fonctionel de l'application.
-Un dossier _modules_ qui regroupe les différents dossiers associées au feature de votre application.
+What I recommend is a functional splitting of the application.
+Your file structure should represent the business more than your technical layers.
+Some very good articles explain it notably through the use of [DDD principles](https://en.wikipedia.org/wiki/Domain-driven_design).
+
+In Bedrock, we use a folder named _modules_ which groups together the different folders associated with the feature of your application.
 
 ```txt
 app/
@@ -51,7 +54,7 @@ app/
   index.js
 ```
 
-Ainsi dans `store.js` il suffit de combiner vos différents reducers.
+So in `store.js` all you have to do is combine your different reducers.
 
 ```js
 import { createStore, combineReducers } from 'redux'
@@ -62,31 +65,31 @@ import { account } from './modules/user/account.reducer.js'
 export const store = createStore(combineReducers({ user, product, account }))
 ```
 
-En suivant ce pattern, vous pourrez:
+By following this principle, you can:
 
-- conserver des reducer lisibles car ayant un scope moins large
-- structurer et définir les fonctionnalités de ton application
-- faciliter le testing de vos reducers
+- keep reducers readable because they have a limited scope.
+- structure and define the functionalities of your application
+- facilitate the testing of your reducers
 
-Historiquement, ce découpage nous a permis de supprimer des pans d'application complet sans avoir des imapcts sur toute la codebase.
-Il suffit de supprimer le dossier du `module` associées à la feature.
+Historically, this segmentation has allowed us to remove complete application areas without having imapcts on the entire codebase, just by deleting the `module` folder associated with the feature.
 
-### Proxyfier les accès au state
+### Proxy access to the state
 
-Vos reducers ainsi placés dans les `module` fonctionel, il faut maintenant permettre à vos composants d'accéder au state par le biais de `selector`.
-Un `selector` est une fonction qui a en paramètres, le `state` et qui récupère les informations.
-
-```js
-export const getUserName = ({ user: { lastName }) => lastName
-```
-
-On peut également passer des paramètres à un `selector` en le wrappant par une fonction;
+Now that your reducers have been placed in the functional `module`, you need to allow your components to access the state via `selector`.
+A `selector` is a function that has the `state` as a parameter, and retrieves its information.
 
 ```js
-export const getProduct = productId => ({ product: { list }) => list.find(product => product.id === productId)
+export const getUserName = ({ user: { lastName } }) => lastName
 ```
 
-Cela vous permettra de les utiliser dans vos composants grâce au hook [`useSelector`](https://redux.js.org/recipes/usage-with-typescript#typing-the-useselector-hook).
+You can also pass parameters to a `selector` by wrapping it with a function.
+
+```js
+export const getProduct = productId => ({ product: { list } }) =>
+  list.find(product => product.id === productId)
+```
+
+This will allow you to use them in your components using the [useSelector] hook.
 
 ```js
 const MyComponent = () => {
@@ -95,8 +98,8 @@ const MyComponent = () => {
 }
 ```
 
-Il est indiqué dans la doc de `react-redux` que le _selector_ est appélé à chaque rendu du composant.
-Si la référence de la fonction `selector` ne change pas, une version cachée de l'objet peut être retournée directement.
+It is specified in the `react-redux` doc that the _selector_ is called for each render of the component.
+If the `selector` function reference does not change, a cached version of the object can be returned directly.
 
 ```txt
 app/
@@ -109,11 +112,11 @@ app/
       user.selectors.js <--- This is where all module selectors are exported
 ```
 
-### Nommer ses actions
+### Prefix the name of your actions
 
-A Bedrock, on suit ces conventions de nommage pour les actions redux.
+> I really advise you to define naming rules for your actions and if possible check them with an `eslint` rule.
 
-Les actions sont en majuscules séparées par des '\_'.
+Actions are in uppercase letters separated by '\_'.
 Exemple avec cette action: `SET_USERS`.
 
 ```txt
@@ -128,29 +131,30 @@ app/
       user.selectors.js
 ```
 
-Les noms d'action sont préfixés par le nom du `module` dans lequel il se trouve.
-Cela donne un nom complet: `user/SET_USERS`.
-Gros avantage de cette règle de nommage, vous pourrez facilement filtrer le actions dans les [redux-devtools](https://github.com/reduxjs/redux-devtools).
+Action names are prefixed by the name of the `module` in which it is located.
+This gives a full name: `user/SET_USERS`.
+A big advantage of this naming rule is that you can easily filter the action in [redux-devtools](https://github.com/reduxjs/redux-devtools).
 
 ![redux devtools screenshot](./redux-devtools.png)
 
-### Tester vos reducers
+### Always test your reducers
 
-Les `reducer` sont les porteurs du métier de votre application.
-Ils manipulent l'état de votre application ainsi que modifications qu'on peut lui apporter.
+The `reducers` are the holders of your application's business.
+They manipulate the state of your application.
 
-**Ce code est donc _sensible_**
+**This code is therefore _sensitive_.**
 
-➡️ une modification peut avoir beaucoup d'impacte sur votre application.
+➡️ a modification can have a lot of impact on your application.
 
-**Ce code est riche de règles métier**
+**This code is rich in business rules**
 
-➡️ il faut s'assurer que celles-ci sont correctement implémentées.
+➡️ You must be ensured that these are correctly implemented.
 
-Bonne nouvelle, ce code est relativement facile à tester. Un `reducer`, c'est une unique fonction qui prend 2 paramètres.
-Cette fonction va retourner un nouveau `state` en fonction du type d'action et de ces paramètres.
+The good news is that this code is relatively easy to test.
+A [reducer] is a single function that takes 2 parameters.
+This function will return a new `state` depending on the type of action and these parameters.
 
-Voilà la structure standard de test de `reducer` avec Jest:
+This is the standard structure for testing [reducer]s with [Jest](https://jestjs.io/):
 
 ```js
 describe('ReducerName', () => {
@@ -168,17 +172,19 @@ describe('ReducerName', () => {
 })
 ```
 
-Je vous recommande également d'utiliser le package [deep-freeze](https://www.npmjs.com/package/deep-freeze) sur votre `state` afin de vous assure que toutes les actions retourne des nouvelles références.
+I also recommend that you use the [deep-freeze](https://www.npmjs.com/package/deep-freeze) package on your `state` to ensure that all actions return new references.
 
-Enfin, tester vos reducers vous permettra de facilement refactor la structure interne de leur state sans risquer d'introduire des régressions.
+Ultimately, testing your [reducer] will allow you to easily refactor the internal structure of their state without the risk of introducing regressions.
 
-## Conserver des reducers lisibles
+## Keep the immutability and readability of your reducers
 
-Un `reducer` est une fonction qui doit retourner une nouvelle version du state contenant ses nouvelles valeurs tout en conservant les mêmes références des objets qui n'ont pas changés.
-Cela permet de profiter au maximum du _Structural sharing_ qui vous évite d'exploser votre usage mémoire.
-L'usage du _spread operator_ est donc plus que conseillé.
+A [reducer] is a function that must return a new version of the state containing its new values while keeping the same references of the objects that have not changed.
+This allows you to take full advantage of _Structural sharing_ and avoid exploding your memory usage.
+The use of the _spread operator_ is thus more than recommended.
 
-Cependant, dans le cas ou le `state` a une structure compliquée et profonde, il peut être verbeux de modifier le state sans détruire les références qui ne doivent pas changer.
+However, in the case where the state has a complicated and deep structure, it can be verbose to change the state without destroying the references that should not change.
+
+For example, here we want to override the `a.y.A` value of the state while keeping the objects that don't change.
 
 ```js
 const state = {
@@ -197,7 +203,7 @@ const state = {
   },
 }
 
-// When you want tu change nested state value
+// When you want tu change nested state value and use immutability
 const newState = {
   ...state,
   a: {
@@ -209,7 +215,8 @@ const newState = {
 }
 ```
 
-Pour éviter cela, la team Bedrock a publié un package qui permet de `set` un attribut imbriqué tout en garantissant l'immutabilité: [immutable-set](https://www.npmjs.com/package/immutable-set)
+To avoid this, [a member of the Bedrock team](https://github.com/flepretre) released a package that allows `set` one nested attribute while ensuring immutability: [immutable-set]
+This package is much easier to use than tools like [immutable.js].
 
 ```js
 import set from 'immutable-set'
@@ -217,12 +224,12 @@ import set from 'immutable-set'
 const newState = set(state, 'a.y.A', 'B')
 ```
 
-## Ne pas utiliser le cas `default`
+## Do not use the default case
 
-L'implémentation d'un reducer `redux` consiste très souvent en un `switch` où chaque `case` correspond à une `action`.
-Un `switch` doit toujours définir le cas `default`.
+The implementation of a `redux` [reducer] very often consists of a `switch` where each `case` corresponds to an `action`.
+A `switch` must always define the `default` case if you follow so basic `eslint` rules.
 
-Imaginons le reduce suivant:
+Let's imagine the following [reducer]:
 
 ```js
 const initialState = {
@@ -244,18 +251,18 @@ function reducer(initialState, action) {
 }
 ```
 
-On peut naïvement se dire, ce reducer gère deux actions différentes. C'est ok.
-Si on isole ce reducer, il n'y a que deux type d'`action` qui peuvent modifier ce state; l'action `FOO` et n'importe quel autre action.
+We can naively say that this [reducer] manages two different actions. It's okay.
+If we isolate this [reducer] there are only two types of `action' that can change this state; the`FOO' action and any other action.
 
-Cependant si vous avez suivi le [conseil de découper vos reducers](#eviter-davoir-quun-seul-reducer), vous n'avez pas qu'un seul reducer qui agit sur votre store.
+However, if you have followed the advice to cut out your reducers, you don't have only one reducer acting on your blind.
 
-Et c'est là que le reducer précédent pose problème.
-En effet, n'importe quelle autre action va modifier ce state et rentrer dans le cas `default`.
-Une action `dispatch` passe dans chacun des `reducer` associés à celui-ci.
-Une action à l'autre bout de votre application pourrait ainsi affecter ce state sans que le code l'exprime.
-Il faut donc éviter ça.
+That's where the previous [reducer] is a problem.
+Indeed, any other action will change this state to a `default` state.
+A `dispatch` action will pass through each of the reducers associated with this one.
+An action at the other end of your application could affect this state without being expressed in the code.
+This should be avoided.
 
-Si on veut modifier le state avec un action d'un autre module, on le faire en ajoutant un `case` sur cette action.
+If you want to modify the state with an action from another module, you can do so by adding a `case` on that action.
 
 ```js
 function reducer(state = initialState, action) {
@@ -274,12 +281,12 @@ function reducer(state = initialState, action) {
 }
 ```
 
-## Utilise des middlewares custom
+## Use custom middlewares
 
-J'ai souvent pu voir des comportements d'`action` redux se copier-coller, d'action en action.
-Quand on est développeur, "copier-coller" n'est jamais la bonne voie.
+I've often seen `action` behaviors being copied and pasted, from action to action.
+When you're a developer, "copy-paste" is never the right way.
 
-L'exemple le plus commun, c'est la gestion des appels HTTP lors d'une action qui utilise `redux-thunk`.
+The most common example is handling HTTP calls during an action that uses `redux-thunk`.
 
 ```js
 export const foo = () =>
@@ -297,10 +304,10 @@ export const bar = () =>
     })
 ```
 
-Ces deux action font globallement la même chose, on pourrait très bien faire une factory qui ferait le code en commun.
-Si ce pattern se répètait que deux fois, ce serait probablement la meilleure chose à faire.
+These two actions are basically the same thing, we could very well make a factory that would do the code in common.
+If this pattern repeated itself only twice, that would probably be the best thing to do.
 
-Globalement la _"meta"_ action qu'on souhaite représenter ici lorsqu'elle est `dispatch`:
+Basically the _meta_ action we want to represent here when it is `dispatch`:
 
 ```
 Fetch something
@@ -308,7 +315,7 @@ Fetch something
 -- in case or error, do something
 ```
 
-On pourrait très bien définir un middleware qui s'occuperait de ce comportement en commun.
+We could very well define a middleware that would take care of this behavior.
 
 ```js
 const http = store => next => async action => {
@@ -327,7 +334,7 @@ const exampleApp = combineReducers(reducers)
 const store = createStore(exampleApp, applyMiddleware(http))
 ```
 
-Ainsi les deux action précendentes pourrait s'écrire bien plus simplement:
+Thus the two preceding actions could be written much more simply:
 
 ```js
 export const foo = () => ({ type: 'FOO', http: 'https://example.com/api/foo' })
@@ -335,58 +342,36 @@ export const foo = () => ({ type: 'FOO', http: 'https://example.com/api/foo' })
 export const bar = () => ({ type: 'BAR', http: 'https://example.com/api/bar' })
 ```
 
-Les gros avantages de l'utilisation des middlewares dans une application complexe:
+The big advantages of using middleware in a complex application:
 
-- Evite la duplication de code
-- Permet de définir des comportements commun entre vos actions
-- Standardiser des "meta" action redux
+- Avoids code duplication
+- Allows you to define common behaviors between your actions
+- Standardize redux _meta_ action types
 
-[Redux documentation about middlewares](https://redux.js.org/api/applymiddleware)
+## Avoid redux related rerender
 
-## Eviter les rerender
+The trick when using redux is to trigger component re-render when you connect them to the state.
+Even if [rerenders are not always a problem], re-render caused by the use of redux are really to be prevented.
+Just beware of the following traps.
 
-Le piège quand on utilise redux, c'est déclencher des re-rendu des composants quand on les connecte au state.
-Même si [les re-rendu ne sont pas toujours un problème](https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render),
-les re-rendu causé par l'usage de redux sont vraiment à éviter.
-Il suffit de se méfier des pièges suivants.
+### Do not create a reference in the _selector_
 
-### `useSelector`
-
-Pour connecter le state redux à un composant React, avec `react-redux`, on utilise le _hook_ `useSelector`.
-Voici un exemple basique d'utilisation.
-
-```js
-import React from 'react'
-import { useSelector } from 'react-redux'
-
-const getUser = state => state.user
-
-const MyComponent = () => {
-  const user = useSelector(getUser)
-
-  return <div>{user.firstName}</div>
-}
-```
-
-#### Utiliser des valeurs par défaut dans les _selector_
-
-Imaginons le _selector_ suivant:
+Let's imagine the next _selector_:
 
 ```js
 const getUserById = userId => state =>
   state.users.find(user => user.id === userId) || {}
 ```
 
-Le développeur a ici voulu garantir que son _selector_ soit null-safe et retourne toujours un _object_.
-C'est quelque chose qu'on voit assez fréquent.
+The developer here wanted to ensure that his _selector_ is null safe and always returns an _object_.
+This is something we see quite often.
 
-Le problème que cela va générer est assez simple.
-À chaque fois que ce selecteur va être appelé pour un `user` non présent dans le state, il va retourner un nouvel objet, une nouvelle référence.
+Each time this selector will be called for a `user` not present in the state, it will return a new object, a new reference.
 
-> With useSelector(), returning a new object every time will always force a re-render by default.
+> With [useSelector](), returning a new object every time will always force a re-render by default.
 > [Doc of react-redux](https://react-redux.js.org/api/hooks#equality-comparisons-and-updates)
 
-Pour éviter cela, vous pouvez essayer de stocker une référence unique à cette valeure par défaut afin d'éviter de la changer.
+To counter this, you can try to store a unique reference to this default value to avoid changing it.
 
 ```js
 const defaultUser = {}
@@ -395,21 +380,18 @@ const getUserById = userId => state =>
   state.users.find(user => user.id === userId) || defaultUser
 ```
 
-#### Eviter d'appeler `filter` ou `reduce` dans un selector
+The same goes for the selector usage that returns a new ref at each call.
+The use of the `filter` function returns a new array each time a new reference even if the filter conditions have not changed.
 
-Il en va de même pour l'usage de selecteur que retournent une nouvelle ref à chaque appel.
-L'usage de la fonction `filter` retourne une nouveau tableau à chaque fois une nouvelle référence même si les conditions de filtre n'ont pas changés.
+A selector should not return a _view_ (a copy) of the state but directly what it contains.
+By respecting this principle, your components will return only if an action modifies the state.
+At Bedrock, we avoid these problems by not storing in the state the information as we want to display it.
+Utilities such as [reselect] can be used to implement selectors with a memory system.
 
-Un selector ne devrait pas retourner une _view_ (une copy) du state mais directement ce qu'il contient.
-En respectant ce principe, vos composants ne se rerenderont que si une action vient à modifier le state.
+### Do not transform your data in the components
 
-A Bedrock, on évite ces soucis en ne stockant dans les state les infos telles qu'on souhaite les afficher.
-
-Des utilitaires comme [`reselect`](https://www.npmjs.com/package/reselect) peuvent permettre d'imlementer des selecteurs avec une systeme de mémoization.
-
-### transformer des données dans le rendu
-
-Il arrive parfois que lorsqu'on écrit un composant, on se rend compte que la donnée qu'on souhaite afficher n'est pas au format qu'on aurait souhaiter.
+Sometimes the data contained in the `state` is not in the correct display format.
+We would quickly tend to generate it in the component directly.
 
 ```js
 const MyComponent = () => {
@@ -424,8 +406,8 @@ const MyComponent = () => {
 }
 ```
 
-Ici, l'url de l'image est dynamiquement calculée dans le composant, et donc à chaque rendu.
-Nous préférons largement modifié nos reducers afin d'y intégrer un attribut `profilUrl` pour que cette info soit accessible directement.
+Here, the url of the image is dynamically computed in the component, and thus at each render.
+We prefer to modify our reducers in order to include a `profileUrl` attribute so that this information is directly accessible.
 
 ```js
 switch (action.type) {
@@ -440,25 +422,34 @@ switch (action.type) {
 }
 ```
 
-Cette information est alors calculée une fois par action et non pas à chaque rendu.
+This information is then calculated once per action and not every time it is rendered.
 
-## `useReducer` !== redux
+## Don't use _useReducer_ for your business data
 
-Depuis l'arrivée des hooks avec React, on a bien plus d'outils fournis directement par React pour gérer le state de nos composants.
-Le hook `useReducer` permet de mettre en place un état qui peut être modifié par l'intermédiaire d'actions.
-On est vraiment très très proche d'un state redux qu'on peu associer à un composant, c'est super.
+Since the arrival of hooks, we have many more tools provided directly by React to manage the state of our components.
+The [useReducer] hook allows to set a state that can be modified through actions.
+We're really very very close to a redux state that we can associate to a component, it's great.
 
-Cependant, si vous utiliser redux dans votre application, il semble assez étrange de devoir utiliser `useReducer`.
-Vous avez déjà tout ce qu'il faut pour manipuler un _state_ complexe.
+However, if you use redux in your application, it seems quite strange to have to use use useReducer.
+You already have everything you need to manipulate a complex state.
 
-De plus, en utilisant Redux plutôt que le hook `useReducer` vous profiter par exemple:
-- de devtools vraiment efficaces
-- de middlewares
-
+Moreover, by using redux instead of the [useReducer] hook you can take advantage of really efficient devtools and middlewares.
 
 ---
 
 ## Useful resources
 
+- [Use react with redux doc](https://redux.js.org/basics/usage-with-react)
 - [redux flow animated by Dan Abramov](https://github.com/reduxjs/redux/issues/653#issuecomment-216844781)
   ![redux flow animated by Dan Abramov](./redux-flow.gif)
+- [redux documentation about middlewares](https://redux.js.org/api/applymiddleware)
+- [immutable-set]
+
+[usereducer]: https://fr.reactjs.org/docs/hooks-reference.html#usereducer
+[useselector]: https://redux.js.org/recipes/usage-with-typescript#typing-the-useselector-hook
+[combinereducers]: https://redux.js.org/api/combinereducers
+[rerenders are not always a problem]: https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render
+[reselect]: https://www.npmjs.com/package/reselect
+[immutable-set]: https://www.npmjs.com/package/immutable-set
+[reducer]: https://redux.js.org/basics/reducers
+[immutable.js]: https://immutable-js.github.io/immutable-js/
