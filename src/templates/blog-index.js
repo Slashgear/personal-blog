@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
+import { Socials } from "../components/socials"
 
 class BlogIndex extends React.Component {
   render() {
@@ -72,6 +73,7 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
+        <Socials/>
       </Layout>
     )
   }
