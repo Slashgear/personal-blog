@@ -1,15 +1,34 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
 `
 
-export const Socials = () => <Footer>
-  <div>
-    <a href="https://github.com/Slashgear">Github</a>•<a href="https://twitter.com/Slashgear_">Twitter</a>•<a href="https://www.linkedin.com/in/antoine-caron-7089788a">Linkedin</a>
-  </div>
+const SOCIAL_LINKS = {
+  Github: 'https://github.com/Slashgear',
+  Twitter: 'https://twitter.com/Slashgear_',
+  LinkedIn: 'https://www.linkedin.com/in/antoine-caron-7089788a',
+  DevTo: 'https://dev.to/slashgear_',
+  Medium: 'https://medium.com/@Slashgear_',
+}
 
-  <div><a href="/rss.xml">RSS</a></div>
-</Footer>
+export const Socials = () => (
+  <Footer>
+    <div>
+      {Object.keys(SOCIAL_LINKS)
+        .map(key => (
+          <a key={key} href={SOCIAL_LINKS[key]}>
+            {key}
+          </a>
+        ))
+        .reduce((prev, curr) => [prev, ' • ', curr])}
+    </div>
+
+    <div>
+      <Link href="/rss.xml">RSS</Link>
+    </div>
+  </Footer>
+)
