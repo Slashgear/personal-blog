@@ -17,7 +17,7 @@ export const LanguageSwitcher = ({ language, translations }) => {
               v => v == node.frontmatter.language
             )
             if (translationIndex !== -1) {
-              translationLink = translations[translationIndex + 1]
+              translationLink += translations[translationIndex + 1]
             }
           }
           return (

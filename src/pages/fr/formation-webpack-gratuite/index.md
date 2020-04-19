@@ -3,6 +3,7 @@ title: Formation webpack gratuite et open-source
 description: webpack semble compliqué pour beaucou de monde. C’est pourquoi j'ai créé des ateliers pour apprendre ses concepts en partant de la base.
 hero: ./typo.jpeg
 language: fr
+translations: ['en', 'learn-webpack']
 date: 2019-07-23
 ---
 
