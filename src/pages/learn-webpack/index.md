@@ -16,7 +16,7 @@ That why I boostrapped some workshop in an open source project named:
 
 ## How to
 
-Just go to https://slashgear.github.io/webpack-workshop/workshops/ and follow the instructions.
+Just go to https://webpack-workshop.netlify.app/ and follow the instructions.
 
 If you ❤️ these workshops, don't hesitate to share this post and put a little ⭐️ on the repository.
 
