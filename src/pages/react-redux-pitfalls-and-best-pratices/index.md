@@ -373,7 +373,16 @@ Each time this selector will be called for a `user` not present in the state, it
 > With [useSelector](), returning a new object every time will always force a re-render by default.
 > [Doc of react-redux](https://react-redux.js.org/api/hooks#equality-comparisons-and-updates)
 
-To counter this, you can try to store a unique reference to this default value to avoid changing it.
+However in the case of an object, as in the example above (or an array), the reference of this default value is new each time the selector is executed.
+Similarly for the default values in destructuring, you should never do this :
+
+```js
+const getUsers = () => ({ users: [] }) => users
+```
+
+What to do then?
+Whenever possible, the default values should be stored in the reducer.
+Otherwise, the default value must be extracted into a constant so that the reference remains the same.
 
 ```js
 const defaultUser = {}
@@ -384,6 +393,15 @@ const getUserById = userId => state =>
 
 The same goes for the selector usage that returns a new ref at each call.
 The use of the `filter` function returns a new array each time a new reference even if the filter conditions have not changed.
+
+To continue, it is important that [useSelector] does not return a function.
+Basically you should never do this:
+
+```js
+const getUserById = state => userId =>
+  state.users.find(user => user.id === userId)
+const uider = useSelector(getUserById)(userId)
+```
 
 A selector should not return a _view_ (a copy) of the state but directly what it contains.
 By respecting this principle, your components will rerender only if an action modifies the state.
