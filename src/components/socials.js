@@ -28,7 +28,7 @@ export const Socials = () => (
     </div>
 
     <div>
-      <Link href="/rss.xml">RSS</Link>
+      <Link to="/rss.xml">RSS</Link>
     </div>
   </Footer>
 )
