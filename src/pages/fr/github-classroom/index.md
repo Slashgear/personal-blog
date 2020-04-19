@@ -22,37 +22,35 @@ Avant de vous décrire le fonctionnement et la mise en place de cet outil avec v
 je préfère faire une petite liste des problèmes que j'ai pu rencontrer en tant que professeur
 ou même en tant qu'étudiant lors de la réalisation d'un TP.
 
-* **Démarrer votre TP en 5 minutes avec vos étudiants, impossible.**
-Il est clair que passer une clé usb de PC en PC pour distribuer soit les sources du TP soit
-le sujet ce n'est pas pratique. On observe facilement que certains étudiants
-ne commencent alors leur TP qu'au bout de 15/20 minutes.
+- **Démarrer votre TP en 5 minutes avec vos étudiants, impossible.**
+  Il est clair que passer une clé usb de PC en PC pour distribuer soit les sources du TP soit
+  le sujet ce n'est pas pratique. On observe facilement que certains étudiants
+  ne commencent alors leur TP qu'au bout de 15/20 minutes.
 
-* **Difficile de suivre l'avancement des étudiants.**
-Il arrive que des étudiants souhaitent avoir de l'aide pour résoudre un problème
-avec leur projet. Sans outils, on est souvent obligé de faire de nombreux échanges par
-mail pour finir par se comprendre et réussir à apporter son aide. Se contextualiser
-en lisant un mail où l'élève lâche juste un *ça marche pooo !*, c'est pas très facile.
+- **Difficile de suivre l'avancement des étudiants.**
+  Il arrive que des étudiants souhaitent avoir de l'aide pour résoudre un problème
+  avec leur projet. Sans outils, on est souvent obligé de faire de nombreux échanges par
+  mail pour finir par se comprendre et réussir à apporter son aide. Se contextualiser
+  en lisant un mail où l'élève lâche juste un _ça marche pooo !_, c'est pas très facile.
 
-* **Le rapport, le code du projet, les mails d'échanges avec les étudiants, à des endroits différents.**
-Le rendu du TP, il faut l'avouer c'est vraiment l'étape la plus énervante.
-Entre les étudiants qui oublient la moitié des choses à rendre, les retards,
-les outils de la faculté qui ne marchent pas, centraliser et noter les travaux pratiques des étudiants
-devient vite un véritable calvaire que l'on traine sur plusieurs jours.
+- **Le rapport, le code du projet, les mails d'échanges avec les étudiants, à des endroits différents.**
+  Le rendu du TP, il faut l'avouer c'est vraiment l'étape la plus énervante.
+  Entre les étudiants qui oublient la moitié des choses à rendre, les retards,
+  les outils de la faculté qui ne marchent pas, centraliser et noter les travaux pratiques des étudiants
+  devient vite un véritable calvaire que l'on traine sur plusieurs jours.
 
-* **_"Non Monsieur j'ai pas copié" :_**
-Trop de fois les étudiants se Ctrl-C/Ctrl-V les TPs et cela peut être
-très compliqué de vérifier qu'un étudiant n'a pas juste recopié le code de son collègue.
-
+- **_"Non Monsieur j'ai pas copié" :_**
+  Trop de fois les étudiants se Ctrl-C/Ctrl-V les TPs et cela peut être
+  très compliqué de vérifier qu'un étudiant n'a pas juste recopié le code de son collègue.
 
 * **_"Et toi t'as fait quoi sur ce TP ?"_**
-Et oui, parfois, quand les étudiants sont en groupe, un fainéant peut se cacher au milieu.
-Il est donc difficile d'évaluer réellement la compréhension individuelle dans cette situation.
+  Et oui, parfois, quand les étudiants sont en groupe, un fainéant peut se cacher au milieu.
+  Il est donc difficile d'évaluer réellement la compréhension individuelle dans cette situation.
 
 * **Comment vérifier que leur TP marche ? Dois-je l'installer ?**
-40 élèves, TP par binôme, cela fait 20 TP à installer et à vérifier. Il arrive que l'élève ait
-configuré son projet un peu bizarrement et il vous faudra au moins 10 minutes pour comprendre
-ce qu'il a fait.
-
+  40 élèves, TP par binôme, cela fait 20 TP à installer et à vérifier. Il arrive que l'élève ait
+  configuré son projet un peu bizarrement et il vous faudra au moins 10 minutes pour comprendre
+  ce qu'il a fait.
 
 # Préparer un TP avec Github Classroom
 
@@ -65,12 +63,10 @@ avec ses élèves. Cependant, ce temps de préparation va être largement récup
 Cet outil a une prise en main assez évidente, mais Github nous a quand même fourni
 plusieurs vidéos explicatives qui suffisent à comprendre son utilisation.
 
-
 <blockquote>
 <p>Getting started</p>
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/ChA_zph7aao?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 </blockquote>
-
 
 <blockquote>
 <p>How to set up group assignments</p>
@@ -82,13 +78,13 @@ plusieurs vidéos explicatives qui suffisent à comprendre son utilisation.
 Cet outil n'est pas magique, il impose quelques contraintes qui peuvent être
 bloquantes pour vous et vos étudiants.
 
-* Il vous faut un compte Github
-* Tous les élèves doivent avoir un compte Github, il peut être difficile d'imposer ça aux élèves
-* Vous devez maitriser Git et bien connaitre l'interface de Github.
-* Vos élèves doivent être autonomes avec Git.
-* Vous devez créer une organisation sur Github (en quelques clics)
-* Les sources des TP et les réalisations de vos étudiants seront publiques si [vous
-ne demandez pas une organisation privée à Github pour votre école.](https://education.github.com/discount_requests/new)
+- Il vous faut un compte Github
+- Tous les élèves doivent avoir un compte Github, il peut être difficile d'imposer ça aux élèves
+- Vous devez maitriser Git et bien connaitre l'interface de Github.
+- Vos élèves doivent être autonomes avec Git.
+- Vous devez créer une organisation sur Github (en quelques clics)
+- Les sources des TP et les réalisations de vos étudiants seront publiques si [vous
+  ne demandez pas une organisation privée à Github pour votre école.](https://education.github.com/discount_requests/new)
 
 ## Les étapes à respecter
 
@@ -119,10 +115,10 @@ de TP depuis l'interface de Github Classroom.
 
 Quelques petites astuces pour créer vos _assignements_ :
 
-* Bien préciser les classes, groupes, année dans le titre.
-* Indiquer votre starter code de l'étape 1.
-* Vous pouvez bloquer le nombre maximum d'élèves par groupe.
-* Vous pouvez reprendre les équipes entre les différents TP d'une même matière.
+- Bien préciser les classes, groupes, année dans le titre.
+- Indiquer votre starter code de l'étape 1.
+- Vous pouvez bloquer le nombre maximum d'élèves par groupe.
+- Vous pouvez reprendre les équipes entre les différents TP d'une même matière.
 
 ### 3. Diffuser votre TP à vos élèves
 
@@ -148,7 +144,7 @@ le code qui lui pose problème.
 
 Pour l'évaluation vous avez deux solutions :
 
-* Inspecter leur _repository_ et lire leur code. Pour cela je ne peux que vous conseiller
-l'extension [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
-qui vous permet d'afficher l'arbre des fichiers du dépôt.
-* Mettre en place des tests unitaires sur le projet de base et connecter un outil de CI en SaaS comme travis-ci.
+- Inspecter leur _repository_ et lire leur code. Pour cela je ne peux que vous conseiller
+  l'extension [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc)
+  qui vous permet d'afficher l'arbre des fichiers du dépôt.
+- Mettre en place des tests unitaires sur le projet de base et connecter un outil de CI en SaaS comme travis-ci.

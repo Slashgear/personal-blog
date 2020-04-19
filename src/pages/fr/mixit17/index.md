@@ -1,9 +1,9 @@
 ---
 title: MiXiT 2017
 description:
- L'édition du MiXiT 2017 était riche en ateliers, talks et en crêpes. Pour ma deuxième édition,
- j'ai pu suivre des talks sur des domaines très variés allant de l'ergonomie, au CSS, à l'organisation du temps
- de travail, aux nouveaux langages etc... Comme toujours MiXiT a tenu ses promesses.
+  L'édition du MiXiT 2017 était riche en ateliers, talks et en crêpes. Pour ma deuxième édition,
+  j'ai pu suivre des talks sur des domaines très variés allant de l'ergonomie, au CSS, à l'organisation du temps
+  de travail, aux nouveaux langages etc... Comme toujours MiXiT a tenu ses promesses.
 date: 2017-04-20
 hero: ./mixit17.jpg
 language: fr
@@ -25,7 +25,7 @@ Très bel exemple de l'autogestion d'un groupe et du pouvoir d'action qu'un lead
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215505962" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
-Je vous passe l'anecdotique présentation de la monnaie locale : *[La gonette](http://www.lagonette.org/)*
+Je vous passe l'anecdotique présentation de la monnaie locale : _[La gonette](http://www.lagonette.org/)_
 
 ## Jour 1
 
@@ -65,7 +65,6 @@ La conférence a abordé des thématiques comme les responsabilisations du déve
 Sans parler d'un monde à la _Mister Robot,_ on peut quand même faire le constat que notre sphère privée et intime
 ne nous appartient aujourd'hui plus tout à fait. A voir absolument, surtout si un complotiste sommeille en vous.
 
-
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215558307" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
 ### 🦄 is awesome!!
@@ -82,7 +81,6 @@ balises HTML5 oubliées.
     <summary>Sérieusement vous connaissez cette balise ?</summary>
     Et oui, on a pu voir quelques balises html cool aussi
 </details>
-
 
 ### Futur of Kotlin _Oui je sais, encore du Kotlin_
 
@@ -101,7 +99,6 @@ il y a 2 ans. Mais après je fais mon difficile, la présentation était très c
 alors foncez la voir si pour vous les PWA sont un monde obscure.
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215625792" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
-
 
 ## La soirée à l'hotel de ville
 
@@ -144,7 +141,7 @@ concrêtement le revenu universel.
 Et si on se dégageait une journée par semaine pour vraiment faire ce dont on a envie.
 Est on prêt à se passer de 20% de notre salaire pour enfin avoir du temps pour soi.
 Tout cela était le sujet du random talk auquel j'ai eu le droit de participer le deuxième jour.
-Une belle introduction au *travailler autrement*.
+Une belle introduction au _travailler autrement_.
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/217023172" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
@@ -165,5 +162,3 @@ _Merci [@npayot](https://twitter.com/npayot) (aka flipper le dauphin) serial bla
 
 _Merci à [@hdurix](https://twitter.com/hdurix) pour la revue_
 _Crédit vidéo MiXiT_
-
-

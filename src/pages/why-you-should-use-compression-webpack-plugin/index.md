@@ -44,7 +44,7 @@ plugins: [
 ...
 ```
 
-In two easy steps, your output static files will have their *.gz* equivalent.
+In two easy steps, your output static files will have their _.gz_ equivalent.
 Now if you ship those files on a webserver like [Caddy](https://caddyserver.com/).
 It will automatically deliver the pre-gzipped version if they exist.
 However you need to activate it [in Nginx server configuration](http://nginx.org/en/docs/http/ngx_http_gzip_static_module.html).

@@ -38,11 +38,18 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "husky": "4.0.2",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.0"
   },
   "keywords": [
     "gatsby"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "license": "MIT",
   "main": "n/a",
   "scripts": {

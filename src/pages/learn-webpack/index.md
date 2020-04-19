@@ -18,7 +18,6 @@ That why I boostrapped some workshop in an open source project named:
 
 Just go to https://slashgear.github.io/webpack-workshop/workshops/ and follow the instructions.
 
-
 If you ❤️ these workshops, don't hesitate to share this post and put a little ⭐️ on the repository.
 
 You could also help me by contributing new workshops, or by translating them into different languages.

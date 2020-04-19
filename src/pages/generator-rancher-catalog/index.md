@@ -12,7 +12,6 @@ configuration files could be really hard.
 In order to avoid errors, I create a [generator for Rancher catalog entry based on
 yeoman.](https://github.com/Slashgear/generator-rancher-catalog)
 
-
 ```bash
 npm install -g yo
 npm install -g generator-rancher-catalog

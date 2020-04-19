@@ -29,8 +29,9 @@ For several weeks/months my colleagues have been complaining about the duration 
 The purpose of this command is to build the distributable package of our application in a production target with _webpack_.
 
 I even heard:
-* "This command, I don't run it locally anymore, it takes too much time."
-* "My computer starts ventilating heavily every time I run this command. There's nothing else I can do!"
+
+- "This command, I don't run it locally anymore, it takes too much time."
+- "My computer starts ventilating heavily every time I run this command. There's nothing else I can do!"
 
 Depending on the machine on which the build was launched, it tooks **between 5 and 12 minutes**.
 It is not possible to have a build that takes so long.
@@ -66,7 +67,7 @@ Then I remembered the Pareto principle.
 There is probably one step that takes up most of the webpack build time.
 Pareto principle adapted to webpack could mean _"80% of the build time is caused by 20% of the config"_
 
-*Let's find the culprit ! 🎉*
+_Let's find the culprit ! 🎉_
 
 I had to determine the build time of each loader, of each plugin.
 I was very lucky, the webpack community has already proposed a plugin that allows to measure everything.
@@ -140,11 +141,11 @@ It took me about 10 minutes because there were few breaking changes and I **gain
 
 ### IgnorePlugin, TerserPlugin
 
-- `TerserPlugin` is used to uglify the javascript code in order to reduce its size and readability. It's a relatively long process, but *39 seconds* is too much.
-Just by updating the version of TerserPlugin to use the one integrated in Webpack, I managed to **reduce by 20 seconds** the build time.
+- `TerserPlugin` is used to uglify the javascript code in order to reduce its size and readability. It's a relatively long process, but _39 seconds_ is too much.
+  Just by updating the version of TerserPlugin to use the one integrated in Webpack, I managed to **reduce by 20 seconds** the build time.
 
 - `IgnorePlugin` is a core plugin that was used a lot in our application to avoid loading certain scripts in order to reduce the weight of the site.
-It was necessary, but today with Webpack we can use much better than that. _Dynamic Import, ContextReplacement_, there are plenty of solutions. As a general rule, we should avoid compiling files and then not using them.
+  It was necessary, but today with Webpack we can use much better than that. _Dynamic Import, ContextReplacement_, there are plenty of solutions. As a general rule, we should avoid compiling files and then not using them.
 
 ### Recommendations from the community
 
@@ -167,8 +168,9 @@ No more computers suffering just to compile a bit of JS and SASS.
 I could have lost whole days on futile modifications if I had not measured precisely what penalized the build.
 
 ℹ️
-* Use `Speed Measure Plugin` to debug webpack build time
-* Track your build time evolution to detect big evolution before merge
-* Follow webpack performances recommandations
-* Look at webpack 5 new caching strategies
-* Keep your webpack config up to date
+
+- Use `Speed Measure Plugin` to debug webpack build time
+- Track your build time evolution to detect big evolution before merge
+- Follow webpack performances recommandations
+- Look at webpack 5 new caching strategies
+- Keep your webpack config up to date

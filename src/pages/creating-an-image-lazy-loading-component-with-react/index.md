@@ -36,8 +36,8 @@ NB: loading 1000 images in a page is a very bad practice. It is just for the exa
 Let's create a dedicated component with an image placeholder.
 
 ```jsx
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Image = styled.img`
   display: block;
@@ -46,7 +46,7 @@ const Image = styled.img`
 `
 
 const placeHolder =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='
 
 export const LazyImage = () => {
   return <Image src={placeHolder} />
@@ -76,8 +76,8 @@ I had to use `useState` to handle the `img ref` in order to correctly trigger my
 Take a look at [this article](https://medium.com/@teh_builder/ref-objects-inside-useeffect-hooks-eb7c15198780) which explains why we can't use `useRef` with `useEffect`.
 
 ```jsx
-import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 const Image = styled.img`
   display: block;
@@ -86,7 +86,7 @@ const Image = styled.img`
 `
 
 const placeHolder =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='
 
 export const LazyImage = ({ src, alt }) => {
   const [imageSrc, setImageSrc] = useState(placeHolder)
@@ -112,7 +112,7 @@ export const LazyImage = ({ src, alt }) => {
           },
           {
             threshold: 0.01,
-            rootMargin: "75%",
+            rootMargin: '75%',
           }
         )
         observer.observe(imageRef)
@@ -151,11 +151,11 @@ In order to make it smooth, I just had to handle `onLoad` and `onError` native e
 This is the [LazyImage component](https://codesandbox.io/s/34vpxnno9p?fontsize=14) :
 
 ```jsx
-import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
 
 const placeHolder =
-  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='
 
 const Image = styled.img`
   display: block;
@@ -185,11 +185,11 @@ export const LazyImage = ({ src, alt }) => {
   const [imageRef, setImageRef] = useState()
 
   const onLoad = event => {
-    event.target.classList.add("loaded")
+    event.target.classList.add('loaded')
   }
 
   const onError = event => {
-    event.target.classList.add("has-error")
+    event.target.classList.add('has-error')
   }
 
   useEffect(() => {
@@ -212,7 +212,7 @@ export const LazyImage = ({ src, alt }) => {
           },
           {
             threshold: 0.01,
-            rootMargin: "75%",
+            rootMargin: '75%',
           }
         )
         observer.observe(imageRef)

@@ -17,7 +17,7 @@ const Aside = styled.aside`
     margin-bottom: 0.5rem;
     overflow: hidden;
     white-space: nowrap;
-    ,wordWrap: normal;
+    ,wordwrap: normal;
     text-overflow: ellipsis;
   }
 

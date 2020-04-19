@@ -3,7 +3,7 @@ title: Rancher - How to
 description: I use the Rancher service for one of my projects. In order to share this cool discovery, I've made an article about "How to deploy applications with Rancher"
 date: 2016-06-13
 hero: ./rancher.jpg
-translations: [ "en", "generator-rancher-catalog" ]
+translations: ['en', 'generator-rancher-catalog']
 language: fr
 ---
 
@@ -37,7 +37,6 @@ possédant Docker tout en s’appuyant sur docker-machine.
 Pour installer Rancher, à ce jour il suffit de posséder une machine
 linux 64-bit avec au moins 1GB de mémoire vive.
 
-
 ```bash
 $ sudo docker run -d --restart=always -p 8080:8080 rancher/server
 ```
@@ -45,7 +44,7 @@ $ sudo docker run -d --restart=always -p 8080:8080 rancher/server
 Après quelques minutes d’installation, le server Rancher est disponible
 sur le port 8080 de votre machine (l’image contient une base MySQL, un
 Zookeeper, Redis, et le serveur rancher). Vous pouvez vous y connecter
-car l’accès est par défaut ouvert à tous. Par la suite,  vous pourrez
+car l’accès est par défaut ouvert à tous. Par la suite, vous pourrez
 activer l’authentification,et ainsi facilement configurer des comptes
 pour vos utilisateurs.
 
@@ -61,7 +60,7 @@ j’ai choisi de vous présenter le déploiement d’une application web très
 simple nommée whoami, disponible sur le Docker Hub (développé en Go
 par Emile Vauge).
 
-Pour ce faire, je vais vous expliquer  la méthode de création de
+Pour ce faire, je vais vous expliquer la méthode de création de
 services par l’interface graphique. Sachez que l’on peut interagir
 avec Rancher par l’intermédiaire d’un outil en ligne de commande
 (rancher-cli,encore très limité pour l’instant) ou d’API REST.
@@ -145,7 +144,7 @@ Dans le détail du service, on peut voir que la scale est actuellement
 définie à 1. Il suffirait donc de l’augmenter ? Et bien non, le service
 que nous venons de définir occupe le port 80 de la machine. Il ne
 pourrait donc pas être disponible plus d’une fois par machine. Et c’est
-là l’une des problématiques des microservices :  l’allocation dynamique
+là l’une des problématiques des microservices : l’allocation dynamique
 de port et la “connaissance” des services par le loadbalancer. Rancher
 offre une solution simple à ce problème, il ne faut plus réserver de
 port pour son application, le loadbalancer va connaître les services
@@ -161,11 +160,11 @@ cliquez sur “Add Load Balancer”
 
 Une fois le loadbalancer créé, on peut donc augmenter la scale de son
 application sans avoir de problème d’allocation de port. Si vous cliquez
- le “80” du loadbalancer, vous devez atteindre votre service, et s’il
- est scalé, l’hostname devrait changer au refresh.
+le “80” du loadbalancer, vous devez atteindre votre service, et s’il
+est scalé, l’hostname devrait changer au refresh.
 
 A ce stade du déploiement, on peut se demander, ce qu’il en est de
-l’infrastructure des machines  créées plus tôt.
+l’infrastructure des machines créées plus tôt.
 
 ![Hosts](host2.png)
 
@@ -187,8 +186,7 @@ déployé grâce à lui.
 
 ![Hosts](microservices.png)
 
-
-### Un « blue/green deployement »  et une “rolling upgrade” en 5 minutes
+### Un « blue/green deployement » et une “rolling upgrade” en 5 minutes
 
 Dans la plupart des cas, une mise en production est souvent un
 passage difficile pour le développeur. Les outils DevOps ont bien
@@ -214,7 +212,6 @@ conseiller de la regarder :
 <iframe src="https://www.youtube.com/embed/QFqt8xMTChY?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
 </div>
 
-
 ### Un service DNS et Network overlay
 
 Pour ceux qui ont déjà bien pratiqué Docker, faire communiquer deux
@@ -226,24 +223,23 @@ deux machines différentes d’être sur le même réseau virtuel. Rancher va
 plus loin puisqu’il possède son service DNS dans lequel il enregistre
 chaque nouveau container qu’il crée. Cela a plusieurs avantages:
 
-* Deux services d’une même Stack se connaissent par leur nom ;
-* Un service peut connaître un service d’une autre stack par `nomService.nomStack`.
+- Deux services d’une même Stack se connaissent par leur nom ;
+- Un service peut connaître un service d’une autre stack par `nomService.nomStack`.
 
 ### Un catalogue qui s’enrichit
 
 ![Rancher catalogue](catalogue.png)
 
-
 Rancher possède son propre catalogue d’applications, ces applications
 sont sous la forme de groupes de stacks pré-configurées qui s’appuient
 sur les images du Docker Hub :
 
-* La stack Elastic ;
-* Janitor, un service basé sur docker-cleanup, pour nettoyer les images et conteneurs non-utilisés. ;
-* Traefik, un load balancer développé en Go par Emile Vauge de la Zstartup Containous ;
-* Gluster, un gestionnaire de volume partagé ;
-* Odoo, le célèbre ERP open source ;
-* etc.
+- La stack Elastic ;
+- Janitor, un service basé sur docker-cleanup, pour nettoyer les images et conteneurs non-utilisés. ;
+- Traefik, un load balancer développé en Go par Emile Vauge de la Zstartup Containous ;
+- Gluster, un gestionnaire de volume partagé ;
+- Odoo, le célèbre ERP open source ;
+- etc.
 
 Il est aussi possible d’ajouter son propre
 [catalogue de stacks d’entreprise](http://docs.rancher.com/rancher/v1.5/en/catalog/)

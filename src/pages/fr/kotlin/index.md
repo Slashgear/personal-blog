@@ -13,7 +13,6 @@ dans la création d’un nouveau langage de programmation. **Plein de
 promesses, ce langage, le Kotlin, présenté par Hadi Harriri lors du
 Mix-it 2016, m’a fait forte impression.**
 
-
 Du jeudi 21 au vendredi 22 avril 2016 se tenait à Lyon la sixième
 édition du Mix-IT. Rassemblant plus de 600 participants, cette
 convention aux allures de grande fête pour développeurs et agilistes
@@ -37,14 +36,14 @@ versions de Java plus ambitieuses.
 
 Comme je le dis plus haut, la concision était une volonté et un objectif
 très clair de Jetbrains pour la création du langage Kotlin. Il est
-vrai qu’en Java, on peut très facilement  se retrouver à avoir du
+vrai qu’en Java, on peut très facilement se retrouver à avoir du
 Boilerplate un peu partout. On pense aux getter/setter, très verbeux
 pour finalement une fonctionnalité qu’on peut résumer habilement.
 Évidemment, des plugins comme Lombok permettent par annotation de
 réduire tous ce volume de code.
 
-*Afin de vous montrer un exemple de concision, voici une comparaison
-entre un objet très simple en Java et l’exact équivalent en Kotlin.*
+_Afin de vous montrer un exemple de concision, voici une comparaison
+entre un objet très simple en Java et l’exact équivalent en Kotlin._
 
 Version Java :
 
@@ -186,7 +185,6 @@ modification dans chacune des branches. On peut remarquer que
 l’opérateur de fin d’instruction ‘;’ disparaît (en réalité
 il est optionnel)
 
-
 ## Adieu les “NullPointerException”
 
 Kotlin a été pensé pour éviter les danger des références null et faire
@@ -207,7 +205,6 @@ On ne peut pas affecter à une variable la valeur null si on n’a pas
 délibérément défini cette variable comme nullable. Le Kotlin introduit
 également le “call safe operator” qui permet de tester la nullité d’une
 variable avant l’appel d’un fonction sur cette variable.
-
 
 ## Des fonctions “Callable”
 
@@ -232,7 +229,7 @@ fun main(){
 
 ## La programmation fonctionnelle pour les gouverner tous
 
-Le paradigme fonctionnelle est bien sûr présent dans le langage.  Il
+Le paradigme fonctionnelle est bien sûr présent dans le langage. Il
 permet de réaliser toutes les opérations usuelles (map, reduce,
 forEach,etc,..)
 

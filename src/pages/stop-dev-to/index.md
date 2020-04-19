@@ -16,7 +16,6 @@ I don't think Dev.to is a problem but how authors use it. Authors should not pos
 
 ## "Actually, what's your problem with Dev.to ?"
 
-
 Being an author for several years, I used to share articles on my personal blog. I was quickly confronted with an obvious problem. It is difficult to "make" a small personal blog live in a web world where social networks are taking up more and more space.
 
 By publishing on my personal blog, I had a small audience. It was difficult for my articles to get passed my first level contacts range.
@@ -24,7 +23,6 @@ By publishing on my personal blog, I had a small audience. It was difficult for 
 I was therefore quickly tempted to find a solution to remedy this visibility problem. The solution presented by one of my colleagues seemed attractive to me.
 
 > "Why don't you try the new Medium platform? Authors who publish on Medium have thousands of readers! Also, the editing interface is pretty cool!"
-
 
 That's what I did. I stopped publishing on my personal blog and started writing and publishing my posts on Medium only. And do I regret it today.
 
@@ -38,7 +36,6 @@ I'm not saying Dev.to will suffer the same fate. I'm not a medium, I don't have 
 
 You really have to trust the team so that Dev.to doesn't go in the wrong direction. I would very much like to hear Ben Halpern's opinion on this subject.
 
-
 # So we should stop writing on Dev.to ?
 
 **The answer is NO**
@@ -47,16 +44,13 @@ Dev.to is great, and have an amazing community. **But**, authors should not post
 
 We should follow the **P.O.S.S.E** principle.
 
-
 > Publish (on your) Own Site, Syndicate Elsewhere
-
 
 Respecting it will help authors being and staying responsible of their publications on the Internet. This will:
 
 - protect the web from hyper-centralization
 - avoid having your copyrights stolen
 - promote your blog
-
 
 All authors should have their own personal blog where they publish the content. They can then share this content on other platforms by placing a `canonical url` pointing to their own blog page.
 
