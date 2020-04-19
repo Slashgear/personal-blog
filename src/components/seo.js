@@ -9,8 +9,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { useLanguage } from './useLanguage'
 
-const SEO = ({ description, lang, meta, title, image }) => {
+const SEO = ({ description, lang, meta, title, image, translations }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -27,9 +28,18 @@ const SEO = ({ description, lang, meta, title, image }) => {
       }
     `
   )
+  const langs = useLanguage()
+  const slugByLang = langs.allMarkdownRemark.edges.reduce(
+    (accumulator, { node }) => {
+      accumulator[node.frontmatter.language] = node.fields.slug
+      return accumulator
+    },
+    {}
+  )
 
   const metaDescription = description || site.siteMetadata.description
   let imageTags = []
+  let translationTags = []
 
   if (image) {
     imageTags = [
@@ -52,12 +62,23 @@ const SEO = ({ description, lang, meta, title, image }) => {
     ]
   }
 
+  if (translations) {
+    for (let i = 0; i < translations.length; i += 2) {
+      translationTags.push({
+        rel: 'alternate',
+        hreflang: translations[i],
+        href: `${slugByLang[translations[i]]}${translations[i + 1]}`,
+      })
+    }
+  }
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
+      link={translationTags}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {

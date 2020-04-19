@@ -1,10 +1,9 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Bio from '../components/bio'
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 import { TableOfContents } from '../components/tableOfContents'
 import SEO from '../components/seo'
@@ -27,6 +26,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
           lang={post.frontmatter.lang}
+          translations={post.frontmatter.translations}
           image={
             post.frontmatter.hero
               ? post.frontmatter.hero.childImageSharp.image
