@@ -1,5 +1,5 @@
 ---
-title: Git - Pourquoi ne pas garder une branche de master local à jour?
+title: Git - Pourquoi ne pas garder une branche master local à jour?
 description: Qu'est-ce qu'une branche locale, qu'est-ce qu'une branche éloignée ? Pourquoi la mise à jour de la branche locale est-elle une perte de temps ?
 hero: ./what.jpg
 language: fr
