@@ -386,8 +386,7 @@ The same goes for the selector usage that returns a new ref at each call.
 The use of the `filter` function returns a new array each time a new reference even if the filter conditions have not changed.
 
 A selector should not return a _view_ (a copy) of the state but directly what it contains.
-By respecting this principle, your components will return only if an action modifies the state.
-At Bedrock, we avoid these problems by not storing in the state the information as we want to display it.
+By respecting this principle, your components will rerender only if an action modifies the state.
 Utilities such as [reselect] can be used to implement selectors with a memory system.
 
 ### Do not transform your data in the components
@@ -455,6 +454,6 @@ Moreover, by using redux instead of the [useReducer] hook you can take advantage
 [immutable-set]: https://www.npmjs.com/package/immutable-set
 [reducer]: https://redux.js.org/basics/reducers
 [immutable.js]: https://immutable-js.github.io/immutable-js/
-[Redux offical style guide]: https://redux.js.org/style-guide/style-guide
+[redux offical style guide]: https://redux.js.org/style-guide/style-guide
 
-_Thanks to the reviewers:... _
+_Thanks to the reviewers: [@flepretre](https://github.com/flepretre)_
