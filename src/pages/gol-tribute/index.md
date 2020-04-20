@@ -1,5 +1,5 @@
 ---
-title:  Personal tribute to the Game of Life 
+title:  Personal tribute to "Game of Life"
 description: Trying to implement the Game of Life in Javascript in the browser and without framework.
 date: 2020-04-20
 hero: ./gol.png
