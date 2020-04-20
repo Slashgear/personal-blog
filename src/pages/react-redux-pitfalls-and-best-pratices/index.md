@@ -474,4 +474,7 @@ Moreover, by using redux instead of the [useReducer] hook you can take advantage
 [immutable.js]: https://immutable-js.github.io/immutable-js/
 [redux offical style guide]: https://redux.js.org/style-guide/style-guide
 
-_Thanks to the reviewers: [@flepretre](https://github.com/flepretre)_,[@mfrachet](https://github.com/mfrachet)
+_Thanks to the reviewers: 
+[@flepretre](https://github.com/flepretre), 
+[@mfrachet](https://github.com/mfrachet), 
+[@fdubost](https://github.com/fdubost)_
