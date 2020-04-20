@@ -265,6 +265,8 @@ A `dispatch` action will pass through each of the reducers associated with this 
 An action at the other end of your application could affect this state without being expressed in the code.
 This should be avoided.
 
+![combine reducer schema](./combineReducer.png)
+
 If you want to modify the state with an action from another module, you can do so by adding a `case` on that action.
 
 ```js
