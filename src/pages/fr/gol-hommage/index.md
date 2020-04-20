@@ -5,7 +5,6 @@ date: 2020-04-20
 hero: ./gol.png
 language: fr
 translations: ['en', 'gol-tribute']
-
 ---
 
 Cette fin d'année scolaire en tant que professeur à la fac n'est pas très habituelle.

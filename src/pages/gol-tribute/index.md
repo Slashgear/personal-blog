@@ -1,12 +1,11 @@
 ---
-title:  Personal Tribute to the Game of Life 
+title:  Personal tribute to the Game of Life 
 description: Trying to implement the Game of Life in Javascript in the browser and without framework.
 date: 2020-04-20
 hero: ./gol.png
 language: en
 translations: ['fr', 'gol-hommage']
 ---
-
 
 This end of the school year as a college professor is not very usual.
 In a few days, I'm about to give my first courses to distance students through Discord.
