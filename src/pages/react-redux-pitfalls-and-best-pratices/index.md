@@ -11,7 +11,7 @@ language: en
 After 2 years using React with Redux for the video platform [6play](https://6play.fr), I was able to identify good practices and pitfalls to avoid at all costs.
 The [Bedrock](https://www.bedrockstreaming.com/) team (to which I currently belong) kept the technical stack of the project up to date to take advantage of the new features of `react`, `react-redux` and `redux`.
 
-So here are my tips for maintaining and using React and Redux in your application without going crazy.
+So here are my tips for maintaining and using React and Redux in your application without going mad.
 
 _This article is not an introduction to React or Redux. I recommend [this documentation](https://redux.js.org/basics/usage-with-react) if you want to see how to implement it in your applications._
 
@@ -19,17 +19,17 @@ You could also take a look at [Redux offical style guide] in which you could fin
 
 ## Avoid having only one reducer
 
-The [reducer] is the function that is in charge of building at each `action`.
+The [reducer] is the function that is in charge of building a new state at each `action`.
 One might be tempted to manipulate only one reducer.
 In the case of a small application, this is not a problem.
-For applications expressing a complex and evolving business, it is better to opt for the [combineReducers] solution.
+For applications expressing a complex and evolving business, it is better to opt in for the [combineReducers] solution.
 
-This feature of `redux` allows you to manipulate not one but several [reducer]s which act respectively on the state.
+This feature of `redux` allows to manipulate not one but several [reducer]s which act respectively on the state.
 
 > When and how to split its application?
 
 What I recommend is a functional splitting of the application.
-Your file structure should represent the business more than your technical layers.
+In my approach, I would tend to represent the business of the application more than the technical stuff implied.
 Some very good articles explain it notably through the use of [DDD principles](https://en.wikipedia.org/wiki/Domain-driven_design).
 
 In Bedrock, we use a folder named _modules_ which groups together the different folders associated with the feature of your application.
@@ -56,7 +56,7 @@ app/
   index.js
 ```
 
-So in `store.js` all you have to do is combine your different reducers.
+So in `store.js` all you need to do is combine your different reducers.
 
 ```js
 import { createStore, combineReducers } from 'redux'
@@ -69,16 +69,17 @@ export const store = createStore(combineReducers({ user, product, account }))
 
 By following this principle, you can:
 
-- keep reducers readable because they have a limited scope.
+- keep reducers readable because they have a limited scope
 - structure and define the functionalities of your application
-- facilitate the testing of your reducers
+- facilitate the testing
 
-Historically, this segmentation has allowed us to remove complete application areas without having imapcts on the entire codebase, just by deleting the `module` folder associated with the feature.
+Historically, this segmentation has allowed us to remove complete application areas without having impacts on the entire codebase, just by deleting the `module` folder associated with the feature.
 
 ### Proxy access to the state
 
 Now that your reducers have been placed in the functional `module`, you need to allow your components to access the state via `selector`.
 A `selector` is a function that has the `state` as a parameter, and retrieves its information.
+This can also allow you to select only the props needed for the component by decoupling from the state structure.
 
 ```js
 export const getUserName = ({ user: { lastName } }) => lastName
@@ -150,7 +151,7 @@ They manipulate the state of your application.
 
 **This code is rich in business rules**
 
-➡️ You must be ensured that these are correctly implemented.
+➡️ You must be confident that these are correctly implemented.
 
 The good news is that this code is relatively easy to test.
 A [reducer] is a single function that takes 2 parameters.
@@ -186,21 +187,21 @@ The use of the _spread operator_ is thus more than recommended.
 
 However, in the case where the state has a complicated and deep structure, it can be verbose to change the state without destroying the references that should not change.
 
-For example, here we want to override the `a.y.A` value of the state while keeping the objects that don't change.
+For example, here we want to override the `Rhone.Villeurbanne.postal` value of the state while keeping the objects that don't change.
 
 ```js
 const state = {
-  a: {
-    z: {
-      A: 'A',
+  Rhone: {
+    Lyon: {
+      postal: '69000' ,
     },
-    y: {
-      A: 'A',
+    Villeurbanne: {
+      postal: '',
     },
   },
-  b: {
-    z: {
-      A: 'A',
+  Isère: {
+    Grenoble: {
+      postal: '39000',
     },
   },
 }
@@ -208,22 +209,22 @@ const state = {
 // When you want tu change nested state value and use immutability
 const newState = {
   ...state,
-  a: {
-    ...state.z,
-    y: {
-      A: 'B',
+  Rhone: {
+    ...state.Lyon,
+    Villeurbanne: {
+      postal: '69100',
     },
   },
 }
 ```
 
-To avoid this, [a member of the Bedrock team](https://github.com/flepretre) released a package that allows `set` one nested attribute while ensuring immutability: [immutable-set]
-This package is much easier to use than tools like [immutable.js].
+To avoid this, [a member of the Bedrock team](https://github.com/flepretre) released a package that allows to `set` nested attribute while ensuring immutability: [immutable-set]
+This package is much easier to use than tools like [immutable.js] because it does not use Object prototype.
 
 ```js
 import set from 'immutable-set'
 
-const newState = set(state, 'a.y.A', 'B')
+const newState = set(state, `Rhone.Villeurbanne.postal`, '69100')
 ```
 
 ## Do not use the default case
@@ -307,9 +308,8 @@ export const bar = () =>
 ```
 
 These two actions are basically the same thing, we could very well make a factory that would do the code in common.
-If this pattern repeated itself only twice, that would probably be the best thing to do.
 
-Basically the _meta_ action we want to represent here when it is `dispatch`:
+Basically the _meta_ action we want to represent here when it is `dispatched`:
 
 ```
 Fetch something
@@ -336,7 +336,7 @@ const exampleApp = combineReducers(reducers)
 const store = createStore(exampleApp, applyMiddleware(http))
 ```
 
-Thus the two preceding actions could be written much more simply:
+Thus the two preceding actions could be written much more simpler:
 
 ```js
 export const foo = () => ({ type: 'FOO', http: 'https://example.com/api/foo' })
@@ -365,7 +365,7 @@ const getUserById = userId => state =>
   state.users.find(user => user.id === userId) || {}
 ```
 
-The developer here wanted to ensure that his _selector_ is null safe and always returns an _object_.
+The developer here wanted to ensure that its _selector_ is null safe and always returns an _object_.
 This is something we see quite often.
 
 Each time this selector will be called for a `user` not present in the state, it will return a new object, a new reference.
@@ -474,4 +474,4 @@ Moreover, by using redux instead of the [useReducer] hook you can take advantage
 [immutable.js]: https://immutable-js.github.io/immutable-js/
 [redux offical style guide]: https://redux.js.org/style-guide/style-guide
 
-_Thanks to the reviewers: [@flepretre](https://github.com/flepretre)_
+_Thanks to the reviewers: [@flepretre](https://github.com/flepretre)_,[@mfrachet](https://github.com/mfrachet)
