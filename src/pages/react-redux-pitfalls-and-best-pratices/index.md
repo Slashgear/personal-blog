@@ -119,8 +119,8 @@ app/
 
 > I really advise you to define naming rules for your actions and if possible check them with an `eslint` rule.
 
-Actions are in uppercase letters separated by '\_'.
-Exemple avec cette action: `SET_USERS`.
+Actions are in uppercase letters separated by '_'.
+Here an example with this action: `SET_USERS`.
 
 ```txt
 app/
@@ -129,7 +129,7 @@ app/
       __tests__/
         user.reducer.spec.js
       components/
-      user.actions.js <--- This is where all module action creator are exported
+      user.actions.js <--- This is where all module action creators are exported
       user.reducer.js
       user.selectors.js
 ```
@@ -147,7 +147,7 @@ They manipulate the state of your application.
 
 **This code is therefore _sensitive_.**
 
-➡️ a modification can have a lot of impact on your application.
+➡️ A modification can have a lot of impact on your application.
 
 **This code is rich in business rules**
 
@@ -155,7 +155,7 @@ They manipulate the state of your application.
 
 The good news is that this code is relatively easy to test.
 A [reducer] is a single function that takes 2 parameters.
-This function will return a new `state` depending on the type of action and these parameters.
+This function will return a new `state` depending on the type of action and its parameters.
 
 This is the standard structure for testing [reducer]s with [Jest](https://jestjs.io/):
 
@@ -177,7 +177,7 @@ describe('ReducerName', () => {
 
 I also recommend that you use the [deep-freeze](https://www.npmjs.com/package/deep-freeze) package on your `state` to ensure that all actions return new references.
 
-Ultimately, testing your [reducer] will allow you to easily refactor the internal structure of their state without the risk of introducing regressions.
+Ultimately, testing your [reducer]s will allow you to easily refactor the internal structure of their state without the risk of introducing regressions.
 
 ## Keep the immutability and readability of your reducers
 
@@ -206,7 +206,7 @@ const state = {
   },
 }
 
-// When you want tu change nested state value and use immutability
+// When you want to change nested state value and use immutability
 const newState = {
   ...state,
   Rhone: {
@@ -346,14 +346,14 @@ export const bar = () => ({ type: 'BAR', http: 'https://example.com/api/bar' })
 
 The big advantages of using middleware in a complex application:
 
-- Avoids code duplication
-- Allows you to define common behaviors between your actions
-- Standardize redux _meta_ action types
+- avoids code duplication
+- allows you to define common behaviors between your actions
+- standardize redux _meta_ action types
 
 ## Avoid redux related rerender
 
 The trick when using redux is to trigger component re-render when you connect them to the state.
-Even if [rerenders are not always a problem], re-render caused by the use of redux are really to be prevented.
+Even if [rerenders are not always a problem], re-render caused by the use of redux really has to be prevented.
 Just beware of the following traps.
 
 ### Do not create a reference in the _selector_
@@ -449,7 +449,7 @@ Since the arrival of hooks, we have many more tools provided directly by React t
 The [useReducer] hook allows to set a state that can be modified through actions.
 We're really very very close to a redux state that we can associate to a component, it's great.
 
-However, if you use redux in your application, it seems quite strange to have to use use useReducer.
+However, if you use redux in your application, it seems quite strange to have to use useReducer.
 You already have everything you need to manipulate a complex state.
 
 Moreover, by using redux instead of the [useReducer] hook you can take advantage of really efficient devtools and middlewares.
