@@ -28,8 +28,8 @@ This feature of `redux` allows to manipulate not one but several [reducer]s whic
 
 > When and how to split its application?
 
-What I recommend is a functional splitting of the application.
-In my approach, I would tend to represent the business of the application more than the technical stuff implied.
+What we recommend at Bedrock is a functional splitting of the application.
+In my approach, we would tend to represent the business of the application more than the technical stuff implied.
 Some very good articles explain it notably through the use of [DDD principles](https://en.wikipedia.org/wiki/Domain-driven_design).
 
 In Bedrock, we use a folder named _modules_ which groups together the different folders associated with the feature of your application.
@@ -67,7 +67,7 @@ import { account } from './modules/user/account.reducer.js'
 export const store = createStore(combineReducers({ user, product, account }))
 ```
 
-By following this principle, you can:
+By following this principle, you will:
 
 - keep reducers readable because they have a limited scope
 - structure and define the functionalities of your application
@@ -451,7 +451,7 @@ Since the arrival of hooks, we have many more tools provided directly by React t
 The [useReducer] hook allows to set a state that can be modified through actions.
 We're really very very close to a redux state that we can associate to a component, it's great.
 
-However, if you use redux in your application, it seems quite strange to have to use useReducer.
+However, if you use redux in your application, it seems quite strange to have to use [useReducer].
 You already have everything you need to manipulate a complex state.
 
 Moreover, by using redux instead of the [useReducer] hook you can take advantage of really efficient devtools and middlewares.
@@ -479,4 +479,6 @@ Moreover, by using redux instead of the [useReducer] hook you can take advantage
 _Thanks to the reviewers: 
 [@flepretre](https://github.com/flepretre), 
 [@mfrachet](https://github.com/mfrachet), 
-[@fdubost](https://github.com/fdubost)_
+[@fdubost](https://github.com/fdubost),
+[@ncuillery](https://github.com/ncuillery),
+[@renaudAmsellem](https://github.com/renaudAmsellem)_
