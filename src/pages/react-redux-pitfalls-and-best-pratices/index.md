@@ -16,6 +16,7 @@ So here are my tips for maintaining and using React and Redux in your applicatio
 _This article is not an introduction to React or Redux. I recommend [this documentation](https://redux.js.org/basics/usage-with-react) if you want to see how to implement it in your applications._
 
 You could also take a look at [Redux offical style guide] in which you could find some of those tips and others.
+Note that if you use the [Redux Toolkit], some of the tips/practices presented in this article are already integrated directly into the API.
 
 ## Avoid having only one reducer
 
@@ -475,6 +476,7 @@ Moreover, by using redux instead of the [useReducer] hook you can take advantage
 [reducer]: https://redux.js.org/basics/reducers
 [immutable.js]: https://immutable-js.github.io/immutable-js/
 [redux offical style guide]: https://redux.js.org/style-guide/style-guide
+[Redux Toolkit]: https://redux-toolkit.js.org/
 
 _Thanks to the reviewers: 
 [@flepretre](https://github.com/flepretre), 
