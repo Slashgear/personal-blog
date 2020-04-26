@@ -1,11 +1,15 @@
 import React from 'react'
 import useDarkMode from 'use-dark-mode'
+import useSound from 'use-sound'
 import Toggle from './toggle'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 
 export const SwitchTheme = () => {
   const darkMode = useDarkMode(false)
+
+  const [lightOn] = useSound('/switch-on.mp3')
+  const [lightOff] = useSound('/switch-off.mp3')
 
   return (
     <Toggle
@@ -30,7 +34,14 @@ export const SwitchTheme = () => {
         ),
       }}
       checked={darkMode.value}
-      onChange={darkMode.toggle}
+      onChange={() => {
+        if (darkMode.value) {
+          lightOff()
+        } else {
+          lightOn()
+        }
+        darkMode.toggle()
+      }}
     />
   )
 }
