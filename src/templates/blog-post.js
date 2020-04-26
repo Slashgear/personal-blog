@@ -7,6 +7,7 @@ import { Layout } from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 import { TableOfContents } from '../components/tableOfContents'
 import SEO from '../components/seo'
+import { Hero } from '../components/hero'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -47,26 +48,9 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+
         {post.frontmatter.hero && (
-          <picture>
-            <source
-              srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSetWebp}
-              sizes="30vw"
-              type="image/webp"
-            />
-            <source
-              srcSet={post.frontmatter.hero.childImageSharp.fluid.srcSet}
-              sizes="30vw"
-              type="image/png"
-            />
-            <img
-              loading="lazy"
-              className="article-item__picture"
-              src={post.frontmatter.hero.childImageSharp.fluid.src}
-              alt={post.frontmatter.title}
-              width="100%"
-            />
-          </picture>
+          <Hero hero={post.frontmatter.hero} title={post.frontmatter.title} />
         )}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr

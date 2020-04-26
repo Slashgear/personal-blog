@@ -7,6 +7,7 @@ import Bio from '../components/bio'
 import { Layout } from '../components/layout'
 import { rhythm } from '../utils/typography'
 import { Socials } from '../components/socials'
+import { Hero } from '../components/hero'
 
 class BlogIndex extends React.Component {
   render() {
@@ -48,27 +49,10 @@ class BlogIndex extends React.Component {
               </small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               {node.frontmatter.hero && (
-                <picture>
-                  <source
-                    srcSet={
-                      node.frontmatter.hero.childImageSharp.fluid.srcSetWebp
-                    }
-                    sizes="30vw"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet={node.frontmatter.hero.childImageSharp.fluid.srcSet}
-                    sizes="30vw"
-                    type="image/png"
-                  />
-                  <img
-                    loading="lazy"
-                    className="article-item__picture"
-                    src={node.frontmatter.hero.childImageSharp.fluid.src}
-                    alt={node.frontmatter.title}
-                    width="100%"
-                  />
-                </picture>
+                <Hero
+                  hero={node.frontmatter.hero}
+                  title={node.frontmatter.title}
+                />
               )}
             </div>
           )
