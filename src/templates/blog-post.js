@@ -8,11 +8,13 @@ import { rhythm, scale } from '../utils/typography'
 import { TableOfContents } from '../components/tableOfContents'
 import SEO from '../components/seo'
 import { Hero } from '../components/hero'
+import { AvailableLanguages } from '../components/availableLanguages'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, `data.config.frontmatter.title`)
+    const language = get(this.props, `data.config.frontmatter.language`)
     const siteBio = get(this, 'props.data.config.html')
     const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
@@ -49,9 +51,15 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
 
+        <AvailableLanguages
+          language={language}
+          translations={post.frontmatter.translations}
+        />
+
         {post.frontmatter.hero && (
           <Hero hero={post.frontmatter.hero} title={post.frontmatter.title} />
         )}
+
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

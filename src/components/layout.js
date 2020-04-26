@@ -4,7 +4,7 @@ import { LanguageSwitcher } from './LanguageSwitcher'
 
 import { rhythm } from '../utils/typography'
 
-export const Layout = ({ location, config, children, translations }) => {
+export const Layout = ({ location, config, children }) => {
   let header
 
   if (`${__PATH_PREFIX__}${config.fields.slug}` === location.pathname) {
@@ -59,10 +59,6 @@ export const Layout = ({ location, config, children, translations }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <LanguageSwitcher
-        language={config.frontmatter.language}
-        translations={translations}
-      />
       {header}
       {children}
     </div>
