@@ -36,6 +36,7 @@ export const AvailableLanguages = ({ language, translations }) => {
           }
           return (
             <Link
+              key={translationLink}
               style={{
                 boxShadow: 'none',
                 textDecoration: 'none',
