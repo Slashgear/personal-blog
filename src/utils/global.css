@@ -1,5 +1,7 @@
 body {
   background-color: var(--bg);
+  --bg-transition: background-color 0.5s ease;
+  transition: var(--bg-transition);
 }
 
 body.light-mode {

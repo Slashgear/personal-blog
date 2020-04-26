@@ -71,6 +71,7 @@ export const Layout = ({ location, config, children }) => {
         marginRight: 'auto',
         color: 'var(--textNormal)',
         background: 'var(--bg)',
+        transition: 'var(--bg-transition)',
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
