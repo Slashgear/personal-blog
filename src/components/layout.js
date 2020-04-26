@@ -1,7 +1,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import { rhythm } from '../utils/typography'
+import { SwitchTheme } from './switchTheme'
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const Container = ({ children }) => (
+  <Wrapper>
+    {children}
+    <SwitchTheme />
+  </Wrapper>
+)
 
 export const Layout = ({ location, config, children }) => {
   let header
@@ -12,13 +26,13 @@ export const Layout = ({ location, config, children }) => {
         style={{
           marginBottom: rhythm(1.5),
           marginTop: 0,
+          color: 'var(--header)',
         }}
       >
         <Link
           style={{
             boxShadow: 'none',
             textDecoration: 'none',
-            color: 'inherit',
           }}
           to={config.fields.slug}
         >
@@ -33,6 +47,7 @@ export const Layout = ({ location, config, children }) => {
           fontFamily: 'Montserrat, sans-serif',
           marginTop: 0,
           marginBottom: rhythm(-1),
+          color: 'var(--header)',
         }}
       >
         <Link
@@ -53,11 +68,13 @@ export const Layout = ({ location, config, children }) => {
       style={{
         marginLeft: 'auto',
         marginRight: 'auto',
+        color: 'var(--textNormal)',
+        background: 'var(--bg)',
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      {header}
+      <Container>{header}</Container>
       {children}
     </div>
   )

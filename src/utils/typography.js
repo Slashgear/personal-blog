@@ -1,3 +1,4 @@
+import './global.css'
 import Typography from 'typography'
 import Wordpress2016 from 'typography-theme-wordpress-2016'
 
@@ -9,11 +10,32 @@ Wordpress2016.overrideThemeStyles = () => {
     'a.anchor': {
       boxShadow: `none`,
     },
-    'h1,h2,h3,h4,h5,h6,a': {
-      color: `hsl(268, 53%, 51%)`,
+    a: {
+      color: 'var(--textLink)',
     },
     hr: {
-      background: `hsl(268, 53%, 51%)`,
+      background: 'var(--hr)',
+    },
+    'a.anchor svg[aria-hidden="true"]': {
+      stroke: 'var(--textLink)',
+    },
+    'p code': {
+      fontSize: '1rem',
+    },
+    // TODO: why tho
+    'h1 code, h2 code, h3 code, h4 code, h5 code, h6 code': {
+      fontSize: 'inherit',
+    },
+    'li code': {
+      fontSize: '1rem',
+    },
+    blockquote: {
+      color: 'inherit',
+      borderLeftColor: 'inherit',
+      opacity: '0.8',
+    },
+    'blockquote.translation': {
+      fontSize: '1em',
     },
   }
 }

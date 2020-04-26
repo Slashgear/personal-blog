@@ -36,7 +36,7 @@ class BlogPostTemplate extends React.Component {
               : null
           }
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1 style={{ color: 'var(--header)' }}>{post.frontmatter.title}</h1>
         {post.headings.length > 1 && (
           <TableOfContents tableOfContents={post.tableOfContents} />
         )}
