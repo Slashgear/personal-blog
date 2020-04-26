@@ -1,6 +1,7 @@
 import React from 'react'
 import useDarkMode from 'use-dark-mode'
 import useSound from 'use-sound'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import Toggle from './toggle'
 import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
@@ -40,6 +41,13 @@ export const SwitchTheme = () => {
         } else {
           lightOn()
         }
+
+        trackCustomEvent({
+          category: 'SwitchTheme',
+          action: 'Click',
+          label: darkMode.value ? 'light' : 'dark',
+        })
+
         darkMode.toggle()
       }}
     />
