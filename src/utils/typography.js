@@ -9,6 +9,12 @@ Wordpress2016.overrideThemeStyles = () => {
     'a.anchor': {
       boxShadow: `none`,
     },
+    'h1,h2,h3,h4,h5,h6,a': {
+      color: `hsl(268, 53%, 51%)`,
+    },
+    hr: {
+      background: `hsl(268, 53%, 51%)`,
+    },
   }
 }
 
