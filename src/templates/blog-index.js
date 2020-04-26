@@ -8,7 +8,6 @@ import { Layout } from '../components/layout'
 import { rhythm } from '../utils/typography'
 import { Socials } from '../components/socials'
 import { Hero } from '../components/hero'
-import { LanguageSwitcher } from '../components/LanguageSwitcher'
 
 class BlogIndex extends React.Component {
   render() {

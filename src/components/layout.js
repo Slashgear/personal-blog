@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { LanguageSwitcher } from './LanguageSwitcher'
 
 import { rhythm } from '../utils/typography'
 
@@ -11,7 +10,6 @@ export const Layout = ({ location, config, children }) => {
     header = (
       <h1
         style={{
-          fontSize: '4rem',
           marginBottom: rhythm(1.5),
           marginTop: 0,
         }}

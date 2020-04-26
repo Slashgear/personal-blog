@@ -2,6 +2,7 @@
 type: language
 language: en
 language_label: 'English'
+language_option: 'Post available in'
 title: 'Antoine Caron'
 description: 'Antoine Caron personal blog where you can read news about his open-source courses, packages.'
 ---

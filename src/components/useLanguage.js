@@ -12,6 +12,7 @@ export const useLanguage = () =>
             frontmatter {
               language
               language_label
+              language_option
             }
           }
         }

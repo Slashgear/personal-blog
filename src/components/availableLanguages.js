@@ -14,10 +14,13 @@ const Container = styled.div`
 
 export const AvailableLanguages = ({ language, translations }) => {
   const data = useLanguage()
+  const option = data.allMarkdownRemark.edges.find(
+    ({ node }) => node.frontmatter.language == language
+  ).node.frontmatter.language_option
 
   return translations ? (
     <Container>
-      Post available in:{' '}
+      {option}:{' '}
       {data.allMarkdownRemark.edges.map(({ node }) => {
         if (node.frontmatter.language == language) {
           return

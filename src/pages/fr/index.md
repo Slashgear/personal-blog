@@ -2,6 +2,7 @@
 type: language
 language: fr
 language_label: 'Français'
+language_option: 'Article disponible en'
 title: 'Antoine Caron'
 description: "Blog personel d'Antoine Caron où vous pouvez découvrir ses articles, cours et packages."
 ---
