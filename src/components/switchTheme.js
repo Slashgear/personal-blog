@@ -7,7 +7,7 @@ import sun from '../assets/sun.png'
 import moon from '../assets/moon.png'
 
 export const SwitchTheme = () => {
-  const darkMode = useDarkMode(false)
+  const darkMode = useDarkMode()
 
   const [lightOn] = useSound('/switch-on.mp3')
   const [lightOff] = useSound('/switch-off.mp3')
