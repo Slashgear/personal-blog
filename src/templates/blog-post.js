@@ -7,8 +7,8 @@ import { Layout } from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 import { TableOfContents } from '../components/tableOfContents'
 import SEO from '../components/seo'
-import { Hero } from '../components/hero'
 import { AvailableLanguages } from '../components/availableLanguages'
+import Img from 'gatsby-image'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -57,7 +57,10 @@ class BlogPostTemplate extends React.Component {
         />
 
         {post.frontmatter.hero && (
-          <Hero hero={post.frontmatter.hero} title={post.frontmatter.title} />
+          <Img
+            fluid={post.frontmatter.hero.childImageSharp.fluid}
+            alt={post.frontmatter.title}
+          />
         )}
 
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -130,7 +133,7 @@ export const pageQuery = graphql`
         description
         hero {
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
             image: fixed(
