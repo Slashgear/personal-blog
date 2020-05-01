@@ -2,12 +2,12 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 import Bio from '../components/bio'
 import { Layout } from '../components/layout'
 import { rhythm } from '../utils/typography'
 import { Socials } from '../components/socials'
-import { Hero } from '../components/hero'
 
 class BlogIndex extends React.Component {
   render() {
@@ -49,9 +49,9 @@ class BlogIndex extends React.Component {
               </small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               {node.frontmatter.hero && (
-                <Hero
-                  hero={node.frontmatter.hero}
-                  title={node.frontmatter.title}
+                <Img
+                  fluid={node.frontmatter.hero.childImageSharp.fluid}
+                  alt={node.frontmatter.title}
                 />
               )}
             </div>
@@ -99,7 +99,7 @@ export const blogIndexFragment = graphql`
             description
             hero {
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 1000) {
                   ...GatsbyImageSharpFluid_withWebp_noBase64
                 }
                 image: fixed(
