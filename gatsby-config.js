@@ -7,6 +7,7 @@ module.exports = {
     },
     description: `Antoine Caron personal blog where you can read news about his open-source courses, packages.`,
     siteUrl: `https://slashgear.github.io`,
+    repository: 'https://github.com/Slashgear/slashgear.github.io',
     social: {
       twitter: `Slashgear_`,
     },
