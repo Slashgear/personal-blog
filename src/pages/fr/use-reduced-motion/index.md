@@ -2,14 +2,14 @@
 title: Et voici use-reduced-motion!
 description: Annonce de la publication d'un package open source pour la gestion de la réduction des mouvements pour l'accessibilité du web. Inspiré de mes lectures et voulant en apprendre plus sur les Hook de React.
 date: 2020-05-01
-hero: ./useReducedMotion.jpg
+hero: ../../use-reduced-motion/useReducedMotion.jpg
 language: fr
 translations: ['en', 'use-reduced-motion']
 ---
 
 ## Tout part toujours d'une idée
 
-La semaine dernière, alors que je mettais en place le mode sombre sur mon site perso, je me suis motivé à travailler sur un nouveau package pour la communauté React.
+La semaine dernière, alors que je mettais en place le mode sombre sur [mon site perso](https://slashgear.github.io/fr/), je me suis motivé à travailler sur un nouveau package pour la communauté React.
 
 > "Tiens, quelqu'un a partagé un hook pour gérer la feature `prefers-color-scheme` des navigateurs, c'est super pratique."
 
@@ -47,7 +47,7 @@ Une _media query_ vous permets donc de stopper vos animations pour les utilisate
 
 Le [support de cette fonctionnalité](https://caniuse.com/#feat=prefers-reduced-motion) est même très correct.
 
-![Support de la fonctionnalité prefers-reduced-motion en mai 2020](./prefersReduceMotion-support-05-2020.png)
+![Support de la fonctionnalité prefers-reduced-motion en mai 2020](../../use-reduced-motion/prefersReduceMotion-support-05-2020.png)
 
 Voici une démo en vidéo du fonctionnement de cette fonctionnalité extraite de [l'article cité plus haut](https://web.dev/prefers-reduced-motion/).
 
