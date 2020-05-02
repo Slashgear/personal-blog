@@ -61,7 +61,7 @@ Here is a video demo of how this feature works, taken from [the article quoted a
 </video>
 </div>
 
-## The package and how to use it
+## Where is the package and how to use it?
 
 It's very nice this _media query_ but in some cases, the animations I use on my sites are managed by JavaScript.
 Fortunately, we have solutions to track the use of the _media query_ in the browser.
