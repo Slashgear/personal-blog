@@ -77,5 +77,11 @@ module.exports = {
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-use-dark-mode',
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://slashgear.github.io`,
+      },
+    },
   ],
 }

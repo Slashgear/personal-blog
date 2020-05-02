@@ -5865,6 +5865,13 @@ gatsby-plugin-advanced-sitemap@^1.5.2:
     moment "^2.24.0"
     xml "^1.0.1"
 
+gatsby-plugin-canonical-urls@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.3.0.tgz#480240cc4059033fa57141220021890b0eb98538"
+  integrity sha512-WK5I6zz+YsnX/cMeSsvvtnnki+hfHfj0FyxXP8cgvanwStaGzyqpoUF6oZ0DU8GZafrvsUN//LTfPuSkygs2Kw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+
 gatsby-plugin-feed@^2.3.29:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.4.4.tgz#00243e8dbba1da61b2218ecce69609646c2c2f47"
