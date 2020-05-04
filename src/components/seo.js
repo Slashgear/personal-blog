@@ -51,14 +51,6 @@ const SEO = ({ description, lang, meta, title, image, translations }) => {
         name: 'twitter:image',
         content: site.siteMetadata.siteUrl + image.src,
       },
-      {
-        name: 'og:image:width',
-        content: image.width,
-      },
-      {
-        name: 'og:image:height',
-        content: image.height,
-      },
     ]
   }
 

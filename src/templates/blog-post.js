@@ -144,16 +144,8 @@ export const pageQuery = graphql`
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
-            image: fixed(
-              fit: COVER
-              width: 1080
-              jpegProgressive: true
-              jpegQuality: 60
-              height: 1080
-            ) {
+            image: fixed(fit: COVER, width: 1080, jpegProgressive: true) {
               src
-              height
-              width
             }
           }
         }

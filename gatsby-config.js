@@ -28,8 +28,10 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
               withWebp: true,
+              useMozJpeg: true,
+              stripMetadata: true,
             },
           },
           {
@@ -46,7 +48,13 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: true,
+        stripMetadata: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
