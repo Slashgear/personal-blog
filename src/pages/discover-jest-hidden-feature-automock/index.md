@@ -1,7 +1,7 @@
 ---
 title: 'Discover Jest hidden feature: Automock'
 description: Testing is quite complicated. Even for JS app, libraries. But Jest helps a lot.
-hero: ./jest.png
+hero: ./jest.jpg
 date: 2019-07-29
 language: en
 ---

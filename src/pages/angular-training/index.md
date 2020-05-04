@@ -2,7 +2,7 @@
 title: Angular basics
 description: As a teacher in Polytech Lyon, I had the opportunity to give course about Angular as an initiation. Here are the slides made with RevealJS.
 date: 2017-09-15
-hero: ./angular.png
+hero: ../fr/cours-angular/angular.jpg
 translations: ['fr', 'cours-angular']
 language: en
 ---

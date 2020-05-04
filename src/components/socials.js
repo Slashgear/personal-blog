@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 const Footer = styled.footer`
   display: flex;
   justify-content: space-between;
+  margin-top: 4rem;
 `
 
 const SOCIAL_LINKS = {

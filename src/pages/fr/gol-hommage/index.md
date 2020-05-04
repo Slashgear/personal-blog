@@ -2,7 +2,7 @@
 title: Hommage personnel au "Game of Life" (Jeu de la vie)
 description: Essai d'implémentation du Jeu de la Vie en Javascript dans le navigateur et sans framework.
 date: 2020-04-20
-hero: ./gol.png
+hero: ../../gol-tribute/gol.jpg
 language: fr
 translations: ['en', 'gol-tribute']
 ---
@@ -45,5 +45,5 @@ En le faisant découvrir à mes étudiants, j'espère qu'il le restera.
 
 N'hésitez pas à me partager vos implémentations du ["Game of Life"] dans d'autres langages où sur d'autres plateformes.
 
-[Jon H. Conway]: https://wikipedia.org/wiki/John_Horton_Conway
-["Game of Life"]: https://wikipedia.org/wiki/Jeu_de_la_vie
+[jon h. conway]: https://wikipedia.org/wiki/John_Horton_Conway
+["game of life"]: https://wikipedia.org/wiki/Jeu_de_la_vie

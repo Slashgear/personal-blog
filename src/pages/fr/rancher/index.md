@@ -2,7 +2,7 @@
 title: Rancher - How to
 description: I use the Rancher service for one of my projects. In order to share this cool discovery, I've made an article about "How to deploy applications with Rancher"
 date: 2016-06-13
-hero: ./rancher.jpg
+hero: ./mahir-uysal-ywVLrYtNXMQ-unsplash.jpg
 language: fr
 ---
 

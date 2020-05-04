@@ -1,8 +1,8 @@
 ---
-title:  Personal tribute to "Game of Life"
+title: Personal tribute to "Game of Life"
 description: Trying to implement the Game of Life in Javascript in the browser and without framework.
 date: 2020-04-20
-hero: ./gol.png
+hero: ./gol.jpg
 language: en
 translations: ['fr', 'gol-hommage']
 ---
@@ -45,6 +45,6 @@ By introducing my students to it, I hope it will stay that way.
 
 Feel free to share with me your implementations of the ["Game of Life"] in other languages or on other platforms.
 
-[Jon H. Conway]: https://wikipedia.org/wiki/John_Horton_Conway
-["Game of Life"]: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
-[Coronavirus]: https://en.wikipedia.org/wiki/Coronavirus_disease_2019
+[jon h. conway]: https://wikipedia.org/wiki/John_Horton_Conway
+["game of life"]: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+[coronavirus]: https://en.wikipedia.org/wiki/Coronavirus_disease_2019

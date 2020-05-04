@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 import Bio from '../components/bio'
 import { Layout } from '../components/layout'
@@ -10,6 +11,10 @@ import { TableOfContents } from '../components/tableOfContents'
 import SEO from '../components/seo'
 import { AvailableLanguages } from '../components/availableLanguages'
 import { EditOnGithub } from '../components/editOnGithub'
+
+const PostContent = styled.div`
+  margin-top: 2rem;
+`
 
 export default function BlogPostTemplate({
   data,
@@ -66,7 +71,7 @@ export default function BlogPostTemplate({
         />
       )}
 
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
 
       <EditOnGithub slug={slug} />
 

@@ -4,7 +4,7 @@ title: Creating an image lazy loading component with React
 description: In the web world, we often have complex page structure.
   All the parts are not visible in the user viewport at first.
   Why should we load all the page content to be able to see it ?
-hero: ./lazy-load.jpg
+hero: ./lazy-load.png
 language: en
 ---
 
@@ -253,3 +253,5 @@ In the upcoming version of React (currently in 16.8.5), we will be able to use _
 If you are curious, take a look at this conference about the upcoming features.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nLF0n9SACd4?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Image credit: https://css-tricks.com/tips-for-rolling-your-own-lazy-loading/
