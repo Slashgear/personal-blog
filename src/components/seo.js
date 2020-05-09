@@ -11,7 +11,7 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useLanguage } from './useLanguage'
 
-const SEO = ({ description, lang, meta, title, image, translations }) => {
+const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -62,6 +62,11 @@ const SEO = ({ description, lang, meta, title, image, translations }) => {
         href: `${slugByLang[translations[i]]}${translations[i + 1]}`,
       })
     }
+    translationTags.push({
+      rel: 'alternate',
+      hreflang: lang,
+      href: `${slug}`,
+    })
   }
 
   return (

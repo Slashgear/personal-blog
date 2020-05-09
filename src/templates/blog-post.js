@@ -36,13 +36,14 @@ export default function BlogPostTemplate({
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        lang={post.frontmatter.lang}
+        lang={post.frontmatter.language}
         translations={post.frontmatter.translations}
         image={
           post.frontmatter.hero
             ? post.frontmatter.hero.childImageSharp.image
             : null
         }
+        slug={slug}
       />
       <h1 style={{ color: 'var(--header)' }}>{post.frontmatter.title}</h1>
       {post.headings.length > 1 && (
@@ -144,6 +145,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         translations
         description
+        language
         hero {
           childImageSharp {
             fluid(maxWidth: 1000) {
