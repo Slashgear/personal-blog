@@ -11,6 +11,7 @@ import { TableOfContents } from '../components/tableOfContents'
 import SEO from '../components/seo'
 import { AvailableLanguages } from '../components/availableLanguages'
 import { EditOnGithub } from '../components/editOnGithub'
+import { BlogPostMarkup } from '../components/blogPostMarkup'
 
 const PostContent = styled.div`
   margin-top: 2rem;
@@ -73,7 +74,11 @@ export default function BlogPostTemplate({
       )}
 
       <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
-
+      <BlogPostMarkup
+        post={post}
+        slug={slug}
+        siteUrl={data.site.siteMetadata.siteUrl}
+      />
       <EditOnGithub slug={slug} />
 
       <hr
@@ -117,7 +122,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!, $language: String!) {
     site {
       siteMetadata {
-        repository
+        siteUrl
       }
     }
     config: markdownRemark(
@@ -139,10 +144,14 @@ export const pageQuery = graphql`
       headings {
         value
       }
+      wordCount {
+        words
+      }
       tableOfContents
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        dateJson: date(formatString: "YYYY-MM-DD")
         translations
         description
         language
@@ -152,6 +161,27 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
             image: fixed(fit: COVER, width: 1080, jpegProgressive: true) {
+              src
+            }
+            image16x9: fixed(width: 1080, height: 608) {
+              src
+            }
+            image4x3: fixed(
+              width: 1080
+              height: 810
+              cropFocus: CENTER
+              fit: CONTAIN
+              background: "white"
+            ) {
+              src
+            }
+            image1x1: fixed(
+              width: 800
+              height: 800
+              cropFocus: CENTER
+              fit: CONTAIN
+              background: "white"
+            ) {
               src
             }
           }

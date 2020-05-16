@@ -8,6 +8,7 @@ import Bio from '../components/bio'
 import { Layout } from '../components/layout'
 import { rhythm } from '../utils/typography'
 import { Socials } from '../components/socials'
+import { ListItemMarkup } from '../components/listItemMarkup'
 
 class BlogIndex extends React.Component {
   render() {
@@ -23,6 +24,10 @@ class BlogIndex extends React.Component {
           htmlAttributes={{ lang: this.props.pageContext.language }}
           meta={[{ name: 'description', content: description }]}
           title={siteTitle}
+        />
+        <ListItemMarkup
+          posts={posts}
+          siteUrl={this.props.data.site.siteMetadata.siteUrl}
         />
         <Bio>
           <div dangerouslySetInnerHTML={{ __html: bio }} />
@@ -67,6 +72,11 @@ export default BlogIndex
 
 export const blogIndexFragment = graphql`
   query BlogPost($language: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     config: markdownRemark(
       frontmatter: { language: { eq: $language }, type: { eq: "language" } }
     ) {
