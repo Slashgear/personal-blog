@@ -35,6 +35,7 @@ export default function BlogPostTemplate({
       translations={post.frontmatter.translations}
     >
       <SEO
+        type="article"
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         lang={post.frontmatter.language}

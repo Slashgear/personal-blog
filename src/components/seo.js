@@ -11,7 +11,17 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useLanguage } from './useLanguage'
 
-const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
+const SEO = ({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+  translations,
+  slug,
+  type = 'website',
+  tags = [],
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -65,6 +75,13 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
         content: 'image/jpeg',
       },
     ]
+  }
+
+  if (type === 'article') {
+    imageTags.push({
+      property: 'article:author',
+      content: 'Antoine Caron',
+    })
   }
 
   if (translations) {
@@ -121,7 +138,7 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: type,
         },
         {
           property: 'og:locale',
