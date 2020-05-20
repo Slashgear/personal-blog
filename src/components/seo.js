@@ -73,9 +73,10 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
     <Helmet
       htmlAttributes={{
         lang,
-        'xmlns:og': 'http://ogp.me/ns#',
-        'xmlns:fb': 'http://ogp.me/ns/fb#',
+        prefix:
+          'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#',
       }}
+      head
       title={title}
       link={translationTags}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
