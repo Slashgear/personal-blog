@@ -83,7 +83,7 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
           content: metaDescription,
         },
         {
-          name: 'og:url',
+          property: 'og:url',
           content: `${site.siteMetadata.siteUrl}${slug}`,
         },
         {
@@ -124,7 +124,7 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
           content: 'h1uQ_z8fdlLI60AmxP8vjy1H-bKSDlv0n5XolWfeDIo',
         },
         {
-          name: 'fb:app_id',
+          property: 'fb:app_id',
           content: '235346886871248',
         },
       ].concat(meta)}
