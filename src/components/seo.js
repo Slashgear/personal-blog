@@ -119,6 +119,10 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
           name: 'google-site-verification',
           content: 'h1uQ_z8fdlLI60AmxP8vjy1H-bKSDlv0n5XolWfeDIo',
         },
+        {
+          name: 'fb:app_id',
+          content: '235346886871248',
+        },
       ].concat(meta)}
     />
   )
