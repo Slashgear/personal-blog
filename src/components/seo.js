@@ -40,6 +40,7 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
   const metaDescription = description || site.siteMetadata.description
   let imageTags = []
   let translationTags = []
+  let metaTranslationTags = []
 
   if (image) {
     imageTags = [
@@ -51,6 +52,18 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
         name: 'twitter:image',
         content: site.siteMetadata.siteUrl + image.src,
       },
+      {
+        property: 'og:image:alt',
+        content: title,
+      },
+      {
+        property: 'og:image:width',
+        content: 1080,
+      },
+      {
+        property: 'og:image:type',
+        content: 'image/jpeg',
+      },
     ]
   }
 
@@ -60,6 +73,10 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
         rel: 'alternate',
         hreflang: translations[i],
         href: `${slugByLang[translations[i]]}${translations[i + 1]}`,
+      })
+      metaTranslationTags.push({
+        property: 'og:locale:alternate',
+        content: translations[i],
       })
     }
     translationTags.push({
@@ -81,6 +98,11 @@ const SEO = ({ description, lang, meta, title, image, translations, slug }) => {
       link={translationTags}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
+        ...metaTranslationTags,
+        {
+          property: 'og:site_name',
+          content: 'Antoine Caron',
+        },
         {
           name: `description`,
           content: metaDescription,
