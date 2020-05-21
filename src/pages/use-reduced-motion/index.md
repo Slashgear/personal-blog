@@ -5,6 +5,7 @@ date: 2020-05-01
 hero: ./useReducedMotion.jpg
 language: en
 translations: ['fr', 'use-reduced-motion']
+tags: react, a11y, oss
 ---
 
 ## Everything always starts with an idea

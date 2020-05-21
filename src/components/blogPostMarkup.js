@@ -23,6 +23,7 @@ export const BlogPostMarkup = ({ post, slug, siteUrl }) => (
         `${siteUrl}${post.frontmatter.hero.childImageSharp.image4x3.src}`,
         `${siteUrl}${post.frontmatter.hero.childImageSharp.image1x1.src}`,
       ],
+      keywords: post.frontmatter.tags,
       author: {
         '@type': 'Person',
         name: 'Antoine Caron',

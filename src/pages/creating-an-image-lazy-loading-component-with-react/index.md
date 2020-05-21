@@ -6,6 +6,7 @@ description: In the web world, we often have complex page structure.
   Why should we load all the page content to be able to see it ?
 hero: ./lazy-load.png
 language: en
+tags: react, perf, image
 ---
 
 In the web world, we often have complex page structure.

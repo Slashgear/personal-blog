@@ -26,7 +26,7 @@ const SEO = ({
   slug,
   type = 'website',
   dateJson,
-  tags = [],
+  tags,
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -44,6 +44,8 @@ const SEO = ({
       }
     `
   )
+  const tagList = (tags || '').split(',').map(tag => tag.trim())
+
   const langs = useLanguage()
   const slugByLang = langs.allMarkdownRemark.edges.reduce(
     (accumulator, { node }) => {
@@ -53,7 +55,8 @@ const SEO = ({
     {}
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription =
+    `${description} ${tags}` || site.siteMetadata.description
   let imageTags = []
   let translationTags = []
   let metaTranslationTags = []
@@ -92,6 +95,15 @@ const SEO = ({
       property: 'article:section',
       content: 'Frontend Tech',
     })
+
+    if (tagList.length > 0) {
+      tagList.forEach(tag => {
+        imageTags.push({
+          property: 'article:tag',
+          content: tag,
+        })
+      })
+    }
   }
 
   if (translations) {
@@ -117,6 +129,13 @@ const SEO = ({
     imageTags.push({
       property: 'article:published_time',
       content: dateJson,
+    })
+  }
+
+  if (tags) {
+    imageTags.push({
+      name: 'keywords',
+      content: tags,
     })
   }
 

@@ -47,6 +47,7 @@ export default function BlogPostTemplate({
         }
         slug={slug}
         dateJson={post.frontmatter.dateJson}
+        tags={post.frontmatter.tags}
       />
       <h1 style={{ color: 'var(--header)' }}>{post.frontmatter.title}</h1>
       {post.headings.length > 1 && (
@@ -158,6 +159,7 @@ export const pageQuery = graphql`
         translations
         description
         language
+        tags
         hero {
           childImageSharp {
             fluid(maxWidth: 1000) {
