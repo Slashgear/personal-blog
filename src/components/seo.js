@@ -11,6 +11,11 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useLanguage } from './useLanguage'
 
+const langCompleteByLang = {
+  fr: 'fr_FR',
+  en: 'en_US',
+}
+
 const SEO = ({
   description,
   lang,
@@ -20,6 +25,7 @@ const SEO = ({
   translations,
   slug,
   type = 'website',
+  dateJson,
   tags = [],
 }) => {
   const { site } = useStaticQuery(
@@ -82,6 +88,10 @@ const SEO = ({
       property: 'article:author',
       content: 'Antoine Caron',
     })
+    imageTags.push({
+      property: 'article:section',
+      content: 'Frontend Tech',
+    })
   }
 
   if (translations) {
@@ -93,13 +103,20 @@ const SEO = ({
       })
       metaTranslationTags.push({
         property: 'og:locale:alternate',
-        content: translations[i],
+        content: langCompleteByLang[translations[i]],
       })
     }
     translationTags.push({
       rel: 'alternate',
       hreflang: lang,
       href: `${slug}`,
+    })
+  }
+
+  if (dateJson) {
+    imageTags.push({
+      property: 'article:published_time',
+      content: dateJson,
     })
   }
 
@@ -142,7 +159,7 @@ const SEO = ({
         },
         {
           property: 'og:locale',
-          content: lang,
+          content: langCompleteByLang[lang],
         },
         {
           name: `twitter:card`,

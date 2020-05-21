@@ -46,21 +46,23 @@ export default function BlogPostTemplate({
             : null
         }
         slug={slug}
+        dateJson={post.frontmatter.dateJson}
       />
       <h1 style={{ color: 'var(--header)' }}>{post.frontmatter.title}</h1>
       {post.headings.length > 1 && (
         <TableOfContents tableOfContents={post.tableOfContents} />
       )}
-      <p
+      <time
         style={{
           ...scale(-1 / 5),
           display: 'block',
           marginBottom: rhythm(1),
           marginTop: rhythm(-1),
         }}
+        dateTime={post.frontmatter.dateJson}
       >
         {post.frontmatter.date}
-      </p>
+      </time>
 
       <AvailableLanguages
         language={language}

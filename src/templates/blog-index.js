@@ -45,7 +45,11 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>
+                <time dateTime={node.frontmatter.dateJson}>
+                  {node.frontmatter.date}
+                </time>
+              </small>
               <small style={{ margin: '0 1rem' }}>
                 <span role="img" aria-label="Time to read">
                   🕐
@@ -106,6 +110,7 @@ export const blogIndexFragment = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            dateJson: date(formatString: "YYYY-MM-DD")
             description
             hero {
               childImageSharp {
