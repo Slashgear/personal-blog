@@ -17,14 +17,17 @@ const PostContent = styled.div`
   margin-top: 2rem;
 `
 
+const RelatedPost = styled.div`
+  margin-left: 1rem;
+`
+
 export default function BlogPostTemplate({
   data,
-  pageContext: { previous, next, slug },
+  pageContext: { previous, next, slug, language },
   location,
 }) {
   const post = data.markdownRemark
   const siteTitle = get(data, `config.frontmatter.title`)
-  const language = get(data, `config.frontmatter.language`)
   const siteBio = get(data, 'config.html')
   const siteDescription = post.excerpt
 
@@ -105,36 +108,56 @@ export default function BlogPostTemplate({
         <div dangerouslySetInnerHTML={{ __html: siteBio }} />
       </Bio>
 
-      <ul
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0,
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
+      <aside>
+        <header>
+          <h2>Related posts:</h2>
+        </header>
+        {data.relatedPosts.edges.map(({ node }) => {
+          const title = get(node, 'frontmatter.title') || node.fields.slug
+          return (
+            <RelatedPost key={node.fields.slug}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>
+                <time dateTime={node.frontmatter.dateJson}>
+                  {node.frontmatter.date}
+                </time>
+              </small>
+              <small style={{ margin: '0 1rem' }}>
+                <span role="img" aria-label="Time to read">
+                  🕐
+                </span>
+                {node.timeToRead} min
+              </small>
+              <small>
+                {(node.frontmatter.tags || []).map(tag => (
+                  <Link
+                    style={{ marginRight: '0.5rem' }}
+                    key={tag}
+                    to={`/${language}/${tag}`}
+                  >
+                    #{tag}
+                  </Link>
+                ))}
+              </small>
+              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            </RelatedPost>
+          )
+        })}
+      </aside>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!, $language: String!) {
+  query BlogPostBySlug($slug: String!, $language: String!, $tags: [String]) {
     site {
       siteMetadata {
         siteUrl
@@ -200,6 +223,34 @@ export const pageQuery = graphql`
             ) {
               src
             }
+          }
+        }
+      }
+    }
+    relatedPosts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        fields: { slug: { ne: $slug } }
+        frontmatter: {
+          language: { eq: $language }
+          type: { eq: null }
+          tags: { in: $tags }
+        }
+      }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          timeToRead
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            dateJson: date(formatString: "YYYY-MM-DD")
+            description
+            tags
           }
         }
       }
