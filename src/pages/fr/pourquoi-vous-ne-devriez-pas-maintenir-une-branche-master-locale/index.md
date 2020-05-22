@@ -5,7 +5,8 @@ hero: ../../git-tip-why-you-should-not-keep-a-local-master-branch/what.jpg
 language: fr
 translations: ['en', 'git-tip-why-you-should-not-keep-a-local-master-branch']
 date: 2019-07-25
-tags: git, conseil
+tags:
+  - git
 ---
 
 En travaillant avec `git`, j'ai souvent fait l'erreur de maintenir une branche `master` à jour localement en utilisant ces commandes.

@@ -5,7 +5,10 @@ date: 2016-09-10
 hero: ./igor-ovsyannykov-151127.jpg
 translations: ['fr', 'cours-docker']
 language: en
-tags: docker, learn, training
+tags:
+  - docker
+  - learn
+  - training
 ---
 
 Those are my slides for the course I gave about docker to students of Polytech Lyon in september 2016.

@@ -6,7 +6,10 @@ description:
 date: 2020-04-04
 hero: ./redux.jpg
 language: en
-tags: react, redux
+tags:
+  - react
+  - redux
+  - web
 ---
 
 After 2 years using React with Redux for the video platform [6play](https://6play.fr), I was able to identify good practices and pitfalls to avoid at all costs.

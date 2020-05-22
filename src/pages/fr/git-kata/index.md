@@ -5,7 +5,9 @@ date: 2019-07-21
 hero: ./git.jpeg
 translations: ['en', 'git-kata']
 language: fr
-tags: formation, git, atelier
+tags:
+  - formation
+  - git
 ---
 
 En tant que professeur d'informatique à temps partiel, je donne souvent des ateliers pour comprendre et utiliser des outils.

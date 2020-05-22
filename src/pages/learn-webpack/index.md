@@ -5,7 +5,10 @@ hero: ./typo.jpeg
 language: en
 translations: ['fr', 'formation-webpack-gratuite']
 date: 2019-07-23
-tags: learn, webpack, mooc
+tags:
+  - webpack
+  - mooc
+  - learn
 ---
 
 If you need to use **webpack** for your project. You are very often forced by `CLI` who have done the Job for you.

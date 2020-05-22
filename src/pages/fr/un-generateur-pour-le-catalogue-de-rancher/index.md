@@ -5,7 +5,9 @@ date: 2016-06-20
 hero: ./catalogue.png
 translations: ['en', 'generator-rancher-catalog']
 language: fr
-tags: rancher, débutant
+tags:
+  - rancher
+  - cloud
 ---
 
 Vous pouvez ajouter une entrée de catalogue privé dans vos instances de Rancher, mais la création

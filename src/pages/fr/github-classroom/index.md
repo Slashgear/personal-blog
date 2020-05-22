@@ -4,7 +4,10 @@ description: J'ai récemment essayé Github Classroom avec mes étudiants de 4è
 date: 2017-03-25
 hero: ./logo.jpg
 language: fr
-tags: formation, github, outil
+tags:
+  - formation
+  - git
+  - github
 ---
 
 **Lorsque j'ai commencé à enseigner en septembre dernier, je recherchais une solution

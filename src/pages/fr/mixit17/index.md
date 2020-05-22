@@ -7,7 +7,9 @@ description:
 date: 2017-04-20
 hero: ./mixit17.jpg
 language: fr
-tags: conférence, review, mixit
+tags:
+  - conférence
+  - mixit
 ---
 
 Cette fin de semaine c'était la nouvelle édition de la super _conférence

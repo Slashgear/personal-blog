@@ -5,7 +5,9 @@ description: Si vous utilisez webpack comme bundler pour votre application, vous
 hero: ./matt-artz-353260-unsplash.jpg
 translations: ['en', 'why-you-should-use-compression-webpack-plugin']
 language: fr
-tags: webpack, compression
+tags:
+  - webpack
+  - compression
 ---
 
 Si vous utilisez webpack comme bundler pour votre application, vous êtes probablement préoccupé par ses propres performances et son temps de chargement.

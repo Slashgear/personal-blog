@@ -5,7 +5,10 @@ date: 2016-09-10
 hero: ./igor-ovsyannykov-151127.jpg
 translations: ['en', 'docker-training']
 language: fr
-tags: formation, docker, débutant
+tags:
+  - formation
+  - docker
+  - débutant
 ---
 
 Ce sont mes diapositives pour le cours que j'ai donné sur les dockers aux étudiants de Polytech Lyon en septembre 2016.

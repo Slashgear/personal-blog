@@ -5,7 +5,9 @@ date: 2020-05-01
 hero: ../../use-reduced-motion/useReducedMotion.jpg
 language: fr
 translations: ['en', 'use-reduced-motion']
-tags: react, a11y, oss
+tags:
+  - react
+  - a11y
 ---
 
 ## Tout part toujours d'une idée

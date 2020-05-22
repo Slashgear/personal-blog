@@ -56,6 +56,17 @@ class BlogIndex extends React.Component {
                 </span>
                 {node.timeToRead} min
               </small>
+              <small>
+                {(node.frontmatter.tags || []).map(tag => (
+                  <Link
+                    style={{ marginRight: '0.5rem' }}
+                    key={tag}
+                    to={`/${this.props.pageContext.language}/${tag}`}
+                  >
+                    #{tag}
+                  </Link>
+                ))}
+              </small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               {node.frontmatter.hero && (
                 <Img
@@ -112,6 +123,7 @@ export const blogIndexFragment = graphql`
             date(formatString: "MMMM DD, YYYY")
             dateJson: date(formatString: "YYYY-MM-DD")
             description
+            tags
             hero {
               childImageSharp {
                 fluid(maxWidth: 1000) {

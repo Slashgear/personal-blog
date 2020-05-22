@@ -6,6 +6,10 @@ hero: ./matt-artz-353260-unsplash.jpg
 translations:
   ['fr', 'pourquoi-vous-devriez-utiliser-le-compression-webpack-plugin']
 language: en
+tags:
+  - webpack
+  - webperf
+  - compression
 ---
 
 If you are using webpack as module bundler for your application, you probably are concerned by its own performance and loading time.

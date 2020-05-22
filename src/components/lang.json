@@ -1,0 +1,14 @@
+{
+  "fr": {
+    "tagList": {
+      "description": "All blog post with the usage of this tag: ",
+      "title": " | Antoine Caron"
+    }
+  },
+  "en": {
+    "tagList": {
+      "description": "Tous les articles de blog utilisant ce tag: ",
+      "title": " | Antoine Caron"
+    }
+  }
+}

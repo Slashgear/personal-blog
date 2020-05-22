@@ -4,7 +4,9 @@ description: Etant jeune prof à l'université, j'ai la volonté de proposer des
 date: 2017-06-30
 hero: ./william-iven-19843.jpg
 language: fr
-tags: enseignement, github, outils
+tags:
+  - formation
+  - informatique
 ---
 
 Depuis septembre j'ai pu m'initier à l'enseignement dans le supérieur pour des étudiants en Master 2 et Master 1 à l'école

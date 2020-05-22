@@ -53,17 +53,28 @@ export default function BlogPostTemplate({
       {post.headings.length > 1 && (
         <TableOfContents tableOfContents={post.tableOfContents} />
       )}
-      <time
+      <div
         style={{
           ...scale(-1 / 5),
-          display: 'block',
           marginBottom: rhythm(1),
           marginTop: rhythm(-1),
         }}
-        dateTime={post.frontmatter.dateJson}
       >
-        {post.frontmatter.date}
-      </time>
+        <time dateTime={post.frontmatter.dateJson}>
+          {post.frontmatter.date}
+        </time>
+        <small style={{ marginLeft: '1rem' }}>
+          {(post.frontmatter.tags || []).map(tag => (
+            <Link
+              style={{ marginRight: '0.5rem' }}
+              key={tag}
+              to={`/${language}/${tag}`}
+            >
+              #{tag}
+            </Link>
+          ))}
+        </small>
+      </div>
 
       <AvailableLanguages
         language={language}

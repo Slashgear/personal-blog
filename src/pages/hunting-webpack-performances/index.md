@@ -4,7 +4,9 @@ description: A story of performance optimization and application of the Pareto p
 date: 2020-03-01
 hero: ./julian-hochgesang-0Y_YNPW5qds-unsplash.jpg
 language: en
-tags: webpack, webperf
+tags:
+  - webpack
+  - webperf
 ---
 
 ## How did I cut in half my project's webpack build time ?

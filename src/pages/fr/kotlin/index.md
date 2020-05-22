@@ -4,7 +4,9 @@ description: In the Mix-IT, I followed a conference by Hadi Hariri on the new la
 date: 2016-04-26
 hero: ./kotlin.jpg
 language: fr
-tags: kotlin, débutant, bases
+tags:
+  - kotlin
+  - débutant
 ---
 
 JetBrains, pour les développeurs Java enfermés dans une grotte et ne

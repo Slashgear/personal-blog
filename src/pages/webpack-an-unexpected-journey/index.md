@@ -4,7 +4,9 @@ description: Narration of my discover of webpack insideouts based of the hobbit 
 date: 2019-01-18
 hero: ./goingonanadventure1.jpg
 language: en
-tags: webpack, learn
+tags:
+  - webpack
+  - learn
 ---
 
 ### Webpack : an unexpected journey

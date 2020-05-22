@@ -5,7 +5,10 @@ hero: ./typo.jpeg
 language: fr
 translations: ['en', 'learn-webpack']
 date: 2019-07-23
-tags: formation, webpack, gratuite
+tags:
+  - formation
+  - webpack
+  - débutant
 ---
 
 Si vous avez besoin d'utiliser **webpack** pour votre projet. Vous êtes très souvent contraint par `CLI` qui a fait le travail pour vous.

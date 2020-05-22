@@ -102,6 +102,36 @@ exports.createPages = ({ graphql, actions }) => {
         })
       )
     })
+
+    const tagList = path.resolve('./src/templates/tag-list.js')
+    _.each(['en', 'fr'], language => {
+      resolve(
+        graphql(`
+          {
+              allMarkdownRemark(filter: {frontmatter: {language: {eq: "${language}"}}}) {
+                  distinct(field: frontmatter___tags)
+              }
+          }
+        `).then(result => {
+          if (result.errors) {
+            console.log(result.errors)
+            reject(result.errors)
+          }
+
+          result.data.allMarkdownRemark.distinct.forEach(tag => {
+            createPage({
+              path: `/${language}/${tag}`,
+              component: tagList,
+              context: {
+                slug: `/${language}/${tag}`,
+                tag,
+                language,
+              },
+            })
+          })
+        })
+      )
+    })
   })
 }
 
