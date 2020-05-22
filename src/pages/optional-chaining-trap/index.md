@@ -4,6 +4,7 @@ description: Sometimes a new feature for ES should not be used immediately. Poly
 hero: ./cat.jpg
 date: 2019-07-31
 language: en
+tags: js, babel
 ---
 
 A few days ago, an announcement that many expected was published in TC39 Stage 3. **Optional Chaining**

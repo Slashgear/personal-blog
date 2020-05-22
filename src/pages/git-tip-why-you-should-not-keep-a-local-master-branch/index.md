@@ -6,6 +6,7 @@ language: en
 translations:
   ['fr', 'pourquoi-vous-ne-devriez-pas-maintenir-une-branche-master-locale']
 date: 2019-07-25
+tags: git
 ---
 
 When working with `git`, I have often made the mistake of maintaining a `master` branch locally updated using these commands.

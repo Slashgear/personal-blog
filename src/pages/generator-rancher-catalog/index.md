@@ -5,6 +5,7 @@ date: 2016-06-20
 hero: ./catalogue.png
 translations: ['fr', 'un-generateur-pour-le-catalogue-de-rancher']
 language: en
+tags: rancher, oss
 ---
 
 You can add private catalog entry in your Rancher instances, but creating

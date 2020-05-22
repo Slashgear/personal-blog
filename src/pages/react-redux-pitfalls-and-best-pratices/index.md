@@ -6,6 +6,7 @@ description:
 date: 2020-04-04
 hero: ./redux.jpg
 language: en
+tags: react, redux
 ---
 
 After 2 years using React with Redux for the video platform [6play](https://6play.fr), I was able to identify good practices and pitfalls to avoid at all costs.
@@ -120,7 +121,7 @@ app/
 
 > I really advise you to define naming rules for your actions and if possible check them with an `eslint` rule.
 
-Actions are in uppercase letters separated by '_'.
+Actions are in uppercase letters separated by '\_'.
 Here an example with this action: `SET_USERS`.
 
 ```txt
@@ -194,7 +195,7 @@ For example, here we want to override the `Rhone.Villeurbanne.postal` value of t
 const state = {
   Rhone: {
     Lyon: {
-      postal: '69000' ,
+      postal: '69000',
     },
     Villeurbanne: {
       postal: '',
@@ -476,11 +477,11 @@ Moreover, by using redux instead of the [useReducer] hook you can take advantage
 [reducer]: https://redux.js.org/basics/reducers
 [immutable.js]: https://immutable-js.github.io/immutable-js/
 [redux offical style guide]: https://redux.js.org/style-guide/style-guide
-[Redux Toolkit]: https://redux-toolkit.js.org/
+[redux toolkit]: https://redux-toolkit.js.org/
 
-_Thanks to the reviewers: 
-[@flepretre](https://github.com/flepretre), 
-[@mfrachet](https://github.com/mfrachet), 
+_Thanks to the reviewers:
+[@flepretre](https://github.com/flepretre),
+[@mfrachet](https://github.com/mfrachet),
 [@fdubost](https://github.com/fdubost),
 [@ncuillery](https://github.com/ncuillery),
 [@renaudAmsellem](https://github.com/renaudAmsellem)_

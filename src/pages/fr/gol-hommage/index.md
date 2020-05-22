@@ -5,6 +5,7 @@ date: 2020-04-20
 hero: ../../gol-tribute/gol.jpg
 language: fr
 translations: ['en', 'gol-tribute']
+tags: hommage, js, canvas
 ---
 
 Cette fin d'année scolaire en tant que professeur à la fac n'est pas très habituelle.

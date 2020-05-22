@@ -5,6 +5,7 @@ date: 2020-04-20
 hero: ./gol.jpg
 language: en
 translations: ['fr', 'gol-hommage']
+tags: js, canvas
 ---
 
 This end of the school year as a college professor is not very usual.

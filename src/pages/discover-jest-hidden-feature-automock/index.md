@@ -4,6 +4,7 @@ description: Testing is quite complicated. Even for JS app, libraries. But Jest 
 hero: ./jest.jpg
 date: 2019-07-29
 language: en
+tags: jest, test, mock
 ---
 
 The subject of this article will be about Jest and the mocks. **I do not wish to advocate the use of "unit tests" here. Everyone is also free to define what is for him/her what is unitary.** I just want to show you how Jest manages its _mock_ and how _automocking_ could be useful to you on a daily basis. **It is important to know the basics of jest in order to understand the purpose of this article.**

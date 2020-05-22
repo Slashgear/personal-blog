@@ -4,6 +4,7 @@ description: What is the futur of dev.to, will it be as bad as Medium ? Will it 
 date: 2019-07-18
 hero: ./one-does.jpg
 language: en
+tags: publication, posse
 ---
 
 First things first: I'm not an Internet warrior. I do not wish to make Dev.to's judgment here nor am I trying to convince you that this platform is right or wrong.

@@ -5,6 +5,7 @@ date: 2019-07-21
 hero: ./git.jpeg
 translations: ['fr', 'git-kata']
 language: en
+tags: git, learn, kata
 ---
 
 As a part-time computer science teacher, I often give workshops to learn about computers and their tools.

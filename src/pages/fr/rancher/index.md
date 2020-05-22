@@ -4,6 +4,7 @@ description: I use the Rancher service for one of my projects. In order to share
 date: 2016-06-13
 hero: ./mahir-uysal-ywVLrYtNXMQ-unsplash.jpg
 language: fr
+tags: rancher, cloud, débutant
 ---
 
 Mon expérience en tant que stagiaire chez Zenika m’a amené à utiliser

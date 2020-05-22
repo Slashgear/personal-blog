@@ -5,6 +5,7 @@ date: 2017-09-15
 hero: ../fr/cours-angular/angular.jpg
 translations: ['fr', 'cours-angular']
 language: en
+tags: angular, training, learn
 ---
 
 Those are my slides for the course I gave about Angular to students of Polytech Lyon in september 2017.
