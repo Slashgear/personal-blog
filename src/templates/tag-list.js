@@ -35,7 +35,10 @@ const TagList = ({ location, pageContext, data }) => {
             }`,
           },
         ]}
-        title={`${pageContext.tag} ${lang[pageContext.language].tagList.title}`}
+        title={`${pageContext.tag.charAt(0).toUpperCase() +
+          pageContext.tag.slice(1)} ${
+          lang[pageContext.language].tagList.title
+        }`}
       />
       <ListItemMarkup posts={posts} siteUrl={data.site.siteMetadata.siteUrl} />
       {posts.map(({ node }) => {
