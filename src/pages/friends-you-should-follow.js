@@ -11,11 +11,19 @@ const Friends = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+  
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 
 `
 
 const Friend = styled.article`
   header {
     margin-bottom: 0.7rem;
+  }
+  img {
+    width: 100%;
   }
 `
 
