@@ -108,50 +108,52 @@ export default function BlogPostTemplate({
         <div dangerouslySetInnerHTML={{ __html: siteBio }} />
       </Bio>
 
-      <aside>
-        <header>
-          <h2>Related posts:</h2>
-        </header>
-        {data.relatedPosts.edges.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <RelatedPost key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>
-                <time dateTime={node.frontmatter.dateJson}>
-                  {node.frontmatter.date}
-                </time>
-              </small>
-              <small style={{ margin: '0 1rem' }}>
-                <span role="img" aria-label="Time to read">
-                  🕐
-                </span>
-                {node.timeToRead} min
-              </small>
-              <small>
-                {(node.frontmatter.tags || []).map(tag => (
-                  <Link
-                    style={{ marginRight: '0.5rem' }}
-                    key={tag}
-                    to={`/${language}/${tag}`}
-                  >
-                    #{tag}
+      {data.relatedPosts.edges.length ? (
+        <aside>
+          <header>
+            <h2>Related posts:</h2>
+          </header>
+          {data.relatedPosts.edges.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug
+            return (
+              <RelatedPost key={node.fields.slug}>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                    {title}
                   </Link>
-                ))}
-              </small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </RelatedPost>
-          )
-        })}
-      </aside>
+                </h3>
+                <small>
+                  <time dateTime={node.frontmatter.dateJson}>
+                    {node.frontmatter.date}
+                  </time>
+                </small>
+                <small style={{ margin: '0 1rem' }}>
+                  <span role="img" aria-label="Time to read">
+                    🕐
+                  </span>
+                  {node.timeToRead} min
+                </small>
+                <small>
+                  {(node.frontmatter.tags || []).map(tag => (
+                    <Link
+                      style={{ marginRight: '0.5rem' }}
+                      key={tag}
+                      to={`/${language}/${tag}`}
+                    >
+                      #{tag}
+                    </Link>
+                  ))}
+                </small>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </RelatedPost>
+            )
+          })}
+        </aside>
+      ) : null}
     </Layout>
   )
 }

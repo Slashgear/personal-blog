@@ -13,6 +13,9 @@ Wordpress2016.overrideThemeStyles = () => {
     a: {
       color: 'var(--textLink)',
     },
+    'h1,h2,h3,h4,h5,h6': {
+      color: 'var(--header)',
+    },
     hr: {
       background: 'var(--hr)',
     },
