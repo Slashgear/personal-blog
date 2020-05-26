@@ -6,6 +6,7 @@ description:
 date: 2020-05-26
 hero: ./travis-github-pages.png
 language: en
+translations: ['fr', 'comment-deployer-sur-github-pages-avec-travis-ci']
 tags:
   - tutorial
   - github
@@ -66,7 +67,7 @@ Generate a Github token on [this page](https://github.com/settings/tokens/new) w
 
 ![github token generator page](./project-options.png)
 
-## 3. Configure your travis job with
+## 3. Configure your travis job
 
 Toggle your github repository to travis listed project on [this page](https://travis-ci.org/account/repositories).
 Then on your project travis page, go to `More options > Settings`.
@@ -87,3 +88,5 @@ In your github repository settings page, be sure to activate github pages featur
 > You are good to go, your next commit pushed on master branch will trigger deployment of your site.
 
 Hope this will help you configure travis deployment for your project.
+
+If you liked it, I'll try to do the same tutorial with _Github Action_.
