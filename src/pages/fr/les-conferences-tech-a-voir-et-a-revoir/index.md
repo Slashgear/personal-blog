@@ -1,5 +1,5 @@
 ---
-title: Les conférences à voir et à revoir
+title: Les conférences que je recommande à mes étudiants
 description: Mes étudiants me demandent souvent si j'ai des bonnes ressources pour faire de la veille et apprendre. Je leur recommande souvent des vidéos de conférences ausquelles j'ai assisté. En voilà une petite collection.
 date: 2020-11-19
 hero: ./conference.jpg
@@ -14,30 +14,31 @@ tags:
 Nous sommes en novembre 2020. Malheureusement, ce n'est vraiment pas l'année des conférences tech et des meetup.
 Confinement, limite de participants, annulations, la situation est vraiment compliquée pour les organisateurs et bénévoles de conférences tech.
 
-J'en suis bien triste, j'avais pris l'habitude de participer tous les ans à quelques conférences de coeur et quelques meetup à Lyon.
+J'en suis bien triste, j'avais pris l'habitude de participer tous les ans à quelques conférences de cœur et quelques meetup à Lyon.
 J'ai même pu y animer quelques conférences !
 
 Il m'arrive très régulièrement de donner des liens de conférences à mes étudiants quand ils bloquent sur un sujet précis.
 Ils semblent beaucoup apprécier le format et les regardent avec intérêt et curiosité.
 
 Il se trouve que j'ai eu la chance d'assister à des conférences sur des sujets extrêmement bien traités et vulgarisés.
-Des que les captations vidéos sont disponible _(encore merci aux bénévoles ♥️)_, je m'empresse de les mettre en favoris pour pouvoir les passer à mes étudiants.
+Dès que les captations vidéos sont disponible _(encore merci aux bénévoles ♥️)_, je m'empresse de les mettre en favoris pour pouvoir les passer à mes étudiants.
 
 Plutôt que de garder mes liens en favoris pour moi, je me suis dit qu'il serait intéressant de répertorier dans un article une liste des vidéos que j'ai l'habitude de recommander.
 
 Et comme il m'est impossible de ne pas passer à coté de conférences géniales, j'ai lancé un appel sur twitter afin qu'on me recommande d'autres vidéos.
-Plus la conférences traite un sujet précis et le rend accssible à tous, plus celle-ci peut intéresser mes étudiants.
+Plus la conférence traite un sujet précis et le rend accessible à tous, plus celle-ci peut intéresser mes étudiants.
 
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">J&#39;aurais envie de partager un article regroupant des conférences tech qui sont &quot;immanquables&quot; (en 🇫🇷 et 🇬🇧). Des conférences accessibles aux novices sur des sujets variés. Je fais ça pour mes étudiants, qui souhaitent apprendre. Vous me recommandez quoi ? <a href="https://t.co/ysC6YHoVdz">pic.twitter.com/ysC6YHoVdz</a></p>&mdash; Antoine Caron (@Slashgear_) <a href="https://twitter.com/Slashgear_/status/1329337120452907008?ref_src=twsrc%5Etfw">November 19, 2020</a></blockquote>
 
-_NB: la liste est non exhaustive et non ordonnée, elle risque d'évoluer/d'être éditée à l'avenir avec mes nouvelles découvertes et les recommandations qu'on m'aura faite.
-Contactez-moi si vous voulez que j'en ajoute d'autres._
+_NB: la liste est non-exhaustive et non ordonnée, elle risque d'évoluer/d'être éditée à l'avenir avec mes nouvelles découvertes et les recommandations qu'on m'aura faite.
+Contactez-moi si vous voulez que j'en ajoute d'autres.
+Proposez moi uniquement des conférences qui peuvent intéresser des débutants_
 
 ## Web
 
 ### 🇫🇷 Les cookies HTTP [(Hubert SABLONNIÈRE)](https://twitter.com/hsablonniere)
 
-J'ai eu l'occasion d'assiter à cette conférence lors d'un Mixit.
+J'ai eu l'occasion d'assister à cette conférence lors d'un Mixit.
 Comme toujours, Mr Sablonnière traite son sujet avec humour et détail tout en le rendant complètement accessible à des novices.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MKQ8gUGdKGs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -76,7 +77,7 @@ Quand un collègue présente simplement la problématique lié à la stabilité 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/U7wuMyv8YzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Programation
+## Programmation
 
 ### 🇫🇷 Pourquoi 0.1+0.2 != 0.3, ou le monde mystérieux des nombres à virgule flottante - [(Benoit JACQUEMONT)](https://twitter.com/BJacquemont)
 
@@ -98,6 +99,13 @@ Encore une reco d'[Agnès H](https://twitter.com/tut_tuuut).
 <video style="height:350px;width:630px" poster="https://www.destroyallsoftware.com/assets/posters/talks/wat.poster-4f5425901c10ffeaceb61f82e25dc40b9212aadf078cead0dc6ffe40696e2bec.png" preload="none" controls="">
 <source src="https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20201119%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20201119T222533Z&amp;X-Amz-Expires=14400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=269cbc1821efba4362574d2ef41365450adddf6a56a4309c2c8cd70ef2c31eef">
 </video>
+
+### 🇫🇷 La Cryptographie en 55' chrono [(M4dz](https://twitter.com/m4d_z)
+
+Parce que mes étudiants ont souvent un appriori sur la cryptographie. Trop complexe, trop de math, trop de notions.
+Cependant, en leur montrant cette conf, j'arrive souvent à leur faire changer d'avis.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JC6seEF0_Rc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Intégration
 
@@ -154,7 +162,7 @@ Parce qu'il m'a bien fait rire et qu'il soulève des problèmes de fonds sur l'a
 
 ### 🇫🇷 Quelle éthique pour les développeurs ? [(Guillaume Champeau)](https://twitter.com/gchampeau)
 
-Le sujet de l'éthique n'est que trop peu abordé en école d'ingé, j'essai donc en partageant cette vidéo de leur montrer cette vidéo.
+Le sujet de l'éthique n'est que trop peu abordé en école d'ingé, j'essai donc en partageant cette vidéo de les amener à ses questionner.
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215558307" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
