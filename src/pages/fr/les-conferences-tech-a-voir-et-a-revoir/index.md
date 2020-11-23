@@ -143,6 +143,13 @@ Parce que son histoire est assez dingue et est une preuve que nos métiers sont 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NJdBm9CkANw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### 🇫🇷 Le syndrome de l'imposteur - [(Aurélie Vache)](https://twitter.com/aurelievache)
+
+Aurélie nous partage ici ses bons conseils pour vaincre ce syndrôme qui nous ronge.
+Des exemples, des actions à prendre..
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7IxY7XkHSNU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Design
 
 ### 🇫🇷 Designers, développeurs, créons la différence ! ([Florent Berthelot](https://www.linkedin.com/in/florent-berthelot-a2678861/) & [Cécile Freyd-Foucault](https://twitter.com/cecilefreydf))
