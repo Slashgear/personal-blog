@@ -1,0 +1,48 @@
+name: Continous Integration
+
+on:
+  push:
+    branches: [source]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Babel cache
+        uses: actions/cache@v2
+        with:
+          path: '**/.cache'
+          key: ${{ runner.os }}-babel
+
+      - name: Gatsby cache
+        uses: actions/cache@v2
+        with:
+          path: '**/public'
+          key: ${{ runner.os }}-gatsby
+
+      - name: Yarn cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: yarn example
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: master
+          FOLDER: public
+          CLEAN: true
