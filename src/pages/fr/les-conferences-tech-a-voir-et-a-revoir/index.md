@@ -179,3 +179,10 @@ Parce qu'il faut encore expliquer à des étudiants qu'on peut échouer, c'est n
 
 <iframe src="https://player.vimeo.com/video/295211615" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 <p><a href="https://vimeo.com/295211615">Temp&ecirc;te de boulettes g&eacute;antes</a> from <a href="https://vimeo.com/parisweb">Paris Web</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+### 🇫🇷 Le charme du quotidien, nécessaire, ordinaire, routinier [(Rayna Stamboliyska)](https://twitter.com/MaliciaRogue)
+
+À la frontière entre une présentation sur l'éthique et la sécurité, Rayna montre dans ce talk les enjeux d'un monde connecté par encore plus d'IOT.
+De beaux exemples et des conseils avisés pour se protéger des menaces.
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/297549712" width="640" height="360" frameborder="0" allowfullscreen></iframe>
