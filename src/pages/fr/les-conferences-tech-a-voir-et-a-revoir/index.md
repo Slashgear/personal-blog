@@ -36,7 +36,7 @@ Proposez moi uniquement des conférences qui peuvent intéresser des débutants_
 
 ## Web
 
-### 🇫🇷 Les cookies HTTP [(Hubert SABLONNIÈRE)](https://twitter.com/hsablonniere)
+### 🇫🇷 Les cookies HTTP [(Hubert Sablonnière)](https://twitter.com/hsablonniere)
 
 J'ai eu l'occasion d'assister à cette conférence lors d'un Mixit.
 Comme toujours, Mr Sablonnière traite son sujet avec humour et détail tout en le rendant complètement accessible à des novices.
@@ -126,6 +126,10 @@ N'ayez pas peur du titre, cette présentation d'un projet assez fou va vous surp
 Outre le fait que ce Mr m'a réconcilié avec l'intégration et m'a transmis une infinité de notions et de bonnes pratique, il a le talent d'aborder des sujets compliqués assez simplement.
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/258181059" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+### 🇫🇷 Flexbox, et le CSS redevient fun ! [(Hubert Sablonnière)](https://twitter.com/hsablonniere)
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5F_ngjHDcJQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Parler en publique
 
