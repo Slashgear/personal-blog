@@ -8,6 +8,7 @@ const Aside = styled.aside`
   nav {
     margin-left: 0.5rem;
     overflow: auto;
+    max-height: 80vh;
   }
 
   ul {
