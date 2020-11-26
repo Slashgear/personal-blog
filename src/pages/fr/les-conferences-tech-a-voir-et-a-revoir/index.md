@@ -77,6 +77,12 @@ Quand un collègue présente simplement la problématique lié à la stabilité 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/U7wuMyv8YzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### 🇫🇷 Linux est ton meilleur ami ([Pierre Antoine Grégoire](https://twitter.com/zepag) - Olivier Robert - Nicolas Helleringer)
+
+Une longue conférence mais qui reste intéressante et drôle qui montre les points fort.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xqdWi6SblV8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Programmation
 
 ### 🇫🇷 Pourquoi 0.1+0.2 != 0.3, ou le monde mystérieux des nombres à virgule flottante - [(Benoit JACQUEMONT)](https://twitter.com/BJacquemont)
