@@ -77,7 +77,7 @@ Quand un collègue présente simplement la problématique lié à la stabilité 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/U7wuMyv8YzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### 🇫🇷 Linux est ton meilleur ami ([Pierre Antoine Grégoire](https://twitter.com/zepag) - Olivier Robert - Nicolas Helleringer)
+### 🇫🇷 Linux est ton meilleur ami ([Pierre Antoine Grégoire](https://twitter.com/zepag) - [Olivier Robert](https://twitter.com/XwaldRob) - [Nicolas Helleringer](https://twitter.com/nhelleringer))
 
 Une longue conférence mais qui reste intéressante et drôle qui montre les points fort.
 
