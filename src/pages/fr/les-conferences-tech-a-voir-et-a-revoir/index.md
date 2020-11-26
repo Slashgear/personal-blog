@@ -61,6 +61,12 @@ Encore lui! Sur un autre sujet tout aussi intéressant.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/A2-YImhNVMU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### 🇫🇷 HTTPS n’aura plus de secret pour vous [(Grégory Paul)](https://twitter.com/paulgreg?lang=fr)
+
+L'essentiel d'HTTPS en 45 min! 👏
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NCPgs4YlijU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## DevOps
 
 ### 🇫🇷 Docker 101 #1 [(Nicolas De loof)](https://twitter.com/ndeloof)
