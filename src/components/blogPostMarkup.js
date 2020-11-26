@@ -6,7 +6,7 @@ export const BlogPostMarkup = ({ post, slug, siteUrl }) => (
   <JsonLd
     content={{
       '@context': 'http://schema.org',
-      '@type': 'BlogPosting',
+      '@type': 'Article',
       headline: post.frontmatter.title,
       editor: 'Antoine Caron',
       genre: 'Tech Blog',
