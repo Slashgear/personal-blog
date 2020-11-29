@@ -2,7 +2,7 @@
 title: 'Github Action: How to dynamically run step on each PR label ?'
 description: For some time now I've been playing with github actions to see if I can easily reproduce behaviors I apply in my current CI tool. I wanted to parallelize tasks on each label of a pull request.
 date: 2020-11-29
-hero: ./github-actions.png
+hero: ./github-actions.jpg
 language: en
 tags:
   - github
@@ -18,7 +18,7 @@ In this article, I will show you a possible way to do it!
 In my work at [Bedrock](https://www.bedrockstreaming.com/), we currently use Jenkins to manage our ongoing application integration and deployment.
 Beyond the various concerns of using groovy with pipeline syntax 😅, we have to admit that we manage to do some pretty complex workflows.
 
-![example of complex Continous Integration workflow](./ci.png)
+![example of complex Continous Integration workflow](./ci.jpg)
 
 Deciding to see if it would be easy for me to reproduce the steps of these pipelines with github action, I decided to try its features.
 Among other things by publishing [a Github Action to check the title of a PR according to a regexp.](https://github.com/Slashgear/action-check-pr-title)
