@@ -103,15 +103,6 @@ Parce que la base de la prog fonctionnelle, c'est pas si dingue surtout si bien 
 
 <iframe src="https://player.vimeo.com/video/269739229" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
 
-### 🇬🇧 Wat (Gary Bernhardt)
-
-Parce que rire de nos langages de prog, c'est important !
-Encore une reco d'[Agnès H](https://twitter.com/tut_tuuut).
-
-<video width="560" height="315" poster="https://www.destroyallsoftware.com/assets/posters/talks/wat.poster-4f5425901c10ffeaceb61f82e25dc40b9212aadf078cead0dc6ffe40696e2bec.png" preload="none" controls="">
-<source src="https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20201119%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20201119T222533Z&amp;X-Amz-Expires=14400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=269cbc1821efba4362574d2ef41365450adddf6a56a4309c2c8cd70ef2c31eef">
-</video>
-
 ### 🇫🇷 La Cryptographie en 55' chrono [(M4dz](https://twitter.com/m4d_z)
 
 Parce que mes étudiants ont souvent un appriori sur la cryptographie. Trop complexe, trop de math, trop de notions.
