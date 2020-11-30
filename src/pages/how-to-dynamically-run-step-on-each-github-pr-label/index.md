@@ -4,6 +4,7 @@ description: For some time now I've been playing with github actions to see if I
 date: 2020-11-29
 hero: ./github-actions.jpg
 language: en
+translations: ['fr', 'comment-parralelliser-un-job-github-action-par-label']
 tags:
   - github
   - action
