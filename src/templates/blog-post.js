@@ -249,6 +249,7 @@ export const pageQuery = graphql`
           tags: { in: $tags }
         }
       }
+      limit: 4
     ) {
       edges {
         node {
