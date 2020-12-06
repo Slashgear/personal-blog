@@ -44,3 +44,5 @@ For now, you can find solution for:
 - [2020 day 2](https://github.com/Slashgear/advent-of-code/tree/main/packages/2020/day-2)
 - [2020 day 3](https://github.com/Slashgear/advent-of-code/tree/main/packages/2020/day-3)
 - [2020 day 4](https://github.com/Slashgear/advent-of-code/tree/main/packages/2020/day-4)
+- [2020 day 5](https://github.com/Slashgear/advent-of-code/tree/main/packages/2020/day-5)
+- [2020 day 6](https://github.com/Slashgear/advent-of-code/tree/main/packages/2020/day-6)
