@@ -180,6 +180,13 @@ Le sujet de l'éthique n'est que trop peu abordé en école d'ingé, j'essai don
 
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://player.vimeo.com/video/215558307" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
 
+### 🇫🇷 “Fake” Green Tech : comprendre l'intérêt d'un Numérique Responsable [(Romuald Priol)](https://twitter.com/doc_roms)
+
+Voilà quelqu'un qui parle de numérique responsable sans bullshit avec de bons exemple.
+Un conférence simple sur un sujet complexe mais très bien expliqué par mon ancien collègue.
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/466825988" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
 ### 🇫🇷 Tempête de boulettes géantes [(Agnès H)](https://twitter.com/tut_tuuut)
 
 Parce qu'il faut encore expliquer à des étudiants qu'on peut échouer, c'est normal !
@@ -193,3 +200,9 @@ Parce qu'il faut encore expliquer à des étudiants qu'on peut échouer, c'est n
 De beaux exemples et des conseils avisés pour se protéger des menaces.
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/297549712" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
+### 🇫🇷 Tech For Good + Good For Tech = la naissance d'un numérique responsable [(Romuald Priol)](https://twitter.com/doc_roms)
+
+De nouveau une conférence de Romuald qui aborde d'autres sujets.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zx_nff-hHRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
