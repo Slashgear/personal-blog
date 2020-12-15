@@ -172,6 +172,12 @@ Parce qu'il m'a bien fait rire et qu'il soulève des problèmes de fonds sur l'a
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/377175838" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
+## Accessibilité
+
+### 🇫🇷 Au delà des couleurs, des interfaces adaptées au daltonisme [(Laura Wacrenier)](https://twitter.com/Laoraw)
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/29EpQDs0Td8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Éthique
 
 ### 🇫🇷 Quelle éthique pour les développeurs ? [(Guillaume Champeau)](https://twitter.com/gchampeau)
