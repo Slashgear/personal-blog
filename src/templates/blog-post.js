@@ -12,7 +12,6 @@ import SEO from '../components/seo'
 import { AvailableLanguages } from '../components/availableLanguages'
 import { EditOnGithub } from '../components/editOnGithub'
 import { BlogPostMarkup } from '../components/blogPostMarkup'
-import { Disqus } from 'gatsby-plugin-disqus'
 
 const PostContent = styled.div`
   margin-top: 2rem;
@@ -155,15 +154,6 @@ export default function BlogPostTemplate({
           })}
         </aside>
       ) : null}
-
-      <Disqus
-        config={{
-          url: `${data.site.siteMetadata.siteUrl + location.pathname}`,
-          identifier: post.id,
-          title: post.frontmatter.title,
-          language,
-        }}
-      />
     </Layout>
   )
 }

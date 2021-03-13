@@ -98,11 +98,5 @@ module.exports = {
         siteUrl: `https://slashgear.github.io`,
       },
     },
-    {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `slashgear-1`,
-      },
-    },
   ],
 }
