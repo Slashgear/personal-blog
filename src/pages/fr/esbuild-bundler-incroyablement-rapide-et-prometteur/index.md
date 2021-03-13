@@ -4,6 +4,7 @@ description: Jouant avec les bundler traditionnels comme webpack depuis plusieur
 date: 2021-03-14
 hero: ./esbuild.png
 language: fr
+translations: ['en', 'esbuild-incredibly-fast-and-promising']
 tags:
   - webpack
   - js
