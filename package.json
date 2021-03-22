@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Antoine Caron <antoine395.caron@gmail.com>",
   "dependencies": {
+    "@isamrish/gatsby-plugin-google-adsense": "^1.2.0",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",

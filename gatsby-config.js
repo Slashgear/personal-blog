@@ -98,5 +98,11 @@ module.exports = {
         siteUrl: `https://slashgear.github.io`,
       },
     },
+    {
+      resolve: `@isamrish/gatsby-plugin-google-adsense`,
+      options: {
+        googleAdClientId: 'ca-pub-8928093420712550',
+      },
+    },
   ],
 }
