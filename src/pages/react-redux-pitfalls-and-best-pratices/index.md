@@ -5,7 +5,7 @@ description:
   Good practices and mistakes to be avoided have been gathered in this article.
 date: 2020-04-04
 hero: ./redux.jpg
-translations: ['fr', 'react-redux-pitfalls-and-best-pratices']
+translations: ['fr', 'react-redux-pieges-bonnes-pratiques']
 language: en
 tags:
   - react
