@@ -231,7 +231,7 @@ Je vous invite à aller [lire cette page de la documentation de `Vite`](https://
 Après cette présentation élogieuse de cet outil on pourrait se poser la question oui.
 Cependant, il ne faut pas oublier une règle assez simple.
 
-> Tout ce qu'un outil à tendance à faire magiquement à votre place devient souvent bien plus compliqué à customier.
+> Tout ce qu'un outil à tendance à faire magiquement à votre place devient souvent bien plus compliqué à customiser.
 
 Les nombreux choix que `Vite` semble faire pour améliorer la _developpeur experience_ m'inquiètent un peu.
 J'ai un peu peur que toute cette configuration par défaut ne fissent par être compliqué à maintenir par les équipes de `Vite`.
