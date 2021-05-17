@@ -56,7 +56,27 @@ Rassurez vous! Snowpack n'est pas compatible qu'avec React, vous pouvez utiliser
 
 ### Une config riche (trop)
 
+À la manière de webpack, snowpack propose une de configurer son utilisation par un objet.
+Je dois vous avouer qu'[après avoir joué avec vite](/fr/vitejs-concurrent-performant-webpack-pour-react/), je suis un peu déçu.
+Je vois une maigre [page de documentation](https://www.snowpack.dev/reference/configuration) qui semble pourtant décrire de nombreuses clés paramètrables.
+
+Si vous venez de webpack, vous ne serez pas perdu, c'est très ressemblant sans pour autant être exactement la même chose.
+
+> Eviter de toucher la configuration par défaut peut être une excellente idée.
+
 ### Une belle collection de plugin
+
+Snowpack n'est pas si récent que ça.
+Une communauté a su se construire pour mettre en place un écosystème de plugin riche.
+Certains de ces plugins semblent "core" car sous le scope _@snowpack_ mais de nombreux packages sont portés par quelques personnes indépendantes du projet.
+C'est rassurant sans l'être, j'ai personnellement connu des mises à jour de webpack bloqués/retardées en attendant la compatibilité de certains plugin qui n'étaient plus maintenus.
+
+[![plugins list page screenshot](./plugins.png)](https://www.snowpack.dev/plugins)
+
+> Méfiez-vous des plugins que vous utilisez!
+
+Contrairement à Vite qui propose nativement plein de fonctionnalités assez sympathiques, snowpack fonctionne lui comme webpack en se basant sur les plugins pour enrichir l'API.
+C'est un pari, il peut être compliqué de garder cette écosystem de plugin à jour et performant pour continuer de garantir l'intérêt d'une migration sur snowpack.
 
 ### Du Server Side Rendering
 
