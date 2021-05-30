@@ -67,11 +67,11 @@ Si vous venez de webpack, vous ne serez pas perdu, c'est très ressemblant sans 
 ### Une belle collection de plugin
 
 Snowpack n'est pas si récent que ça.
-Une communauté a su se construire pour mettre en place un écosystème de plugin riche.
+Une communauté a su se construire pour mettre en place [un écosystème de plugin riche](https://www.snowpack.dev/plugins).
 Certains de ces plugins semblent "core" car sous le scope _@snowpack_ mais de nombreux packages sont portés par quelques personnes indépendantes du projet.
-C'est rassurant sans l'être, j'ai personnellement connu des mises à jour de webpack bloqués/retardées en attendant la compatibilité de certains plugin qui n'étaient plus maintenus.
+C'est rassurant sans l'être, j'ai personnellement connu des mises à jour de webpack bloquées/retardées en attendant la compatibilité de certains plugin qui n'étaient plus maintenus.
 
-[![plugins list page screenshot](./plugins.png)](https://www.snowpack.dev/plugins)
+![plugins list page screenshot](./plugins.png)
 
 > Méfiez-vous des plugins que vous utilisez!
 
@@ -126,3 +126,51 @@ app.use(async (req, res, next) => {
 ```
 
 ## Webpack, esbuild, vite, snowpack, on part sur quoi ?
+
+Clairement après cette série d'article où j'ai essayé d'étudier cette nouvelle génération d'outils pour bundler les applications, je dois avouer que je suis très surpris.
+On voit clairement que le support des ES Modules dans le navigateur marque l'arrivée dans une nouvelle ère.
+Comme le rappelle Sindre Sorhus dans [son dernier article](https://blog.sindresorhus.com/hello-modules-d1010b4e777b), avec la fin du support de Node 10 et les capacitées de nos navigateurs actuels, il n'est maintenant plus nécessaire de cibler du CJS.
+
+Les stratégies de cache et l'usage des modules CJS semblent aujourd'hui bien dépassées pour nos besoins en environnement de développement.
+On voit bien que Vite et Snowpack propose cette nouvelle mécanique qui semble être vraiment performante.
+Faire un build _once for all_ des librairies et de chaque fichier source est une super idée pour ne pas souffrir d'un temps de démarrage trop lent de nos grosses applications web.
+
+> Gardons à l'oeil Esbuild
+
+Cependant, la performance de ces nouveaux outils repose aussi essentiellement sur Esbuild.
+L'idée d'utiliser une stack plus optimisée pour lire, parser, combiner des modules JS ou TS avec des langages qui permettent une gestion IO et mémoire plus fine est vraiment la clé de voute de cette nouvelle génération d'outils.
+Avant même de choisir s'il faut rester sur webpack, ou utiliser Vite et Snowpack, il est certain qu'il faudra suivre de près Esbuild.
+Cette lib n'a pas fini de nous surprendre.
+Il faut également s'intéresser à ces outils comme [SWC](https://swc.rs/) qui est un concurrent direct d'Esbuild.
+
+### J'utilise webpack et je l'ai beaucoup configuré
+
+Si vous êtes dans cette situation, vous pouvez malheureusement être contraint de conserver webpack.
+Ce n'est pas une mauvaise nouvelle, c'est un très bon outil qui est loin d'être mort.
+Il est fort à parier que la team de webpack va nous proposer encore de nouvelles amélioration de performances qui passeront peut-être pas l'usage des ESModules.
+
+Vous pouvez également tenter d'utiliser snowpack en environnement de développement.
+Il existe d'ailleurs [un plugin pour utiliser webpack dans le build de prod de snowpack](https://www.npmjs.com/package/@snowpack/plugin-webpack).
+
+### Je souhaite vraiment réduire la configuration du build de mon application
+
+Si vous ne souhaitez plus conserver vos fichiers de configuration webpack qui peuvent être parfois difficilement maintenable, l'alternative proposée par Vite peut être une super option.
+Gardez seulement à l'esprit que cette solution reste jeune.
+
+Quitte à utiliser Vite, je vous conseille de minimiser la configuration que vous pourriez lui apporter.
+Cela vous permettra plus facilement de suivre les nouvelles versions qui risquent d'arriver dans les mois qui viennent.
+
+### J'utilise un CLI qui gère ma configuration de build pour moi
+
+Vous utilisez VueCLI, CRA, ou autre et vous n'avez pas éjecté votre configuration.
+Vous n'aimez pas trop toucher à la configuration de build de votre application car les outils sont complexes et vous ne souhaitez pas passer un temps monstre à les configurer.
+Je vous recommande donc de rester un maximum avec la configuration par défaut de votre projet tant que les performances de celle-ci ne vous gènent pas.
+
+Cependant, rien ne vous interdit de tester les outils comme Vite qui marchent directement sans configuration avec vos projets déjà générés.
+Si le temps de démarrage de votre environnement de développement devient trop important, cela peut vraiment être une solution intéressante pour vous.
+
+## Et c'est déjà la fin ?
+
+Je pense avoir fait le tour des nouveaux outils proposés par la communauté pour packager nos applications web.
+Si vous avez d'autres outils qu'il serait intéressant d'examiner, n'hésitez pas à me le proposer sur un réseau social comme Twitter.
+À bientôt pour de nouvelles _pérégrinations javascriptesques_ !👋
