@@ -31,7 +31,7 @@ yarn add --dev snowpack
 
 ### ESModule dans le navigateur
 
-Les packageurs comme webpack et rollup se reposent sur la construction d'un arbre de dépendances qui sont analysées et packagées à chaque modification.
+Les packagers comme webpack et rollup se reposent sur la construction d'un arbre de dépendances qui sont analysées et packagées à chaque modification.
 L'étape de build des fichiers modifiés reste nécessaire, cependant l'opération de packaging (fusion des différents modules sous la forme de bundle qu'on envoie au navigateur) n'est plus nécessaire.
 [Nos navigateurs savent maintenant gérer les ESModules](https://caniuse.com/?search=esmodule), il n'est donc plus nécessaire de packager nos modules sources pour les fusionner.
 
@@ -82,7 +82,7 @@ C'est un pari, il peut être compliqué de garder cet écosystème de plugin à 
 
 Snowpack propose une solution pour implémenter vos applications avec du server-side rendering.
 Force est de constater que le besoin du SSR se fait encore ressentir sur nos applications frontend pour des raisons SEO ou bien de performance de rendu.
-Malheureusement, coté packageur d'application, cela reste encore compliqué et il reste souvent nécessaire de faire deux builds:
+Malheureusement, coté packager d'application, cela reste encore compliqué et il reste souvent nécessaire de faire deux builds:
 
 - un build pour le client aka le Navigateur
 - un build pour le server Node
@@ -141,7 +141,8 @@ Cependant, la performance de ces nouveaux outils repose aussi essentiellement su
 L'idée d'utiliser une stack plus optimisée pour lire, parser, combiner des modules JS ou TS avec des langages qui permettent une gestion IO et mémoire plus fine est vraiment la clé de voute de cette nouvelle génération d'outils.
 Avant même de choisir s'il faut rester sur webpack, ou utiliser Vite et Snowpack, il est certain qu'il faudra suivre de près Esbuild.
 Cette lib n'a pas fini de nous surprendre.
-Il faut également s'intéresser à ces outils comme [SWC](https://swc.rs/) qui est un concurrent direct d'Esbuild.
+Il faut également s'intéresser à un outil comme [SWC](https://swc.rs/) qui est un concurrent direct d'Esbuild.
+Il y a certainement d'autres outils en cours de création dans le même genre.
 
 ### J'utilise webpack et je l'ai beaucoup configuré
 
@@ -174,3 +175,5 @@ Si le temps de démarrage de votre environnement de développement devient trop 
 Je pense avoir fait le tour des nouveaux outils proposés par la communauté pour packager nos applications web.
 Si vous avez d'autres outils qu'il serait intéressant d'examiner, n'hésitez pas à me le proposer sur un réseau social comme Twitter.
 À bientôt pour de nouvelles _pérégrinations javascriptesques_ !👋
+
+Merci à Jérémie pour la review 🤗
