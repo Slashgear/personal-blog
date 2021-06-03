@@ -3,6 +3,7 @@ title: '🗻 Snowpack 🗻 le remplaçant de webpack ?️'
 description: Après des articles sur esbuild, vite, je vous propose de découvrir ensemble snowpack afin de se faire un avis.
 date: 2021-06-02
 hero: ./social-2.jpeg
+translations: ['en', 'should-snowpack-replace-webpack']
 language: fr
 tags:
   - webpack
@@ -11,7 +12,7 @@ tags:
   - bundler
 ---
 
-Après [webpack](/fr/webpack), [esbuild](/fr/esbuild) et [vitejs](/fr/vitjs), prenons le temps d'étudier le cas de [snowpack](/fr/snowpack).
+Après [webpack](/fr/webpack), [esbuild](/fr/esbuild) et [vitejs](/fr/vitejs), prenons le temps d'étudier le cas de [snowpack](/fr/snowpack).
 Ce dernier semble se faire un petit nom dans l'écosystème des bundlers depuis quelques années maintenant.
 Je vous propose donc qu'on étudie ses fonctionnalités, ses points forts mais également ses points faibles.
 
