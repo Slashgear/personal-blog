@@ -44,7 +44,7 @@ For dependencies (_vendors_), Snowpack builds them once and caches them to do it
 
 Here is a diagram in the Snowpack doc showing the interest to avoid packaging in dev.
 
-![explanation of the way snowpack works, which is based on the build only](../en/que-vaut-snowpack/snowpack-unbundled.png)
+![explanation of the way snowpack works, which is based on the build only](../fr/que-vaut-snowpack/snowpack-unbundled.png)
 
 If you use a _Create React App_ project, you just have to add Snowpack as a dependency, you don't have to change anything if you didn't extend the webpack config.
 I invite you to test snowpack with the template generators:
