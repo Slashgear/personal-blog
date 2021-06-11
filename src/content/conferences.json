@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Devrait-on arrêter de gzip ?",
+    "lang": "fr",
+    "event": {
+      "name": "LyonJS",
+      "date": 1543359600000,
+      "site": "https://www.meetup.com/fr-FR/LyonJS"
+    },
+    "link": "https://www.meetup.com/fr-FR/LyonJS/events/255937986/"
+  },
+  {
+    "title": "⚡️ Vite ⚡️the Webpack killer",
+    "lang": "fr",
+    "event": {
+      "name": "LyonJS",
+      "date": 1591740000000,
+      "site": "https://www.meetup.com/fr-FR/LyonJS"
+    },
+    "link": "https://www.meetup.com/fr-FR/LyonJS/events/278441866/",
+    "speakers": [
+      {
+        "name": "Mathieu Mure",
+        "site": "https://twitter.com/mathieumure?lang=fr"
+      }
+    ],
+    "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/EziH0ZDpTCM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+  },
+  {
+    "title": "Atelier Webpack",
+    "lang": "fr",
+    "event": {
+      "name": "Paris Web",
+      "date": 1570399200000,
+      "site": "https://www.paris-web.fr/"
+    },
+    "link": "https://www.paris-web.fr/2019/ateliers/webpack-workshop.php"
+  },
+  {
+    "title": "Atelier Webpack",
+    "lang": "fr",
+    "event": {
+      "name": "Snowcamp",
+      "date": 1579647600000,
+      "site": "https://snowcamp.io/"
+    },
+    "link": "https://snowcamp.io/"
+  }
+]

@@ -8,4 +8,5 @@ description: "Blog personel d'Antoine Caron où vous pouvez découvrir ses artic
 ---
 
 Ecrit par **Antoine Caron** qui vit et travaille à Lyon et développe des choses utiles à [Bedrock](https://www.bedrockstreaming.com/).
-Tu devrais le suivre sur [Twitter](https://twitter.com/Slashgear_)
+Tu devrais le suivre sur [Twitter](https://twitter.com/Slashgear_).
+N'hésites pas à aller voir [ses conférences sur la page dédiée](/conferences).
