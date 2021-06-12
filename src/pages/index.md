@@ -11,3 +11,4 @@ Written by **Antoine Caron** who lives and works in Lyon (France) building usefu
 You should follow him [on Twitter](https://twitter.com/Slashgear_).
 Take a look at [my friends websites](/friends-you-should-follow).
 You could also [take a look at the conferences I gave](/conferences).
+If you want to see my professional background, [my resume is available here](/resume).
