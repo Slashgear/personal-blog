@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import pictureOfMe from '../assets/picture_of_me.jpg'
 
 const title = `Resume | Antoine Caron`
-const description = `You can find here all the conferences I gave to different events.`
+const description = `This is my resume in which you can find some of my professional experiences.`
 
 const Me = styled.img`
   display: block;
