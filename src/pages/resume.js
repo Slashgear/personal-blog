@@ -19,11 +19,45 @@ const Me = styled.img`
     margin: 1.5rem 10px 0;
     float: right;
   }
+
+  @media print {
+    float: right;
+    height: 200px;
+  }
+`
+
+const GoBackToSite = styled(Link)`
+  @media print {
+    display: none;
+  }
 `
 
 const Resume = styled.div`
+  ul {
+    margin-left: 30px;
+  }
+
   li {
     margin-bottom: 0;
+  }
+
+  i {
+    font-weight: bold;
+  }
+
+  @media print {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+    }
+  }
+
+  @page {
+    margin: 0.5cm;
   }
 `
 
@@ -38,7 +72,7 @@ export default () => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <Link to="/">Back to blog</Link>
+      <GoBackToSite to="/">Back to blog</GoBackToSite>
       <Helmet
         htmlAttributes={{
           lang: 'en_US',

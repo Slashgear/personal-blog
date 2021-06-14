@@ -30,3 +30,18 @@ body.dark-mode {
   --inlineCode-text: #e6e6e6;
   --form-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
 }
+
+@media print {
+  body.dark-mode {
+    --bg: #ffffff;
+    --bg-secondary: rgb(249, 250, 251);
+    --header: hsl(268, 53%, 51%);
+    --textNormal: #222;
+    --textTitle: #222;
+    --textLink: hsl(268, 53%, 51%);
+    --hr: hsla(0, 0%, 0%, 0.2);
+    --inlineCode-bg: rgba(255, 229, 100, 0.2);
+    --inlineCode-text: #1a1a1a;
+    --form-shadow: 0 2px 15px 0 rgba(210, 214, 220, 0.5);
+  }
+}
