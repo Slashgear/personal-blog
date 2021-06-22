@@ -96,31 +96,31 @@ export default () => {
 
       <h2>Profile</h2>
       <p>
-        Professional Frontend developer with a passion for his job. Very
+        Professional Frontend developer passionate about his job. Very
         involved in the subjects I work on either for myself or for the
         companies I collaborate with. I have expertise in different areas
-        related to my job but I love and always want to challenge myself by
-        learning new things.
+        related to my job but I am always ready to challenge myself and
+        learn new things.
       </p>
 
       <h2>Professional experiences</h2>
 
       <h3>M6web / Bedrock Streaming - Frontend Developer</h3>
-      <i>Since 2017 as Consultant first, then as an intern, Lyon (France)</i>
+      <i>Since 2017 as contractor first, then as an employe, Lyon (France)</i>
 
       <p>
         I was able to participate in the challenge of migrating a consumer
         video-on-demand streaming platform that has over 16 million active
         users, into a white label platform distributed in multiple countries for
-        multiple clients. Thanks to a solid E2E and unit test stack, I was able
-        to participate in the development of many user features that are now
+        several customers. Thanks to a solid E2E and unit test stack, I contributed 
+        to the development of many user features that are now
         visible on sites like <a href="https://6play.fr">6play</a>,{' '}
         <a href="https://salto.fr">Salto</a>,{' '}
         <a href="https://videoland.com">Videoland</a>. By integrating a team of
         6 developers working in ScrumBan, we were able to improve our product
-        while keeping the same code base. The frontend pole to which I belong is
-        composed of a hundred developers and directed by{' '}
-        <a href="https://twitter.com/kenny_dee">Kenny Dits</a>, I am by my
+        while keeping the same code base. I belong to the frontend pole which is
+        composed of a hundred developers directed by{' '}
+        <a href="https://twitter.com/kenny_dee">Kenny Dits</a>. I am by my
         experience and my skills brought to interact with people working in
         various contexts from TV to Mobile.
       </p>
@@ -134,36 +134,39 @@ export default () => {
       <h4>Examples of technical missions</h4>
 
       <ul>
-        <li>Integration of a multi-client Atomic Design System.</li>
+        <li>Integration of a multi-customer Atomic Design System.</li>
         <li>
-          Maintenance of the stability of the application and implementation of
+          Maintain the stability of the application and implementation of
           a monitoring and alerting stack
         </li>
         <li>Optimization of application performance</li>
         <li>
-          Publication of technical articles, Writing of technical documentation
+          Publication of technical articles 
         </li>
-        <li>Maintenance of Bedrock's open-source tools</li>
-        <li>Leading of technical and transversal subjects to the company</li>
+        <li>
+          Writing technical documentation  
+        </li>    
+        <li>Maintain Bedrock's open-source tools</li>
+        <li>Leading technical and transversal subjects across the company</li>
         <li>Training and coaching of junior profiles</li>
         <li>
           Creation of webpack plugins for the management of a white label site
         </li>
         <li>
-          Setting up of <i>Bedrock Academy</i> in order to onboard in a simpler
-          and faster way the new people of the company.
+          Setting up of <i>Bedrock Academy</i> for simpler
+          and faster way the new people of the company
         </li>
         <li>
           Organization, design and realization of the migration of the project
           infrastructure in AWS with Terraform in discussion with{' '}
-          <a href="https://twitter.com/yverry">Yann Verry</a>'s teams.
+          <a href="https://twitter.com/yverry">Yann Verry</a>'s teams
         </li>
         <li>
-          Introduction of SEO solutions to improve the performance of the sites
-          and the content of the platforms.
+          Setting up SEO solutions to improve sites performance
+          and platforms content.
         </li>
         <li>
-          Setting up a Cloud based CI/CD process with Jenkins and AWS Codebuild
+          Defining a Cloud based CI/CD process with Jenkins and AWS Codebuild
         </li>
       </ul>
 
@@ -200,23 +203,23 @@ export default () => {
       <ul>
         <li>Design and creation of interactive and open source courses</li>
         <li>
-          Accompaniment of students in the professional project: reading resume,
+           Students support in their professional projects: reading resume,
           help them find an internship
         </li>
         <li>Supervision of internships</li>
         <li>Creation of automatic evaluation tools</li>
-        <li>Participation to evaluation jury</li>
+        <li>Member of evaluation jury</li>
       </ul>
 
-      <h3>Zenika - IT consultant</h3>
+      <h3>Zenika - IT contractor</h3>
       <i>2016-2019, Lyon (France)</i>
       <p>
-        I was a consultant in this service company with which I carried out
+        As a contractor in this service company I carried out
         various missions:
       </p>
       <ul>
         <li>
-          Supporting clients in the development of resilient and interactive web
+          Support customers in the development of resilient and interactive web
           applications.
         </li>
         <li>
@@ -224,8 +227,11 @@ export default () => {
           community (events, conferences, workshops).
         </li>
         <li>
-          Conduct technical trainings for customers (VueJS, Testing subjects,
+          Lead technical trainings for customers (VueJS, Testing subjects,
           Git best practices)
+        </li>
+        <li>
+          Conduct technical interviews
         </li>
       </ul>
 
@@ -237,8 +243,7 @@ export default () => {
         </a>{' '}
         since 2016. It is in this university, part of the{' '}
         <a href="https://www.univ-lyon1.fr/">Claude Bernard University</a>, that
-        I have been invited to give various courses à des niveaux Master 1 or
-        Master 2.
+        I have been invited to give various courses to Master 1 or 2.
       </p>
     </Resume>
   )
