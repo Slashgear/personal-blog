@@ -10,8 +10,8 @@
   <a href="https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/Slashgear/slashgear.github.io" />
   </a>
-  <a href="https://twitter.com/Slashgear\_" target="_blank">
-    <img alt="Twitter: Slashgear\_" src="https://img.shields.io/twitter/follow/Slashgear\_.svg?style=social" />
+  <a href="https://twitter.com/Slashgear_" target="_blank">
+    <img alt="Twitter: Slashgear_" src="https://img.shields.io/twitter/follow/Slashgear_.svg?style=social" />
   </a>
 </p>
 
@@ -31,12 +31,6 @@ yarn install
 
 ```sh
 yarn start
-```
-
-## Run tests
-
-```sh
-yarn test
 ```
 
 ## Author
@@ -59,7 +53,5 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2020 [Antoine Caron](https://github.com/Slashgear).<br />
 This project is [MIT](https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/LICENSE) licensed.
-
----
 
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
