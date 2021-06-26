@@ -1,15 +1,14 @@
 import { rhythm } from '../utils/typography'
-import { Link } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet/es/Helmet'
 import React from 'react'
 import styled from 'styled-components'
-
-import pictureOfMe from '../assets/picture_of_me.jpg'
+import Img from 'gatsby-image'
 
 const title = `Resume | Antoine Caron`
 const description = `This is my resume in which you can find some of my professional experiences.`
 
-const Me = styled.img`
+const Me = styled(Img)`
   display: block;
   height: 300px;
   width: auto;
@@ -62,6 +61,21 @@ const Resume = styled.div`
 `
 
 export default () => {
+  const picture = useStaticQuery(graphql`
+    {
+      img: file(
+        relativePath: { eq: "picture_of_me.jpg" }
+        sourceInstanceName: { eq: "static_images" }
+      ) {
+        childImageSharp {
+          fixed(quality: 60, height: 300) {
+            ...GatsbyImageSharpFixed_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Resume
       style={{
@@ -75,8 +89,7 @@ export default () => {
       <GoBackToSite to="/">Back to blog</GoBackToSite>
       <Helmet
         htmlAttributes={{
-          lang: 'en_US',
-
+          lang: 'en',
           prefix:
             'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#',
         }}
@@ -126,15 +139,20 @@ export default () => {
       />
       <h1 style={{ color: 'var(--header)' }}>Antoine Caron</h1>
 
-      <Me src={pictureOfMe} alt="picture of me" />
+      <Me
+        className="picture-of-me"
+        loading="lazy"
+        fadeIn
+        fixed={picture.img.childImageSharp.fixed}
+        alt="picture of me"
+      />
 
       <h2>Profile</h2>
       <p>
-        Professional Frontend developer passionate about his job. Very
-        involved in the subjects I work on either for myself or for the
-        companies I collaborate with. I have expertise in different areas
-        related to my job but I am always ready to challenge myself and
-        learn new things.
+        Professional Frontend developer passionate about his job. Very involved
+        in the subjects I work on either for myself or for the companies I
+        collaborate with. I have expertise in different areas related to my job
+        but I am always ready to challenge myself and learn new things.
       </p>
 
       <h2>Professional experiences</h2>
@@ -146,8 +164,8 @@ export default () => {
         I was able to participate in the challenge of migrating a consumer
         video-on-demand streaming platform that has over 16 million active
         users, into a white label platform distributed in multiple countries for
-        several customers. Thanks to a solid E2E and unit test stack, I contributed 
-        to the development of many user features that are now
+        several customers. Thanks to a solid E2E and unit test stack, I
+        contributed to the development of many user features that are now
         visible on sites like <a href="https://6play.fr">6play</a>,{' '}
         <a href="https://salto.fr">Salto</a>,{' '}
         <a href="https://videoland.com">Videoland</a>. By integrating a team of
@@ -170,16 +188,12 @@ export default () => {
       <ul>
         <li>Integration of a multi-customer Atomic Design System.</li>
         <li>
-          Maintain the stability of the application and implementation of
-          a monitoring and alerting stack
+          Maintain the stability of the application and implementation of a
+          monitoring and alerting stack
         </li>
         <li>Optimization of application performance</li>
-        <li>
-          Publication of technical articles 
-        </li>
-        <li>
-          Writing technical documentation  
-        </li>    
+        <li>Publication of technical articles</li>
+        <li>Writing technical documentation</li>
         <li>Maintain Bedrock's open-source tools</li>
         <li>Leading technical and transversal subjects across the company</li>
         <li>Training and coaching of junior profiles</li>
@@ -187,8 +201,8 @@ export default () => {
           Creation of webpack plugins for the management of a white label site
         </li>
         <li>
-          Setting up of <i>Bedrock Academy</i> for simpler
-          and faster way the new people of the company
+          Setting up of <i>Bedrock Academy</i> for simpler and faster way the
+          new people of the company
         </li>
         <li>
           Organization, design and realization of the migration of the project
@@ -196,8 +210,8 @@ export default () => {
           <a href="https://twitter.com/yverry">Yann Verry</a>'s teams
         </li>
         <li>
-          Setting up SEO solutions to improve sites performance
-          and platforms content.
+          Setting up SEO solutions to improve sites performance and platforms
+          content.
         </li>
         <li>
           Defining a Cloud based CI/CD process with Jenkins and AWS Codebuild
@@ -237,8 +251,8 @@ export default () => {
       <ul>
         <li>Design and creation of interactive and open source courses</li>
         <li>
-           Students support in their professional projects: reading resume,
-          help them find an internship
+          Students support in their professional projects: reading resume, help
+          them find an internship
         </li>
         <li>Supervision of internships</li>
         <li>Creation of automatic evaluation tools</li>
@@ -248,8 +262,7 @@ export default () => {
       <h3>Zenika - IT contractor</h3>
       <i>2016-2019, Lyon (France)</i>
       <p>
-        As a contractor in this service company I carried out
-        various missions:
+        As a contractor in this service company I carried out various missions:
       </p>
       <ul>
         <li>
@@ -261,12 +274,10 @@ export default () => {
           community (events, conferences, workshops).
         </li>
         <li>
-          Lead technical trainings for customers (VueJS, Testing subjects,
-          Git best practices)
+          Lead technical trainings for customers (VueJS, Testing subjects, Git
+          best practices)
         </li>
-        <li>
-          Conduct technical interviews
-        </li>
+        <li>Conduct technical interviews</li>
       </ul>
 
       <h2>Education</h2>
