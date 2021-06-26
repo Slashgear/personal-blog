@@ -12,6 +12,7 @@ import SEO from '../components/seo'
 import { AvailableLanguages } from '../components/availableLanguages'
 import { EditOnGithub } from '../components/editOnGithub'
 import { BlogPostMarkup } from '../components/blogPostMarkup'
+import { Fundation } from '../components/fundation.component'
 
 const PostContent = styled.div`
   margin-top: 2rem;
@@ -104,9 +105,12 @@ export default function BlogPostTemplate({
           marginBottom: rhythm(1),
         }}
       />
+
       <Bio>
         <div dangerouslySetInnerHTML={{ __html: siteBio }} />
       </Bio>
+
+      <Fundation lang={post.frontmatter.language} />
 
       {data.relatedPosts.edges.length ? (
         <aside>

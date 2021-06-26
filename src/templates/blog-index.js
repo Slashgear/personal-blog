@@ -9,6 +9,7 @@ import { Layout } from '../components/layout'
 import { rhythm } from '../utils/typography'
 import { Socials } from '../components/socials'
 import { ListItemMarkup } from '../components/listItemMarkup'
+import { Fundation } from '../components/fundation.component'
 
 class BlogIndex extends React.Component {
   render() {
@@ -17,11 +18,12 @@ class BlogIndex extends React.Component {
     const siteTitle = get(config, 'frontmatter.title')
     const description = get(config, 'frontmatter.description')
     const bio = get(config, 'html')
+    const lang = this.props.pageContext.language
 
     return (
       <Layout location={this.props.location} config={config}>
         <Helmet
-          htmlAttributes={{ lang: this.props.pageContext.language }}
+          htmlAttributes={{ lang }}
           meta={[{ name: 'description', content: description }]}
           title={siteTitle}
         />
@@ -32,6 +34,9 @@ class BlogIndex extends React.Component {
         <Bio>
           <div dangerouslySetInnerHTML={{ __html: bio }} />
         </Bio>
+
+        <Fundation lang={lang} />
+
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
