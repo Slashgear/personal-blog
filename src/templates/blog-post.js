@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-import Bio from '../components/bio'
+import { Bio } from '../components/bio.component'
 import { Layout } from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
 import { TableOfContents } from '../components/tableOfContents'

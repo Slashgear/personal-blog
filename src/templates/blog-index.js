@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 
-import Bio from '../components/bio'
+import { Bio } from '../components/bio.component'
 import { Layout } from '../components/layout'
 import { rhythm } from '../utils/typography'
 import { Socials } from '../components/socials'

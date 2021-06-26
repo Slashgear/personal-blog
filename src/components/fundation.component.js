@@ -6,12 +6,11 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Logo = styled(Img)`
   flex-shrink: 0;
-  transition: filter 100ms ease-in-out;
 `
 
 const TextWrapper = styled.div`
   flex-grow: 1;
-  margin-left: 1rem;
+  margin-right: 1rem;
 `
 
 const Blocquote = styled.blockquote`
@@ -26,7 +25,7 @@ const Link = styled(OutboundLink)`
   &:hover,
   &:focus {
     ${Logo} {
-      filter: drop-shadow(5px 5px 3px white);
+      filter: drop-shadow(5px 5px 3px var(--textNormal));
     }
 
     ${TextWrapper} {
@@ -68,15 +67,15 @@ export const Fundation = ({ lang = 'en' }) => {
 
   return (
     <Link target="_blank" href="https://www.fondation-abbe-pierre.fr/">
-      <Logo
-        fixed={logo.img.childImageSharp.fixed}
-        alt="logo de la fondation abbé pierre"
-      />
       <TextWrapper>
         {textByLang[lang].text}
         <br />
         <Blocquote>{textByLang[lang].quote}</Blocquote>
       </TextWrapper>
+      <Logo
+        fixed={logo.img.childImageSharp.fixed}
+        alt="logo de la fondation abbé pierre"
+      />
     </Link>
   )
 }
