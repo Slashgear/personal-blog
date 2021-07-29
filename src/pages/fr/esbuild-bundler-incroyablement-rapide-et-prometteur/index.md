@@ -37,7 +37,7 @@ yarn add -D esbuild
 ```
 
 ```shell
-npm install -D esbuild
+npm install --save-dev esbuild
 ```
 
 Ou bien même avec [NPX](https://www.npmjs.com/package/npx)
