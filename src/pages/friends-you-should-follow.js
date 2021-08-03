@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { rhythm } from '../utils/typography'
-import { Helmet } from 'react-helmet/es/Helmet'
+import { Helmet } from 'react-helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 
 const title = `Friends you should follow`

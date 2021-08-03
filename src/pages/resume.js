@@ -1,6 +1,6 @@
 import { rhythm } from '../utils/typography'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { Helmet } from 'react-helmet/es/Helmet'
+import { Helmet } from 'react-helmet'
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
