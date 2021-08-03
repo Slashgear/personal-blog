@@ -64,7 +64,11 @@ export const Fundation = ({ lang = 'en' }) => {
   `)
 
   return (
-    <Link target="_blank" href="https://www.fondation-abbe-pierre.fr/">
+    <Link
+      target="_blank"
+      rel="noreferrer"
+      href="https://www.fondation-abbe-pierre.fr/"
+    >
       <TextWrapper>
         {textByLang[lang].text}
         <br />
