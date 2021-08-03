@@ -31,7 +31,7 @@ const GoBackToSite = styled(Link)`
   }
 `
 
-const Resume = styled.div`
+const ResumeWrapper = styled.div`
   ul {
     margin-left: 30px;
   }
@@ -60,7 +60,7 @@ const Resume = styled.div`
   }
 `
 
-export default () => {
+const Resume = () => {
   const picture = useStaticQuery(graphql`
     {
       img: file(
@@ -77,7 +77,7 @@ export default () => {
   `)
 
   return (
-    <Resume
+    <ResumeWrapper
       style={{
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -290,6 +290,8 @@ export default () => {
         <a href="https://www.univ-lyon1.fr/">Claude Bernard University</a>, that
         I have been invited to give various courses to Master 1 or 2.
       </p>
-    </Resume>
+    </ResumeWrapper>
   )
 }
+
+export default Resume

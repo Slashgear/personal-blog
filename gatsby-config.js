@@ -44,7 +44,7 @@ module.exports = {
             options: {
               maxWidth: 800,
               withWebp: true,
-              useMozJpeg: true,
+              withAvif: true,
               stripMetadata: true,
             },
           },
@@ -105,12 +105,6 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://slashgear.github.io`,
-      },
-    },
-    {
-      resolve: `@isamrish/gatsby-plugin-google-adsense`,
-      options: {
-        googleAdClientId: 'ca-pub-8928093420712550',
       },
     },
   ],
