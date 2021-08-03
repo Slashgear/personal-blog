@@ -98,7 +98,7 @@ const Conferences = () => {
       />
       <h1 style={{ color: 'var(--header)' }}>Conferences</h1>
 
-      {conferences.map(conference => (
+      {conferences.map((conference) => (
         <article key={conference.node.id}>
           <h2>
             <a href={conference.node.link}>{conference.node.title}</a>
@@ -112,7 +112,7 @@ const Conferences = () => {
             {new Date(conference.node.event.date).toLocaleDateString()}
             {conference.node.speakers ? ' with the help of ' : null}
             {conference.node.speakers
-              ? conference.node.speakers.map(speaker => (
+              ? conference.node.speakers.map((speaker) => (
                   <a href={speaker.site}>{speaker.name}</a>
                 ))
               : null}

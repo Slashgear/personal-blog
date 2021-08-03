@@ -94,8 +94,10 @@ export const getUserName = ({ user: { lastName } }) => lastName
 You can also pass parameters to a `selector` by wrapping it with a function.
 
 ```js
-export const getProduct = productId => ({ product: { list } }) =>
-  list.find(product => product.id === productId)
+export const getProduct =
+  (productId) =>
+  ({ product: { list } }) =>
+    list.find((product) => product.id === productId)
 ```
 
 This will allow you to use them in your components using the [useSelector] hook.
@@ -302,15 +304,15 @@ The most common example is handling HTTP calls during an action that uses `redux
 ```js
 export const foo = () =>
   fetch('https://example.com/api/foo')
-    .then(data => ({ type: 'FOO', data }))
-    .catch(error => {
+    .then((data) => ({ type: 'FOO', data }))
+    .catch((error) => {
       // Do something
     })
 
 export const bar = () =>
   fetch('https://example.com/api/bar')
-    .then(data => ({ type: 'BAR', data }))
-    .catch(error => {
+    .then((data) => ({ type: 'BAR', data }))
+    .catch((error) => {
       // Do something
     })
 ```
@@ -328,7 +330,7 @@ Fetch something
 We could very well define a middleware that would take care of this behavior.
 
 ```js
-const http = store => next => async action => {
+const http = (store) => (next) => async (action) => {
   if (action.http) {
     try {
       action.result = await fetch(action.http)
@@ -369,8 +371,8 @@ Just beware of the following traps.
 Let's imagine the next _selector_:
 
 ```js
-const getUserById = userId => state =>
-  state.users.find(user => user.id === userId) || {}
+const getUserById = (userId) => (state) =>
+  state.users.find((user) => user.id === userId) || {}
 ```
 
 The developer here wanted to ensure that its _selector_ is null safe and always returns an _object_.
@@ -385,7 +387,10 @@ However in the case of an object, as in the example above (or an array), the ref
 Similarly for the default values in destructuring, you should never do this :
 
 ```js
-const getUsers = () => ({ users: [] }) => users
+const getUsers =
+  () =>
+  ({ users: [] }) =>
+    users
 ```
 
 What to do then?
@@ -395,8 +400,8 @@ Otherwise, the default value must be extracted into a constant so that the refer
 ```js
 const defaultUser = {}
 
-const getUserById = userId => state =>
-  state.users.find(user => user.id === userId) || defaultUser
+const getUserById = (userId) => (state) =>
+  state.users.find((user) => user.id === userId) || defaultUser
 ```
 
 The same goes for the selector usage that returns a new ref at each call.
@@ -406,8 +411,8 @@ To continue, it is important that [useSelector] does not return a function.
 Basically you should never do this:
 
 ```js
-const getUserById = state => userId =>
-  state.users.find(user => user.id === userId)
+const getUserById = (state) => (userId) =>
+  state.users.find((user) => user.id === userId)
 const uider = useSelector(getUserById)(userId)
 ```
 

@@ -62,7 +62,7 @@ class BlogIndex extends React.Component {
                 {node.timeToRead} min
               </small>
               <small>
-                {(node.frontmatter.tags || []).map(tag => (
+                {(node.frontmatter.tags || []).map((tag) => (
                   <Link
                     style={{ marginRight: '0.5rem' }}
                     key={tag}

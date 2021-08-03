@@ -95,7 +95,7 @@ const SEO = ({
     })
 
     if (tags) {
-      tags.forEach(tag => {
+      tags.forEach((tag) => {
         imageTags.push({
           property: 'article:tag',
           content: tag,

@@ -20,7 +20,7 @@ export const Socials = () => (
   <Footer>
     <div>
       {Object.keys(SOCIAL_LINKS)
-        .map(key => (
+        .map((key) => (
           <a key={key} href={SOCIAL_LINKS[key]}>
             {key}
           </a>

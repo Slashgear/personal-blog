@@ -28,7 +28,7 @@ export const AvailableLanguages = ({ language, translations }) => {
           let translationLink = node.fields.slug
           if (translations) {
             const translationIndex = translations.findIndex(
-              v => v == node.frontmatter.language
+              (v) => v == node.frontmatter.language
             )
             if (translationIndex !== -1) {
               translationLink += translations[translationIndex + 1]

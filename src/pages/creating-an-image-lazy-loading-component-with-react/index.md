@@ -103,8 +103,8 @@ export const LazyImage = ({ src, alt }) => {
     if (imageRef && imageSrc === placeHolder) {
       if (IntersectionObserver) {
         observer = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
+          (entries) => {
+            entries.forEach((entry) => {
               // when image is visible in the viewport + rootMargin
               if (
                 !didCancel &&
@@ -188,11 +188,11 @@ export const LazyImage = ({ src, alt }) => {
   const [imageSrc, setImageSrc] = useState(placeHolder)
   const [imageRef, setImageRef] = useState()
 
-  const onLoad = event => {
+  const onLoad = (event) => {
     event.target.classList.add('loaded')
   }
 
-  const onError = event => {
+  const onError = (event) => {
     event.target.classList.add('has-error')
   }
 
@@ -203,8 +203,8 @@ export const LazyImage = ({ src, alt }) => {
     if (imageRef && imageSrc !== src) {
       if (IntersectionObserver) {
         observer = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
+          (entries) => {
+            entries.forEach((entry) => {
               if (
                 !didCancel &&
                 (entry.intersectionRatio > 0 || entry.isIntersecting)

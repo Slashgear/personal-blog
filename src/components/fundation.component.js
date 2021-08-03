@@ -36,14 +36,12 @@ const Link = styled(OutboundLink)`
 
 const textByLang = {
   fr: {
-    text:
-      "Si vous aimez le contenu de ce blog, ou bien qu'il vous a aidé, s'il vous plait, considérez donner à la fondation Abbé Pierre que je soutiens personnellement.",
+    text: "Si vous aimez le contenu de ce blog, ou bien qu'il vous a aidé, s'il vous plait, considérez donner à la fondation Abbé Pierre que je soutiens personnellement.",
     quote:
       '“On n’est jamais heureux que dans le bonheur qu’on donne. Donner, c’est recevoir.”',
   },
   en: {
-    text:
-      'If you like some content of this blog, or it has helped you, please consider donating to the Abbé Pierre Foundation which I personally support.',
+    text: 'If you like some content of this blog, or it has helped you, please consider donating to the Abbé Pierre Foundation which I personally support.',
     quote:
       '"We are only ever happy in the happiness we give. To give is to receive."',
   },

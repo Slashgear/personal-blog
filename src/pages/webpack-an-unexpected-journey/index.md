@@ -98,7 +98,7 @@ async function getComponent() {
   return element
 }
 
-getComponent().then(component => {
+getComponent().then((component) => {
   document.body.appendChild(component)
 })
 ```
@@ -287,26 +287,29 @@ class CustomerReplacementPlugin {
   }
 
   apply(compiler) {
-    compiler.hooks.normalModuleFactory.tap('CustomerReplacementPlugin', nmf => {
-      // just before thos normal modules have be resolved
-      nmf.hooks.afterResolve.tap('CustomerReplacementPlugin', result => {
-        if (!result) return
+    compiler.hooks.normalModuleFactory.tap(
+      'CustomerReplacementPlugin',
+      (nmf) => {
+        // just before thos normal modules have be resolved
+        nmf.hooks.afterResolve.tap('CustomerReplacementPlugin', (result) => {
+          if (!result) return
 
-        // if the variant exists for the current customer
-        if (/customer\/default/.test(result.resource)) {
-          const customerResource = result.resource.replace(
-            /\/default\//,
-            `/${this.customerName}/`
-          )
-          if (fs.existsSync(customerResource)) {
-            // I replace the resolved path by the customer path
-            result.resource = customerResource
+          // if the variant exists for the current customer
+          if (/customer\/default/.test(result.resource)) {
+            const customerResource = result.resource.replace(
+              /\/default\//,
+              `/${this.customerName}/`
+            )
+            if (fs.existsSync(customerResource)) {
+              // I replace the resolved path by the customer path
+              result.resource = customerResource
+            }
           }
-        }
 
-        return result
-      })
-    })
+          return result
+        })
+      }
+    )
   }
 }
 

@@ -163,7 +163,7 @@ require('esbuild')
       bundle: true,
     }
   )
-  .then(server => {
+  .then((server) => {
     // Call "stop" on the web server when you're done
     server.stop()
   })

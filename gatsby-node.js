@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors)
           reject(result.errors)
@@ -34,7 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Create blog posts pages.
         const configs = result.data.allMarkdownRemark.edges
 
-        _.each(configs, config => {
+        _.each(configs, (config) => {
           language = config.node.frontmatter.language
           const path = language == 'en' ? '/' : `/${language}`
           createPage({
@@ -49,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
     )
 
     const blogPost = path.resolve('./src/templates/blog-post.js')
-    _.each(['en', 'fr'], language => {
+    _.each(['en', 'fr'], (language) => {
       resolve(
         graphql(
           `
@@ -75,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           `
-        ).then(result => {
+        ).then((result) => {
           if (result.errors) {
             console.log(result.errors)
             reject(result.errors)
@@ -106,7 +106,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     const tagList = path.resolve('./src/templates/tag-list.js')
-    _.each(['en', 'fr'], language => {
+    _.each(['en', 'fr'], (language) => {
       resolve(
         graphql(`
           {
@@ -114,13 +114,13 @@ exports.createPages = ({ graphql, actions }) => {
                   distinct(field: frontmatter___tags)
               }
           }
-        `).then(result => {
+        `).then((result) => {
           if (result.errors) {
             console.log(result.errors)
             reject(result.errors)
           }
 
-          result.data.allMarkdownRemark.distinct.forEach(tag => {
+          result.data.allMarkdownRemark.distinct.forEach((tag) => {
             createPage({
               path: `/${language}/${tag}`,
               component: tagList,

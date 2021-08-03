@@ -68,7 +68,7 @@ export default function BlogPostTemplate({
           {post.frontmatter.date}
         </time>
         <small style={{ marginLeft: '1rem' }}>
-          {(post.frontmatter.tags || []).map(tag => (
+          {(post.frontmatter.tags || []).map((tag) => (
             <Link
               style={{ marginRight: '0.5rem' }}
               key={tag}
@@ -142,7 +142,7 @@ export default function BlogPostTemplate({
                   {node.timeToRead} min
                 </small>
                 <small>
-                  {(node.frontmatter.tags || []).map(tag => (
+                  {(node.frontmatter.tags || []).map((tag) => (
                     <Link
                       style={{ marginRight: '0.5rem' }}
                       key={tag}

@@ -35,10 +35,9 @@ const TagList = ({ location, pageContext, data }) => {
             }`,
           },
         ]}
-        title={`${pageContext.tag.charAt(0).toUpperCase() +
-          pageContext.tag.slice(1)} ${
-          lang[pageContext.language].tagList.title
-        }`}
+        title={`${
+          pageContext.tag.charAt(0).toUpperCase() + pageContext.tag.slice(1)
+        } ${lang[pageContext.language].tagList.title}`}
       />
       <ListItemMarkup posts={posts} siteUrl={data.site.siteMetadata.siteUrl} />
       {posts.map(({ node }) => {
@@ -66,7 +65,7 @@ const TagList = ({ location, pageContext, data }) => {
               {node.timeToRead} min
             </small>
             <small>
-              {(node.frontmatter.tags || []).map(tag => (
+              {(node.frontmatter.tags || []).map((tag) => (
                 <Link
                   style={{ marginRight: '0.5rem' }}
                   key={tag}
