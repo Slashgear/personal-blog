@@ -56,7 +56,7 @@ const Heading = styled.header`
 
 export const TableOfContents = ({ tableOfContents }) => {
   return (
-    <Aside>
+    <Aside id="table-of-content">
       <Heading>Table of content</Heading>
       <nav dangerouslySetInnerHTML={{ __html: tableOfContents }} />
     </Aside>

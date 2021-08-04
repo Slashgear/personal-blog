@@ -19,7 +19,7 @@ export const AvailableLanguages = ({ language, translations }) => {
   ).node.frontmatter.language_option
 
   return translations ? (
-    <Container>
+    <Container id="lang-switcher">
       {option}:{' '}
       {data.allMarkdownRemark.edges.map(({ node }) => {
         if (node.frontmatter.language == language) {

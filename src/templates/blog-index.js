@@ -40,7 +40,7 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
-            <div key={node.fields.slug}>
+            <article key={node.fields.slug}>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
@@ -67,6 +67,7 @@ class BlogIndex extends React.Component {
                     style={{ marginRight: '0.5rem' }}
                     key={tag}
                     to={`/${this.props.pageContext.language}/${tag}`}
+                    data-testid="tag"
                   >
                     #{tag}
                   </Link>
@@ -79,7 +80,7 @@ class BlogIndex extends React.Component {
                   alt={node.frontmatter.title}
                 />
               )}
-            </div>
+            </article>
           )
         })}
         <Socials />

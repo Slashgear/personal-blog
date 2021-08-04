@@ -43,7 +43,7 @@ const TagList = ({ location, pageContext, data }) => {
       {posts.map(({ node }) => {
         const title = get(node, 'frontmatter.title') || node.fields.slug
         return (
-          <div key={node.fields.slug}>
+          <article key={node.fields.slug}>
             <h3
               style={{
                 marginBottom: rhythm(1 / 4),
@@ -82,7 +82,7 @@ const TagList = ({ location, pageContext, data }) => {
                 alt={node.frontmatter.title}
               />
             )}
-          </div>
+          </article>
         )
       })}
       <Socials />

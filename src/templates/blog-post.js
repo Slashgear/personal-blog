@@ -120,7 +120,7 @@ export default function BlogPostTemplate({
           {data.relatedPosts.edges.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
-              <RelatedPost key={node.fields.slug}>
+              <RelatedPost data-testid="related-post" key={node.fields.slug}>
                 <h3
                   style={{
                     marginBottom: rhythm(1 / 4),

@@ -65,6 +65,7 @@ export const Fundation = ({ lang = 'en' }) => {
 
   return (
     <Link
+      id="foundation"
       target="_blank"
       rel="noreferrer"
       href="https://www.fondation-abbe-pierre.fr/"

@@ -37,7 +37,7 @@ export const Bio = ({ children }) => {
   `)
 
   return (
-    <Wrapper>
+    <Wrapper id="bio">
       <Image
         fixed={picture.img.childImageSharp.fixed}
         style={{ margin: '0 1.2rem 0 0' }}
