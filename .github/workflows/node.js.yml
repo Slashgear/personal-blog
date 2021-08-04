@@ -2,7 +2,9 @@ name: Continous Integration
 
 on:
   push:
-    branches: [source]
+    branches:
+      - '!master'
+      - '**'
 
 jobs:
   build:
