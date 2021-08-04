@@ -34,6 +34,8 @@ jobs:
         with:
           name: build-output
           path: public
+      - run: yarn serve&
+      - run: yarn test
 
   Deploy:
     name: 'Deploy 🚀'
