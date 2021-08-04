@@ -8,10 +8,10 @@ on:
 
 jobs:
   build:
+    name: 'Build 📦'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - name: Gatsby cache
         uses: actions/cache@v2
         with:
@@ -19,22 +19,32 @@ jobs:
             **/public
             **/.cache
           key: ${{ runner.os }}-gatsby
-
       - name: Yarn cache
         uses: actions/cache@v2
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
       - run: yarn install
       - run: yarn build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build-output
+          path: public
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+  Deploy:
+    name: 'Deploy 🚀'
+    needs: build
+    runs-on: ubuntu-latest
+    #if: ${{ github.ref == 'refs/heads/source' }}
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: build-output
+      - uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: master
