@@ -11,6 +11,8 @@ jobs:
     name: 'Build 📦'
     runs-on: ubuntu-latest
     steps:
+      - name: Install Chromium
+        run: sudo apt-get install chromium-browser
       - uses: actions/checkout@v2
       - name: Gatsby cache
         uses: actions/cache@v2
@@ -29,23 +31,16 @@ jobs:
         with:
           node-version: 16.x
       - run: yarn install
+        name: Install dependencies
       - run: yarn build
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build-output
-          path: public
-
-  Deploy:
-    name: 'Deploy 🚀'
-    needs: build
-    runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/source' }}
-    steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: build-output
-          path: public
+        name: Build Gatsby output
+      - run: yarn serve&
+        name: Start E2E server
+      - run: yarn test
+        name: Running E2E tests
       - uses: JamesIves/github-pages-deploy-action@3.7.1
+        name: 'Deploy 🚀'
+        if: ${{ github.ref == 'refs/heads/source' }}
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: master
