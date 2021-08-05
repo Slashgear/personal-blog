@@ -3,8 +3,8 @@ import useDarkMode from 'use-dark-mode'
 import useSound from 'use-sound'
 import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import Toggle from './toggle'
-import sun from '../assets/sun.png'
-import moon from '../assets/moon.png'
+import sun from './sun.png'
+import moon from './moon.png'
 
 export const SwitchTheme = () => {
   const darkMode = useDarkMode()

@@ -4,12 +4,12 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 
-import { Bio } from '../components/bio.component'
-import { Layout } from '../components/layout'
+import { Bio } from '../components/bio/bio.component'
+import { Layout } from '../components/layout.component'
 import { rhythm } from '../utils/typography'
-import { Socials } from '../components/socials'
-import { ListItemMarkup } from '../components/listItemMarkup'
-import { Fundation } from '../components/fundation.component'
+import { Footer } from '../components/footer/footer.component'
+import { ListMarkup } from '../components/markup/list.markup'
+import { Fundation } from '../components/fundation/fundation.component'
 
 class BlogIndex extends React.Component {
   render() {
@@ -27,7 +27,7 @@ class BlogIndex extends React.Component {
           meta={[{ name: 'description', content: description }]}
           title={siteTitle}
         />
-        <ListItemMarkup
+        <ListMarkup
           posts={posts}
           siteUrl={this.props.data.site.siteMetadata.siteUrl}
         />
@@ -83,7 +83,7 @@ class BlogIndex extends React.Component {
             </article>
           )
         })}
-        <Socials />
+        <Footer />
       </Layout>
     )
   }

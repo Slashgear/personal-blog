@@ -1,9 +1,9 @@
 import React from 'react'
 import _get from 'lodash/get'
 import { JsonLd } from './jsonLd'
-import profilePic from '../assets/profile-pic.jpg'
+import profilePic from '../../assets/picture_of_me.jpg'
 
-export const BlogPostMarkup = ({ post, slug, siteUrl }) => {
+export const PostMarkup = ({ post, slug, siteUrl }) => {
   const image = _get(post, 'frontmatter.hero.childImageSharp', {
     image16x9: {},
     image4x3: {},

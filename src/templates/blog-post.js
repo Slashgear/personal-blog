@@ -4,15 +4,15 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-import { Bio } from '../components/bio.component'
-import { Layout } from '../components/layout'
+import { Bio } from '../components/bio/bio.component'
+import { Layout } from '../components/layout.component'
 import { rhythm, scale } from '../utils/typography'
-import { TableOfContents } from '../components/tableOfContents'
-import SEO from '../components/seo'
-import { AvailableLanguages } from '../components/availableLanguages'
-import { EditOnGithub } from '../components/editOnGithub'
-import { BlogPostMarkup } from '../components/blogPostMarkup'
-import { Fundation } from '../components/fundation.component'
+import { TableOfContents } from '../components/tableOfContents.component'
+import GlobalMarkup from '../components/markup/global.markup'
+import { AvailableLanguages } from '../components/lang/availableLanguages.component'
+import { EditOnGithubComponent } from '../components/editOnGithub.component'
+import { PostMarkup } from '../components/markup/post.markup'
+import { Fundation } from '../components/fundation/fundation.component'
 
 const PostContent = styled.div`
   margin-top: 2rem;
@@ -38,7 +38,7 @@ export default function BlogPostTemplate({
       config={data.config}
       translations={post.frontmatter.translations}
     >
-      <SEO
+      <GlobalMarkup
         type="article"
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -93,12 +93,12 @@ export default function BlogPostTemplate({
       )}
 
       <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      <BlogPostMarkup
+      <PostMarkup
         post={post}
         slug={slug}
         siteUrl={data.site.siteMetadata.siteUrl}
       />
-      <EditOnGithub slug={slug} />
+      <EditOnGithubComponent slug={slug} />
 
       <hr
         style={{

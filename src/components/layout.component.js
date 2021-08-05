@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { rhythm } from '../utils/typography'
-import { SwitchTheme } from './switchTheme'
+import { SwitchTheme } from './themeSwitcher/switchTheme.component'
 
 const Wrapper = styled.div`
   display: flex;

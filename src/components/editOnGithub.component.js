@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   margin-bottom: 1rem;
 `
 
-export const EditOnGithub = ({ slug }) => {
+export const EditOnGithubComponent = ({ slug }) => {
   const {
     site: {
       siteMetadata: { repository },

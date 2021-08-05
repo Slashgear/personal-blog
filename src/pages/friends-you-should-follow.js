@@ -116,7 +116,7 @@ const FriendsYouShouldFollow = () => {
 
       <Friends>
         {friends.map(({ node }) => (
-          <Friend>
+          <Friend className="friend">
             <a key={node.id} href={node.site}>
               <header>{node.name}</header>
             </a>

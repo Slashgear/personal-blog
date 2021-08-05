@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-const Footer = styled.footer`
+const FooterWrapper = styled.footer`
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
@@ -16,8 +16,8 @@ const SOCIAL_LINKS = {
   Medium: 'https://medium.com/@Slashgear_',
 }
 
-export const Socials = () => (
-  <Footer>
+export const Footer = () => (
+  <FooterWrapper>
     <div>
       {Object.keys(SOCIAL_LINKS)
         .map((key) => (
@@ -31,5 +31,5 @@ export const Socials = () => (
     <div>
       <Link to="/rss.xml">RSS</Link>
     </div>
-  </Footer>
+  </FooterWrapper>
 )

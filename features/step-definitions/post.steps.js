@@ -1,4 +1,4 @@
-const { Given, Then } = require('@cucumber/cucumber')
+const { Given, Then, When } = require('@cucumber/cucumber')
 
 Given(/^I am on the (.+) post page$/, async (post) => {
   await browser.url(`/${post}/`)
@@ -16,4 +16,16 @@ Then(/^I should see switch lang block$/, async () => {
 
 Then(/^Page h1 should contain (.+)$/, async (title) => {
   await expect($('h1')).toHaveText(title)
+})
+
+When(/^I click on lang switcher link$/, async () => {
+  $('#lang-switcher a').click()
+})
+
+Then(/^I should be on (.+) post page$/, async (page) => {
+  await browser.waitUntil(async () => (await browser.getUrl()).includes(page))
+})
+
+Then(/^I should see a table of content$/, async () => {
+  await expect($('#table-of-content')).toExist()
 })

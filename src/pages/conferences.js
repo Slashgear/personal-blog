@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { rhythm } from '../utils/typography'
 import { Helmet } from 'react-helmet/es/Helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
@@ -99,7 +98,7 @@ const Conferences = () => {
       <h1 style={{ color: 'var(--header)' }}>Conferences</h1>
 
       {conferences.map((conference) => (
-        <article key={conference.node.id}>
+        <article key={conference.node.id} className="conference">
           <h2>
             <a href={conference.node.link}>{conference.node.title}</a>
             <a href={conference.node.event.site}>

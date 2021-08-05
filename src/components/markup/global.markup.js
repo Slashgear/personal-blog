@@ -9,14 +9,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useLanguage } from './useLanguage'
+import { useLanguage } from '../lang/useLanguage'
 
 const langCompleteByLang = {
   fr: 'fr_FR',
   en: 'en_US',
 }
 
-const SEO = ({
+const GlobalMarkup = ({
   description,
   lang,
   meta,
@@ -208,14 +208,14 @@ const SEO = ({
   )
 }
 
-SEO.defaultProps = {
+GlobalMarkup.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
   tags: [],
 }
 
-SEO.propTypes = {
+GlobalMarkup.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
@@ -224,4 +224,4 @@ SEO.propTypes = {
   tags: PropTypes.array,
 }
 
-export default SEO
+export default GlobalMarkup

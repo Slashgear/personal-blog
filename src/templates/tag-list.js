@@ -4,11 +4,11 @@ import get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { Layout } from '../components/layout'
+import { Layout } from '../components/layout.component'
 import { rhythm } from '../utils/typography'
-import { Socials } from '../components/socials'
-import { ListItemMarkup } from '../components/listItemMarkup'
-import lang from '../components/lang'
+import { Footer } from '../components/footer/footer.component'
+import { ListMarkup } from '../components/markup/list.markup'
+import lang from '../components/lang/lang.json'
 
 const TagList = ({ location, pageContext, data }) => {
   const posts = get(data, 'allMarkdownRemark.edges')
@@ -39,7 +39,7 @@ const TagList = ({ location, pageContext, data }) => {
           pageContext.tag.charAt(0).toUpperCase() + pageContext.tag.slice(1)
         } ${lang[pageContext.language].tagList.title}`}
       />
-      <ListItemMarkup posts={posts} siteUrl={data.site.siteMetadata.siteUrl} />
+      <ListMarkup posts={posts} siteUrl={data.site.siteMetadata.siteUrl} />
       {posts.map(({ node }) => {
         const title = get(node, 'frontmatter.title') || node.fields.slug
         return (
@@ -85,7 +85,7 @@ const TagList = ({ location, pageContext, data }) => {
           </article>
         )
       })}
-      <Socials />
+      <Footer />
     </Layout>
   )
 }

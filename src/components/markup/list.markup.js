@@ -1,7 +1,7 @@
 import React from 'react'
 import { JsonLd } from './jsonLd'
 
-export const ListItemMarkup = ({ posts = [], siteUrl }) => (
+export const ListMarkup = ({ posts = [], siteUrl }) => (
   <JsonLd
     content={{
       '@context': 'https://schema.org',
