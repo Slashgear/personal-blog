@@ -44,22 +44,82 @@ Quitte à en faire la liste, autant vous le partager également, en espérant qu
 
 ## S'imposer des règles et les automatiser
 
-- La doc technique qui dit comment faire c'est bien, les règles de lint c'est mieux
-- lister les exemples de règles qu'on s'impose
-- l'autofix c'est la vie
-- Les règles orales sont à bannir
-- compter sur sa CI pour arbitrer
-- la review n'est pas suffisante pour tout voir, charge mentale
+Un projet qui résiste c'est tout d'abord un ensemble de connaissances qu'on empile les unes sur les autres.
+C'est en quelque sorte la tour de Kapla que vous assembliez petit en essayant d'aller le plus haut possible.
+On essaye alors de construire des bases solides dès le début sinon on est certain qu'on ira pas très haut.
+
+Dès le début d'un projet on est donc amené à prendre de décisions importantes sur "Comment on souhaite faire les choses ?".
+On pense par exemple à "Quel format pour nos fichiers ? Comment on nomme telle ou telle chose ?"
+Écrire une documentation précise de "Comment on fait les choses" pourrait paraitre une bonne idée.
+
+Cependant la documentation c'est cool, mais ça a tendance à périmer très vite.
+Nos décisions évoluent mais pas la documentation.
+
+> "Les temps changent mais pas les README."
+>
+> _Olivier Mansour (deputy CTO à Bedrock)_
+
+On trouve qu'automatiser la vérification de chacune des règles qu'on s'impose sur notre codebase ou nos process est bien plus pérenne.
+En plus de ça, coté JS on est vraiment bien équipé avec des outils comme Eslint qui nous permettent d'implémenter nos propres règles.
+
+Le réflexe qu'on essaie donc d'adopter est donc le suivant:
+
+- "On devrait essayer de faire comme cela à présent !"
+- "Ok c'est intéressant, mais comment peut-on s'assurer qu'on le fasse comme cela automatiquement avec notre CI ?"
+
+Il n'y a rien de mieux que l'intégration continue d'un projet pour ne rien louper sur chacune des _Pull Request_ qu'on est amené à proposer.
+Les reviews n'en sont que plus simple car vous n'avez plus à vous soucier de l'ensemble des règles qui sont déjà automatisées.
+Dans ce modèle, la review sert donc plus au partage de connaissance qu'au flicage de typo et autre non respect des conventions du projet.
+
+Dans ce principe, il faut donc essayer de bannir les règles orales.
+Le temps des druides est terminé, si il faut transmettre oralement toutes les bonnes pratiques d'un projet, l'accompagnement de nouveaux développeurs dans votre équipe n'en sera que plus long.
+
+![la recette de la potion magique de panoramix est perdue car secrète](./panoramix.gif)
+
+Étant donné qu'un projet n'est pas quelque chose de figé, ces règles vont évoluer avec le temps.
+On préfèrera alors l'ajout de règles qui possèdent un script qui _autofixera_ toute la codebase intelligemment.
+De nombreuses règles Eslint le propose, et cela est vraiment un critère de sélection très important dans nos choix de nouvelles conventions.
+Un règle très stricte qui vous obligera à modifier votre code manuellement avant chaque push est pénible à la longue et énervera vos équipes.
+Alors qu'une règle (même très stricte) qui peut s'autofixer automatiquement au moment du commit ne sera pas perçu comme gênante.
+
+**Comment décider d'ajouter de nouvelles règles ?**
+
+Cette question peut paraitre épineuse, prenons par exemple le cas des `<tab>` / `<space>` dans les fichiers.
+Pour cela, on essaye d'éviter des débats sempiternel et on se plie à la tendance et aux règles de la communauté.
+Par exemple, notre base de configuration Eslint est basée sur celle d'Airbnb qui semble avoir un certain succès dans la communauté JS.
+
+<details>
+<summary style='font-weight: bold; font-style: italic'>Étant donné que cet article est déjà suffisamment long, voici la liste des règles qu'on s'impose sur le projet et qui pourraient vous servir d'exemple (clique sur ce texte pour les faires apparaitre)</summary>
+
+// TODO insérer un screenshot du workflow de notre CI.
+
+- Le format des fichiers est suivi géré par editorconfig, prettier et eslint.
+  Nous avons opensourcé [notre propre configuration](https://github.com/M6Web/eslint-tools), si jamais celle-ci peut vous être utile.
+- On utilise un [nommage de commit bien spécifique](https://www.conventionalcommits.org/en/v1.0.0/) pour générer nos changelog.
+  Pour s'assurer que les devs le respectent, une simple étape de notre CI le vérifie.
+- On ne souhaite pas qu'un dev fasse grossir énormément nos bundle en production, c'est pourquoi nous suivont et mesuront leur taille dans la CI.
+- La couverture de tests n'est pas un indicateur pour nous, toutes les lignes n'ont pas la même nécessité pour nous d'être testée.
+- Nos tests unitaires tournent bien évidemment sur la CI, ceux-ci doivent passer.
+- Nos tests fonctionnels (E2E) tournent sur Chrome Headless, ils doivent être au vert.
+- Les logs de nos tests fonctionnels sont récupérés est parsés afin d'éviter l'introduction d'erreur ou de react warning (Le script de parsing est cependant compliqué à maintenir)
+- Les tests fonctionnels fonctionnent dans une sandbox ou tout le réseau est proxyfié.
+  Nous surveillons que nos tests ne dépendent pas d'une API non moquée qui pourrait ralentir leur execution.
+
+// TODO ajouter tout ce qu'il manque
+
+</details>
 
 ## Tester, tester et tester
 
 - expliquer notre stratégie de test
+- montrer le kikimeter de nos tests Jest et E2E
 - nos soucis avec React-testing-lib
+- tester dans des vrais navigateur (Browserstack)
 - Les succès de notre stratégie
 - une feature => des tests
 - un bug => un correctif => un test qui était manquant
 
-## Le projet reste, les fonctionalités non
+## Le projet reste, les fonctionnalités non
 
 - expliquer qu'il est préférable de mettre en place du featureflippping plutot que de devoir enlever/remttre le code ou jongler avec les branches
 - Cela permet de l'A/B testing
@@ -68,6 +128,7 @@ Quitte à en faire la liste, autant vous le partager également, en espérant qu
 - Dans le cas d'un multi clients, proposer les feature en mode buffet
 - quand une feature marche plus, on la coupe puis on nettoie
 - parenthèse sur le futurflipping
+- le monitoring et l'alerting est très important pout suivre les fonctionnalité, s'assurer qu'elles marchent en prod et décider si on peut les enlever.
 
 ## Limiter, surveiller et mettre à jour ses dépendances
 
