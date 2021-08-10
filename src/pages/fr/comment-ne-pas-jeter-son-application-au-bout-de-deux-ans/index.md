@@ -197,9 +197,11 @@ Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'
 - Faire tourner tous les tests prend un temps important sur notre intégration continue.
   Il faut régulièrement travailler sur leur optimisation pour que le feedback qu'ils vous apportent soit le plus rapide possible.
   Ces temps importants coutent également de l'argent, il faut en effet bien faire tourner ces tests sur des machines.
-  Pour information, l'infrastructure du site web (à lui seul, juste l'hébergement de nos server Node + fichiers statiques + CDN) coutent bien moins cher que notre intégration continue.
+  Pour information, l'infrastructure du site web (à lui seul, juste l'hébergement de nos servers Node + fichiers statiques + CDN) coutent bien moins cher que notre intégration continue.
   Cela fait bien évidemment sourire nos Ops ! 😊
 - Les nouvelles recrues de nos équipes ont souvent jamais réalisés ce genre de tests, il y a donc une phase ~~de galère~~ d'apprentissage..
+- Certaines fonctionnalités sont parfois trop compliquées à tester avec notre stack E2E (par exemple, les parcours de paiement qui dépendent de tiers).
+  Il nous arrive alors de nous rabattre sur d'autres techniques avec Jest notamment en ayant un scope moins unitaire.
 
 ### Nos tests "unitaires"
 
