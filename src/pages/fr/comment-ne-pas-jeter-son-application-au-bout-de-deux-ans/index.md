@@ -42,7 +42,7 @@ Comment fait-on pour garder au maximum la connaissance sur "Comment on fait les 
 
 C'est ce que je vous propose de vous présenter dans cet article.
 Avec l'aide de mes collègues, j'ai rassemblé la liste des bonnes pratiques qui nous permettent encore aujourd'hui de maintenir ce projet en état.
-Avec Florent Dubost, on s'est souvent dit qu'il serait intéressant de les lister.
+Avec [Florent Dubost](https://twitter.com/fooragnak), on s'est souvent dit qu'il serait intéressant de les lister.
 Ne serait-ce que pour le partager en interne à Bedrock.
 Quitte à en faire la liste, autant vous le partager également, en espérant que cela vous soit utile.
 
@@ -61,7 +61,7 @@ Nos décisions évoluent mais pas la documentation.
 
 > "Les temps changent mais pas les README."
 >
-> _Olivier Mansour (deputy CTO à Bedrock)_
+> [_Olivier Mansour (deputy CTO à Bedrock)_](https://twitter.com/omansour)
 
 On trouve qu'automatiser la vérification de chacune des règles qu'on s'impose sur notre codebase ou nos process est bien plus pérenne.
 En plus de ça, coté JS on est vraiment bien équipé avec des outils comme Eslint qui nous permettent d'implémenter nos propres règles.
@@ -92,6 +92,8 @@ Cette question peut paraitre épineuse, prenons par exemple le cas des `<tab>` /
 Pour cela, on essaye d'éviter des débats sempiternel et on se plie à la tendance et aux règles de la communauté.
 Par exemple, notre base de configuration Eslint est basée sur celle d'Airbnb qui semble avoir un certain succès dans la communauté JS.
 
+### La liste _presque_ exhaustive 🤞
+
 <details>
 <summary style='font-weight: bold; font-style: italic'>Étant donné que cet article est déjà suffisamment long, voici la liste des règles qu'on s'impose sur le projet et qui pourraient vous servir d'exemple (clique sur ce texte pour les faires apparaitre)</summary>
 
@@ -120,13 +122,103 @@ Par exemple, notre base de configuration Eslint est basée sur celle d'Airbnb qu
 
 ## Tester, tester et tester
 
+J'espère qu'en 2021 il n'est plus nécessaire d'expliquer pourquoi tester automatiquement son application est indispensable pour la rendre pérenne.
+En JS on est plutôt bien équipé pour tester aujourd'hui.
+Il reste cependant l'éternelle question:
+
+> "Qu'est-ce qu'on veut tester ?"
+
+Globalement si on recherche sur internet cette question, on voit que des besoins différents font émerger des pratiques et des outils de testing bien différents.
+Ce serait très présomptueux de penser qu'il y a une bonne manière de tester automatiquement son application.
+C'est pourquoi il est préférable de définir une ou plusieurs stratégies de test qui répondent à nos besoins.
+
+Nos stratégies de tests reposent sur deux volontés bien distinctes:
+
+- Automatiser la vérification des fonctionnalités proposées aux utilisateurs de la manière la plus fidèle à ce qu'il peut se passer en production
+- Nous fournir des solutions efficace pour specifier la manière dont nous implémentons nos solutions techniques pour nous permettre de les faire évoluer plus facilement.
+
+Pour cela, nous réalisons deux "types de tests" que je propose de vous présenter ici.
+
+### Nos tests E2E
+
+On les appelle "tests fonctionels", ce sont des tests End-to-end (E2E) sur une stack technique très efficace composée de [CucumberJS](https://cucumber.io/docs/installation/javascript/), [WebdriverIO](https://webdriver.io/) avec [ChromeHeadless](https://developers.google.com/web/updates/2017/04/headless-chrome)
+Il s'agit d'une stack technique mise en place au début du projet (à l'époque avec [PhantomJS](https://phantomjs.org/) pour les plus anciens d'entre-vous)
+
+Cette stack nous permet d'automatiser le pilotage de tests qui contrôlent un navigateur.
+Ce navigateur va réaliser des actions qui se rapprochent le plus de celles que nos vrais utilisateurs peuvent réaliser tout en vérifiant comment le site réagit.
+
+Il y a quelques années, cette stack technique était plutôt compliquée à mettre en place, mais aujourd'hui il est plutôt simple de le faire.
+[Le site qui héberge cet article de blog](https://github.com/Slashgear/slashgear.github.io) en est lui-même la preuve.
+Il ne m'a fallu qu'une dizaine de minutes pour mettre en place cette stack avec [le WebdriverIo CLI](https://webdriver.io/docs/gettingstarted) pour vérifier que mon blog fonctionne comme prévu.
+
+Voici donc un exemple de fichier de test E2E pour vous donner une idée:
+
+```gherkin
+Feature: UN EXEMPLE
+```
+
+Et ça donne ça en local !
+
+![capture vidéo de l'execution de tests]()
+
+Voilà un petit schéma qui explique un peu comment cette stack fonctionne:
+
+![schéma qui explique le fonctionnement de notre stack](./e2e-archi.png)
+
+Aujourd'hui, l'application web de Bedrock possède plus de 800 scénarios de tests E2E qui tournent sur chacune de nos _Pull Request_ et sur la branche `master`.
+Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'est juste génial !
+
+👍 Les points positifs
+
+- WebdriverIO nous permet également de lancer de manière journalière ces mêmes tests sur des vrais device en passant par le service [Browserstack](https://www.browserstack.com/).
+  On a donc tous les jours un job qui s'assure que notre site fonctionne correctement sur un Chrome dernière version sur Windows 10 et Safari Macos.
+- Ces tests nous permettent de facilement documenter les fonctionnalités de l'application.
+- Ils nous permettent de reproduire des cas qui sont loin d'être nominaux.
+  Dans une logique TDD, ils permettent d'avancer sur le développement sans avoir à cliquer pendant des heures.
+- Ces tests nous ont permis de ne pas casser l'ancienne version du site qui est toujours en production pour quelques clients alors que nos efforts se concentrent sur la nouvelle.
+- Ils nous apportent une vraie confiance
+- Grâce notre libraire [_superagent-mock_](https://www.npmjs.com/package/superagent-mock), nous pouvons _fixturer_ (bouchonner, mocker) toutes les API dont on dépend et ainsi même vérifier les cas d'erreurs.
+  De plus, mocker la couche XHR du navigateur permet une amélioration siginificative du temps d'exécution des tests. 🚀
+- Ils nous donne accès à des usages étendus comme :
+  - vérification de règles d'accessibilité
+  - check les logs de la console navigateur (pour ne pas introduire d'erreur ou de React Warning par exemple)
+  - surveiller tous les appels réseaux du site grâce à un proxy
+  - et j'en passe...
+
+👎 Les complications
+
+- Maintenir cette stack est compliqué et coûteux.
+  Étant donné que peu de ressources sont publiées sur ce domaine, on se retrouve parfois à devoir creuser pendant plusieurs jours pour les réparer 😅.
+  Il nous arrive de nous sentir parfois bien seul à avoir ces soucis.
+- Il est très facile de coder un test E2E dit _flaky_ (ie: un test qui peut échouer aléatoirement), ils font perdre du temps.
+  Ils nous font croire que quelque chose est cassé.
+  Ils nous prennent parfois du temps à les stabiliser.
+  Il reste cependant **bien meilleur de ne pas conserver un test qui ne vous donnera pas un résultat stable.**
+- Faire tourner tous les tests prend un temps important sur notre intégration continue.
+  Il faut régulièrement travailler sur leur optimisation pour que le feedback qu'ils vous apportent soit le plus rapide possible.
+  Ces temps importants coutent également de l'argent, il faut en effet bien faire tourner ces tests sur des machines.
+  Pour information, l'infrastructure du site web (à lui seul, juste l'hébergement de nos server Node + fichiers statiques + CDN) coutent bien moins cher que notre intégration continue.
+  Cela fait bien évidemment sourire nos Ops ! 😊
+- Les nouvelles recrues de nos équipes ont souvent jamais réalisés ce genre de tests, il y a donc une phase ~~de galère~~ d'apprentissage..
+
+### Nos tests "unitaires"
+
 - expliquer notre stratégie de test
-- montrer le kikimeter de nos tests Jest et E2E
+- montrer le kikimeter de nos tests Jest
+- la performance, l'automock
 - nos soucis avec React-testing-lib
-- tester dans des vrais navigateur (Browserstack)
-- Les succès de notre stratégie
-- une feature => des tests
-- un bug => un correctif => un test qui était manquant
+- la nécessité de faire des tests d'intégration dans certain cas
+
+### Nos principes
+
+Nous essayons de toujours respecter les règles suivantes lors qu'on se pose la question "Dois-je ajouter des tests ?".
+
+1. Si notre _Pull Request_ introduit des nouvelles fonctionnalités utilisateurs, il faut intégrer des scenari de test E2E.
+   Des tests unitaires avec Jest peuvent les compléter / remplacer en fonction.
+2. Si notre _Pull Request_ a pour but de corriger un bug, cela signifie qu'il nous manque un cas de test.
+   On doit donc essayer de rajouter un test E2E ou à défaut un test unitaire.
+
+_C'est en écrivant ces lignes que je me dis que ces principes pourraient très bien faire l'objet d'une automatisation._ 🤣
 
 ## Le projet reste, les fonctionnalités non
 
@@ -137,7 +229,15 @@ Par exemple, notre base de configuration Eslint est basée sur celle d'Airbnb qu
 - Dans le cas d'un multi clients, proposer les feature en mode buffet
 - quand une feature marche plus, on la coupe puis on nettoie
 - parenthèse sur le futurflipping
+
+## Monitorer, Mesurer, Alerter
+
 - le monitoring et l'alerting est très important pout suivre les fonctionnalité, s'assurer qu'elles marchent en prod et décider si on peut les enlever.
+- aucune feature ne marche tant qu'elle n'est pas suivie mesurable
+- quand on a des mesures solides, on peut mettre en place de l'alerting
+- les mesures peuvent nous permettre de prendre de décisions
+- les alertes doivent être actionnable pour ne pas faire du bruit inutile
+- de l'importance de la data dans les décisions
 
 ## Limiter, surveiller et mettre à jour ses dépendances
 
@@ -157,4 +257,4 @@ Par exemple, notre base de configuration Eslint est basée sur celle d'Airbnb qu
 
 Les bonnes pratiques présentées ici restent bien évidemment subjectives et ne s'appliqueront pas parfaitement/directement dans vos contextes.
 Je suis cependant convaincu qu'elles peuvent probablement vous aider à identifier ce qui peut faire passer votre projet de fun à périmé.
-A Bedrock nous avons mis en place d'autres pratiques que je n'ai pas listées ici mais ce sera l'occasion de faire un nouvel article un jour.
+À Bedrock nous avons mis en place d'autres pratiques que je n'ai pas listées ici mais ce sera l'occasion de faire un nouvel article un jour.
