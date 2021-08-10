@@ -22,6 +22,8 @@ Certaines de ces applications ne sont pas toute jeune.
 En effet, si on prend l'exemple de l'application sur laquelle je travaille principalement, il s'agit d'un site web dont les développements ont commencé en 2014.
 J'ai d'ailleurs déjà évoqué celle-ci dans différents articles de ce blog.
 
+![impression d'écran du nombre de commit sur master de notre projet 15668](./commit-count.png)
+
 Vous pourriez vous dire: _"Oh les pauvres maintenir une application vieille de presque 10 ans ça doit être un enfer !"_
 
 Rassurez-vous, ce n'est pas le cas !
@@ -30,11 +32,13 @@ J'ai par le passé travaillé sur des projets frontend bien moins vieux mais sur
 Aujourd'hui le projet reste à jour techniquement, on doit être sur la dernière version de React alors que celui-ci avait commencé sur une version _0.x.x_.
 Dans ce monde des technologies web souvent décrié (ex: les nombreux sur la _Javascript Fatigue_) dont les outils et les pratiques évoluent constamment, conserver un projet "à jour" reste un vrai challenge.
 
-![screenshot des métadonnées du dépot site-6play-v4]()
+![nombre de version de l'application 1445](./releases.png)
 
 De plus, dans le contexte de ce projet spécifique, en presque 10 ans, nous avons connu une centaine de contributeurs différents.
 Certains contributeurs ne sont restés que quelques mois/années, comment ne pas perdre des infos ?
 Comment fait-on pour garder au maximum la connaissance sur "Comment on fait les choses et comment ça marche ?".
+
+![liste des 100 contributeurs du projet](./contributors.png)
 
 C'est ce que je vous propose de vous présenter dans cet article.
 Avec l'aide de mes collègues, j'ai rassemblé la liste des bonnes pratiques qui nous permettent encore aujourd'hui de maintenir ce projet en état.
@@ -91,7 +95,7 @@ Par exemple, notre base de configuration Eslint est basée sur celle d'Airbnb qu
 <details>
 <summary style='font-weight: bold; font-style: italic'>Étant donné que cet article est déjà suffisamment long, voici la liste des règles qu'on s'impose sur le projet et qui pourraient vous servir d'exemple (clique sur ce texte pour les faires apparaitre)</summary>
 
-// TODO insérer un screenshot du workflow de notre CI.
+![Notre workflow d'intégration continue](./ci-workflow.png)
 
 - Le format des fichiers est suivi géré par editorconfig, prettier et eslint.
   Nous avons opensourcé [notre propre configuration](https://github.com/M6Web/eslint-tools), si jamais celle-ci peut vous être utile.
@@ -104,8 +108,13 @@ Par exemple, notre base de configuration Eslint est basée sur celle d'Airbnb qu
 - Les logs de nos tests fonctionnels sont récupérés est parsés afin d'éviter l'introduction d'erreur ou de react warning (Le script de parsing est cependant compliqué à maintenir)
 - Les tests fonctionnels fonctionnent dans une sandbox ou tout le réseau est proxyfié.
   Nous surveillons que nos tests ne dépendent pas d'une API non moquée qui pourrait ralentir leur execution.
-
-// TODO ajouter tout ce qu'il manque
+- On vérifie quelques règles sur le CSS avec [Stylelint](https://stylelint.io/) et [bemlinter](https://github.com/M6Web/bemlinter) (on utilise plus BEM aujourd'hui mais il reste encore un peu de style géré en SCSS qu'on migre petit à petit)
+- Le projet est un monorepo sur lequel nous essayons de maintenir les mêmes version de dépendances pour chaque package.
+  Pour cela nous avons développé un outil qui permet de faire cette vérification _[monorepo-dependencies-check](https://www.npmjs.com/package/monorepo-dependencies-check)_
+- On vérifie que le notre fichier `yarn.lock` n'a pas été modifié par inadvertance ou bien qu'il a été bien mis à jour par rapport aux modifications du `package.json`.
+- Terraform est utilisé pour la gestion de nos ressources cloud, nous vérifions que le format des fichiers est correct.
+- Durant les tests e2e nous vérifions qu'aucune requête d'image n'a généré une 404.
+- On réalise quelques [vérifications d'accessibilité avec Axe](https://www.deque.com/axe/) durant nos tests e2e.
 
 </details>
 
