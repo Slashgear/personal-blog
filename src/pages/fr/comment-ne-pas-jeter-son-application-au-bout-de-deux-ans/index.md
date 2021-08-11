@@ -154,12 +154,29 @@ Il ne m'a fallu qu'une dizaine de minutes pour mettre en place cette stack avec 
 Voici donc un exemple de fichier de test E2E pour vous donner une idée:
 
 ```gherkin
-Feature: UN EXEMPLE
+Feature: Playground
+
+  Background: Playground context
+    Given I use "playground" test context
+
+  Scenario: Check if playground is reachable
+    When As user "cytron@m6.fr" I visit the "playground" page
+    And I click on "playground trigger"
+    Then I should see a "visible playground"
+    And I should see 4 "playground tab" in "playground"
+
+    When I sleep 1 seconds to wait for full playground load
+    And I click on "playground trigger"
+    Then I should not see a "visible playground"
+
+    # ...
 ```
 
 Et ça donne ça en local !
 
-![capture vidéo de l'execution de tests]()
+<video controls style="width: 100%">
+  <source src="https://user-images.githubusercontent.com/6263857/129066094-604693a8-8e05-4908-beff-94f2e936f07d.mp4" type="video/mp4">
+</video>
 
 Voilà un petit schéma qui explique un peu comment cette stack fonctionne:
 
