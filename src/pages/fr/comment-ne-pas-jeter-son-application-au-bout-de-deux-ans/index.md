@@ -268,11 +268,32 @@ _C'est en écrivant ces lignes que je me dis que ces principes pourraient très 
 
 ## Accepter sa dette technique
 
+Un projet accumulera toujours de la dette technique.
+C'est un fait.
+Que ce soit de la dette volontaire ou involontaire, un projet qui résiste aux années va forcément accumuler de la dette.
+D'autant plus, si pendant toutes ces années vous continuez d'ajouter des fonctionnalités.
+
+Depuis 2014, nos bonnes pratiques, nos façons de faire ont bien évolué.
+Parfois nous avons décidé ces changements mais parfois nous les avons subi (un exemple, l'arrivée des composants fonctionnels avec React et l'api des Hooks).
+
+**Notre projet n'est pas _"state of art"_ et on l'assume.**
+
+<iframe src="https://giphy.com/embed/JGunlb6LbQlz2" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+Nous essayons de prioriser nos sujets de _refactoring_ sur les parties de l'application sur lequel on a le plus de souci, le plus de peine.
+On considère qu'une partie de l'application qui nous plaît pas mais sur laquelle on n'a pas besoin de travailler (apporter des évolution) ne mérite pas qu'on la refactor.
+
+Je pourrais vous citer de nombreuses fonctionnalités de notre application qui n'ont pas évolué fonctionnellement depuis plusieurs années.
+Mais comme nous avons couvert ces fonctionnalités de tests E2E depuis le début, nous n'avons pas vraiment eu à y retoucher.
+
+Avec notre architecture de _feature flipping_, la prochaine évolution d'un bon de code est parfois sa désactivation.
+Alors pourquoi passez son temps à ré-écrire toute l'application ?
+
 - Le code devient dans tous les cas du legacy.
 - Tant que les fonctionnalités sont testées, rien ne vous oblige à tout refactorer en permanence pour que toute votre codebase soit staet of art.
 - On se focus sur nos pain point
 
----
+## Pour résumer
 
 Les bonnes pratiques présentées ici restent bien évidemment subjectives et ne s'appliqueront pas parfaitement/directement dans vos contextes.
 Je suis cependant convaincu qu'elles peuvent probablement vous aider à identifier ce qui peut faire passer votre projet de fun à périmé.
