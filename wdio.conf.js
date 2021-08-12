@@ -31,6 +31,7 @@ exports.config = {
   services: ['chromedriver', 'selenium-standalone'],
   framework: 'cucumber',
   reporters: ['spec'],
+  specFileRetries: 1,
   cucumberOpts: {
     require: ['./features/step-definitions/*.steps.js'],
     backtrace: false,
