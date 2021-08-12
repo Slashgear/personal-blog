@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Chromium
-        run: sudo apt-get install chromium-browser
+        run: sudo apt-get install chromium-browser firefox openjdk-8-jdk
       - uses: actions/checkout@v2
       - name: Gatsby cache
         uses: actions/cache@v2

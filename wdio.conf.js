@@ -13,6 +13,14 @@ exports.config = {
         args: [...headlessArgs, '--disable-gpu', '--disable-dev-shm-usage'],
       },
     },
+    {
+      maxInstances: 5,
+      browserName: 'firefox',
+      acceptInsecureCerts: true,
+      'moz:firefoxOptions': {
+        args: [...headlessArgs],
+      },
+    },
   ],
   logLevel: 'warn',
   bail: 0,
@@ -20,7 +28,7 @@ exports.config = {
   waitforTimeout: 10000,
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
-  services: ['chromedriver'],
+  services: ['chromedriver', 'selenium-standalone'],
   framework: 'cucumber',
   reporters: ['spec'],
   cucumberOpts: {
