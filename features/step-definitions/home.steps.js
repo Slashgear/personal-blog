@@ -29,7 +29,7 @@ Then(
   /^I should be on an article page$/,
   { wrapperOptions: { retry: 2 } },
   async () => {
-    expect(await browser.getUrl()).toMatch(/\/[a-zA-Z\-]*\/$/)
+    expect(await browser.getUrl()).toMatch(/\/[a-zA-Z\-1-9]*\/$/)
   }
 )
 
