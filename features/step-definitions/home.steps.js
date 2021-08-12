@@ -25,9 +25,13 @@ When(/^I click on first article link$/, async () => {
   await $('article a').click()
 })
 
-Then(/^I should be on an article page$/, async () => {
-  expect(await browser.getUrl()).toMatch(/\/[a-zA-Z\-]*\/$/)
-})
+Then(
+  /^I should be on an article page$/,
+  { wrapperOptions: { retry: 2 } },
+  async () => {
+    expect(await browser.getUrl()).toMatch(/\/[a-zA-Z\-]*\/$/)
+  }
+)
 
 Then(/^I should not be on home page$/, async () => {
   expect(await browser.getUrl()).not.toEqual(/9000\/$/)
