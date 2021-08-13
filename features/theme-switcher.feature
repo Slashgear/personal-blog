@@ -4,6 +4,7 @@ Feature: Theme switcher
 
   Scenario Outline: Switcher in <PageName> page
     Given I am on the <PageName> page
+    And I force light mode
     Then I should see theme switcher
     And Website should be in light mode
 

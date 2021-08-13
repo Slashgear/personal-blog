@@ -1,5 +1,3 @@
-const headlessArgs = [...(process.env.WITH_HEAD ? [] : ['--headless'])]
-
 exports.config = {
   specs: ['./features/**/*.feature'],
   exclude: [],
@@ -10,16 +8,13 @@ exports.config = {
       browserName: 'chrome',
       acceptInsecureCerts: true,
       'goog:chromeOptions': {
-        args: [...headlessArgs, '--disable-gpu', '--disable-dev-shm-usage'],
+        args: ['--disable-gpu', '--disable-dev-shm-usage'],
       },
     },
     {
       maxInstances: 5,
       browserName: 'firefox',
       acceptInsecureCerts: true,
-      'moz:firefoxOptions': {
-        args: [...headlessArgs],
-      },
     },
   ],
   logLevel: 'warn',

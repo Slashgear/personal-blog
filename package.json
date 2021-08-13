@@ -48,7 +48,7 @@
     "@wdio/cucumber-framework": "^7.9.0",
     "@wdio/local-runner": "^7.9.0",
     "@wdio/spec-reporter": "^7.9.0",
-    "chromedriver": "^92.0.1",
+    "chromedriver": "latest",
     "husky": "^7.0.1",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
@@ -66,6 +66,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "yarn wdio run ./wdio.conf.js"
+    "test": "yarn wdio run ./wdio.conf.js --spec"
   }
 }
