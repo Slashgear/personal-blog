@@ -4,6 +4,8 @@ description: For some time now I've been playing with github actions to see if I
 date: 2021-08-13
 hero: ./webdriverio.jpg
 language: en
+translations:
+  ['fr', 'comment-mettre-en-place-des-tests-bout-en-bout-avec-webdriverio']
 tags:
   - github
   - action
@@ -14,7 +16,7 @@ tags:
 I recently set up an end-to-end testing stack to make sure I wasn't going to introduce any functional regressions to my blog.
 With several years of experience using E2E (End to End) testing technologies, I still encountered some difficulties in setting it up.
 
-In order to save you time I give you a step by step tuto for the installation of the tools necessary to have an efficient test stack in a few minutes.
+In order to save you time I give you a step by step tutorial for the installation of the tools necessary to have an efficient test stack in a few minutes.
 
 ## Make it run locally first
 
@@ -35,7 +37,7 @@ The CLI will show you a prompt you should follow.
 yarn wdio config
 ```
 
-![exemple screen captured of the CLI output](./setup.gif)
+![Exemple de capture d'écran de la sortie CLI](./setup.gif)
 
 Here is what you should do for each question:
 
