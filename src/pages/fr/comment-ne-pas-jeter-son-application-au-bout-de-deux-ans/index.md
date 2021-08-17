@@ -174,9 +174,7 @@ Feature: Playground
 
 Et ça donne ça en local !
 
-<video controls style="width: 100%">
-  <source src="https://user-images.githubusercontent.com/6263857/129066094-604693a8-8e05-4908-beff-94f2e936f07d.mp4" type="video/mp4">
-</video>
+![Exemple d'exécution de test fonctionnel](./e2e-example.gif)
 
 Voilà un petit schéma qui explique un peu comment cette stack fonctionne:
 
@@ -222,11 +220,55 @@ Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'
 
 ### Nos tests "unitaires"
 
-- expliquer notre stratégie de test
-- montrer le kikimeter de nos tests Jest
-- la performance, l'automock
-- nos soucis avec React-testing-lib
-- la nécessité de faire des tests d'intégration dans certain cas
+Pour compléter nos tests fonctionnels nous avons également une stack de tests écris avec [Jest].
+On qualifie ces tests d'unitaires car nous avons comme principe d'essayer de toujours tester nos modules JS en indépendance des autres.
+
+_Ne débattons pas ici sur "Est-ce que ce sont des vrais tests unitaires ?", suffisamment d'articles sur internet traitent de ce sempiternel débat._
+
+On utilise ces tests pour différentes raisons qui couvrent des besoins que nos tests fonctionnels ne couvrent pas:
+
+- nous aider à développer nos modules JS avec des pratiques TDD.
+- documenter et décrire comment fonctionne un module JS.
+- tester des cas limites qui sont très/trop compliqués à tester avec nos tests E2E.
+- faciliter le refactoring de notre application en nous montrant les impactes techniques de nos modifications.
+
+Avec ces tests, on se met au niveau d'une fonction utilitaire, d'une action Redux, d'un reducer,d'un composant React et on s'assure que les comportements qu'on a souhaité implémenter locallement font ce qu'il est souhaiter.
+On se base essentiellement sur [la fonctionnalité d'`automock` de Jest](https://slashgear.github.io/discover-jest-hidden-feature-automock/) qui nous propose d'isoler nos modules JS lorsqu'on teste.
+
+![représentation visuelle de l'automock](./mocked-modules.jpg)
+
+L'image précédente représente la métaphore qui nous permet d'expliquer notre stratégie de tests unitaires aux nouveaux arrivant.
+
+> "Il faut s'imaginer que l'application est un mur composé de briques unitaires (nos modules), nos testes unitraires doivent tester une à une les briques en indépendance totale des autres.
+> Nos tests fonctionels sont la pour tester le ciment entre les briques."
+
+**Pour résumer, on pourrait dire que nos tests E2E testent _ce que notre application doit faire_, et nos tests unitaire s'assurent eux de vérifier _comment ça marche._**
+
+Aujourd'hui ce sont plus de 6000 test unitaires qui couvrent notre application et nous permettent de limiter les régressions.
+
+```js
+// EXEMPLE DE TEST UNITAIRE DE L'APPLICATION
+```
+
+👍
+
+- [Jest] est vraiment une librairie géniale, rapide, complète, bien documentée.
+- Les tests unitaires nous aident beaucoup à comprendre plusieurs années après comment tout cela fonctionne.
+- On arrive toujours à tester unitairement notre code, et cela complète bien nos tests E2E.
+- L'`automock` est vraiment pratique pour découpage de tests par modules.
+
+👎
+
+- Parfois, nous nous sommes trouvés limités par notre stack de tests fonctionnels et nous ne pouvions pas uniquement nous baser sur les tests unitaires.
+  Il nous manquait quelque chose pour pouvoir s'assurer que le _ciment entre les briques_ fonctionnait comme on le souhaitait.
+  Pour cela, nous avons mis en place une deuxième stack de tests [Jest] nommé "test d'intégration" ou l'`automock` est désactivé.
+- L'abus de [_Snapshot_](https://jestjs.io/docs/snapshot-testing) est dangereux pour la santé.
+  L'usage du _"Snapshot testing"_ peut faire gagner du temps sur l'implémentation de vos tests mais peuvent en réduire la qualité.
+  Avec un object de 50 lignes en _Snapshot_ n'est pas forcément lisible à la review
+- Avec la déprécitation d'[EnzymeJS], nous sommes contraints de migrer sur [React Testing Library].
+  Il est bien évidemment possible de tester unitairement des composants avec cette nouvelle librairie.
+  Malheureusement, ce n'est pas vraiment l'esprit et la façon de faire.
+  [React Testing Library] nous pousse [à ne pas jouer avec le _shallow rendering_](https://kentcdodds.com/blog/why-i-never-use-shallow-rendering).
 
 ### Nos principes
 
@@ -241,13 +283,74 @@ _C'est en écrivant ces lignes que je me dis que ces principes pourraient très 
 
 ## Le projet reste, les fonctionnalités non
 
-- expliquer qu'il est préférable de mettre en place du featureflippping plutot que de devoir enlever/remttre le code ou jongler avec les branches
-- Cela permet de l'A/B testing
-- Cela permet de développer petit à petit des nouvelles fonctionnalités sans les ativer en prod
-- Couper une feature qui plante en prod
-- Dans le cas d'un multi clients, proposer les feature en mode buffet
-- quand une feature marche plus, on la coupe puis on nettoie
-- parenthèse sur le futurflipping
+> "La seconde évolution d'une fonctionnalité est très souvent sa suppression."
+
+Par principe, nous souhaitons faire en sorte que chaque nouvelle fonctionnalitée de l'application ne base pas son activation sur le simple fait d'être dans la codebase.
+Classiquement, le cycle de vie d'une "feature" dans un projet peut être le suivant (dans un [Github Flow](https://guides.github.com/introduction/flow/)):
+
+- une personne implémente sur une branche
+- la fonctionnalité est _mergée_ sur master
+- elle est déployée en production
+- vie sa vie de fonctionnalité (avec parfois des bugs et des correctifs)
+- la fonctionnalité n'est plus nécessaire
+- une personne détricote le code et l'enlève
+- nouveau déploiement
+
+Pour simplifier certaines étapes, nous avons mis en place du _feature flipping_ sur le projet.
+
+**Comment ça marche ?**
+
+Dans notre config nous avons une map clé/valeur qui liste toutes les fonctionnalités de l'application associée à leur status d'activation.
+
+```js
+const featureFlipping = {
+  myAwesomeFeature: false,
+  anotherOne: true,
+}
+```
+
+Dans notre code, nous avons donc implémenter des traitements conditionnels qui disent "Si cette feature est activée alors...".
+Cela peut changer le rendu d'un composant, changer l'implémentation d'une action Redux ou bien désactivé un route de notre React-router.
+
+**Mais à quoi ça nous sert ?**
+
+- On peut développer des nouvelles évolutions progressivement en les cachant derrière une clé de configuration.
+  On livre des fonctionnalités en production sans les activer.
+- En evironnement de test, on peut surcharger cette config pour tester des features qui ne sont pas encore activées en production.
+- Dans le cas d'un site en marque blanche, on peut proposer ces fonctionnalités à nos clients comme des options possibles.
+- Avant de supprimer le code d'une feature, on la désactive puis on fait le ménage sans risque.
+- Grâce à un outil maison nommé l'_Applaunch_, cette config de feature flipping est surchargeable dans une interface graphique à chaud sans déploiement de l'application.
+  Cela nous permet d'activer des fonctionnalités sans faire de mise en production du code.
+  En cas d'incident, on peut désactiver des fonctionnalités qui sont dégradées.
+
+Pour vous donner un exemple plus concrèt, entre 2018 et 2020 nous avons complètement refondu l'interface de l'application.
+C'est évolution graphique n'était qu'une clé de featureFlipping.
+La refonte graphique n'a donc pas été la remise à zéro du projet, on continue encore aujourd'hui de vivre avec les deux versions (tant que la bascule de tous nos clients n'est pas terminés).
+
+![screenshot comparatif v4 / v5 sur 6play]()
+
+### L'A/B testing
+
+Grâce au super travail de nos équipes backend et data, nous avons pu même étendre l'usage du _feature flipping_ en rendant cette configuration modifiable pour des sous groupes de nos utilsateurs.
+Cela nous permet de déployer nos nouvelles fonctionnalités sur une portion plus réduite de nos utilisateurs afin de comparer nos [KPI].
+
+Prise de décision, amélioration des performances techniques ou produit, expérimentations, les possibilités sont nombreuses et nous les exploitons de plus en plus.
+
+### Le _futur flipping_
+
+> Sur une idée originale de [Florent Lepretre](https://twitter.com/SuperFlaw).
+
+Nous avions régulièrement le besoin d'activer des feature à des heures ~~très~~ trop matinales dans le futur.
+Pour cela nous devions être connecté à une heure précise sur notre poste pour modifier la configuration à chaud.
+
+Afin d'éviter d'oublier de le faire, ou de le faire en retard, nous avons fait en sorte qu'une clé de configuration puisse être activée à partir d'une certaines date.
+Pour cela, nous avons fait évoluer notre _selector redux_ qui indiquait si une feature était activée pour qu'il puisse gérer des format de date et les comparer à l'heure courante.
+
+```js
+// Ajouter un exemple
+```
+
+> De nombreux cafés ☕️ à 9h ont été sauvés grâce au _futur flipping_
 
 ## Monitorer, Mesurer, Alerter
 
@@ -266,6 +369,14 @@ _C'est en écrivant ces lignes que je me dis que ces principes pourraient très 
 - yarn audit task
 - yarn outdated et dependabot
 
+## Partager, présenter, documenter
+
+- Review, et chorum important
+- Mob Review
+- Démo
+- LFT
+- Documentation et ADR
+
 ## Accepter sa dette technique
 
 Un projet accumulera toujours de la dette technique.
@@ -278,7 +389,7 @@ Parfois nous avons décidé ces changements mais parfois nous les avons subi (un
 
 **Notre projet n'est pas _"state of art"_ et on l'assume.**
 
-<iframe src="https://giphy.com/embed/JGunlb6LbQlz2" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+![ça tiendra !](./leak.gif)
 
 Nous essayons de prioriser nos sujets de _refactoring_ sur les parties de l'application sur lequel on a le plus de souci, le plus de peine.
 On considère qu'une partie de l'application qui nous plaît pas mais sur laquelle on n'a pas besoin de travailler (apporter des évolution) ne mérite pas qu'on la refactor.
@@ -286,15 +397,22 @@ On considère qu'une partie de l'application qui nous plaît pas mais sur laquel
 Je pourrais vous citer de nombreuses fonctionnalités de notre application qui n'ont pas évolué fonctionnellement depuis plusieurs années.
 Mais comme nous avons couvert ces fonctionnalités de tests E2E depuis le début, nous n'avons pas vraiment eu à y retoucher.
 
-Avec notre architecture de _feature flipping_, la prochaine évolution d'un bon de code est parfois sa désactivation.
+Comme dit plus haut, la prochaine évolution d'un bon de code est parfois sa désactivation.
 Alors pourquoi passez son temps à ré-écrire toute l'application ?
 
-- Le code devient dans tous les cas du legacy.
-- Tant que les fonctionnalités sont testées, rien ne vous oblige à tout refactorer en permanence pour que toute votre codebase soit staet of art.
-- On se focus sur nos pain point
+- Le code devient dans tous les cas du "legacy".
+- Tant que les fonctionnalités sont testées, rien ne nous oblige à tout refactorer en permanence pour que toute notre codebase soit _state of art_.
+- On se focus sur nos pain point, on refactor ce qu'on a vraiment besoin de faire évoluer.
 
 ## Pour résumer
 
 Les bonnes pratiques présentées ici restent bien évidemment subjectives et ne s'appliqueront pas parfaitement/directement dans vos contextes.
 Je suis cependant convaincu qu'elles peuvent probablement vous aider à identifier ce qui peut faire passer votre projet de fun à périmé.
 À Bedrock nous avons mis en place d'autres pratiques que je n'ai pas listées ici mais ce sera l'occasion de faire un nouvel article un jour.
+
+Enfin, si vous souhaitez que je revienne plus en détail sur certains chapitres présentés ici, n'hésitez pas à me le dire, je pourrais essayer d'y dédier un article spécifique.
+
+[jest]: https://jestjs.io/fr/
+[enzymejs]: https://enzymejs.github.io/enzyme/
+[react testing library]: https://testing-library.com/docs/react-testing-library/intro/
+[kpi]: https://www.journaldunet.fr/business/dictionnaire-du-marketing/1198189-kpi-key-performance-indicator-marketing-definition-exemples-okr/
