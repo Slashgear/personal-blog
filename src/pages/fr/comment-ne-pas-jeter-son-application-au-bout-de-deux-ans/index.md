@@ -246,10 +246,6 @@ L'image précédente représente la métaphore qui nous permet d'expliquer notre
 
 Aujourd'hui ce sont plus de 6000 test unitaires qui couvrent notre application et nous permettent de limiter les régressions.
 
-```js
-// EXEMPLE DE TEST UNITAIRE DE L'APPLICATION
-```
-
 👍
 
 - [Jest] est vraiment une librairie géniale, rapide, complète, bien documentée.
@@ -327,7 +323,7 @@ Pour vous donner un exemple plus concrèt, entre 2018 et 2020 nous avons complè
 C'est évolution graphique n'était qu'une clé de featureFlipping.
 La refonte graphique n'a donc pas été la remise à zéro du projet, on continue encore aujourd'hui de vivre avec les deux versions (tant que la bascule de tous nos clients n'est pas terminés).
 
-![screenshot comparatif v4 / v5 sur 6play]()
+![screenshot comparatif v4 / v5 sur 6play](./compare-v4-v5.jpg)
 
 ### L'A/B testing
 
@@ -347,35 +343,70 @@ Afin d'éviter d'oublier de le faire, ou de le faire en retard, nous avons fait 
 Pour cela, nous avons fait évoluer notre _selector redux_ qui indiquait si une feature était activée pour qu'il puisse gérer des format de date et les comparer à l'heure courante.
 
 ```js
-// Ajouter un exemple
+const featureFlipping = {
+  myAwesomeFeature: {
+    offDate: '2021-07-12 20:30:00',
+    onDate: '2021-07-12 19:30:00',
+  },
+}
 ```
 
 > De nombreux cafés ☕️ à 9h ont été sauvés grâce au _futur flipping_
 
 ## Monitorer, Mesurer, Alerter
 
-- le monitoring et l'alerting est très important pout suivre les fonctionnalité, s'assurer qu'elles marchent en prod et décider si on peut les enlever.
-- aucune feature ne marche tant qu'elle n'est pas suivie mesurable
-- quand on a des mesures solides, on peut mettre en place de l'alerting
-- les mesures peuvent nous permettre de prendre de décisions
-- les alertes doivent être actionnable pour ne pas faire du bruit inutile
-- de l'importance de la data dans les décisions
+Pour maintenir un projet aussi longtemps que l'application web de bedrock, des tests, de la documentation et de la rigueur ne suffisent pas.
+Il faut également de la visibilité sur ce qui marche en production.
+
+> "Comment sais-tu que l'application que tu as en production en ce moment même fonctionne comme prévu ?"
+
+On part du principe qu'aucune fonctionalité ne marche tant qu'elle n'est pas monitorée.
+Aujourd'hui le monitoring à Bedrock coté Frontend se matérialise par différents outils et différentes stack.
+Je pourrais vous citer [NewRelic](https://newrelic.com/), un [Statsd](https://github.com/statsd/statsd), une stack [ELK](https://www.elastic.co/fr/what-is/elk-stack) ou bien encore [Youbora](https://youbora.nicepeopleatwork.com/) pour la vidéo.
+
+Pour vous donner un exemple très concrèt, à chaque fois qu'un utilisateur crée un compte on envoi un _Hit_ de monitoring anonyme pour incrémenter le nombre de compte.
+On a alors plus qu'à définir un dashboard qui affiche dans un graphique l'évolution du nombre de création de compte/
+Si on observe une variation trop importante, cela peut nous permettre de le détecter.
+
+![exemple de dashboard de suivi]()
+
+Le monitoring nous offre aussi des solutions pour comprendre et analyser un bug qui s'est produit dans le passé.
+Comprendre un incident, l'expliquer, en trouver sa _root cause_ sont les possibilités qui s'offrent à nous lors qu'on monitore notre application.
+Le monitoring peut également permettre de mieux communiquer avec nos clients sur les impactes d'un incident et également de communiquer sur le nombre d'utilisateurs impactés.
+
+Avec la multiplication de nos client, bien monitorer nos plateformes n'est plus suffisant.
+Trop de données, trop de dashboards à surveiller, il devient très facile de louper quelque chose.
+Nous avons donc commencer à compléter notre suivi des mesures par de l'_alerting_ automatique.
+Une fois qu'on a confiance aux mesures, on peut facilement mettre en place des alertes qui vont nous prévenir en cas de valeur incohérente.
+
+Nous essayons cependant de toujours déclencher des alertes uniquement quand celle-ci est actionnable.
+Dans d'autre termes, si une alerte sonne, nous avons quelque chose à faire.
+Faire sonner des alertes qui ne nécessitent aucune action immédiate génèrent du bruit et de la perte de temps.
+
+![alerte générale](./alerte-taxi.gif)
 
 ## Limiter, surveiller et mettre à jour ses dépendances
 
-- sans même toucher à votre projet, il périme de lui-même avec ses dépendances
-- il faut mieux parfois éviter de dependre de lib non maintenues
-- les libs de composants graphique peuvent vous aider au début, mais elle créeent des interdépendances
-- yarn audit task
-- yarn outdated et dependabot
+Ce qui périme plus vite que votre ombre dans un projet web basé sur des technologies javascript, ce sont vos dépendances.
+L'écosystème évolue rapidement et vos dépendances peuvent vite se retrouver non maintenues, plus à la mode ou bien complètement refondues avec de gros _breaking changes_.
 
-## Partager, présenter, documenter
+On essaye donc dans la mesure du possible de limiter nos dépendances et d'éviter d'en ajouter inutilement.
+Une dépendance, c'est souvent très facile à ajouter mais elle pet devenir un vrai casse-tête à enlever.
 
-- Review, et chorum important
-- Mob Review
-- Démo
-- LFT
-- Documentation et ADR
+Les libraires de composants graphiques (expemple React bootstrap, Material Design) sont un bel exemple de dépendance que nous tenons à ne pas introduire.
+Elle peuvent faciliter l'intégration dans un premier temps mais celles-ci bloquent souvent la version de votre librairie de composant par la suite.
+Vous ne voulez pas figer la version de React dans votre application pour deux composants de formulaires.
+
+La surveillance fait aussi partie de nos routines de gestion de nos dépendances.
+Depuis l'intégration de [signaler des failles de sécurité dans un package NPM](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities), il est possible de savoir si un projet intègre une dépendance qui contient une faille de sécurité connue par une simple commande.
+Nous avons donc des job journalier sur nos projet qui lancent la commande `yarn audit` afin de nous forcer à appliquer les correctifs.
+
+> La maintenance de dépendances est grandement facilité par notre stack de tests E2E qui sonnent direcement si la montée de version génère une regression.
+
+Aujourd'hui, hors failles de sécurité, nous mettons à jour nos dépendances "quand on a le temps", souvent en fin de _sprint_.
+Cela ne nous satisfait pas car certaines dépendances peuvent se retrouvées oubliées.
+J'ai personnellement l'habitude d'utiliser des outils comme [`yarn outdated`](https://classic.yarnpkg.com/en/docs/cli/outdated/) et [Dependabot](https://dependabot.com/) sur mes projets personels pour automatiser la mise à jour de mes dépendances.
+On va envisager de les inclure prochainement.
 
 ## Accepter sa dette technique
 
