@@ -368,7 +368,7 @@ Pour vous donner un exemple très concrèt, à chaque fois qu'un utilisateur cr�
 On a alors plus qu'à définir un dashboard qui affiche dans un graphique l'évolution du nombre de création de compte/
 Si on observe une variation trop importante, cela peut nous permettre de le détecter.
 
-![exemple de dashboard de suivi]()
+![exemple de dashboard de suivi](./grafana-monitoring-example.png)
 
 Le monitoring nous offre aussi des solutions pour comprendre et analyser un bug qui s'est produit dans le passé.
 Comprendre un incident, l'expliquer, en trouver sa _root cause_ sont les possibilités qui s'offrent à nous lors qu'on monitore notre application.
