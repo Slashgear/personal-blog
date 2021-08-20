@@ -17,40 +17,39 @@ _Retour d'expérience basés sur les bonnes pratiques appliquées à la platefor
 
 ## Un peu de contexte
 
-À Bedrock Streaming de nombreuses équipes développent et maintiennent différentes applications frontend pour nos clients et utilisateurs.
+À Bedrock Streaming de nombreuses équipes développent et maintiennent des applications _frontend_ pour nos clients et utilisateurs.
 Certaines de ces applications ne sont pas toute jeune.
 En effet, si on prend l'exemple de l'application sur laquelle je travaille principalement, il s'agit d'un site web dont les développements ont commencé en 2014.
-J'ai d'ailleurs déjà évoqué celle-ci dans différents articles de ce blog.
+J'ai d'ailleurs déjà évoqué celle-ci dans différents articles de [ce blog](https://slashgear.github.io/).
 
 ![impression d'écran du nombre de commit sur master de notre projet 15668](./commit-count.png)
 
 Vous pourriez vous dire: _"Oh les pauvres maintenir une application vieille de presque 10 ans ça doit être un enfer !"_
 
 Rassurez-vous, ce n'est pas le cas !
-J'ai par le passé travaillé sur des projets frontend bien moins vieux mais sur lesquelles le développement de nouvelles fonctionnalités était bien plus pénible.
+J'ai par le passé travaillé sur des projets bien moins vieux mais sur lesquelles le développement de nouvelles fonctionnalités était bien plus pénible.
 
 Aujourd'hui le projet reste à jour techniquement, on doit être sur la dernière version de React alors que celui-ci avait commencé sur une version _0.x.x_.
-Dans ce monde des technologies web souvent décrié (ex: les nombreux sur la _Javascript Fatigue_) dont les outils et les pratiques évoluent constamment, conserver un projet "à jour" reste un vrai challenge.
+Dans ce monde des technologies web souvent décrié (ex: les nombreux articles sur la _Javascript Fatigue_) dont les outils et les pratiques évoluent constamment, conserver un projet "à jour" reste un vrai challenge.
 
 ![nombre de version de l'application 1445](./releases.png)
 
-De plus, dans le contexte de ce projet spécifique, en presque 10 ans, nous avons connu une centaine de contributeurs différents.
-Certains contributeurs ne sont restés que quelques mois/années, comment ne pas perdre des infos ?
-Comment fait-on pour garder au maximum la connaissance sur "Comment on fait les choses et comment ça marche ?".
+De plus, dans le contexte de ce projet spécifique, en presque 10 ans, nous avons connu une centaine de contributeurs.
+Certains développeurs ne sont restés que quelques mois/années.
+Comment fait-on pour garder au maximum la connaissance sur "Comment on fait les choses et comment ça marche ?" dans un contexte humain si mouvant ?
 
 ![liste des 100 contributeurs du projet](./contributors.png)
 
 C'est ce que je vous propose de vous présenter dans cet article.
 Avec l'aide de mes collègues, j'ai rassemblé la liste des bonnes pratiques qui nous permettent encore aujourd'hui de maintenir ce projet en état.
-Avec [Florent Dubost](https://twitter.com/fooragnak), on s'est souvent dit qu'il serait intéressant de les lister.
-Ne serait-ce que pour le partager en interne à Bedrock.
-Quitte à en faire la liste, autant vous le partager également, en espérant que cela vous soit utile.
+Avec [Florent Dubost](https://twitter.com/fooragnak), on s'est souvent dit qu'il serait intéressant de le publier.
+On espère que cela vous soit utile.
 
 ## S'imposer des règles et les automatiser
 
 Un projet qui résiste c'est tout d'abord un ensemble de connaissances qu'on empile les unes sur les autres.
 C'est en quelque sorte la tour de Kapla que vous assembliez petit en essayant d'aller le plus haut possible.
-On essaye alors de construire des bases solides dès le début sinon on est certain qu'on ira pas très haut.
+Une base solide sur laquelle on espère pouvoir empiler le plus possible avant une potentielle chute.
 
 Dès le début d'un projet on est donc amené à prendre de décisions importantes sur "Comment on souhaite faire les choses ?".
 On pense par exemple à "Quel format pour nos fichiers ? Comment on nomme telle ou telle chose ?"
