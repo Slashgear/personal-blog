@@ -4,7 +4,6 @@ description: "Comment ne pas jeter son projet au bout de 2 ans ? Retour d'expér
 date: 2021-08-05
 hero: ./bedrock.jpg
 language: fr
-translations: ['en', 'how-not-to-trash-your-project']
 tags:
   - web
   - javascript
