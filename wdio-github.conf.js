@@ -19,4 +19,5 @@ exports.config = {
       },
     },
   ],
+  reporters: ['dot'],
 }
