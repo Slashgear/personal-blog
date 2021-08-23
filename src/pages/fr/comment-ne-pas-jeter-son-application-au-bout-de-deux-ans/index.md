@@ -1,6 +1,6 @@
 ---
 title: "Bonnes pratiques pour la maintenance d'une application web"
-description: "Comment ne pas jeter son projet au bout de 2 ans ? Retour d'expérience basés sur les bonnes pratiques appliquées à la plateforme web développée chez Bedrock Streaming."
+description: "Comment ne pas jeter son projet au bout de 2 ans ? Retour d'expérience basé sur les bonnes pratiques appliquées à la plateforme web développée chez Bedrock Streaming."
 date: 2021-08-05
 hero: ./bedrock.jpg
 language: fr
@@ -12,7 +12,7 @@ tags:
 
 > Comment ne pas jeter son application tous les deux ans ?
 
-_Retour d'expérience basés sur les bonnes pratiques appliquées à la plateforme web développée chez [Bedrock Streaming](https://www.bedrockstreaming.com/)_
+_Retour d'expérience basé sur les bonnes pratiques appliquées à la plateforme web développée chez [Bedrock Streaming](https://www.bedrockstreaming.com/)_
 
 ## Un peu de contexte
 
@@ -51,7 +51,7 @@ Un projet qui résiste au temps c'est tout d'abord un ensemble de connaissances 
 C'est en quelque sorte la tour de Kapla que vous assembliez petit en essayant d'aller le plus haut possible.
 Une base solide sur laquelle on espère pouvoir ajouter le plus possible avant une potentielle chute.
 
-Dès le début d'un projet on est donc amené à prendre de décisions importantes sur "Comment on souhaite faire les choses ?".
+Dès le début d'un projet on est donc amené à prendre des décisions importantes sur "Comment on souhaite faire les choses ?".
 On pense par exemple à "Quel format pour nos fichiers ? Comment on nomme telle ou telle chose ?"
 Écrire une documentation précise de "Comment on fait les choses" pourrait paraitre une bonne idée.
 
@@ -63,16 +63,16 @@ Nos décisions évoluent mais pas la documentation.
 > [_Olivier Mansour (deputy CTO à Bedrock)_](https://twitter.com/omansour)
 
 On trouve qu'automatiser la vérification de chacune des règles qu'on s'impose (sur notre codebase ou nos process) est bien plus pérenne.
-Pour faire simple, on évite dans la mesure du possible de dire "On devrait faire les choses comme cela", et on préfère "on va coder un truc qui le nous vérifie à notre place".
+Pour faire simple, on évite dans la mesure du possible de dire "On devrait faire les choses comme cela", et on préfère "on va coder un truc qui nous le vérifie à notre place".
 En plus de ça, coté JS on est vraiment bien équipé avec des outils comme [Eslint](https://eslint.org/) qui nous permettent d'implémenter nos propres règles.
 
 Le réflexe qu'on essaie donc d'adopter est donc le suivant:
 
 - "On devrait essayer de faire comme cela à présent !"
-- "Ok c'est intéressant, mais comment peut-on s'assurer qu'on le fasse comme cela automatiquement avec notre CI (Intégration continue) ?"
+- "Ok c'est intéressant, mais comment peut-on s'assurer qu'on fasse comme cela automatiquement avec notre CI (Intégration continue) ?"
 
 Il n'y a rien de mieux que l'intégration continue d'un projet pour ne rien louper sur chacune des _Pull Request_ qu'on est amené à proposer.
-Les reviews n'en sont que plus simple car vous n'avez plus à vous soucier de l'ensemble des règles qui sont déjà automatisées.
+Les reviews n'en sont que plus simples car vous n'avez plus à vous soucier de l'ensemble des règles qui sont déjà automatisées.
 Dans ce modèle, la review sert donc plus au partage de connaissance qu'au flicage de typo et autre non respect des conventions du projet.
 
 Dans ce principe, il faut donc essayer de bannir les règles orales.
@@ -82,19 +82,19 @@ Le temps des druides est terminé, s'il faut transmettre oralement toutes les bo
 
 Étant donné qu'un projet n'est pas quelque chose de figé, ces règles vont évoluer avec le temps.
 On préfèrera alors l'ajout de règles qui possèdent un script qui _autofixera_ toute la codebase intelligemment.
-De nombreuses règles Eslint le propose, et cela est vraiment un critère de sélection très important dans nos choix de nouvelles conventions.
+De nombreuses règles Eslint le proposent, et cela est vraiment un critère de sélection très important dans nos choix de nouvelles conventions.
 
 ```shell
 eslint --fix
 ```
 
-Un règle très stricte qui vous obligera à modifier votre code manuellement avant chaque push est pénible à la longue et énervera vos équipes.
-Alors qu'une règle (même très stricte) qui peut s'autofixer automatiquement au moment du commit ne sera pas perçu comme gênante.
+Une règle très stricte qui vous obligera à modifier votre code manuellement avant chaque push est pénible à la longue et énervera vos équipes.
+Alors qu'une règle (même très stricte) qui peut s'autofixer automatiquement au moment du commit ne sera pas perçue comme gênante.
 
 **Comment décider d'ajouter de nouvelles règles ?**
 
 Cette question peut paraitre épineuse, prenons par exemple le cas des `<tab>` / `<space>` dans les fichiers.
-Pour cela, on essaye d'éviter des débats sempiternel et on se plie à la tendance et aux règles de la communauté.
+Pour cela, on essaie d'éviter les débats sempiternels et on se plie à la tendance et aux règles de la communauté.
 Par exemple, [notre base de configuration Eslint](https://github.com/M6Web/eslint-tools)) est basée sur celle d'Airbnb qui semble avoir un certain succès dans la communauté JS.
 Mais si la règle qu'on souhaite s'imposer n'est pas disponible dans Eslint ou d'autres outils, il nous arrive de préférer ne pas suivre la règle plutôt que de se dire "On le fait sans CI qui vérifie".
 
@@ -106,21 +106,21 @@ Mais si la règle qu'on souhaite s'imposer n'est pas disponible dans Eslint ou d
   Nous avons opensourcé [notre propre configuration](https://github.com/M6Web/eslint-tools), si jamais celle-ci peut vous être utile.
 - On utilise un [nommage de commit bien spécifique](https://www.conventionalcommits.org/en/v1.0.0/) pour générer nos changelog.
   Pour s'assurer que les devs le respectent, une simple étape de notre CI le vérifie.
-- On ne souhaite pas qu'un dev fasse grossir énormément nos bundles JS en production, c'est pourquoi nous suivont et mesuront leur taille dans la CI.
-  On utilise un outil maison mais on peut vous recommander l'outils [BuildTracker](https://buildtracker.dev/).
-- La couverture de tests n'est pas un indicateur pour l'équipe, toutes les lignes n'ont pas la même nécessité pour nous d'être testée.
+- On ne souhaite pas qu'un dev fasse grossir énormément nos bundles JS en production, c'est pourquoi nous suivons et mesurons leur taille dans la CI.
+  On utilise un outil maison mais on peut vous recommander l'outil [BuildTracker](https://buildtracker.dev/).
+- La couverture de tests n'est pas un indicateur pour l'équipe, toutes les lignes n'ont pas la même nécessité pour nous d'être testées.
   Certaines équipes à Bedrock suivent cependant cet indicateur qui a au moins l'intérêt de donner une tendance.
 - Nos tests unitaires tournent bien évidemment sur la CI, ceux-ci doivent passer.
 - Nos tests fonctionnels (End to end: E2E) tournent sur Chrome Headless, ils doivent être au vert.
-- Les logs de nos tests E2E sont récupérés est parsés afin d'éviter l'introduction d'erreur ou de React warning (Le script de parsing est cependant compliqué à maintenir)
-- Les tests fonctionnels fonctionnent dans une _sandbox_ ou tout le réseau est proxyfié.
-  Nous surveillons que nos tests ne dépendent pas d'une API non moquée qui pourrait ralentir leur execution.
-- Durant les tests E2E nous vérifions qu'aucune requête d'image n'a généré une 404.
+- Les logs de nos tests E2E sont récupérés et parsés afin d'éviter l'introduction d'erreur ou de React warning (Le script de parsing est cependant compliqué à maintenir)
+- Les tests fonctionnels fonctionnent dans une _sandbox_ où tout le réseau est proxyfié.
+  Nous surveillons que nos tests ne dépendent pas d'une API non moquée qui pourrait ralentir leur exécution.
+- Durant les tests E2E nous vérifions qu'aucune requête d'image n'a générée une 404.
 - On réalise quelques [vérifications d'accessibilité avec Axe](https://www.deque.com/axe/) durant nos tests E2E.
 - On vérifie quelques règles sur le CSS avec [Stylelint](https://stylelint.io/) et [bemlinter](https://github.com/M6Web/bemlinter) (on utilise plus BEM aujourd'hui mais il reste encore un peu de style géré en SCSS qu'on migre petit à petit en StyledComponent)
-- Le projet est un monorepo sur lequel nous essayons de maintenir les mêmes version de dépendances pour chaque package.
+- Le projet est un monorepo sur lequel nous essayons de maintenir les mêmes versions de dépendances pour chaque package.
   Pour cela nous avons développé un outil qui permet de faire cette vérification _[monorepo-dependencies-check](https://www.npmjs.com/package/monorepo-dependencies-check)_
-- On vérifie que le notre fichier `yarn.lock` n'a pas été modifié par inadvertance ou bien qu'il a été bien mis à jour par rapport aux modifications du `package.json`.
+- On vérifie que notre fichier `yarn.lock` n'a pas été modifié par inadvertance ou bien qu'il a été bien mis à jour par rapport aux modifications du `package.json`.
 - [Terraform](https://www.terraform.io/) est utilisé pour la gestion de nos ressources cloud, nous vérifions que le format des fichiers est correct.
 
 ## Tester, tester et tester
@@ -196,7 +196,7 @@ Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'
   Dans une logique _TDD_, ils permettent d'avancer sur le développement sans avoir à cliquer pendant des heures.
 - Ces tests nous ont permis de ne pas casser l'ancienne version du site qui est toujours en production pour quelques clients alors que nos efforts se concentrent sur la nouvelle.
 - Ils nous apportent une vraie confiance
-- Grâce notre libraire [_superagent-mock_](https://www.npmjs.com/package/superagent-mock), nous pouvons _fixturer_ (bouchonner, mocker) toutes les API dont on dépend et ainsi même vérifier les cas d'erreurs.
+- Grâce notre librairie [_superagent-mock_](https://www.npmjs.com/package/superagent-mock), nous pouvons _fixturer_ (bouchonner, mocker) toutes les API dont on dépend et ainsi même vérifier les cas d'erreurs.
   De plus, mocker la couche XHR du navigateur permet une amélioration significative du temps d'exécution des tests. 🚀
 - Ils nous donne accès à des usages étendus comme :
   - vérification de règles d'accessibilité
@@ -218,13 +218,13 @@ Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'
   Ces temps importants coutent également de l'argent, il faut en effet bien faire tourner ces tests sur des machines.
   Pour information, l'infrastructure du site web (à lui seul, juste l'hébergement de nos servers Node + fichiers statiques + CDN) coutent bien moins cher que notre intégration continue.
   Cela fait bien évidemment sourire nos Ops ! 😊
-- Les nouvelles recrues de nos équipes ont souvent jamais réalisés ce genre de tests, il y a donc une phase ~~de galère~~ d'apprentissage..
+- Les nouvelles recrues de nos équipes n'ont souvent jamais réalisé ce genre de tests, il y a donc une phase ~~de galère~~ d'apprentissage..
 - Certaines fonctionnalités sont parfois trop compliquées à tester avec notre stack E2E (par exemple, les parcours de paiement qui dépendent de tiers).
   Il nous arrive alors de nous rabattre sur d'autres techniques avec Jest notamment en ayant un scope moins unitaire.
 
 ### Nos tests "unitaires"
 
-Pour compléter nos tests fonctionnels nous avons également une stack de tests écris avec [Jest].
+Pour compléter nos tests fonctionnels nous avons également une stack de tests écrits avec [Jest].
 On qualifie ces tests d'unitaires car nous avons comme principe d'essayer de toujours tester nos modules JS en indépendance des autres.
 
 _Ne débattons pas ici sur "Est-ce que ce sont des vrais tests unitaires ?", suffisamment d'articles sur internet traitent de ce sujet._
@@ -300,7 +300,7 @@ Pour simplifier certaines étapes, il a été mis en place du _feature flipping_
 
 **Comment ça marche ?**
 
-Dans notre config il y a une _map_ clé/valeur qui liste toutes les fonctionnalités de l'application associée à leur status d'activation.
+Dans notre config il y a une _map_ clé/valeur qui liste toutes les fonctionnalités de l'application associées à leur statut d'activation.
 
 ```js
 const featureFlipping = {
