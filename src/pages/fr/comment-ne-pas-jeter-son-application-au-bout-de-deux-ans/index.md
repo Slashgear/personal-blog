@@ -16,34 +16,34 @@ _Retour d'expérience basé sur les bonnes pratiques appliquées à la plateform
 
 ## Un peu de contexte
 
-À Bedrock Streaming de nombreuses équipes développent et maintiennent des applications _frontend_ pour nos clients et utilisateurs.
-Certaines de ces applications ne sont pas toute jeune.
-En effet, si on prend l'exemple de l'application sur laquelle je travaille principalement, il s'agit d'un site web dont les développements ont commencé en 2014.
-J'ai d'ailleurs déjà évoqué celle-ci dans différents articles de [ce blog](https://slashgear.github.io/).
+Chez Bedrock Streaming de nombreuses équipes développent et maintiennent des applications _frontend_ pour nos clients et utilisateurs.
+Certaines ne sont pas toute jeune.
+En effet, l'application sur laquelle je travaille principalement est un site web dont les développements ont commencé en 2014.
+Je l'ai d'ailleurs déjà évoquée dans différents articles de [ce blog](https://slashgear.github.io/).
 
 ![impression d'écran du nombre de commit sur master de notre projet 15668](./commit-count.png)
 
 Vous pourriez vous dire: _"Oh les pauvres maintenir une application vieille de presque 10 ans ça doit être un enfer !"_
 
 Rassurez-vous, ce n'est pas le cas !
-J'ai par le passé travaillé sur des projets bien moins vieux mais sur lesquels le développement de nouvelles fonctionnalités était bien plus pénible.
+J'ai travaillé sur des projets bien moins vieux mais sur lesquels le développement de nouvelles fonctionnalités était bien plus pénible.
 
 Aujourd'hui le projet reste à jour techniquement, on doit être sur la dernière version de React alors que celui-ci avait commencé sur une version _0.x.x_.
 Dans ce monde des technologies web souvent décrié (ex: les nombreux articles sur la _Javascript Fatigue_) dont les outils et les pratiques évoluent constamment, conserver un projet "à jour" reste un vrai challenge.
 
-![nombre de version de l'application 1445](./releases.png)
+![nombre de versions de l'application 1445](./releases.png)
 
-De plus, dans le contexte de ce projet spécifique, en presque 10 ans, nous avons connu une centaine de contributeurs.
-Certains développeurs ne sont restés que quelques mois/années.
-Comment fait-on pour garder au maximum la connaissance sur "Comment on fait les choses et comment ça marche ?" dans un contexte humain si mouvant ?
+De plus, dans le contexte de ce projet, en presque 10 ans, nous avons connu une centaine de contributeurs.
+Certains ne sont restés que quelques mois/années.
+Comment garder au maximum la connaissance sur "Comment on fait les choses et comment ça marche ?" dans un contexte humain si mouvant ?
 
 ![liste des 100 contributeurs du projet](./contributors.png)
 
-C'est ce que je vous propose de vous présenter dans cet article.
+C'est ce que je vous propose de vous présenter.
 
 Avec l'aide de mes collègues, j'ai rassemblé la liste des bonnes pratiques qui nous permettent encore aujourd'hui de maintenir ce projet en état.
-Avec [Florent Dubost](https://twitter.com/fooragnak), on s'est souvent dit qu'il serait intéressant de le publier.
-On espère que cela vous sera utile.
+Avec [Florent Dubost](https://twitter.com/fooragnak), on s'est souvent dit qu'il serait intéressant de la publier.
+Nous espèrons que cela vous sera utile.
 
 ## S'imposer des règles et les automatiser
 
@@ -62,7 +62,7 @@ Nos décisions évoluent mais pas la documentation.
 >
 > [_Olivier Mansour (deputy CTO à Bedrock)_](https://twitter.com/omansour)
 
-On trouve qu'automatiser la vérification de chacune des règles qu'on s'impose (sur notre codebase ou nos process) est bien plus pérenne.
+Automatiser la vérification de chacune des règles qu'on s'impose (sur notre codebase ou nos process) est bien plus pérenne.
 Pour faire simple, on évite dans la mesure du possible de dire "On devrait faire les choses comme cela", et on préfère "on va coder un truc qui nous le vérifie à notre place".
 En plus de ça, coté JS on est vraiment bien équipé avec des outils comme [Eslint](https://eslint.org/) qui nous permettent d'implémenter nos propres règles.
 
@@ -71,7 +71,7 @@ Le réflexe qu'on essaie donc d'adopter est donc le suivant:
 - "On devrait essayer de faire comme cela à présent !"
 - "Ok c'est intéressant, mais comment peut-on s'assurer qu'on fasse comme cela automatiquement avec notre CI (Intégration continue) ?"
 
-Il n'y a rien de mieux que l'intégration continue d'un projet pour ne rien louper sur chacune des _Pull Request_ qu'on est amené à proposer.
+L'intégration continue d'un projet est la solution parfaite pour ne rien louper sur chacune des _Pull Request_ que nous proposons.
 Les reviews n'en sont que plus simples car vous n'avez plus à vous soucier de l'ensemble des règles qui sont déjà automatisées.
 Dans ce modèle, la review sert donc plus au partage de connaissance qu'au flicage de typo et autre non respect des conventions du projet.
 
@@ -80,7 +80,7 @@ Le temps des druides est terminé, s'il faut transmettre oralement toutes les bo
 
 ![la recette de la potion magique de panoramix est perdue car secrète](./panoramix.gif)
 
-Étant donné qu'un projet n'est pas quelque chose de figé, ces règles vont évoluer avec le temps.
+Un projet n'est pas figé. Ces règles évoluent donc avec le temps.
 On préfèrera alors l'ajout de règles qui possèdent un script qui _autofixera_ toute la codebase intelligemment.
 De nombreuses règles Eslint le proposent, et cela est vraiment un critère de sélection très important dans nos choix de nouvelles conventions.
 
@@ -104,7 +104,7 @@ Mais si la règle qu'on souhaite s'imposer n'est pas disponible dans Eslint ou d
 
 - Le format des fichiers est suivi géré par [Editorconfig](https://editorconfig.org/), [prettier](https://prettier.io/) et [Eslint](https://eslint.org/).
   Nous avons opensourcé [notre propre configuration](https://github.com/M6Web/eslint-tools), si jamais celle-ci peut vous être utile.
-- On utilise un [nommage de commit bien spécifique](https://www.conventionalcommits.org/en/v1.0.0/) pour générer nos changelog.
+- Nous utilisons un [nommage de commit bien spécifique](https://www.conventionalcommits.org/en/v1.0.0/) pour générer nos changelog.
   Pour s'assurer que les devs le respectent, une simple étape de notre CI le vérifie.
 - On ne souhaite pas qu'un dev fasse grossir énormément nos bundles JS en production, c'est pourquoi nous suivons et mesurons leur taille dans la CI.
   On utilise un outil maison mais on peut vous recommander l'outil [BuildTracker](https://buildtracker.dev/).
@@ -148,7 +148,7 @@ On les appelle "tests fonctionels", ce sont des tests End-to-end (E2E) sur une s
 Il s'agit d'une stack technique mise en place au début du projet (à l'époque avec [PhantomJS](https://phantomjs.org/) pour les plus anciens d'entre-vous)
 
 Cette stack nous permet d'automatiser le pilotage de tests qui contrôlent un navigateur.
-Ce navigateur va réaliser des actions qui se rapprochent le plus de celles que nos vrais utilisateurs peuvent réaliser tout en vérifiant comment le site réagit.
+Ce navigateur va réaliser des actions qui se rapprochent le plus de celles que nos vrais utilisateurs peuvent faire tout en vérifiant comment le site réagit.
 
 Il y a quelques années, cette stack technique était plutôt compliquée à mettre en place, mais aujourd'hui il est plutôt simple de le faire.
 [Le site qui héberge cet article de blog](https://github.com/Slashgear/slashgear.github.io) en est lui-même la preuve.
@@ -180,7 +180,7 @@ Et ça donne ça en local avec mon navigateur Chrome !
 
 ![Exemple d'exécution de test fonctionnel](./e2e-example.gif)
 
-Voilà un petit schéma qui explique un peu comment cette stack fonctionne:
+Voilà un schéma qui explique comment cette stack fonctionne:
 
 ![schéma qui explique le fonctionnement de notre stack](./e2e-archi.png)
 
@@ -233,8 +233,8 @@ On utilise ces tests pour différentes raisons qui couvrent des besoins que nos 
 
 - nous aider à développer nos modules JS avec des pratiques TDD.
 - documenter et décrire comment fonctionne un module JS.
-- tester des cas limites qui sont très/trop compliqués à tester avec nos tests E2E.
-- faciliter le refactoring de notre application en nous montrant les impactes techniques de nos modifications.
+- tester des cas limites très/trop compliqués à tester avec nos tests E2E.
+- faciliter le refactoring de notre application en nous montrant les impacts techniques de nos modifications.
 
 Avec ces tests, on se met au niveau d'une fonction utilitaire, d'une action Redux, d'un reducer, d'un composant React.
 On se base essentiellement sur [la fonctionnalité d'`automock` de Jest](https://slashgear.github.io/discover-jest-hidden-feature-automock/) qui nous propose d'isoler nos modules JS lorsqu'on teste.
