@@ -114,16 +114,16 @@ Mais si la règle qu'on souhaite s'imposer n'est pas disponible dans Eslint ou d
 - Nos tests fonctionnels (End to end: E2E) tournent sur Chrome Headless, ils doivent être au vert.
 - Les logs de nos tests E2E sont récupérés et parsés afin d'éviter l'introduction d'erreur ou de React warning (Le script de parsing est cependant compliqué à maintenir)
 - Les tests fonctionnels fonctionnent dans une _sandbox_ où tout le réseau est proxyfié.
-  Nous surveillons que nos tests ne dépendent pas d'une API non moquée qui pourrait ralentir leur exécution.
-- Durant les tests E2E nous vérifions qu'aucune requête d'image n'a générée une 404.
+  Nous surveillons que nos tests ne dépendent pas d'une API non mockée qui pourrait ralentir leur exécution.
+- Durant les tests E2E nous vérifions qu'aucune requête d'image n'a généré une 404.
 - On réalise quelques [vérifications d'accessibilité avec Axe](https://www.deque.com/axe/) durant nos tests E2E.
-- On vérifie quelques règles sur le CSS avec [Stylelint](https://stylelint.io/) et [bemlinter](https://github.com/M6Web/bemlinter) (on utilise plus BEM aujourd'hui mais il reste encore un peu de style géré en SCSS qu'on migre petit à petit en StyledComponent)
+- On vérifie quelques règles sur le CSS avec [Stylelint](https://stylelint.io/) et [bemlinter](https://github.com/M6Web/bemlinter) (on n'utilise plus BEM aujourd'hui mais il reste encore un peu de style géré en SCSS qu'on migre petit à petit en StyledComponent)
 - Le projet est un monorepo sur lequel nous essayons de maintenir les mêmes versions de dépendances pour chaque package.
   Pour cela nous avons développé un outil qui permet de faire cette vérification _[monorepo-dependencies-check](https://www.npmjs.com/package/monorepo-dependencies-check)_
 - On vérifie que notre fichier `yarn.lock` n'a pas été modifié par inadvertance ou bien qu'il a été bien mis à jour par rapport aux modifications du `package.json`.
 - [Terraform](https://www.terraform.io/) est utilisé pour la gestion de nos ressources cloud, nous vérifions que le format des fichiers est correct.
 
-## Tester, tester et tester
+## Tester, tester, tester
 
 J'espère qu'en 2021 il n'est plus nécessaire d'expliquer pourquoi tester automatiquement son application est indispensable pour la rendre pérenne.
 En JS on est plutôt bien équipé en terme d'outils pour tester aujourd'hui.
@@ -189,7 +189,7 @@ Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'
 
 👍 Les points positifs
 
-- WebdriverIO nous permet également de lancer de manière journalière ces mêmes tests sur des vrais device en passant par le service [Browserstack](https://www.browserstack.com/).
+- WebdriverIO nous permet également de lancer de manière journalière ces mêmes tests sur des vrais devices en passant par le service [Browserstack](https://www.browserstack.com/).
   On a donc tous les jours un _job_ qui s'assure que notre site fonctionne correctement sur un Chrome dernière version sur Windows 10 et Safari MacOs.
 - Ces tests nous permettent de facilement documenter les fonctionnalités de l'application grâce au langage Gherkin.
 - Ils nous permettent de reproduire des cas qui sont loin d'être nominaux.
@@ -285,7 +285,7 @@ _C'est en écrivant ces lignes que je me dis que ces principes pourraient très 
 
 > "La seconde évolution d'une fonctionnalité est très souvent sa suppression."
 
-Par principe, nous souhaitons faire en sorte que chaque nouvelle fonctionnalitée de l'application ne base pas son activation sur le simple fait d'être dans la codebase.
+Par principe, nous souhaitons faire en sorte que chaque nouvelle fonctionnalité de l'application ne base pas son activation sur le simple fait d'être dans la codebase.
 Classiquement, le cycle de vie d'une "feature" dans un projet peut être le suivant (dans un [Github Flow](https://guides.github.com/introduction/flow/)):
 
 - une personne implémente sur une branche
@@ -395,9 +395,9 @@ Ce qui périme plus vite que votre ombre dans un projet web basé sur des techno
 L'écosystème évolue rapidement et vos dépendances peuvent vite se retrouver non maintenues, plus à la mode ou bien complètement refondues avec de gros _breaking changes_.
 
 On essaye donc dans la mesure du possible de limiter nos dépendances et d'éviter d'en ajouter inutilement.
-Une dépendance, c'est souvent très facile à ajouter mais elle pet devenir un vrai casse-tête à enlever.
+Une dépendance, c'est souvent très facile à ajouter mais elle peut devenir un vrai casse-tête à enlever.
 
-Les libraires de composants graphiques (expemple React bootstrap, Material Design) sont un bel exemple de dépendance que nous tenons à ne pas introduire.
+Les libraires de composants graphiques (exemple React bootstrap, Material Design) sont un bel exemple de dépendance que nous tenons à ne pas introduire.
 Elle peuvent faciliter l'intégration dans un premier temps mais celles-ci bloquent souvent la version de votre librairie de composant par la suite.
 Vous ne voulez pas figer la version de React dans votre application pour deux composants de formulaires.
 
@@ -408,7 +408,7 @@ Nous avons donc des job journalier sur nos projet qui lancent la commande `yarn 
 > La maintenance de dépendances est grandement facilité par notre stack de tests E2E qui sonnent direcement si la montée de version génère une regression.
 
 Aujourd'hui, hors failles de sécurité, nous mettons à jour nos dépendances "quand on a le temps", souvent en fin de _sprint_.
-Cela ne nous satisfait pas car certaines dépendances peuvent se retrouvées oubliées.
+Cela ne nous satisfait pas car certaines dépendances peuvent se retrouver oubliées.
 J'ai personnellement l'habitude d'utiliser des outils comme [`yarn outdated`](https://classic.yarnpkg.com/en/docs/cli/outdated/) et [Dependabot](https://dependabot.com/) sur mes projets personels pour automatiser la mise à jour de mes dépendances.
 On va envisager de les inclure prochainement.
 
