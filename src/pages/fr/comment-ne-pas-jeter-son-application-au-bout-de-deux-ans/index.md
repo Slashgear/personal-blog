@@ -26,7 +26,7 @@ J'ai d'ailleurs déjà évoqué celle-ci dans différents articles de [ce blog](
 Vous pourriez vous dire: _"Oh les pauvres maintenir une application vieille de presque 10 ans ça doit être un enfer !"_
 
 Rassurez-vous, ce n'est pas le cas !
-J'ai par le passé travaillé sur des projets bien moins vieux mais sur lesquelles le développement de nouvelles fonctionnalités était bien plus pénible.
+J'ai par le passé travaillé sur des projets bien moins vieux mais sur lesquels le développement de nouvelles fonctionnalités était bien plus pénible.
 
 Aujourd'hui le projet reste à jour techniquement, on doit être sur la dernière version de React alors que celui-ci avait commencé sur une version _0.x.x_.
 Dans ce monde des technologies web souvent décrié (ex: les nombreux articles sur la _Javascript Fatigue_) dont les outils et les pratiques évoluent constamment, conserver un projet "à jour" reste un vrai challenge.
