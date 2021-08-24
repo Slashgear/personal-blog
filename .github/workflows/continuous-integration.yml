@@ -47,32 +47,3 @@ jobs:
           BRANCH: master
           FOLDER: public
           CLEAN: true
-  Macos:
-    name: 'Macos 🍎'
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Gatsby cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            **/public
-            **/.cache
-          key: ${{ runner.os }}-gatsby
-      - name: Yarn cache
-        uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-      - run: yarn install
-        name: Install dependencies
-      - run: yarn build
-        name: Build Gatsby output
-      - run: yarn serve&
-        name: Start server
-      - run: yarn wdio run ./wdio-github.conf.js
-        name: Running E2E tests
