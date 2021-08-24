@@ -3,7 +3,7 @@ exports.config = {
   user: process.env.BROWSER_STACK_USER,
   key: process.env.BROWSER_STACK_KEY,
   updateJob: false,
-  exclude: ['./features/rss.feature'],
+  exclude: ['./features/rss.feature', './features/theme-switcher.feature'],
   maxInstances: 10,
   commonCapabilities: {
     build: process.env.BROWSER_BUILD,
@@ -20,6 +20,12 @@ exports.config = {
       os_version: '11.0',
       browserName: 'android',
       realMobile: 'true',
+    },
+    {
+      browser: 'edge',
+      browser_version: 'latest',
+      os: 'Windows',
+      os_version: '10',
     },
     {
       browser: 'Firefox',
