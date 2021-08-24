@@ -23,7 +23,6 @@ exports.config = {
     },
     {
       browser: 'firefox',
-      browser_version: 'latest',
       os: 'Windows',
       os_version: '10',
     },
@@ -47,7 +46,6 @@ exports.config = {
     },
     {
       browser: 'firefox',
-      browser_version: 'latest',
       os: 'OS X',
       os_version: 'Big Sur',
     },
