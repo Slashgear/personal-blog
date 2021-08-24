@@ -3,7 +3,7 @@ exports.config = {
   user: process.env.BROWSER_STACK_USER,
   key: process.env.BROWSER_STACK_KEY,
   updateJob: false,
-  exclude: [],
+  exclude: ['./features/rss.feature'],
   maxInstances: 10,
   commonCapabilities: {
     build: process.env.BROWSER_BUILD,
@@ -29,12 +29,6 @@ exports.config = {
     },
     {
       browser: 'chrome',
-      browser_version: 'latest',
-      os: 'Windows',
-      os_version: '10',
-    },
-    {
-      browser: 'edge',
       browser_version: 'latest',
       os: 'Windows',
       os_version: '10',
