@@ -10,6 +10,13 @@ exports.config = {
   },
   capabilities: [
     {
+      browser: 'iPad',
+      device: 'iPad Pro 11 2021',
+      os_version: '14',
+      browserName: 'ios',
+      realMobile: 'true',
+    },
+    {
       device: 'Iphone 11',
       os_version: '14',
       browserName: 'ios',
@@ -17,6 +24,24 @@ exports.config = {
     },
     {
       device: 'Samsung Galaxy S21 Ultra',
+      os_version: '11.0',
+      browserName: 'android',
+      realMobile: 'true',
+    },
+    {
+      device: 'Samsung Galaxy Tab S7',
+      os_version: '10.0',
+      browserName: 'android',
+      realMobile: 'true',
+    },
+    {
+      device: 'Google Pixel 5',
+      os_version: '11.0',
+      browserName: 'android',
+      realMobile: 'true',
+    },
+    {
+      device: 'OnePlus 9',
       os_version: '11.0',
       browserName: 'android',
       realMobile: 'true',
