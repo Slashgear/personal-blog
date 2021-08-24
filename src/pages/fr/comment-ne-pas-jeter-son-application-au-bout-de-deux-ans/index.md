@@ -120,7 +120,7 @@ Mais si la règle qu'on souhaite s'imposer n'est pas disponible dans Eslint ou d
 - On vérifie quelques règles sur le CSS avec [Stylelint](https://stylelint.io/) et [bemlinter](https://github.com/M6Web/bemlinter) (on n'utilise plus BEM aujourd'hui mais il reste encore un peu de style géré en SCSS qu'on migre petit à petit en StyledComponent)
 - Le projet est un monorepo sur lequel nous essayons de maintenir les mêmes versions de dépendances pour chaque package.
   Pour cela nous avons développé un outil qui permet de faire cette vérification _[monorepo-dependencies-check](https://www.npmjs.com/package/monorepo-dependencies-check)_
-- On vérifie que notre fichier `yarn.lock` n'a pas été modifié par inadvertance ou bien qu'il a été bien mis à jour par rapport aux modifications du `package.json`.
+- On vérifie que notre fichier `yarn.lock` n'a pas été modifié par inadvertance ou bien qu'il a été mis à jour par rapport aux modifications du `package.json`.
 - [Terraform](https://www.terraform.io/) est utilisé pour la gestion de nos ressources cloud, nous vérifions que le format des fichiers est correct.
 
 ## Tester, tester, tester
@@ -209,10 +209,10 @@ Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'
 - Maintenir cette stack est compliqué et coûteux.
   Étant donné que peu de ressources sont publiées sur ce domaine, on se retrouve parfois à devoir creuser pendant plusieurs jours pour les réparer 😅.
   Il nous arrive de nous sentir parfois bien seul à avoir ces soucis.
-- Il est très facile de coder un test E2E dit _flaky_ (ie: un test qui peut échouer aléatoirement), ils font perdre du temps.
+- Il est très facile de coder un test E2E dit _flaky_ (ie: un test qui peut échouer aléatoirement).
   Ils nous font croire que quelque chose est cassé.
   Ils nous prennent parfois du temps à les stabiliser.
-  Il reste cependant **bien meilleur de ne pas conserver un test qui ne vous donnera pas un résultat stable.**
+  Il reste cependant **bien meilleur de supprimer un test qui ne vous donnera pas un résultat stable.**
 - Faire tourner tous les tests prend un temps important sur notre intégration continue.
   Il faut régulièrement travailler sur leur optimisation pour que le feedback qu'ils vous apportent soit le plus rapide possible.
   Ces temps importants coutent également de l'argent, il faut en effet bien faire tourner ces tests sur des machines.
@@ -291,7 +291,7 @@ Classiquement, le cycle de vie d'une "feature" dans un projet peut être le suiv
 - une personne implémente sur une branche
 - la fonctionnalité est _mergée_ sur master
 - elle est déployée en production
-- vie sa vie de fonctionnalité (avec parfois des bugs et des correctifs)
+- vis sa vie de fonctionnalité (avec parfois des bugs et des correctifs)
 - la fonctionnalité n'est plus nécessaire
 - une personne détricote le code et l'enlève
 - nouveau déploiement
@@ -310,7 +310,7 @@ const featureFlipping = {
 ```
 
 Dans notre code, nous avons donc implémenté des traitements conditionnels qui disent "Si cette feature est activée alors...".
-Cela peut changer le rendu d'un composant, changer l'implémentation d'une action Redux ou bien désactivr une route de notre _react-router_.
+Cela peut changer le rendu d'un composant, changer l'implémentation d'une action Redux ou bien désactiver une route de notre _react-router_.
 
 **Mais à quoi ça sert ?**
 
@@ -324,14 +324,15 @@ Cela peut changer le rendu d'un composant, changer l'implémentation d'une actio
   En cas d'incident, on peut désactiver des fonctionnalités qui sont dégradées.
 
 Pour vous donner un exemple plus concret, entre 2018 et 2020 nous avons complètement refondu l'interface de l'application.
-C'est évolution graphique n'était qu'une clé de featureFlipping.
+Cette évolution graphique n'était qu'une clé de featureFlipping.
 La refonte graphique n'a donc pas été la remise à zéro du projet, on continue encore aujourd'hui de vivre avec les deux versions (tant que la bascule de tous nos clients n'est pas terminée).
 
 ![screenshot comparatif v4 / v5 sur 6play](./compare-v4-v5.jpg)
 
 ### L'A/B testing
 
-Grâce au super travail des équipes backend et data, on a pu même étendre l'usage du _feature flipping_ en rendant cette configuration modifiable pour des sous groupes utilsateurs.
+Grâce au super travail des équipes backend et data, on a pu même étendre l'usage du _feature flipping_ en rendant cette configuration modifiable pour des sous groupes d'utilsateurs.
+``` ?
 Cela permet de déployer des nouvelles fonctionnalités sur une portion plus réduite des utilisateurs afin de comparer nos [KPI].
 
 Prise de décision, amélioration des performances techniques ou produit, expérimentations, les possibilités sont nombreuses et nous les exploitons de plus en plus.
@@ -343,7 +344,7 @@ Prise de décision, amélioration des performances techniques ou produit, expér
 Nous avions régulièrement le besoin d'activer des feature à des heures ~~très~~ trop matinales dans le futur.
 Pour cela nous devions être connecté à une heure précise sur notre poste pour modifier la configuration à chaud.
 
-Afin d'éviter d'oublier de le faire, ou de le faire en retard, nous avons fait en sorte qu'une clé de configuration puisse être activée à partir d'une certaines date.
+Afin d'éviter d'oublier de le faire, ou de le faire en retard, nous avons fait en sorte qu'une clé de configuration puisse être activée à partir d'une certaine date.
 Pour cela, nous avons fait évoluer notre _selector redux_ qui indiquait si une feature était activée pour qu'il puisse gérer des formats de date et les comparer à l'heure courante.
 
 ```js
@@ -364,24 +365,24 @@ Il faut également de la visibilité sur ce qui marche en production.
 
 > "Comment sais-tu que l'application que tu as en production en ce moment même fonctionne comme prévu ?"
 
-On part du principe qu'aucune fonctionalité ne marche tant qu'elle n'est pas monitorée.
-Aujourd'hui le monitoring à Bedrock coté Frontend se matérialise par différents outils et différentes stack.
+On part du principe qu'aucune fonctionnalité ne marche tant qu'elle n'est pas monitorée.
+Aujourd'hui le monitoring à Bedrock coté Frontend se matérialise par différents outils et différentes stacks.
 Je pourrais vous citer [NewRelic](https://newrelic.com/), un [Statsd](https://github.com/statsd/statsd), une stack [ELK](https://www.elastic.co/fr/what-is/elk-stack) ou bien encore [Youbora](https://youbora.nicepeopleatwork.com/) pour la vidéo.
 
 Pour vous donner un exemple, à chaque fois qu'un utilisateur commence une session de navigation on envoie un _Hit_ de monitoring anonyme pour incrémenter un compteur dans Statsd.
 On a alors plus qu'à définir un dashboard qui affiche dans un graphique l'évolution de ce nombre.
-Si on observe une variation trop importante, cela peut nous permettre de le détecter.
+Si on observe une variation trop importante, cela peut nous permettre de détecter un incident.
 
 ![exemple de dashboard de suivi](./grafana-monitoring-example.png)
 
 Le monitoring nous offre aussi des solutions pour comprendre et analyser un bug qui s'est produit dans le passé.
 Comprendre un incident, l'expliquer, en trouver sa _root cause_ sont les possibilités qui s'offrent à vous si vous monitorez votre application.
-Le monitoring peut également permettre de mieux communiquer avec les clients sur les impactes d'un incident et également d'estimer le nombre d'utilisateurs impactés.
+Le monitoring peut également permettre de mieux communiquer avec les clients sur les impacts d'un incident et également d'estimer le nombre d'utilisateurs impactés.
 
-Avec la multiplication de nos client, bien monitorer nos plateformes n'est plus suffisant.
+Avec la multiplication de nos clients, bien monitorer nos plateformes n'est plus suffisant.
 Trop de données, trop de dashboards à surveiller, il devient très facile de louper quelque chose.
 Nous avons donc commencé à compléter notre suivi des mesures par de l'_alerting_ automatique.
-Une fois qu'on a confiance aux mesures, on peut facilement mettre en place des alertes qui vont nous prévenir en cas de valeur incohérente.
+Une fois que les mesures nous apportent suffisamment de confiance, on peut facilement mettre en place des alertes qui vont nous prévenir en cas de valeur incohérente.
 
 Nous essayons cependant de toujours déclencher des alertes uniquement quand celle-ci est actionnable.
 Dans d'autres termes, si une alerte sonne, nous avons quelque chose à faire.
@@ -398,19 +399,18 @@ On essaye donc dans la mesure du possible de limiter nos dépendances et d'évit
 Une dépendance, c'est souvent très facile à ajouter mais elle peut devenir un vrai casse-tête à enlever.
 
 Les libraires de composants graphiques (exemple React bootstrap, Material Design) sont un bel exemple de dépendance que nous tenons à ne pas introduire.
-Elle peuvent faciliter l'intégration dans un premier temps mais celles-ci bloquent souvent la version de votre librairie de composant par la suite.
+Elles peuvent faciliter l'intégration dans un premier temps mais celles-ci bloquent souvent la version de votre librairie de composant par la suite.
 Vous ne voulez pas figer la version de React dans votre application pour deux composants de formulaires.
 
 La surveillance fait aussi partie de nos routines de gestion de nos dépendances.
-Depuis l'intégration de [signaler des failles de sécurité dans un package NPM](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities), il est possible de savoir si un projet intègre une dépendance qui contient une faille de sécurité connue par une simple commande.
-Nous avons donc des job journalier sur nos projet qui lancent la commande `yarn audit` afin de nous forcer à appliquer les correctifs.
+Depuis l'ajout du [signalement de failles de sécurité dans un package NPM](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities), il est possible de savoir si un projet intègre une dépendance qui contient une faille de sécurité connue par une simple commande.
+Nous avons donc des jobs journaliers sur nos projets qui lancent la commande `yarn audit` afin de nous forcer à appliquer les correctifs.
 
 > La maintenance de dépendances est grandement facilité par notre stack de tests E2E qui sonnent direcement si la montée de version génère une regression.
 
 Aujourd'hui, hors failles de sécurité, nous mettons à jour nos dépendances "quand on a le temps", souvent en fin de _sprint_.
 Cela ne nous satisfait pas car certaines dépendances peuvent se retrouver oubliées.
 J'ai personnellement l'habitude d'utiliser des outils comme [`yarn outdated`](https://classic.yarnpkg.com/en/docs/cli/outdated/) et [Dependabot](https://dependabot.com/) sur mes projets personels pour automatiser la mise à jour de mes dépendances.
-On va envisager de les inclure prochainement.
 
 ## Accepter sa dette technique
 
@@ -427,17 +427,17 @@ Parfois nous avons décidé ces changements mais parfois nous les avons subi (un
 ![ça tiendra !](./leak.gif)
 
 Nous essayons de prioriser nos sujets de _refactoring_ sur les parties de l'application sur lequel on a le plus de souci, le plus de peine.
-On considère qu'une partie de l'application qui nous plaît pas mais sur laquelle on n'a pas besoin de travailler (apporter des évolution) ne mérite pas qu'on la refactor.
+On considère qu'une partie de l'application qui ne nous plaît pas mais sur laquelle on n'a pas besoin de travailler (apporter des évolutions) ne mérite pas qu'on la refactorise.
 
 Je pourrais vous citer de nombreuses fonctionnalités de notre application qui n'ont pas évolué fonctionnellement depuis plusieurs années.
 Mais comme nous avons couvert ces fonctionnalités de tests E2E depuis le début, nous n'avons pas vraiment eu à y retoucher.
 
-Comme dit plus haut, la prochaine évolution d'un bon de code est parfois sa désactivation.
+Comme dit plus haut, la prochaine évolution d'une feature de code est parfois sa désactivation.
 Alors pourquoi passez son temps à ré-écrire toute l'application ?
 
 - Le code devient dans tous les cas du "legacy".
 - Tant que les fonctionnalités sont testées, rien ne nous oblige à tout refactorer en permanence pour que toute notre codebase soit _state of art_.
-- On se focus sur nos _pain point_, on refactor ce qu'on a vraiment besoin de faire évoluer.
+- On se focalise sur nos _pain points_, on re-factorise ce qu'on a vraiment besoin de faire évoluer.
 
 ## Pour résumer
 
