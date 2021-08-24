@@ -6,3 +6,4 @@ public
 .cache/
 yarn.lock
 schema.graphql
+wdio-local.conf.js

@@ -3,12 +3,19 @@ exports.config = {
   user: process.env.BROWSER_STACK_USER,
   key: process.env.BROWSER_STACK_KEY,
   updateJob: false,
-  exclude: [],
+  exclude: ['./features/rss.feature', './features/theme-switcher.feature'],
   maxInstances: 10,
   commonCapabilities: {
     build: process.env.BROWSER_BUILD,
   },
   capabilities: [
+    {
+      browser: 'iPad',
+      device: 'iPad Pro 11 2021',
+      os_version: '14',
+      browserName: 'ios',
+      realMobile: 'true',
+    },
     {
       device: 'Iphone 11',
       os_version: '14',
@@ -22,19 +29,37 @@ exports.config = {
       realMobile: 'true',
     },
     {
-      browser: 'firefox',
+      device: 'Samsung Galaxy Tab S7',
+      os_version: '10.0',
+      browserName: 'android',
+      realMobile: 'true',
+    },
+    {
+      device: 'Google Pixel 5',
+      os_version: '11.0',
+      browserName: 'android',
+      realMobile: 'true',
+    },
+    {
+      device: 'OnePlus 9',
+      os_version: '11.0',
+      browserName: 'android',
+      realMobile: 'true',
+    },
+    {
+      browser: 'edge',
+      browser_version: 'latest',
+      os: 'Windows',
+      os_version: '10',
+    },
+    {
+      browser: 'Firefox',
       browser_version: 'latest',
       os: 'Windows',
       os_version: '10',
     },
     {
       browser: 'chrome',
-      browser_version: 'latest',
-      os: 'Windows',
-      os_version: '10',
-    },
-    {
-      browser: 'edge',
       browser_version: 'latest',
       os: 'Windows',
       os_version: '10',
@@ -52,7 +77,7 @@ exports.config = {
       os_version: 'Big Sur',
     },
     {
-      browser: 'firefox',
+      browser: 'Firefox',
       browser_version: 'latest',
       os: 'OS X',
       os_version: 'Big Sur',

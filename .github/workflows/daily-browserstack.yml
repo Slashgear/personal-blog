@@ -29,7 +29,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Running E2E tests
+      - name: Running Browserstacks tests
         env:
           BROWSER_BUILD: browserstack-${{ steps.date.outputs.date }}
+          BROWSER_STACK_USER: ${{secrets.BROWSER_STACK_USER}}
+          BROWSER_STACK_KEY: ${{secrets.BROWSER_STACK_KEY}}
         run: yarn wdio run ./wdio-browserstack.conf.js
