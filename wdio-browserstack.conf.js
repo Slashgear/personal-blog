@@ -22,7 +22,8 @@ exports.config = {
       realMobile: 'true',
     },
     {
-      browser: 'firefox',
+      browser: 'Firefox',
+      browser_version: 'latest',
       os: 'Windows',
       os_version: '10',
     },
@@ -45,7 +46,8 @@ exports.config = {
       os_version: 'Big Sur',
     },
     {
-      browser: 'firefox',
+      browser: 'Firefox',
+      browser_version: 'latest',
       os: 'OS X',
       os_version: 'Big Sur',
     },
