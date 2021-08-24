@@ -43,7 +43,7 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@wdio/cli": "^7.9.0",
+    "@wdio/cli": "^7.10.1",
     "@wdio/cucumber-framework": "^7.9.0",
     "@wdio/dot-reporter": "^7.10.0",
     "@wdio/local-runner": "^7.9.0",
