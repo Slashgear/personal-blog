@@ -332,7 +332,7 @@ La refonte graphique n'a donc pas été la remise à zéro du projet, on continu
 ### L'A/B testing
 
 Grâce au super travail des équipes backend et data, on a pu même étendre l'usage du _feature flipping_ en rendant cette configuration modifiable pour des sous groupes d'utilisateurs.
-``` ?
+
 Cela permet de déployer des nouvelles fonctionnalités sur une portion plus réduite des utilisateurs afin de comparer nos [KPI].
 
 Prise de décision, amélioration des performances techniques ou produit, expérimentations, les possibilités sont nombreuses et nous les exploitons de plus en plus.
