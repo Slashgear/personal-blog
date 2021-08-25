@@ -165,7 +165,7 @@ Feature: Playground
     Given I use "playground" test context
 
   Scenario: Check if playground is reachable
-    When As user "cytron@m6.fr" I visit the "playground" page
+    When As user "toto@toto.fr" I visit the "playground" page
     And I click on "playground trigger"
     Then I should see a "visible playground"
     And I should see 4 "playground tab" in "playground"
@@ -189,13 +189,13 @@ Ils nous assurent que nous n'introduisons pas de régression fonctionnelle et c'
 
 👍 Les points positifs
 
-- WebdriverIO nous permet également de lancer de manière journalière ces mêmes tests sur des vrais devices en passant par le service [Browserstack](https://www.browserstack.com/).
-  On a donc tous les jours un _job_ qui s'assure que notre site fonctionne correctement sur un Chrome dernière version sur Windows 10 et Safari MacOs.
+- WebdriverIO nous permet également de lancer de manière journalière ces mêmes tests sur des vrais devices en passant par le service payant SAAS [Browserstack](https://www.browserstack.com/).
+  On a donc tous les jours un _job_ qui s'assure que notre site fonctionne correctement sur un Chrome dernière version sur Windows 10 et Safari sur MacOs.
 - Ces tests nous permettent de facilement documenter les fonctionnalités de l'application grâce au langage Gherkin.
 - Ils nous permettent de reproduire des cas qui sont loin d'être nominaux.
   Dans une logique _TDD_, ils permettent d'avancer sur le développement sans avoir à cliquer pendant des heures.
 - Ces tests nous ont permis de ne pas casser l'ancienne version du site qui est toujours en production pour quelques clients alors que nos efforts se concentrent sur la nouvelle.
-- Ils nous apportent une vraie confiance
+- Ils nous apportent une vraie confiance.
 - Grâce notre librairie [_superagent-mock_](https://www.npmjs.com/package/superagent-mock), nous pouvons _fixturer_ (bouchonner, mocker) toutes les API dont on dépend et ainsi même vérifier les cas d'erreurs.
   De plus, mocker la couche XHR du navigateur permet une amélioration significative du temps d'exécution des tests. 🚀
 - Ils nous donne accès à des usages étendus comme :
@@ -264,7 +264,7 @@ Aujourd'hui ce sont plus de 6000 tests unitaires qui couvrent l'application et p
   Pour cela, il a été mis en place une deuxième stack de tests [Jest] nommé "test d'intégration" ou l'`automock` est désactivé.
 - L'abus de [_Snapshot_](https://jestjs.io/docs/snapshot-testing) est dangereux pour la santé.
   L'usage du _"Snapshot testing"_ peut faire gagner du temps sur l'implémentation de vos tests mais peuvent en réduire la qualité.
-  Avec un object de 50 lignes en _Snapshot_ n'est pas lisible à la review
+  Avoir à review un object de 50 lignes en _Snapshot_ est ni facile, ni pertinent.
 - Avec la dépréciation d'[EnzymeJS], nous sommes contraints de migrer sur [React Testing Library].
   Il est bien évidemment possible de tester unitairement des composants avec cette nouvelle librairie.
   Malheureusement, ce n'est pas vraiment l'esprit et la façon de faire.
@@ -272,9 +272,9 @@ Aujourd'hui ce sont plus de 6000 tests unitaires qui couvrent l'application et p
 
 ### Nos principes
 
-Nous essayons de toujours respecter les règles suivantes lors qu'on se pose la question "Dois-je ajouter des tests ?".
+Nous essayons de toujours respecter les règles suivantes lorsqu'on se pose la question "Dois-je ajouter des tests ?".
 
-1. Si notre _Pull Request_ introduit des nouvelles fonctionnalités utilisateurs, il faut intégrer des scenario de test E2E.
+1. Si notre _Pull Request_ introduit des nouvelles fonctionnalités utilisateurs, il faut intégrer des scenarios de test E2E.
    Des tests unitaires avec Jest peuvent les compléter / remplacer en fonction.
 2. Si notre _Pull Request_ a pour but de corriger un bug, cela signifie qu'il nous manque un cas de test.
    On doit donc essayer de rajouter un test E2E ou à défaut un test unitaire.
@@ -331,7 +331,7 @@ La refonte graphique n'a donc pas été la remise à zéro du projet, on continu
 
 ### L'A/B testing
 
-Grâce au super travail des équipes backend et data, on a pu même étendre l'usage du _feature flipping_ en rendant cette configuration modifiable pour des sous groupes d'utilsateurs.
+Grâce au super travail des équipes backend et data, on a pu même étendre l'usage du _feature flipping_ en rendant cette configuration modifiable pour des sous groupes d'utilisateurs.
 ``` ?
 Cela permet de déployer des nouvelles fonctionnalités sur une portion plus réduite des utilisateurs afin de comparer nos [KPI].
 
@@ -398,7 +398,7 @@ L'écosystème évolue rapidement et vos dépendances peuvent vite se retrouver 
 On essaye donc dans la mesure du possible de limiter nos dépendances et d'éviter d'en ajouter inutilement.
 Une dépendance, c'est souvent très facile à ajouter mais elle peut devenir un vrai casse-tête à enlever.
 
-Les libraires de composants graphiques (exemple React bootstrap, Material Design) sont un bel exemple de dépendance que nous tenons à ne pas introduire.
+Les librairies de composants graphiques (exemple React bootstrap, Material Design) sont un bel exemple de dépendance que nous tenons à ne pas introduire.
 Elles peuvent faciliter l'intégration dans un premier temps mais celles-ci bloquent souvent la version de votre librairie de composant par la suite.
 Vous ne voulez pas figer la version de React dans votre application pour deux composants de formulaires.
 
