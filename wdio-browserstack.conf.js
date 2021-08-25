@@ -7,6 +7,7 @@ exports.config = {
   maxInstances: 10,
   commonCapabilities: {
     build: process.env.BROWSER_BUILD,
+    project: 'blog',
   },
   capabilities: [
     {
