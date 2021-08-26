@@ -433,7 +433,7 @@ Je pourrais vous citer de nombreuses fonctionnalités de notre application qui n
 Mais comme nous avons couvert ces fonctionnalités de tests E2E depuis le début, nous n'avons pas vraiment eu à y retoucher.
 
 Comme dit plus haut, la prochaine évolution d'une feature de code est parfois sa désactivation.
-Alors pourquoi passez son temps à ré-écrire toute l'application ?
+Alors pourquoi passer son temps à ré-écrire toute l'application ?
 
 - Le code devient dans tous les cas du "legacy".
 - Tant que les fonctionnalités sont testées, rien ne nous oblige à tout refactorer en permanence pour que toute notre codebase soit _state of art_.
