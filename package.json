@@ -6,7 +6,7 @@
   "author": "Antoine Caron <antoine395.caron@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^3.10.2",
+    "gatsby": "^3.12.1",
     "gatsby-image": "^3.10.0",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
     "gatsby-plugin-canonical-urls": "^3.10.0",
