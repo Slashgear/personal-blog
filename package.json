@@ -21,7 +21,7 @@
     "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-remark-autolink-headers": "^4.7.0",
     "gatsby-remark-copy-linked-files": "^4.7.0",
-    "gatsby-remark-images": "^5.7.0",
+    "gatsby-remark-images": "^5.10.0",
     "gatsby-remark-prismjs": "^5.7.0",
     "gatsby-remark-responsive-iframe": "^4.7.0",
     "gatsby-remark-smartypants": "^4.7.0",
