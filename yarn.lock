@@ -6570,16 +6570,16 @@ gatsby-plugin-google-analytics@^3.10.0:
     minimatch "3.0.4"
     web-vitals "^1.1.2"
 
-gatsby-plugin-manifest@^3.10.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.12.0.tgz#6f9aa76489d84f3b71c88e29da209d8d497a9203"
-  integrity sha512-zEOgYi5sm+5SnElm5EGUkXfCUvyTAn8shWclVASNxGIHGexg2Lzuu90ZLaC8cXCuMwJ7keVIRZvivvBoDleIJQ==
+gatsby-plugin-manifest@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.13.0.tgz#ad7c207239a8295ae0dffaee9e4a13b7845b7987"
+  integrity sha512-izBaVUUnOId7IlX7nDjgnFqxx2insGbm4r+CwlmyjF5slETdvxifERPX8ng+WAscbh3qvJ/vlgLlbbjjfvJe9w==
   dependencies:
     "@babel/runtime" "^7.14.8"
-    gatsby-core-utils "^2.12.0"
-    gatsby-plugin-utils "^1.12.0"
+    gatsby-core-utils "^2.13.0"
+    gatsby-plugin-utils "^1.13.0"
     semver "^7.3.5"
-    sharp "^0.28.3"
+    sharp "^0.29.0"
 
 gatsby-plugin-offline@^4.13.0:
   version "4.13.0"
