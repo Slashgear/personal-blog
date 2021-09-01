@@ -16,7 +16,7 @@
     "gatsby-plugin-offline": "^4.13.0",
     "gatsby-plugin-react-helmet": "^4.10.0",
     "gatsby-plugin-sharp": "^3.13.0",
-    "gatsby-plugin-styled-components": "^4.10.0",
+    "gatsby-plugin-styled-components": "^4.13.0",
     "gatsby-plugin-typography": "^3.13.0",
     "gatsby-plugin-use-dark-mode": "^1.1.2",
     "gatsby-remark-autolink-headers": "^4.7.0",
