@@ -6970,10 +6970,10 @@ gatsby-plugin-typescript@^3.12.0:
     "@babel/runtime" "^7.14.8"
     babel-plugin-remove-graphql-queries "^3.12.0"
 
-gatsby-plugin-typography@^3.10.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-3.12.0.tgz#4ff5165e63b62ef663262f669bd473df8569d028"
-  integrity sha512-QqY3C/CZ/rhSWUHbVfUrrwJboOue5UGvpX9zs3sBCla6Ij8LwA6IjRPxgu+2dAoPOpu6VrxSTrkOfvYILERV1w==
+gatsby-plugin-typography@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-3.13.0.tgz#ac66ed37ad1948d3c83f2cbd1bf2aaefca52101e"
+  integrity sha512-sIo8HtEtFp79H59Ydc0BU6ReQ5IhQUCYvApZ1K3Z1efXWVkJ6Se2jJAntk3brstrkSQQAt9Ena5O+HBvZsBkJw==
   dependencies:
     "@babel/runtime" "^7.14.8"
 
@@ -7174,10 +7174,10 @@ gatsby-telemetry@^2.12.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-transformer-json@^3.10.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-3.12.0.tgz#852485952df0c5e9727c648b76151f2c3ed2e28e"
-  integrity sha512-8YXp2xLGAm/k1kOAT10V4siaQX+Qd24vSLwcSPf0iiMwAmkOIZ0nGUSf34aP4muVz+eueBE2YyL8UCurML0yyw==
+gatsby-transformer-json@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-3.13.0.tgz#022625af17cd4f424fa021431325b72841691068"
+  integrity sha512-yfZoMq83nzaxyRTsOSeSlTTKMmK8CffpjA4XTACScc3acpTOMV9dTuDlBV81Yttw6wkrxf53b6CCWYzGPnpLew==
   dependencies:
     "@babel/runtime" "^7.14.8"
     bluebird "^3.7.2"
