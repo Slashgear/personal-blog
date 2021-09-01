@@ -4,6 +4,8 @@ description: "Comment ne pas jeter son projet au bout de 2 ans ? Retour d'expér
 date: 2021-08-25
 hero: ./bedrock.jpg
 language: fr
+translations:
+  ['en', 'how-not-to-throw-away-your-web-application-after-two-years']
 tags:
   - web
   - javascript
