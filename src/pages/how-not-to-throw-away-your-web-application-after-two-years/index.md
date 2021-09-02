@@ -18,7 +18,7 @@ Feedback based on best practices applied to the web platform developed at _[Bedr
 ## A bit of context
 
 At Bedrock Streaming many teams develop and maintain _frontend_ applications for our customers and users.
-Some of them are not very young.
+Some of those application are not very young.
 In fact, the application I'm mainly working on is a website whose developments started in 2014.
 I have already mentioned it in different articles of [this blog](https://slashgear.github.io/).
 
@@ -83,7 +83,7 @@ The time of the druids is over, if all the good practices of a project have to b
 
 A project is not set in stone. These rules evolve with time.
 It is therefore preferable to add rules that have a script that will _autofix_ the whole codebase intelligently.
-Many Eslint rules offer this, and it is a very important selection criterion when choosing new conventions.
+Many Eslint rules offer this, and it is a very important selection criteria when choosing new conventions.
 
 ```shell
 eslint --fix
