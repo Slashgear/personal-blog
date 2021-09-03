@@ -6,31 +6,36 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Logo = styled(Img)`
   flex-shrink: 0;
+  display: none !important;
+
+  @media screen and (min-width: 1024px) {
+    display: inline-block !important;
+  }
 `
 
 const TextWrapper = styled.div`
   flex-grow: 1;
   margin-right: 1rem;
+  padding-left: 0.2rem;
 `
 
 const Blocquote = styled.blockquote`
   border: none;
+  margin: 0;
 `
 
 const Link = styled(OutboundLink)`
   display: flex;
   color: var(--textNormal);
   box-shadow: none;
+  transition: all 300ms ease-in;
+  background: linear-gradient(to right, transparent 50%, #ea684c 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
 
   &:hover,
   &:focus {
-    ${Logo} {
-      filter: drop-shadow(5px 5px 3px var(--textNormal));
-    }
-
-    ${TextWrapper} {
-      text-decoration: underline;
-    }
+    background-position: right bottom;
   }
 `
 
