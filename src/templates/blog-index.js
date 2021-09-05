@@ -10,6 +10,7 @@ import { rhythm } from '../utils/typography'
 import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
 import { Fundation } from '../components/fundation/fundation.component'
+import { OtherLanguage } from '../components/lang/otherLanguage.component'
 
 class BlogIndex extends React.Component {
   render() {
@@ -27,13 +28,17 @@ class BlogIndex extends React.Component {
           meta={[{ name: 'description', content: description }]}
           title={siteTitle}
         />
+
         <ListMarkup
           posts={posts}
           siteUrl={this.props.data.site.siteMetadata.siteUrl}
         />
+
         <Bio>
           <div dangerouslySetInnerHTML={{ __html: bio }} />
         </Bio>
+
+        <OtherLanguage language={lang} />
 
         <Fundation lang={lang} />
 
