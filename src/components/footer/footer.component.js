@@ -14,10 +14,11 @@ const SOCIAL_LINKS = {
   LinkedIn: 'https://www.linkedin.com/in/antoine-caron-7089788a',
   DevTo: 'https://dev.to/slashgear_',
   Medium: 'https://medium.com/@Slashgear_',
+  HackerNoon: 'https://hackernoon.com/u/antoinecaron',
 }
 
-export const Footer = () => (
-  <FooterWrapper>
+export const Footer = ({ className }) => (
+  <FooterWrapper className={className}>
     <div>
       {Object.keys(SOCIAL_LINKS)
         .map((key) => (

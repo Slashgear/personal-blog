@@ -13,6 +13,7 @@ import { AvailableLanguages } from '../components/lang/availableLanguages.compon
 import { EditOnGithubComponent } from '../components/editOnGithub.component'
 import { PostMarkup } from '../components/markup/post.markup'
 import { Fundation } from '../components/fundation/fundation.component'
+import { Footer } from '../components/footer/footer.component'
 
 const PostContent = styled.div`
   margin-top: 2rem;
@@ -20,6 +21,10 @@ const PostContent = styled.div`
 
 const RelatedPost = styled.div`
   margin-left: 1rem;
+`
+
+const SocialFooter = styled(Footer)`
+  margin: 3rem;
 `
 
 export default function BlogPostTemplate({
@@ -109,6 +114,8 @@ export default function BlogPostTemplate({
       <Bio>
         <div dangerouslySetInnerHTML={{ __html: siteBio }} />
       </Bio>
+
+      <SocialFooter />
 
       <Fundation lang={post.frontmatter.language} />
 
