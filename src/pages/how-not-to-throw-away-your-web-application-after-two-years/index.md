@@ -1,6 +1,6 @@
 ---
 title: 'Best practices for Web application maintenance'
-description: "How not to throw away your project after 2 years? Feedback based on best practices applied to the web platform developed at Bedrock Streaming."
+description: 'How not to throw away your project after 2 years? Feedback based on best practices applied to the web platform developed at Bedrock Streaming.'
 date: 2021-09-05
 hero: ../fr/comment-ne-pas-jeter-son-application-au-bout-de-deux-ans/bedrock.jpg
 language: en

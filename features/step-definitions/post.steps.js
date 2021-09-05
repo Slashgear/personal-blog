@@ -23,7 +23,7 @@ When(/^I click on lang switcher link$/, async () => {
 })
 
 Then(/^I should be on (.+) post page$/, async (page) => {
-  await browser.waitUntil(async () => (await browser.getUrl()).includes(page))
+  expect(browser).toHaveUrlContaining(page)
 })
 
 Then(/^I should see a table of content$/, async () => {

@@ -9,7 +9,7 @@ import { Layout } from '../components/layout.component'
 import { rhythm } from '../utils/typography'
 import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
-import { Fundation } from '../components/fundation/fundation.component'
+import { Foundation } from '../components/foundation/foundation.component'
 import { OtherLanguage } from '../components/lang/otherLanguage.component'
 
 class BlogIndex extends React.Component {
@@ -40,7 +40,7 @@ class BlogIndex extends React.Component {
 
         <OtherLanguage language={lang} />
 
-        <Fundation lang={lang} />
+        <Foundation lang={lang} />
 
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug

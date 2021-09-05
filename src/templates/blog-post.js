@@ -12,7 +12,7 @@ import GlobalMarkup from '../components/markup/global.markup'
 import { AvailableLanguages } from '../components/lang/availableLanguages.component'
 import { EditOnGithubComponent } from '../components/editOnGithub.component'
 import { PostMarkup } from '../components/markup/post.markup'
-import { Fundation } from '../components/fundation/fundation.component'
+import { Foundation } from '../components/foundation/foundation.component'
 import { Footer } from '../components/footer/footer.component'
 
 const PostContent = styled.div`
@@ -117,7 +117,7 @@ export default function BlogPostTemplate({
 
       <SocialFooter />
 
-      <Fundation lang={post.frontmatter.language} />
+      <Foundation lang={post.frontmatter.language} />
 
       {data.relatedPosts.edges.length ? (
         <aside>

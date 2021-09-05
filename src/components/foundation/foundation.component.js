@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Logo = styled(Img)`
   flex-shrink: 0;
@@ -24,7 +23,7 @@ const Blocquote = styled.blockquote`
   margin: 0;
 `
 
-const Link = styled(OutboundLink)`
+const StyledLink = styled(Link)`
   display: flex;
   color: var(--textNormal);
   box-shadow: none;
@@ -52,7 +51,7 @@ const textByLang = {
   },
 }
 
-export const Fundation = ({ lang = 'en' }) => {
+export const Foundation = ({ lang = 'en' }) => {
   const logo = useStaticQuery(graphql`
     {
       img: file(
@@ -69,11 +68,9 @@ export const Fundation = ({ lang = 'en' }) => {
   `)
 
   return (
-    <Link
+    <StyledLink
       id="foundation"
-      target="_blank"
-      rel="noreferrer"
-      href="https://www.fondation-abbe-pierre.fr/"
+      to={`${lang === 'en' ? '' : '/fr'}/abbe-pierre`}
     >
       <TextWrapper>
         {textByLang[lang].text}
@@ -84,6 +81,6 @@ export const Fundation = ({ lang = 'en' }) => {
         fixed={logo.img.childImageSharp.fixed}
         alt="logo de la fondation abbé pierre"
       />
-    </Link>
+    </StyledLink>
   )
 }
