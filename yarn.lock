@@ -1125,13 +1125,13 @@
     commander "8.0.0"
     source-map-support "0.5.19"
 
-"@cucumber/gherkin@20.0.1", "@cucumber/gherkin@^20.0.0":
-  version "20.0.1"
-  resolved "https://registry.yarnpkg.com/@cucumber/gherkin/-/gherkin-20.0.1.tgz#a47715e605f0d61aae0014267573d4cec331db23"
-  integrity sha512-1vXZETZYF3A9egC+N1EIeMobLQQ6VcQoGQ0NvHhkZ/NYXjJB+rPwMbZmhnDfqexhzJbWlA2CVNKc+VHrUobyyg==
+"@cucumber/gherkin@21.0.0":
+  version "21.0.0"
+  resolved "https://registry.yarnpkg.com/@cucumber/gherkin/-/gherkin-21.0.0.tgz#990ecd7e6b080ef801de8fbae1d9c6adf310f17b"
+  integrity sha512-S6YFmTg56iEn563ReePL6Sygb77vwYrGHEr7NwuLIgg20Hi1pp7P80BAYVYNRgU7nK9vG2II9O6kaZbiOXF/5g==
   dependencies:
     "@cucumber/message-streams" "^3.0.0"
-    "@cucumber/messages" "^17.0.1"
+    "@cucumber/messages" "^17.1.0"
 
 "@cucumber/gherkin@^19.0.1", "@cucumber/gherkin@^19.0.3":
   version "19.0.3"
@@ -1140,6 +1140,14 @@
   dependencies:
     "@cucumber/message-streams" "^2.0.0"
     "@cucumber/messages" "^16.0.1"
+
+"@cucumber/gherkin@^20.0.0":
+  version "20.0.1"
+  resolved "https://registry.yarnpkg.com/@cucumber/gherkin/-/gherkin-20.0.1.tgz#a47715e605f0d61aae0014267573d4cec331db23"
+  integrity sha512-1vXZETZYF3A9egC+N1EIeMobLQQ6VcQoGQ0NvHhkZ/NYXjJB+rPwMbZmhnDfqexhzJbWlA2CVNKc+VHrUobyyg==
+  dependencies:
+    "@cucumber/message-streams" "^3.0.0"
+    "@cucumber/messages" "^17.0.1"
 
 "@cucumber/html-formatter@^15.0.2":
   version "15.0.2"
@@ -1164,10 +1172,10 @@
   dependencies:
     "@cucumber/messages" "^17.0.0"
 
-"@cucumber/messages@17.0.1", "@cucumber/messages@^17.0.0", "@cucumber/messages@^17.0.1":
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-17.0.1.tgz#664dbac9584f73733c1fd1684d050415fc1d69d2"
-  integrity sha512-cr07vBdiUnGgG3p2bUYhKswTwmk6yY62Fu/+Azvnd/eHar266+SkEs1UyO342ZXK56IyBtEE7T0X3Zn3V74q8A==
+"@cucumber/messages@17.1.0", "@cucumber/messages@^17.0.0", "@cucumber/messages@^17.0.1", "@cucumber/messages@^17.1.0":
+  version "17.1.0"
+  resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-17.1.0.tgz#bcc7386eed3e1c8bbae490a2140e3ceb68a154d7"
+  integrity sha512-OA1uQDX16PjOpeTmMvAiCSjJbomgHYJ4HTVuekF4M8Ykh6mK+5oKn6uZaJTZ/xblEDKGqCfHalrg9yg8/nW41g==
   dependencies:
     "@types/uuid" "8.3.1"
     class-transformer "0.4.0"
@@ -2502,21 +2510,21 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
-"@wdio/cucumber-framework@^7.11.0":
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.11.0.tgz#48ab1014210e198e6f7a61d0c232584eab69b6bd"
-  integrity sha512-jhV+BnbxNR3zpWVExdiBDjkciBG3pShvtJBoHhCaK4pSlyWezWpkP0HDzYErcl4+YhKzI4mzJXnICtMRqObesQ==
+"@wdio/cucumber-framework@^7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.12.5.tgz#d8263738e272f7197cba13f51f18bc4d62924205"
+  integrity sha512-vfYjue/hCvZB2+li1hRvi8fACn74pN/nWp50tFiiznsGEljEHUPbMLzQuwQ1ZnNVk4u0OO82P7kwjDFhfJ69ig==
   dependencies:
     "@cucumber/cucumber" "7.3.1"
-    "@cucumber/gherkin" "20.0.1"
+    "@cucumber/gherkin" "21.0.0"
     "@cucumber/gherkin-streams" "^3.0.0"
-    "@cucumber/messages" "17.0.1"
+    "@cucumber/messages" "17.1.0"
     "@types/is-glob" "^4.0.1"
     "@types/long" "^4.0.1"
     "@types/mockery" "^1.4.29"
     "@wdio/logger" "7.7.0"
-    "@wdio/types" "7.10.1"
-    "@wdio/utils" "7.11.0"
+    "@wdio/types" "7.12.5"
+    "@wdio/utils" "7.12.5"
     expect-webdriverio "^3.0.0"
     glob "^7.1.2"
     is-glob "^4.0.0"
@@ -2631,14 +2639,13 @@
     "@types/node" "^15.12.5"
     got "^11.8.1"
 
-"@wdio/utils@7.11.0":
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.11.0.tgz#29ea610b4e99275f85b49bc0cfe778de567c3433"
-  integrity sha512-0n5mZha2QktV0181nMhw+IQ8MgYrqyvVDjP20P7JEnl6hehSkyXTAYQcYuKaw5AAVqipV3Eh96JBi5CnhpsoKQ==
+"@wdio/types@7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.12.5.tgz#769d8f2ac2afa280fc955dac59ced8439717e5b7"
+  integrity sha512-xgxT3JTTLkCmrZ0IqQz0+/DEog98a3viCWwi2MoFZavfENd2QCPzDc7hk2nSoKQQqtJECwBBwWvR9GMzIo2N3Q==
   dependencies:
-    "@wdio/logger" "7.7.0"
-    "@wdio/types" "7.10.1"
-    p-iteration "^1.1.8"
+    "@types/node" "^15.12.5"
+    got "^11.8.1"
 
 "@wdio/utils@7.12.4":
   version "7.12.4"
@@ -2647,6 +2654,15 @@
   dependencies:
     "@wdio/logger" "7.7.0"
     "@wdio/types" "7.10.1"
+    p-iteration "^1.1.8"
+
+"@wdio/utils@7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.12.5.tgz#2f536f7c0e5bea3b311b169357cae6fe8c688e02"
+  integrity sha512-j2bkGHGYvFHYy4/JLRvBpNQH2hgneKquuRQlVj0D44E2Ldp9P2DZT2wZ01lC4qtHItjic40YFZry9Dc/PFKwew==
+  dependencies:
+    "@wdio/logger" "7.7.0"
+    "@wdio/types" "7.12.5"
     p-iteration "^1.1.8"
 
 "@webassemblyjs/ast@1.11.1":
