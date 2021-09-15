@@ -212,3 +212,9 @@ De beaux exemples et des conseils avisés pour se protéger des menaces.
 De nouveau une conférence de Romuald qui aborde d'autres sujets.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zx_nff-hHRE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 🇫🇷 Géopolitique de la données [(Benjamin Bayart)](https://twitter.com/bayartb)
+
+Parlons géopolitique, gouvernance, cloud souverain.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7VnJ_NiiHas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
