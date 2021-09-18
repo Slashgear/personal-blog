@@ -2,15 +2,39 @@ import React from 'react'
 import { rhythm } from '../utils/typography'
 import { Helmet } from 'react-helmet/es/Helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import coverImage from '../assets/conferences/conference.jpg'
+import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 const title = `Conferences`
 const description = `You can find here all the conferences I gave to different events.`
 
+const Cover = styled(Img)`
+  margin-bottom: 1rem;
+`
+
 const Conferences = () => {
   const {
+    site,
+    img,
     allConferencesJson: { edges: conferences },
   } = useStaticQuery(graphql`
     {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+      img: file(
+        relativePath: { eq: "conferences/conference.jpg" }
+        sourceInstanceName: { eq: "static_images" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
       allConferencesJson(sort: { fields: event___date, order: DESC }) {
         edges {
           node {
@@ -62,6 +86,14 @@ const Conferences = () => {
             content: description,
           },
           {
+            property: 'og:image',
+            content: site.siteMetadata.siteUrl + coverImage,
+          },
+          {
+            name: 'twitter:image',
+            content: site.siteMetadata.siteUrl + coverImage,
+          },
+          {
             property: `og:title`,
             content: title,
           },
@@ -96,6 +128,13 @@ const Conferences = () => {
         ]}
       />
       <h1 style={{ color: 'var(--header)' }}>Conferences</h1>
+
+      <Cover
+        loading="lazy"
+        fadeIn
+        fluid={img.childImageSharp.fluid}
+        alt="Conference room photography"
+      />
 
       {conferences.map((conference) => (
         <article key={conference.node.id} className="conference">
