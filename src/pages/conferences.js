@@ -17,6 +17,7 @@ const Conferences = () => {
   const {
     site,
     img,
+    conferenceImg,
     allConferencesJson: { edges: conferences },
   } = useStaticQuery(graphql`
     {
@@ -35,23 +36,40 @@ const Conferences = () => {
           }
         }
       }
-      allConferencesJson(sort: { fields: event___date, order: DESC }) {
+      conferenceImg: allFile(
+        filter: { relativeDirectory: { in: "conferences" } }
+      ) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+            name
+          }
+        }
+      }
+      allConferencesJson {
         edges {
           node {
             id
             title
-            speakers {
+            imageName
+            description
+            events {
+              name
+              date
+              site
+              link
+              video
+            }
+            cospeakers {
               name
               site
             }
             lang
-            link
-            iframe
-            event {
-              date
-              name
-              site
-            }
           }
         }
       }
@@ -138,28 +156,48 @@ const Conferences = () => {
 
       {conferences.map((conference) => (
         <article key={conference.node.id} className="conference">
-          <h2>
-            <a href={conference.node.link}>{conference.node.title}</a>
-            <a href={conference.node.event.site}>
-              {' '}
-              - {conference.node.event.name}
-            </a>
-          </h2>
+          <h2>{conference.node.title}</h2>
 
-          <p>
-            {new Date(conference.node.event.date).toLocaleDateString()}
-            {conference.node.speakers ? ' with the help of ' : null}
-            {conference.node.speakers
-              ? conference.node.speakers.map((speaker) => (
-                  <a href={speaker.site}>{speaker.name}</a>
-                ))
-              : null}
-          </p>
-          {conference.node.iframe ? (
-            <div
-              dangerouslySetInnerHTML={{ __html: conference.node.iframe }}
-            ></div>
+          <p>{conference.node.description}</p>
+
+          {conference.node.cospeakers ? (
+            <p>
+              With co-speaker help of{' '}
+              {conference.node.cospeakers.map((speaker) => (
+                <a href={speaker.site}>{speaker.name}</a>
+              ))}
+            </p>
           ) : null}
+
+          <Img
+            loading="lazy"
+            fadeIn
+            fluid={
+              conferenceImg.edges.find(
+                ({ node }) => node.name === conference.node.imageName
+              ).node.childImageSharp.fluid
+            }
+            alt={conference.node.title}
+          />
+
+          <ul>
+            {conference.node.events.map((event) => {
+              return (
+                <li>
+                  <a href={event.link}>
+                    <h3>
+                      {event.name} on{' '}
+                      {new Date(event.date).toLocaleDateString()}
+                    </h3>
+                  </a>
+
+                  {event.video ? (
+                    <a href={event.video}>Video recording</a>
+                  ) : null}
+                </li>
+              )
+            })}
+          </ul>
         </article>
       ))}
     </div>
