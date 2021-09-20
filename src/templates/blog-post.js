@@ -29,13 +29,11 @@ const SocialFooter = styled(Footer)`
 
 export default function BlogPostTemplate({
   data,
-  pageContext: { previous, next, slug, language },
+  pageContext: { slug, language },
   location,
 }) {
   const post = data.markdownRemark
-  const siteTitle = get(data, `config.frontmatter.title`)
   const siteBio = get(data, 'config.html')
-  const siteDescription = post.excerpt
 
   return (
     <Layout

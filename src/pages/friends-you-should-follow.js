@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { rhythm } from '../utils/typography'
 import { Helmet } from 'react-helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import { rhythm } from '../utils/typography'
 
-const title = `Friends you should follow`
-const description = `List of my friends I worked with and you should definitely follow`
+const title = 'Friends you should follow'
+const description =
+  'List of my friends I worked with and you should definitely follow'
 
 const Friends = styled.div`
   display: grid;
@@ -69,19 +70,19 @@ const FriendsYouShouldFollow = () => {
             content: 'Antoine Caron',
           },
           {
-            name: `description`,
+            name: 'description',
             content: description,
           },
           {
-            property: `og:title`,
+            property: 'og:title',
             content: title,
           },
           {
-            property: `og:description`,
+            property: 'og:description',
             content: description,
           },
           {
-            property: `og:type`,
+            property: 'og:type',
             content: 'website',
           },
           {
@@ -89,15 +90,15 @@ const FriendsYouShouldFollow = () => {
             content: 'en_US',
           },
           {
-            name: `twitter:card`,
-            content: `summary_large_image`,
+            name: 'twitter:card',
+            content: 'summary_large_image',
           },
           {
-            name: `twitter:title`,
+            name: 'twitter:title',
             content: title,
           },
           {
-            name: `twitter:description`,
+            name: 'twitter:description',
             content: description,
           },
           {

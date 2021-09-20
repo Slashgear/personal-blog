@@ -67,11 +67,7 @@ exports.config = {
   screenshotPath: './errorShots/',
   host: 'hub.browserstack.com',
   // Code to mark the status of test on BrowserStack based on the assertion status
-  afterTest: function (
-    test,
-    context,
-    { error, result, duration, passed, retries }
-  ) {
+  afterTest(test, context, { error, result, duration, passed, retries }) {
     if (passed) {
       browser.executeScript(
         'browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Assertions passed"}}'
@@ -84,11 +80,11 @@ exports.config = {
   },
 }
 // Code to support common capabilities
-exports.config.capabilities.forEach(function (caps, index) {
-  for (var i in exports.config.commonCapabilities)
+exports.config.capabilities.forEach((caps, index) => {
+  for (const i in exports.config.commonCapabilities)
     caps[i] = caps[i] || exports.config.commonCapabilities[i]
   exports.config.capabilities[index] = {
     ...caps,
-    ...(caps['browser'] && { browserName: caps['browser'] }),
+    ...(caps.browser && { browserName: caps.browser }),
   }
 })

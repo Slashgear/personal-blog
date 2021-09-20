@@ -54,11 +54,9 @@ const Heading = styled.header`
   font-size: 1.1rem;
 `
 
-export const TableOfContents = ({ tableOfContents }) => {
-  return (
-    <Aside id="table-of-content">
-      <Heading>Table of content</Heading>
-      <nav dangerouslySetInnerHTML={{ __html: tableOfContents }} />
-    </Aside>
-  )
-}
+export const TableOfContents = ({ tableOfContents }) => (
+  <Aside id="table-of-content">
+    <Heading>Table of content</Heading>
+    <nav dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+  </Aside>
+)

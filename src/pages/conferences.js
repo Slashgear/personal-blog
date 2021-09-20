@@ -1,13 +1,14 @@
 import React from 'react'
-import { rhythm } from '../utils/typography'
 import { Helmet } from 'react-helmet/es/Helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import coverImage from '../assets/conferences/conference.jpg'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import coverImage from '../assets/conferences/conference.jpg'
+import { rhythm } from '../utils/typography'
 
-const title = `Conferences`
-const description = `You can find here all the conferences I gave to different events.`
+const title = 'Conferences'
+const description =
+  'You can find here all the conferences I gave to different events.'
 
 const Cover = styled(Img)`
   margin-bottom: 1rem;
@@ -100,7 +101,7 @@ const Conferences = () => {
             content: 'Antoine Caron',
           },
           {
-            name: `description`,
+            name: 'description',
             content: description,
           },
           {
@@ -112,15 +113,15 @@ const Conferences = () => {
             content: site.siteMetadata.siteUrl + coverImage,
           },
           {
-            property: `og:title`,
+            property: 'og:title',
             content: title,
           },
           {
-            property: `og:description`,
+            property: 'og:description',
             content: description,
           },
           {
-            property: `og:type`,
+            property: 'og:type',
             content: 'website',
           },
           {
@@ -128,15 +129,15 @@ const Conferences = () => {
             content: 'en_US',
           },
           {
-            name: `twitter:card`,
-            content: `summary_large_image`,
+            name: 'twitter:card',
+            content: 'summary_large_image',
           },
           {
-            name: `twitter:title`,
+            name: 'twitter:title',
             content: title,
           },
           {
-            name: `twitter:description`,
+            name: 'twitter:description',
             content: description,
           },
           {
@@ -181,22 +182,17 @@ const Conferences = () => {
           />
 
           <ul>
-            {conference.node.events.map((event) => {
-              return (
-                <li>
-                  <a href={event.link}>
-                    <h3>
-                      {event.name} on{' '}
-                      {new Date(event.date).toLocaleDateString()}
-                    </h3>
-                  </a>
+            {conference.node.events.map((event) => (
+              <li>
+                <a href={event.link}>
+                  <h3>
+                    {event.name} on {new Date(event.date).toLocaleDateString()}
+                  </h3>
+                </a>
 
-                  {event.video ? (
-                    <a href={event.video}>Video recording</a>
-                  ) : null}
-                </li>
-              )
-            })}
+                {event.video ? <a href={event.video}>Video recording</a> : null}
+              </li>
+            ))}
           </ul>
         </article>
       ))}

@@ -9,12 +9,12 @@ function pointerCoord(event) {
   // get coordinates for either a mouse click
   // or a touch depending on the given event
   if (event) {
-    const changedTouches = event.changedTouches
+    const { changedTouches } = event
     if (changedTouches && changedTouches.length > 0) {
       const touch = changedTouches[0]
       return { x: touch.clientX, y: touch.clientY }
     }
-    const pageX = event.pageX
+    const { pageX } = event
     if (pageX !== undefined) {
       return { x: pageX, y: event.pageY }
     }
@@ -71,7 +71,7 @@ export default class Toggle extends PureComponent {
     this.touchMoved = true
 
     if (this.startX != null) {
-      let currentX = pointerCoord(event).x
+      const currentX = pointerCoord(event).x
       if (this.state.checked && currentX + 15 < this.startX) {
         this.setState({ checked: false })
         this.startX = currentX
@@ -148,12 +148,11 @@ export default class Toggle extends PureComponent {
 
   render() {
     const { className, icons: _icons, ...inputProps } = this.props
-    const classes =
-      'react-toggle' +
-      (this.state.checked ? ' react-toggle--checked' : '') +
-      (this.state.hasFocus ? ' react-toggle--focus' : '') +
-      (this.props.disabled ? ' react-toggle--disabled' : '') +
-      (className ? ' ' + className : '')
+    const classes = `react-toggle${
+      this.state.checked ? ' react-toggle--checked' : ''
+    }${this.state.hasFocus ? ' react-toggle--focus' : ''}${
+      this.props.disabled ? ' react-toggle--disabled' : ''
+    }${className ? ` ${className}` : ''}`
     return (
       <div
         className={classes}

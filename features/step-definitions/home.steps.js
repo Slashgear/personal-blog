@@ -1,7 +1,7 @@
 const { Given, Then, When } = require('@cucumber/cucumber')
 
 Given(/^I am on the home page$/, async () => {
-  await browser.url(`/`)
+  await browser.url('/')
 })
 
 Then(/^I should see a page title$/, async () => {
@@ -12,9 +12,7 @@ Then(/^I should have a canonical defined$/, async () => {
 })
 
 Then(/^I should have links in footer$/, async () => {
-  browser.waitUntil(async () => {
-    ;(await $$('footer a').length) > 0
-  })
+  browser.waitUntil(async () => (await $$('footer a').length) > 0)
 })
 
 Then(/^Articles should have tags$/, async () => {

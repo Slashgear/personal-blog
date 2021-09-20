@@ -57,7 +57,7 @@ export const Layout = ({ location, config, children }) => {
             textDecoration: 'none',
             color: 'inherit',
           }}
-          to={'/'}
+          to="/"
         >
           {config.frontmatter.title}
         </Link>

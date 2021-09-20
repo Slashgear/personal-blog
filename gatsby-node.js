@@ -27,7 +27,6 @@ exports.createPages = ({ graphql, actions }) => {
         `
       ).then((result) => {
         if (result.errors) {
-          console.log(result.errors)
           reject(result.errors)
         }
 
@@ -140,10 +139,10 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode })
     createNodeField({
-      name: `slug`,
+      name: 'slug',
       node,
       value,
     })

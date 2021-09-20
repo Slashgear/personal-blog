@@ -26,6 +26,7 @@ export const EditOnGithubComponent = ({ slug }) => {
       <a
         href={`${repository}/edit/source/src/pages${slug}index.md`}
         target="_blank"
+        rel="noreferrer"
       >
         Edit this page on Github
       </a>

@@ -5,9 +5,9 @@ Given(/^I am on the (.+) post page$/, async (post) => {
 })
 
 Then(/^I should see (\d+) related posts$/, async (count) => {
-  browser.waitUntil(async () => {
-    ;(await $$('[data-testid="related-post"]').length) === count
-  })
+  browser.waitUntil(
+    async () => (await $$('[data-testid="related-post"]').length) === count
+  )
 })
 
 Then(/^I should see switch lang block$/, async () => {

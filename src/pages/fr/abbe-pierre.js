@@ -74,7 +74,7 @@ const Fundation = () => {
           {
             rel: 'alternate',
             hreflang: 'en',
-            href: `/abbe-pierre/`,
+            href: '/abbe-pierre/',
           },
         ]}
         meta={[
@@ -83,11 +83,11 @@ const Fundation = () => {
             content: 'Antoine Caron',
           },
           {
-            name: `description`,
+            name: 'description',
             content: description,
           },
           {
-            property: `og:title`,
+            property: 'og:title',
             content: title,
           },
           {
@@ -99,11 +99,11 @@ const Fundation = () => {
             content: site.siteMetadata.siteUrl + coverImage,
           },
           {
-            property: `og:description`,
+            property: 'og:description',
             content: description,
           },
           {
-            property: `og:type`,
+            property: 'og:type',
             content: 'website',
           },
           {
@@ -111,15 +111,15 @@ const Fundation = () => {
             content: 'en_US',
           },
           {
-            name: `twitter:card`,
-            content: `summary_large_image`,
+            name: 'twitter:card',
+            content: 'summary_large_image',
           },
           {
-            name: `twitter:title`,
+            name: 'twitter:title',
             content: title,
           },
           {
-            name: `twitter:description`,
+            name: 'twitter:description',
             content: description,
           },
           {
@@ -223,7 +223,7 @@ const Fundation = () => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        />
       </div>
     </div>
   )

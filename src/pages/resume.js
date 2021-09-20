@@ -1,12 +1,13 @@
-import { rhythm } from '../utils/typography'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { rhythm } from '../utils/typography'
 
-const title = `Resume | Antoine Caron`
-const description = `This is my resume in which you can find some of my professional experiences.`
+const title = 'Resume | Antoine Caron'
+const description =
+  'This is my resume in which you can find some of my professional experiences.'
 
 const Me = styled(Img)`
   display: block;
@@ -100,19 +101,19 @@ const Resume = () => {
             content: 'Antoine Caron',
           },
           {
-            name: `description`,
+            name: 'description',
             content: description,
           },
           {
-            property: `og:title`,
+            property: 'og:title',
             content: title,
           },
           {
-            property: `og:description`,
+            property: 'og:description',
             content: description,
           },
           {
-            property: `og:type`,
+            property: 'og:type',
             content: 'website',
           },
           {
@@ -120,15 +121,15 @@ const Resume = () => {
             content: 'en_US',
           },
           {
-            name: `twitter:card`,
-            content: `summary_large_image`,
+            name: 'twitter:card',
+            content: 'summary_large_image',
           },
           {
-            name: `twitter:title`,
+            name: 'twitter:title',
             content: title,
           },
           {
-            name: `twitter:description`,
+            name: 'twitter:description',
             content: description,
           },
           {
@@ -207,7 +208,8 @@ const Resume = () => {
         <li>
           Organization, design and realization of the migration of the project
           infrastructure in AWS with Terraform in discussion with{' '}
-          <a href="https://twitter.com/yverry">Yann Verry</a>'s teams
+          <a href="https://twitter.com/yverry">Yann Verry</a>
+          's teams
         </li>
         <li>
           Setting up SEO solutions to improve sites performance and platforms

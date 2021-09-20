@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import get from 'lodash/get'
+import get from 'lodash-es/get'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
