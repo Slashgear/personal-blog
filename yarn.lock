@@ -6371,16 +6371,16 @@ gatsby-plugin-canonical-urls@^3.10.0:
   dependencies:
     "@babel/runtime" "^7.14.8"
 
-gatsby-plugin-feed@^3.10.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-3.13.0.tgz#418e04054ca3e408cc960c523dfe0829ac91c63d"
-  integrity sha512-wdYh+KUKo8/7j0dBFesWYv7OM/s/0PotwgwfU1NKrTs2lTYxNE5nhgV2zp3hgUt+8Ea5voOD+Kv3zkh1ofvAFA==
+gatsby-plugin-feed@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-3.14.0.tgz#3f95ab550a4a2a0c8af053a0a79791cca3eff386"
+  integrity sha512-d9fkaDyPN9ol6qL8WhojFm2p4VOn+tbz1EnTMr4nhDsn3l3Fyv6XV6xUsqeCclHwIwcK4Nj3mB07l6tDaBl9uQ==
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.4"
     "@hapi/joi" "^15.1.1"
     common-tags "^1.8.0"
-    fs-extra "^9.1.0"
-    gatsby-plugin-utils "^1.13.0"
+    fs-extra "^10.0.0"
+    gatsby-plugin-utils "^1.14.0"
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
@@ -6498,12 +6498,13 @@ gatsby-plugin-use-dark-mode@^1.1.2:
     prop-types "^15.7.2"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.13.0.tgz#8280541debaa4048c6f3830a124cef13c091695d"
-  integrity sha512-Qen1qBe4qOm32856V7lCoPH3XxRhcVej36LxPElWWknLmLcmLY2sBnzXgx2gSMaOcepAw3jtoqgaSuVLFeYA6Q==
+gatsby-plugin-utils@^1.13.0, gatsby-plugin-utils@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.14.0.tgz#7813ce967a0bc2fd89560706db879fbf5b894795"
+  integrity sha512-lYzr9R9yTH/PzgRTWB878yB1xBlJULvyosEoF8LnE62+UyuPXxv+e/frfwZCeCoqsqstuciR0yaMELIPYMna+Q==
   dependencies:
-    joi "^17.2.1"
+    "@babel/runtime" "^7.15.4"
+    joi "^17.4.2"
 
 gatsby-react-router-scroll@^4.13.0:
   version "4.13.0"
@@ -8476,7 +8477,7 @@ jimp@^0.14.0:
     "@jimp/types" "^0.14.0"
     regenerator-runtime "^0.13.3"
 
-joi@^17.2.1, joi@^17.4.0:
+joi@^17.2.1, joi@^17.4.0, joi@^17.4.2:
   version "17.4.2"
   resolved "https://registry.yarnpkg.com/joi/-/joi-17.4.2.tgz#02f4eb5cf88e515e614830239379dcbbe28ce7f7"
   integrity sha512-Lm56PP+n0+Z2A2rfRvsfWVDXGEWjXxatPopkQ8qQ5mxCEhwHG+Ettgg5o98FFaxilOxozoa14cFhrE/hOzh/Nw==
