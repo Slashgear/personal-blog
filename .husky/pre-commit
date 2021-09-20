@@ -1,1 +1,1 @@
-pretty-quick --staged
+pretty-quick --staged && yarn lint

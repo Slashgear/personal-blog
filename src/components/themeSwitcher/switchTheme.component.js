@@ -22,6 +22,7 @@ export const SwitchTheme = () => {
             height="16"
             role="presentation"
             style={{ pointerEvents: 'none' }}
+            alt=""
           />
         ),
         unchecked: (
@@ -31,6 +32,7 @@ export const SwitchTheme = () => {
             height="16"
             role="presentation"
             style={{ pointerEvents: 'none' }}
+            alt=""
           />
         ),
       }}

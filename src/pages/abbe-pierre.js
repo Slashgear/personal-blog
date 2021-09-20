@@ -1,11 +1,11 @@
-import { rhythm } from '../utils/typography'
 import { Helmet } from 'react-helmet'
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Img from 'gatsby-image'
-import coverImage from '../assets/abbe-pierre.jpg'
 import styled from 'styled-components'
+import coverImage from '../assets/abbe-pierre.jpg'
+import { rhythm } from '../utils/typography'
 
 const title = 'Support the Abbé Pierre Foundation'
 const description =
@@ -72,7 +72,7 @@ const Fundation = () => {
           {
             rel: 'alternate',
             hreflang: 'fr',
-            href: `/fr/abbe-pierre/`,
+            href: '/fr/abbe-pierre/',
           },
         ]}
         meta={[
@@ -81,11 +81,11 @@ const Fundation = () => {
             content: 'Antoine Caron',
           },
           {
-            name: `description`,
+            name: 'description',
             content: description,
           },
           {
-            property: `og:title`,
+            property: 'og:title',
             content: title,
           },
           {
@@ -97,11 +97,11 @@ const Fundation = () => {
             content: site.siteMetadata.siteUrl + coverImage,
           },
           {
-            property: `og:description`,
+            property: 'og:description',
             content: description,
           },
           {
-            property: `og:type`,
+            property: 'og:type',
             content: 'website',
           },
           {
@@ -109,15 +109,15 @@ const Fundation = () => {
             content: 'en_US',
           },
           {
-            name: `twitter:card`,
-            content: `summary_large_image`,
+            name: 'twitter:card',
+            content: 'summary_large_image',
           },
           {
-            name: `twitter:title`,
+            name: 'twitter:title',
             content: title,
           },
           {
-            name: `twitter:description`,
+            name: 'twitter:description',
             content: description,
           },
           {
@@ -220,7 +220,7 @@ const Fundation = () => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        />
       </div>
     </div>
   )

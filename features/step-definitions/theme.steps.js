@@ -6,15 +6,13 @@ Then(/^I should see theme switcher$/, async () => {
 
 Then(/^Website should be in (\w+) mode$/, async (mode) => {
   const body = await $(`body.${mode}-mode`)
-  return await body.isExisting()
+  return body.isExisting()
 })
 
-When(/^I click theme switcher$/, function () {
+When(/^I click theme switcher$/, () => {
   $('.react-toggle').click()
 })
 
 Given(/^I force light mode$/, async () => {
-  await browser.execute(() => {
-    return localStorage.setItem('darkMode', 'false')
-  })
+  await browser.execute(() => localStorage.setItem('darkMode', 'false'))
 })

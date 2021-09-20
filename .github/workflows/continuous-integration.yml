@@ -32,6 +32,8 @@ jobs:
           node-version: 16.x
       - run: yarn install
         name: Install dependencies
+      - run: yarn lint
+        name: Run lint
       - run: yarn build
         name: Build Gatsby output
       - run: yarn serve&

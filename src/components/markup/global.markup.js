@@ -56,8 +56,8 @@ const GlobalMarkup = ({
   const metaDescription =
     `${description} ${(tags || []).join(', ')}` || site.siteMetadata.description
   let imageTags = []
-  let translationTags = []
-  let metaTranslationTags = []
+  const translationTags = []
+  const metaTranslationTags = []
 
   if (image) {
     imageTags = [
@@ -155,7 +155,7 @@ const GlobalMarkup = ({
           content: 'Antoine Caron',
         },
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription,
         },
         {
@@ -163,15 +163,15 @@ const GlobalMarkup = ({
           content: `${site.siteMetadata.siteUrl}${slug}`,
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: title,
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: metaDescription,
         },
         {
-          property: `og:type`,
+          property: 'og:type',
           content: type,
         },
         {
@@ -179,19 +179,19 @@ const GlobalMarkup = ({
           content: langCompleteByLang[lang],
         },
         {
-          name: `twitter:card`,
-          content: `summary_large_image`,
+          name: 'twitter:card',
+          content: 'summary_large_image',
         },
         {
-          name: `twitter:creator`,
+          name: 'twitter:creator',
           content: site.siteMetadata.social.twitter,
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: title,
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription,
         },
         ...imageTags,
@@ -209,10 +209,9 @@ const GlobalMarkup = ({
 }
 
 GlobalMarkup.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
-  description: ``,
-  tags: [],
+  description: '',
 }
 
 GlobalMarkup.propTypes = {
@@ -220,8 +219,6 @@ GlobalMarkup.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  image: PropTypes.object,
-  tags: PropTypes.array,
 }
 
 export default GlobalMarkup
