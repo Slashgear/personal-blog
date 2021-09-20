@@ -2510,6 +2510,16 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
+"@wdio/config@7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.12.5.tgz#a55ef8f4e60de8bc1a7746ac3288dcb71e180af1"
+  integrity sha512-eJvVTdPIIudOW8MhG6gg7tZRfrwV2hajx7ntNg0JBvNkUzssgOD/XCyrJBNBC7C1+hvykV5mTcdnZFPyIPVC2A==
+  dependencies:
+    "@wdio/logger" "7.7.0"
+    "@wdio/types" "7.12.5"
+    deepmerge "^4.0.0"
+    glob "^7.1.2"
+
 "@wdio/cucumber-framework@^7.12.5":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.12.5.tgz#d8263738e272f7197cba13f51f18bc4d62924205"
@@ -2605,17 +2615,17 @@
     webdriver "7.12.4"
     webdriverio "7.12.4"
 
-"@wdio/selenium-standalone-service@^7.10.1":
-  version "7.10.1"
-  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.10.1.tgz#54344d23cdb395543366da09ef9eaa7d41b390a1"
-  integrity sha512-25J1iqNpEdqhnNe6B016Mm5+38F8WTfZ5eIRttjLSACdtsWtW2DGgMMeWvwunqNSzhfK8S6jDZ+s2nOvg+gD6A==
+"@wdio/selenium-standalone-service@^7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.12.5.tgz#59ed3b15d619cfa398b4cb70125547ed5ebd7451"
+  integrity sha512-p/ILrBlekvPF0A3Avf3kzBBnwEZwB7hx6wGhQDoOxxEoQW+W23j41LU/IHwmycgPSB1wjXXGB30ysppJi88Zxg==
   dependencies:
     "@types/fs-extra" "^9.0.1"
     "@types/node" "^15.12.5"
     "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.10.1"
+    "@wdio/config" "7.12.5"
     "@wdio/logger" "7.7.0"
-    "@wdio/types" "7.10.1"
+    "@wdio/types" "7.12.5"
     fs-extra "^10.0.0"
     selenium-standalone "^7.0.1"
 
