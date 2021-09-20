@@ -12,86 +12,84 @@ import { ListMarkup } from '../components/markup/list.markup'
 import { Foundation } from '../components/foundation/foundation.component'
 import { OtherLanguage } from '../components/lang/otherLanguage.component'
 
-class BlogIndex extends React.Component {
-  render() {
-    const config = get(this, 'props.data.config')
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
-    const siteTitle = get(config, 'frontmatter.title')
-    const description = get(config, 'frontmatter.description')
-    const bio = get(config, 'html')
-    const lang = this.props.pageContext.language
+const BlogIndex = (props) => {
+  const config = get(props, 'data.config')
+  const posts = get(props, 'data.allMarkdownRemark.edges')
+  const siteTitle = get(config, 'frontmatter.title')
+  const description = get(config, 'frontmatter.description')
+  const bio = get(config, 'html')
+  const lang = props.pageContext.language
 
-    return (
-      <Layout location={this.props.location} config={config}>
-        <Helmet
-          htmlAttributes={{ lang }}
-          meta={[{ name: 'description', content: description }]}
-          title={siteTitle}
-        />
+  return (
+    <Layout location={props.location} config={config}>
+      <Helmet
+        htmlAttributes={{ lang }}
+        meta={[{ name: 'description', content: description }]}
+        title={siteTitle}
+      />
 
-        <ListMarkup
-          posts={posts}
-          siteUrl={this.props.data.site.siteMetadata.siteUrl}
-        />
+      <ListMarkup
+        posts={posts}
+        siteUrl={props.data.site.siteMetadata.siteUrl}
+      />
 
-        <Bio>
-          <div dangerouslySetInnerHTML={{ __html: bio }} />
-        </Bio>
+      <Bio>
+        <div dangerouslySetInnerHTML={{ __html: bio }} />
+      </Bio>
 
-        <OtherLanguage language={lang} />
+      <OtherLanguage language={lang} />
 
-        <Foundation lang={lang} />
+      <Foundation lang={lang} />
 
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
+      {posts.map(({ node }) => {
+        const title = get(node, 'frontmatter.title') || node.fields.slug
+        return (
+          <article key={node.fields.slug}>
+            <h3
+              style={{
+                marginBottom: rhythm(1 / 4),
+              }}
+            >
+              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                {title}
+              </Link>
+            </h3>
+            <small>
+              <time dateTime={node.frontmatter.dateJson}>
+                {node.frontmatter.date}
+              </time>
+            </small>
+            <small style={{ margin: '0 1rem' }}>
+              <span role="img" aria-label="Time to read">
+                🕐
+              </span>
+              {node.timeToRead} min
+            </small>
+            <small>
+              {(node.frontmatter.tags || []).map((tag) => (
+                <Link
+                  style={{ marginRight: '0.5rem' }}
+                  key={tag}
+                  to={`/${props.pageContext.language}/${tag}`}
+                  data-testid="tag"
+                >
+                  #{tag}
                 </Link>
-              </h3>
-              <small>
-                <time dateTime={node.frontmatter.dateJson}>
-                  {node.frontmatter.date}
-                </time>
-              </small>
-              <small style={{ margin: '0 1rem' }}>
-                <span role="img" aria-label="Time to read">
-                  🕐
-                </span>
-                {node.timeToRead} min
-              </small>
-              <small>
-                {(node.frontmatter.tags || []).map((tag) => (
-                  <Link
-                    style={{ marginRight: '0.5rem' }}
-                    key={tag}
-                    to={`/${this.props.pageContext.language}/${tag}`}
-                    data-testid="tag"
-                  >
-                    #{tag}
-                  </Link>
-                ))}
-              </small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              {node.frontmatter.hero && (
-                <Img
-                  fluid={node.frontmatter.hero.childImageSharp.fluid}
-                  alt={node.frontmatter.title}
-                />
-              )}
-            </article>
-          )
-        })}
-        <Footer />
-      </Layout>
-    )
-  }
+              ))}
+            </small>
+            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+            {node.frontmatter.hero && (
+              <Img
+                fluid={node.frontmatter.hero.childImageSharp.fluid}
+                alt={node.frontmatter.title}
+              />
+            )}
+          </article>
+        )
+      })}
+      <Footer />
+    </Layout>
+  )
 }
 
 export default BlogIndex

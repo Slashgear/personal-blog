@@ -23,30 +23,30 @@ export const AvailableLanguages = ({ language, translations }) => {
       {option}:{' '}
       {data.allMarkdownRemark.edges.map(({ node }) => {
         if (node.frontmatter.language === language) {
-        } else {
-          let translationLink = node.fields.slug
-          if (translations) {
-            const translationIndex = translations.findIndex(
-              (v) => v === node.frontmatter.language
-            )
-            if (translationIndex !== -1) {
-              translationLink += translations[translationIndex + 1]
-            }
-          }
-          return (
-            <Link
-              key={translationLink}
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-              }}
-              to={translationLink}
-              hrefLang={node.frontmatter.language}
-            >
-              {node.frontmatter.language_label}
-            </Link>
-          )
+          return null
         }
+        let translationLink = node.fields.slug
+        if (translations) {
+          const translationIndex = translations.findIndex(
+            (v) => v === node.frontmatter.language
+          )
+          if (translationIndex !== -1) {
+            translationLink += translations[translationIndex + 1]
+          }
+        }
+        return (
+          <Link
+            key={translationLink}
+            style={{
+              boxShadow: 'none',
+              textDecoration: 'none',
+            }}
+            to={translationLink}
+            hrefLang={node.frontmatter.language}
+          >
+            {node.frontmatter.language_label}
+          </Link>
+        )
       })}
     </Container>
   ) : null

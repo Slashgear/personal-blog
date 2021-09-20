@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './toggle.css'
 
 import React, { PureComponent } from 'react'

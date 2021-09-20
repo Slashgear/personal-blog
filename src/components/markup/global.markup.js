@@ -212,7 +212,6 @@ GlobalMarkup.defaultProps = {
   lang: 'en',
   meta: [],
   description: '',
-  tags: [],
 }
 
 GlobalMarkup.propTypes = {

@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     jasmine: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
   globals: {
     $$: true,
     $: true,
@@ -27,5 +27,6 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'max-len': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/destructuring-assignment': 'off',
   },
 }

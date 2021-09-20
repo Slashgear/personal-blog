@@ -121,11 +121,7 @@ const FriendsYouShouldFollow = () => {
             <a key={node.id} href={node.site}>
               <header>{node.name}</header>
             </a>
-            <img
-              loading="lazy"
-              src={node.image}
-              alt={`${node.name} profile picture`}
-            />
+            <img loading="lazy" src={node.image} alt={`${node.name} profile`} />
           </Friend>
         ))}
       </Friends>
