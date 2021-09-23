@@ -91,12 +91,6 @@ Une longue conférence mais qui reste intéressante et drôle qui montre les poi
 
 ## Git 
 
-### 🇬🇧 Git from the inside out - [(Mary rose Cook)](https://twitter.com/maryrosecook)
-
-Utiliser Git c'est bien, comprendre un peu comment ça fonctionne c'est mieux.
-
-<iframe src="https://www.infoq.com/fr/presentations/mix-it-mary-rose-cook-git-from-the-inside-out/" width="640" height="360" allowfullscreen></iframe>
-
 ### 🇫🇷 Git reset : rien ne se perd, tout se transforme - [(Maxime Bréhin)](https://twitter.com/mbrehin)
 
 Une explication claire, accessible et simple de la toute puissance de la commande `git reset`
