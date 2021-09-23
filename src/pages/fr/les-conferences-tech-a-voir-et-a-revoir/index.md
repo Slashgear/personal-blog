@@ -89,6 +89,20 @@ Une longue conférence mais qui reste intéressante et drôle qui montre les poi
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xqdWi6SblV8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Git 
+
+### 🇬🇧 Git from the inside out - [(Mary rose Cook)](https://twitter.com/maryrosecook)
+
+Utiliser Git c'est bien, comprendre un peu comment ça fonctionne c'est mieux.
+
+<iframe src="https://www.infoq.com/fr/presentations/mix-it-mary-rose-cook-git-from-the-inside-out/" width="640" height="360" allowfullscreen></iframe>
+
+### 🇫🇷 Git reset : rien ne se perd, tout se transforme - [(Maxime Bréhin)](https://twitter.com/mbrehin)
+
+Une explication claire, accessible et simple de la toute puissance de la commande `git reset`
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/374679107?h=14163d20db" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
 ## Programmation
 
 ### 🇫🇷 Pourquoi 0.1+0.2 != 0.3, ou le monde mystérieux des nombres à virgule flottante - [(Benoit JACQUEMONT)](https://twitter.com/BJacquemont)
