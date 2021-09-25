@@ -15,7 +15,7 @@ Then(/^I should see switch lang block$/, async () => {
 })
 
 Then(/^Page h1 should contain (.+)$/, async (title) => {
-  await expect($('h1')).toHaveText(title)
+  browser.waitUntil(() => expect($('h1')).toHaveText(title))
 })
 
 When(/^I click on lang switcher link$/, async () => {
@@ -23,9 +23,9 @@ When(/^I click on lang switcher link$/, async () => {
 })
 
 Then(/^I should be on (.+) post page$/, async (page) => {
-  expect(browser).toHaveUrlContaining(page)
+  browser.waitUntil(() => expect(browser).toHaveUrlContaining(page))
 })
 
 Then(/^I should see a table of content$/, async () => {
-  await expect($('#table-of-content')).toExist()
+  browser.waitUntil(() => expect($('#table-of-content')).toExist())
 })

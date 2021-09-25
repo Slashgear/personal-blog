@@ -61,6 +61,7 @@ exports.config = {
       },
     ],
   ],
+  hostname: 'localhost',
   baseUrl: 'https://slashgear.github.io',
   logLevel: 'warn',
   coloredLogs: true,
