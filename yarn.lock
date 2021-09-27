@@ -2534,6 +2534,16 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
+"@wdio/config@7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.13.0.tgz#d9328134276f87b2b26428d090f7953217999b1e"
+  integrity sha512-FDOaGjlZ+FiTlJIWvze+Nc/UBICFcdVfqHC46Aav1MqRLpDbgOxFIWpbuOtMtMth6EJAYbJmnCuL6v7Ra/9ogQ==
+  dependencies:
+    "@wdio/logger" "7.7.0"
+    "@wdio/types" "7.13.0"
+    deepmerge "^4.0.0"
+    glob "^7.1.2"
+
 "@wdio/cucumber-framework@^7.12.5":
   version "7.12.5"
   resolved "https://registry.npmjs.org/@wdio/cucumber-framework/-/cucumber-framework-7.12.5.tgz"
@@ -2629,17 +2639,17 @@
     webdriver "7.12.5"
     webdriverio "7.12.5"
 
-"@wdio/selenium-standalone-service@^7.12.5":
-  version "7.12.5"
-  resolved "https://registry.npmjs.org/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.12.5.tgz"
-  integrity sha512-p/ILrBlekvPF0A3Avf3kzBBnwEZwB7hx6wGhQDoOxxEoQW+W23j41LU/IHwmycgPSB1wjXXGB30ysppJi88Zxg==
+"@wdio/selenium-standalone-service@^7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.13.0.tgz#cfaec61b8a6b91e0ad2e9ba21c4f9c49b759c33b"
+  integrity sha512-yQJ+LRLyaaySdDKdLUonAG3jc2StwSEPTk7q103M/Gu1vEVig4Y/iGVSPdPciBYgWpLc26IuEst730f3u+9cag==
   dependencies:
     "@types/fs-extra" "^9.0.1"
     "@types/node" "^15.12.5"
     "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.12.5"
+    "@wdio/config" "7.13.0"
     "@wdio/logger" "7.7.0"
-    "@wdio/types" "7.12.5"
+    "@wdio/types" "7.13.0"
     fs-extra "^10.0.0"
     selenium-standalone "^7.0.1"
 
@@ -2659,6 +2669,14 @@
   version "7.12.5"
   resolved "https://registry.npmjs.org/@wdio/types/-/types-7.12.5.tgz"
   integrity sha512-xgxT3JTTLkCmrZ0IqQz0+/DEog98a3viCWwi2MoFZavfENd2QCPzDc7hk2nSoKQQqtJECwBBwWvR9GMzIo2N3Q==
+  dependencies:
+    "@types/node" "^15.12.5"
+    got "^11.8.1"
+
+"@wdio/types@7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.13.0.tgz#d3ee22ef8569016202a2c4999c5c00d1765b47a7"
+  integrity sha512-rsfB2GoWX2lTeO4pFkaXqKBj1C5bCKjoDLoRqhm3GMZ6Shk2z24QJ+TtpNuuMAn9TqVKMO7xvdgHeiCfIkiNbg==
   dependencies:
     "@types/node" "^15.12.5"
     got "^11.8.1"
