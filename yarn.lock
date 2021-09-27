@@ -1201,10 +1201,10 @@
   dependencies:
     "@cucumber/messages" "^17.0.0"
 
-"@cucumber/messages@17.1.0", "@cucumber/messages@^17.0.0", "@cucumber/messages@^17.0.1", "@cucumber/messages@^17.1.0":
-  version "17.1.0"
-  resolved "https://registry.npmjs.org/@cucumber/messages/-/messages-17.1.0.tgz"
-  integrity sha512-OA1uQDX16PjOpeTmMvAiCSjJbomgHYJ4HTVuekF4M8Ykh6mK+5oKn6uZaJTZ/xblEDKGqCfHalrg9yg8/nW41g==
+"@cucumber/messages@17.1.1", "@cucumber/messages@^17.0.0", "@cucumber/messages@^17.0.1", "@cucumber/messages@^17.1.0":
+  version "17.1.1"
+  resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-17.1.1.tgz#1f40b020af1983f47e37a0847a9fe648b6ec8d1f"
+  integrity sha512-KQMn2Ag+1g1CXp/zKQ7LLqmuHjuQwuXw0N2u5SrDk8r72zPt36SxmDSJK7w6HiFTI+3p5ZuzwLi4S5jop3Tx4g==
   dependencies:
     "@types/uuid" "8.3.1"
     class-transformer "0.4.0"
@@ -2534,21 +2534,21 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
-"@wdio/cucumber-framework@^7.12.5":
-  version "7.12.5"
-  resolved "https://registry.npmjs.org/@wdio/cucumber-framework/-/cucumber-framework-7.12.5.tgz"
-  integrity sha512-vfYjue/hCvZB2+li1hRvi8fACn74pN/nWp50tFiiznsGEljEHUPbMLzQuwQ1ZnNVk4u0OO82P7kwjDFhfJ69ig==
+"@wdio/cucumber-framework@^7.13.1":
+  version "7.13.1"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.13.1.tgz#0068a75789df4a9b9a08a97e72793c75ec041154"
+  integrity sha512-20eVKFtdcxuQ3d6CW3Y0aLLXNxF9PQHfPqB76K+c9u4iq6AJauxZJtZcnlkcni7oUhqrbaSySBbsdpa84vYbJg==
   dependencies:
     "@cucumber/cucumber" "7.3.1"
     "@cucumber/gherkin" "21.0.0"
     "@cucumber/gherkin-streams" "^3.0.0"
-    "@cucumber/messages" "17.1.0"
+    "@cucumber/messages" "17.1.1"
     "@types/is-glob" "^4.0.1"
     "@types/long" "^4.0.1"
     "@types/mockery" "^1.4.29"
     "@wdio/logger" "7.7.0"
-    "@wdio/types" "7.12.5"
-    "@wdio/utils" "7.12.5"
+    "@wdio/types" "7.13.0"
+    "@wdio/utils" "7.13.1"
     expect-webdriverio "^3.0.0"
     glob "^7.1.2"
     is-glob "^4.0.0"
@@ -2663,6 +2663,14 @@
     "@types/node" "^15.12.5"
     got "^11.8.1"
 
+"@wdio/types@7.13.0":
+  version "7.13.0"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.13.0.tgz#d3ee22ef8569016202a2c4999c5c00d1765b47a7"
+  integrity sha512-rsfB2GoWX2lTeO4pFkaXqKBj1C5bCKjoDLoRqhm3GMZ6Shk2z24QJ+TtpNuuMAn9TqVKMO7xvdgHeiCfIkiNbg==
+  dependencies:
+    "@types/node" "^15.12.5"
+    got "^11.8.1"
+
 "@wdio/utils@7.12.5":
   version "7.12.5"
   resolved "https://registry.npmjs.org/@wdio/utils/-/utils-7.12.5.tgz"
@@ -2670,6 +2678,15 @@
   dependencies:
     "@wdio/logger" "7.7.0"
     "@wdio/types" "7.12.5"
+    p-iteration "^1.1.8"
+
+"@wdio/utils@7.13.1":
+  version "7.13.1"
+  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.13.1.tgz#65217eae512f02ab1ac284cb2d98bcfccefcb87c"
+  integrity sha512-IHzvj6onXdd8Xd1jn1ti+tjfLjFhMMrar71mbQWbxum9TuBV4kXCD+tKx4p0N7rfIeo7Yuoa5M0mGaBucJGYBg==
+  dependencies:
+    "@wdio/logger" "7.7.0"
+    "@wdio/types" "7.13.0"
     p-iteration "^1.1.8"
 
 "@webassemblyjs/ast@1.11.1":
