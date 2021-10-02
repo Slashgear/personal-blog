@@ -16,6 +16,10 @@ Then(/^I should be on foundation page$/, () => {
   expect(browser).toHaveUrlContaining('abbe-pierre')
 })
 
-Then(/^I should see a donation button$/, async () => {
-  await expect($('#donate-button')).toExist()
-})
+Then(
+  /^I should see a donation button$/,
+  { wrapperOptions: { retry: 1 } },
+  async () => {
+    await expect($('#donate-button')).toExist()
+  }
+)
