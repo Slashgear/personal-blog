@@ -18,7 +18,14 @@
         "site": "https://www.jugsummercamp.org/edition/12",
         "link": "https://www.jugsummercamp.org/edition/12/presentations/QYeD36ff9h4A8v243Hu3",
         "video": "https://www.youtube.com/watch?v=zBz9flHFWHA"
-      }
+      },
+      {
+        "name": "Devfest Nantes",
+        "date": 1636541820000,
+        "site": "https://devfest2021.gdgnantes.com/fr/",
+        "link": "https://devfest2021.gdgnantes.com/sessions/_%EF%B8%8F_vite_%EF%B8%8Fthe_webpack_killer/",
+        "video": "https://www.youtube.com/watch?v=9R5JuyfsGwc"
+      }  
     ],
     "cospeakers": [
       {
