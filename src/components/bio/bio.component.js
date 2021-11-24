@@ -21,7 +21,7 @@ const Image = styled(Img)`
   flex-shrink: 0;
 `
 
-export const Bio = ({ children }) => {
+export const Bio = ({ children, component = 'div' }) => {
   const picture = useStaticQuery(graphql`
     {
       img: file(
@@ -38,7 +38,7 @@ export const Bio = ({ children }) => {
   `)
 
   return (
-    <Wrapper id="bio">
+    <Wrapper id="bio" as={component}>
       <Image
         fixed={picture.img.childImageSharp.fixed}
         style={{ margin: '0 1.2rem 0 0' }}

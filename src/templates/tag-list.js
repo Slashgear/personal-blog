@@ -9,6 +9,7 @@ import { rhythm } from '../utils/typography'
 import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
 import lang from '../components/lang/lang.json'
+import { List, ListItem } from '../components/list.component'
 
 const TagList = ({ location, pageContext, data }) => {
   const posts = get(data, 'allMarkdownRemark.edges')
@@ -40,51 +41,57 @@ const TagList = ({ location, pageContext, data }) => {
         } ${lang[pageContext.language].tagList.title}`}
       />
       <ListMarkup posts={posts} siteUrl={data.site.siteMetadata.siteUrl} />
-      {posts.map(({ node }) => {
-        const title = get(node, 'frontmatter.title') || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                {title}
-              </Link>
-            </h3>
-            <small>
-              <time dateTime={node.frontmatter.dateJson}>
-                {node.frontmatter.date}
-              </time>
-            </small>
-            <small style={{ margin: '0 1rem' }}>
-              <span role="img" aria-label="Time to read">
-                🕐
-              </span>
-              {node.timeToRead} min
-            </small>
-            <small>
-              {(node.frontmatter.tags || []).map((tag) => (
-                <Link
-                  style={{ marginRight: '0.5rem' }}
-                  key={tag}
-                  to={`/${pageContext.language}/${tag}`}
-                >
-                  #{tag}
-                </Link>
-              ))}
-            </small>
-            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            {node.frontmatter.hero && (
-              <Img
-                fluid={node.frontmatter.hero.childImageSharp.fluid}
-                alt={node.frontmatter.title}
-              />
-            )}
-          </article>
-        )
-      })}
+      <main>
+        <List>
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug
+            return (
+              <ListItem>
+                <article key={node.fields.slug}>
+                  <h2
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                      {title}
+                    </Link>
+                  </h2>
+                  <small>
+                    <time dateTime={node.frontmatter.dateJson}>
+                      {node.frontmatter.date}
+                    </time>
+                  </small>
+                  <small style={{ margin: '0 1rem' }}>
+                    <span role="img" aria-label="Time to read">
+                      🕐
+                    </span>
+                    {node.timeToRead} min
+                  </small>
+                  <small>
+                    {(node.frontmatter.tags || []).map((tag) => (
+                      <Link
+                        style={{ marginRight: '0.5rem' }}
+                        key={tag}
+                        to={`/${pageContext.language}/${tag}`}
+                      >
+                        #{tag}
+                      </Link>
+                    ))}
+                  </small>
+                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  {node.frontmatter.hero && (
+                    <Img
+                      fluid={node.frontmatter.hero.childImageSharp.fluid}
+                      alt={node.frontmatter.title}
+                    />
+                  )}
+                </article>
+              </ListItem>
+            )
+          })}
+        </List>
+      </main>
       <Footer />
     </Layout>
   )

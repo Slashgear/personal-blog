@@ -6,7 +6,7 @@ import Toggle from './toggle'
 import sun from './sun.png'
 import moon from './moon.png'
 
-export const SwitchTheme = () => {
+export const SwitchTheme = ({ className }) => {
   const darkMode = useDarkMode()
 
   const [lightOn] = useSound('/switch-on.mp3')
@@ -14,6 +14,7 @@ export const SwitchTheme = () => {
 
   return (
     <Toggle
+      className={className}
       icons={{
         checked: (
           <img

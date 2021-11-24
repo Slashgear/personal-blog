@@ -11,6 +11,7 @@ import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
 import { Foundation } from '../components/foundation/foundation.component'
 import { OtherLanguage } from '../components/lang/otherLanguage.component'
+import { List, ListItem } from '../components/list.component'
 
 const BlogIndex = (props) => {
   const config = get(props, 'data.config')
@@ -33,7 +34,7 @@ const BlogIndex = (props) => {
         siteUrl={props.data.site.siteMetadata.siteUrl}
       />
 
-      <Bio>
+      <Bio component="header">
         <div dangerouslySetInnerHTML={{ __html: bio }} />
       </Bio>
 
@@ -41,52 +42,58 @@ const BlogIndex = (props) => {
 
       <Foundation lang={lang} />
 
-      {posts.map(({ node }) => {
-        const title = get(node, 'frontmatter.title') || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <h3
-              style={{
-                marginBottom: rhythm(1 / 4),
-              }}
-            >
-              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                {title}
-              </Link>
-            </h3>
-            <small>
-              <time dateTime={node.frontmatter.dateJson}>
-                {node.frontmatter.date}
-              </time>
-            </small>
-            <small style={{ margin: '0 1rem' }}>
-              <span role="img" aria-label="Time to read">
-                🕐
-              </span>
-              {node.timeToRead} min
-            </small>
-            <small>
-              {(node.frontmatter.tags || []).map((tag) => (
-                <Link
-                  style={{ marginRight: '0.5rem' }}
-                  key={tag}
-                  to={`/${props.pageContext.language}/${tag}`}
-                  data-testid="tag"
-                >
-                  #{tag}
-                </Link>
-              ))}
-            </small>
-            <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            {node.frontmatter.hero && (
-              <Img
-                fluid={node.frontmatter.hero.childImageSharp.fluid}
-                alt={node.frontmatter.title}
-              />
-            )}
-          </article>
-        )
-      })}
+      <main>
+        <List>
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug
+            return (
+              <ListItem>
+                <article key={node.fields.slug}>
+                  <h2
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                      {title}
+                    </Link>
+                  </h2>
+                  <small>
+                    <time dateTime={node.frontmatter.dateJson}>
+                      {node.frontmatter.date}
+                    </time>
+                  </small>
+                  <small style={{ margin: '0 1rem' }}>
+                    <span role="img" aria-label="Time to read">
+                      🕐
+                    </span>
+                    {node.timeToRead} min
+                  </small>
+                  <small>
+                    {(node.frontmatter.tags || []).map((tag) => (
+                      <Link
+                        style={{ marginRight: '0.5rem' }}
+                        key={tag}
+                        to={`/${props.pageContext.language}/${tag}`}
+                        data-testid="tag"
+                      >
+                        #{tag}
+                      </Link>
+                    ))}
+                  </small>
+                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                  {node.frontmatter.hero && (
+                    <Img
+                      fluid={node.frontmatter.hero.childImageSharp.fluid}
+                      alt={node.frontmatter.title}
+                    />
+                  )}
+                </article>
+              </ListItem>
+            )
+          })}
+        </List>
+      </main>
       <Footer />
     </Layout>
   )
