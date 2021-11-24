@@ -6,6 +6,10 @@ import Img from 'gatsby-image'
 const Logo = styled(Img)`
   flex-shrink: 0;
   display: none !important;
+  border-radius: 50%;
+
+  transition: border-radius 300ms ease-in;
+  box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
 
   @media screen and (min-width: 1024px) {
     display: inline-block !important;
@@ -13,9 +17,13 @@ const Logo = styled(Img)`
 `
 
 const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-grow: 1;
-  margin-right: 1rem;
+  margin: 0 1rem;
   padding-left: 0.2rem;
+  font-weight: 600;
 `
 
 const Blocquote = styled.blockquote`
@@ -27,14 +35,20 @@ const StyledLink = styled(Link)`
   display: flex;
   color: var(--textNormal);
   box-shadow: none;
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
   background: linear-gradient(to right, transparent 50%, #ea684c 50%);
   background-size: 200% 100%;
   background-position: left bottom;
+  border-radius: 0.75rem;
 
   &:hover,
   &:focus {
     background-position: right bottom;
+    box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
+
+    ${Logo} {
+      box-shadow: none;
+    }
   }
 `
 

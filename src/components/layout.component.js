@@ -34,6 +34,7 @@ export const Layout = ({ location, config, children, showHeader = true }) => {
           style={{
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            flex: '1',
             color: 'var(--header)',
           }}
         >
@@ -54,6 +55,7 @@ export const Layout = ({ location, config, children, showHeader = true }) => {
           style={{
             fontFamily: 'Montserrat, sans-serif',
             marginTop: 0,
+            flex: '1',
             marginBottom: rhythm(-1),
             color: 'var(--header)',
           }}
@@ -81,7 +83,7 @@ export const Layout = ({ location, config, children, showHeader = true }) => {
         color: 'var(--textNormal)',
         background: 'var(--bg)',
         transition: 'var(--bg-transition)',
-        maxWidth: rhythm(24),
+        maxWidth: '900px',
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >

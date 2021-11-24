@@ -9,6 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
+  min-height: 150px;
   margin-bottom: 2.5rem;
 
   * > div {
@@ -19,6 +20,8 @@ const Wrapper = styled.div`
 const Image = styled(Img)`
   float: left;
   flex-shrink: 0;
+  border-radius: 50%;
+  box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
 `
 
 export const Bio = ({ children, component = 'div' }) => {

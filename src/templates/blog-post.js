@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 import { Bio } from '../components/bio/bio.component'
@@ -15,6 +14,7 @@ import { PostMarkup } from '../components/markup/post.markup'
 import { Foundation } from '../components/foundation/foundation.component'
 import { Footer } from '../components/footer/footer.component'
 import { List, ListItem } from '../components/list.component'
+import { Hero } from '../components/hero.component'
 
 const PostContent = styled.main`
   margin-top: 2rem;
@@ -91,7 +91,7 @@ export default function BlogPostTemplate({
       />
 
       {post.frontmatter.hero && (
-        <Img
+        <Hero
           fluid={post.frontmatter.hero.childImageSharp.fluid}
           alt={post.frontmatter.title}
         />
@@ -138,18 +138,18 @@ export default function BlogPostTemplate({
                       {title}
                     </Link>
                   </h3>
-                  <small>
+                  <span>
                     <time dateTime={node.frontmatter.dateJson}>
                       {node.frontmatter.date}
                     </time>
-                  </small>
-                  <small style={{ margin: '0 1rem' }}>
+                  </span>
+                  <span style={{ margin: '0 1rem' }}>
                     <span role="img" aria-label="Time to read">
                       🕐
                     </span>
                     {node.timeToRead} min
-                  </small>
-                  <small>
+                  </span>
+                  <span>
                     {(node.frontmatter.tags || []).map((tag) => (
                       <Link
                         style={{ marginRight: '0.5rem' }}
@@ -159,7 +159,7 @@ export default function BlogPostTemplate({
                         #{tag}
                       </Link>
                     ))}
-                  </small>
+                  </span>
                   <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
                 </RelatedPost>
               )

@@ -83,7 +83,7 @@ const Resume = () => {
         marginLeft: 'auto',
         marginRight: 'auto',
         color: 'var(--textNormal)',
-        maxWidth: rhythm(24),
+        maxWidth: '1100px',
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >

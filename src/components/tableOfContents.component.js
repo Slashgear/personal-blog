@@ -37,7 +37,7 @@ const Aside = styled.aside`
     box-shadow: 0 1px 0 0 currentColor;
   }
 
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1700px) {
     & {
       display: block;
       position: fixed;

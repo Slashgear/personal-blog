@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 import { Bio } from '../components/bio/bio.component'
 import { Layout } from '../components/layout.component'
@@ -12,6 +12,28 @@ import { ListMarkup } from '../components/markup/list.markup'
 import { Foundation } from '../components/foundation/foundation.component'
 import { OtherLanguage } from '../components/lang/otherLanguage.component'
 import { List, ListItem } from '../components/list.component'
+
+const Grid = styled(List)`
+  --min-column-width: min(400px, 100%);
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--min-column-width), 1fr)
+  );
+  gap: 24px;
+  margin-top: 2rem;
+`
+
+const GridItem = styled(ListItem)`
+  padding: 1rem 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: 0.75rem;
+  box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
+
+  h2 {
+    margin-top: 0;
+  }
+`
 
 const BlogIndex = (props) => {
   const config = get(props, 'data.config')
@@ -43,11 +65,11 @@ const BlogIndex = (props) => {
       <Foundation lang={lang} />
 
       <main>
-        <List>
+        <Grid>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
-              <ListItem key={node.fields.slug}>
+              <GridItem key={node.fields.slug}>
                 <article>
                   <h2
                     style={{
@@ -58,18 +80,18 @@ const BlogIndex = (props) => {
                       {title}
                     </Link>
                   </h2>
-                  <small>
+                  <span>
                     <time dateTime={node.frontmatter.dateJson}>
                       {node.frontmatter.date}
                     </time>
-                  </small>
-                  <small style={{ margin: '0 1rem' }}>
+                  </span>
+                  <span style={{ margin: '0 1rem' }}>
                     <span role="img" aria-label="Time to read">
                       🕐
                     </span>
-                    {node.timeToRead} min
-                  </small>
-                  <small>
+                    {node.timeToRead}&nbsp;min
+                  </span>
+                  <span>
                     {(node.frontmatter.tags || []).map((tag) => (
                       <Link
                         style={{ marginRight: '0.5rem' }}
@@ -80,19 +102,12 @@ const BlogIndex = (props) => {
                         #{tag}
                       </Link>
                     ))}
-                  </small>
-                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  {node.frontmatter.hero && (
-                    <Img
-                      fluid={node.frontmatter.hero.childImageSharp.fluid}
-                      alt={node.frontmatter.title}
-                    />
-                  )}
+                  </span>
                 </article>
-              </ListItem>
+              </GridItem>
             )
           })}
-        </List>
+        </Grid>
       </main>
       <Footer />
     </Layout>
@@ -140,24 +155,6 @@ export const blogIndexFragment = graphql`
             dateJson: date(formatString: "YYYY-MM-DD")
             description
             tags
-            hero {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
-                }
-                image: fixed(
-                  fit: COVER
-                  width: 1080
-                  jpegProgressive: true
-                  jpegQuality: 60
-                  height: 1080
-                ) {
-                  src
-                  height
-                  width
-                }
-              }
-            }
           }
         }
       }

@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import get from 'lodash-es/get'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 import { Layout } from '../components/layout.component'
 import { rhythm } from '../utils/typography'
@@ -57,18 +56,18 @@ const TagList = ({ location, pageContext, data }) => {
                       {title}
                     </Link>
                   </h2>
-                  <small>
+                  <span>
                     <time dateTime={node.frontmatter.dateJson}>
                       {node.frontmatter.date}
                     </time>
-                  </small>
-                  <small style={{ margin: '0 1rem' }}>
+                  </span>
+                  <span style={{ margin: '0 1rem' }}>
                     <span role="img" aria-label="Time to read">
                       🕐
                     </span>
                     {node.timeToRead} min
-                  </small>
-                  <small>
+                  </span>
+                  <span>
                     {(node.frontmatter.tags || []).map((tag) => (
                       <Link
                         style={{ marginRight: '0.5rem' }}
@@ -78,14 +77,8 @@ const TagList = ({ location, pageContext, data }) => {
                         #{tag}
                       </Link>
                     ))}
-                  </small>
+                  </span>
                   <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                  {node.frontmatter.hero && (
-                    <Img
-                      fluid={node.frontmatter.hero.childImageSharp.fluid}
-                      alt={node.frontmatter.title}
-                    />
-                  )}
                 </article>
               </ListItem>
             )
@@ -129,24 +122,6 @@ export const tagListFragment = graphql`
             dateJson: date(formatString: "YYYY-MM-DD")
             description
             tags
-            hero {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
-                }
-                image: fixed(
-                  fit: COVER
-                  width: 1080
-                  jpegProgressive: true
-                  jpegQuality: 60
-                  height: 1080
-                ) {
-                  src
-                  height
-                  width
-                }
-              }
-            }
           }
         }
       }
