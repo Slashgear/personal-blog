@@ -14,12 +14,13 @@ import { EditOnGithubComponent } from '../components/editOnGithub.component'
 import { PostMarkup } from '../components/markup/post.markup'
 import { Foundation } from '../components/foundation/foundation.component'
 import { Footer } from '../components/footer/footer.component'
+import { List, ListItem } from '../components/list.component'
 
-const PostContent = styled.div`
+const PostContent = styled.main`
   margin-top: 2rem;
 `
 
-const RelatedPost = styled.div`
+const RelatedPost = styled(ListItem)`
   margin-left: 1rem;
 `
 
@@ -40,6 +41,7 @@ export default function BlogPostTemplate({
       location={location}
       config={data.config}
       translations={post.frontmatter.translations}
+      showHeader={false}
     >
       <GlobalMarkup
         type="article"
@@ -122,45 +124,47 @@ export default function BlogPostTemplate({
           <header>
             <h2>Related posts:</h2>
           </header>
-          {data.relatedPosts.edges.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug
-            return (
-              <RelatedPost data-testid="related-post" key={node.fields.slug}>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <small>
-                  <time dateTime={node.frontmatter.dateJson}>
-                    {node.frontmatter.date}
-                  </time>
-                </small>
-                <small style={{ margin: '0 1rem' }}>
-                  <span role="img" aria-label="Time to read">
-                    🕐
-                  </span>
-                  {node.timeToRead} min
-                </small>
-                <small>
-                  {(node.frontmatter.tags || []).map((tag) => (
-                    <Link
-                      style={{ marginRight: '0.5rem' }}
-                      key={tag}
-                      to={`/${language}/${tag}`}
-                    >
-                      #{tag}
+          <List>
+            {data.relatedPosts.edges.map(({ node }) => {
+              const title = get(node, 'frontmatter.title') || node.fields.slug
+              return (
+                <RelatedPost data-testid="related-post" key={node.fields.slug}>
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                    <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                      {title}
                     </Link>
-                  ))}
-                </small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              </RelatedPost>
-            )
-          })}
+                  </h3>
+                  <small>
+                    <time dateTime={node.frontmatter.dateJson}>
+                      {node.frontmatter.date}
+                    </time>
+                  </small>
+                  <small style={{ margin: '0 1rem' }}>
+                    <span role="img" aria-label="Time to read">
+                      🕐
+                    </span>
+                    {node.timeToRead} min
+                  </small>
+                  <small>
+                    {(node.frontmatter.tags || []).map((tag) => (
+                      <Link
+                        style={{ marginRight: '0.5rem' }}
+                        key={tag}
+                        to={`/${language}/${tag}`}
+                      >
+                        #{tag}
+                      </Link>
+                    ))}
+                  </small>
+                  <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                </RelatedPost>
+              )
+            })}
+          </List>
         </aside>
       ) : null}
     </Layout>

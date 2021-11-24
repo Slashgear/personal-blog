@@ -5,65 +5,74 @@ import styled from 'styled-components'
 import { rhythm } from '../utils/typography'
 import { SwitchTheme } from './themeSwitcher/switchTheme.component'
 
+const StyledSwitchTheme = styled(SwitchTheme)``
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  ${StyledSwitchTheme} {
+    margin-left: auto;
+  }
 `
 
 const Container = ({ children }) => (
   <Wrapper>
     {children}
-    <SwitchTheme />
+    <StyledSwitchTheme />
   </Wrapper>
 )
 
-export const Layout = ({ location, config, children }) => {
+export const Layout = ({ location, config, children, showHeader = true }) => {
   let header
 
-  if (`${__PATH_PREFIX__}${config.fields.slug}` === location.pathname) {
-    header = (
-      <h1
-        style={{
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-          color: 'var(--header)',
-        }}
-      >
-        <Link
+  if (showHeader) {
+    if (`${__PATH_PREFIX__}${config.fields.slug}` === location.pathname) {
+      header = (
+        <h1
           style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
+            marginBottom: rhythm(1.5),
+            marginTop: 0,
+            color: 'var(--header)',
           }}
-          to={config.fields.slug}
         >
-          {config.frontmatter.title}
-        </Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          fontFamily: 'Montserrat, sans-serif',
-          marginTop: 0,
-          marginBottom: rhythm(-1),
-          color: 'var(--header)',
-        }}
-      >
-        <Link
+          <Link
+            style={{
+              boxShadow: 'none',
+              textDecoration: 'none',
+            }}
+            to={config.fields.slug}
+          >
+            {config.frontmatter.title}
+          </Link>
+        </h1>
+      )
+    } else {
+      header = (
+        <h1
           style={{
-            boxShadow: 'none',
-            textDecoration: 'none',
-            color: 'inherit',
+            fontFamily: 'Montserrat, sans-serif',
+            marginTop: 0,
+            marginBottom: rhythm(-1),
+            color: 'var(--header)',
           }}
-          to="/"
         >
-          {config.frontmatter.title}
-        </Link>
-      </h3>
-    )
+          <Link
+            style={{
+              boxShadow: 'none',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+            to="/"
+          >
+            {config.frontmatter.title}
+          </Link>
+        </h1>
+      )
+    }
   }
+
   return (
     <div
       style={{
