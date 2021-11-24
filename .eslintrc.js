@@ -28,5 +28,6 @@ module.exports = {
     'max-len': 'off',
     'import/no-extraneous-dependencies': 'off',
     'react/destructuring-assignment': 'off',
+    'react/function-component-definition': 'off',
   },
 }
