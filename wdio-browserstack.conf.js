@@ -11,46 +11,10 @@ exports.config = {
   },
   capabilities: [
     {
-      device: 'Iphone 11',
-      os_version: '14',
-      browserName: 'ios',
-      realMobile: 'true',
-    },
-    {
-      device: 'Samsung Galaxy S21 Ultra',
-      os_version: '11.0',
-      browserName: 'android',
-      realMobile: 'true',
-    },
-    {
-      browser: 'Firefox',
-      browser_version: 'latest',
-      os: 'Windows',
-      os_version: '10',
-    },
-    {
       browser: 'chrome',
       browser_version: 'latest',
       os: 'Windows',
       os_version: '10',
-    },
-    {
-      browser: 'safari',
-      browser_version: 'latest',
-      os: 'OS X',
-      os_version: 'Big Sur',
-    },
-    {
-      browser: 'chrome',
-      browser_version: 'latest',
-      os: 'OS X',
-      os_version: 'Big Sur',
-    },
-    {
-      browser: 'Firefox',
-      browser_version: 'latest',
-      os: 'OS X',
-      os_version: 'Big Sur',
     },
   ],
   services: [
