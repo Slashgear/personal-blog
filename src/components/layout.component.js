@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import { rhythm } from '../utils/typography'
-import { SwitchTheme } from './themeSwitcher/switchTheme.component'
+import { ThemeSwitcher } from './themeSwitcher/themeSwitcher.component'
 
-const StyledSwitchTheme = styled(SwitchTheme)``
+const StyledSwitchTheme = styled(ThemeSwitcher)``
 
 const Wrapper = styled.div`
   display: flex;

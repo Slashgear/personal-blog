@@ -8,10 +8,10 @@ Feature: Theme switcher
     Then I should see theme switcher
     And Website should be in light mode
 
-    When I click theme switcher
+    When I click on dark switcher
     And Website should be in dark mode
 
-    When I click theme switcher
+    When I click on light switcher
     Then Website should be in light mode
 
     Examples:

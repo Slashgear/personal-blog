@@ -89,7 +89,7 @@ Une longue conférence mais qui reste intéressante et drôle qui montre les poi
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xqdWi6SblV8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Git 
+## Git
 
 ### 🇫🇷 Git reset : rien ne se perd, tout se transforme - [(Maxime Bréhin)](https://twitter.com/mbrehin)
 
