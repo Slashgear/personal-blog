@@ -46,8 +46,8 @@ const TagList = ({ location, pageContext, data }) => {
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             return (
-              <ListItem>
-                <article key={node.fields.slug}>
+              <ListItem key={node.fields.slug}>
+                <article>
                   <h2
                     style={{
                       marginBottom: rhythm(1 / 4),

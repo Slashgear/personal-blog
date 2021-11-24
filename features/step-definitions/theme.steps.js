@@ -1,7 +1,7 @@
 const { Then, When, Given } = require('@cucumber/cucumber')
 
 Then(/^I should see theme switcher$/, async () => {
-  await expect($('.react-toggle')).toBeDisplayedInViewport()
+  await expect($('[data-testid="theme-switcher"]')).toBeDisplayedInViewport()
 })
 
 Then(/^Website should be in (\w+) mode$/, async (mode) => {
@@ -9,8 +9,8 @@ Then(/^Website should be in (\w+) mode$/, async (mode) => {
   return body.isExisting()
 })
 
-When(/^I click theme switcher$/, () => {
-  $('.react-toggle').click()
+When(/^I click on (\w+) switcher$/, (theme) => {
+  $(`[data-testid="theme-switcher"] input[value="${theme}"]`).click()
 })
 
 Given(/^I force light mode$/, async () => {
