@@ -10,7 +10,7 @@ Then(/^Website should be in (\w+) mode$/, async (mode) => {
 })
 
 When(/^I click on (\w+) switcher$/, (theme) => {
-  $(`[data-testid="theme-switcher"] input[value="${theme}"]`).click()
+  $(`[data-testid="theme-switcher"] label[title="${theme}"]`).click()
 })
 
 Given(/^I force light mode$/, async () => {
