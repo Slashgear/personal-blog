@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to slashgear.github.io 👋</h1>
+<h1 align="center">Welcome to slashgear.github.io, Antoine Caron Blog codebase 👋</h1>
 <p>
   
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
@@ -22,10 +22,6 @@
 
 > Antoine Caron personal blog
 
-### 🏠 [Homepage](https://slashgear.github.io)
-
-### ✨ [Demo](https://slashgear.github.io)
-
 ## Install
 
 ```sh
@@ -42,7 +38,7 @@ yarn start
 
 👤 **Antoine Caron**
 
-- Website: http://slashgear.github.io/
+- Website: http://blog.slashgear.dev/
 - Twitter: [@Slashgear\_](https://twitter.com/Slashgear_)
 - Github: [@Slashgear](https://github.com/Slashgear)
 
