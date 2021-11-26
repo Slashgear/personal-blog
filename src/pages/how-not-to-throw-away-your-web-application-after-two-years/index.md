@@ -20,7 +20,7 @@ Feedback based on best practices applied to the web platform developed at _[Bedr
 At Bedrock Streaming many teams develop and maintain _frontend_ applications for our customers and users.
 Some of those application are not very young.
 In fact, the application I'm mainly working on is a website whose developments started in 2014.
-I have already mentioned it in different articles of [this blog](https://slashgear.github.io/).
+I have already mentioned it in different articles of [this blog](https://blog.slashgear.dev/).
 
 ![screenshot of the number of commits on master of our project 15668](../fr/comment-ne-pas-jeter-son-application-au-bout-de-deux-ans/commit-count.png)
 
@@ -155,7 +155,7 @@ A few years ago, this technical stack was rather complicated to set up, but toda
 [The site that hosts this blog post](https://github.com/Slashgear/slashgear.github.io) is itself proof of this.
 It only took me about ten minutes to set up this stack with [the WebdriverIo CLI](https://webdriver.io/docs/gettingstarted) to verify that my blog is working as expected.
 
-I recently published [an article presenting the implementation of this stack](https://slashgear.github.io/how-to-setup-e2e-tests-with-webdriverio/).
+I recently published [an article presenting the implementation of this stack](https://blog.slashgear.dev/how-to-setup-e2e-tests-with-webdriverio/).
 
 So here is an example of an E2E test file to give you an idea:
 
@@ -238,7 +238,7 @@ We use these tests for different reasons that cover needs that our functional te
 - facilitate the refactoring of our application by showing us the technical impacts of our modifications.
 
 With these tests, we put ourselves at the level of a utility function, a Redux action, a reducer, a React component.
-We rely mainly on [the `automock` functionality of Jest](https://slashgear.github.io/discover-jest-hidden-feature-automock/) which allows us to isolate our JS modules when we test.
+We rely mainly on [the `automock` functionality of Jest](https://blog.slashgear.dev/discover-jest-hidden-feature-automock/) which allows us to isolate our JS modules when we test.
 
 ![visual representation of the automock](../fr/comment-ne-pas-jeter-son-application-au-bout-de-deux-ans/mocked-modules.jpg)
 

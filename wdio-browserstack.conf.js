@@ -25,7 +25,7 @@ exports.config = {
       },
     ],
   ],
-  baseUrl: 'https://slashgear.github.io',
+  baseUrl: 'https://blog.slashgear.dev',
   logLevel: 'warn',
   coloredLogs: true,
   screenshotPath: './errorShots/',

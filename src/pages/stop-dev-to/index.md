@@ -59,6 +59,6 @@ All authors should have their own personal blog where they publish the content. 
 
 Dev.to has this feature, which is very rare. **I would really like this feature to be highlighted** so that the authors are aware of the problem.
 
-For example, this post is available on [my personal blog](https://slashgear.github.io/posts/stop-dev-to/) and its content is shared here on Dev.to.
+For example, this post is available on [my personal blog](https://blog.slashgear.dev/posts/stop-dev-to/) and its content is shared here on Dev.to.
 
 I also worked on a project for an open source syndication platform named ["Open Blog"](https://open-blog.dev/) in order to raise awareness about not being the owner of your content. If you liked this article, come take a look at it.

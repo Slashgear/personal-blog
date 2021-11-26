@@ -14,7 +14,7 @@ tags:
 ---
 
 Github Pages is a solution to host static websites directly in your Github repository by pushing site files to `gh-pages` branch.
-I use this feature to host [this blog](https://slashgear.github.io).
+I use this feature to host [this blog](https://blog.slashgear.dev).
 It is free and very useful for your own site or open source documentation.
 Here is a tutorial of how to publish Gatsby website with travis.
 

@@ -13,7 +13,7 @@ tags:
 
 ## Everything always starts with an idea
 
-Last week, as I was setting up the dark mode on [my personal website](https://slashgear.github.io/), I got motivated to work on a new package for the React community.
+Last week, as I was setting up the dark mode on [my personal website](https://blog.slashgear.dev/), I got motivated to work on a new package for the React community.
 
 > " Well, somebody shared a hook to handle the `prefers-color-scheme' feature in browsers, that's super handy."
 
