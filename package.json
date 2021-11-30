@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Antoine Caron <antoine395.caron@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^2.0.1",
+    "babel-plugin-styled-components": "^2.0.2",
     "gatsby": "^4.2.0",
     "gatsby-image": "^3.10.0",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
