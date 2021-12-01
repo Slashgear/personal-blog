@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Switcher = styled.span`
+export const Switcher = styled.div`
   --switch-height: 2.5em;
   --switch-padding: 0.25em;
   --switch-button-size: calc(var(--switch-height) - 2 * var(--switch-padding));
