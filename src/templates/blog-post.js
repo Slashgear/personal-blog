@@ -114,9 +114,6 @@ export default function BlogPostTemplate({
       <Bio>
         <div dangerouslySetInnerHTML={{ __html: siteBio }} />
       </Bio>
-
-      <SocialFooter />
-
       <Foundation lang={post.frontmatter.language} />
 
       {data.relatedPosts.edges.length ? (
@@ -167,6 +164,7 @@ export default function BlogPostTemplate({
           </List>
         </aside>
       ) : null}
+      <SocialFooter />
     </Layout>
   )
 }

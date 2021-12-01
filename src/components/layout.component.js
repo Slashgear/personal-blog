@@ -83,7 +83,7 @@ export const Layout = ({ location, config, children, showHeader = true }) => {
         color: 'var(--textNormal)',
         background: 'var(--bg)',
         transition: 'var(--bg-transition)',
-        maxWidth: '900px',
+        maxWidth: '1000px',
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >

@@ -158,7 +158,7 @@ const Resume = () => {
 
       <h2>Professional experiences</h2>
 
-      <h3>M6web / Bedrock Streaming - Frontend Developer</h3>
+      <h3>M6web / Bedrock Streaming - Frontend Lead Developer</h3>
       <i>Since 2017 as contractor first, then as an employe, Lyon (France)</i>
 
       <p>

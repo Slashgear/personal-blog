@@ -14,7 +14,7 @@ import { OtherLanguage } from '../components/lang/otherLanguage.component'
 import { List, ListItem } from '../components/list.component'
 
 const Grid = styled(List)`
-  --min-column-width: min(400px, 100%);
+  --min-column-width: min(700px, 100%);
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
@@ -32,6 +32,8 @@ const GridItem = styled(ListItem)`
 
   h2 {
     margin-top: 0;
+    font-weight: 700;
+    font-size: ${rhythm(0.8)};
   }
 `
 

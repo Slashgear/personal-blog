@@ -2,16 +2,22 @@ import React from 'react'
 import { Helmet } from 'react-helmet/es/Helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 import coverImage from '../assets/conferences/conference.jpg'
 import { rhythm } from '../utils/typography'
+import { Hero } from '../components/hero.component'
 
 const title = 'Conferences'
 const description =
   'You can find here all the conferences I gave to different events.'
 
-const Cover = styled(Img)`
+const Cover = styled(Hero)`
   margin-bottom: 1rem;
+  max-height: 300px;
+`
+
+const ConferenceImage = styled(Hero)`
+  height: auto;
+  max-width: 320px;
 `
 
 const Conferences = () => {
@@ -44,8 +50,8 @@ const Conferences = () => {
           node {
             id
             childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
+              fixed(width: 320) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
               }
             }
             name
@@ -170,13 +176,13 @@ const Conferences = () => {
             </p>
           ) : null}
 
-          <Img
+          <ConferenceImage
             loading="lazy"
             fadeIn
-            fluid={
+            fixed={
               conferenceImg.edges.find(
                 ({ node }) => node.name === conference.node.imageName
-              ).node.childImageSharp.fluid
+              ).node.childImageSharp.fixed
             }
             alt={conference.node.title}
           />

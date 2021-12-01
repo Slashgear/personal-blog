@@ -2,10 +2,10 @@ import { Helmet } from 'react-helmet'
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import Img from 'gatsby-image'
 import styled from 'styled-components'
 import coverImage from '../assets/abbe-pierre.jpg'
 import { rhythm } from '../utils/typography'
+import { Hero } from '../components/hero.component'
 
 const title = 'Support the Abbé Pierre Foundation'
 const description =
@@ -23,7 +23,7 @@ const DonateButton = styled(OutboundLink)`
   box-shadow: none;
 `
 
-const Cover = styled(Img)`
+const Cover = styled(Hero)`
   margin-bottom: 1rem;
 `
 

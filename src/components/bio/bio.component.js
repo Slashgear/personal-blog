@@ -2,7 +2,6 @@ import React from 'react'
 
 // Import typefaces
 import 'typeface-montserrat'
-import 'typeface-merriweather'
 
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'

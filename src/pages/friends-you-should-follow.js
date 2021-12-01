@@ -25,6 +25,8 @@ const Friend = styled.article`
   }
   img {
     width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
   }
 `
 

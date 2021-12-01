@@ -9,7 +9,6 @@ const Logo = styled(Img)`
   border-radius: 50%;
 
   transition: border-radius 300ms ease-in;
-  box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
 
   @media screen and (min-width: 1024px) {
     display: inline-block !important;
@@ -36,19 +35,12 @@ const StyledLink = styled(Link)`
   color: var(--textNormal);
   box-shadow: none;
   transition: all 200ms ease-in;
-  background: linear-gradient(to right, transparent 50%, #ea684c 50%);
-  background-size: 200% 100%;
-  background-position: left bottom;
   border-radius: 0.75rem;
 
   &:hover,
   &:focus {
-    background-position: right bottom;
+    background: #ea684c;
     box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
-
-    ${Logo} {
-      box-shadow: none;
-    }
   }
 `
 
