@@ -5,7 +5,7 @@ hero: ./cat.jpg
 date: 2019-07-31
 language: en
 tags:
-  - js
+  - javascript
   - babel
 ---
 

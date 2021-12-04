@@ -10,6 +10,7 @@ import { Switcher } from './styles/switcher.component'
 import { Button } from './styles/button.component'
 import { Input } from './styles/input.component'
 import { Label } from './styles/label.component'
+import { VisuallyHidden } from '../visuallyHiddent.component'
 
 export const ThemeSwitcher = () => {
   const darkMode = useDarkMode()
@@ -42,6 +43,7 @@ export const ThemeSwitcher = () => {
   return (
     <Switcher role="radiogroup" aria-label="Theme" data-testid="theme-switcher">
       <Label title="light">
+        <VisuallyHidden>Switch to light mode</VisuallyHidden>
         <Input
           type="radio"
           name="theme"
@@ -55,6 +57,7 @@ export const ThemeSwitcher = () => {
       </Label>
 
       <Label title="dark">
+        <VisuallyHidden>Switch to dark mode</VisuallyHidden>
         <Input
           type="radio"
           name="theme"

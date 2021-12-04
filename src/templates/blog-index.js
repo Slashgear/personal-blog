@@ -10,8 +10,8 @@ import { rhythm } from '../utils/typography'
 import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
 import { Foundation } from '../components/foundation/foundation.component'
-import { OtherLanguage } from '../components/lang/otherLanguage.component'
 import { List, ListItem } from '../components/list.component'
+import { TopTag } from '../components/topTag.component'
 
 const Grid = styled(List)`
   --min-column-width: min(700px, 100%);
@@ -26,15 +26,17 @@ const Grid = styled(List)`
 
 const GridItem = styled(ListItem)`
   padding: 1rem 1.25rem;
-  background: var(--bg-secondary);
   border-radius: 0.75rem;
-  box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
 
   h2 {
     margin-top: 0;
     font-weight: 700;
     font-size: ${rhythm(0.8)};
   }
+`
+
+const Main = styled.main`
+  display: flex;
 `
 
 const BlogIndex = (props) => {
@@ -46,7 +48,7 @@ const BlogIndex = (props) => {
   const lang = props.pageContext.language
 
   return (
-    <Layout location={props.location} config={config}>
+    <Layout location={props.location} config={config} lang={lang}>
       <Helmet
         htmlAttributes={{ lang }}
         meta={[{ name: 'description', content: description }]}
@@ -62,11 +64,9 @@ const BlogIndex = (props) => {
         <div dangerouslySetInnerHTML={{ __html: bio }} />
       </Bio>
 
-      <OtherLanguage language={lang} />
-
       <Foundation lang={lang} />
 
-      <main>
+      <Main>
         <Grid>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
@@ -110,7 +110,8 @@ const BlogIndex = (props) => {
             )
           })}
         </Grid>
-      </main>
+        <TopTag lang={lang}/>
+      </Main>
       <Footer />
     </Layout>
   )

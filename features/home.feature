@@ -4,7 +4,6 @@ Feature: Blog home page
 
   Scenario: Page title
     Given I am on the home page
-    Then I should see a page title
 
   Scenario: Metadata
     Given I am on the home page

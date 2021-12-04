@@ -5,10 +5,10 @@ date: 2021-12-04
 hero: ./advent.jpeg
 language: en
 tags:
-- js
-- oss
-- github
-- adventOfCode
+  - javascript
+  - oss
+  - github
+  - adventOfCode
 ---
 
 Like last year, I am taking part in the advent of code 2021.

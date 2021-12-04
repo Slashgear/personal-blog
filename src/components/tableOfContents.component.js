@@ -3,7 +3,10 @@ import styled from 'styled-components'
 
 const Aside = styled.aside`
   display: none;
-  width: 400px;
+  flex: 1;
+  min-width: 300px;
+  margin-left: 16px;
+  height: fit-content;
 
   nav {
     margin-left: 0.5rem;
@@ -37,12 +40,11 @@ const Aside = styled.aside`
     box-shadow: 0 1px 0 0 currentColor;
   }
 
-  @media screen and (min-width: 1700px) {
+  @media screen and (min-width: 1024px) {
     & {
       display: block;
-      position: fixed;
-      top: 7rem;
-      right: 2rem;
+      position: sticky;
+      top: 80px;
       font-size: 0.8rem;
     }
   }
