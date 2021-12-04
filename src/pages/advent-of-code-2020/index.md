@@ -8,7 +8,7 @@ tags:
   - js
   - oss
   - github
-  - kata
+  - adventOfCode
 ---
 
 I decided this year to try the adventofcode2020 challenge in JS to see.
