@@ -6,7 +6,7 @@ hero: ./gol.jpg
 language: en
 translations: ['fr', 'gol-hommage']
 tags:
-  - js
+  - javascript
   - canvas
 ---
 

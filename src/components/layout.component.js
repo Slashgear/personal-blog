@@ -2,9 +2,9 @@ import React from 'react'
 import { Navbar } from './navbar.component'
 import { MaxWidthWrapper } from './maxWidthWrapper'
 
-export const Layout = ({ children }) => (
+export const Layout = ({ children, lang }) => (
   <>
-    <Navbar />
+    <Navbar lang={lang} />
     <MaxWidthWrapper>{children}</MaxWidthWrapper>
   </>
 )

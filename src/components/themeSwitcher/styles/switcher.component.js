@@ -26,7 +26,7 @@ export const Switcher = styled.div`
   .light-mode & {
     --font-color: var(--grey-600);
     --icon-inactive-color: var(--grey-400);
-    --switch-background-color: var(--grey-100);
+    --switch-background-color: hsla(268, 100%, 73%, 0.2);
     --switch-shadow: inset 0px 0px 0.125em rgba(0, 0, 0, 0.06),
       inset 0px 0px 0.0625em rgba(0, 0, 0, 0.04);
     --switch-button-shadow: 0px 0px 0.125em rgba(0, 0, 0, 0.06),
@@ -36,7 +36,7 @@ export const Switcher = styled.div`
   .dark-mode & {
     --font-color: var(--grey-50);
     --icon-inactive-color: var(--grey-300);
-    --switch-background-color: var(--grey-500);
+    --switch-background-color: hsla(268, 100%, 73%, 0.7);
     --switch-shadow: inset 0px 0px 0.125em rgba(0, 0, 0, 0.16),
       inset 0px 0px 0.0625em rgba(0, 0, 0, 0.24);
     --switch-button-shadow: 0px 0px 0.125em rgba(0, 0, 0, 0.16),

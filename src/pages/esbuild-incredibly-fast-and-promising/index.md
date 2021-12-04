@@ -7,7 +7,7 @@ language: en
 translations: ['fr', 'esbuild-bundler-incroyablement-rapide-et-prometteur']
 tags:
   - webpack
-  - js
+  - javascript
   - bundler
 ---
 

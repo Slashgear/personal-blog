@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet'
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import { rhythm } from '../utils/typography'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Layout } from '../components/layout.component'
+import { PageTitle } from '../components/pageTitle.component'
 
 const title = 'Friends you should follow'
 const description =
@@ -18,7 +19,6 @@ const Friends = styled.div`
   }
 } 
 `
-
 const Friend = styled.article`
   header {
     margin-bottom: 0.7rem;
@@ -48,16 +48,7 @@ const FriendsYouShouldFollow = () => {
     }
   `)
   return (
-    <div
-      style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'var(--textNormal)',
-        maxWidth: '1100px',
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <Link to="/">Back to blog</Link>
+    <Layout>
       <Helmet
         htmlAttributes={{
           lang: 'en_US',
@@ -109,7 +100,7 @@ const FriendsYouShouldFollow = () => {
           },
         ]}
       />
-      <h1 style={{ color: 'var(--header)' }}>List of friends</h1>
+      <PageTitle style={{ color: 'var(--header)' }}>List of friends</PageTitle>
 
       <p>
         Here is an uncomplete and unordered list of my web friends that you
@@ -127,7 +118,7 @@ const FriendsYouShouldFollow = () => {
           </Friend>
         ))}
       </Friends>
-    </div>
+    </Layout>
   )
 }
 

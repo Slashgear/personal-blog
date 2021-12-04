@@ -1,9 +1,10 @@
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { rhythm } from '../utils/typography'
+import { Layout } from '../components/layout.component'
+import { PageTitle } from '../components/pageTitle.component'
 
 const title = 'Resume | Antoine Caron'
 const description =
@@ -23,12 +24,6 @@ const Me = styled(Img)`
   @media print {
     float: right;
     height: 200px;
-  }
-`
-
-const GoBackToSite = styled(Link)`
-  @media print {
-    display: none;
   }
 `
 
@@ -78,16 +73,7 @@ const Resume = () => {
   `)
 
   return (
-    <ResumeWrapper
-      style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'var(--textNormal)',
-        maxWidth: '1100px',
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <GoBackToSite to="/">Back to blog</GoBackToSite>
+    <Layout as={ResumeWrapper}>
       <Helmet
         htmlAttributes={{
           lang: 'en',
@@ -138,7 +124,7 @@ const Resume = () => {
           },
         ]}
       />
-      <h1 style={{ color: 'var(--header)' }}>Antoine Caron</h1>
+      <PageTitle style={{ color: 'var(--header)' }}>Antoine Caron</PageTitle>
 
       <Me
         className="picture-of-me"
@@ -292,7 +278,7 @@ const Resume = () => {
         <a href="https://www.univ-lyon1.fr/">Claude Bernard University</a>, that
         I have been invited to give various courses to Master 1 or 2.
       </p>
-    </ResumeWrapper>
+    </Layout>
   )
 }
 

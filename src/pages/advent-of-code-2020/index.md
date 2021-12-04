@@ -5,7 +5,7 @@ date: 2020-12-04
 hero: ./advent.jpeg
 language: en
 tags:
-  - js
+  - javascript
   - oss
   - github
   - adventOfCode

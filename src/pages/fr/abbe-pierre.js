@@ -1,12 +1,13 @@
 import { Helmet } from 'react-helmet'
 import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { rhythm } from '../../utils/typography'
 
 import coverImage from '../../assets/abbe-pierre.jpg'
+import { Layout } from '../../components/layout.component'
+import { Hero } from '../../components/hero.component'
+import { PageTitle } from '../../components/pageTitle.component'
 
 const title = 'Soutenez la fondation Abbé Pierre'
 const description =
@@ -25,7 +26,7 @@ const DonateButton = styled(OutboundLink)`
   box-shadow: none;
 `
 
-const Cover = styled(Img)`
+const Cover = styled(Hero)`
   margin-bottom: 1rem;
 `
 
@@ -52,17 +53,7 @@ const Fundation = () => {
     `
   )
   return (
-    <div
-      style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'var(--textNormal)',
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <Link to="/">Retour au blog</Link>
-
+    <Layout>
       <Helmet
         htmlAttributes={{
           lang: 'en_US',
@@ -128,9 +119,6 @@ const Fundation = () => {
           },
         ]}
       />
-      <h1 style={{ color: 'var(--header)' }}>
-        Soutenez la fondation Abbé Pierre
-      </h1>
 
       <Cover
         loading="lazy"
@@ -138,6 +126,10 @@ const Fundation = () => {
         fluid={img.childImageSharp.fluid}
         alt="Foundation image"
       />
+
+      <PageTitle style={{ color: 'var(--header)' }}>
+        Soutenez la fondation Abbé Pierre
+      </PageTitle>
 
       <blockquote>
         "Nous sommes tous des hommes d'une seule et même Terre."
@@ -225,7 +217,7 @@ const Fundation = () => {
           allowFullScreen
         />
       </div>
-    </div>
+    </Layout>
   )
 }
 

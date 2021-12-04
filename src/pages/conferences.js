@@ -1,10 +1,11 @@
 import React from 'react'
 import { Helmet } from 'react-helmet/es/Helmet'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import coverImage from '../assets/conferences/conference.jpg'
-import { rhythm } from '../utils/typography'
 import { Hero } from '../components/hero.component'
+import { Layout } from '../components/layout.component'
+import { PageTitle } from '../components/pageTitle.component'
 
 const title = 'Conferences'
 const description =
@@ -83,16 +84,7 @@ const Conferences = () => {
     }
   `)
   return (
-    <div
-      style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        color: 'var(--textNormal)',
-        maxWidth: '1100px',
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      <Link to="/">Back to blog</Link>
+    <Layout>
       <Helmet
         htmlAttributes={{
           lang: 'en_US',
@@ -152,7 +144,6 @@ const Conferences = () => {
           },
         ]}
       />
-      <h1 style={{ color: 'var(--header)' }}>Conferences</h1>
 
       <Cover
         loading="lazy"
@@ -160,6 +151,8 @@ const Conferences = () => {
         fluid={img.childImageSharp.fluid}
         alt="Conference room photography"
       />
+
+      <PageTitle style={{ color: 'var(--header)' }}>Conferences</PageTitle>
 
       {conferences.map((conference) => (
         <article key={conference.node.id} className="conference">
@@ -202,7 +195,7 @@ const Conferences = () => {
           </ul>
         </article>
       ))}
-    </div>
+    </Layout>
   )
 }
 

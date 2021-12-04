@@ -5,7 +5,7 @@ import { useLanguage } from './useLanguage'
 
 const Container = styled.div`
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   font-weight: bold;
   background-color: hsla(268, 53%, 51%, 30%);
   border-radius: 0.75rem;

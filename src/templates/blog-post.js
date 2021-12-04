@@ -15,6 +15,7 @@ import { Foundation } from '../components/foundation/foundation.component'
 import { Footer } from '../components/footer/footer.component'
 import { List, ListItem } from '../components/list.component'
 import { Hero } from '../components/hero.component'
+import { PageTitle } from '../components/pageTitle.component'
 
 const PostContent = styled.main`
   margin-top: 2rem;
@@ -26,6 +27,10 @@ const RelatedPost = styled(ListItem)`
 
 const SocialFooter = styled(Footer)`
   margin: 3rem;
+`
+
+const Main = styled.main`
+  display: flex;
 `
 
 export default function BlogPostTemplate({
@@ -42,6 +47,7 @@ export default function BlogPostTemplate({
       config={data.config}
       translations={post.frontmatter.translations}
       showHeader={false}
+      lang={language}
     >
       <GlobalMarkup
         type="article"
@@ -58,17 +64,21 @@ export default function BlogPostTemplate({
         dateJson={post.frontmatter.dateJson}
         tags={post.frontmatter.tags}
       />
-      <h1 style={{ color: 'var(--header)' }}>{post.frontmatter.title}</h1>
-      {post.headings.length > 1 && (
-        <TableOfContents tableOfContents={post.tableOfContents} />
+
+      {post.frontmatter.hero && (
+        <Hero
+          fluid={post.frontmatter.hero.childImageSharp.fluid}
+          alt={post.frontmatter.title}
+        />
       )}
-      <div
-        style={{
+
+      <PageTitle style={{ color: 'var(--header)' }}>{post.frontmatter.title}</PageTitle>
+
+      <div style={{
           ...scale(-1 / 5),
           marginBottom: rhythm(1),
           marginTop: rhythm(-1),
-        }}
-      >
+        }}>
         <time dateTime={post.frontmatter.dateJson}>
           {post.frontmatter.date}
         </time>
@@ -85,25 +95,24 @@ export default function BlogPostTemplate({
         </small>
       </div>
 
-      <AvailableLanguages
-        language={language}
-        translations={post.frontmatter.translations}
-      />
-
-      {post.frontmatter.hero && (
-        <Hero
-          fluid={post.frontmatter.hero.childImageSharp.fluid}
-          alt={post.frontmatter.title}
-        />
-      )}
-
-      <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      <PostMarkup
-        post={post}
-        slug={slug}
-        siteUrl={data.site.siteMetadata.siteUrl}
-      />
-      <EditOnGithubComponent slug={slug} />
+      <Main>
+        <div style={{ flex: '3', minWidth: '700px'}}>
+          <AvailableLanguages
+            language={language}
+            translations={post.frontmatter.translations}
+          />
+          <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
+          <PostMarkup
+            post={post}
+            slug={slug}
+            siteUrl={data.site.siteMetadata.siteUrl}
+          />
+          <EditOnGithubComponent slug={slug} />
+        </div>
+        {post.headings.length > 1 && (
+          <TableOfContents tableOfContents={post.tableOfContents} />
+        )}
+      </Main>
 
       <hr
         style={{
@@ -164,6 +173,7 @@ export default function BlogPostTemplate({
           </List>
         </aside>
       ) : null}
+
       <SocialFooter />
     </Layout>
   )
@@ -209,7 +219,7 @@ export const pageQuery = graphql`
         tags
         hero {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
             image: fixed(fit: COVER, width: 1080, jpegProgressive: true) {

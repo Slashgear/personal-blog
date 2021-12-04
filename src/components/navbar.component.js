@@ -5,6 +5,7 @@ import { rhythm } from '../utils/typography'
 import { MaxWidthWrapper } from './maxWidthWrapper'
 import { ThemeSwitcher } from './themeSwitcher/themeSwitcher.component'
 import { Switcher } from './themeSwitcher/styles/switcher.component'
+import { Rss } from './rss.component'
 
 const Wrapper = styled(MaxWidthWrapper)`
   display: flex;
@@ -20,46 +21,105 @@ const Wrapper = styled(MaxWidthWrapper)`
   ${Switcher} {
     margin-left: auto;
   }
+  
+  @media print {
+   display: none;
+  }
 `
 
 const Brand = styled.div`
   font-weight: 800;
-  font-size: ${rhythm(1.1)};
+  font-size: 1.125rem;
   color: var(--header);
   padding: 0 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.625rem;
+  }
 `
 
 const Nav = styled.nav``
 
 const List = styled.ul`
-  display: flex;
+  display: none;
   align-items: center;
   margin: 0;
   padding: 0;
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 `
 
 const NavItem = styled.li`
   display: block;
   margin: 0;
   padding: 0 ${rhythm(0.25)};
+  font-weight: 600;
+`
+const ExtendLink = styled(Link).attrs({
+  activeClassName: 'active'
+})`
+  text-decoration: none;
+  box-shadow: none;
+
+  &.active {
+    box-shadow:0 1px 0 0 currentColor;
+  }
 `
 
-export const Navbar = () => (
+const RssLink = styled(ExtendLink)`
+  height: 24px;
+  color: var(--header);
+  opacity: 0.4;
+  padding: 0 20px;
+  
+  &:hover, &:focus {
+    opacity: 1;
+  }
+`
+
+const i18n = {
+  en: {
+    home: 'Latest post',
+    resume: 'Resume',
+    conference: 'Conferences',
+    translation: 'FR',
+    target: '/',
+    translatedTarget: '/fr'
+  },
+  fr: {
+    home: 'Derniers articles',
+    resume: 'CV',
+    conference: 'Conférences',
+    translation: 'EN',
+    target: '/fr',
+    translatedTarget: '/'
+  }
+}
+
+export const Navbar = ({ lang=  'en' }) => (
   <Wrapper as="header">
     <Brand>Antoine Caron</Brand>
     <Nav>
       <List>
         <NavItem>
-          <Link to="/">Latest</Link>
+          <ExtendLink to={i18n[lang].target}>{i18n[lang].home}</ExtendLink>
         </NavItem>
         <NavItem>
-          <Link to="/">Tags</Link>
+          <ExtendLink to="/resume">{i18n[lang].resume}</ExtendLink>
         </NavItem>
         <NavItem>
-          <Link to="/resume">Resume</Link>
+          <ExtendLink to="/conferences">{i18n[lang].conference}</ExtendLink>
+        </NavItem>
+        <NavItem >
+          <ExtendLink to={i18n[lang].translatedTarget}>{i18n[lang].translation}</ExtendLink>
         </NavItem>
       </List>
     </Nav>
     <ThemeSwitcher />
+    <RssLink to="/rss.xml">
+      <Rss />
+    </RssLink>
   </Wrapper>
 )

@@ -9,6 +9,7 @@ import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
 import lang from '../components/lang/lang.json'
 import { List, ListItem } from '../components/list.component'
+import { PageTitle } from '../components/pageTitle.component'
 
 const TagList = ({ location, pageContext, data }) => {
   const posts = get(data, 'allMarkdownRemark.edges')
@@ -24,6 +25,7 @@ const TagList = ({ location, pageContext, data }) => {
           title: `#${pageContext.tag}`,
         },
       }}
+      lang={pageContext.language}
     >
       <Helmet
         htmlAttributes={{ lang: pageContext.language }}
@@ -41,6 +43,7 @@ const TagList = ({ location, pageContext, data }) => {
       />
       <ListMarkup posts={posts} siteUrl={data.site.siteMetadata.siteUrl} />
       <main>
+        <PageTitle>#{pageContext.tag}</PageTitle>
         <List>
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
