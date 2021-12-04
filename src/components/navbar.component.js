@@ -85,6 +85,7 @@ const i18n = {
     resume: 'Resume',
     conference: 'Conferences',
     translation: 'FR',
+    hrefLang: 'fr',
     target: '/',
     translatedTarget: '/fr'
   },
@@ -93,6 +94,7 @@ const i18n = {
     resume: 'CV',
     conference: 'Conférences',
     translation: 'EN',
+    hrefLang: 'en',
     target: '/fr',
     translatedTarget: '/'
   }
@@ -113,7 +115,7 @@ export const Navbar = ({ lang=  'en' }) => (
           <ExtendLink to="/conferences">{i18n[lang].conference}</ExtendLink>
         </NavItem>
         <NavItem >
-          <ExtendLink to={i18n[lang].translatedTarget}>{i18n[lang].translation}</ExtendLink>
+          <ExtendLink to={i18n[lang].translatedTarget} hrefLang={i18n[lang].hrefLang}>{i18n[lang].translation}</ExtendLink>
         </NavItem>
       </List>
     </Nav>
