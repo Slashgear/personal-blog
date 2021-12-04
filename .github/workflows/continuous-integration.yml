@@ -14,13 +14,13 @@ jobs:
       - name: Install Chromium
         run: sudo apt-get install chromium-browser firefox openjdk-8-jdk
       - uses: actions/checkout@v2
-      - name: Gatsby cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            **/public
-            **/.cache
-          key: gatsby-cache
+#      - name: Gatsby cache
+#        uses: actions/cache@v2
+#        with:
+#          path: |
+#            **/public
+#            **/.cache
+#          key: gatsby-cache
       - name: Yarn cache
         uses: actions/cache@v2
         with:
