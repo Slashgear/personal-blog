@@ -12,7 +12,6 @@ import { AvailableLanguages } from '../components/lang/availableLanguages.compon
 import { EditOnGithubComponent } from '../components/editOnGithub.component'
 import { PostMarkup } from '../components/markup/post.markup'
 import { Foundation } from '../components/foundation/foundation.component'
-import { Footer } from '../components/footer/footer.component'
 import { List, ListItem } from '../components/list.component'
 import { Hero } from '../components/hero.component'
 import { PageTitle } from '../components/pageTitle.component'
@@ -23,10 +22,6 @@ const PostContent = styled.main`
 
 const RelatedPost = styled(ListItem)`
   margin-left: 1rem;
-`
-
-const SocialFooter = styled(Footer)`
-  margin: 3rem;
 `
 
 const Main = styled.main`
