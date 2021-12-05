@@ -5,7 +5,6 @@ import { Link, graphql } from 'gatsby'
 
 import { Layout } from '../components/layout.component'
 import { rhythm } from '../utils/typography'
-import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
 import lang from '../components/lang/lang.json'
 import { List, ListItem } from '../components/list.component'
@@ -88,7 +87,6 @@ const TagList = ({ location, pageContext, data }) => {
           })}
         </List>
       </main>
-      <Footer />
     </Layout>
   )
 }

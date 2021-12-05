@@ -7,7 +7,6 @@ import styled from 'styled-components'
 import { Bio } from '../components/bio/bio.component'
 import { Layout } from '../components/layout.component'
 import { rhythm } from '../utils/typography'
-import { Footer } from '../components/footer/footer.component'
 import { ListMarkup } from '../components/markup/list.markup'
 import { Foundation } from '../components/foundation/foundation.component'
 import { List, ListItem } from '../components/list.component'
@@ -108,7 +107,6 @@ const BlogIndex = (props) => {
         </Grid>
         <TopTag lang={lang}/>
       </Main>
-      <Footer />
     </Layout>
   )
 }
