@@ -88,7 +88,6 @@ const TagList = ({ location, pageContext, data }) => {
           })}
         </List>
       </main>
-      <Footer />
     </Layout>
   )
 }

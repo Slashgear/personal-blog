@@ -108,7 +108,6 @@ const BlogIndex = (props) => {
         </Grid>
         <TopTag lang={lang}/>
       </Main>
-      <Footer />
     </Layout>
   )
 }

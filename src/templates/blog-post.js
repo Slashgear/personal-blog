@@ -174,7 +174,6 @@ export default function BlogPostTemplate({
         </aside>
       ) : null}
 
-      <SocialFooter />
     </Layout>
   )
 }

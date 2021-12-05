@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Helmet } from 'react-helmet'
@@ -53,7 +53,9 @@ const Pictures = () => {
 
     <Mansonery>
       {images.allFile.edges.map(({node}) => <MansoneryItem key={node.id}>
-        <Img fluid={node.childImageSharp.fluid} style={{ marginBottom: 'var(--gap)'}} alt={node.name} loading="lazy"/>
+        <Link to={node.childImageSharp.fluid.src} target="_blank">
+          <Img fluid={node.childImageSharp.fluid} style={{ marginBottom: 'var(--gap)'}} alt={node.name} loading="lazy"/>
+        </Link>
       </MansoneryItem>)}
     </Mansonery>
   </Layout>
