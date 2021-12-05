@@ -29,9 +29,14 @@ const Wrapper = styled(MaxWidthWrapper)`
 
 const Brand = styled.div`
   font-weight: 800;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   color: var(--header);
   padding: 0 10px;
+  box-shadow: none;
+
+  @media screen and (min-width: 375px) {
+    font-size: 1.125rem;
+  }
 
   @media screen and (min-width: 768px) {
     font-size: 1.625rem;
@@ -57,6 +62,7 @@ const NavItem = styled.li`
   padding: 0 ${rhythm(0.25)};
   font-weight: 600;
 `
+
 const ExtendLink = styled(Link).attrs({
   activeClassName: 'active'
 })`
@@ -102,7 +108,7 @@ const i18n = {
 
 export const Navbar = ({ lang=  'en' }) => (
   <Wrapper as="header">
-    <Brand>Antoine Caron</Brand>
+    <Brand as={Link} to={i18n[lang].target}>Antoine Caron</Brand>
     <Nav>
       <List>
         <NavItem>

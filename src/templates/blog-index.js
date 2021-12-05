@@ -14,12 +14,8 @@ import { List, ListItem } from '../components/list.component'
 import { TopTag } from '../components/topTag.component'
 
 const Grid = styled(List)`
-  --min-column-width: min(700px, 100%);
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--min-column-width), 1fr)
-  );
+  grid-auto-columns: minmax(10px, auto);
   gap: 24px;
   margin-top: 2rem;
 `

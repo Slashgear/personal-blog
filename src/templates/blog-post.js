@@ -96,7 +96,7 @@ export default function BlogPostTemplate({
       </div>
 
       <Main>
-        <div style={{ flex: '3', minWidth: '700px'}}>
+        <div style={{ flex: '3', minWidth: '70vw'}}>
           <AvailableLanguages
             language={language}
             translations={post.frontmatter.translations}
