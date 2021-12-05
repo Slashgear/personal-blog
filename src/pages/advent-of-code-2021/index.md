@@ -42,7 +42,7 @@ packages/
 
 For now, you can find solution for:
 
-- [2021 day 1](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-1)
-- [2021 day 2](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-2)
-- [2021 day 3](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-3)
-- [2021 day 4](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-4)
+- [2021 day 1](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-01)
+- [2021 day 2](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-02)
+- [2021 day 3](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-03)
+- [2021 day 4](https://github.com/Slashgear/advent-of-code/tree/main/packages/2021/day-04)
