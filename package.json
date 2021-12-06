@@ -9,7 +9,7 @@
     "gatsby": "^4.2.0",
     "gatsby-image": "^3.10.0",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
-    "gatsby-plugin-canonical-urls": "^4.2.0",
+    "gatsby-plugin-canonical-urls": "^4.3.0",
     "gatsby-plugin-feed": "^4.2.0",
     "gatsby-plugin-google-analytics": "^4.2.0",
     "gatsby-plugin-manifest": "^4.2.0",
