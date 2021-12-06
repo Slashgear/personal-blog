@@ -1006,14 +1006,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.3.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.15.4"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.15.4.tgz"
-  integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.16.3":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.3.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.16.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
   integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
@@ -6599,10 +6592,10 @@ gatsby-plugin-typescript@^4.2.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.2.0"
 
-gatsby-plugin-typography@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-4.2.0.tgz#c9f201ef8f62f18827764d4a84d3569efb72ca0a"
-  integrity sha512-HvAlWnvPqBH9DYQKqEy4h4IbJdEygDAMukeHcfibastNZDscwQFhjqgDX+QtQmfv71RdiKn9wpjo/T4x0FtHwg==
+gatsby-plugin-typography@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-4.3.0.tgz#b93811af2dc926ddff63720beee55d1fa6b77771"
+  integrity sha512-aDhEi/RdPydSWFamKdLbI6p4vcKRex9RWSlIHCiwpp0U0Sg4uGlfMCr/eToamFK7yzWe3eA6ChvgpGOeNbpzyw==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
