@@ -7,7 +7,7 @@ const TagList = styled.aside`
   margin-top: 1rem;
   padding: 24px;
   flex: 1 0 30%;
-  
+
   @media screen and (min-width: 768px) {
     display: block;
   }
@@ -34,21 +34,36 @@ const Flex = styled.div`
   gap: 8px;
 `
 
-const TOP_TAGS = ['javascript', 'webpack', 'github', 'react', 'bundler', 'action', 'git', 'CI'];
+const TOP_TAGS = [
+  'javascript',
+  'webpack',
+  'github',
+  'react',
+  'bundler',
+  'action',
+  'git',
+  'CI',
+]
 
 const i18n = {
   fr: {
-    heading: 'Catégories'
+    heading: 'Catégories',
   },
   en: {
-    heading: 'Top categories'
-  }
+    heading: 'Top categories',
+  },
 }
 
-export const TopTag = ({ lang = 'en' }) => <TagList>
+export const TopTag = ({ lang = 'en' }) => (
+  <TagList>
     <Heading>{i18n[lang].heading}</Heading>
 
     <Flex>
-      {TOP_TAGS.map(tag => <Tag key={tag} to={`/${lang}/${tag}`}>#{tag}</Tag>)}
+      {TOP_TAGS.map((tag) => (
+        <Tag key={tag} to={`/${lang}/${tag}`}>
+          #{tag}
+        </Tag>
+      ))}
     </Flex>
   </TagList>
+)

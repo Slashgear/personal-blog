@@ -67,13 +67,17 @@ export default function BlogPostTemplate({
         />
       )}
 
-      <PageTitle style={{ color: 'var(--header)' }}>{post.frontmatter.title}</PageTitle>
+      <PageTitle style={{ color: 'var(--header)' }}>
+        {post.frontmatter.title}
+      </PageTitle>
 
-      <div style={{
+      <div
+        style={{
           ...scale(-1 / 5),
           marginBottom: rhythm(1),
           marginTop: rhythm(-1),
-        }}>
+        }}
+      >
         <time dateTime={post.frontmatter.dateJson}>
           {post.frontmatter.date}
         </time>
@@ -91,7 +95,7 @@ export default function BlogPostTemplate({
       </div>
 
       <Main>
-        <div style={{ flex: '3', minWidth: '50vw', maxWidth: '70vw'}}>
+        <div style={{ flex: '3', minWidth: '50vw', maxWidth: '70vw' }}>
           <AvailableLanguages
             language={language}
             translations={post.frontmatter.translations}
@@ -168,7 +172,6 @@ export default function BlogPostTemplate({
           </List>
         </aside>
       ) : null}
-
     </Layout>
   )
 }

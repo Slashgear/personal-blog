@@ -21,9 +21,9 @@ const Wrapper = styled(MaxWidthWrapper)`
   ${Switcher} {
     margin-left: auto;
   }
-  
+
   @media print {
-   display: none;
+    display: none;
   }
 `
 
@@ -50,7 +50,7 @@ const List = styled.ul`
   align-items: center;
   margin: 0;
   padding: 0;
-  
+
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -64,13 +64,13 @@ const NavItem = styled.li`
 `
 
 const ExtendLink = styled(Link).attrs({
-  activeClassName: 'active'
+  activeClassName: 'active',
 })`
   text-decoration: none;
   box-shadow: none;
 
   &.active {
-    box-shadow:0 1px 0 0 currentColor;
+    box-shadow: 0 1px 0 0 currentColor;
   }
 `
 
@@ -79,8 +79,9 @@ const RssLink = styled(ExtendLink)`
   color: var(--header);
   opacity: 0.4;
   padding: 0 20px;
-  
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 `
@@ -93,7 +94,7 @@ const i18n = {
     translation: 'FR',
     hrefLang: 'fr',
     target: '/',
-    translatedTarget: '/fr'
+    translatedTarget: '/fr',
   },
   fr: {
     home: 'Derniers articles',
@@ -102,13 +103,15 @@ const i18n = {
     translation: 'EN',
     hrefLang: 'en',
     target: '/fr',
-    translatedTarget: '/'
-  }
+    translatedTarget: '/',
+  },
 }
 
-export const Navbar = ({ lang=  'en' }) => (
+export const Navbar = ({ lang = 'en' }) => (
   <Wrapper as="header">
-    <Brand as={Link} to={i18n[lang].target}>Antoine Caron</Brand>
+    <Brand as={Link} to={i18n[lang].target}>
+      Antoine Caron
+    </Brand>
     <Nav>
       <List>
         <NavItem>
@@ -120,8 +123,13 @@ export const Navbar = ({ lang=  'en' }) => (
         <NavItem>
           <ExtendLink to="/conferences">{i18n[lang].conference}</ExtendLink>
         </NavItem>
-        <NavItem >
-          <ExtendLink to={i18n[lang].translatedTarget} hrefLang={i18n[lang].hrefLang}>{i18n[lang].translation}</ExtendLink>
+        <NavItem>
+          <ExtendLink
+            to={i18n[lang].translatedTarget}
+            hrefLang={i18n[lang].hrefLang}
+          >
+            {i18n[lang].translation}
+          </ExtendLink>
         </NavItem>
       </List>
     </Nav>

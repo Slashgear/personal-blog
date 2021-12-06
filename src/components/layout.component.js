@@ -7,6 +7,6 @@ export const Layout = ({ children, lang }) => (
   <>
     <Navbar lang={lang} />
     <MaxWidthWrapper>{children}</MaxWidthWrapper>
-    <Footer/>
+    <Footer />
   </>
 )

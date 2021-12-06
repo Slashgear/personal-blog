@@ -12,7 +12,7 @@ export const Rss = () => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 461.432 461.432"
   >
-		<title>RSS link</title>
+    <title>RSS link</title>
     <g id="lines__x003C_Group_x003E_" fill="currentColor">
       <g id="circle">
         <path
