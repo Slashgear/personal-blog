@@ -77,7 +77,8 @@ const i18n = {
     },
     links: {
       '/pictures': 'Best shots/pictures',
-      '/conferences': 'Conferences',
+      '/conferences': 'Personal conferences',
+      '/fr/les-conferences-tech-a-voir-et-a-revoir/': 'Conferences I recommand to watch',
       '/friends-you-should-follow': 'Friends',
       '/abbe-pierre': 'Foundation',
       '/resume': 'Resume',
@@ -91,7 +92,8 @@ const i18n = {
     },
     links: {
       '/pictures': 'Mes meilleurs photos',
-      '/conferences': 'Conférences',
+      '/conferences': 'Mes conférences',
+      '/fr/les-conferences-tech-a-voir-et-a-revoir/': 'Les conférences que je recommande',
       '/friends-you-should-follow': 'Amis que vous devriez suivre',
       '/abbe-pierre': 'Asso que je soutiens',
       '/resume': 'CV',
