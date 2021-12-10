@@ -70,7 +70,7 @@ const SOCIAL_LINKS = {
 
 const i18n = {
   en: {
-    heading: 'Made love by myslelf with Gatsby',
+    heading: 'Made with love by myslelf with Gatsby',
     categories: {
       social: 'Socials',
       links: 'Links',
