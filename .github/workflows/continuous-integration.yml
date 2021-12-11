@@ -37,7 +37,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: build
-          path: out
+          path: ./public
 
   e2e:
     needs: build
