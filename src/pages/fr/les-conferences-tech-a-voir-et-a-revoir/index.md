@@ -1,6 +1,6 @@
 ---
 title: Les conférences que je recommande à mes étudiants
-description: Mes étudiants me demandent souvent si j'ai des bonnes ressources pour faire de la veille et apprendre. Je leur recommande souvent des vidéos de conférences ausquelles j'ai assisté. En voilà une petite collection.
+description: Mes étudiants me demandent souvent si j'ai des bonnes ressources pour faire de la veille et apprendre. Je leur recommande souvent des vidéos de conférences auxquelles j'ai assisté. En voilà une petite collection.
 date: 2020-11-19
 hero: ./conference.jpg
 language: fr
