@@ -226,3 +226,7 @@ De nouveau une conférence de Romuald qui aborde d'autres sujets.
 Parlons géopolitique, gouvernance, cloud souverain.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7VnJ_NiiHas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 🇫🇷 Trucs et astuces pour réussir son burn-out [(Julia Lehoux, ](https://twitter.com/julia_lehoux)[Cynthia Staebler)](https://twitter.com/CynthiaStaebler)
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eYw6PQfKJr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
