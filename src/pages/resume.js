@@ -1,8 +1,6 @@
-import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 import { Layout } from '../components/layout.component'
 import { PageTitle } from '../components/pageTitle.component'
 
@@ -10,22 +8,6 @@ const title = 'Resume | Antoine Caron'
 const description =
   'This is my resume in which you can find some of my professional experiences.'
 
-const Me = styled(Img)`
-  display: block;
-  height: 300px;
-  width: auto;
-  margin: 0 auto;
-
-  @media screen and (min-width: 1024px) {
-    margin: 1.5rem 10px 0;
-    float: right;
-  }
-
-  @media print {
-    float: right;
-    height: 200px;
-  }
-`
 
 const ResumeWrapper = styled.div`
   ul {
@@ -56,23 +38,7 @@ const ResumeWrapper = styled.div`
   }
 `
 
-const Resume = () => {
-  const picture = useStaticQuery(graphql`
-    {
-      img: file(
-        relativePath: { eq: "picture_of_me.jpg" }
-        sourceInstanceName: { eq: "static_images" }
-      ) {
-        childImageSharp {
-          fixed(quality: 60, height: 300) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
-        }
-      }
-    }
-  `)
-
-  return (
+const Resume = () => (
     <Layout as={ResumeWrapper}>
       <Helmet
         htmlAttributes={{
@@ -126,25 +92,17 @@ const Resume = () => {
       />
       <PageTitle style={{ color: 'var(--header)' }}>Antoine Caron</PageTitle>
 
-      <Me
-        className="picture-of-me"
-        loading="lazy"
-        fadeIn
-        fixed={picture.img.childImageSharp.fixed}
-        alt="picture of me"
-      />
-
       <h2>Profile</h2>
       <p>
         Professional Frontend developer passionate about his job. Very involved
         in the subjects I work on either for myself or for the companies I
-        collaborate with. I have expertise in different areas related to my job
+        collaborate with. I have deep expertise in Web, React and frontend development
         but I am always ready to challenge myself and learn new things.
       </p>
 
       <h2>Professional experiences</h2>
 
-      <h3>M6web / Bedrock Streaming - Frontend Lead Developer</h3>
+      <h3>Lead Frontend Developer - M6web / Bedrock Streaming</h3>
       <i>Since 2017 as contractor first, then as an employe, Lyon (France)</i>
 
       <p>
@@ -247,7 +205,7 @@ const Resume = () => {
         <li>Member of evaluation jury</li>
       </ul>
 
-      <h3>Zenika - IT contractor</h3>
+      <h3>IT consultant contractor -  Zenika</h3>
       <i>2016-2019, Lyon (France)</i>
       <p>
         As a contractor in this service company I carried out various missions:
@@ -280,6 +238,5 @@ const Resume = () => {
       </p>
     </Layout>
   )
-}
 
 export default Resume
