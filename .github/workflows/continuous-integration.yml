@@ -19,15 +19,11 @@ jobs:
             **/public
             **/.cache
           key: gatsby-cache
-      - name: Yarn cache
-        uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: modules-${{ hashFiles('**/yarn.lock') }}
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
+          cache: 'yarn'
       - run: yarn install
         name: Install dependencies
       - run: yarn lint
@@ -40,18 +36,17 @@ jobs:
           path: ./public
 
   e2e:
-    needs: build
     name: 'E2E 🧪'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: build
+      - uses: actions/checkout@v2
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
+          cache: 'yarn'
       - run: yarn install
+      - run : yarn build
         name: Install dependencies
       - name: Install Chromium
         run: sudo apt-get install chromium-browser firefox openjdk-8-jdk
