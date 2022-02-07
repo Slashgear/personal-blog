@@ -1,5 +1,25 @@
 [
   {
+    "title": "How to prevent throwing away your frontend application every two years?",
+    "lang": "fr",
+    "description": "Remaking your front every 2 years has become a common practice in all projects. All of them ? No, at Bedrock streaming, we chose to stay on the same codebase and that for more than 7 years! Moreover, it is not a small application since it is 6play and salto.",
+    "imageName": "frontend",
+    "events": [
+      {
+        "name": "Snowcamp 2022",
+        "date": 1644073200000,
+        "site": "https://snowcamp.io/fr/",
+        "link": "https://speakerdeck.com/slashgear/snowcamp-2022-comment-ne-pas-jeter-a-la-poubelle-son-app-js-tous-les-2-ans"
+      }
+    ],
+    "cospeakers": [
+      {
+        "name": "Florent Dubost",
+        "site": "https://twitter.com/fooragnak"
+      }
+    ]
+  },
+  {
     "title": "⚡️ Vite ⚡️the Webpack killer",
     "lang": "fr",
     "description": "25 or 45 minute presentation about the new trend in the bundling ecosytem which is Vite. With my co-speaker we explain how vite is working and the awesome features.",
