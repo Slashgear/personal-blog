@@ -46,7 +46,7 @@ jobs:
           node-version: 16.x
           cache: 'yarn'
       - run: yarn install
-      - run : yarn build
+      - run: yarn build
         name: Install dependencies
       - name: Install Chromium
         run: sudo apt-get install chromium-browser firefox openjdk-8-jdk
@@ -65,10 +65,9 @@ jobs:
         with:
           name: build
           path: ./public
-      - uses: JamesIves/github-pages-deploy-action@3.7.1
+      - uses: JamesIves/github-pages-deploy-action@4
         name: 'Deploy 🚀'
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master
-          FOLDER: public
-          CLEAN: true
+          branch: master
+          folder: public
+          clean: true
