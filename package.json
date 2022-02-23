@@ -19,7 +19,7 @@
     "gatsby-plugin-styled-components": "^5.7.0",
     "gatsby-plugin-typography": "^4.7.0",
     "gatsby-plugin-use-dark-mode": "^1.4.0",
-    "gatsby-remark-autolink-headers": "^5.7.0",
+    "gatsby-remark-autolink-headers": "^5.8.0",
     "gatsby-remark-copy-linked-files": "^5.8.0",
     "gatsby-remark-images": "^6.7.0",
     "gatsby-remark-prismjs": "^6.8.0",
