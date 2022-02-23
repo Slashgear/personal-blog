@@ -2411,10 +2411,10 @@
     got "^11.0.2"
     webdriverio "7.16.15"
 
-"@wdio/cli@^7.16.15":
-  version "7.16.15"
-  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.16.15.tgz#0d59996736159ed0648d47d7c4e6b481858cd196"
-  integrity sha512-dU+KiLiYu9NgyiAk3sgcMkAGVOMUNG+hpHKnMgmDgF+oOv+MuD1XweNYq1eaTqtz2B5qclC/m12pzoOTSmtypg==
+"@wdio/cli@^7.16.16":
+  version "7.16.16"
+  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.16.16.tgz#7dbd373c499c436116426dcfa90cb2ce7fcf7ebf"
+  integrity sha512-Wz/e5zm1UNHB9RAIsJIM7ioDzVllUwTvhVWOrI7HR/53GmO/cIvAVjpnlglizJNgK8WlbnM/cKNVIXxqxrnFmw==
   dependencies:
     "@types/ejs" "^3.0.5"
     "@types/fs-extra" "^9.0.4"
@@ -2424,7 +2424,7 @@
     "@types/lodash.union" "^4.6.6"
     "@types/node" "^17.0.4"
     "@types/recursive-readdir" "^2.2.0"
-    "@wdio/config" "7.16.14"
+    "@wdio/config" "7.16.16"
     "@wdio/logger" "7.16.0"
     "@wdio/types" "7.16.14"
     "@wdio/utils" "7.16.14"
@@ -2440,7 +2440,7 @@
     lodash.union "^4.6.0"
     mkdirp "^1.0.4"
     recursive-readdir "^2.2.2"
-    webdriverio "7.16.15"
+    webdriverio "7.16.16"
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
@@ -6404,14 +6404,14 @@ gatsby-plugin-manifest@^4.7.0:
     semver "^7.3.5"
     sharp "^0.29.3"
 
-gatsby-plugin-offline@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.7.0.tgz#dd5c317a848c3bf7e200ddfefd6872f2e0c9c998"
-  integrity sha512-0mkXsDiJxSDMgKGQUWqMXG5w0XFvojPqTHvZ3FAY5kFfqUwJ+JbA/XY5D5BGuSnU2P/pOUhcXlcg2hHtJ5NATQ==
+gatsby-plugin-offline@^5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.8.0.tgz#f45975ec2ab9794ea2e572289910a8d96b5cf58d"
+  integrity sha512-MtVCkh/82NHprHvxCgEQ6gVLZz54kG2LuUulUP6d13qeEZizJ8KzqkkhyCpdR5vCIYF+o0E9gHB6jG5F+nc1hQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.7.0"
+    gatsby-core-utils "^3.8.0"
     glob "^7.2.0"
     idb-keyval "^3.2.0"
     lodash "^4.17.21"
@@ -6634,10 +6634,10 @@ gatsby-telemetry@^3.7.0:
     lodash "^4.17.21"
     node-fetch "^2.6.7"
 
-gatsby-transformer-json@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-4.7.0.tgz#0300e4216efc542ce5b99af734069b6faebcedf4"
-  integrity sha512-0+q/codjMb3SbXH/acU1pohRQEpCpF8/Q+D+cZ+zJ7MZZ5a0WBH17PtvYlsTeCLExBsbViApxRdnZYeNuMa+/A==
+gatsby-transformer-json@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-4.8.0.tgz#da98859bc3f27cd576eae51937d37719b8c954dc"
+  integrity sha512-UI7i6/TcFBcepS+q6RoeL1Z8DRhKP8Z/VpqCYZjlBOQvJTuL5uBcWYfu0rChsHbJ6iHY7HnEga0cE3QRqCpTrQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     bluebird "^3.7.2"
