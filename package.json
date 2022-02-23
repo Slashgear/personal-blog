@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Antoine Caron <antoine395.caron@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^2.0.3",
+    "babel-plugin-styled-components": "^2.0.5",
     "gatsby": "^4.7.2",
     "gatsby-image": "^3.10.0",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
@@ -17,7 +17,7 @@
     "gatsby-plugin-react-helmet": "^5.7.0",
     "gatsby-plugin-sharp": "^4.7.0",
     "gatsby-plugin-styled-components": "^5.7.0",
-    "gatsby-plugin-typography": "^4.7.0",
+    "gatsby-plugin-typography": "^4.8.0",
     "gatsby-plugin-use-dark-mode": "^1.4.0",
     "gatsby-remark-autolink-headers": "^5.7.0",
     "gatsby-remark-copy-linked-files": "^5.8.0",
