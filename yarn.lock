@@ -6619,13 +6619,13 @@ gatsby-transformer-json@^4.8.0:
     "@babel/runtime" "^7.15.4"
     bluebird "^3.7.2"
 
-gatsby-transformer-remark@^5.8.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-5.8.0.tgz#52e8237828d6f599004cb169f2b1fd3a47750b52"
-  integrity sha512-MkNonCTcwZI/uSYTny4j709/qlL74V9UAjAnYQFn/Qli5Z31z+znqw0Twz7lsXCeOqb9uiFIjWls8zYhWlraiw==
+gatsby-transformer-remark@^5.8.1:
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-5.8.1.tgz#ead49e63d675930894927c9f73d1684e69351dd9"
+  integrity sha512-45J7jUxJhqEM37EJ7zUNnF8i3rBhrOBV2qbeIvGmpqbsb4d2IKcRKjNkL07Ae/27PoZUprVxep2CpZqp9qoSIQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.8.0"
+    gatsby-core-utils "^3.8.1"
     gray-matter "^4.0.3"
     hast-util-raw "^6.0.2"
     hast-util-to-html "^7.1.3"
