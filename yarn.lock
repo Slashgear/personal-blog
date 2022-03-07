@@ -6261,7 +6261,7 @@ gatsby-cli@^4.7.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.7.0, gatsby-core-utils@^3.8.0, gatsby-core-utils@^3.8.1:
+gatsby-core-utils@^3.7.0, gatsby-core-utils@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.8.1.tgz#52ffe98966ca2f7f013f62fc0a67242cbfb38f6e"
   integrity sha512-VuIRLVcgxi0leKT1fZvoNhjHn2DKIHdm8f0EqtDwIxeIVZLgtxBksVikZoAqRPhsSExC0YajGFJVBaV9fPADTg==
@@ -6505,10 +6505,10 @@ gatsby-remark-autolink-headers@^5.8.0:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^5.8.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.8.0.tgz#0f224fd9070c4f49814ae2ef7cbbc33c41415223"
-  integrity sha512-Xy4dDt+m6pzmYedEXNu3jkJ8PnT1yQ3QcMazyhmUDtGJ1k9PLIweQhcKcxoEwgMNBSlwTlQTqibADAu1eDhEVw==
+gatsby-remark-copy-linked-files@^5.9.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.9.0.tgz#ab9a1419e00f03cdd720ef6d2443124876ba0257"
+  integrity sha512-Dvli4hqncwsLtXM59rrxVQuP4mcV1hBl82i089Kgge0AYiTX1u1arniePemaNyfsNCSn9OUaF5zgbceR5deOjA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
