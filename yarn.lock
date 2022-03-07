@@ -6341,10 +6341,10 @@ gatsby-plugin-advanced-sitemap@^2.0.0:
     moment "2.29.1"
     xml "^1.0.1"
 
-gatsby-plugin-canonical-urls@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-4.8.0.tgz#259dde5b62eed3861a4bad00789e216e8c99e4ca"
-  integrity sha512-xlQ93pl0pNSqslFOgTmNYjfC8/D5P1n0YQI6fhdNBluqfC+qfWsCL4YxCt4GcwfOd98XhQF7lRNKLgXaXH7DEA==
+gatsby-plugin-canonical-urls@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-4.9.0.tgz#41a82d860ded7ae9ea71a3a69f11209acef95b03"
+  integrity sha512-b6XNwM5NpHDmYtYCjsz4ln81HgnWw44XMhxjmbzdoAg8teQcVzw+cfBmcZODK0MZ7uVd1nHc6UibZoTLOUQqpg==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
