@@ -6348,16 +6348,16 @@ gatsby-plugin-canonical-urls@^4.8.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-feed@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-4.8.0.tgz#e5a455ca947932146643820be88f59456defb7c0"
-  integrity sha512-AIzMpBux3oKzt/BN8vUyLIyCnpELOzpuM2cUuvdpoBF1s4pBE3RbWQE2uWQ/UvgkDcXSfz+japwAQyfbbZHztg==
+gatsby-plugin-feed@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-4.9.0.tgz#76f01943bf318f15173ef3ea07a94841fb8461be"
+  integrity sha512-dP97uKKYTp7sJfcv+fNh6VbEc+mIob1ZSMRGKMwtodIpYLm9oI6j2w/0nfibVB2ojYgiISg9gg+lPOHN9WK/xQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@hapi/joi" "^15.1.1"
     common-tags "^1.8.2"
     fs-extra "^10.0.0"
-    gatsby-plugin-utils "^3.2.0"
+    gatsby-plugin-utils "^3.3.0"
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
@@ -6478,10 +6478,10 @@ gatsby-plugin-use-dark-mode@^1.4.0:
     prop-types "^15.7.2"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^3.1.0, gatsby-plugin-utils@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.2.0.tgz#2d5771ead692553c5faa2886ccb57f18cd1efa98"
-  integrity sha512-5zCd0RJnbpaYzKr8kGaGfuPj9Hygi3luiCN8bnN1zVnieaJlRsh+k7BF6ukuG+2qk7USjwQHxzKP9QqAVmOR4g==
+gatsby-plugin-utils@^3.1.0, gatsby-plugin-utils@^3.2.0, gatsby-plugin-utils@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.3.0.tgz#f37dac15f381acf876eaef94636d41f7671b0604"
+  integrity sha512-wmwSQ/IMVQ8lII015IRToeXzu4LsRayKhlrBpuCbzJJgzBEgTH5ezHkGnxAGKvMn7xP9Oekz6DX/XYwUnAe4ug==
   dependencies:
     "@babel/runtime" "^7.15.4"
     joi "^17.4.2"
