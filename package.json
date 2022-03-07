@@ -11,7 +11,7 @@
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
     "gatsby-plugin-canonical-urls": "^4.8.0",
     "gatsby-plugin-feed": "^4.8.0",
-    "gatsby-plugin-google-analytics": "^4.8.0",
+    "gatsby-plugin-google-analytics": "^4.9.0",
     "gatsby-plugin-manifest": "^4.8.1",
     "gatsby-plugin-offline": "^5.8.1",
     "gatsby-plugin-react-helmet": "^5.8.0",
