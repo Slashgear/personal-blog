@@ -29,5 +29,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'react/destructuring-assignment': 'off',
     'react/function-component-definition': 'off',
+    'react/forbid-prop-types': 'off',
   },
 }
