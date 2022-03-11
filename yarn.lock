@@ -1094,6 +1094,14 @@
     commander "8.1.0"
     source-map-support "0.5.19"
 
+"@cucumber/gherkin-streams@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@cucumber/gherkin-streams/-/gherkin-streams-5.0.0.tgz#f58c26aede6bb3e5904fe6b6a78d819eb5383af7"
+  integrity sha512-rqRFqqUXpMGQOAKlj+RWv/OVqvsMRSo4ZdZtRandEUppgm8pmxr5nQXC3wwkerqrsuVMRYu+orK5p7xNDuIHng==
+  dependencies:
+    commander "9.0.0"
+    source-map-support "0.5.21"
+
 "@cucumber/gherkin@22.0.0", "@cucumber/gherkin@^22.0.0":
   version "22.0.0"
   resolved "https://registry.yarnpkg.com/@cucumber/gherkin/-/gherkin-22.0.0.tgz#93b271fd116e2164c33adc5ccd9257bba74f03a7"
@@ -2939,21 +2947,21 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
-"@wdio/cucumber-framework@^7.16.11":
-  version "7.16.14"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.16.14.tgz#55e4377978a86c2f544c424408d3fb9f0f647acf"
-  integrity sha512-lFa8ai48kn5pHY4XtEXgc24jfN61Q0FMG7Lq/14ydWwUpltqQ2oTkoyEllvnJ0s8wynfDv+HX12UWbInIETukA==
+"@wdio/cucumber-framework@^7.17.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.17.3.tgz#1358bb3ad6841ec5f332b19cb58ec72f41242860"
+  integrity sha512-bEi5vkkDS4a0yKDWBEkCnBvMRFIBXjXVO5Vqs1XtJIp/INA9614vMO2UmJbX5aV3dgy8eThNSdmdTm8yRMlYEQ==
   dependencies:
     "@cucumber/cucumber" "8.0.0-rc.1"
     "@cucumber/gherkin" "22.0.0"
-    "@cucumber/gherkin-streams" "^4.0.0"
+    "@cucumber/gherkin-streams" "^5.0.0"
     "@cucumber/messages" "17.1.1"
     "@types/is-glob" "^4.0.1"
     "@types/long" "^4.0.1"
     "@types/mockery" "^1.4.29"
-    "@wdio/logger" "7.16.0"
-    "@wdio/types" "7.16.14"
-    "@wdio/utils" "7.16.14"
+    "@wdio/logger" "7.17.3"
+    "@wdio/types" "7.17.3"
+    "@wdio/utils" "7.17.3"
     expect-webdriverio "^3.0.0"
     glob "^7.1.2"
     is-glob "^4.0.0"
@@ -2983,10 +2991,20 @@
     split2 "^4.0.0"
     stream-buffers "^3.0.2"
 
-"@wdio/logger@7.16.0", "@wdio/logger@^7.5.3":
+"@wdio/logger@7.16.0":
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.16.0.tgz#40f116ebffc23c638b8e421e350f110a058523e9"
   integrity sha512-/6lOGb2Iow5eSsy7RJOl1kCwsP4eMlG+/QKro5zUJsuyNJSQXf2ejhpkzyKWLgQbHu83WX6cM1014AZuLkzoQg==
+  dependencies:
+    chalk "^4.0.0"
+    loglevel "^1.6.0"
+    loglevel-plugin-prefix "^0.8.4"
+    strip-ansi "^6.0.0"
+
+"@wdio/logger@7.17.3", "@wdio/logger@^7.5.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.17.3.tgz#fcdfcbd9892173f9df0de67f448ae6d6f2aa6c3b"
+  integrity sha512-hpvJDsJMX8G/8gXHOEipxkQPjojjA+BRCZqCvZRLCVpWm2JB7tBoMzu9sUJXcpSkY03b94KAd4EwNA2uNAf9aQ==
   dependencies:
     chalk "^4.0.0"
     loglevel "^1.6.0"
@@ -3069,6 +3087,14 @@
     "@types/node" "^17.0.4"
     got "^11.8.1"
 
+"@wdio/types@7.17.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.17.3.tgz#79b3d3ac0d8ac6c88f51c1af1deb12630d127246"
+  integrity sha512-j8kYdaMl4NFRS8M1bFDuEa3GMbUZbLQY7i6XEnJSetyW0GyMDLlzwcfXI4DdX85+3JbO5624UGKxVsQcuA7T3A==
+  dependencies:
+    "@types/node" "^17.0.4"
+    got "^11.8.1"
+
 "@wdio/utils@7.16.14":
   version "7.16.14"
   resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.16.14.tgz#62603bd2ac85c5f0b8d465925b6b1e0abe783ef5"
@@ -3076,6 +3102,15 @@
   dependencies:
     "@wdio/logger" "7.16.0"
     "@wdio/types" "7.16.14"
+    p-iteration "^1.1.8"
+
+"@wdio/utils@7.17.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.17.3.tgz#5e7063543d8517fdc9eb05b6b4a9ccd5dbb2c38d"
+  integrity sha512-20bGTCmgBNVKa2BJs3B5kxbsryjhfEOoKDnFjZ/rAVZYT1t1sg0e/W+vRfamd++NqTaIHOY/IKGEFiEnCw5nXw==
+  dependencies:
+    "@wdio/logger" "7.17.3"
+    "@wdio/types" "7.17.3"
     p-iteration "^1.1.8"
 
 "@webassemblyjs/ast@1.11.1":
@@ -4568,6 +4603,11 @@ commander@8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-8.1.0.tgz#db36e3e66edf24ff591d639862c6ab2c52664362"
   integrity sha512-mf45ldcuHSYShkplHHGKWb4TrmwQadxOn7v4WuhDJy0ZVoY5JFajaRDKD0PNe5qXzBX0rhovjTnP6Kz9LETcuA==
+
+commander@9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.0.0.tgz#86d58f24ee98126568936bd1d3574e0308a99a40"
+  integrity sha512-JJfP2saEKbQqvW+FI93OYUB4ByV5cizMpFMiiJI8xDbBvQvSkIk0VvQdn1CZ8mqAO8Loq2h0gYTYtDFUZUeERw==
 
 commander@^2.20.0, commander@^2.20.3:
   version "2.20.3"
@@ -12486,7 +12526,7 @@ source-map-support@0.5.19:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
 
-source-map-support@^0.5.17, source-map-support@^0.5.20, source-map-support@~0.5.12, source-map-support@~0.5.20:
+source-map-support@0.5.21, source-map-support@^0.5.17, source-map-support@^0.5.20, source-map-support@~0.5.12, source-map-support@~0.5.20:
   version "0.5.21"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
   integrity sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==
