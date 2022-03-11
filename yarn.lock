@@ -2939,6 +2939,16 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
+"@wdio/config@7.17.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.17.3.tgz#23a004e7685db98394a6e1c99f0a53968a44bd2c"
+  integrity sha512-MSWCsx0w1EbxbwOD8ykTxHqgx208CWoz9n4oWHx7Q1APfetqWFLM4O7K8cdZS1gV4IvH4EAV9807L91K8r0JNw==
+  dependencies:
+    "@wdio/logger" "7.17.3"
+    "@wdio/types" "7.17.3"
+    deepmerge "^4.0.0"
+    glob "^7.1.2"
+
 "@wdio/cucumber-framework@^7.16.11":
   version "7.16.14"
   resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.16.14.tgz#55e4377978a86c2f544c424408d3fb9f0f647acf"
@@ -2983,10 +2993,20 @@
     split2 "^4.0.0"
     stream-buffers "^3.0.2"
 
-"@wdio/logger@7.16.0", "@wdio/logger@^7.5.3":
+"@wdio/logger@7.16.0":
   version "7.16.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.16.0.tgz#40f116ebffc23c638b8e421e350f110a058523e9"
   integrity sha512-/6lOGb2Iow5eSsy7RJOl1kCwsP4eMlG+/QKro5zUJsuyNJSQXf2ejhpkzyKWLgQbHu83WX6cM1014AZuLkzoQg==
+  dependencies:
+    chalk "^4.0.0"
+    loglevel "^1.6.0"
+    loglevel-plugin-prefix "^0.8.4"
+    strip-ansi "^6.0.0"
+
+"@wdio/logger@7.17.3", "@wdio/logger@^7.5.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.17.3.tgz#fcdfcbd9892173f9df0de67f448ae6d6f2aa6c3b"
+  integrity sha512-hpvJDsJMX8G/8gXHOEipxkQPjojjA+BRCZqCvZRLCVpWm2JB7tBoMzu9sUJXcpSkY03b94KAd4EwNA2uNAf9aQ==
   dependencies:
     chalk "^4.0.0"
     loglevel "^1.6.0"
@@ -3035,17 +3055,17 @@
     webdriver "7.16.16"
     webdriverio "7.16.16"
 
-"@wdio/selenium-standalone-service@^7.16.16":
-  version "7.16.16"
-  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.16.16.tgz#66f23e30ea5b479f3c968e7fe6f4d4db866ebc23"
-  integrity sha512-RPjwTNfIHE53RmtQY0ZV6Bwh+rDfMz79fmwX0WHRVOoPIcjRV68UctGjU3pQInOwrDyyP7ztLnFFEYLhOYZRfQ==
+"@wdio/selenium-standalone-service@^7.17.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.17.3.tgz#cbaa5dfd1e6e214b30e708752be9fc8a8b0ce27b"
+  integrity sha512-rW8yZ4pf83uSRJ77yF6d2cSuTIF9KB4gjdJs0860TkGKOMd1xEFAeekOfIEHPizqeaQIgBNR1LZcSPNjQTTK9w==
   dependencies:
     "@types/fs-extra" "^9.0.1"
     "@types/node" "^17.0.4"
     "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.16.16"
-    "@wdio/logger" "7.16.0"
-    "@wdio/types" "7.16.14"
+    "@wdio/config" "7.17.3"
+    "@wdio/logger" "7.17.3"
+    "@wdio/types" "7.17.3"
     fs-extra "^10.0.0"
     selenium-standalone "^8.0.3"
 
@@ -3065,6 +3085,14 @@
   version "7.16.14"
   resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.16.14.tgz#0ee52315a024710c2e7cbdc94343093543a02831"
   integrity sha512-AyNI9iBSos9xWBmiFAF3sBs6AJXO/55VppU/eeF4HRdbZMtMarnvMuahM+jlUrA3vJSmDW+ufelG0MT//6vrnw==
+  dependencies:
+    "@types/node" "^17.0.4"
+    got "^11.8.1"
+
+"@wdio/types@7.17.3":
+  version "7.17.3"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.17.3.tgz#79b3d3ac0d8ac6c88f51c1af1deb12630d127246"
+  integrity sha512-j8kYdaMl4NFRS8M1bFDuEa3GMbUZbLQY7i6XEnJSetyW0GyMDLlzwcfXI4DdX85+3JbO5624UGKxVsQcuA7T3A==
   dependencies:
     "@types/node" "^17.0.4"
     got "^11.8.1"
