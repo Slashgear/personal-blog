@@ -6785,10 +6785,10 @@ gatsby-cli@^4.9.1:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.1:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.9.1.tgz#a4c1bb2021a7e7c06b4aad8d71c9c76ca9cdc21f"
-  integrity sha512-DNf7NhhH0WrFuoBvyURjsw4w+eKbp1GlRA0cchYHJwVTaDPvLvX1o7zxN76xIBx+m0kttpnO3KuJ9LDOSli3ag==
+gatsby-core-utils@^3.10.1, gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.10.1.tgz#0f5e6aeda5ef4b86218b27480a9766fe30af4393"
+  integrity sha512-WqNMm0u1CAZm6Q+UQ4dDHwIAt3l32NeIaPuSXmDX7QcMGR3FUUk8cl2Ym6gx1hfILm1aCexqfaSCLUXtaWKkbQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -6798,7 +6798,7 @@ gatsby-core-utils@^3.8.2, gatsby-core-utils@^3.9.1:
     fs-extra "^10.0.0"
     got "^11.8.3"
     import-from "^4.0.0"
-    lmdb "^2.1.7"
+    lmdb "^2.2.4"
     lock "^1.1.0"
     node-object-hash "^2.3.10"
     proper-lockfile "^4.1.2"
@@ -6917,14 +6917,14 @@ gatsby-plugin-google-analytics@^4.9.0:
     minimatch "3.0.4"
     web-vitals "^1.1.2"
 
-gatsby-plugin-manifest@^4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.9.1.tgz#20513c7d942b424795b802506893c0f909c69b7a"
-  integrity sha512-Fye2vr7ioc7ETVKdCfpbc5ByU28+EB7ocqSORbazPgAT8OiPazpaBAYm98BONceuK3WaxGoEXMsmwmNBIIPjRA==
+gatsby-plugin-manifest@^4.10.2:
+  version "4.10.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.10.2.tgz#117b44e0e219fa85d6b710d2ed985268d82a1e25"
+  integrity sha512-2QGrG3qFkUnp0IcxQ+uQS4/jPL4NMHShOEs/7JPsuIJSIdumnG7QYJ9xHbIBb8U5mIFLpeonADYJVbdTsnGtrg==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.9.1"
-    gatsby-plugin-utils "^3.3.0"
+    gatsby-core-utils "^3.10.1"
+    gatsby-plugin-utils "^3.4.2"
     semver "^7.3.5"
     sharp "^0.30.1"
 
@@ -7025,13 +7025,19 @@ gatsby-plugin-use-dark-mode@^1.4.0:
     prop-types "^15.7.2"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.3.0.tgz#f37dac15f381acf876eaef94636d41f7671b0604"
-  integrity sha512-wmwSQ/IMVQ8lII015IRToeXzu4LsRayKhlrBpuCbzJJgzBEgTH5ezHkGnxAGKvMn7xP9Oekz6DX/XYwUnAe4ug==
+gatsby-plugin-utils@^3.3.0, gatsby-plugin-utils@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.4.2.tgz#bdc66fd52c052c91af443981e1facbc097429dc7"
+  integrity sha512-HkVR8BnEdc915pmY2L9wPwFgjq303ThMH9UtT+frDOPzn+GFjPlBF5+YGJ3tZaxH0ouwpnGTn3Pu37tcRZcctA==
   dependencies:
     "@babel/runtime" "^7.15.4"
+    fs-extra "^10.0.0"
+    gatsby-core-utils "^3.10.1"
+    gatsby-sharp "^0.4.0"
+    graphql-compose "^9.0.7"
+    import-from "^4.0.0"
     joi "^17.4.2"
+    mime "^3.0.0"
 
 gatsby-react-router-scroll@^5.9.0:
   version "5.9.0"
@@ -7117,6 +7123,14 @@ gatsby-sharp@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.3.0.tgz#9c101a25a6c568dc6f39f9e752441366e71bd4f0"
   integrity sha512-lMrmtoJjpCGoxnZbaQjfcF6vARPWgONw9r8fqGkHag0iSfcGpj3IM+LRdXT/i1mhNPDeB6pKBm5CvY8sYIgD0A==
+  dependencies:
+    "@types/sharp" "^0.29.5"
+    sharp "^0.30.1"
+
+gatsby-sharp@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/gatsby-sharp/-/gatsby-sharp-0.4.0.tgz#9e26c004935750bd334fb041da1b0ad5a5a6955c"
+  integrity sha512-Q2iP6HEs1MRdcMRj7NwZ4l6/1U61vx2DrWNgGwqEEhIFAAgUMlWscaeCpEgahC3t4D66LmuDQkbzBvBcH0Dwxw==
   dependencies:
     "@types/sharp" "^0.29.5"
     sharp "^0.30.1"
@@ -9100,10 +9114,21 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lmdb@^2.0.2, lmdb@^2.1.7, lmdb@^2.2.3:
+lmdb@^2.0.2, lmdb@^2.2.3:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.2.4.tgz#6494d5a1d1db152e0be759edcfa06893e4cbdb53"
   integrity sha512-gto+BB2uEob8qRiTlOq+R3uX0YNHsX9mjxj9Sbdue/LIKqu6IlZjrsjKeGyOMquc/474GEqFyX2pdytpydp0rQ==
+  dependencies:
+    msgpackr "^1.5.4"
+    nan "^2.14.2"
+    node-gyp-build "^4.2.3"
+    ordered-binary "^1.2.4"
+    weak-lru-cache "^1.2.2"
+
+lmdb@^2.2.4:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.2.6.tgz#a52ef533812b8abcbe0033fc9d74d215e7dfc0a0"
+  integrity sha512-UmQV0oZZcV3EN6rjcAjIiuWcc3MYZGWQ0GUYz46Ron5fuTa/dUow7WSQa6leFkvZIKVUdECBWVw96tckfEzUFQ==
   dependencies:
     msgpackr "^1.5.4"
     nan "^2.14.2"
@@ -9824,6 +9849,11 @@ mime@^2.4.4, mime@^2.5.2:
   version "2.5.2"
   resolved "https://registry.npmjs.org/mime/-/mime-2.5.2.tgz"
   integrity sha512-tqkh47FzKeCPD2PUiPB6pkbMzsCasjxAfC62/Wap5qrUWcb+sFasXUC5I3gYM5iBM8v/Qpn4UK0x+j0iHyFPDg==
+
+mime@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
+  integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
 
 mimic-fn@^2.1.0:
   version "2.1.0"
