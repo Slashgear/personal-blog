@@ -20,7 +20,7 @@
     "gatsby-plugin-typography": "^4.10.0",
     "gatsby-plugin-use-dark-mode": "^1.4.0",
     "gatsby-remark-autolink-headers": "^5.10.2",
-    "gatsby-remark-copy-linked-files": "^5.10.0",
+    "gatsby-remark-copy-linked-files": "^5.11.0",
     "gatsby-remark-images": "^6.10.2",
     "gatsby-remark-prismjs": "^6.10.0",
     "gatsby-remark-responsive-iframe": "^5.10.0",
