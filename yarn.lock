@@ -3131,10 +3131,10 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
-"@wdio/cucumber-framework@^7.19.1":
-  version "7.19.1"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.19.1.tgz#d8a11fe873b2b6e6921afd311082efefb8bf12f1"
-  integrity sha512-O9YqbyxueKZ0/EgUNlasjkhA9pU3i70kdFy6hs+f9PAjMaR6VlwWC433cwvq/ehSmBn1qOWrFftEgBwA698EZA==
+"@wdio/cucumber-framework@^7.19.2":
+  version "7.19.2"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.19.2.tgz#f78ec91454eeacc50f397283cdcf866512f53848"
+  integrity sha512-HHmtQiVjpkulocdWsb44vnWjpxrSlNtqNcqi0dGQb2B9e/TKUtZMgXwkOZi+0tTmba/vb+V7B7FhYYcFH3DIHQ==
   dependencies:
     "@cucumber/cucumber" "8.0.0-rc.3"
     "@cucumber/gherkin" "22.0.0"
@@ -3145,7 +3145,7 @@
     "@types/mockery" "^1.4.29"
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.19.1"
-    "@wdio/utils" "7.19.1"
+    "@wdio/utils" "7.19.2"
     expect-webdriverio "^3.0.0"
     glob "^7.1.2"
     is-glob "^4.0.0"
@@ -3175,20 +3175,10 @@
     split2 "^4.0.0"
     stream-buffers "^3.0.2"
 
-"@wdio/logger@7.19.0":
+"@wdio/logger@7.19.0", "@wdio/logger@^7.5.3":
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.19.0.tgz#23697a4b4aaea56c3bd477a0393af2a5c175fc85"
   integrity sha512-xR7SN/kGei1QJD1aagzxs3KMuzNxdT/7LYYx+lt6BII49+fqL/SO+5X0FDCZD0Ds93AuQvvz9eGyzrBI2FFXmQ==
-  dependencies:
-    chalk "^4.0.0"
-    loglevel "^1.6.0"
-    loglevel-plugin-prefix "^0.8.4"
-    strip-ansi "^6.0.0"
-
-"@wdio/logger@^7.5.3":
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.16.0.tgz#40f116ebffc23c638b8e421e350f110a058523e9"
-  integrity sha512-/6lOGb2Iow5eSsy7RJOl1kCwsP4eMlG+/QKro5zUJsuyNJSQXf2ejhpkzyKWLgQbHu83WX6cM1014AZuLkzoQg==
   dependencies:
     chalk "^4.0.0"
     loglevel "^1.6.0"
@@ -3275,6 +3265,15 @@
   version "7.19.1"
   resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.19.1.tgz#e436959518e7effa1c2420bfc13793f94f6c2d28"
   integrity sha512-Uynr6kUcXDjFqVlI7rgfcuUHGA7M1t+ICjc3R+Evr5cktBj2G8jb4S0SG0tGOPw9p7u5M49iyPy14oxTcb3aPw==
+  dependencies:
+    "@wdio/logger" "7.19.0"
+    "@wdio/types" "7.19.1"
+    p-iteration "^1.1.8"
+
+"@wdio/utils@7.19.2":
+  version "7.19.2"
+  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.19.2.tgz#d87084c90f52130050bb0322f15803c7a19b2443"
+  integrity sha512-zO1YvPVJEAYZ4Q6aIV9nKZ8gHmFCndJJpoj5TLGjHVPrHBG0QRaw7rZZ1ajt6FtKG7uMOzOjeX5XW94DHK3A7Q==
   dependencies:
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.19.1"
