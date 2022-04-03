@@ -3131,10 +3131,10 @@
     deepmerge "^4.0.0"
     glob "^7.1.2"
 
-"@wdio/cucumber-framework@^7.19.2":
-  version "7.19.2"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.19.2.tgz#f78ec91454eeacc50f397283cdcf866512f53848"
-  integrity sha512-HHmtQiVjpkulocdWsb44vnWjpxrSlNtqNcqi0dGQb2B9e/TKUtZMgXwkOZi+0tTmba/vb+V7B7FhYYcFH3DIHQ==
+"@wdio/cucumber-framework@^7.19.3":
+  version "7.19.3"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.19.3.tgz#3af66430fa6b1b2f87c76c274a1a74dd7ba665b4"
+  integrity sha512-+/hzy4T0U3Devqw5yOYX8MsXOl6q2CIpq9J5zSIonHZ9fNdbcQe7ajJLZfBkB9957SbA5yJezDb1oxn3M/kieA==
   dependencies:
     "@cucumber/cucumber" "8.0.0-rc.3"
     "@cucumber/gherkin" "22.0.0"
@@ -3145,7 +3145,7 @@
     "@types/mockery" "^1.4.29"
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.19.1"
-    "@wdio/utils" "7.19.2"
+    "@wdio/utils" "7.19.3"
     expect-webdriverio "^3.0.0"
     glob "^7.1.2"
     is-glob "^4.0.0"
@@ -3175,20 +3175,10 @@
     split2 "^4.0.0"
     stream-buffers "^3.0.2"
 
-"@wdio/logger@7.19.0":
+"@wdio/logger@7.19.0", "@wdio/logger@^7.5.3":
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.19.0.tgz#23697a4b4aaea56c3bd477a0393af2a5c175fc85"
   integrity sha512-xR7SN/kGei1QJD1aagzxs3KMuzNxdT/7LYYx+lt6BII49+fqL/SO+5X0FDCZD0Ds93AuQvvz9eGyzrBI2FFXmQ==
-  dependencies:
-    chalk "^4.0.0"
-    loglevel "^1.6.0"
-    loglevel-plugin-prefix "^0.8.4"
-    strip-ansi "^6.0.0"
-
-"@wdio/logger@^7.5.3":
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-7.16.0.tgz#40f116ebffc23c638b8e421e350f110a058523e9"
-  integrity sha512-/6lOGb2Iow5eSsy7RJOl1kCwsP4eMlG+/QKro5zUJsuyNJSQXf2ejhpkzyKWLgQbHu83WX6cM1014AZuLkzoQg==
   dependencies:
     chalk "^4.0.0"
     loglevel "^1.6.0"
@@ -3270,15 +3260,6 @@
   dependencies:
     "@types/node" "^17.0.4"
     got "^11.8.1"
-
-"@wdio/utils@7.19.2":
-  version "7.19.2"
-  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.19.2.tgz#d87084c90f52130050bb0322f15803c7a19b2443"
-  integrity sha512-zO1YvPVJEAYZ4Q6aIV9nKZ8gHmFCndJJpoj5TLGjHVPrHBG0QRaw7rZZ1ajt6FtKG7uMOzOjeX5XW94DHK3A7Q==
-  dependencies:
-    "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.19.1"
-    p-iteration "^1.1.8"
 
 "@wdio/utils@7.19.3":
   version "7.19.3"
