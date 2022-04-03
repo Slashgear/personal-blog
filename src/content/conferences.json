@@ -1,5 +1,26 @@
 [
   {
+    "title": "How to make a kick-ass video trailer with web technologies?",
+    "lang": "fr",
+    "description": "One day, when Mickaël Alves had just arrived in Bedrock, he had the misfortune to ask Antoine Caron what he was working on between noon and two and which seemed to amuse him. What a mistake of the Franco-Portuguese dev! He had no idea yet of the madness of his new tech lead.",
+    "imageName": "remotion",
+    "events": [
+      {
+        "name": "Lyon JS #71",
+        "date": 1648746000000,
+        "site": "https://www.meetup.com/fr-FR/LyonJS",
+        "link": "https://www.meetup.com/LyonJS/events/284549533/",
+        "video": "https://www.youtube.com/watch?v=8nnDOT8b5Oc"
+      }
+    ],
+    "cospeakers": [
+      {
+        "name": "Mickaël Alves",
+        "site": "https://twitter.com/CruuzAzul"
+      }
+    ]
+  },
+  {
     "title": "How to prevent throwing away your frontend application every two years?",
     "lang": "fr",
     "description": "Remaking your front every 2 years has become a common practice in all projects. All of them ? No, at Bedrock streaming, we chose to stay on the same codebase and that for more than 7 years! Moreover, it is not a small application since it is 6play and salto.",
