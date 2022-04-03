@@ -76,11 +76,14 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'UA-77930802-1',
-        anonymize: true,
-        respectDNT: true,
+        trackingIds: [
+          'G-K3K6FETN5J',
+        ],
+        pluginConfig: {
+          respectDNT: true,
+        },
       },
     },
     {

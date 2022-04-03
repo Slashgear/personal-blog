@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet'
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 import styled from 'styled-components'
 import coverImage from '../assets/abbe-pierre.jpg'
 import { Hero } from '../components/hero.component'

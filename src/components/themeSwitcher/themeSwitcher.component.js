@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import useDarkMode from 'use-dark-mode'
 import useSound from 'use-sound'
-import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
+import { trackCustomEvent } from 'gatsby-plugin-google-gtag'
 
 import { Moon } from './icon/moon'
 import { Sun } from './icon/sun'
