@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react'
 import useDarkMode from 'use-dark-mode'
 import useSound from 'use-sound'
-import { trackCustomEvent } from 'gatsby-plugin-google-gtag'
 
 import { Moon } from './icon/moon'
 import { Sun } from './icon/sun'
@@ -31,11 +30,7 @@ export const ThemeSwitcher = () => {
         default:
           break
       }
-      trackCustomEvent({
-        category: 'SwitchTheme',
-        action: 'Click',
-        label: theme,
-      })
+      window.gtag("event", "click", { category: 'SwitchTheme', label: theme,})
     },
     [darkMode, lightOn, lightOff]
   )
