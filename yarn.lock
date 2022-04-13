@@ -7242,10 +7242,10 @@ gatsby-plugin-typescript@^4.11.1:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.11.1"
 
-gatsby-plugin-typography@^4.11.0:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-4.11.0.tgz#1563bb45b30962e412c9703060e335838c183ed8"
-  integrity sha512-9OZxLUWjtbvKrii4DRja+xQvI1IO61fYoysFpix2MC9cekLBi9+vcgrZTAPeyME+4ndy6zEO0WHX6+TLP69qrw==
+gatsby-plugin-typography@^4.12.1:
+  version "4.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-4.12.1.tgz#4b7fb122489772e71b5518a7b4a1ff20b14bc494"
+  integrity sha512-u5IAtMi6gTL0niPzI8jhCRMDEPK7DPRmti56jDi4u6fWT+9X3sHiI+/Z7nnsP370dd4raPyQgVOxLA+z+6GJJg==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
