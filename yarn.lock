@@ -7249,12 +7249,12 @@ gatsby-plugin-typography@^4.11.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-use-dark-mode@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-use-dark-mode/-/gatsby-plugin-use-dark-mode-1.4.0.tgz#638286ac43b6b5dbb1b3919d2565d8884ecfa69f"
-  integrity sha512-FpNLBXlT02Bye/7fZfkrYT+92wFwKYQT/OVO/4ee5OcmgUOxL+jgRUAChvVf8KaNoQ5WUizOGU7SeJpMd7/+hA==
+gatsby-plugin-use-dark-mode@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-use-dark-mode/-/gatsby-plugin-use-dark-mode-1.5.0.tgz#57383e4d9abd1f8ab235b8c2b8de016a0b40116a"
+  integrity sha512-NwRgOVPGCxfL7ixKdfw5QqFjpYO1tXr11annjpDrD+Oom4IToV0WK7COlAMGes1md2s4/yZrbN5H/Wje1IV22g==
   dependencies:
-    prop-types "^15.7.2"
+    prop-types "^15.8.1"
     terser "^4.0.0"
 
 gatsby-plugin-utils@^3.5.1:
@@ -13393,21 +13393,12 @@ terser@^4.0.0:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-terser@^5.2.0:
+terser@^5.2.0, terser@^5.7.2:
   version "5.12.0"
   resolved "https://registry.yarnpkg.com/terser/-/terser-5.12.0.tgz#728c6bff05f7d1dcb687d8eace0644802a9dae8a"
   integrity sha512-R3AUhNBGWiFc77HXag+1fXpAxTAFRQTJemlJKjAgD9r8xXTpjNKqIXwHM/o7Rh+O0kUJtS3WQVdBeMKFk5sw9A==
   dependencies:
     acorn "^8.5.0"
-    commander "^2.20.0"
-    source-map "~0.7.2"
-    source-map-support "~0.5.20"
-
-terser@^5.7.2:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.9.0.tgz#47d6e629a522963240f2b55fcaa3c99083d2c351"
-  integrity sha512-h5hxa23sCdpzcye/7b8YqbE5OwKca/ni0RQz1uRX3tGh8haaGHqcuSqbGRybuAKNdntZ0mDgFNXPJ48xQ2RXKQ==
-  dependencies:
     commander "^2.20.0"
     source-map "~0.7.2"
     source-map-support "~0.5.20"
