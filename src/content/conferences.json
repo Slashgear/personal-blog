@@ -66,6 +66,12 @@
         "site": "https://devfest2021.gdgnantes.com/fr/",
         "link": "https://devfest2021.gdgnantes.com/sessions/_%EF%B8%8F_vite_%EF%B8%8Fthe_webpack_killer/",
         "video": "https://www.youtube.com/watch?v=9R5JuyfsGwc"
+      },
+      {
+        "name": "Devoxx France",
+        "date": 1650555900000,
+        "site": "https://www.devoxx.fr/",
+        "link": "https://cfp.devoxx.fr/2022/talk/ZYD-1465/%E2%9A%A1%EF%B8%8F_Vite%E2%9A%A1%EF%B8%8Fthe_Webpack_killer"
       }
     ],
     "cospeakers": [
