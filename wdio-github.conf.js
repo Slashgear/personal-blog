@@ -10,14 +10,6 @@ exports.config = {
         args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
       },
     },
-    {
-      maxInstances: 5,
-      browserName: 'firefox',
-      acceptInsecureCerts: true,
-      'moz:firefoxOptions': {
-        args: ['-headless'],
-      },
-    },
   ],
   reporters: ['spec'],
 }
