@@ -3,8 +3,11 @@ name: Continous Integration
 on:
   push:
     branches:
-      - '!master'
-      - '**'
+      - 'master'
+  pull_request:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -52,6 +55,24 @@ jobs:
         name: Start server
       - run: yarn wdio run ./wdio-github.conf.js
         name: Running E2E tests
+
+  dependabot:
+    name: 'Dependabot'
+    needs: [build, e2e]
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'}}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1.1.1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{contains(steps.metadata.outputs.dependency-names, 'my-dependency') && steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   deploy:
     needs: build
