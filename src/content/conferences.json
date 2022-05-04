@@ -71,7 +71,8 @@
         "name": "Devoxx France",
         "date": 1650555900000,
         "site": "https://www.devoxx.fr/",
-        "link": "https://cfp.devoxx.fr/2022/talk/ZYD-1465/%E2%9A%A1%EF%B8%8F_Vite%E2%9A%A1%EF%B8%8Fthe_Webpack_killer"
+        "link": "https://cfp.devoxx.fr/2022/talk/ZYD-1465/%E2%9A%A1%EF%B8%8F_Vite%E2%9A%A1%EF%B8%8Fthe_Webpack_killer",
+        "video": "https://www.youtube.com/watch?v=Q6N7DoCNfAE"
       }
     ],
     "cospeakers": [
