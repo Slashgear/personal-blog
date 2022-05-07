@@ -2972,17 +2972,17 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^7.19.5":
-  version "7.19.5"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-7.19.5.tgz#83d8ccb481ab1c6f2cf6227946b50bb8ff0ac830"
-  integrity sha512-T/y5+OC1w3doN8csJj+109B0eH0Zijs3Yj6vItuktW6vl8/CSlh8ZE4ehlB3PWypnrX6Y4YImGfo2nISg3Z0iQ==
+"@wdio/browserstack-service@^7.19.7":
+  version "7.19.7"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-7.19.7.tgz#86e31bd73d611715f482e1e0804eac80950bf573"
+  integrity sha512-CXUb6+wqRKKTjNCGgciCb1UpUhXiFTL07eP+fQWPbyAqgNqNT6LVahOnlma5jB9jZaebK8E0Nr6I0NKtUgMFyg==
   dependencies:
     "@types/node" "^17.0.4"
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.19.5"
     browserstack-local "^1.4.5"
     got "^11.0.2"
-    webdriverio "7.19.5"
+    webdriverio "7.19.7"
 
 "@wdio/cli@^7.19.7":
   version "7.19.7"
