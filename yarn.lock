@@ -7158,10 +7158,10 @@ gatsby-plugin-react-helmet@^5.13.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@^4.13.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.13.0.tgz#b5d9494cb9e5246bcca726181ea09afbe5699513"
-  integrity sha512-ajP96dj847igUl8f63L4zcVI5O3SGZALgb83/LhyN5OK9qjxE0Pbue2ZrNk2k1MV8/rc7xnzrKx+YB+jZ37AaA==
+gatsby-plugin-sharp@^4.14.0:
+  version "4.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.14.0.tgz#2f097d5d83829b9154235c8f1a5e8fd4e9746dc7"
+  integrity sha512-5xBF9+esTS/mkZx/NLdovjmyVu/EefDAPbTckh9UkXYTSe3BmhUjZ8wFN9xr1NQUTuDBta9csjBDWs8whvBzVw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
@@ -7169,16 +7169,16 @@ gatsby-plugin-sharp@^4.13.0:
     bluebird "^3.7.2"
     debug "^4.3.4"
     filenamify "^4.3.0"
-    fs-extra "^10.0.0"
-    gatsby-core-utils "^3.13.0"
-    gatsby-plugin-utils "^3.7.0"
-    gatsby-telemetry "^3.13.0"
+    fs-extra "^10.1.0"
+    gatsby-core-utils "^3.14.0"
+    gatsby-plugin-utils "^3.8.0"
+    gatsby-telemetry "^3.14.0"
     got "^11.8.3"
     lodash "^4.17.21"
     mini-svg-data-uri "^1.4.4"
     probe-image-size "^7.2.3"
     progress "^2.0.3"
-    semver "^7.3.5"
+    semver "^7.3.7"
     sharp "^0.30.3"
     svgo "1.3.2"
     uuid "3.4.0"
@@ -7341,7 +7341,7 @@ gatsby-source-filesystem@^4.13.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-telemetry@^3.13.0, gatsby-telemetry@^3.14.0:
+gatsby-telemetry@^3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.14.0.tgz#6f3903a60c0918b98b3a9d2645a464be1b642489"
   integrity sha512-QnlN3nvb+1gYsY6cIQKAuvkhx9uoOg71yuEYB0EFQdgcnyIbWlBVRHId8wOXoQHwRYFmatvxBmcKlVF8FCs61A==
