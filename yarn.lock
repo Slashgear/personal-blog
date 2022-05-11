@@ -7218,7 +7218,7 @@ gatsby-plugin-use-dark-mode@^1.5.0:
     prop-types "^15.8.1"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^3.7.0, gatsby-plugin-utils@^3.8.0:
+gatsby-plugin-utils@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.8.0.tgz#ef497c15f57fbe17cb5d58ae15325e31689e5db0"
   integrity sha512-dLFk+4E2BJrSuPz5/cLUyw4/dDbyMtruLww2XnFk34DVxg16FHIBYcY7p5IbfmDiBmMtlgJFqxBHj1zt8l6syw==
@@ -7254,14 +7254,14 @@ gatsby-remark-autolink-headers@^5.13.0:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^5.13.0:
-  version "5.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.13.0.tgz#29322176d09cbff4a9b6b7b1698f01be1bc6ccac"
-  integrity sha512-aN5zMF+4LCbZJR+AQCjfy2iUQ9CakcDUoDbOyXR0fbZt7IDo/XulTtrQBg1hMnJVVr55JkTORNBNz7Rh7/5htw==
+gatsby-remark-copy-linked-files@^5.14.0:
+  version "5.14.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.14.0.tgz#340fcb73bd9d9321bbc55d7424ef63cab5c799fb"
+  integrity sha512-qZGAaziKtjNVohW3rWtfVZ4H6/6UonTCTM1du5cIL/VGhgnOQBsBoxgSEpD0gC7oH2TvJAFYh6CHixdjFkIkZQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
-    fs-extra "^10.0.0"
+    fs-extra "^10.1.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     path-is-inside "^1.0.2"
