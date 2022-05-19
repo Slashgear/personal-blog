@@ -24,7 +24,6 @@ export const PostMarkup = ({ post, slug, siteUrl }) => {
         dateCreated: post.frontmatter.dateJson,
         dateModified: post.frontmatter.dateJson,
         description: post.frontmatter.description,
-        articleBody: post.html,
         image: [
           `${siteUrl}${image.image16x9.src}`,
           `${siteUrl}${image.image4x3.src}`,
