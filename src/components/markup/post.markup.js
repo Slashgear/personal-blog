@@ -13,7 +13,7 @@ export const PostMarkup = ({ post, slug, siteUrl }) => {
     <JsonLd
       content={{
         '@context': 'http://schema.org',
-        '@type': 'Article',
+        '@type': 'BlogPosting',
         headline: post.frontmatter.title,
         editor: 'Antoine Caron',
         genre: 'Tech Blog',
@@ -34,6 +34,7 @@ export const PostMarkup = ({ post, slug, siteUrl }) => {
         author: {
           '@type': 'Person',
           name: 'Antoine Caron',
+          url: `${siteUrl}`,
         },
         publisher: {
           '@type': 'Organization',
