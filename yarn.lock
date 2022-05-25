@@ -7160,14 +7160,14 @@ gatsby-plugin-manifest@^4.15.0:
     semver "^7.3.7"
     sharp "^0.30.3"
 
-gatsby-plugin-offline@^5.14.1:
-  version "5.14.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.14.1.tgz#1c2df557931604ab018397d0a4745bd7b6397926"
-  integrity sha512-PFLJmtgHilv6gydZW1nUSIRJgRdYEizzmV9OA/orAqjR3b2IPe1TlxruZRAEFQ1DiDTTdjyISRKgk7YoYTEQ+g==
+gatsby-plugin-offline@^5.15.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.15.0.tgz#3b0728793182e8673f7b24205bd997ad86b91377"
+  integrity sha512-rzKJRDD5YA+qipcSB/PcOSs2Obw/c+KDX2mpe/Loq161ZTrvwXvijlKUgdeyJasbL5YOX/iNBMiJqycJAmVjbA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.14.0"
+    gatsby-core-utils "^3.15.0"
     glob "^7.2.3"
     idb-keyval "^3.2.0"
     lodash "^4.17.21"
