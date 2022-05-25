@@ -7010,10 +7010,10 @@ gatsby-plugin-advanced-sitemap@^2.1.0:
     pify "5.0.0"
     xml "^1.0.1"
 
-gatsby-plugin-canonical-urls@^4.14.0:
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-4.14.0.tgz#b978dbaf54bc9f2b192002aa5e0126b25e16c4b4"
-  integrity sha512-ab/x5t9G5jtpfRuxJqc3h6FlVqjvq/1m4vCrU/Vw4zbQLJU9WZDumRVE6s/k8dBlaFuhSNkCZAimy8noPs/LEQ==
+gatsby-plugin-canonical-urls@^4.15.0:
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-4.15.0.tgz#58d5da1c0569d33c57a1a7e6025eb83755efda8b"
+  integrity sha512-/QutRMsGUAbDAm0QtdouGGHwCIxqRmYtbW5k+R+B8t2IidY9ZjVomCjmZ8ezvgQS84lQ7zkVFuezy8PpfKiy8g==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -7145,7 +7145,7 @@ gatsby-plugin-use-dark-mode@^1.5.0:
     prop-types "^15.8.1"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^3.8.0, gatsby-plugin-utils@^3.9.0:
+gatsby-plugin-utils@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.9.0.tgz#5025ff666126174019dcb6ffda894c02eaf968ba"
   integrity sha512-ZxiVeZ/GigbqeHkbD47Ha5VKDGr9J+2uqxT+aLBaEGtSNTte90x3jzPST2auDRRSrTovf2B2zuzpChI/HB4tSg==
