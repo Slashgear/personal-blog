@@ -3071,16 +3071,6 @@
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
-"@wdio/config@7.19.5":
-  version "7.19.5"
-  resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.19.5.tgz#aa8158d648e1ffb28a7e53474d5ce171066e82f7"
-  integrity sha512-GyG0SSUjw9RyDgEwculgwiWyQ0eEeFAgaKTAa4RHC6ZgHHTgfyxzkWqBmNLzHfiB6GSR2DyZDcDsPT7ZAHkiEg==
-  dependencies:
-    "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.19.5"
-    deepmerge "^4.0.0"
-    glob "^7.1.2"
-
 "@wdio/config@7.20.1":
   version "7.20.1"
   resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.20.1.tgz#3d52cb8ee21c403304b40abc505fb22452786950"
@@ -3204,17 +3194,17 @@
     webdriver "7.20.1"
     webdriverio "7.20.1"
 
-"@wdio/selenium-standalone-service@^7.19.5":
-  version "7.19.5"
-  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.19.5.tgz#9bb383b5d9bbddc9df9de308d86459df7332c579"
-  integrity sha512-Llq4zeQiWSOrAdtmAMyr3jiGAxC4mTOJUmCsj6EmzIwOx9wjagfO+ehx3OPdpjYlubSiJFJO8eT2lR34GHNARg==
+"@wdio/selenium-standalone-service@^7.20.1":
+  version "7.20.1"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.20.1.tgz#120ab2d5316d8def79a326b6eabca814a7188a52"
+  integrity sha512-XOgsgSx1Ge5oMBe6b65UADKZeYAmBCTSFdxfkna/WfLas4K77Yfe1ScJ7S9fRj55tAgTd54yAReyBgCfJ1acIw==
   dependencies:
     "@types/fs-extra" "^9.0.1"
     "@types/node" "^17.0.4"
     "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.19.5"
+    "@wdio/config" "7.20.1"
     "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.19.5"
+    "@wdio/types" "7.20.0"
     fs-extra "^10.0.0"
     selenium-standalone "^8.0.3"
 
