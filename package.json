@@ -17,7 +17,7 @@
     "gatsby-plugin-react-helmet": "^5.15.0",
     "gatsby-plugin-sharp": "^4.15.1",
     "gatsby-plugin-styled-components": "^5.15.0",
-    "gatsby-plugin-typography": "^4.15.0",
+    "gatsby-plugin-typography": "^4.16.0",
     "gatsby-plugin-use-dark-mode": "^1.5.0",
     "gatsby-remark-autolink-headers": "^5.15.1",
     "gatsby-remark-copy-linked-files": "^5.15.0",
