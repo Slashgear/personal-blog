@@ -31,6 +31,13 @@
         "date": 1644073200000,
         "site": "https://snowcamp.io/fr/",
         "link": "https://speakerdeck.com/slashgear/snowcamp-2022-comment-ne-pas-jeter-a-la-poubelle-son-app-js-tous-les-2-ans"
+      },
+      {
+        "name": "LyonJS",
+        "date": 1654709400000,
+        "site": "https://www.meetup.com/fr-FR/LyonJS",
+        "link": "https://www.meetup.com/fr-FR/lyonjs/events/285497869/",
+        "video": "https://www.youtube.com/watch?v=t36UqNSmybM"
       }
     ],
     "cospeakers": [
