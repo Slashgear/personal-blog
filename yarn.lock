@@ -1148,6 +1148,13 @@
   dependencies:
     "@cucumber/messages" "^18.0.0"
 
+"@cucumber/gherkin@24.0.0":
+  version "24.0.0"
+  resolved "https://registry.yarnpkg.com/@cucumber/gherkin/-/gherkin-24.0.0.tgz#b0d2ab328caa5357491f1117c31195d3e545da0c"
+  integrity sha512-b7OsnvX1B8myDAKMc+RAiUX9bzgtNdjGsiMj10O13xu2HBWIOQ19EqBJ4xLO5CFG/lGk1J/+L0lANQVowxLVBg==
+  dependencies:
+    "@cucumber/messages" "^19.0.0"
+
 "@cucumber/html-formatter@19.2.0":
   version "19.2.0"
   resolved "https://registry.yarnpkg.com/@cucumber/html-formatter/-/html-formatter-19.2.0.tgz#47b9fcb58fbb48d0e6124fd2e867d9c6fe299470"
@@ -1168,7 +1175,7 @@
     reflect-metadata "0.1.13"
     uuid "8.3.2"
 
-"@cucumber/messages@19.0.0":
+"@cucumber/messages@19.0.0", "@cucumber/messages@^19.0.0":
   version "19.0.0"
   resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-19.0.0.tgz#3deac940b5f8ef2afc7ccc9a555a97b647a48de6"
   integrity sha512-5kf5jTQZf3qI4vr7r/zs2UNg8e/v5wW698IAT+4htMQqBxZT5L0WSgbjz+2vXypHFwcEVIEfiwBaKG5ShthwFg==
@@ -3093,13 +3100,13 @@
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
-"@wdio/cucumber-framework@^7.20.0":
-  version "7.20.0"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.20.0.tgz#8b323dd40f0b6c66a567a72fb5f74bf2676f16b4"
-  integrity sha512-URjgiEGYiit56EUIClzgA5gbfYzWgxs3I8+IheYiQZ+UhDxqMNli0O9VM73ts7z4/3/qEyQl2jhYBtI1FsMLng==
+"@wdio/cucumber-framework@^7.20.2":
+  version "7.20.2"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.20.2.tgz#31a72dc0ccde95500952b4871421c744b9872aa9"
+  integrity sha512-GFw0w62ezKavUtGxe7IJ8r3V+URneorwoft4HwZaLjAOtAabmi7AIngPfud5zbNqiziBsQbxeMEpxpOv7R+QSg==
   dependencies:
     "@cucumber/cucumber" "8.2.2"
-    "@cucumber/gherkin" "23.0.1"
+    "@cucumber/gherkin" "24.0.0"
     "@cucumber/gherkin-streams" "^5.0.0"
     "@cucumber/messages" "19.0.0"
     "@types/is-glob" "^4.0.1"
