@@ -28,7 +28,7 @@
     "gatsby-source-filesystem": "^4.16.0",
     "gatsby-transformer-json": "^4.17.0",
     "gatsby-transformer-remark": "^5.16.0",
-    "gatsby-transformer-sharp": "^4.16.0",
+    "gatsby-transformer-sharp": "^4.17.0",
     "gray-percentage": "^2.0.0",
     "lodash-es": "^4.17.21",
     "prismjs": "^1.28.0",
