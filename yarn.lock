@@ -2792,11 +2792,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.9.1.tgz#0611b37db4246c937feef529ddcc018cf8e35708"
   integrity sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==
 
-"@types/node@^17.0.4":
-  version "17.0.39"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.39.tgz#3652d82e2a16b4ea679d5ea3143b816c91b7e113"
-  integrity sha512-JDU3YLlnPK3WDao6/DlXLOgSNpG13ct+CwIO17V8q0/9fWJyeMJJ/VyZ1lv8kDprihvZMydzVwf0tQOqGiY2Nw==
-
 "@types/node@^8.5.7":
   version "8.10.66"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.66.tgz#dd035d409df322acc83dff62a602f12a5783bbb3"
@@ -3126,13 +3121,13 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^7.20.0":
-  version "7.20.0"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-7.20.0.tgz#66a336f4ca01967ec0423f15fd52a00e845adf8d"
-  integrity sha512-gl7Rjo3aKlz8w1/GRvrIJHQVL9ZzrREQ/6l6uw6KbPuchyEniWV4gb0mpucQY3WfN4TCf9AyQ+L3SEV+T4WdpA==
+"@wdio/dot-reporter@^7.20.3":
+  version "7.20.3"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-7.20.3.tgz#9c6df5dfefcebc99590c3ddfe64a5d14dbaae741"
+  integrity sha512-xroU5nUxyJG22C0xMo5GxFa6HVIOix0gfa64Wp8NN5JHiMNbLPykTQFSDSpeq6Myydad3zuoKXDlZze84s451A==
   dependencies:
-    "@wdio/reporter" "7.20.0"
-    "@wdio/types" "7.20.0"
+    "@wdio/reporter" "7.20.3"
+    "@wdio/types" "7.20.3"
     chalk "^4.0.0"
 
 "@wdio/local-runner@^7.20.3":
@@ -3170,22 +3165,6 @@
   integrity sha512-oY82xdOK+FuBjG9sY3ujil6Rr8XBtNP1L6+QK1ZqTGCNKEz6bGVbgGKJa4zpaZx90JWO0ijXylyvckAB4mAMRw==
   dependencies:
     "@wdio/utils" "7.20.3"
-
-"@wdio/reporter@7.20.0":
-  version "7.20.0"
-  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-7.20.0.tgz#e01c96be50eb6f42a37c5fd1d424b5d06c0a1829"
-  integrity sha512-QPHaFH9X7dPP5WguRJJY2jDuBPoX+ZSvsDCI9CDOCDvg6ZgrY1Kb0R++U1YJ4swNQYppOYDdgAZTHlaa7/VG9w==
-  dependencies:
-    "@types/diff" "^5.0.0"
-    "@types/node" "^17.0.4"
-    "@types/object-inspect" "^1.8.0"
-    "@types/supports-color" "^8.1.0"
-    "@types/tmp" "^0.2.0"
-    "@wdio/types" "7.20.0"
-    diff "^5.0.0"
-    fs-extra "^10.0.0"
-    object-inspect "^1.10.3"
-    supports-color "8.1.1"
 
 "@wdio/reporter@7.20.3":
   version "7.20.3"
@@ -3242,14 +3221,6 @@
     chalk "^4.0.0"
     easy-table "^1.1.1"
     pretty-ms "^7.0.0"
-
-"@wdio/types@7.20.0":
-  version "7.20.0"
-  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.20.0.tgz#a563fa342d5c0feda29e7b6093034a652a152881"
-  integrity sha512-iYQAlkPxDIt2iJI4KwYmdenAU6XC+c68J8lkBVtmkY9S6nSXbQtrzNZoWw03j0//dbagVa6cdefrnhnkxDr0Hg==
-  dependencies:
-    "@types/node" "^17.0.4"
-    got "^11.8.1"
 
 "@wdio/types@7.20.3":
   version "7.20.3"
