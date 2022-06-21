@@ -7157,10 +7157,10 @@ gatsby-plugin-typescript@^4.17.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.17.0"
 
-gatsby-plugin-typography@^4.16.0:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-4.16.0.tgz#982325ec2358e584e5477e5b9ae7bcee5e7365e5"
-  integrity sha512-i5SRY6Yylpes56+M3IOfMO0S2LHAjI2cTYyroOiWGMBWUXE/N40Qz7eNu56oPnwQ5/Kg2KNfD5O+KDqCXhxHnw==
+gatsby-plugin-typography@^4.17.0:
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-4.17.0.tgz#b860673d497a1a07134e6f68405b7bf666804096"
+  integrity sha512-Tk+74wEf0T33cwsUwGQkU1/46aJsTfhZnRo6yqeM//lFY7coe/a15IpsJxm4RYGt5d5uI9OwTPtD+UZdBDR7oQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -7300,7 +7300,7 @@ gatsby-source-filesystem@^4.16.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-telemetry@^3.16.0, gatsby-telemetry@^3.17.0:
+gatsby-telemetry@^3.17.0:
   version "3.17.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.17.0.tgz#de5b094340d714969ac5a5f01ed19999d3b9557e"
   integrity sha512-1N4uKj2Yj7AykLmwjsdOmNirf3UmP8CBXjj/LmWf5cLDVbdPqkirAlyD6uTeEliG5UFHPTlBsRi26v558mFYJQ==
