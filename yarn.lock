@@ -6987,27 +6987,6 @@ gatsby-core-utils@^3.16.0, gatsby-core-utils@^3.17.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.17.0:
-  version "3.17.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.17.0.tgz#5fe33c4267a3d0a7439b8065ee9c16f5cc2aead1"
-  integrity sha512-1e0YaqTAEpSSBkpWkY703lu+Bl76ASXUvUcpnNO3CavCYZsRQxAXtMXIKIEvhm1z6zWJmY9HILo6/DjP+PHeyw==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.13.0"
-    file-type "^16.5.3"
-    fs-extra "^10.1.0"
-    got "^11.8.3"
-    import-from "^4.0.0"
-    lmdb "2.5.2"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
 gatsby-graphiql-explorer@^2.16.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-2.16.0.tgz#be1e0733047ba3ad5bc401905999e63382b0ccb7"
@@ -7262,10 +7241,10 @@ gatsby-remark-autolink-headers@^5.16.0:
     mdast-util-to-string "^2.0.0"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-copy-linked-files@^5.16.0:
-  version "5.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.16.0.tgz#436b87f28a73c601137d8c72e566d6728e0c4191"
-  integrity sha512-feDjwvzKgYSIzIn6zkMygI4MhFB0GmW4XH/0y36CIO4P5YeIsz4ZEoq+WR5iAX17ry+m2bf/M8Eg2rtKJAwsmg==
+gatsby-remark-copy-linked-files@^5.17.0:
+  version "5.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-5.17.0.tgz#3bdfd20d97e8a57d06ebce944f6fda6a88838418"
+  integrity sha512-Q1T69Oi84UAa18//54vtMIMPRTkx+P7DQKoRMXi6r3muRAjfN/sT66ZxDdCayT5SoKYT8Opa5hGZo8N/lvtmQw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
