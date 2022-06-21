@@ -7065,14 +7065,14 @@ gatsby-plugin-google-gtag@^4.16.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.1.2"
 
-gatsby-plugin-manifest@^4.16.0:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.16.0.tgz#84549aa6e11f85351ccb274aaa9f692b7a8dc286"
-  integrity sha512-hGRFxJeC9j+f2JG9WkkKEjbnP3Gq4FOKzcTmKUt4iZ8DnY+BcDaBEqAm9wrlk4yCqLR6AL/ZGnB6AkG6j7twjQ==
+gatsby-plugin-manifest@^4.17.0:
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.17.0.tgz#ac3d8be81629953f8af8e0570fdfc2fad02401db"
+  integrity sha512-LGxK2tko8DEGLVQEd4FRH3gTDdfSvhOXDuGJxtP5uz382DgVPbfYjU5KO72T6nZ8YJUOyOibCN8o+rw4OzvMzQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.16.0"
-    gatsby-plugin-utils "^3.10.0"
+    gatsby-core-utils "^3.17.0"
+    gatsby-plugin-utils "^3.11.0"
     semver "^7.3.7"
     sharp "^0.30.3"
 
@@ -7172,7 +7172,7 @@ gatsby-plugin-use-dark-mode@^1.5.0:
     prop-types "^15.8.1"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^3.10.0, gatsby-plugin-utils@^3.11.0:
+gatsby-plugin-utils@^3.11.0:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.11.0.tgz#cffbd98ab0cafe2ff9b8eb513c980024605dcadf"
   integrity sha512-v2D6O2aME9p7tqlGykq5mgtj7Jqp/CWatgo0zJ7bFWSYPPUpQ7jRVAph1PIgFTAV/CaUrrvt9sxdRaZrglJyug==
@@ -7300,7 +7300,7 @@ gatsby-source-filesystem@^4.16.0:
     valid-url "^1.0.9"
     xstate "^4.26.1"
 
-gatsby-telemetry@^3.16.0, gatsby-telemetry@^3.17.0:
+gatsby-telemetry@^3.17.0:
   version "3.17.0"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.17.0.tgz#de5b094340d714969ac5a5f01ed19999d3b9557e"
   integrity sha512-1N4uKj2Yj7AykLmwjsdOmNirf3UmP8CBXjj/LmWf5cLDVbdPqkirAlyD6uTeEliG5UFHPTlBsRi26v558mFYJQ==
