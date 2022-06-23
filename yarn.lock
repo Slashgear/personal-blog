@@ -3131,15 +3131,15 @@
     "@wdio/types" "7.20.3"
     chalk "^4.0.0"
 
-"@wdio/local-runner@^7.20.3":
-  version "7.20.3"
-  resolved "https://registry.yarnpkg.com/@wdio/local-runner/-/local-runner-7.20.3.tgz#7c6949f9b8eaa816b61e2cf6ef218a8ce835794b"
-  integrity sha512-cUan5qegBC2Tl09l1jleU4FGNKNbs2D2UmEeSDwf0OkcYokEfVCZ3zLlx1+RgZldKWzsOy4IGizaGvK+rV6dhw==
+"@wdio/local-runner@^7.20.4":
+  version "7.20.4"
+  resolved "https://registry.yarnpkg.com/@wdio/local-runner/-/local-runner-7.20.4.tgz#c3ae9ec787e0d85435f0bb0b973de97261b853ea"
+  integrity sha512-W3ldbVB+uHWd2h7VSQga+/G2rEpOcHSVG8ngd62IWyN/yrn0yBVVZLlYY/OzsAUeENF6zAvBhoGdJ+8tcClsMQ==
   dependencies:
     "@types/stream-buffers" "^3.0.3"
     "@wdio/logger" "7.19.0"
     "@wdio/repl" "7.20.3"
-    "@wdio/runner" "7.20.3"
+    "@wdio/runner" "7.20.4"
     "@wdio/types" "7.20.3"
     async-exit-hook "^2.0.1"
     split2 "^4.0.0"
@@ -3188,10 +3188,10 @@
     object-inspect "^1.10.3"
     supports-color "8.1.1"
 
-"@wdio/runner@7.20.3":
-  version "7.20.3"
-  resolved "https://registry.yarnpkg.com/@wdio/runner/-/runner-7.20.3.tgz#84b689edd049acd446a1fdcabfb08222c88ba5f0"
-  integrity sha512-YhxMzwtLTeEDNdtpZj2qkMPWdeUh93e+Uujr0rVinucxnDFCvLubKmuwY5yx5UD0I6SQNdNNlp6ZDder/At3MQ==
+"@wdio/runner@7.20.4":
+  version "7.20.4"
+  resolved "https://registry.yarnpkg.com/@wdio/runner/-/runner-7.20.4.tgz#4a266b2be11ba7f5be4e62daf0333496b2394cc0"
+  integrity sha512-2aEZL3MovcjY/2m0IlpLVStiUGHPl0al7Q36LYlhF8YZv0HWPWKiQxn9FtUcgqcQ5MRfJL4BL6OtOqMkOxAckQ==
   dependencies:
     "@wdio/config" "7.20.3"
     "@wdio/logger" "7.19.0"
@@ -3199,8 +3199,8 @@
     "@wdio/utils" "7.20.3"
     deepmerge "^4.0.0"
     gaze "^1.1.2"
-    webdriver "7.20.3"
-    webdriverio "7.20.3"
+    webdriver "7.20.4"
+    webdriverio "7.20.4"
 
 "@wdio/selenium-standalone-service@^7.20.3":
   version "7.20.3"
