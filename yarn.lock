@@ -7224,16 +7224,16 @@ gatsby-remark-copy-linked-files@^5.18.0:
     probe-image-size "^7.2.3"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-images@^6.17.0:
-  version "6.17.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.17.0.tgz#d666466f4674b29bf1bc7bb001e122a11ebf229e"
-  integrity sha512-pjUBNCfKT8mo1mXztHlxB5OYGSUUr8snTKvBOlKkDQUpQmyDp9BKTYcTMdhlrGqJEpkmMjFpXQSJPSxoTqw+7A==
+gatsby-remark-images@^6.18.0:
+  version "6.18.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.18.0.tgz#02ccd1b2852673adc49aef710e2793810976c8de"
+  integrity sha512-xFLFbHerjdhyIl1iCa5IlMecUoz5HYkvN80rSkCDOZPDXz9AvqrWcoG5KIFP1hgiYh1nZC1CSzd9qNr5yGrXsw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.17.0"
+    gatsby-core-utils "^3.18.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
