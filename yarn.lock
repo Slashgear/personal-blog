@@ -7204,15 +7204,15 @@ gatsby-plugin-use-dark-mode@^1.5.0:
     prop-types "^15.8.1"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.12.0.tgz#c286753c9ea96f40bbcf850b260883533bfca6b3"
-  integrity sha512-vdz3qwaCOkvgzAxMkZlgpmpWf555jISwek5lyWYhGyJJvXYV8KQ2cZ4CoOfFKAYVeZVSucrHcdWyY3fLLpQvAA==
+gatsby-plugin-utils@^3.12.0, gatsby-plugin-utils@^3.12.1:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.12.1.tgz#c6a3ce71b99b7ac0f1dd87c54e3565f03b036ef6"
+  integrity sha512-Rx7/MFtiJ+pyvPLqCPj5beyMN6qOx3EYMrOqmvrWJaM32nxMfHZqUqxGruufyFNVe6edfRuNuXcKaPXlGlyexA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.18.0"
+    gatsby-core-utils "^3.18.1"
     gatsby-sharp "^0.12.0"
     graphql-compose "^9.0.7"
     import-from "^4.0.0"
@@ -7387,17 +7387,17 @@ gatsby-transformer-remark@^5.18.1:
     unist-util-select "^3.0.4"
     unist-util-visit "^2.0.3"
 
-gatsby-transformer-sharp@^4.18.0:
-  version "4.18.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.18.0.tgz#5146d0c302b19a119ad035ea835fa03958e4c6f9"
-  integrity sha512-uOsP5U10pWPdhpKHkPyKWoxCFEGdnreqmSrWrKUsHa0oViCfudbDrM+xWla+QQ0MhHHkqOUjdcfZRG3SwUlPcg==
+gatsby-transformer-sharp@^4.18.1:
+  version "4.18.1"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.18.1.tgz#b06eb62468dbd43f906ad8fc729cb7505d972718"
+  integrity sha512-YqY3dWdUmRzhE2DBbOtJygL/bWKFXDQf3ARn6tSEt0WqPRFGLGbsSpT/xU5makHugdO/Wc30x3x85FhwysvH6Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
     bluebird "^3.7.2"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-plugin-utils "^3.12.0"
+    gatsby-plugin-utils "^3.12.1"
     probe-image-size "^7.2.3"
     semver "^7.3.7"
     sharp "^0.30.3"
