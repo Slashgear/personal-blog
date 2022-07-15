@@ -1082,10 +1082,10 @@
   dependencies:
     regexp-match-indices "1.0.2"
 
-"@cucumber/cucumber@8.3.0":
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/@cucumber/cucumber/-/cucumber-8.3.0.tgz#b0896dfd4b14e7e89b2be03fc5e75400456f0331"
-  integrity sha512-kfG1kVuNlPr3bjqROLqKvZbXkDulVhTGCjWuw9Tj3DL15ykmiHIRVL6EW58seP+PTovh1jn7PcRAUEftUkU0kg==
+"@cucumber/cucumber@8.4.0":
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@cucumber/cucumber/-/cucumber-8.4.0.tgz#415a73b17bb5358792c3ea45c577de1ac6ad67f4"
+  integrity sha512-9MXtmpc/+ZmQH9s++u/2AF/N+D35Z6p3GpwbSr7xxDtfjM1ZCD7j6OSx+E99JGXZAOdShKzI7EhiOqwRERjKYQ==
   dependencies:
     "@cspotcode/source-map-support" "^0.8.0"
     "@cucumber/ci-environment" "9.0.4"
@@ -1160,10 +1160,20 @@
   resolved "https://registry.yarnpkg.com/@cucumber/message-streams/-/message-streams-4.0.1.tgz#a5339d3504594bb2edb5732aaae94dddb24d0970"
   integrity sha512-Kxap9uP5jD8tHUZVjTWgzxemi/0uOsbGjd4LBOSxcJoOCRbESFwemUzilJuzNTB8pcTQUh8D5oudUyxfkJOKmA==
 
-"@cucumber/messages@19.0.0", "@cucumber/messages@^19.0.0":
+"@cucumber/messages@19.0.0":
   version "19.0.0"
   resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-19.0.0.tgz#3deac940b5f8ef2afc7ccc9a555a97b647a48de6"
   integrity sha512-5kf5jTQZf3qI4vr7r/zs2UNg8e/v5wW698IAT+4htMQqBxZT5L0WSgbjz+2vXypHFwcEVIEfiwBaKG5ShthwFg==
+  dependencies:
+    "@types/uuid" "8.3.4"
+    class-transformer "0.5.1"
+    reflect-metadata "0.1.13"
+    uuid "8.3.2"
+
+"@cucumber/messages@19.1.2", "@cucumber/messages@^19.0.0":
+  version "19.1.2"
+  resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-19.1.2.tgz#cc846c191b124deb352dd1992bd49a82f30b0add"
+  integrity sha512-vhWkNmQco+7tk/DWqpN0/R9KTNvsKsXVfZ7IsJs+dEeWmTuRztklHq8lJalwMSQBl71+2/KqGHzOO4BMTC9wIQ==
   dependencies:
     "@types/uuid" "8.3.4"
     class-transformer "0.5.1"
@@ -3270,15 +3280,15 @@
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
-"@wdio/cucumber-framework@^7.20.3":
-  version "7.20.3"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.20.3.tgz#6f1e99b2fc97f99785678cec0dbeab9424b3e5d1"
-  integrity sha512-Cwo88cuf/OOR4nC44HXGl/dVLTKPiM33UpnCQc/lLelwE+2nFYYAdfzuYFcaJ6V2Ra0cu10lmwun9ftf58PEtw==
+"@wdio/cucumber-framework@^7.20.6":
+  version "7.20.6"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.20.6.tgz#87de9b13282d5cb0ed923c61fc5604dc1c863250"
+  integrity sha512-LUZmhvKw22ERNrjeqrZ6WIAFw1jNWKAboMCIth2R/oTbCw0ekBUw9yHmF0CjPRez9osYKVMIlTG9edM7DIH6Jg==
   dependencies:
-    "@cucumber/cucumber" "8.3.0"
+    "@cucumber/cucumber" "8.4.0"
     "@cucumber/gherkin" "24.0.0"
     "@cucumber/gherkin-streams" "^5.0.0"
-    "@cucumber/messages" "19.0.0"
+    "@cucumber/messages" "19.1.2"
     "@types/is-glob" "^4.0.1"
     "@types/long" "^4.0.1"
     "@types/mockery" "^1.4.29"
