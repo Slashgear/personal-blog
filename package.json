@@ -43,7 +43,7 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@wdio/browserstack-service": "^7.20.5",
+    "@wdio/browserstack-service": "^7.20.6",
     "@wdio/cli": "^7.20.6",
     "@wdio/cucumber-framework": "^7.20.6",
     "@wdio/dot-reporter": "^7.20.3",
