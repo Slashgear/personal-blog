@@ -3392,15 +3392,15 @@
     webdriver "7.20.4"
     webdriverio "7.20.5"
 
-"@wdio/selenium-standalone-service@^7.20.3":
-  version "7.20.3"
-  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.20.3.tgz#5f6af3c5de425c65e1f95cdb4614eef9a3ddc7b5"
-  integrity sha512-vbH22pN9I3pzLgbE3+DvCqdpR22UlmXf5D9n/ZfPPOrkZ8EnvkbgcZD63L34ulgklRfnyVRs6DKRCNebhNIEQg==
+"@wdio/selenium-standalone-service@^7.20.6":
+  version "7.20.6"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.20.6.tgz#9b35af449f54a7dac6b1e341c3a175e3c8c64f65"
+  integrity sha512-tUFNOv4XRvMu4VO7sR6VT99FsZ7fjXYhuM7wwKF46jDmoAG01Zq7+vC9VqzqntUoUAQkZNQ4a8EMp7X3pP69XA==
   dependencies:
     "@types/fs-extra" "^9.0.1"
     "@types/node" "^18.0.0"
     "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.20.3"
+    "@wdio/config" "7.20.6"
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.20.3"
     fs-extra "^10.0.0"
