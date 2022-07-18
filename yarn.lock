@@ -3291,10 +3291,10 @@
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
-"@wdio/cucumber-framework@^7.20.6":
-  version "7.20.6"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.20.6.tgz#87de9b13282d5cb0ed923c61fc5604dc1c863250"
-  integrity sha512-LUZmhvKw22ERNrjeqrZ6WIAFw1jNWKAboMCIth2R/oTbCw0ekBUw9yHmF0CjPRez9osYKVMIlTG9edM7DIH6Jg==
+"@wdio/cucumber-framework@^7.20.7":
+  version "7.20.7"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.20.7.tgz#0cdfe6c9a70b747780512e55e0fcf74e88b30979"
+  integrity sha512-W1hzXnt8e7ig/u5hFR9zS/Q6yi6lYy8MeXCRZeaoU2mhkNQcp6DVqfM8Qfj+WDv8P4tH+fyHZ860g9syOwot1w==
   dependencies:
     "@cucumber/cucumber" "8.4.0"
     "@cucumber/gherkin" "24.0.0"
@@ -3304,8 +3304,8 @@
     "@types/long" "^4.0.1"
     "@types/mockery" "^1.4.29"
     "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.20.3"
-    "@wdio/utils" "7.20.3"
+    "@wdio/types" "7.20.7"
+    "@wdio/utils" "7.20.7"
     expect-webdriverio "^3.0.0"
     glob "^8.0.3"
     is-glob "^4.0.0"
