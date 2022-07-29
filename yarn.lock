@@ -2621,10 +2621,12 @@
   resolved "https://registry.yarnpkg.com/@types/diff/-/diff-5.0.2.tgz#dd565e0086ccf8bc6522c6ebafd8a3125c91c12b"
   integrity sha512-uw8eYMIReOwstQ0QKF0sICefSy8cNO/v7gOTiIy9SbwuHyEecJUm7qlgueOO5S1udZ5I/irVydHVwMchgzbKTg==
 
-"@types/easy-table@^0.0.33":
-  version "0.0.33"
-  resolved "https://registry.yarnpkg.com/@types/easy-table/-/easy-table-0.0.33.tgz#b1f7ec29014ec24906b4f28d8368e2e99b399313"
-  integrity sha512-/vvqcJPmZUfQwCgemL0/34G7bIQnCuvgls379ygRlcC1FqNqk3n+VZ15dAO51yl6JNDoWd8vsk+kT8zfZ1VZSw==
+"@types/easy-table@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@types/easy-table/-/easy-table-1.2.0.tgz#d7153551a2c3f6571dddff974b05aa2fb1a4a948"
+  integrity sha512-gVQkR2G/q6UK3wQT+waY9tCrbFauzMoBfJpMxHSuemHLQ8HpHdUIQ9YyRwYMfNX4CfoAoj/eJATyECGkFr65Pg==
+  dependencies:
+    easy-table "*"
 
 "@types/ejs@^3.0.5":
   version "3.1.0"
@@ -3264,12 +3266,12 @@
     fs-extra "^10.0.0"
     selenium-standalone "^8.0.3"
 
-"@wdio/spec-reporter@^7.20.7":
-  version "7.20.7"
-  resolved "https://registry.yarnpkg.com/@wdio/spec-reporter/-/spec-reporter-7.20.7.tgz#b5b42be9438b48855fb64468802f5c8843cad0bd"
-  integrity sha512-h5u/Zv+ImL7gIViuLP/p517aOK2CyE1m7wcbJmWHRVsKVsipc6OWVmfmjZr3zeM6zHtMmmeTJj3WIryY01UmoQ==
+"@wdio/spec-reporter@^7.20.8":
+  version "7.20.8"
+  resolved "https://registry.yarnpkg.com/@wdio/spec-reporter/-/spec-reporter-7.20.8.tgz#71485d1ae46f34e4fd56298080c8a4d68ecaee7d"
+  integrity sha512-/e9QsdrPnYUSEJM/mossPSJ01h6cy/1ePhJXWM7+1HBdN9+VycT7ilYQ7zKCAu9G6LRg70bx03Nm9ZbgT94YCQ==
   dependencies:
-    "@types/easy-table" "^0.0.33"
+    "@types/easy-table" "^1.2.0"
     "@wdio/reporter" "7.20.7"
     "@wdio/types" "7.20.7"
     chalk "^4.0.0"
@@ -5710,7 +5712,7 @@ durations@^3.4.2:
   resolved "https://registry.yarnpkg.com/durations/-/durations-3.4.2.tgz#1de230454373cccfecab927de0bebae2295301db"
   integrity sha512-V/lf7y33dGaypZZetVI1eu7BmvkbC4dItq12OElLRpKuaU5JxQstV2zHwLv8P7cNbQ+KL1WD80zMCTx5dNC4dg==
 
-easy-table@^1.1.1:
+easy-table@*, easy-table@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/easy-table/-/easy-table-1.2.0.tgz#ba9225d7138fee307bfd4f0b5bc3c04bdc7c54eb"
   integrity sha512-OFzVOv03YpvtcWGe5AayU5G2hgybsg3iqA6drU8UaoZyB9jLGMTrz9+asnLp/E+6qPh88yEI1gvyZFZ41dmgww==
