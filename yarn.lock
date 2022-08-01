@@ -3090,10 +3090,10 @@
     got "^11.0.2"
     webdriverio "7.20.9"
 
-"@wdio/cli@^7.20.8":
-  version "7.20.8"
-  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.20.8.tgz#cea090b7f7281a32769339f58a9650a82a6c05bd"
-  integrity sha512-cLKDzvlhxdwbDJN/N3GWMEeW9nPz3EdjDBd6JwbGe8FNfx6Ay0lsS7zGK8WlkcRFssV/E8j0R24UnS8Y1tUhWw==
+"@wdio/cli@^7.20.9":
+  version "7.20.9"
+  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.20.9.tgz#5826d3859200fe7c0f7c9c2245e4ed9110674bce"
+  integrity sha512-Hr5nNosPtGsY3IWI30Ug52wJajBM/ZM9lgETgBm14Fh0yUf7+vNUgaKv11eK9OEQF6Nz2p9vgx0KEr6eTpZ78w==
   dependencies:
     "@types/ejs" "^3.0.5"
     "@types/fs-extra" "^9.0.4"
@@ -3120,7 +3120,7 @@
     lodash.union "^4.6.0"
     mkdirp "^1.0.4"
     recursive-readdir "^2.2.2"
-    webdriverio "7.20.8"
+    webdriverio "7.20.9"
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
@@ -5475,11 +5475,6 @@ devtools-protocol@0.0.981744:
   version "0.0.981744"
   resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.981744.tgz#9960da0370284577d46c28979a0b32651022bacf"
   integrity sha512-0cuGS8+jhR67Fy7qG3i3Pc7Aw494sb9yG9QgpG97SFVWwolgYjlhJg7n+UaHxOQT30d1TYu/EYe9k01ivLErIg==
-
-devtools-protocol@^0.0.1027518:
-  version "0.0.1027518"
-  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1027518.tgz#5434d0cdcc89b085041ebded1287c3332998f5cd"
-  integrity sha512-qujzopk6PjSKlce9G12oAyLvCs2K2Qgp7DMBxkAhR2rmr3Q+m1ltWHRa0lDPO0I38/J0hC6fZhTJm2el87mIdA==
 
 devtools-protocol@^0.0.1029085:
   version "0.0.1029085"
@@ -13926,39 +13921,6 @@ webdriver@7.20.8:
     got "^11.0.2"
     ky "0.30.0"
     lodash.merge "^4.6.1"
-
-webdriverio@7.20.8:
-  version "7.20.8"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-7.20.8.tgz#96f24371b40b5a12feb7031516e166ae864d16e9"
-  integrity sha512-1FN1LzMmB2HAtLr817MeQ4XF31r539CiYU+/l78eK+IwQq0rGfj6lY2yqk1oGtEwvH3W39mvLjMirz0VdY+Ilg==
-  dependencies:
-    "@types/aria-query" "^5.0.0"
-    "@types/node" "^18.0.0"
-    "@wdio/config" "7.20.8"
-    "@wdio/logger" "7.19.0"
-    "@wdio/protocols" "7.20.6"
-    "@wdio/repl" "7.20.7"
-    "@wdio/types" "7.20.7"
-    "@wdio/utils" "7.20.7"
-    archiver "^5.0.0"
-    aria-query "^5.0.0"
-    css-shorthand-properties "^1.1.1"
-    css-value "^0.0.1"
-    devtools "7.20.8"
-    devtools-protocol "^0.0.1027518"
-    fs-extra "^10.0.0"
-    grapheme-splitter "^1.0.2"
-    lodash.clonedeep "^4.5.0"
-    lodash.isobject "^3.0.2"
-    lodash.isplainobject "^4.0.6"
-    lodash.zip "^4.2.0"
-    minimatch "^5.0.0"
-    puppeteer-core "^13.1.3"
-    query-selector-shadow-dom "^1.0.0"
-    resq "^1.9.1"
-    rgb2hex "0.2.5"
-    serialize-error "^8.0.0"
-    webdriver "7.20.8"
 
 webdriverio@7.20.9:
   version "7.20.9"
