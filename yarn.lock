@@ -6931,28 +6931,7 @@ gatsby-cli@^4.19.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.19.0:
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.19.0.tgz#9de637574af1d1d283ffa9b38f058aa2dc6e3d12"
-  integrity sha512-cjXs9DsXkPZt+UdiLHxtq+rGMGVrcnM0KwkawlruvPchI7lqGNv9CScqlvYPxx1dBhu3zSZS26EBALMlFhyOJA==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.13.0"
-    file-type "^16.5.3"
-    fs-extra "^10.1.0"
-    got "^11.8.5"
-    import-from "^4.0.0"
-    lmdb "2.5.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
-gatsby-core-utils@^3.20.0:
+gatsby-core-utils@^3.19.0, gatsby-core-utils@^3.20.0:
   version "3.20.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.20.0.tgz#5f9f1b1777fdf61479f79eb9cf18a72af424c856"
   integrity sha512-D3DIulUFoPvexwsGYFkfESL1Dd3qsxBfj8OBi8vsd6BuXrA6MbLtX3j5+BLVxfKkN2wF7XN6b3/DH+JGNuhh2A==
@@ -7094,14 +7073,14 @@ gatsby-plugin-manifest@^4.19.0:
     semver "^7.3.7"
     sharp "^0.30.3"
 
-gatsby-plugin-offline@^5.19.0:
-  version "5.19.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.19.0.tgz#d62910cd40d0a3d26b8a4403dbffa74230572d2b"
-  integrity sha512-bTouKG26tqlKMCc8q9Fq3+agSv1gO7raEVdjhmtWrbLMPK1RKUv8alOnNc0inMCT/so+vSb7VBKRz0nQSv+O8A==
+gatsby-plugin-offline@^5.20.0:
+  version "5.20.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-5.20.0.tgz#282cab69f2f7d645065b5971cf736a14a148ac37"
+  integrity sha512-XbPMAl2uIuuDpBSIal+TOqulhFMX9il9q7VrIIB//EHRsS11HwblkUj9HcRsZEgrFKj/Uov06uIuZyrhtQSY4Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.19.0"
+    gatsby-core-utils "^3.20.0"
     glob "^7.2.3"
     idb-keyval "^3.2.0"
     lodash "^4.17.21"
