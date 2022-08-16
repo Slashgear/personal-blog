@@ -1082,10 +1082,10 @@
   dependencies:
     regexp-match-indices "1.0.2"
 
-"@cucumber/cucumber@8.5.0":
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/@cucumber/cucumber/-/cucumber-8.5.0.tgz#265348b0c7680426006fc4e41abc9424bd5cc8b3"
-  integrity sha512-Ac64lYhgzRxFGf3MnlysMG0zmHa18HfuOU1BA5RfXsrHeWtZx525zH4FsqtRW2AnlYHGu3pQpww5zyQKWi1WDA==
+"@cucumber/cucumber@8.5.1":
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/@cucumber/cucumber/-/cucumber-8.5.1.tgz#d7c3640b641182cf3b263f15b4cf444f12b0e011"
+  integrity sha512-BwuGLcDy2ZnbSQkU/49zm5cGgwWgP+fgCQpdtFfgQ9KMV8wKumrpFE0EFQtUviBLP5qCK5CEbLKMwCRTNFmkIg==
   dependencies:
     "@cspotcode/source-map-support" "^0.8.0"
     "@cucumber/ci-environment" "9.0.4"
@@ -3151,12 +3151,12 @@
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
-"@wdio/cucumber-framework@^7.20.8":
-  version "7.20.8"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.20.8.tgz#5e9a8a3d8d7be5f3a990d6267656a56b9ae5de61"
-  integrity sha512-Q7+x2rzu9+P3x/wz5CrH4b4d7UMhzAtZjHjW2u7SFUAwaaWFFnqSdRdMJipq9B7PF4rpwQYngGe7UjMRygvIWQ==
+"@wdio/cucumber-framework@^7.21.0":
+  version "7.21.0"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.21.0.tgz#41662a1ad9f4368d50945faa4f200246ca87c078"
+  integrity sha512-1xPwFAQQTqGPZiFgHXYx/uqFu3tsQrXKUo1kVbNkmizFD339ZBZYq4eginGu2H4EJgjzsWUhFhyXeYb7uaXxkA==
   dependencies:
-    "@cucumber/cucumber" "8.5.0"
+    "@cucumber/cucumber" "8.5.1"
     "@cucumber/gherkin" "24.0.0"
     "@cucumber/gherkin-streams" "^5.0.0"
     "@cucumber/messages" "19.1.2"
@@ -3164,8 +3164,8 @@
     "@types/long" "^4.0.1"
     "@types/mockery" "^1.4.29"
     "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.20.7"
-    "@wdio/utils" "7.20.7"
+    "@wdio/types" "7.21.0"
+    "@wdio/utils" "7.21.0"
     expect-webdriverio "^3.0.0"
     glob "^8.0.3"
     is-glob "^4.0.0"
