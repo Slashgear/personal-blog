@@ -7019,16 +7019,16 @@ gatsby-plugin-canonical-urls@^4.21.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-feed@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-4.20.0.tgz#4bcbf69613e13aae97a2c10c050b7bf06fb3afe0"
-  integrity sha512-N6Kt5fZwmC1f+WmYHe7Vlgy6GFroZnPPnJ0Gnm0DJ0HS+FAHeR00P2C8O7zlZzyO6uIkWGjiZDMojuFcHBOYkQ==
+gatsby-plugin-feed@^4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-4.21.0.tgz#863286af8611e89069aeb57c23ac0c795c62a7c3"
+  integrity sha512-8pgdLjMp04QeGMvDsgHWhxLHZLI3yEEbUnIjXJXXJH1xhgRaaLNbawrLMXLqX6mk9vd8XCoERZjoESZmTXMaVg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@hapi/joi" "^15.1.1"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-plugin-utils "^3.14.0"
+    gatsby-plugin-utils "^3.15.0"
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
