@@ -7147,7 +7147,7 @@ gatsby-plugin-use-dark-mode@^1.5.0:
     prop-types "^15.8.1"
     terser "^4.0.0"
 
-gatsby-plugin-utils@^3.14.0, gatsby-plugin-utils@^3.15.0:
+gatsby-plugin-utils@^3.15.0:
   version "3.15.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-3.15.0.tgz#1d1d7a3e696c38aa7db848e0d52aaa4ded841172"
   integrity sha512-O4dm4ntakCoQZnnnS4oGihtT48Rrh888fMpcxj0zWu/6/8Uyz8IgagJyJAz0MMdcfhrLIE+X8Rszjk8hINDQhA==
@@ -7331,20 +7331,20 @@ gatsby-transformer-remark@^5.21.0:
     unist-util-select "^3.0.4"
     unist-util-visit "^2.0.3"
 
-gatsby-transformer-sharp@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.20.0.tgz#e66657e2e59ecb0c9f911c7b1d96a60571d90bb8"
-  integrity sha512-TwGOyR2alSF0JkhB2v9iWSjNr8SXqtlbTX826myC7qoA8ejIdnwkbKv2pSrOdAIy9A5fqm7inSmzWGEYKg4ktQ==
+gatsby-transformer-sharp@^4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.21.0.tgz#e8537f0bf16f37e4db18c90d0aedac7f3a9f7426"
+  integrity sha512-t9o15f/yQUFa7zt20K5xRKdnd6PJMiWMy5XCPMDShiQIxmf351Qu683Q8320Wg+nVuxkS7Axfp6p5c9F+KWJjQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
     bluebird "^3.7.2"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-plugin-utils "^3.14.0"
+    gatsby-plugin-utils "^3.15.0"
     probe-image-size "^7.2.3"
     semver "^7.3.7"
-    sharp "^0.30.3"
+    sharp "^0.30.7"
 
 gatsby-worker@^1.21.0:
   version "1.21.0"
@@ -12311,7 +12311,7 @@ shallowequal@^1.1.0:
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
-sharp@^0.30.3, sharp@^0.30.7:
+sharp@^0.30.7:
   version "0.30.7"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.30.7.tgz#7862bda98804fdd1f0d5659c85e3324b90d94c7c"
   integrity sha512-G+MY2YW33jgflKPTXXptVO28HvNOo9G3j0MybYAHeEmby+QuD2U98dT6ueht9cv/XDqZspSpIhoSW+BAKJ7Hig==
