@@ -7040,10 +7040,10 @@ gatsby-plugin-advanced-sitemap@^2.1.0:
     pify "5.0.0"
     xml "^1.0.1"
 
-gatsby-plugin-canonical-urls@^4.20.0:
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-4.20.0.tgz#b0538d7415a57ada31b2d38f4f2bc16cd9a0509c"
-  integrity sha512-SggHUsTZgNLnYCh3jWYr9IpEmm5tOJButvfkNk2z0EM0D8aw4TRQvWDBvUqT527Qg38onOFOoy+TSM09iajFYA==
+gatsby-plugin-canonical-urls@^4.21.0:
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-4.21.0.tgz#8e592fb74aaba1c51d3c27273107edd04b83f32a"
+  integrity sha512-7CaNJ5C5cFPrSvUG0pHJWqv4Vbf03ZZWNZsJK5r3SHFjJ0tMyc6pKLxBpxejRdxepNriEHmBtkQoy8nZq0ViSg==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
