@@ -6909,7 +6909,7 @@ gatsby-cli@^4.21.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.21.0:
+gatsby-core-utils@^3.21.0:
   version "3.21.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.21.0.tgz#5ca118857cf9f59b69f06f2ae886d8182af46515"
   integrity sha512-pCDa9EGU8niRJQVv7ow3ijzmG0PegZaBc5Yt6z4enc4m7Dl5ZT6Edkcw9p8q/FhGiZUkzQhWaRDxUvtaoPwAOQ==
@@ -6977,7 +6977,7 @@ gatsby-page-utils@^2.21.0:
     lodash "^4.17.21"
     micromatch "^4.0.5"
 
-gatsby-parcel-config@^0.12.0:
+gatsby-parcel-config@0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/gatsby-parcel-config/-/gatsby-parcel-config-0.12.0.tgz#130d22f66cfee001a8e700bffcea144c69d6ea6d"
   integrity sha512-ZGCo2gLhXNFcjkpDu2rUw5/cCxU6rP3hQ4QgWcHbrfDBU8jPxn2UCZp0rFTslLdbZAD3kjVhPkKCwIgoUpE4+g==
@@ -7353,10 +7353,10 @@ gatsby-worker@^1.21.0:
     "@babel/core" "^7.15.5"
     "@babel/runtime" "^7.15.4"
 
-gatsby@^4.21.0:
-  version "4.21.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-4.21.0.tgz#a966c7dd48938d5597193a62e697d29ad3d54532"
-  integrity sha512-N6IgLXyxuyay8hDCzMuaQ0aGA/eVCz6pGs4KRjv+6hbI3DC+UG5Hn2HyFsx0Mn5gDzdl0DWHeEDhTVujH5KGSA==
+gatsby@^4.21.1:
+  version "4.21.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-4.21.1.tgz#f9d187466e3cf9d28c373af14c943bb696148a5e"
+  integrity sha512-gaDtFgvLmNpn3Et0Dl0Gx6NzO2EBxxFULsaV191XO1POgreKMmN1svb7OMJ5Ry2/yZo/eaJLPriKsJ7DU2Q+Hw==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/core" "^7.15.5"
@@ -7442,7 +7442,7 @@ gatsby@^4.21.0:
     gatsby-legacy-polyfills "^2.21.0"
     gatsby-link "^4.21.0"
     gatsby-page-utils "^2.21.0"
-    gatsby-parcel-config "^0.12.0"
+    gatsby-parcel-config "0.12.0"
     gatsby-plugin-page-creator "^4.21.0"
     gatsby-plugin-typescript "^4.21.0"
     gatsby-plugin-utils "^3.15.0"
@@ -7517,7 +7517,7 @@ gatsby@^4.21.0:
     webpack-merge "^5.8.0"
     webpack-stats-plugin "^1.0.3"
     webpack-virtual-modules "^0.3.2"
-    xstate "^4.26.0"
+    xstate "4.32.1"
     yaml-loader "^0.6.0"
   optionalDependencies:
     gatsby-sharp "^0.15.0"
@@ -14205,10 +14205,10 @@ xss@^1.0.6:
     commander "^2.20.3"
     cssfilter "0.0.10"
 
-xstate@^4.26.0, xstate@^4.26.1:
-  version "4.31.0"
-  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.31.0.tgz#039cf6f865dd9e104012eb76a14df757c988ec58"
-  integrity sha512-UK5m6OqUsTlPuKWkfRR5cR9/Yt7sysFyEg+PVIbEH9mwHSf9zuCvWO7rRvhBq7T+3pEXLKTEMfaqmLxl9Ob1pw==
+xstate@4.32.1, xstate@^4.26.1:
+  version "4.32.1"
+  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.32.1.tgz#1a09c808a66072938861a3b4acc5b38460244b70"
+  integrity sha512-QYUd+3GkXZ8i6qdixnOn28bL3EvA++LONYL/EMWwKlFSh/hiLndJ8YTnz77FDs+JUXcwU7NZJg7qoezoRHc4GQ==
 
 xtend@^4.0.0:
   version "4.0.2"
