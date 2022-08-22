@@ -3095,10 +3095,10 @@
     got "^11.0.2"
     webdriverio "7.21.0"
 
-"@wdio/cli@^7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.21.0.tgz#801fc6ad2853f8bdfcb2e2c521887a70e988bcc2"
-  integrity sha512-WbdcB3irBLMBVI3J58qib8Njrzru/uLqhs8uXr8k2WLYEQKzyBkNF5deUAk+cuisZNe2/vp6KTy1KHB455w05A==
+"@wdio/cli@^7.22.0":
+  version "7.22.0"
+  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.22.0.tgz#ed96dcfc74d0bfef98eef83d6b76ce19ac36b902"
+  integrity sha512-I26AhMWTJjNA7uFx/UG/MzdpWLZqAtkyxL6eemGHOPK0TXMj8qjTLpW9rrghGIx3Gn5MGXI1WtxAKc23T8sDWg==
   dependencies:
     "@types/ejs" "^3.0.5"
     "@types/fs-extra" "^9.0.4"
@@ -3110,7 +3110,7 @@
     "@types/recursive-readdir" "^2.2.0"
     "@wdio/config" "7.21.0"
     "@wdio/logger" "7.19.0"
-    "@wdio/protocols" "7.20.6"
+    "@wdio/protocols" "7.22.0"
     "@wdio/types" "7.21.0"
     "@wdio/utils" "7.21.0"
     async-exit-hook "^2.0.1"
@@ -3125,7 +3125,7 @@
     lodash.union "^4.6.0"
     mkdirp "^1.0.4"
     recursive-readdir "^2.2.2"
-    webdriverio "7.21.0"
+    webdriverio "7.22.0"
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
