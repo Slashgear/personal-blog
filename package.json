@@ -50,7 +50,7 @@
     "@wdio/local-runner": "^7.24.0",
     "@wdio/selenium-standalone-service": "^7.24.0",
     "@wdio/spec-reporter": "^7.24.0",
-    "chromedriver": "104.0.0",
+    "chromedriver": "105.0.0",
     "eslint": "^8.23.1",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.5.0",
