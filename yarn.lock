@@ -6517,10 +6517,10 @@ gatsby-plugin-sharp@^4.22.0:
     sharp "^0.30.7"
     svgo "1.3.2"
 
-gatsby-plugin-styled-components@^5.22.0:
-  version "5.22.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-5.22.0.tgz#6594e71ac8b64ac00fbc340bbaf37c140243c1f3"
-  integrity sha512-L/+W8abTBTCpGpyC6efKwUcrGzE6Rk6Kgc8eTn+Nx/w+Vuxk3y4W7Ed7kuLb+MeRBfIR1PBFTJOfwum5j+Or7Q==
+gatsby-plugin-styled-components@^5.23.0:
+  version "5.23.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-5.23.0.tgz#695829d322db6b9465350438b4ece37d582ccb60"
+  integrity sha512-K1WA0GTd4s9Jw8hQ1QJkzMtywld2N21FBNg0oaBJX/5pruSWO18B6lmYrmGRbrL3a2d7YqC+FipSsWj0XqFq9Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
