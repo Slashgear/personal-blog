@@ -23,7 +23,7 @@
     "gatsby-remark-copy-linked-files": "^5.22.0",
     "gatsby-remark-images": "^6.22.0",
     "gatsby-remark-prismjs": "^6.22.0",
-    "gatsby-remark-responsive-iframe": "^5.22.0",
+    "gatsby-remark-responsive-iframe": "^5.23.0",
     "gatsby-remark-smartypants": "^5.23.0",
     "gatsby-source-filesystem": "^4.22.0",
     "gatsby-transformer-json": "^4.23.0",
