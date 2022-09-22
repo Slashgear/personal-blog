@@ -6540,10 +6540,10 @@ gatsby-remark-copy-linked-files@^5.23.0:
     probe-image-size "^7.2.3"
     unist-util-visit "^2.0.3"
 
-gatsby-remark-images@^6.23.0:
-  version "6.23.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.23.0.tgz#fcf1cb8042c88355581dec0a386bfb5d97def1cf"
-  integrity sha512-0+t7TBLjKOFgj1MKYiYTX85KD9EqZ4nv2xbFDrpHDtT+p1VaJB6tPtlzsa7S69nZs3HMZkLqRIIQdClnN9DaEg==
+gatsby-remark-images@^6.23.1:
+  version "6.23.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.23.1.tgz#e88224ae5179df9e9aac17b8b80631fea39292a8"
+  integrity sha512-7kximmP4XQauDTlrBvu6nXRq2LyoHuwMDzmSYRsfjf3csoyeRc0ynSRco8jdpFzNCPF6T6JWUtrEQtQJ2WNLOA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.3.0"
