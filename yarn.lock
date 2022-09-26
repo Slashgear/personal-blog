@@ -2737,22 +2737,6 @@
   dependencies:
     "@wdio/utils" "7.25.0"
 
-"@wdio/reporter@7.24.1":
-  version "7.24.1"
-  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-7.24.1.tgz#319e6c8d3c8ad9a190d6aa0afa382bacb3aaf3e5"
-  integrity sha512-EMOQzGnRkCb/wzBWChr/W61fu0eBV72Dq2ydnyE0t7bKSSqupcpUlqfiTZ/gXvnYci2QPBV0vRz67IhmdVo3iw==
-  dependencies:
-    "@types/diff" "^5.0.0"
-    "@types/node" "^18.0.0"
-    "@types/object-inspect" "^1.8.0"
-    "@types/supports-color" "^8.1.0"
-    "@types/tmp" "^0.2.0"
-    "@wdio/types" "7.24.1"
-    diff "^5.0.0"
-    fs-extra "^10.0.0"
-    object-inspect "^1.10.3"
-    supports-color "8.1.1"
-
 "@wdio/reporter@7.25.0":
   version "7.25.0"
   resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-7.25.0.tgz#a2c9896a4f95b96fa4b3cea7f0f46dd095c8e0f6"
@@ -2797,14 +2781,14 @@
     fs-extra "^10.0.0"
     selenium-standalone "^8.0.3"
 
-"@wdio/spec-reporter@^7.24.1":
-  version "7.24.1"
-  resolved "https://registry.yarnpkg.com/@wdio/spec-reporter/-/spec-reporter-7.24.1.tgz#49ad48774cb28db94224d57f9d006bc0c2dd256d"
-  integrity sha512-zqJO2y7UtM2Xmpo9VPQ6fEcQZ58kO+wFTPiUjkUoQEcbE2V9LzvvB4YdWCcocGSda3I9VBWbZc/+VBbwKXQAeQ==
+"@wdio/spec-reporter@^7.25.0":
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/@wdio/spec-reporter/-/spec-reporter-7.25.0.tgz#4b889a92cad6245365bf35015214687de8961582"
+  integrity sha512-QyObfa3CcWCRuTcKTqK85GnMn+qR2fzFCrKGqDHU5bhsToaJTZNAubE+YpUAq8iWEL67wi3EUKKtY/gUGiQcrQ==
   dependencies:
     "@types/easy-table" "^1.2.0"
-    "@wdio/reporter" "7.24.1"
-    "@wdio/types" "7.24.1"
+    "@wdio/reporter" "7.25.0"
+    "@wdio/types" "7.25.0"
     chalk "^4.0.0"
     easy-table "^1.1.1"
     pretty-ms "^7.0.0"
