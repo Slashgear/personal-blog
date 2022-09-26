@@ -2640,17 +2640,6 @@
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
-"@wdio/config@7.24.0":
-  version "7.24.0"
-  resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.24.0.tgz#ac29f8c25df8bba29bd811a386a46ff05386b213"
-  integrity sha512-MSIuwbs7JeOh9eMiFP3nVYDyaK3jYv7HY4eJIfvl6TBo4G1mTjbF1Dnct38W0ZR5WIFeSKhl15LiumbNUv0pyA==
-  dependencies:
-    "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.24.0"
-    "@wdio/utils" "7.24.0"
-    deepmerge "^4.0.0"
-    glob "^8.0.3"
-
 "@wdio/config@7.24.1":
   version "7.24.1"
   resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.24.1.tgz#b4852063caba943b0b8171e8b145e5f073691db6"
@@ -2659,6 +2648,17 @@
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.24.1"
     "@wdio/utils" "7.24.1"
+    deepmerge "^4.0.0"
+    glob "^8.0.3"
+
+"@wdio/config@7.25.0":
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.25.0.tgz#7a0ce7939218d3ec82bf9f51c7c6a422830317cd"
+  integrity sha512-fttJIPu9x2H9sz6g7GsDNx0LH6S3EyXUjrk3nUz+ccwgnXtq3E3WyGgBdZsAObItvvplLNM5nSdtWNZSW0+Dzw==
+  dependencies:
+    "@wdio/logger" "7.19.0"
+    "@wdio/types" "7.25.0"
+    "@wdio/utils" "7.25.0"
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
@@ -2759,17 +2759,17 @@
     webdriver "7.24.1"
     webdriverio "7.24.1"
 
-"@wdio/selenium-standalone-service@^7.24.1":
-  version "7.24.1"
-  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.24.1.tgz#50b4625c9a921b811df5f6dda9b6bd7e83544a47"
-  integrity sha512-jtQ+B491GHP+UfGbTAUIj2iy1ZtxbGbJ/vVw+zIu1N1Ys6Y7cHQXtCKicLN8PGw2xOMmCDSajDjoIJpqqPcmfw==
+"@wdio/selenium-standalone-service@^7.25.0":
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.25.0.tgz#9990552a96457c163a0fec59715ea08f74e0cbe1"
+  integrity sha512-WRX4ljr6VRmV2YO+jqWSOhKMQKpLItJUklhOT9P98LwzMB607fMFTnN1vJ/rI3Q2ZLoHDPbPGnbmTYUw/4uzzQ==
   dependencies:
     "@types/fs-extra" "^9.0.1"
     "@types/node" "^18.0.0"
     "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.24.1"
+    "@wdio/config" "7.25.0"
     "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.24.1"
+    "@wdio/types" "7.25.0"
     fs-extra "^10.0.0"
     selenium-standalone "^8.0.3"
 
@@ -2785,14 +2785,6 @@
     easy-table "^1.1.1"
     pretty-ms "^7.0.0"
 
-"@wdio/types@7.24.0":
-  version "7.24.0"
-  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.24.0.tgz#ded79460f8a2a4892232e2707fb8d0ce3694bfd5"
-  integrity sha512-wJZ+1lIHFz5aWXSO+k91wX8tfZdpyX4YYoker5xfC4zvM7ypyK81dZyiE5whS+QFL3VTCPP8dXNjwX5f5h+YEw==
-  dependencies:
-    "@types/node" "^18.0.0"
-    got "^11.8.1"
-
 "@wdio/types@7.24.1":
   version "7.24.1"
   resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.24.1.tgz#06b1fd680de676d9def11c8b7a27eb923eb01ede"
@@ -2801,14 +2793,13 @@
     "@types/node" "^18.0.0"
     got "^11.8.1"
 
-"@wdio/utils@7.24.0":
-  version "7.24.0"
-  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.24.0.tgz#f6d4c8fce057a2064f87fe6e4f8fa77286058129"
-  integrity sha512-VWfFT1Ket3pAt19kY5lPRuwJDheKF4hMwG0AiezkqqerDl/m+fcb4a6pj1WHjlawvlYM4MM15iBZFxYfphG9lg==
+"@wdio/types@7.25.0":
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-7.25.0.tgz#c5cc952a47e578aacba76b30399cd534df17968c"
+  integrity sha512-BET/5UZSobAiBSbpWlUzcdjU1WszuUhaGBY7Pj4aAZjlvEeU5ZW5q2/655kxAvFhqHZ4AFEgd6NXg8krOEkXaA==
   dependencies:
-    "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.24.0"
-    p-iteration "^1.1.8"
+    "@types/node" "^18.0.0"
+    got "^11.8.1"
 
 "@wdio/utils@7.24.1":
   version "7.24.1"
@@ -2817,6 +2808,15 @@
   dependencies:
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.24.1"
+    p-iteration "^1.1.8"
+
+"@wdio/utils@7.25.0":
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.25.0.tgz#9b6442ffd9a864d98baa7c54a7237b140dc5fbc4"
+  integrity sha512-dRPJoVb2wsMv/GFwAVcVbp0+8CE+vVeW/+lpre6ocn36WAnDQJD6X5UGYde5oQeXGyjzj1/nMHBSsr+ifvuJRQ==
+  dependencies:
+    "@wdio/logger" "7.19.0"
+    "@wdio/types" "7.25.0"
     p-iteration "^1.1.8"
 
 "@webassemblyjs/ast@1.11.1":
