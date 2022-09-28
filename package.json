@@ -22,7 +22,7 @@
     "gatsby-remark-autolink-headers": "^5.23.1",
     "gatsby-remark-copy-linked-files": "^5.24.0",
     "gatsby-remark-images": "^6.24.0",
-    "gatsby-remark-prismjs": "^6.23.0",
+    "gatsby-remark-prismjs": "^6.24.0",
     "gatsby-remark-responsive-iframe": "^5.24.0",
     "gatsby-remark-smartypants": "^5.23.0",
     "gatsby-source-filesystem": "^4.24.0",
