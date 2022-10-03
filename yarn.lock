@@ -2645,13 +2645,13 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^7.25.0":
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-7.25.0.tgz#a5cd71840867e7d9d3c0459affabf1aa43b2e334"
-  integrity sha512-VxvBVWK8wtegFJbFga8qOHShpxhDZUZY5BRgBxbmQKiGO5wznYJWUXc46oyeq2M480LKI917kMGukOBqNX4v5w==
+"@wdio/dot-reporter@^7.25.1":
+  version "7.25.1"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-7.25.1.tgz#f9d956136caa057fd4c63d875fbd3f2f36a1b336"
+  integrity sha512-luAH+wBmpUIYuw84+4fJ/646uSCZ82f2+rkphDG7h01Tj9Oe8YQJ4GmpKPREYxFwmdpQcy5fKDZXQn8yQxcv7w==
   dependencies:
-    "@wdio/reporter" "7.25.0"
-    "@wdio/types" "7.25.0"
+    "@wdio/reporter" "7.25.1"
+    "@wdio/types" "7.25.1"
     chalk "^4.0.0"
 
 "@wdio/local-runner@^7.25.1":
@@ -2696,22 +2696,6 @@
   integrity sha512-3DUtOrLi5thba22IBn/XQ7caFrbXtYOg3750UtXxUuxXU4QHkKq1AN8+WXr4Rq2EnXfB2G9t9pEdqjZSv9oPAw==
   dependencies:
     "@wdio/utils" "7.25.1"
-
-"@wdio/reporter@7.25.0":
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-7.25.0.tgz#a2c9896a4f95b96fa4b3cea7f0f46dd095c8e0f6"
-  integrity sha512-Hp42KdBruuv3gR+zavw46l3FyElCTW8EABib59h1/G0J6rT8Vjf5H5wGXdv+K2NJCJqhZd2HkpgmMlx7B9bstA==
-  dependencies:
-    "@types/diff" "^5.0.0"
-    "@types/node" "^18.0.0"
-    "@types/object-inspect" "^1.8.0"
-    "@types/supports-color" "^8.1.0"
-    "@types/tmp" "^0.2.0"
-    "@wdio/types" "7.25.0"
-    diff "^5.0.0"
-    fs-extra "^10.0.0"
-    object-inspect "^1.10.3"
-    supports-color "8.1.1"
 
 "@wdio/reporter@7.25.1":
   version "7.25.1"
