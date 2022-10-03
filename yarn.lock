@@ -2601,6 +2601,17 @@
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
+"@wdio/config@7.25.1":
+  version "7.25.1"
+  resolved "https://registry.yarnpkg.com/@wdio/config/-/config-7.25.1.tgz#1a094e639343466adcea678fc443daef041dc7b3"
+  integrity sha512-7I3L+TE75gvh8jiv8cE/Ch9S9erDgrZG9o5587OlNKfpgFciT7DH7/efPXzYwh8YPFV3grFaydxaaoYzDv6PDA==
+  dependencies:
+    "@wdio/logger" "7.19.0"
+    "@wdio/types" "7.25.1"
+    "@wdio/utils" "7.25.1"
+    deepmerge "^4.0.0"
+    glob "^8.0.3"
+
 "@wdio/cucumber-framework@^7.25.0":
   version "7.25.0"
   resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.25.0.tgz#1f2331cb947c9e0e75742ad191722d83b85cf6ea"
@@ -2714,17 +2725,17 @@
     webdriver "7.25.0"
     webdriverio "7.25.0"
 
-"@wdio/selenium-standalone-service@^7.25.0":
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.25.0.tgz#9990552a96457c163a0fec59715ea08f74e0cbe1"
-  integrity sha512-WRX4ljr6VRmV2YO+jqWSOhKMQKpLItJUklhOT9P98LwzMB607fMFTnN1vJ/rI3Q2ZLoHDPbPGnbmTYUw/4uzzQ==
+"@wdio/selenium-standalone-service@^7.25.1":
+  version "7.25.1"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.25.1.tgz#8c975fc0d2db6ad18b33b3eba082a2775012f5e8"
+  integrity sha512-TRD4hAxdHuZ0z414eDayE6q2gEmyAg7YdMrF+CJHWbjZKhJG4cqTSpV04zgMfQmTov5Y2+WtasdlGnqV5AXfMg==
   dependencies:
     "@types/fs-extra" "^9.0.1"
     "@types/node" "^18.0.0"
     "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.25.0"
+    "@wdio/config" "7.25.1"
     "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.25.0"
+    "@wdio/types" "7.25.1"
     fs-extra "^10.0.0"
     selenium-standalone "^8.0.3"
 
@@ -2763,6 +2774,15 @@
   dependencies:
     "@wdio/logger" "7.19.0"
     "@wdio/types" "7.25.0"
+    p-iteration "^1.1.8"
+
+"@wdio/utils@7.25.1":
+  version "7.25.1"
+  resolved "https://registry.yarnpkg.com/@wdio/utils/-/utils-7.25.1.tgz#29bfe7e2dcd4f9b31868f069afa1eb761e96b8a7"
+  integrity sha512-DL+nDRVgzruJLhedBUQEMUcojLoGwsjCQCYWram4NfwAIIkxcAX/5Y4vHSut3OoW2bEHl3R8/FQ4B/ivIr2EoQ==
+  dependencies:
+    "@wdio/logger" "7.19.0"
+    "@wdio/types" "7.25.1"
     p-iteration "^1.1.8"
 
 "@webassemblyjs/ast@1.11.1":
