@@ -1075,10 +1075,10 @@
   dependencies:
     regexp-match-indices "1.0.2"
 
-"@cucumber/cucumber@8.5.3":
-  version "8.5.3"
-  resolved "https://registry.yarnpkg.com/@cucumber/cucumber/-/cucumber-8.5.3.tgz#099f8a05664bbbbaa7e5fd7a3d303d4c9709af2b"
-  integrity sha512-cLyMebI20K57JzOd22DJ3atGYwpxYz0YVCAl/iU9iY04A6uWY/6NoOSl8Vfd73ROjLA6T5ZJpGlfw5VkWJnq4A==
+"@cucumber/cucumber@8.6.0":
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/@cucumber/cucumber/-/cucumber-8.6.0.tgz#a182214b7d5c167f18fb14f4e452bb41fdaa902e"
+  integrity sha512-htkP/MlaYmgDId1Z2+7OQnH9aBd4Ui/Lk6PEmvMvP52ixPSUOv0MrP4/HUSECVXY0TI8GG7Ho03uLf6lieiFvw==
   dependencies:
     "@cspotcode/source-map-support" "^0.8.0"
     "@cucumber/ci-environment" "9.1.0"
@@ -1095,6 +1095,7 @@
     chalk "^4.1.2"
     cli-table3 "0.6.2"
     commander "^9.0.0"
+    debug "^4.3.4"
     duration "^0.2.2"
     durations "^3.4.2"
     figures "^3.2.0"
@@ -1153,7 +1154,7 @@
   resolved "https://registry.yarnpkg.com/@cucumber/message-streams/-/message-streams-4.0.1.tgz#a5339d3504594bb2edb5732aaae94dddb24d0970"
   integrity sha512-Kxap9uP5jD8tHUZVjTWgzxemi/0uOsbGjd4LBOSxcJoOCRbESFwemUzilJuzNTB8pcTQUh8D5oudUyxfkJOKmA==
 
-"@cucumber/messages@19.1.2", "@cucumber/messages@^19.0.0":
+"@cucumber/messages@19.1.2":
   version "19.1.2"
   resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-19.1.2.tgz#cc846c191b124deb352dd1992bd49a82f30b0add"
   integrity sha512-vhWkNmQco+7tk/DWqpN0/R9KTNvsKsXVfZ7IsJs+dEeWmTuRztklHq8lJalwMSQBl71+2/KqGHzOO4BMTC9wIQ==
@@ -1162,6 +1163,16 @@
     class-transformer "0.5.1"
     reflect-metadata "0.1.13"
     uuid "8.3.2"
+
+"@cucumber/messages@19.1.4", "@cucumber/messages@^19.0.0":
+  version "19.1.4"
+  resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-19.1.4.tgz#5cefc47cac3004c0bc38d42933042ec248bb747c"
+  integrity sha512-Pksl0pnDz2l1+L5Ug85NlG6LWrrklN9qkMxN5Mv+1XZ3T6u580dnE6mVaxjJRdcOq4tR17Pc0RqIDZMyVY1FlA==
+  dependencies:
+    "@types/uuid" "8.3.4"
+    class-transformer "0.5.1"
+    reflect-metadata "0.1.13"
+    uuid "9.0.0"
 
 "@cucumber/tag-expressions@4.1.0":
   version "4.1.0"
@@ -2612,22 +2623,22 @@
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
-"@wdio/cucumber-framework@^7.25.0":
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.25.0.tgz#1f2331cb947c9e0e75742ad191722d83b85cf6ea"
-  integrity sha512-+tskk3wZp1/DJeQu3GjdLJ/SQOhyAn0em0TRtGM8SJVwL3tWQur13QpI6TvHNyeIV+gxwUbCUn6ZRYC8xYrycg==
+"@wdio/cucumber-framework@^7.25.1":
+  version "7.25.1"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.25.1.tgz#5a34539b854da653929ffe53236e6e3988e767f6"
+  integrity sha512-FhyO1cFmCtti9Vj3lG9P8HYXppdQmLvFQP3fMlKpbDOcXHsyslzO7CMl1puf6etJhy9ik/6G1XPygiO+IY8X7g==
   dependencies:
-    "@cucumber/cucumber" "8.5.3"
+    "@cucumber/cucumber" "8.6.0"
     "@cucumber/gherkin" "24.0.0"
     "@cucumber/gherkin-streams" "^5.0.0"
-    "@cucumber/messages" "19.1.2"
+    "@cucumber/messages" "19.1.4"
     "@types/is-glob" "^4.0.1"
     "@types/long" "^4.0.1"
     "@types/mockery" "^1.4.29"
     "@types/sinonjs__fake-timers" "^8.1.2"
     "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.25.0"
-    "@wdio/utils" "7.25.0"
+    "@wdio/types" "7.25.1"
+    "@wdio/utils" "7.25.1"
     expect-webdriverio "^3.0.0"
     glob "^8.0.3"
     is-glob "^4.0.0"
@@ -12725,7 +12736,7 @@ uuid@8.3.2, uuid@^8.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
-uuid@^9.0.0:
+uuid@9.0.0, uuid@^9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
   integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
