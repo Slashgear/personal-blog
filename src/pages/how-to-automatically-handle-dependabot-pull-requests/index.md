@@ -79,7 +79,7 @@ To do this, in my continuous integration workflow, I just had to add a new job c
 
 ## 👮‍ In the end, is it really safer?
 
-SWithout explaining what [dependabot] is, one could think that all this could bring more security.
+Without explaining what [dependabot] is, one could think that all this could bring more security.
 Indeed, as soon as security patches are available, they would be automatically applied and deployed on my blog without any manual manipulation being necessary.
 
 My availability to merge the PRs of dependabot being limited, one could say that setting up automation improves things.
