@@ -1144,6 +1144,13 @@
   dependencies:
     "@cucumber/messages" "^19.0.0"
 
+"@cucumber/gherkin@24.1.0":
+  version "24.1.0"
+  resolved "https://registry.yarnpkg.com/@cucumber/gherkin/-/gherkin-24.1.0.tgz#ca2dcbe11f5f7d7f30fd073280550bd6eca2363c"
+  integrity sha512-B48XrUod4y3SoXe6mv12q7U1zThUNSK3yHSm/hBJCJZ6RJUJhFk3FVMN/83qOEbsYZe6iG9v+4L1Myf8/q8C6g==
+  dependencies:
+    "@cucumber/messages" "^19.1.4"
+
 "@cucumber/html-formatter@20.0.0":
   version "20.0.0"
   resolved "https://registry.yarnpkg.com/@cucumber/html-formatter/-/html-formatter-20.0.0.tgz#d0958b2d53a6f5ce0fb6f6d7eac88902e9b31030"
@@ -1164,7 +1171,7 @@
     reflect-metadata "0.1.13"
     uuid "8.3.2"
 
-"@cucumber/messages@19.1.4", "@cucumber/messages@^19.0.0":
+"@cucumber/messages@19.1.4", "@cucumber/messages@^19.0.0", "@cucumber/messages@^19.1.4":
   version "19.1.4"
   resolved "https://registry.yarnpkg.com/@cucumber/messages/-/messages-19.1.4.tgz#5cefc47cac3004c0bc38d42933042ec248bb747c"
   integrity sha512-Pksl0pnDz2l1+L5Ug85NlG6LWrrklN9qkMxN5Mv+1XZ3T6u580dnE6mVaxjJRdcOq4tR17Pc0RqIDZMyVY1FlA==
@@ -2626,13 +2633,13 @@
     deepmerge "^4.0.0"
     glob "^8.0.3"
 
-"@wdio/cucumber-framework@^7.25.1":
-  version "7.25.1"
-  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.25.1.tgz#5a34539b854da653929ffe53236e6e3988e767f6"
-  integrity sha512-FhyO1cFmCtti9Vj3lG9P8HYXppdQmLvFQP3fMlKpbDOcXHsyslzO7CMl1puf6etJhy9ik/6G1XPygiO+IY8X7g==
+"@wdio/cucumber-framework@^7.25.4":
+  version "7.25.4"
+  resolved "https://registry.yarnpkg.com/@wdio/cucumber-framework/-/cucumber-framework-7.25.4.tgz#909fa6f76b7674f94dc8c341023184b53a6f71ca"
+  integrity sha512-j8zGuxhc5p3T/yaixzhFwNqchkI6bTvJpRRWhKdbtdxXH2xnMbZhbsVG8EeVW20vvetYCP63V4I1HfvCjYOHZw==
   dependencies:
     "@cucumber/cucumber" "8.6.0"
-    "@cucumber/gherkin" "24.0.0"
+    "@cucumber/gherkin" "24.1.0"
     "@cucumber/gherkin-streams" "^5.0.0"
     "@cucumber/messages" "19.1.4"
     "@types/is-glob" "^4.0.1"
@@ -2640,8 +2647,8 @@
     "@types/mockery" "^1.4.29"
     "@types/sinonjs__fake-timers" "^8.1.2"
     "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.25.1"
-    "@wdio/utils" "7.25.1"
+    "@wdio/types" "7.25.4"
+    "@wdio/utils" "7.25.4"
     expect-webdriverio "^3.0.0"
     glob "^8.0.3"
     is-glob "^4.0.0"
