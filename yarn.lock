@@ -2570,10 +2570,10 @@
     got "^11.0.2"
     webdriverio "7.25.4"
 
-"@wdio/cli@^7.25.2":
-  version "7.25.2"
-  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.25.2.tgz#81b1933457184c4fcd705d13e96798e4ad229900"
-  integrity sha512-jpQmPR14D2nIBKby6I21zSHNQAPayZXmu+3IBNRe3SDTNEAHb9jZuyhj4IdoaPilfXrJAzQ2BRql6/T2oA29Yw==
+"@wdio/cli@^7.25.4":
+  version "7.25.4"
+  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.25.4.tgz#3bb35c6875eb5a10d408a43b2e0f5df65b83287e"
+  integrity sha512-p6hDvcY7KJhAN6VJmrp6n2VGi5eXVeN4+AtL/1XyaxNR41L9u5w90GxDr1VbJtHWGbvct0cYKdESoBj0Hj6s9w==
   dependencies:
     "@types/ejs" "^3.0.5"
     "@types/fs-extra" "^9.0.4"
@@ -2583,11 +2583,11 @@
     "@types/lodash.union" "^4.6.6"
     "@types/node" "^18.0.0"
     "@types/recursive-readdir" "^2.2.0"
-    "@wdio/config" "7.25.1"
+    "@wdio/config" "7.25.4"
     "@wdio/logger" "7.19.0"
     "@wdio/protocols" "7.22.0"
-    "@wdio/types" "7.25.1"
-    "@wdio/utils" "7.25.1"
+    "@wdio/types" "7.25.4"
+    "@wdio/utils" "7.25.4"
     async-exit-hook "^2.0.1"
     chalk "^4.0.0"
     chokidar "^3.0.0"
@@ -2600,7 +2600,7 @@
     lodash.union "^4.6.0"
     mkdirp "^1.0.4"
     recursive-readdir "^2.2.2"
-    webdriverio "7.25.2"
+    webdriverio "7.25.4"
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
