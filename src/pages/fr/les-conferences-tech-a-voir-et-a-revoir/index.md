@@ -122,6 +122,13 @@ Cependant, en leur montrant cette conf, j'arrive souvent à leur faire changer d
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JC6seEF0_Rc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Pratiques
+
+## 🇫🇷 Revue de code : on n’est pas venu pour souffrir ! [(Anne-Laure DE BOISSIEU)](https://twitter.com/AnneLaure2B)
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LVh6iQtJW2I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Intégration
 
 ### 🇫🇷 Compagnonnage, CSS et Vexillologie [(Tim Carry)](https://mixitconf.org/2017/pixelastic)
