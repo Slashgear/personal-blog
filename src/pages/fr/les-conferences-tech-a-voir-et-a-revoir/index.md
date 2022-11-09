@@ -67,6 +67,10 @@ L'essentiel d'HTTPS en 45 min! 👏
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NCPgs4YlijU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### 🇫🇷 Retour aux sources : Le cache HTTP [(Hubert SABLONNIÈRE)](https://twitter.com/hsablonniere)
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xtpaQ8_mmKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## DevOps
 
 ### 🇫🇷 Docker 101 #1 [(Nicolas De loof)](https://twitter.com/ndeloof)
