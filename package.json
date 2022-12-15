@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Antoine Caron <antoine395.caron@gmail.com>",
   "dependencies": {
+    "@use-it/event-listener": "^0.1.7",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.24.4",
     "gatsby-image": "^3.10.0",
@@ -39,7 +40,6 @@
     "styled-components": "^5.3.6",
     "typeface-montserrat": "1.1.13",
     "typography": "^0.16.21",
-    "use-dark-mode": "^2.3.1",
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
