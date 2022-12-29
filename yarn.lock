@@ -2748,13 +2748,13 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^8.0.13":
-  version "8.0.13"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.0.13.tgz#92f00dcbeb773c733d99a74c756e296bb2ae7ed3"
-  integrity sha512-KlNG1BQRK1bbdxTVaVlW6PHcwheGETYvC1+A9YJnWzFRNQSbto42vrR++D/mSn3kCJ5OOlkeEczVXST1OLtouQ==
+"@wdio/dot-reporter@^8.0.14":
+  version "8.0.14"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.0.14.tgz#b48bd2830d506d304d0e1efb0454d17b1c3152e3"
+  integrity sha512-E8aCPjLuRj9cznqviZ/vIzoewPZQWJb34dXSsF1ryY7EgREBPVKGIiz7owk5iBhloE6QyCPToyNuae/dX6khAg==
   dependencies:
-    "@wdio/reporter" "8.0.13"
-    "@wdio/types" "8.0.11"
+    "@wdio/reporter" "8.0.14"
+    "@wdio/types" "8.0.14"
     chalk "^5.0.1"
 
 "@wdio/globals@8.0.13", "@wdio/globals@^8.0.0-alpha.505":
@@ -2877,20 +2877,20 @@
     object-inspect "^1.10.3"
     supports-color "8.1.1"
 
-"@wdio/reporter@8.0.13":
-  version "8.0.13"
-  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.0.13.tgz#3b17999b5ccd80c1c1af8bc0909d2261a1f4b6d6"
-  integrity sha512-OAsLjynv1/mNcFEemZgqH9MF4DxO8j95m6Q5rBaCLSi1JVnXll+5eERLOhv49IpFtLjMI4gzPPERh8mJVhF2Sg==
+"@wdio/reporter@8.0.14":
+  version "8.0.14"
+  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.0.14.tgz#c52cb4b9c87b550f5f48ec334af39c6c7a6bbd08"
+  integrity sha512-ilPS/ldsKrPF2h6ZYzUK0niEpp1m+0O8+70eFdRwJBIISMMeTujz7dSjmRbUkNUsjDD/ANH44+ZWLq8zVk3NFQ==
   dependencies:
     "@types/diff" "^5.0.2"
     "@types/object-inspect" "^1.8.1"
     "@types/supports-color" "^8.1.1"
     "@types/tmp" "^0.2.3"
-    "@wdio/logger" "8.0.0"
-    "@wdio/types" "8.0.11"
+    "@wdio/logger" "8.0.14"
+    "@wdio/types" "8.0.14"
     diff "^5.0.0"
     object-inspect "^1.12.0"
-    supports-color "9.3.0"
+    supports-color "9.3.1"
 
 "@wdio/runner@7.25.4":
   version "7.25.4"
@@ -12805,10 +12805,10 @@ supports-color@8.1.1, supports-color@^8.0.0, supports-color@^8.1.1:
   dependencies:
     has-flag "^4.0.0"
 
-supports-color@9.3.0:
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-9.3.0.tgz#cce566c5ad562eece4dfe5a4502a58efc54986a9"
-  integrity sha512-hJ6RYjNbcBFkpHi+ykjar+7GgHs+65Kxyw940nBLOSjaWZ13acq4A5f+gWiV5w+xfsg5MbnjDxTigLcUuljerw==
+supports-color@9.3.1:
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-9.3.1.tgz#34e4ad3c71c9a39dae3254ecc46c9b74e89e15a6"
+  integrity sha512-knBY82pjmnIzK3NifMo3RxEIRD9E0kIzV4BKcyTZ9+9kWgLMxd4PrsTSMoFQUabgRBbF8KOLRDCyKgNV+iK44Q==
 
 supports-color@^2.0.0:
   version "2.0.0"
