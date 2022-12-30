@@ -2642,10 +2642,10 @@
     got "^12.1.0"
     webdriverio "8.0.2"
 
-"@wdio/cli@^7.28.1":
-  version "7.28.1"
-  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.28.1.tgz#4dcb0bda7da7fb63d6e7fed416970915b06273be"
-  integrity sha512-f1qTaqM7MBLYq3cTA4gc7D4NgHJo5J2+3nRqQg2QjQ7hYIfifIpUSFhkbo24m6+RQSQfcM5BuPMIzlDHRsDX2w==
+"@wdio/cli@^7.29.0":
+  version "7.29.0"
+  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.29.0.tgz#600d1ed4ba5d30d00842cfb628c9f2a0ff1910f3"
+  integrity sha512-gVHYmXEEHBBGRwTzAvp6mJnQVEq4IlT1U32F1VSTtz33d8rogchmhwti9fBbSYKMv5Chg3txXPXuMJMhKtfvaQ==
   dependencies:
     "@types/ejs" "^3.0.5"
     "@types/fs-extra" "^9.0.4"
@@ -2672,7 +2672,7 @@
     lodash.union "^4.6.0"
     mkdirp "^1.0.4"
     recursive-readdir "^2.2.2"
-    webdriverio "7.28.1"
+    webdriverio "7.29.0"
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
@@ -5152,10 +5152,10 @@ devtools-protocol@^0.0.1081726:
   resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1081726.tgz#2ababa73ef521cc1b36d47ce1e9bfe1b8cdb7555"
   integrity sha512-u+SmIzR/+iblfZZhTOQHTRFLehNFb/LmMbnlQswJYeyjND7+JWQ6kccA47BernhKF/0KbjTroRCjpv9dsc2yVQ==
 
-devtools-protocol@^0.0.1084670:
-  version "0.0.1084670"
-  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1084670.tgz#853b4e14f9324fd7b8b52a191d403364ceb0aa79"
-  integrity sha512-6iZb5kgfopmFMzJZD3rk0Ipa9WBd7VzTw+2yoOeBmg1/araNAhrFVWYQQkWo7aTFsNLdmGLtZlTOP6c2WG9UfA==
+devtools-protocol@^0.0.1085790:
+  version "0.0.1085790"
+  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1085790.tgz#315e4700eb960cf111cc908b9be2caca2257cb13"
+  integrity sha512-f5kfwdOTxPqX5v8ZfAAl9xBgoEVazBYtIONDWIRqYbb7yjOIcnk6vpzCgBCQvav5AuBRLzyUGG0V74OAx93LoA==
 
 devtools@7.25.4:
   version "7.25.4"
@@ -13675,10 +13675,10 @@ webdriverio@7.25.4:
     serialize-error "^8.0.0"
     webdriver "7.25.4"
 
-webdriverio@7.28.1:
-  version "7.28.1"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-7.28.1.tgz#b6a7567ee0c9e93a8bd525aa393090a7a87a7f60"
-  integrity sha512-fz0nALbRpEPvJf8+ptwPoyxlpknQonOzpXeBFqGjxcUoQ6eT817xZG8Cp35KJmra1KXQCrQVjO+9yy8bROZcig==
+webdriverio@7.29.0:
+  version "7.29.0"
+  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-7.29.0.tgz#fd6a7e6b8ccd6841d7f73e6b7a397cc878e4e10c"
+  integrity sha512-mp7ABwE/fzXhsPCBWjkxhVx6ZJutF0yCziTfEd7G7SNJuQgzAGmQGI1QMc/oXYdxgGgKNv3QC878SIB7oBkA+g==
   dependencies:
     "@types/aria-query" "^5.0.0"
     "@types/node" "^18.0.0"
@@ -13693,7 +13693,7 @@ webdriverio@7.28.1:
     css-shorthand-properties "^1.1.1"
     css-value "^0.0.1"
     devtools "7.28.1"
-    devtools-protocol "^0.0.1084670"
+    devtools-protocol "^0.0.1085790"
     fs-extra "^11.1.0"
     grapheme-splitter "^1.0.2"
     lodash.clonedeep "^4.5.0"
