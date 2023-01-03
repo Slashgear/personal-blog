@@ -2208,6 +2208,11 @@
   resolved "https://registry.yarnpkg.com/@types/get-port/-/get-port-3.2.0.tgz#f9e0a11443cc21336470185eae3dfba4495d29bc"
   integrity sha512-TiNg8R1kjDde5Pub9F9vCwZA/BNW9HeXP5b9j7Qucqncy/McfPZ6xze/EyBdXS5FhMIGN6Fx3vg75l5KHy3V1Q==
 
+"@types/gitconfiglocal@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@types/gitconfiglocal/-/gitconfiglocal-2.0.1.tgz#c134f9fb03d71917afa35c14f3b82085520509a6"
+  integrity sha512-AYC38la5dRwIfbrZhPNIvlGHlIbH+kdl2j8A37twoCQyhKPPoRPfVmoBZKajpLIfV7SMboU6MZ6w/RmZLH68IQ==
+
 "@types/glob@*":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.2.0.tgz#bc1b5bf3aa92f25bd5dd39f35c57361bdce5b2eb"
@@ -2629,17 +2634,21 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.0.14":
-  version "8.0.14"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.0.14.tgz#60d6bce21d8075fff493ac77717b87ab4c6905ec"
-  integrity sha512-Bq6R7vZwvwCTE8A1YbGrdGWgYkbJ5tnnw2YMYt0i+1oDBGFdEJ5ql4zzqWmlDIoqZarZVK7Ok0+HQBkVfDovoA==
+"@wdio/browserstack-service@^8.1.1":
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.1.1.tgz#2e2cd30d91355dd757392b2c18edc22d271361d0"
+  integrity sha512-hR6UcPpKhPrs6ggIl3lrWQtPW1eeBNHmOEw/Rz0hhM8FdrfRXCvm02hdqpKzeOYHbRxHM9wZT5GnuMeuSoVwtA==
   dependencies:
-    "@types/node" "^18.0.0"
-    "@wdio/logger" "8.0.14"
-    "@wdio/types" "8.0.14"
+    "@types/gitconfiglocal" "^2.0.1"
+    "@wdio/logger" "8.1.0"
+    "@wdio/reporter" "8.1.0"
+    "@wdio/types" "8.1.0"
     browserstack-local "^1.5.1"
     form-data "^4.0.0"
+    git-repo-info "^2.1.1"
+    gitconfiglocal "^2.1.0"
     got "^12.1.0"
+    uuid "^8.3.2"
     webdriverio "8.0.2"
 
 "@wdio/cli@^7.29.1":
@@ -2817,17 +2826,7 @@
     loglevel-plugin-prefix "^0.8.4"
     strip-ansi "^6.0.0"
 
-"@wdio/logger@8.0.14", "@wdio/logger@^8.0.0":
-  version "8.0.14"
-  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.0.14.tgz#667afda72f4f8f356949577e1043b4ae00c09062"
-  integrity sha512-EeWxksSASb04WnDLhc5CM8awXdNI2BLXUckOc+8E33kRVuyglzOh4HvlY5HGMr1WeAYEtLpXox5FAb66Od59qg==
-  dependencies:
-    chalk "^5.1.2"
-    loglevel "^1.6.0"
-    loglevel-plugin-prefix "^0.8.4"
-    strip-ansi "^6.0.0"
-
-"@wdio/logger@8.1.0":
+"@wdio/logger@8.1.0", "@wdio/logger@^8.0.0":
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.1.0.tgz#aaefce7da066a477249191aec8e9caa8581aeb33"
   integrity sha512-QRC5b7FF4JIYUCqggnVA0sZ80TwIUFN9JyBSbuGuMxaSLSLujSo7WfuSrnQXVvsRbnJ16wWwJWYigfLkxOW86Q==
@@ -2966,13 +2965,6 @@
   version "8.0.11"
   resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.0.11.tgz#e3623506e89da59947aa7a7caf01e513363fe1c9"
   integrity sha512-54xbajB7tqWmYPXFI0ALupPauwLyVtPSZSG/R/DPlY25p+Ygw4jwH64s+Jh1V3TZYnktfv4cIt1Bw/M35cBgOQ==
-  dependencies:
-    "@types/node" "^18.0.0"
-
-"@wdio/types@8.0.14":
-  version "8.0.14"
-  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.0.14.tgz#4573031a01dbaef37d8e9e0fbfcad9cdcd210b4f"
-  integrity sha512-W1JKVEDd0JmOlE+p6WsqAkQODnXpDwBwObqP7B9w5/cdPbjGzRS5EcQdNtwATh13E8mJe9Qy8jh8zH3WaR41Qg==
   dependencies:
     "@types/node" "^18.0.0"
 
@@ -7502,6 +7494,11 @@ get-symbol-description@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
+git-repo-info@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/git-repo-info/-/git-repo-info-2.1.1.tgz#220ffed8cbae74ef8a80e3052f2ccb5179aed058"
+  integrity sha512-8aCohiDo4jwjOwma4FmYFd3i97urZulL8XL24nIPxuE+GZnfsAyy/g2Shqx6OjUiFKUXZM+Yy+KHnOmmA3FVcg==
+
 git-up@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/git-up/-/git-up-7.0.0.tgz#bace30786e36f56ea341b6f69adfd83286337467"
@@ -7509,6 +7506,13 @@ git-up@^7.0.0:
   dependencies:
     is-ssh "^1.4.0"
     parse-url "^8.1.0"
+
+gitconfiglocal@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gitconfiglocal/-/gitconfiglocal-2.1.0.tgz#07c28685c55cc5338b27b5acbcfe34aeb92e43d1"
+  integrity sha512-qoerOEliJn3z+Zyn1HW2F6eoYJqKwS6MgC9cztTLUB/xLWX8gD/6T60pKn4+t/d6tP7JlybI7Z3z+I572CR/Vg==
+  dependencies:
+    ini "^1.3.2"
 
 github-from-package@0.0.0:
   version "0.0.0"
@@ -8183,7 +8187,7 @@ ini@2.0.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-2.0.0.tgz#e5fd556ecdd5726be978fa1001862eacb0a94bc5"
   integrity sha512-7PnF4oN3CvZF23ADhA5wRaYEQpJ8qygSkbtTXWBeXWXmEVRXK+1ITciHWwHhsjv1TmW0MgacIv6hEi5pX5NQdA==
 
-ini@^1.3.5, ini@~1.3.0:
+ini@^1.3.2, ini@^1.3.5, ini@~1.3.0:
   version "1.3.8"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
