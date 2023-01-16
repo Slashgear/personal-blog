@@ -2157,7 +2157,7 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.51.tgz#cfd70924a25a3fd32b218e5e420e6897e1ac4f40"
   integrity sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==
 
-"@types/fs-extra@^9.0.1", "@types/fs-extra@^9.0.4":
+"@types/fs-extra@^9.0.4":
   version "9.0.13"
   resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-9.0.13.tgz#7594fbae04fe7f1918ce8b3d213f74ff44ac1f45"
   integrity sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==
@@ -2403,13 +2403,6 @@
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
-
-"@types/selenium-standalone@^7.0.0":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@types/selenium-standalone/-/selenium-standalone-7.0.1.tgz#7d94c2f663ceb495648c2c2a300f317d3a835257"
-  integrity sha512-zbKenL0fAXzPyiOaaFMrvFdMNhj5BgNJQq8bxiZfwQD9ID2J8bUG5xbcS3tQtlzIX/62z9nG5Vo45oaHWTbvbw==
-  dependencies:
-    "@types/node" "*"
 
 "@types/sharp@^0.30.5":
   version "0.30.5"
@@ -2828,19 +2821,16 @@
     webdriver "7.25.4"
     webdriverio "7.25.4"
 
-"@wdio/selenium-standalone-service@^7.25.4":
-  version "7.25.4"
-  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-7.25.4.tgz#c0cd1a81cd310f39c086756f13f6fe9d0d36c9fc"
-  integrity sha512-s3mv4FYJ2TItPdEp2FIQKcaJQnKqsya6nKxVldEUqvJWB2K14dpG3CFk2D7ikEmlEmSuYb/LFxAaMLJ7bv9bAw==
+"@wdio/selenium-standalone-service@^8.1.2":
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/@wdio/selenium-standalone-service/-/selenium-standalone-service-8.1.2.tgz#02b6637711e41f821140c94421ddf22e53fda0a1"
+  integrity sha512-AwBl9iW3qT19JS88utW6rn/XCElnC/XU5NE/+eHsi1X5DY/M2y0I6RIJEqhjoMDO40NVPznLDYpiAdyVQpOEWg==
   dependencies:
-    "@types/fs-extra" "^9.0.1"
     "@types/node" "^18.0.0"
-    "@types/selenium-standalone" "^7.0.0"
-    "@wdio/config" "7.25.4"
-    "@wdio/logger" "7.19.0"
-    "@wdio/types" "7.25.4"
-    fs-extra "^10.0.0"
-    selenium-standalone "^8.0.3"
+    "@wdio/config" "8.1.2"
+    "@wdio/logger" "8.1.0"
+    "@wdio/types" "8.1.2"
+    selenium-standalone "^8.2.1"
 
 "@wdio/spec-reporter@^7.25.4":
   version "7.25.4"
@@ -11877,10 +11867,10 @@ seed-random@~2.2.0:
   resolved "https://registry.yarnpkg.com/seed-random/-/seed-random-2.2.0.tgz#2a9b19e250a817099231a5b99a4daf80b7fbed54"
   integrity sha1-KpsZ4lCoFwmSMaW5mk2vgLf77VQ=
 
-selenium-standalone@^8.0.3:
-  version "8.0.11"
-  resolved "https://registry.yarnpkg.com/selenium-standalone/-/selenium-standalone-8.0.11.tgz#6a08492d64b1cfa443ff3d2f01382a330d208f61"
-  integrity sha512-TFiYwjgOCgW67taJMtOwCt41/NG3OcwgbirSjOo3iOPNjuKQwxKeTypsAKwQp3AeuemftXwz9582GfcNbW60Jw==
+selenium-standalone@^8.2.1:
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/selenium-standalone/-/selenium-standalone-8.2.5.tgz#27061006b02268a1003418b509c7c375e413b14c"
+  integrity sha512-HdBQXNIc1G7zUWaQUMfilFRiHJ2d9G3WGYpJyPMXVWQro/dJfrAD1kexH1o7nEk/Ua9FTJ9SoKcYYpYhuSVcfA==
   dependencies:
     commander "^9.0.0"
     cross-spawn "^7.0.3"
