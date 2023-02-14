@@ -61,7 +61,7 @@
     "husky": "^8.0.3",
     "prettier": "^2.8.4",
     "pretty-quick": "^3.1.2",
-    "wdio-chromedriver-service": "^8.0.1"
+    "wdio-chromedriver-service": "^8.1.0"
   },
   "keywords": [
     "gatsby"
