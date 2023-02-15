@@ -2847,7 +2847,7 @@
     loglevel-plugin-prefix "^0.8.4"
     strip-ansi "^6.0.0"
 
-"@wdio/logger@8.1.0", "@wdio/logger@^8.0.0":
+"@wdio/logger@8.1.0", "@wdio/logger@^8.1.0":
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.1.0.tgz#aaefce7da066a477249191aec8e9caa8581aeb33"
   integrity sha512-QRC5b7FF4JIYUCqggnVA0sZ80TwIUFN9JyBSbuGuMxaSLSLujSo7WfuSrnQXVvsRbnJ16wWwJWYigfLkxOW86Q==
@@ -13324,12 +13324,12 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-wdio-chromedriver-service@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/wdio-chromedriver-service/-/wdio-chromedriver-service-8.0.1.tgz#3f66a959a33c9b1af9589c21c11cf2c9b61cd0f1"
-  integrity sha512-nLjJmUBlng8RtnTM/ZJt1rzwAY1QqsMZbmNDxX7/AuSZEu88URTjjUhGPHY0d9al33GSiVoF606P0QSQT6B1ag==
+wdio-chromedriver-service@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/wdio-chromedriver-service/-/wdio-chromedriver-service-8.1.1.tgz#bdd3776b9a6ccfcec30ec425f906e0fb1c41f966"
+  integrity sha512-pN3GiOkTIMnalfq4PJAHdX95pDp1orHnTY8W1fIbd6ok81ba97UjerTgS7lUDRUh1p0MAm35Ww0uc0/9wzB7SA==
   dependencies:
-    "@wdio/logger" "^8.0.0"
+    "@wdio/logger" "^8.1.0"
     fs-extra "^11.1.0"
     split2 "^4.1.0"
     tcp-port-used "^1.0.2"
