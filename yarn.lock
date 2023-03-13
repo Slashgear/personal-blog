@@ -2700,10 +2700,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.5.8":
-  version "8.5.8"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.5.8.tgz#ee8383bec3953be55868bd8ba6b04e3cab203469"
-  integrity sha512-nJRKAcgaVi/tZRthVPJ7U+0o0kPPd0fTN/Lw/aXLIq1zsl9IQnViasSjyfCIUdndVgSAsXWNsPCLrfZN0/WNxQ==
+"@wdio/browserstack-service@^8.5.9":
+  version "8.5.9"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.5.9.tgz#6e2708b1348e5ea4ffcf92a55441d2f2c5a3b184"
+  integrity sha512-3s0SDXtN+uFw7F8HtUKLLwVwsRVlCXwjZhNZYrD1N6+yRh86hT69a9Vm/mWZszpSzIvxdZKjeErRYJ5F9D8/wQ==
   dependencies:
     "@types/gitconfiglocal" "^2.0.1"
     "@wdio/logger" "8.1.0"
@@ -2715,7 +2715,7 @@
     gitconfiglocal "^2.1.0"
     got "^12.1.0"
     uuid "^8.3.2"
-    webdriverio "8.5.8"
+    webdriverio "8.5.9"
 
 "@wdio/cli@^7.30.2":
   version "7.30.2"
@@ -5202,10 +5202,10 @@ devtools@7.30.2:
     ua-parser-js "^1.0.1"
     uuid "^9.0.0"
 
-devtools@8.5.7:
-  version "8.5.7"
-  resolved "https://registry.yarnpkg.com/devtools/-/devtools-8.5.7.tgz#79c5f91e6fd585e0d72c6a9eff9eb771daa485b1"
-  integrity sha512-ikZQFHtyh77Bis0oiAODM8L5MHyzuzjTO1R5s6Z9DA3axefMgXJFzFebA8ku/MCXnl1+GmPdKp2aHC+4YXPYuQ==
+devtools@8.5.9:
+  version "8.5.9"
+  resolved "https://registry.yarnpkg.com/devtools/-/devtools-8.5.9.tgz#ad671503c7bbacad5ae5008b3452bbe32880ef62"
+  integrity sha512-zhEHZjqsWnnOnDozSkKBXEBsfV1qtdk5gbHQQnu2B22Az7f3nZnLfznNVmqxcaYC3lmplsnnMlsRk6WgouAagw==
   dependencies:
     "@types/node" "^18.0.0"
     "@wdio/config" "8.5.6"
@@ -13488,10 +13488,10 @@ webdriverio@7.30.2:
     serialize-error "^8.0.0"
     webdriver "7.30.2"
 
-webdriverio@8.5.8:
-  version "8.5.8"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.5.8.tgz#40bad020857ec6f694f2affb3daa6e77a1c719cf"
-  integrity sha512-ViysVL2FhbMSLYhYV6WoikrfzLRzJpoE+bYW2Dj4FITELL4vlPFUAsN+7kiAVWhRXYjpG57IGO6K5xVemT/kbQ==
+webdriverio@8.5.9:
+  version "8.5.9"
+  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.5.9.tgz#9a202cca9959aa7a097ef5ed6178a8a8a39d7f73"
+  integrity sha512-nKjrp6lmPdyg5nnst6BVcV+8r+3Yx/hOhgO2G+0kfCpQp2uATwn2Y4fk6u7ba09e8gsAyxI+1bYv34ra8zKCdQ==
   dependencies:
     "@types/node" "^18.0.0"
     "@wdio/config" "8.5.6"
@@ -13504,7 +13504,7 @@ webdriverio@8.5.8:
     aria-query "^5.0.0"
     css-shorthand-properties "^1.1.1"
     css-value "^0.0.1"
-    devtools "8.5.7"
+    devtools "8.5.9"
     devtools-protocol "^0.0.1109433"
     grapheme-splitter "^1.0.2"
     import-meta-resolve "^2.1.0"
