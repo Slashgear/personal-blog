@@ -2821,12 +2821,12 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^8.4.0":
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.4.0.tgz#ca0aa4a4f9996a005421e5a66fe26d0767c21bd1"
-  integrity sha512-k0WG6Tigct0/gD1V6qd0f6ucyTie9jzD7Wcfvz1hG76438tzLzbiRx3Li/niooSaJlSLnaHT1TediMVx4WEO2g==
+"@wdio/dot-reporter@^8.6.6":
+  version "8.6.6"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.6.6.tgz#c42d28475a824eaf5061ba2f92b260809fd9675f"
+  integrity sha512-WYp0kQ7eRB/RoHb4wseoiMKPzvkzS5+Ph+mz4BnbFublWcOeShgD5MpD9T5zyHJWqZ95Gcbt8rAOZ2M6pmV4pg==
   dependencies:
-    "@wdio/reporter" "8.4.0"
+    "@wdio/reporter" "8.6.6"
     "@wdio/types" "8.4.0"
     chalk "^5.0.1"
 
@@ -2868,6 +2868,16 @@
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.1.0.tgz#aaefce7da066a477249191aec8e9caa8581aeb33"
   integrity sha512-QRC5b7FF4JIYUCqggnVA0sZ80TwIUFN9JyBSbuGuMxaSLSLujSo7WfuSrnQXVvsRbnJ16wWwJWYigfLkxOW86Q==
+  dependencies:
+    chalk "^5.1.2"
+    loglevel "^1.6.0"
+    loglevel-plugin-prefix "^0.8.4"
+    strip-ansi "^6.0.0"
+
+"@wdio/logger@8.6.6":
+  version "8.6.6"
+  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.6.6.tgz#6f3844a2506730ae1e4151dca0ed0242b5b69b63"
+  integrity sha512-MS+Y5yqFGx2zVXMOfuBQAVdFsP4DuYz+/hM552xwiDWjGg6EZHoccqUYgH3J5zpu3JFpYV3R/a5jExFiGGck6g==
   dependencies:
     chalk "^5.1.2"
     loglevel "^1.6.0"
@@ -2933,6 +2943,18 @@
   dependencies:
     "@types/node" "^18.0.0"
     "@wdio/logger" "8.1.0"
+    "@wdio/types" "8.4.0"
+    diff "^5.0.0"
+    object-inspect "^1.12.0"
+    supports-color "9.3.1"
+
+"@wdio/reporter@8.6.6":
+  version "8.6.6"
+  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.6.6.tgz#f10ec0819c3059eeba2a7ee3d8b057c42a760fd2"
+  integrity sha512-X8hZyomzY5C7q8JMbK24Kz4KQ4cHkNUsnu3BV7c9VOfVgeFWu7md/hZcHeoq0tNea0Ema4iwaUnO5onA9Ci/bA==
+  dependencies:
+    "@types/node" "^18.0.0"
+    "@wdio/logger" "8.6.6"
     "@wdio/types" "8.4.0"
     diff "^5.0.0"
     object-inspect "^1.12.0"
