@@ -2726,10 +2726,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.8.0":
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.8.0.tgz#9ea58714b74648003e17c9d4988b6d54cd1b1f5c"
-  integrity sha512-8KPCdY1ePVgCogQlCb9mBvh1qDGpjYziaf1BQ6So/bpI75mSWBkNghiqGyjWF0AC0Jd4rhPyH+Rw6tspIyB2yQ==
+"@wdio/browserstack-service@^8.8.1":
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.8.1.tgz#0a0ac9630b599ea56d496ae3a6396d9499e44419"
+  integrity sha512-FBGejIDeKi7qLjRx2E20wVhxm8ASGfNsIACC6clmDkdpJ9edQSDwUjPmzRFeW3tK9Ea9PqauGJgTH3pu3uvvzw==
   dependencies:
     "@types/gitconfiglocal" "^2.0.1"
     "@wdio/logger" "8.6.6"
@@ -2741,7 +2741,7 @@
     gitconfiglocal "^2.1.0"
     got "^12.1.0"
     uuid "^8.3.2"
-    webdriverio "8.8.0"
+    webdriverio "8.8.1"
 
 "@wdio/cli@^7.30.2":
   version "7.30.2"
@@ -2898,10 +2898,10 @@
   resolved "https://registry.yarnpkg.com/@wdio/protocols/-/protocols-7.27.0.tgz#8e2663ec877dce7a5f76b021209c18dd0132e853"
   integrity sha512-hT/U22R5i3HhwPjkaKAG0yd59eaOaZB0eibRj2+esCImkb5Y6rg8FirrlYRxIGFVBl0+xZV0jKHzR5+o097nvg==
 
-"@wdio/protocols@8.6.6":
-  version "8.6.6"
-  resolved "https://registry.yarnpkg.com/@wdio/protocols/-/protocols-8.6.6.tgz#94d65fdce5b25c13486b88a4801275105d109e84"
-  integrity sha512-RC7cwvLvtxaQGNC+m5YwwPO/p+NxM0HVoJ5DC/udoJgNiEZay75rtFqpKsUxHq7DU5IKYAZV1FzVQJ776EZUfg==
+"@wdio/protocols@8.8.1":
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/@wdio/protocols/-/protocols-8.8.1.tgz#0ae799048d90564dd2dbd88f3480c6d392e7cd04"
+  integrity sha512-nDaycUcm/ATLxcjim0fJyRiezXyyj4ZCq+Xf0S2Cubc0k7+DceFBt7KIMsernNVh2pelzFHEEwxh4DLaqQ71Wg==
 
 "@wdio/repl@7.25.4":
   version "7.25.4"
@@ -2939,18 +2939,6 @@
     fs-extra "^10.0.0"
     object-inspect "^1.10.3"
     supports-color "8.1.1"
-
-"@wdio/reporter@8.7.0":
-  version "8.7.0"
-  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.7.0.tgz#6e2461d425d7d7647524517ab73276862bb7aa69"
-  integrity sha512-jvmWKBUpcoO/6t8/OphqH0OSHaTIF2GgpFOOoQmFKoWImAyrE4Gtx6Yanq+Hj9+8ny3KHLOoswqCfKr1j5oYkQ==
-  dependencies:
-    "@types/node" "^18.0.0"
-    "@wdio/logger" "8.6.6"
-    "@wdio/types" "8.7.0"
-    diff "^5.0.0"
-    object-inspect "^1.12.0"
-    supports-color "9.3.1"
 
 "@wdio/reporter@8.8.0":
   version "8.8.0"
@@ -3019,13 +3007,6 @@
   dependencies:
     "@types/node" "^18.0.0"
     got "^11.8.1"
-
-"@wdio/types@8.7.0":
-  version "8.7.0"
-  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.7.0.tgz#d062e18ea092f17ce822c467430b4ac2cc8d6382"
-  integrity sha512-baiWFVR28mOdI7gI9802cnicGmlbfSZvhLWjd0cD2ep8BhvdengEWyj4GG+qqjk9ZfraBgHunDT+cB6hdPIPow==
-  dependencies:
-    "@types/node" "^18.0.0"
 
 "@wdio/types@8.8.0":
   version "8.8.0"
@@ -5261,15 +5242,15 @@ devtools@7.30.2:
     ua-parser-js "^1.0.1"
     uuid "^9.0.0"
 
-devtools@8.8.0:
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/devtools/-/devtools-8.8.0.tgz#2a9c8d9931d6672d1c2fd2a2f810f93a4398bf23"
-  integrity sha512-FfvMEald7LtXIA12oo6wStlxSlAFy3NMAkVAHmu23g8jYhuhl2ASQQzVUFlBHKhVqLvbwSF0VuPZzaPRoz3uDQ==
+devtools@8.8.1:
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/devtools/-/devtools-8.8.1.tgz#da701a9b5afadd76663401f8a67c297f30dc6f0e"
+  integrity sha512-IyDesEovenrFOAwEg1Mi/sN4sbDppFAcBK02/U2XNwKc22CrMCoVEKZoK6gDZpjhp2aA9vef4XLhCdPjZCUfAA==
   dependencies:
     "@types/node" "^18.0.0"
     "@wdio/config" "8.8.0"
     "@wdio/logger" "8.6.6"
-    "@wdio/protocols" "8.6.6"
+    "@wdio/protocols" "8.8.1"
     "@wdio/types" "8.8.0"
     "@wdio/utils" "8.8.0"
     chrome-launcher "^0.15.0"
@@ -13494,16 +13475,16 @@ webdriver@7.30.2:
     ky "0.30.0"
     lodash.merge "^4.6.1"
 
-webdriver@8.8.0:
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/webdriver/-/webdriver-8.8.0.tgz#f670087e491470bd45c1604eb5471f45e6abe8d5"
-  integrity sha512-LqO06orjZlODkQm5npEkuXtBEdVc+tKZAzX468Wra71U9naUZN7YrMjboHvbtsUuiRLWt0RzByO5VCWRS0o/Zg==
+webdriver@8.8.1:
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/webdriver/-/webdriver-8.8.1.tgz#6f7edf2d6ccd37d99a2cd0ce7b3dd2c043054189"
+  integrity sha512-T6GRq4ubxKz8LBiMIUFGKvGIHeCkOwkI7RkxIHgTMJz0XDJo+9LKsY+wezlIZufoIbNA7d0jphIKOcckRybcaA==
   dependencies:
     "@types/node" "^18.0.0"
     "@types/ws" "^8.5.3"
     "@wdio/config" "8.8.0"
     "@wdio/logger" "8.6.6"
-    "@wdio/protocols" "8.6.6"
+    "@wdio/protocols" "8.8.1"
     "@wdio/types" "8.8.0"
     "@wdio/utils" "8.8.0"
     deepmerge-ts "^5.0.0"
@@ -13577,15 +13558,15 @@ webdriverio@7.30.2:
     serialize-error "^8.0.0"
     webdriver "7.30.2"
 
-webdriverio@8.8.0:
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.8.0.tgz#612ef9775b3fd6a162808801432f26f9525f7b53"
-  integrity sha512-QMce84O2CX/T3GUowO0/4V16RFE5METrQ3fjeWx0oLq/6rvZJe3X97Tdk5Xnlpcma6Ot+zhIsU8zWsMgi07wCA==
+webdriverio@8.8.1:
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.8.1.tgz#efce618eff57a9f9becf7443d9b367c79760ab58"
+  integrity sha512-GS6hFG+fle+Rdiv1K2DmcOa6J/eis7xfK1uthlTUiWACVAjloAAR/jGuJaO4FqQMZRIrfK0l+yvglF2/xhXzXA==
   dependencies:
     "@types/node" "^18.0.0"
     "@wdio/config" "8.8.0"
     "@wdio/logger" "8.6.6"
-    "@wdio/protocols" "8.6.6"
+    "@wdio/protocols" "8.8.1"
     "@wdio/repl" "8.6.6"
     "@wdio/types" "8.8.0"
     "@wdio/utils" "8.8.0"
@@ -13593,7 +13574,7 @@ webdriverio@8.8.0:
     aria-query "^5.0.0"
     css-shorthand-properties "^1.1.1"
     css-value "^0.0.1"
-    devtools "8.8.0"
+    devtools "8.8.1"
     devtools-protocol "^0.0.1124027"
     grapheme-splitter "^1.0.2"
     import-meta-resolve "^2.1.0"
@@ -13606,7 +13587,7 @@ webdriverio@8.8.0:
     resq "^1.9.1"
     rgb2hex "0.2.5"
     serialize-error "^8.0.0"
-    webdriver "8.8.0"
+    webdriver "8.8.1"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
