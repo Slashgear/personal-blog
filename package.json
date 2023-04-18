@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@wdio/browserstack-service": "^8.8.4",
-    "@wdio/cli": "^7.30.2",
+    "@wdio/cli": "^7.31.1",
     "@wdio/cucumber-framework": "^7.25.4",
     "@wdio/dot-reporter": "^8.8.4",
     "@wdio/local-runner": "^7.25.4",
