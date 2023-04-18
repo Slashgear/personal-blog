@@ -2835,13 +2835,13 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^8.8.0":
-  version "8.8.0"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.8.0.tgz#d9d0724d4b9eedfa220da41893f874c92e58dea1"
-  integrity sha512-Puom78jlHc3ozMQqFFwTpfDd0k+27l/gq+N9wdGRsmcZMv1QgP3OiE3c7O1zuzlECKbaP0ohMU1IetIfkDf7GA==
+"@wdio/dot-reporter@^8.8.4":
+  version "8.8.4"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.8.4.tgz#22ef91701c176d832bce302ab65fb94572d8fd49"
+  integrity sha512-uH+LR4JU1C+c/CCXxtIk7f/JDqQmm7tQUeSih1PSYlJFN9AGl1Y/ZXW/OnUn4guHSHp0azuSQdZYaM+LATumGA==
   dependencies:
-    "@wdio/reporter" "8.8.0"
-    "@wdio/types" "8.8.0"
+    "@wdio/reporter" "8.8.4"
+    "@wdio/types" "8.8.4"
     chalk "^5.0.1"
 
 "@wdio/local-runner@^7.25.4":
