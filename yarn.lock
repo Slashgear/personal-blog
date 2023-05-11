@@ -2880,13 +2880,13 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^8.10.1":
-  version "8.10.1"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.10.1.tgz#fd946d397606c5e71e5e861a562389175b7a906b"
-  integrity sha512-pHGcPD4qsf22T/kOL6xwcavkHP+HF5pljggjL1WjMR3Q5xF8b0ugn9CpPOA4n5PH+pthbYbiDuC/fx6apyrlZA==
+"@wdio/dot-reporter@^8.10.2":
+  version "8.10.2"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.10.2.tgz#ff590687de6ddc327056459a6a54d5d38d797150"
+  integrity sha512-vIsFU+OFux1M9zh0pffYRDEFmoGA7RahnZyehU0nQ6cC1JIj30PrVbVaFuKAgxZRhXAZP/tvV+NraoFK1IHrUw==
   dependencies:
-    "@wdio/reporter" "8.10.1"
-    "@wdio/types" "8.10.1"
+    "@wdio/reporter" "8.10.2"
+    "@wdio/types" "8.10.2"
     chalk "^5.0.1"
 
 "@wdio/local-runner@^7.25.4":
@@ -2985,18 +2985,6 @@
     object-inspect "^1.10.3"
     supports-color "8.1.1"
 
-"@wdio/reporter@8.10.1":
-  version "8.10.1"
-  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.10.1.tgz#3967dd642c5524da4d389d172213819d36a36308"
-  integrity sha512-XQr1j7D8KxhxjxUBtR5lALuJDJCi6rUCiUNGzunp550uQLMcoI6aInN+qDs4hSuXsnQ9D9DBGMui89CLkaUjxQ==
-  dependencies:
-    "@types/node" "^20.1.0"
-    "@wdio/logger" "8.6.6"
-    "@wdio/types" "8.10.1"
-    diff "^5.0.0"
-    object-inspect "^1.12.0"
-    supports-color "9.3.1"
-
 "@wdio/reporter@8.10.2":
   version "8.10.2"
   resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.10.2.tgz#a0278f031caa7b5c44bdb0226538942d996e2ef0"
@@ -3064,13 +3052,6 @@
   dependencies:
     "@types/node" "^18.0.0"
     got "^11.8.1"
-
-"@wdio/types@8.10.1":
-  version "8.10.1"
-  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.10.1.tgz#4077dd05e37fec2c1c4fa6959091423b278b74b4"
-  integrity sha512-rrs/kTQT1wUZp1KQQuyDq5auy7AbxQwoKbr04rfywB58Hq+6LCFTrBw6wAjAxmYYAqLWmXwMXD8HBGta5pdvBA==
-  dependencies:
-    "@types/node" "^20.1.0"
 
 "@wdio/types@8.10.2":
   version "8.10.2"
