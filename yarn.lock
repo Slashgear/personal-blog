@@ -2789,10 +2789,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.11.1":
-  version "8.11.1"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.11.1.tgz#8a84631f4081c9aebf0c52dc2f2b9104467ca9f6"
-  integrity sha512-A9NSJhF3y25Y0muMdI3QKZp3gmqubNrciLJ45nKZ91PYKcR4Oeoogib5iJNex8SvO+FpdeUXjJtDOeo8G+PX/w==
+"@wdio/browserstack-service@^8.11.2":
+  version "8.11.2"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.11.2.tgz#a16f7b25f8be5246891189e25ac02d64b080a2d8"
+  integrity sha512-GFLvF/I93g3m9DbhXLx3m05sI2NykzGhARVD8DWlxyhWTItLKdBuqaULaoeJiAGpzmCWEYn5/3vt/UD14TTDzg==
   dependencies:
     "@types/gitconfiglocal" "^2.0.1"
     "@wdio/logger" "8.11.0"
@@ -2805,7 +2805,7 @@
     gitconfiglocal "^2.1.0"
     got "^ 12.6.1"
     uuid "^8.3.2"
-    webdriverio "8.11.1"
+    webdriverio "8.11.2"
 
 "@wdio/cli@^7.31.1":
   version "7.31.1"
@@ -13678,10 +13678,10 @@ webdriverio@7.31.1:
     serialize-error "^8.0.0"
     webdriver "7.31.1"
 
-webdriverio@8.11.1:
-  version "8.11.1"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.11.1.tgz#d567a010c2a84e8a155263c29e456fbb971fffa8"
-  integrity sha512-01PPmVGoYTB6Qa8uBOVL3/fW2R+PCiGwVPs/gyn3KQoGkoAxqQK0TZFsphSqp1NIMv1Rt8YbzjnKEoJJYSBG4Q==
+webdriverio@8.11.2:
+  version "8.11.2"
+  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.11.2.tgz#1067ad038409258eb478262ed452b3f315c26446"
+  integrity sha512-e/9WkdNTfWeoaSo2UzK0Giec/nQX3i7U9J8esimhozH/EpwSqIaEJ2pRRlxRVafEhe2OBG1QDhnLnDjdCC5Hxg==
   dependencies:
     "@types/node" "^20.1.0"
     "@wdio/config" "8.11.0"
