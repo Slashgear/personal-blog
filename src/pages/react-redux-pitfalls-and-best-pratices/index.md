@@ -218,7 +218,7 @@ const state = {
 const newState = {
   ...state,
   Rhone: {
-    ...state.Lyon,
+    ...state.Rhone,
     Villeurbanne: {
       postal: '69100',
     },
