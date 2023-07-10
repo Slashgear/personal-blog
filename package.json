@@ -39,7 +39,7 @@
     "react-typography": "^0.16.23",
     "styled-components": "^6.0.3",
     "typeface-montserrat": "1.1.13",
-    "typography": "^0.16.21",
+    "typography": "^0.16.24",
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
