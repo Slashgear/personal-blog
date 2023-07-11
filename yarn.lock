@@ -3258,14 +3258,14 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.12.1":
-  version "8.12.1"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.12.1.tgz#50477e7974de49294542d8c0b001fd1aa90e5aa6"
-  integrity sha512-QXyWke/bC3gObluIJ9aNNO6C/M91slReWnAzw6bdRkE8M5eZXNEmB3SBIy0zkWWjebRC5XEwMRLy0M3BVMxhFA==
+"@wdio/browserstack-service@^8.12.2":
+  version "8.12.2"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.12.2.tgz#e1d9d0aeef7f2f944efc2d34e7e547a4cdf07a7b"
+  integrity sha512-HU5hLn31zXV1r5JAp5yxtWaKWZzjxSiOeqXjGVhk429CjXZYl3uSC9uoEcEVy2eXskxjrbCxKig8CuTMhzgD2g==
   dependencies:
     "@types/gitconfiglocal" "^2.0.1"
     "@wdio/logger" "8.11.0"
-    "@wdio/reporter" "8.12.1"
+    "@wdio/reporter" "8.12.2"
     "@wdio/types" "8.10.4"
     browserstack-local "^1.5.1"
     csv-writer "^1.6.0"
@@ -3485,6 +3485,18 @@
     diff "^5.0.0"
     object-inspect "^1.12.0"
     supports-color "9.3.1"
+
+"@wdio/reporter@8.12.2":
+  version "8.12.2"
+  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.12.2.tgz#c494985a3f2936179c3bf57ba41f486e20cc081c"
+  integrity sha512-xCbppY74dm9jZIgC3Oo5eSMM6pnCXIytol4lFZV1l6LkqWl9WdhBj38cU3Y65XX6gwW+rGnFo36yitxvAXnTaA==
+  dependencies:
+    "@types/node" "^20.1.0"
+    "@wdio/logger" "8.11.0"
+    "@wdio/types" "8.10.4"
+    diff "^5.0.0"
+    object-inspect "^1.12.0"
+    supports-color "9.4.0"
 
 "@wdio/runner@7.25.4":
   version "7.25.4"
@@ -13448,6 +13460,11 @@ supports-color@9.3.1:
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-9.3.1.tgz#34e4ad3c71c9a39dae3254ecc46c9b74e89e15a6"
   integrity sha512-knBY82pjmnIzK3NifMo3RxEIRD9E0kIzV4BKcyTZ9+9kWgLMxd4PrsTSMoFQUabgRBbF8KOLRDCyKgNV+iK44Q==
+
+supports-color@9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-9.4.0.tgz#17bfcf686288f531db3dea3215510621ccb55954"
+  integrity sha512-VL+lNrEoIXww1coLPOmiEmK/0sGigko5COxI09KzHc2VJXJsQ37UaQ+8quuxjDeA7+KnLGTWRyOXSLLR2Wb4jw==
 
 supports-color@^2.0.0:
   version "2.0.0"
