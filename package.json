@@ -37,7 +37,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
-    "styled-components": "^6.0.3",
+    "styled-components": "^6.0.4",
     "typeface-montserrat": "1.1.13",
     "typography": "^0.16.24",
     "use-sound": "^4.0.1"
