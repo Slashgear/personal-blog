@@ -3258,10 +3258,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.12.2":
-  version "8.12.2"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.12.2.tgz#e1d9d0aeef7f2f944efc2d34e7e547a4cdf07a7b"
-  integrity sha512-HU5hLn31zXV1r5JAp5yxtWaKWZzjxSiOeqXjGVhk429CjXZYl3uSC9uoEcEVy2eXskxjrbCxKig8CuTMhzgD2g==
+"@wdio/browserstack-service@^8.12.3":
+  version "8.12.3"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.12.3.tgz#86806fb86abd4693720ba800a6adb117020c8c36"
+  integrity sha512-G7ujXbyC3u9MqlgR4wLzHp9k8fEimWT/HxroUT2D9N2BfZQ77jPDiOZuf9cD2U4iFZCOFAwRclgXVvgq0KLmQg==
   dependencies:
     "@types/gitconfiglocal" "^2.0.1"
     "@wdio/logger" "8.11.0"
@@ -3274,7 +3274,7 @@
     gitconfiglocal "^2.1.0"
     got "^ 12.6.1"
     uuid "^9.0.0"
-    webdriverio "8.12.1"
+    webdriverio "8.12.3"
 
 "@wdio/cli@^7.32.1":
   version "7.32.1"
@@ -14255,10 +14255,10 @@ webdriver@7.31.1:
     ky "0.30.0"
     lodash.merge "^4.6.1"
 
-webdriver@8.12.1:
-  version "8.12.1"
-  resolved "https://registry.yarnpkg.com/webdriver/-/webdriver-8.12.1.tgz#c56f4d24cb1a6af4285ad90102055442a72f3f87"
-  integrity sha512-Ca+MUYUXfl5gsnX40xAIUgfoa76qQsfX7REGFzMl09Cb7vHKtM17bEOGDaTbXIX4kbkXylyUSAuBpe3gCtDDKg==
+webdriver@8.12.3:
+  version "8.12.3"
+  resolved "https://registry.yarnpkg.com/webdriver/-/webdriver-8.12.3.tgz#205cdbb24bc89f0fdf62e5af5ae2b3a4c34cb5af"
+  integrity sha512-Ipx3Vqn5TZPrzQOiGpdJ9ZwuBtb6D8D7GvgdrWi9tO2yYl/D4tQqwCGhuL1uxS+or/2sLJlRR+IdCraD10i6Vw==
   dependencies:
     "@types/node" "^20.1.0"
     "@types/ws" "^8.5.3"
@@ -14338,10 +14338,10 @@ webdriverio@7.32.1:
     serialize-error "^8.0.0"
     webdriver "7.31.1"
 
-webdriverio@8.12.1:
-  version "8.12.1"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.12.1.tgz#8174726d8089da265a2e02222c574fa0af3a3408"
-  integrity sha512-lW0Qo3fy64cVbYWWAZbXxLIOK0pbTARgpY89J+0Sr6zh2K2NKtd/0D11k3WfMeYxd0b0he7E7XC1b6M6w4h75A==
+webdriverio@8.12.3:
+  version "8.12.3"
+  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.12.3.tgz#3e8b1c4b219147962658b01bd36875678b63dd18"
+  integrity sha512-Nxyh0JM95r6nz4S+Kk1y340//tgShe3vKGtUgj9y9hnaEU2kTeTWAcr6Gt3F1KhDMtC03aIbc/zFkgkmwPHElw==
   dependencies:
     "@types/node" "^20.1.0"
     "@wdio/config" "8.12.1"
@@ -14367,7 +14367,7 @@ webdriverio@8.12.1:
     resq "^1.9.1"
     rgb2hex "0.2.5"
     serialize-error "^8.0.0"
-    webdriver "8.12.1"
+    webdriver "8.12.3"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
