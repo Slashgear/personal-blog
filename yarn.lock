@@ -3369,13 +3369,13 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^8.12.2":
-  version "8.12.2"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.12.2.tgz#9682cb1167988cfb7be51757cd31d3325670238c"
-  integrity sha512-umG4+tiAlGDr/DirJubE013/1JPTwz66Y4FuBYESEyDcGT89zoo0hLoWBzBjVJVyzfKhmnSO6ODz5KHHsZzy0g==
+"@wdio/dot-reporter@^8.14.0":
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.14.0.tgz#18aa3f6bdfbde84808d02a40d3c20aef3124c55c"
+  integrity sha512-OEeHXMY99sPX4botTEGc6xPct80Il4dsiiAv8l7kxryGa+oR3uGX4bGvq51sRGBFx2N4mKMjAbARg+9XLujlfw==
   dependencies:
-    "@wdio/reporter" "8.12.2"
-    "@wdio/types" "8.10.4"
+    "@wdio/reporter" "8.14.0"
+    "@wdio/types" "8.14.0"
     chalk "^5.0.1"
 
 "@wdio/local-runner@^7.25.4":
@@ -3486,6 +3486,18 @@
     object-inspect "^1.12.0"
     supports-color "9.4.0"
 
+"@wdio/reporter@8.14.0":
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.14.0.tgz#1f597392370947f982e415d37cf305fcf9da4330"
+  integrity sha512-xzsHRlnb35vFB/zs04Zsuh2Y24DRDuLWTYA96PxDNqMIjhkqJbERTJWSlRwiBhyhz6N8NrwAQfghyh93d554eg==
+  dependencies:
+    "@types/node" "^20.1.0"
+    "@wdio/logger" "8.11.0"
+    "@wdio/types" "8.14.0"
+    diff "^5.0.0"
+    object-inspect "^1.12.0"
+    supports-color "9.4.0"
+
 "@wdio/runner@7.25.4":
   version "7.25.4"
   resolved "https://registry.yarnpkg.com/@wdio/runner/-/runner-7.25.4.tgz#9bf4fb43bc0c7f3f32a90f53d821962d4d137f63"
@@ -3546,6 +3558,13 @@
   version "8.10.4"
   resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.10.4.tgz#b8a81ce2726d7c8ca3af8acd184b66793181c355"
   integrity sha512-aLJ1QQW+hhALeRK3bvMLjIrlUVyhOs3Od+91pR4Z4pLwyeNG1bJZCJRD5bAJK/mm7CnFa0NsdixPS9jJxZcRrw==
+  dependencies:
+    "@types/node" "^20.1.0"
+
+"@wdio/types@8.14.0":
+  version "8.14.0"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.14.0.tgz#9050fbcc94423429b13d21105bb82b18fc7e3fc7"
+  integrity sha512-Bhk3+3Sj47nnGwWjRMYSIp7pUFV/kOQ3o6ycwR4dKtUJpdMYLuQccWJNAp1AfM3g2mVZ07FindBgNkV5bED5zg==
   dependencies:
     "@types/node" "^20.1.0"
 
