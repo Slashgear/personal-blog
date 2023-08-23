@@ -3292,10 +3292,10 @@
     uuid "^9.0.0"
     webdriverio "8.15.0"
 
-"@wdio/cli@^7.32.3":
-  version "7.32.3"
-  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.32.3.tgz#cf9cfc233fb630549fb4da9c2f9eb44958ddd5dc"
-  integrity sha512-/CVvnGRaYK+ZIA9eM/wAb61KV6EPLHRt7OOwkYMuofyPR1qLyGozIB3TzB3WmbKdPt4m8C3P+4eYRXqxvKbfLA==
+"@wdio/cli@^7.32.4":
+  version "7.32.4"
+  resolved "https://registry.yarnpkg.com/@wdio/cli/-/cli-7.32.4.tgz#5fbd838b50938a706f193c5a67be45b20c477bb0"
+  integrity sha512-fLBbEEg1+MJBV0Ejr90pjBSryw1bHM6SlWqo+FWUVp0O707wROO5d8Dn5jdaBJMOxoRfn7dtF0OGvlQagffeCw==
   dependencies:
     "@types/ejs" "^3.0.5"
     "@types/fs-extra" "^11.0.1"
@@ -3322,7 +3322,7 @@
     lodash.union "^4.6.0"
     mkdirp "^3.0.0"
     recursive-readdir "^2.2.2"
-    webdriverio "7.32.3"
+    webdriverio "7.32.4"
     yargs "^17.0.0"
     yarn-install "^1.0.0"
 
@@ -6007,11 +6007,6 @@ devtools-protocol@^0.0.1061995:
   version "0.0.1061995"
   resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1061995.tgz#770aabd3e7a01b5ecbdefa4eace7b69319804b03"
   integrity sha512-pKZZWTjWa/IF4ENCg6GN8bu/AxSZgdhjSa26uc23wz38Blt2Tnm9icOPcSG3Cht55rMq35in1w3rWVPcZ60ArA==
-
-devtools-protocol@^0.0.1173815:
-  version "0.0.1173815"
-  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1173815.tgz#0e28dd1ebf796c174bf04d7028e9cd47f1cbb037"
-  integrity sha512-CmsjkudmgCMeae8FSJB4GV8COZwOk6dJKyE9HS2F/ih/sA8uTdbPKHg5F7DsrOYLEET/QKK00LJCU4YoyG+uHg==
 
 devtools-protocol@^0.0.1182435:
   version "0.0.1182435"
@@ -15116,10 +15111,10 @@ webdriverio@7.25.4:
     serialize-error "^8.0.0"
     webdriver "7.25.4"
 
-webdriverio@7.32.3:
-  version "7.32.3"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-7.32.3.tgz#78befb42f5a817f368abc43998ef13e694b16b5a"
-  integrity sha512-akzvxHymygxYODey5eWcfUgmW9XzP3Bv8HCVVGuAAa9vI4IdJfgGGkkLlzhLEW3Q9LbHfKUwlG56PqCNa/W7IQ==
+webdriverio@7.32.4:
+  version "7.32.4"
+  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-7.32.4.tgz#23e46a6501a0295a2b0bdf3fd76d65b6cf8e2c35"
+  integrity sha512-l3u5dHHORIGxYJ40XOkTkPdIXg5j3tfN1eGIVcnKyxHyus4a3d3uYacqMmJdX9goV+D8oeAfzd+aI+bAKviVSw==
   dependencies:
     "@types/aria-query" "^5.0.0"
     "@types/node" "^18.0.0"
@@ -15134,7 +15129,7 @@ webdriverio@7.32.3:
     css-shorthand-properties "^1.1.1"
     css-value "^0.0.1"
     devtools "7.32.0"
-    devtools-protocol "^0.0.1173815"
+    devtools-protocol "^0.0.1182435"
     fs-extra "^11.1.1"
     grapheme-splitter "^1.0.2"
     lodash.clonedeep "^4.5.0"
