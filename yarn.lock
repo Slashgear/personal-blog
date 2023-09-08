@@ -3269,10 +3269,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.16.3":
-  version "8.16.3"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.16.3.tgz#4bcb72f5ff3ebdaf783d7388827b1b945da1ad68"
-  integrity sha512-elr7o8JeoSTq7VgD1+Nohw0HHFUjEt2Li0cQTI/mxr495/5OxxLBt2WzzdqN5WaVoSeRkxmvdvXeI3q+ahfH7g==
+"@wdio/browserstack-service@^8.16.5":
+  version "8.16.5"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.16.5.tgz#e26b24f0c705d8fc0e4a201c4a16c9a44410f9c7"
+  integrity sha512-xMxdjefCuQ7wJfjXQGtnCItfemljbUlCILAS9kjIEz55AiNUdaVxB/Ftiw5+wcl0qZ/1OE+YYERdPsxqUnovkA==
   dependencies:
     "@types/gitconfiglocal" "^2.0.1"
     "@wdio/logger" "8.11.0"
@@ -3285,7 +3285,7 @@
     gitconfiglocal "^2.1.0"
     got "^ 12.6.1"
     uuid "^9.0.0"
-    webdriverio "8.16.3"
+    webdriverio "8.16.5"
 
 "@wdio/cli@^7.32.4":
   version "7.32.4"
@@ -3443,10 +3443,10 @@
   resolved "https://registry.yarnpkg.com/@wdio/protocols/-/protocols-7.27.0.tgz#8e2663ec877dce7a5f76b021209c18dd0132e853"
   integrity sha512-hT/U22R5i3HhwPjkaKAG0yd59eaOaZB0eibRj2+esCImkb5Y6rg8FirrlYRxIGFVBl0+xZV0jKHzR5+o097nvg==
 
-"@wdio/protocols@8.14.6":
-  version "8.14.6"
-  resolved "https://registry.yarnpkg.com/@wdio/protocols/-/protocols-8.14.6.tgz#357db1b304244039e8befb036cdf891d826d69fd"
-  integrity sha512-KM2taEMUDEt1of0Na/6kIv/aNzX0pmr0etpKRci4QrWPQ1O11dXxWjkatFILQz6qOVKvQ0v+vkTPQRUllmH+uQ==
+"@wdio/protocols@8.16.5":
+  version "8.16.5"
+  resolved "https://registry.yarnpkg.com/@wdio/protocols/-/protocols-8.16.5.tgz#5a702d525a10f24ccc801f486c80ba98aa6f35cf"
+  integrity sha512-u9I57hIqmcOgrDH327ZCc2GTXv2YFN5bg6UaA3OUoJU7eJgGYHFB6RrjiNjLXer68iIx07wwVM70V/1xzijd3Q==
 
 "@wdio/repl@7.25.4":
   version "7.25.4"
@@ -15061,16 +15061,16 @@ webdriver@7.31.1:
     ky "0.30.0"
     lodash.merge "^4.6.1"
 
-webdriver@8.16.3:
-  version "8.16.3"
-  resolved "https://registry.yarnpkg.com/webdriver/-/webdriver-8.16.3.tgz#1013549a8c4bded5ac3db2637930d36ee000892c"
-  integrity sha512-zjvknt38tFTbQThbcNn/NlS3WjeTpZqTP0MOK03VMY2RhFZ0/PVh8N5Tm9m7xlg6cIpx9YqXxg1Hij2bkyDRXw==
+webdriver@8.16.5:
+  version "8.16.5"
+  resolved "https://registry.yarnpkg.com/webdriver/-/webdriver-8.16.5.tgz#86f436e0d7016c19d3e760a9d70e434182058fac"
+  integrity sha512-m1e145CcmN/y0qj65j081LwtdfzEqHbRG0gGTh5jqo/nH+6VEJ5b2CaiaxZb7IRnYJ9h13hZW+0dFaPAMyf7Mg==
   dependencies:
     "@types/node" "^20.1.0"
     "@types/ws" "^8.5.3"
     "@wdio/config" "8.16.3"
     "@wdio/logger" "8.11.0"
-    "@wdio/protocols" "8.14.6"
+    "@wdio/protocols" "8.16.5"
     "@wdio/types" "8.16.3"
     "@wdio/utils" "8.16.3"
     deepmerge-ts "^5.1.0"
@@ -15144,15 +15144,15 @@ webdriverio@7.32.4:
     serialize-error "^8.0.0"
     webdriver "7.31.1"
 
-webdriverio@8.16.3:
-  version "8.16.3"
-  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.16.3.tgz#9600163ca971f185e6aef21131e173989d58fc7b"
-  integrity sha512-cHitdayN0PV2OIUNrWX7rLmAVVT4q1Jy/VhQBEA9ksoLlFhT+n0JJqbff/YlK4Kq5P3oDPhXbPpUWUYBblqQLQ==
+webdriverio@8.16.5:
+  version "8.16.5"
+  resolved "https://registry.yarnpkg.com/webdriverio/-/webdriverio-8.16.5.tgz#fc564dca746ab63ce652debe51fadcb80fe3bde0"
+  integrity sha512-dkG3cha1LAnyEVDR3Cpp8++gmxM/VjFHyQRoM+E0aGkY//B6z3nmmNtXBRr9d7XFI49WZf6ctnQ/B0ORoCnYKg==
   dependencies:
     "@types/node" "^20.1.0"
     "@wdio/config" "8.16.3"
     "@wdio/logger" "8.11.0"
-    "@wdio/protocols" "8.14.6"
+    "@wdio/protocols" "8.16.5"
     "@wdio/repl" "8.10.1"
     "@wdio/types" "8.16.3"
     "@wdio/utils" "8.16.3"
@@ -15172,7 +15172,7 @@ webdriverio@8.16.3:
     resq "^1.9.1"
     rgb2hex "0.2.5"
     serialize-error "^11.0.1"
-    webdriver "8.16.3"
+    webdriver "8.16.5"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
