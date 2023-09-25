@@ -3274,10 +3274,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.2.tgz#0210abd8d53b2799d53156dd0c18a4ef4e3b51cb"
   integrity sha512-pdMwUawmAtH/LScbjKJq/y2+gZFggFMc2tlJrlPSrgKajvYPEis3L9QKcMyC9RN1Xos4ezAP5AJfRCNN6RMKCQ==
 
-"@wdio/browserstack-service@^8.16.12":
-  version "8.16.12"
-  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.16.12.tgz#fac346d32b4e5d5be06768662da2ab91fa3721ec"
-  integrity sha512-dPBzyo8VJKWeacm1hsdvCB91aJTnDsI76nfCqpnxGQ+fKeGO5oTEMKXSBAV+gdR5xpfHvNSnN6lDvpvlUVUhwg==
+"@wdio/browserstack-service@^8.16.13":
+  version "8.16.13"
+  resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.16.13.tgz#d9f955911d91d01d70f9200b59efc103f8ba953e"
+  integrity sha512-pybn7YCFcqVfeDzkdPPMhLkwkinIYzUyVxrb0Q5NkGNZlqmq5kxbPt3aa//rhLz7DpvGMHcuqtUBZd+ct6H8CA==
   dependencies:
     "@types/gitconfiglocal" "^2.0.1"
     "@wdio/logger" "8.11.0"
