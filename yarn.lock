@@ -3386,12 +3386,12 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^8.16.12":
-  version "8.16.12"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.16.12.tgz#169c2ff13dd7348a0453ae29d458c1d1090d78bf"
-  integrity sha512-IxgGgoozE9Vp5Lk7FZG+jk4dRB6e+2FHToUXqLzmfq8EGjYnikdzMf4B+2DIk0qYWsiF9lZkeghfDsutiF1YLg==
+"@wdio/dot-reporter@^8.16.17":
+  version "8.16.17"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.16.17.tgz#842642d6d3146a78cb4b756d11264fd88ea69b95"
+  integrity sha512-zhVOy3cFMG/WQebzelLKwtHQKIg0eMfZcnthHZbWmr33Gnb/4RG/iGOQgQyYeYT+Q99PJXrL4aKTrLegWB1jKg==
   dependencies:
-    "@wdio/reporter" "8.16.12"
+    "@wdio/reporter" "8.16.17"
     "@wdio/types" "8.16.12"
     chalk "^5.0.1"
 
@@ -3433,6 +3433,16 @@
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.11.0.tgz#df28cb65d7b9e308a0cd1445a99adc8b5730174c"
   integrity sha512-IsuKSaYi7NKEdgA57h8muzlN/MVp1dQG+V4C//7g4m03YJUnNQLvDhJzLjdeNTfvZy61U7foQSyt+3ktNzZkXA==
+  dependencies:
+    chalk "^5.1.2"
+    loglevel "^1.6.0"
+    loglevel-plugin-prefix "^0.8.4"
+    strip-ansi "^7.1.0"
+
+"@wdio/logger@8.16.17":
+  version "8.16.17"
+  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.16.17.tgz#c2055857ed3e3cf12cfad843140fa79264c6a632"
+  integrity sha512-zeQ41z3T+b4IsrriZZipayXxLNDuGsm7TdExaviNGojPVrIsQUCSd/FvlLHM32b7ZrMyInHenu/zx1cjAZO71g==
   dependencies:
     chalk "^5.1.2"
     loglevel "^1.6.0"
@@ -3498,6 +3508,17 @@
   dependencies:
     "@types/node" "^20.1.0"
     "@wdio/logger" "8.11.0"
+    "@wdio/types" "8.16.12"
+    diff "^5.0.0"
+    object-inspect "^1.12.0"
+
+"@wdio/reporter@8.16.17":
+  version "8.16.17"
+  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.16.17.tgz#d26040bdee40be6839deab37851c5bf71880a9f7"
+  integrity sha512-c7B4dnOhCM9qCn/0vlV0IjCTL/Dv++MNOMtZFTQlEEo5qXSX+LNkpsZi0STnkPqnv6ZP7liwz4bA01MFksGaww==
+  dependencies:
+    "@types/node" "^20.1.0"
+    "@wdio/logger" "8.16.17"
     "@wdio/types" "8.16.12"
     diff "^5.0.0"
     object-inspect "^1.12.0"
