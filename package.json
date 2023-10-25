@@ -47,7 +47,7 @@
     "@wdio/cli": "^7.33.0",
     "@wdio/cucumber-framework": "^7.25.4",
     "@wdio/dot-reporter": "^8.19.0",
-    "@wdio/local-runner": "^7.25.4",
+    "@wdio/local-runner": "^8.20.5",
     "@wdio/selenium-standalone-service": "^7.25.4",
     "@wdio/spec-reporter": "^7.25.4",
     "chromedriver": "116.0.0",
