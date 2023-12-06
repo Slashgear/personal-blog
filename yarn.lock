@@ -3461,13 +3461,13 @@
     long "^4.0.0"
     mockery "^2.1.0"
 
-"@wdio/dot-reporter@^8.19.0":
-  version "8.19.0"
-  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.19.0.tgz#0d9fc8a9a48c53fb86a2a55cb35d6d89a81a6afe"
-  integrity sha512-6xV6Rs1BErPdQPmpthXqC3FQuzxTf9MDHrQeTdhVanrV5Tr4i1v1r+wpascn29UH1+FRkA5CrfXq6oigVyoguw==
+"@wdio/dot-reporter@^8.24.12":
+  version "8.24.12"
+  resolved "https://registry.yarnpkg.com/@wdio/dot-reporter/-/dot-reporter-8.24.12.tgz#5579681dea3327e8662577bb8bdd3954fc0df85f"
+  integrity sha512-sM0zBtb3UCSNReO8b2Nar2xsQfMq7OtgoW69NvQZTIcH1curBiahaXYKoNnnB/1Kap3BwBazu5STL0P1YNmY+w==
   dependencies:
-    "@wdio/reporter" "8.19.0"
-    "@wdio/types" "8.19.0"
+    "@wdio/reporter" "8.24.12"
+    "@wdio/types" "8.24.12"
     chalk "^5.0.1"
 
 "@wdio/local-runner@^7.25.4":
@@ -3508,6 +3508,16 @@
   version "8.16.17"
   resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.16.17.tgz#c2055857ed3e3cf12cfad843140fa79264c6a632"
   integrity sha512-zeQ41z3T+b4IsrriZZipayXxLNDuGsm7TdExaviNGojPVrIsQUCSd/FvlLHM32b7ZrMyInHenu/zx1cjAZO71g==
+  dependencies:
+    chalk "^5.1.2"
+    loglevel "^1.6.0"
+    loglevel-plugin-prefix "^0.8.4"
+    strip-ansi "^7.1.0"
+
+"@wdio/logger@8.24.12":
+  version "8.24.12"
+  resolved "https://registry.yarnpkg.com/@wdio/logger/-/logger-8.24.12.tgz#03cb8bb7ce7ee443e1dcd200a3b44270ae16a1f9"
+  integrity sha512-QisOiVIWKTUCf1H7S+DOtC+gruhlpimQrUXfWMTeeh672PvAJYnTpOJDWA+BtXfsikkUYFAzAaq8SeMJk8rqKg==
   dependencies:
     chalk "^5.1.2"
     loglevel "^1.6.0"
@@ -3577,6 +3587,17 @@
     diff "^5.0.0"
     object-inspect "^1.12.0"
 
+"@wdio/reporter@8.24.12":
+  version "8.24.12"
+  resolved "https://registry.yarnpkg.com/@wdio/reporter/-/reporter-8.24.12.tgz#363189ba738f5a82d60517caa3b8e5e9629f5217"
+  integrity sha512-FtLzDTBXdgxXf4T9HJQ2bNpYYSKEw//jojFm9XzB4fPwzPeFY3HC+dbePucVW1SSLrVzVxqIOyHiwCLqQ/4cQw==
+  dependencies:
+    "@types/node" "^20.1.0"
+    "@wdio/logger" "8.24.12"
+    "@wdio/types" "8.24.12"
+    diff "^5.0.0"
+    object-inspect "^1.12.0"
+
 "@wdio/runner@7.25.4":
   version "7.25.4"
   resolved "https://registry.yarnpkg.com/@wdio/runner/-/runner-7.25.4.tgz#9bf4fb43bc0c7f3f32a90f53d821962d4d137f63"
@@ -3637,6 +3658,13 @@
   version "8.19.0"
   resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.19.0.tgz#929f8ae209cc93789106b1721192aaa24fc5f5ba"
   integrity sha512-L2DCjRkOYEkEcZewBMCCLrsFJIYzo+kUcoV8iX3oDH711pxdC6hJIK8r7EeeLDPklNHqnxGniVY/+04lpOoqmg==
+  dependencies:
+    "@types/node" "^20.1.0"
+
+"@wdio/types@8.24.12":
+  version "8.24.12"
+  resolved "https://registry.yarnpkg.com/@wdio/types/-/types-8.24.12.tgz#c7a182ecc7effdd8ed7ea1967567a84da2c89100"
+  integrity sha512-SaD3OacDiW06DvSgAQ7sDBbpiI9qZRg7eoVYeBg3uSGVtUq84vTETRhhV7D6xTC00IqZu+mmN2TY5/q+7Gqy7w==
   dependencies:
     "@types/node" "^20.1.0"
 
