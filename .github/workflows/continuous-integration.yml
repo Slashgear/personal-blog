@@ -34,7 +34,7 @@ jobs:
         name: Run lint
       - run: yarn build
         name: Build Gatsby output
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: build
           path: ./public
