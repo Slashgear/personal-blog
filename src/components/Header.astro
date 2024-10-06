@@ -226,7 +226,7 @@ const { activeNav } = Astro.props;
   const button = document.querySelector('#theme-btn');
 
   button?.addEventListener("click", () => {
-    // @ts-ignore
+    // @ts-expect-error Don't want to type html element
     const isLight = 'light' === document.querySelector('html')?.attributes['data-theme']
     const audio = new Audio(`/switch-${isLight ? 'off': 'on'}.mp3`);
     audio.play();

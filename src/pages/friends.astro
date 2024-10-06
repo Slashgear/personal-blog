@@ -23,17 +23,18 @@ const friends: Friend[] = await getCollection("friends");
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-4xl prose-img:border-0">
-    <h1 class="text-2xl tracking-wider sm:text-4xl">Friends you should follow</h1>
-    <div class='grid grid-cols-3 gap-4 auto-rows-fr'>
-      {friends.map(friend =>
-        <a href={friend.data.site} target="_blank" rel="noopener noreferrer" class='block'>
-          <figure>
-            <img alt={friend.data.name} src={friend.data.image} />
-            <figcaption>{friend.data.name}</figcaption>
-          </figure>
-        </a>
-      )}
-    </div>
+      <h1 class="text-2xl tracking-wider sm:text-4xl">Friends you should follow</h1>
+      <div class='grid grid-cols-3 gap-4 auto-rows-fr'>
+        {friends.map(friend =>
+          <a href={friend.data.site} target="_blank" rel="noopener noreferrer" class='block'>
+            <figure>
+              <img alt={friend.data.name} src={friend.data.image} />
+              <figcaption>{friend.data.name}</figcaption>
+            </figure>
+          </a>
+        )}
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>
