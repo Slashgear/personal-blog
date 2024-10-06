@@ -8,7 +8,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -19,21 +21,11 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Install, build, and upload your site output
+        uses: withastro/action@v2
         with:
-          node-version: 22.x
-          cache: 'pnpm'
-      - run: pnpm install
-        name: Install dependencies
-      - run: pnpm lint
-        name: Run lint
-      - run: pnpm build
-        name: Build
-      - uses: actions/upload-artifact@v3
-        with:
-          name: build
-          path: ./dist
+          node-version: '22'
+          package-manager: 'pnpm@9'
 
   dependabot:
     name: 'Dependabot'
@@ -54,18 +46,14 @@ jobs:
 
   deploy:
     needs: build
-    name: 'Deploy 🚀'
     runs-on: ubuntu-latest
+    name: 'Deploy 🚀'
     if: ${{ github.ref == 'refs/heads/source' }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: ./dist
-      - uses: JamesIves/github-pages-deploy-action@v4.4.3
-        name: 'Deploy 🚀'
-        with:
-          branch: master
-          folder: dist
-          clean: true
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
