@@ -84,7 +84,7 @@ devDependencies:
     version: 0.14.1
   prettier-plugin-tailwindcss:
     specifier: ^0.6.6
-    version: 0.6.6(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
+    version: 0.6.8(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -3800,8 +3800,8 @@ packages:
       prettier: 3.3.3
       sass-formatter: 0.7.9
 
-  /prettier-plugin-tailwindcss@0.6.6(prettier-plugin-astro@0.14.1)(prettier@3.3.3):
-    resolution: {integrity: sha512-OPva5S7WAsPLEsOuOWXATi13QrCKACCiIonFgIR6V4lYv4QLp++UXVhZSzRbZxXGimkQtQT86CC6fQqTOybGng==}
+  /prettier-plugin-tailwindcss@0.6.8(prettier-plugin-astro@0.14.1)(prettier@3.3.3):
+    resolution: {integrity: sha512-dGu3kdm7SXPkiW4nzeWKCl3uoImdd5CTZEJGxyypEPL37Wj0HT2pLqjrvSei1nTeuQfO4PUfjeW5cTUNRLZ4sA==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
