@@ -1,4 +1,13 @@
-.cache
-package.json
-package-lock.json
-public
+# Ignore everything
+/*
+
+# Except these files & folders
+!/src
+!/public
+!/.github
+!tsconfig.json
+!astro.config.ts
+!package.json
+!.prettierrc
+!eslint.config.mjs
+!README.md

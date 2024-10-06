@@ -25,13 +25,13 @@
 ## Install
 
 ```sh
-yarn install
+pnpm install
 ```
 
 ## Usage
 
 ```sh
-yarn start
+pnpm start
 ```
 
 ## Author

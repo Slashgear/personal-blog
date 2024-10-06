@@ -1,0 +1,33 @@
+title: La compression web
+lang: fr
+year: 2024
+description: | 
+ Saviez-vous que toute la journée, nos serveurs compressent nos réponses HTTP et que nos navigateurs les décompressent ? 
+ C'est comme si on passait notre temps à plier des T-shirts et à les déplier. Cette compression est partout sur le Web, et pourtant ses subtilités nous échappent souvent.
+events:
+  - name: Devfest Lille 2024
+    date: 1715094000000
+    site: https://devlille.fr/
+    video: https://www.youtube.com/watch?v=LWd0hr6ljZk
+  - name: Chti Jug
+    date: 1717009200000
+    site: https://chtijug.org/
+    video: https://www.youtube.com/watch?v=BVM5vsPYbfg
+  - name: Mixit 2024
+    date: 1706778900000
+    site: https://www.devoxx.fr/
+    video: https://www.youtube.com/watch?v=zxiJXQpRa4E
+  - name: Devoxx 2024
+    date: 1713520800000
+    site: https://www.devoxx.fr/
+    video: https://www.youtube.com/watch?v=AF99cb1SCqM
+  - name: Snowcamp 2024
+    date: 1706778900000
+    site: https://snowcamp.io/fr/
+  - name: Devfest Nantes
+    date: 1729245600000
+    site: https://devfest2024.gdgnantes.com/
+    video: https://www.youtube.com/watch?v=JARVYdwNSrI
+cospeakers:
+  - name: Hubert Sablonnière
+    site: https://www.hsablonniere.com/

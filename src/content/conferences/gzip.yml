@@ -1,0 +1,9 @@
+title: Devrions-nous arrêter d'utiliser Gzip ?
+lang: fr
+year: 2018
+description: Présentation de 30 minutes sur le processus de compression. Avec HTTP2, devons-nous encore compresser les données avec GZIP ou peut-être utiliser un autre algorithme ?
+events:
+  - name: LyonJS
+    date: 1543359600000
+    site: https://www.meetup.com/fr-FR/LyonJS
+    link: https://www.meetup.com/fr-FR/LyonJS/events/255937986/

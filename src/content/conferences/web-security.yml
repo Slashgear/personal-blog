@@ -1,0 +1,14 @@
+title: Sécurisons nos utilisateurs grâce au Mozilla Observatory!
+lang: fr
+year: 2023
+description: La sécurité d'une application web est un sujet complexe. Il n'est pas aisé de savoir si son site est suffisamment sécurisé et si celui-ci respecte des recommendations usuelles. La fondation Mozilla propose un outil gratuit d'audit qui permet de rapidement savoir si son site respecte un ensemble de règles. Ce n'est bien évidement pas suffisant, mais si le web respectait ses pratiques, il serait déjà bien plus sur pour tous. Durant un livecoding, je vous propose de faire passer un site labelisé F à A+ dans le Mozilla Observatory.
+events:
+  - name: 'Lyon JS #90'
+    date: 1705518000000
+    site: https://www.meetup.com/fr-FR/LyonJS
+    link: https://www.meetup.com/LyonJS/events/298162224/
+    video: https://www.youtube.com/watch?v=nKxibe7HuwA
+  - name: 'SunnyTech 2023'
+    date: 1688051400000
+    site: https://sunny-tech.io/
+    link: https://2023.sunny-tech.io/sessions/securisons-nos-utilisateurs-gr

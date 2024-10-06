@@ -1,0 +1,159 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { SITE, SOCIALS } from "@config";
+
+const posts = await getCollection("blog");
+
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
+---
+
+<Layout>
+  <Header />
+  <main id="main-content">
+    <section id="hero" class='flex gap-5 justify-center align-middle'>
+      <aside class='hidden flex-col justify-center sm:flex'>
+        <img src='/picture_of_me.png' alt='Antoine Caron' class='block max-w-30 aspect-square rounded-full'/>
+      </aside>
+      <article>
+        <h1>Slashgear</h1>
+        <a
+          target="_blank"
+          href="/rss.xml"
+          class="rss-link"
+          aria-label="rss feed"
+          title="RSS Feed"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
+          ><path
+            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+          ></path><path
+            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+          ></path><circle cx="6" cy="18" r="2"></circle>
+          </svg>
+          <span class="sr-only">RSS Feed</span>
+        </a>
+
+        <p>Written by <strong>Antoine Caron</strong> who lives and works in Lyon (France) building useful things at <a href="www.scaleway.com" class='text-skin-accent'>Scaleway</a>, previously at <a href="https://www.bedrockstreaming.com/" class='text-skin-accent'>Bedrock</a>.
+          You should follow him <a href="https://twitter.com/Slashgear_" class='text-skin-accent'>on Twitter</a>.
+          Take a look at <a href="/friends-you-should-follow" class='text-skin-accent'>my friends websites</a>.
+          You could also <a href="/conferences" class='text-skin-accent'>take a look at the conferences I gave</a>.
+          If you want to see my professional background, <a href="/resume" class='text-skin-accent'>my resume is available here</a>.</p>
+        {
+          // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">Social Links:</div>
+            <Socials />
+          </div>
+        )
+        }
+      </article>
+    </section>
+
+
+    <Hr />
+
+    {
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured">
+            <h2>Featured</h2>
+            <ul>
+              {featuredPosts.map(({ data, slug }) => (
+                <Card
+                  href={`/posts/${slug}/`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+          {recentPosts.length > 0 && <Hr />}
+        </>
+      )
+    }
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts">
+          <h2>Recent Posts</h2>
+          <ul>
+            {recentPosts.map(
+              ({ data, slug }, index) =>
+                index < SITE.postPerIndex && (
+                  <Card
+                    href={`/posts/${slug}/`}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+                )
+            )}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="all-posts-btn-wrapper">
+      <LinkButton href="/posts/">
+        All Posts
+        <svg xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+          ></path>
+        </svg>
+      </LinkButton>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-6 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon {
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+  .social-wrapper {
+    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+  #featured,
+  #recent-posts {
+    @apply pb-6 pt-12;
+  }
+  #featured h2,
+  #recent-posts h2 {
+    @apply text-2xl font-semibold tracking-wide;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }
+</style>

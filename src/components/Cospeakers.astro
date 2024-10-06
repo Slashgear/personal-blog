@@ -1,0 +1,11 @@
+---
+import type { Conference } from '../types'
+export interface Props {
+  conference: Conference;
+  }
+
+const { conference  } = Astro.props;
+---
+
+
+<p>Co-speaking with: {conference.data.cospeakers?.map(conference => <a href={conference.site}>{conference.name}</a>)}</p>

@@ -22,44 +22,29 @@ jobs:
           path: |
             **/public
             **/.cache
-          key: gatsby-cache
+          key: build-cache
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
-          cache: 'yarn'
-      - run: yarn install
+          node-version: 22.x
+          cache: 'pnpm'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - run: pnpm install
         name: Install dependencies
-      - run: yarn lint
+      - run: pnpm lint
         name: Run lint
-      - run: yarn build
-        name: Build Gatsby output
+      - run: pnpm build
+        name: Build
       - uses: actions/upload-artifact@v3
         with:
           name: build
           path: ./public
 
-  e2e:
-    name: 'E2E 🧪'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn build
-        name: Install dependencies
-      - run: yarn serve&
-        name: Start server
-      - run: yarn wdio run ./wdio-github.conf.js
-        name: Running E2E tests
-
   dependabot:
     name: 'Dependabot'
-    needs: [build, e2e]
+    needs: [build]
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request'}}
     steps:

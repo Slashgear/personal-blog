@@ -1,0 +1,30 @@
+title: Vite the Webpack killer
+year: 2021
+lang: fr
+description: 25 or 45 minute presentation about the new trend in the bundling ecosytem
+  which is Vite. With my co-speaker we explain how vite is working and the awesome
+  features.
+events:
+  - name: LyonJS
+    date: 1591740000000
+    site: https://www.meetup.com/fr-FR/LyonJS
+    link: https://www.meetup.com/fr-FR/LyonJS/events/278441866/
+    video: https://www.youtube.com/watch?v=EziH0ZDpTCM
+  - name: JUG Summer Camp
+    date: 1631122200000
+    site: https://www.jugsummercamp.org/edition/12
+    link: https://www.jugsummercamp.org/edition/12/presentations/QYeD36ff9h4A8v243Hu3
+    video: https://www.youtube.com/watch?v=zBz9flHFWHA
+  - name: Devfest Nantes
+    date: 1636541820000
+    site: https://devfest2021.gdgnantes.com/fr/
+    link: https://devfest2021.gdgnantes.com/sessions/_%EF%B8%8F_vite_%EF%B8%8Fthe_webpack_killer/
+    video: https://www.youtube.com/watch?v=9R5JuyfsGwc
+  - name: Devoxx France
+    date: 1650555900000
+    site: https://www.devoxx.fr/
+    link: https://cfp.devoxx.fr/2022/talk/ZYD-1465/%E2%9A%A1%EF%B8%8F_Vite%E2%9A%A1%EF%B8%8Fthe_Webpack_killer
+    video: https://www.youtube.com/watch?v=Q6N7DoCNfAE
+cospeakers:
+  - name: Mathieu Mure
+    site: https://twitter.com/mathieumure?lang=fr

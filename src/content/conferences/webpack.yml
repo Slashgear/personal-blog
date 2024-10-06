@@ -1,0 +1,14 @@
+title: Webpack workshop
+lang: fr
+description: 2 hours workshop in french and english in order to teach webpack core
+  concepts. From zero to hero !
+year: 2019
+events:
+  - name: Paris Web 2019
+    date: 1570399200000
+    site: https://www.paris-web.fr/
+    link: https://www.paris-web.fr/2019/ateliers/webpack-workshop.php
+  - name: Snowcamp 2019
+    date: 1579647600000
+    site: https://snowcamp.io/
+    link: https://snowcamp.io/

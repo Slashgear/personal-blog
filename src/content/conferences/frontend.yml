@@ -1,0 +1,23 @@
+title: Comment éviter de jeter votre application frontend tous les deux ans?
+lang: fr
+year: 2022
+description: Refondre votre front tous les 2 ans est devenu une pratique courante dans
+  de nombreux projets. Tous ? Non, chez Bedrock streaming, nous avons choisi de rester sur la même
+  base de code depuis plus de 7 ans ! De plus, ce n'est pas une petite application, car il s'agit de 6play et salto.
+events:
+  - name: Bedrock LFT
+    date: 1700838000000
+    link: https://tech.bedrockstreaming.com/comment-ne-pas-jeter-son-application-frontend-tout-les-deux-ans
+    video: https://www.youtube.com/watch?v=34y6yBimcxo
+  - name: Snowcamp 2022
+    date: 1644073200000
+    site: https://snowcamp.io/fr/
+    link: https://speakerdeck.com/slashgear/snowcamp-2022-comment-ne-pas-jeter-a-la-poubelle-son-app-js-tous-les-2-ans
+  - name: LyonJS
+    date: 1654709400000
+    site: https://www.meetup.com/fr-FR/LyonJS
+    link: https://www.meetup.com/fr-FR/lyonjs/events/285497869/
+    video: https://www.youtube.com/watch?v=t36UqNSmybM
+cospeakers:
+  - name: Florent Dubost
+    site: https://twitter.com/fooragnak
