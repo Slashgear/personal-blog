@@ -42,7 +42,7 @@ dependencies:
 devDependencies:
   '@astrojs/react':
     specifier: ^3.6.2
-    version: 3.6.2(@types/react-dom@18.3.0)(@types/react@18.3.6)(react-dom@18.3.1)(react@18.3.1)(vite@5.4.8)
+    version: 3.6.2(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1)(react@18.3.1)(vite@5.4.8)
   '@astrojs/sitemap':
     specifier: ^3.1.6
     version: 3.1.6
@@ -60,7 +60,7 @@ devDependencies:
     version: 4.1.9
   '@types/react':
     specifier: ^18.3.6
-    version: 18.3.6
+    version: 18.3.11
   '@typescript-eslint/parser':
     specifier: ^8.5.0
     version: 8.5.0(eslint@9.10.0)(typescript@5.6.2)
@@ -196,7 +196,7 @@ packages:
     dependencies:
       prismjs: 1.29.0
 
-  /@astrojs/react@3.6.2(@types/react-dom@18.3.0)(@types/react@18.3.6)(react-dom@18.3.1)(react@18.3.1)(vite@5.4.8):
+  /@astrojs/react@3.6.2(@types/react-dom@18.3.0)(@types/react@18.3.11)(react-dom@18.3.1)(react@18.3.1)(vite@5.4.8):
     resolution: {integrity: sha512-fK29lYI7zK/KG4ZBy956x4dmauZcZ18osFkuyGa8r3gmmCQa2NZ9XNu9WaVYEUm0j89f4Gii4tbxLoyM8nk2MA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
@@ -205,7 +205,7 @@ packages:
       react: ^17.0.2 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0-beta
     dependencies:
-      '@types/react': 18.3.6
+      '@types/react': 18.3.11
       '@types/react-dom': 18.3.0
       '@vitejs/plugin-react': 4.3.2(vite@5.4.8)
       react: 18.3.1
@@ -1384,13 +1384,6 @@ packages:
 
   /@types/react@18.3.11:
     resolution: {integrity: sha512-r6QZ069rFTjrEYgFdOck1gK7FLVsgJE7tTz0pQBczlBNUhBNk0MQH4UbnFSwjpQLMkLzgqvBBa+qGpLje16eTQ==}
-    dependencies:
-      '@types/prop-types': 15.7.13
-      csstype: 3.1.3
-    dev: true
-
-  /@types/react@18.3.6:
-    resolution: {integrity: sha512-CnGaRYNu2iZlkGXGrOYtdg5mLK8neySj0woZ4e2wF/eli2E6Sazmq5X+Nrj6OBrrFVQfJWTUFeqAzoRhWQXYvg==}
     dependencies:
       '@types/prop-types': 15.7.13
       csstype: 3.1.3
