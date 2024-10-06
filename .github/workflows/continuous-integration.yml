@@ -16,21 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Gatsby cache
-        uses: actions/cache@v3
+      - uses: pnpm/action-setup@v4
         with:
-          path: |
-            **/public
-            **/.cache
-          key: build-cache
+          version: 9
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22.x
           cache: 'pnpm'
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - run: pnpm install
         name: Install dependencies
       - run: pnpm lint
@@ -40,7 +33,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: build
-          path: ./public
+          path: ./dist
 
   dependabot:
     name: 'Dependabot'
@@ -69,10 +62,10 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: build
-          path: ./public
+          path: ./dist
       - uses: JamesIves/github-pages-deploy-action@v4.4.3
         name: 'Deploy 🚀'
         with:
           branch: master
-          folder: public
+          folder: dist
           clean: true
