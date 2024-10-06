@@ -3,7 +3,7 @@ name: Continous Integration
 on:
   push:
     branches:
-      - 'source'
+      - 'main'
   pull_request:
   workflow_dispatch:
 
