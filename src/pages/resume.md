@@ -26,7 +26,10 @@ Leading a team of 6 frontend dev to create awesome website for Scaleway company.
 
 _Since 2017 as contractor first, then as an employe, Lyon (France)_
 
-I was able to participate in the challenge of migrating a consumer video-on-demand streaming platform that has over 16 million active users, into a white label platform distributed in multiple countries for several customers. Thanks to a solid E2E and unit test stack, I contributed to the development of many user features that are now visible on sites like{' '} [6play](https://6play.fr), [Salto](https://salto.fr) , [Videoland](https://videoland.com). By integrating a team of 6 developers working in ScrumBan, we were able to improve our product while keeping the same code base. I belong to the frontend pole which is composed of a hundred developers directed by{' '} [Kenny Dits](https://twitter.com/kenny_dee). I am by my experience and my skills brought to interact with people working in various contexts from TV to Mobile.
+I was able to participate in the challenge of migrating a consumer video-on-demand streaming platform that has over 16 million active users, into a white label platform distributed in multiple countries for several customers. 
+Thanks to a solid E2E and unit test stack, I contributed to the development of many user features that are now visible on sites like [6play](https://6play.fr), [Salto](https://salto.fr) , [Videoland](https://videoland.com). 
+By integrating a team of 6 developers working in ScrumBan, we were able to improve our product while keeping the same code base. I belong to the frontend pole which is composed of a hundred developers directed by  [Kenny Dits](https://twitter.com/kenny_dee). 
+I am by my experience and my skills brought to interact with people working in various contexts from TV to Mobile.
 
 The technical stack used is: React with server side rendering, Sass (migration to StyledComponent in progress), Monorepo with multi-package sharing across platforms, monitoring with NewRelic. We use jest for our unit and integration testing, WebdriverIo/CucumberJS for E2E.
 
@@ -42,7 +45,7 @@ The technical stack used is: React with server side rendering, Sass (migration t
 *   Training and coaching of junior profiles
 *   Creation of webpack plugins for the management of a white label site
 *   Setting up of _Bedrock Academy_ for simpler and faster way the new people of the company
-*   Organization, design and realization of the migration of the project infrastructure in AWS with Terraform in discussion with{' '} [Yann Verry](https://twitter.com/yverry) 's teams
+*   Organization, design and realization of the migration of the project infrastructure in AWS with Terraform in discussion with  [Yann Verry](https://twitter.com/yverry)'s teams
 *   Setting up SEO solutions to improve sites performance and platforms content.
 *   Defining a Cloud based CI/CD process with Jenkins and AWS Codebuild
 
@@ -82,4 +85,4 @@ As a contractor in this service company I carried out various missions:
 Education
 ---------
 
-I have a degree in computer science engineering from the{' '} [University Polytechnic School of Lyon](https://polytech.univ-lyon1.fr/) {' '} since 2016. It is in this university, part of the{' '} [Claude Bernard University](https://www.univ-lyon1.fr/), that I have been invited to give various courses to Master 1 or 2.
+I have a degree in computer science engineering from the  [University Polytechnic School of Lyon](https://polytech.univ-lyon1.fr/) since 2016. It is in this university, part of the [Claude Bernard University](https://www.univ-lyon1.fr/), that I have been invited to give various courses to Master 1 or 2.
