@@ -21,26 +21,26 @@ export type SocialObjects = {
 }[];
 
 export type Event = {
-  name: string,
-  date: number,
-  site: string,
-  link?: string,
+  name: string;
+  date: number;
+  site: string;
+  link?: string;
   video?: string;
-}
+};
 
 export type Speaker = {
-  name: string,
-  site: string,
-}
+  name: string;
+  site: string;
+};
 
 export type Conference = {
-  id: string
+  id: string;
   data: {
-    title: string,
-    lang: 'fr' | 'en',
-    year: number,
-    description: string
-    events: Event[]
-    cospeakers?: Speaker[]
-  }
-}
+    title: string;
+    lang: "fr" | "en";
+    year: number;
+    description: string;
+    events: Event[];
+    cospeakers?: Speaker[];
+  };
+};

@@ -1,11 +1,11 @@
 ---
-title: 'Github Action: How to parallelize tests dynamically by folder?'
+title: "Github Action: How to parallelize tests dynamically by folder?"
 description: Once again, I play with Github Action to see if it can answer the CI problems I may encounter in my work.
 pubDatetime: 2020-12-01
 ogImage: ./github-actions.jpg
 language: en
 translations:
-  ['fr', 'comment-lancer-des-actions-github-en-simultane-sur-des-sous-dossiers']
+  ["fr", "comment-lancer-des-actions-github-en-simultane-sur-des-sous-dossiers"]
 tags:
   - github
   - action

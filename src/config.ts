@@ -46,32 +46,32 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Reddit",
-    href: 'https://www.reddit.com/user/slashgear_/',
+    href: "https://www.reddit.com/user/slashgear_/",
     linkTitle: `${SITE.title} on Reddit`,
     active: true,
   },
   {
-    name: 'Hackernoon',
-    href: 'https://hackernoon.com/u/antoinecaron',
+    name: "Hackernoon",
+    href: "https://hackernoon.com/u/antoinecaron",
     linkTitle: `${SITE.title} on Hackernoon`,
     active: true,
   },
   {
-    name: 'Discord',
-    href: 'https://discordapp.com/users/199566011849113600',
+    name: "Discord",
+    href: "https://discordapp.com/users/199566011849113600",
     linkTitle: `${SITE.title} on Discord`,
     active: true,
   },
   {
-    name: 'Medium',
-    href: 'https://medium.com/@Slashgear_',
+    name: "Medium",
+    href: "https://medium.com/@Slashgear_",
     linkTitle: `${SITE.title} on Medium`,
     active: true,
   },
   {
-    name: 'NPM',
-    href: 'https://www.npmjs.com/~slashgear',
+    name: "NPM",
+    href: "https://www.npmjs.com/~slashgear",
     linkTitle: `${SITE.title} on Medium`,
     active: true,
-  }
+  },
 ];

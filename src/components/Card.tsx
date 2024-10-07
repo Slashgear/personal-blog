@@ -9,13 +9,14 @@ export interface Props {
 }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
-  const { title, pubDatetime, modDatetime, description, language } = frontmatter;
+  const { title, pubDatetime, modDatetime, description, language } =
+    frontmatter;
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },
     className: "text-lg font-medium decoration-dashed hover:underline",
   };
-  const isFrench = language === 'fr'
+  const isFrench = language === "fr";
 
   const prefixedTitle = isFrench ? `🇫🇷 ${title}` : title;
 
@@ -26,9 +27,13 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
       >
         {secHeading ? (
-          <h2 {...headerProps} lang={language}>{prefixedTitle}</h2>
+          <h2 {...headerProps} lang={language}>
+            {prefixedTitle}
+          </h2>
         ) : (
-          <h3 {...headerProps} lang={language}>{prefixedTitle}</h3>
+          <h3 {...headerProps} lang={language}>
+            {prefixedTitle}
+          </h3>
         )}
       </a>
       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />

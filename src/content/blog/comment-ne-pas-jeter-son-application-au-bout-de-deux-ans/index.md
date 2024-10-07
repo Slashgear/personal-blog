@@ -5,7 +5,7 @@ pubDatetime: 2021-08-25
 ogImage: ./bedrock.jpg
 language: fr
 translations:
-  ['en', 'how-not-to-throw-away-your-web-application-after-two-years']
+  ["en", "how-not-to-throw-away-your-web-application-after-two-years"]
 tags:
   - web
   - javascript
@@ -308,7 +308,7 @@ Dans notre config il y a une _map_ clé/valeur qui liste toutes les fonctionnali
 const featureFlipping = {
   myAwesomeFeature: false,
   anotherOne: true,
-}
+};
 ```
 
 Dans notre code, nous avons donc implémenté des traitements conditionnels qui disent "Si cette feature est activée alors...".
@@ -352,10 +352,10 @@ Pour cela, nous avons fait évoluer notre _selector redux_ qui indiquait si une 
 ```js
 const featureFlipping = {
   myAwesomeFeature: {
-    offpubDatetime: '2021-07-12 20:30:00',
-    onpubDatetime: '2021-07-12 19:30:00',
+    offpubDatetime: "2021-07-12 20:30:00",
+    onpubDatetime: "2021-07-12 19:30:00",
   },
-}
+};
 ```
 
 > De nombreux cafés ☕️ à 9h ont été sauvés grâce au _futur flipping_

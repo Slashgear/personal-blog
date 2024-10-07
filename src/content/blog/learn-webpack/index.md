@@ -3,7 +3,7 @@ title: Learning webpack Step By Step
 description: webpack bundler seems to feel really complicated to learn but it tend to be much more simpler now. I made up some workshops in order to learn concepts.
 ogImage: ./typo.jpeg
 language: en
-translations: ['fr', 'formation-webpack-gratuite']
+translations: ["fr", "formation-webpack-gratuite"]
 pubDatetime: 2019-07-23
 tags:
   - webpack

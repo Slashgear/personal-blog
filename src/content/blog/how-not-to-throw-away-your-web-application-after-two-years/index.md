@@ -1,10 +1,10 @@
 ---
-title: 'Best practices for Web application maintenance'
-description: 'How not to throw away your project after 2 years? Feedback based on best practices applied to the web platform developed at Bedrock Streaming.'
+title: "Best practices for Web application maintenance"
+description: "How not to throw away your project after 2 years? Feedback based on best practices applied to the web platform developed at Bedrock Streaming."
 pubDatetime: 2021-09-05
 ogImage: ../comment-ne-pas-jeter-son-application-au-bout-de-deux-ans/bedrock.jpg
 language: en
-translations: ['fr', 'comment-ne-pas-jeter-son-application-au-bout-de-deux-ans']
+translations: ["fr", "comment-ne-pas-jeter-son-application-au-bout-de-deux-ans"]
 tags:
   - web
   - javascript
@@ -307,7 +307,7 @@ In our config there is a _map_ key/value that lists all the features of the appl
 const featureFlipping = {
   myAwesomeFeature: false,
   anotherOne: true,
-}
+};
 ```
 
 In our code, we have implemented conditional treatments that say "If this feature is activated then...".
@@ -351,10 +351,10 @@ To do this, we evolved our _selector redux_ which indicated if a feature was act
 ```js
 const featureFlipping = {
   myAwesomeFeature: {
-    offpubDatetime: '2021-07-12 20:30:00',
-    onpubDatetime: '2021-07-12 19:30:00',
+    offpubDatetime: "2021-07-12 20:30:00",
+    onpubDatetime: "2021-07-12 19:30:00",
   },
-}
+};
 ```
 
 > Many coffees ☕️ at 9am have been saved by _future flipping_.

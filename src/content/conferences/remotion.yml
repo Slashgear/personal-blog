@@ -3,18 +3,18 @@ lang: fr
 year: 2022
 description: Un jour, lorsque Mickaël Alves venait d'arriver chez Bedrock, il a eu le malheur de demander à Antoine Caron sur quoi il travaillait entre midi et deux, et ce qui semblait tant l'amuser. Quelle erreur pour ce développeur franco-portugais ! Il n'avait pas encore idée de la folie de son nouveau tech lead.
 events:
-  - name: 'Mixit 2023'
+  - name: "Mixit 2023"
     date: 1681480800000
     link: https://mixitconf.org/2023/remotion-le-7eme-art-a-portee-de-composants-web-et-d-api-
     video: https://mixitconf.org/2023/remotion-le-7eme-art-a-portee-de-composants-web-et-d-api-
-  - name: 'Tourraine Tech 2023'
+  - name: "Tourraine Tech 2023"
     date: 1674140400000
     link: https://2023.touraine.tech/
     video: https://www.youtube.com/watch?v=WY6RK8H-8ts
-  - name: 'Snowcamp 2023'
+  - name: "Snowcamp 2023"
     date: 1674655200000
     site: https://snowcamp.io/fr/
-  - name: 'Lyon JS #71'
+  - name: "Lyon JS #71"
     date: 1648746000000
     site: https://www.meetup.com/fr-FR/LyonJS
     link: https://www.meetup.com/LyonJS/events/284549533/

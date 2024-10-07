@@ -3,7 +3,7 @@ title: Un générateur pour les entrées de catalogue Rancher
 description: Si vous souhaitez générer votre entrée de catalogue Rancher simplement, ce générateur de yeoman est là pour vous, alors essayez-le.
 pubDatetime: 2016-06-20
 ogImage: ./catalogue.png
-translations: ['en', 'generator-rancher-catalog']
+translations: ["en", "generator-rancher-catalog"]
 language: fr
 tags:
   - rancher

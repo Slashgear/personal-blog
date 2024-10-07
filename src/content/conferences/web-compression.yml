@@ -1,9 +1,9 @@
 title: La compression web
 lang: fr
 year: 2024
-description: | 
- Saviez-vous que toute la journée, nos serveurs compressent nos réponses HTTP et que nos navigateurs les décompressent ? 
- C'est comme si on passait notre temps à plier des T-shirts et à les déplier. Cette compression est partout sur le Web, et pourtant ses subtilités nous échappent souvent.
+description: |
+  Saviez-vous que toute la journée, nos serveurs compressent nos réponses HTTP et que nos navigateurs les décompressent ? 
+  C'est comme si on passait notre temps à plier des T-shirts et à les déplier. Cette compression est partout sur le Web, et pourtant ses subtilités nous échappent souvent.
 events:
   - name: Devfest Lille 2024
     date: 1715094000000

@@ -4,7 +4,7 @@ description: Trying to implement the Game of Life in Javascript in the browser a
 pubDatetime: 2020-04-20
 ogImage: ./gol.jpg
 language: en
-translations: ['fr', 'gol-hommage']
+translations: ["fr", "gol-hommage"]
 tags:
   - javascript
   - canvas

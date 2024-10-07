@@ -1,9 +1,9 @@
 ---
-title: 'Should we replace webpack by 🗻 Snowpack 🗻?️'
+title: "Should we replace webpack by 🗻 Snowpack 🗻?️"
 description: After articles on esbuild, quickly, I propose you to discover together snowpack to make an opinion.
 pubDatetime: 2021-06-02
 ogImage: ../que-vaut-snowpack/social-2.jpeg
-translations: ['fr', 'que-vaut-snowpack']
+translations: ["fr", "que-vaut-snowpack"]
 language: en
 tags:
   - webpack

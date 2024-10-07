@@ -1,10 +1,10 @@
 ---
-title: 'Github Action : Comment paralléliser ses tests dynamiquement par dossier ?'
+title: "Github Action : Comment paralléliser ses tests dynamiquement par dossier ?"
 description: Encore une fois, je joue avec les Github Action pour voir si elles peuvent répondre aux problématiques de CI que je peux rencontrer dans mon travail.
 pubDatetime: 2020-12-01
 ogImage: ../how-to-split-test-by-folder-with-github-action/github-actions.jpg
 language: fr
-translations: ['en', 'how-to-split-test-by-folder-with-github-action']
+translations: ["en", "how-to-split-test-by-folder-with-github-action"]
 tags:
   - github
   - action

@@ -32,32 +32,32 @@ This is kind of a very verbose output.
 Let's imagine that we use this feature very many times in a web application, and you use it for deep case.
 
 ```js
-const foo = everything?.could?.be.nullable?.maybe
+const foo = everything?.could?.be.nullable?.maybe;
 
 // Babel will generate this output
 
-var _everything, _everything$could, _everything$could$be$
+var _everything, _everything$could, _everything$could$be$;
 
 var foo =
   (_everything = everything) === null || _everything === void 0
     ? void 0
     : (_everything$could = _everything.could) === null ||
-      _everything$could === void 0
-    ? void 0
-    : (_everything$could$be$ = _everything$could.be.nullable) === null ||
-      _everything$could$be$ === void 0
-    ? void 0
-    : _everything$could$be$.maybe
+        _everything$could === void 0
+      ? void 0
+      : (_everything$could$be$ = _everything$could.be.nullable) === null ||
+          _everything$could$be$ === void 0
+        ? void 0
+        : _everything$could$be$.maybe;
 
 // Terser would modify like this
-l, n, o
+l, n, o;
 null === (l = everything) ||
   void 0 === l ||
   null === (n = l.could) ||
   void 0 === n ||
   null === (o = n.be.nullable) ||
   void 0 === o ||
-  o.maybe
+  o.maybe;
 ```
 
 It's going to be really verbose in your bundles. The transformation made by babel in the state does not at all share the _nullsafe_ access mechanism as `lodash.get` can do. Even if _lodash_ is very/too heavy. It offers a more efficient nullsafe implementation while generating less code.
@@ -73,8 +73,8 @@ Ok but this time we can still look a few minutes to propose an implementation of
 Let's look at how `lodash.get` works. [Github link](https://github.com/lodash/lodash/blob/master/.internal/baseGet.js)
 
 ```js
-import castPath from './castPath.js'
-import toKey from './toKey.js'
+import castPath from "./castPath.js";
+import toKey from "./toKey.js";
 
 /**
  * The base implementation of `get` without support for default values.
@@ -85,18 +85,18 @@ import toKey from './toKey.js'
  * @returns {*} Returns the resolved value.
  */
 function baseGet(object, path) {
-  path = castPath(path, object)
+  path = castPath(path, object);
 
-  let index = 0
-  const length = path.length
+  let index = 0;
+  const length = path.length;
 
   while (object != null && index < length) {
-    object = object[toKey(path[index++])]
+    object = object[toKey(path[index++])];
   }
-  return index && index == length ? object : undefined
+  return index && index == length ? object : undefined;
 }
 
-export default baseGet
+export default baseGet;
 ```
 
 It's very effective (very compact). What if the polyfill of **the Optional Chaining** involved the application of a utility function like `lodash.get`?

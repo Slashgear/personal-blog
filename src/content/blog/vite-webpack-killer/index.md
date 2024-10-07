@@ -1,9 +1,9 @@
 ---
-title: 'Vite, a new webpack killer ?!😮'
+title: "Vite, a new webpack killer ?!😮"
 description: After studying solutions such as Webpack and Esbuild, I had to look at tools such as Vite which, in my eyes, is part of a new generation.
 pubDatetime: 2021-03-26
 ogImage: ../vitejs-concurrent-performant-webpack-pour-react/vitejs.jpg
-translations: ['fr', 'vitejs-concurrent-performant-webpack-pour-react']
+translations: ["fr", "vitejs-concurrent-performant-webpack-pour-react"]
 language: en
 tags:
   - webpack
@@ -91,7 +91,7 @@ Finally, we need some small source files for `Vite` to play with.
 _index.html_
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -107,15 +107,15 @@ _index.html_
 _src/main.jsx_
 
 ```jsx
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <h1>Hello world dear readers ! </h1>
   </React.StrictMode>,
-  document.getElementById('app')
-)
+  document.getElementById("app")
+);
 ```
 
 Now you just have to start the development server with this command.
@@ -144,7 +144,7 @@ Then we just need to add an import to this new file.
 _src/main.jsx_
 
 ```javascript
-import './index.css'
+import "./index.css";
 ```
 
 There, now you have a beautiful color that [clearly lacks contrast to be accessible](https://webaim.org/articles/contrast/)!
@@ -177,12 +177,12 @@ yarn add -D @vitejs/plugin-react-refresh
 _vite.config.js_
 
 ```javascript
-import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import { defineConfig } from "vite";
+import reactRefresh from "@vitejs/plugin-react-refresh";
 
 export default defineConfig({
   plugins: [reactRefresh()],
-})
+});
 ```
 
 Now I wanted to test some of the more advanced features that you can expect from a quality bundler.
@@ -193,7 +193,7 @@ So clearly for _lazy loading_ it's easy with `Vite`, I'm amazed!
 The tool immediately detects my use of the dynamic import `import()` to generate a separate chunk for the JS but also the CSS.
 
 ```javascript
-const Content = React.lazy(() => import('./lazy'))
+const Content = React.lazy(() => import("./lazy"));
 ```
 
 ![lazy loading dist screenshot](../vitejs-concurrent-performant-webpack-pour-react/lazy.png)

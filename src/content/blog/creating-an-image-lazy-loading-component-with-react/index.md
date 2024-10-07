@@ -40,21 +40,21 @@ NB: loading 1000 images in a page is a very bad practice. It is just for the exa
 Let's create a dedicated component with an image placeholder.
 
 ```jsx
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Image = styled.img`
   display: block;
   height: 100px;
   width: 100px;
-`
+`;
 
 const placeHolder =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=";
 
 export const LazyImage = () => {
-  return <Image src={placeHolder} />
-}
+  return <Image src={placeHolder} />;
+};
 ```
 
 If you use this component instead of a simple `img` tag, you won't load image at all.
@@ -80,62 +80,62 @@ I had to use `useState` to handle the `img ref` in order to correctly trigger my
 Take a look at [this article](https://medium.com/@teh_builder/ref-objects-inside-useeffect-hooks-eb7c15198780) which explains why we can't use `useRef` with `useEffect`.
 
 ```jsx
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
 const Image = styled.img`
   display: block;
   height: 100px;
   width: 100px;
-`
+`;
 
 const placeHolder =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=";
 
 export const LazyImage = ({ src, alt }) => {
-  const [imageSrc, setImageSrc] = useState(placeHolder)
-  const [imageRef, setImageRef] = useState()
+  const [imageSrc, setImageSrc] = useState(placeHolder);
+  const [imageRef, setImageRef] = useState();
 
   useEffect(() => {
-    let observer
-    let didCancel = false
+    let observer;
+    let didCancel = false;
 
     if (imageRef && imageSrc === placeHolder) {
       if (IntersectionObserver) {
         observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
+          entries => {
+            entries.forEach(entry => {
               // when image is visible in the viewport + rootMargin
               if (
                 !didCancel &&
                 (entry.intersectionRatio > 0 || entry.isIntersecting)
               ) {
-                setImageSrc(src)
+                setImageSrc(src);
               }
-            })
+            });
           },
           {
             threshold: 0.01,
-            rootMargin: '75%',
+            rootMargin: "75%",
           }
-        )
-        observer.observe(imageRef)
+        );
+        observer.observe(imageRef);
       } else {
         // Old browsers fallback
-        setImageSrc(src)
+        setImageSrc(src);
       }
     }
     return () => {
-      didCancel = true
+      didCancel = true;
       // on component unmount, we remove the listner
       if (observer && observer.unobserve) {
-        observer.unobserve(imageRef)
+        observer.unobserve(imageRef);
       }
-    }
-  })
+    };
+  });
 
-  return <Image ref={setImageRef} src={imageSrc} alt={alt} />
-}
+  return <Image ref={setImageRef} src={imageSrc} alt={alt} />;
+};
 ```
 
 In this brand new implementation, I just made the component trigger image loading only when 1% of the image is visible in the viewport.
@@ -155,11 +155,11 @@ In order to make it smooth, I just had to handle `onLoad` and `onError` native e
 This is the [LazyImage component](https://codesandbox.io/s/34vpxnno9p?fontsize=14) :
 
 ```jsx
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
 const placeHolder =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII='
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=";
 
 const Image = styled.img`
   display: block;
@@ -182,57 +182,57 @@ const Image = styled.img`
     // fallback to placeholder image on error
     content: url(${placeHolder});
   }
-`
+`;
 
 export const LazyImage = ({ src, alt }) => {
-  const [imageSrc, setImageSrc] = useState(placeHolder)
-  const [imageRef, setImageRef] = useState()
+  const [imageSrc, setImageSrc] = useState(placeHolder);
+  const [imageRef, setImageRef] = useState();
 
-  const onLoad = (event) => {
-    event.target.classList.add('loaded')
-  }
+  const onLoad = event => {
+    event.target.classList.add("loaded");
+  };
 
-  const onError = (event) => {
-    event.target.classList.add('has-error')
-  }
+  const onError = event => {
+    event.target.classList.add("has-error");
+  };
 
   useEffect(() => {
-    let observer
-    let didCancel = false
+    let observer;
+    let didCancel = false;
 
     if (imageRef && imageSrc !== src) {
       if (IntersectionObserver) {
         observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
+          entries => {
+            entries.forEach(entry => {
               if (
                 !didCancel &&
                 (entry.intersectionRatio > 0 || entry.isIntersecting)
               ) {
-                setImageSrc(src)
-                observer.unobserve(imageRef)
+                setImageSrc(src);
+                observer.unobserve(imageRef);
               }
-            })
+            });
           },
           {
             threshold: 0.01,
-            rootMargin: '75%',
+            rootMargin: "75%",
           }
-        )
-        observer.observe(imageRef)
+        );
+        observer.observe(imageRef);
       } else {
         // Old browsers fallback
-        setImageSrc(src)
+        setImageSrc(src);
       }
     }
     return () => {
-      didCancel = true
+      didCancel = true;
       // on component cleanup, we remove the listner
       if (observer && observer.unobserve) {
-        observer.unobserve(imageRef)
+        observer.unobserve(imageRef);
       }
-    }
-  }, [src, imageSrc, imageRef])
+    };
+  }, [src, imageSrc, imageRef]);
   return (
     <Image
       ref={setImageRef}
@@ -241,8 +241,8 @@ export const LazyImage = ({ src, alt }) => {
       onLoad={onLoad}
       onError={onError}
     />
-  )
-}
+  );
+};
 ```
 
 <iframe src="https://codesandbox.io/embed/34vpxnno9p?fontsize=14" title="Lazy loading" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>

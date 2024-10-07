@@ -4,7 +4,7 @@ description: What is a local branch, what is a remote branch ? Why keeping up to
 ogImage: ./what.jpg
 language: en
 translations:
-  ['fr', 'pourquoi-vous-ne-devriez-pas-maintenir-une-branche-master-locale']
+  ["fr", "pourquoi-vous-ne-devriez-pas-maintenir-une-branche-master-locale"]
 pubDatetime: 2019-07-25
 tags:
   - git
