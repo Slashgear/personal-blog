@@ -4,7 +4,7 @@ description: Announcement of the publication of an open source package for the m
 pubDatetime: 2020-05-01
 ogImage: ./useReducedMotion.jpg
 language: en
-translations: ['fr', 'use-reduced-motion']
+translations: ["fr", "use-reduced-motion"]
 tags:
   - react
   - a11y
@@ -85,14 +85,14 @@ yarn add use-reduced-motion
 Then you just have to use it in one of your components:
 
 ```jsx
-import React from 'react'
-import { useReducedMotion } from 'use-reduced-motion'
-import { AnimatedDiv } from '../somewhere'
+import React from "react";
+import { useReducedMotion } from "use-reduced-motion";
+import { AnimatedDiv } from "../somewhere";
 
 export const MyExampleComponent = () => {
-  const prefersReducedMotion = useReducedMotion()
-  return <AnimatedDiv pause={prefersReducedMotion} />
-}
+  const prefersReducedMotion = useReducedMotion();
+  return <AnimatedDiv pause={prefersReducedMotion} />;
+};
 ```
 
 I invite you to test here with your browser/OS, the following animation will stop automatically.

@@ -3,7 +3,7 @@ name: Continous Integration
 on:
   push:
     branches:
-      - 'main'
+      - "main"
   pull_request:
   workflow_dispatch:
 
@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build:
-    name: 'Build 📦'
+    name: "Build 📦"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,13 +24,15 @@ jobs:
       - name: Install, build, and upload your site output
         uses: withastro/action@v2
         with:
-          node-version: '22'
-          package-manager: 'pnpm@9'
+          node-version: "22"
+          package-manager: "pnpm@9"
+      - name: Check format
+        run: pnpm format:check
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    name: 'Deploy 🚀'
+    name: "Deploy 🚀"
     if: ${{ github.ref == 'refs/heads/main' }}
     environment:
       name: github-pages
@@ -39,4 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

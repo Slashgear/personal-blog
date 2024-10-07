@@ -1,19 +1,23 @@
 ---
-import type { Conference } from '../types'
-import Cospeakers from './Cospeakers.astro'
-import Event from './Event.astro'
+import type { Conference } from "../types";
+import Cospeakers from "./Cospeakers.astro";
+import Event from "./Event.astro";
 export interface Props {
   conference: Conference;
 }
 
-const { conference  } = Astro.props;
+const { conference } = Astro.props;
 ---
 
 <li>
   <h2>{conference.data.title}</h2>
-  {(conference.data.cospeakers && conference.data.cospeakers.length > 0) && <Cospeakers conference={conference} />}
-  <p class='italic text-sm'>{conference.data.description}</p>
+  {
+    conference.data.cospeakers && conference.data.cospeakers.length > 0 && (
+      <Cospeakers conference={conference} />
+    )
+  }
+  <p class="italic text-sm">{conference.data.description}</p>
   <ul>
-    {conference.data.events.map(event => <Event event={event}/>)}
+    {conference.data.events.map(event => <Event event={event} />)}
   </ul>
 </li>

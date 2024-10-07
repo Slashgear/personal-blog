@@ -1,10 +1,10 @@
 ---
-title: 'Comment mettre en place des tests bout en bout avec WebdriverIo ?'
+title: "Comment mettre en place des tests bout en bout avec WebdriverIo ?"
 description: Depuis quelque temps, je joue avec les actions github pour voir si je peux facilement reproduire les comportements que j'applique dans mon outil CI actuel. Je voulais paralléliser les tâches sur chaque étiquette d'une pull request.
 pubDatetime: 2021-08-16
 ogImage: ../how-to-setup-e2e-tests-with-webdriverio/webdriverio.jpg
 language: fr
-translations: ['en', 'how-to-setup-e2e-tests-with-webdriverio']
+translations: ["en", "how-to-setup-e2e-tests-with-webdriverio"]
 tags:
   - github
   - action
@@ -92,22 +92,22 @@ Feature: The Internet Guinea Pig Website
 Avec les définitions des _steps_ dans `./step-definitions/steps.js`.
 
 ```js
-const { Given, When, Then } = require('@cucumber/cucumber')
+const { Given, When, Then } = require("@cucumber/cucumber");
 
-Given(/^I am on the (\w+) page$/, async (page) => {
-  await browser.url(`https://the-internet.herokuapp.com/${page}`)
-})
+Given(/^I am on the (\w+) page$/, async page => {
+  await browser.url(`https://the-internet.herokuapp.com/${page}`);
+});
 
 When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-  await $('#username').setValue(username)
-  await $('#password').setValue(password)
-  await $('button[type="submit"]').click()
-})
+  await $("#username").setValue(username);
+  await $("#password").setValue(password);
+  await $('button[type="submit"]').click();
+});
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-  await expect($('#flash')).toBeExisting()
-  await expect($('#flash')).toHaveTextContaining(message)
-})
+Then(/^I should see a flash message saying (.*)$/, async message => {
+  await expect($("#flash")).toBeExisting();
+  await expect($("#flash")).toHaveTextContaining(message);
+});
 ```
 
 Voyons ce que font ces exemples de tests par défaut !
@@ -160,7 +160,7 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   build:
@@ -209,7 +209,7 @@ Nous devons créer une nouvelle configuration de Webdriver spécifique à l'acti
 Créons `wdio-github.conf.js` à côté de `wdio.conf.js` !
 
 ```js
-const basicConfig = require('./wdio.conf')
+const basicConfig = require("./wdio.conf");
 
 exports.config = {
   ...basicConfig.config,
@@ -217,15 +217,15 @@ exports.config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: 'chrome',
+      browserName: "chrome",
       acceptInsecureCerts: true,
       // We need to extends some Chrome flags in order to tell Chrome to run headless
-      'goog:chromeOptions': {
-        args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+      "goog:chromeOptions": {
+        args: ["--headless", "--disable-gpu", "--disable-dev-shm-usage"],
       },
     },
   ],
-}
+};
 ```
 
 Il ne nous reste plus qu'à modifier la commande `yarn wdio run` dans notre fichier YAML de Workflow Github.
@@ -276,29 +276,29 @@ Vous devez aussi mettre à jour les _capabilites_, afin d'ajouter Firefox et de 
 Dans `wdio-github.conf.js`
 
 ```js
-const basicConfig = require('./wdio.conf')
+const basicConfig = require("./wdio.conf");
 
 exports.config = {
   ...basicConfig.config,
   capabilities: [
     {
       maxInstances: 5,
-      browserName: 'chrome',
+      browserName: "chrome",
       acceptInsecureCerts: true,
-      'goog:chromeOptions': {
-        args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+      "goog:chromeOptions": {
+        args: ["--headless", "--disable-gpu", "--disable-dev-shm-usage"],
       },
     },
     {
       maxInstances: 5,
-      browserName: 'firefox',
+      browserName: "firefox",
       acceptInsecureCerts: true,
-      'moz:firefoxOptions': {
-        args: ['-headless'],
+      "moz:firefoxOptions": {
+        args: ["-headless"],
       },
     },
   ],
-}
+};
 ```
 
 > Et c'est tout !

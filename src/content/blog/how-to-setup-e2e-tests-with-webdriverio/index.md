@@ -1,11 +1,11 @@
 ---
-title: 'How to setup end to end tests with WebdriverIo on Github action ?'
+title: "How to setup end to end tests with WebdriverIo on Github action ?"
 description: For some time now I've been playing with github actions to see if I can easily reproduce behaviors I apply in my current CI tool. I wanted to parallelize tasks on each label of a pull request.
 pubDatetime: 2021-08-13
 ogImage: ./webdriverio.jpg
 language: en
 translations:
-  ['fr', 'comment-mettre-en-place-des-tests-bout-en-bout-avec-webdriverio']
+  ["fr", "comment-mettre-en-place-des-tests-bout-en-bout-avec-webdriverio"]
 tags:
   - github
   - action
@@ -93,22 +93,22 @@ Feature: The Internet Guinea Pig Website
 With the steps definitions in `./step-definitions/steps.js`
 
 ```js
-const { Given, When, Then } = require('@cucumber/cucumber')
+const { Given, When, Then } = require("@cucumber/cucumber");
 
-Given(/^I am on the (\w+) page$/, async (page) => {
-  await browser.url(`https://the-internet.herokuapp.com/${page}`)
-})
+Given(/^I am on the (\w+) page$/, async page => {
+  await browser.url(`https://the-internet.herokuapp.com/${page}`);
+});
 
 When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-  await $('#username').setValue(username)
-  await $('#password').setValue(password)
-  await $('button[type="submit"]').click()
-})
+  await $("#username").setValue(username);
+  await $("#password").setValue(password);
+  await $('button[type="submit"]').click();
+});
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-  await expect($('#flash')).toBeExisting()
-  await expect($('#flash')).toHaveTextContaining(message)
-})
+Then(/^I should see a flash message saying (.*)$/, async message => {
+  await expect($("#flash")).toBeExisting();
+  await expect($("#flash")).toHaveTextContaining(message);
+});
 ```
 
 Let's see what those default example tests are doing !
@@ -161,7 +161,7 @@ name: Continuous Integration
 on:
   push:
     branches:
-      - '**'
+      - "**"
 
 jobs:
   build:
@@ -210,7 +210,7 @@ We need to create a new configuration of Webdriver specific to github action tha
 Let's create `wdio-github.conf.js` next to `wdio.conf.js` !
 
 ```js
-const basicConfig = require('./wdio.conf')
+const basicConfig = require("./wdio.conf");
 
 exports.config = {
   ...basicConfig.config,
@@ -218,15 +218,15 @@ exports.config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: 'chrome',
+      browserName: "chrome",
       acceptInsecureCerts: true,
       // We need to extends some Chrome flags in order to tell Chrome to run headless
-      'goog:chromeOptions': {
-        args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+      "goog:chromeOptions": {
+        args: ["--headless", "--disable-gpu", "--disable-dev-shm-usage"],
       },
     },
   ],
-}
+};
 ```
 
 We now just have to change the `yarn wdio run` command in our Github Workflow YAML file.
@@ -277,7 +277,7 @@ You need to update _capabilites_ too, in order to add Firefox and to make it boo
 In `wdio-github.conf.js`
 
 ```js
-const basicConfig = require('./wdio.conf')
+const basicConfig = require("./wdio.conf");
 
 exports.config = {
   ...basicConfig.config,
@@ -285,23 +285,23 @@ exports.config = {
   capabilities: [
     {
       maxInstances: 5,
-      browserName: 'chrome',
+      browserName: "chrome",
       acceptInsecureCerts: true,
       // We need to extends some Chrome flags in order to tell Chrome to run headless
-      'goog:chromeOptions': {
-        args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+      "goog:chromeOptions": {
+        args: ["--headless", "--disable-gpu", "--disable-dev-shm-usage"],
       },
     },
     {
       maxInstances: 5,
-      browserName: 'firefox',
+      browserName: "firefox",
       acceptInsecureCerts: true,
-      'moz:firefoxOptions': {
-        args: ['-headless'],
+      "moz:firefoxOptions": {
+        args: ["-headless"],
       },
     },
   ],
-}
+};
 ```
 
 > And that's all folks !

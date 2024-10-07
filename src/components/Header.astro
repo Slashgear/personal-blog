@@ -4,7 +4,13 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "search" | 'friends' | 'resume' | 'conferences';
+  activeNav?:
+    | "posts"
+    | "tags"
+    | "search"
+    | "friends"
+    | "resume"
+    | "conferences";
 }
 
 const { activeNav } = Astro.props;
@@ -66,7 +72,10 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
-            <a href="/conferences/" class={activeNav === "conferences" ? "active" : ""}>
+            <a
+              href="/conferences/"
+              class={activeNav === "conferences" ? "active" : ""}
+            >
               Conferences
             </a>
           </li>
@@ -223,12 +232,13 @@ const { activeNav } = Astro.props;
   // Runs on view transitions navigation
   document.addEventListener("astro:after-swap", toggleNav);
 
-  const button = document.querySelector('#theme-btn');
+  const button = document.querySelector("#theme-btn");
 
   button?.addEventListener("click", () => {
     // @ts-expect-error Don't want to type html element
-    const isLight = 'light' === document.querySelector('html')?.attributes['data-theme']
-    const audio = new Audio(`/switch-${isLight ? 'off': 'on'}.mp3`);
+    const isLight =
+      "light" === document.querySelector("html")?.attributes["data-theme"];
+    const audio = new Audio(`/switch-${isLight ? "off" : "on"}.mp3`);
     audio.play();
-  })
+  });
 </script>

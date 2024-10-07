@@ -1,7 +1,8 @@
 title: Vite the Webpack killer
 year: 2021
 lang: fr
-description: 25 or 45 minute presentation about the new trend in the bundling ecosytem
+description:
+  25 or 45 minute presentation about the new trend in the bundling ecosytem
   which is Vite. With my co-speaker we explain how vite is working and the awesome
   features.
 events:

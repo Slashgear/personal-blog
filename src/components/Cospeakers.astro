@@ -1,11 +1,16 @@
 ---
-import type { Conference } from '../types'
+import type { Conference } from "../types";
 export interface Props {
   conference: Conference;
-  }
+}
 
-const { conference  } = Astro.props;
+const { conference } = Astro.props;
 ---
 
-
-<p>Co-speaking with: {conference.data.cospeakers?.map(conference => <a href={conference.site}>{conference.name}</a>)}</p>
+<p>
+  Co-speaking with: {
+    conference.data.cospeakers?.map(conference => (
+      <a href={conference.site}>{conference.name}</a>
+    ))
+  }
+</p>

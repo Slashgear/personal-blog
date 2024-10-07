@@ -6,7 +6,7 @@ description:
 pubDatetime: 2020-05-26
 ogImage: ./travis-github-pages.png
 language: en
-translations: ['fr', 'comment-deployer-sur-github-pages-avec-travis-ci']
+translations: ["fr", "comment-deployer-sur-github-pages-avec-travis-ci"]
 tags:
   - tutorial
   - github
@@ -31,7 +31,7 @@ Edit this file with your build configuration.
 # This is the required part containing the build step for gatsby
 language: node_js
 node_js:
-  - '12'
+  - "12"
 cache:
   yarn: true
   directories:

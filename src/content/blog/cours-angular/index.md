@@ -3,7 +3,7 @@ title: Les bases d'angular
 description: En tant qu'enseignant à Polytech Lyon, j'ai eu l'occasion de donner un cours sur Angular en tant qu'initiation. Voici les diapositives réalisées avec RevealJS.
 pubDatetime: 2017-09-15
 ogImage: ./angular.jpg
-translations: ['en', 'angular-training']
+translations: ["en", "angular-training"]
 language: fr
 tags:
   - formation

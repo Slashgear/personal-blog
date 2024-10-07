@@ -1,10 +1,10 @@
 ---
-title: 'Esbuild, the incredibly fast 💨 and promising bundler 📈!'
+title: "Esbuild, the incredibly fast 💨 and promising bundler 📈!"
 description: Playing with traditional bundlers like webpack for several years, I propose here my opinion on the esbuild bundler.
 pubDatetime: 2021-03-14
 ogImage: ../esbuild-bundler-incroyablement-rapide-et-prometteur/esbuild.png
 language: en
-translations: ['fr', 'esbuild-bundler-incroyablement-rapide-et-prometteur']
+translations: ["fr", "esbuild-bundler-incroyablement-rapide-et-prometteur"]
 tags:
   - webpack
   - javascript
@@ -97,14 +97,14 @@ func main() {
 #### JS
 
 ```javascript
-require('esbuild').buildSync({
-  entryPoints: ['app.jsx'],
+require("esbuild").buildSync({
+  entryPoints: ["app.jsx"],
   bundle: true,
   minify: true,
   sourcemap: true,
-  target: ['chrome58', 'firefox57', 'safari11', 'edge16'],
-  outfile: 'out.js',
-})
+  target: ["chrome58", "firefox57", "safari11", "edge16"],
+  outfile: "out.js",
+});
 ```
 
 In my opinion, the CLI is still very practical for testing things, but in a more "industrial" use, we still prefer the JS or GO format.
@@ -152,21 +152,21 @@ Other tools usually rely on a _watch_ mode that watches for files that change to
 The _watch_ mode also exists with `esbuild`, but the `serve` mode seems to me even nicer because you just have to refresh your browser to have the latest version of your application locally.
 
 ```javascript
-require('esbuild')
+require("esbuild")
   .serve(
     {
-      servedir: 'www',
+      servedir: "www",
     },
     {
-      entryPoints: ['src/app.js'],
-      outdir: 'www/js',
+      entryPoints: ["src/app.js"],
+      outdir: "www/js",
       bundle: true,
     }
   )
-  .then((server) => {
+  .then(server => {
     // Call "stop" on the web server when you're done
-    server.stop()
-  })
+    server.stop();
+  });
 ```
 
 ## But then we stop everything and go on it?

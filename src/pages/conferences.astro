@@ -3,26 +3,29 @@ import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import { getCollection } from 'astro:content'
-import Breadcrumbs from '../components/Breadcrumbs.astro'
-import type { Conference as ConferenceType } from '../types'
-import Conference from '../components/Conference.astro'
+import { getCollection } from "astro:content";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import type { Conference as ConferenceType } from "../types";
+import Conference from "../components/Conference.astro";
 
 const conferences: ConferenceType[] = await getCollection("conferences");
-const sortedConference = conferences.sort(
-  (a, b) =>
-   a.data.year - b.data.year
-).reverse()
+const sortedConference = conferences
+  .sort((a, b) => a.data.year - b.data.year)
+  .reverse();
 ---
 
-<Layout title={`Liste des conférences | ${SITE.title}`} lang='fr'>
+<Layout title={`Liste des conférences | ${SITE.title}`} lang="fr">
   <Header activeNav="conferences" />
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-4xl prose-img:border-0">
       <h1 class="text-2xl tracking-wider sm:text-4xl">Liste des conférences</h1>
       <ul>
-        {sortedConference.map(conference => <Conference conference={conference} />)}
+        {
+          sortedConference.map(conference => (
+            <Conference conference={conference} />
+          ))
+        }
       </ul>
     </section>
   </main>

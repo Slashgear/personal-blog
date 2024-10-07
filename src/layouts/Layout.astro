@@ -15,7 +15,7 @@ export interface Props {
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
-  lang?: string
+  lang?: string;
 }
 
 const {
@@ -28,7 +28,7 @@ const {
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
-  lang
+  lang,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -54,10 +54,7 @@ const structuredData = {
 ---
 
 <!doctype html>
-<html
-  lang=`${lang ?? "en"}`
-  class={`${scrollSmooth && "scroll-smooth"}`}
->
+<html lang=`${lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -123,8 +120,13 @@ const structuredData = {
     />
 
     <meta name="theme-color" content="darkgrey" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
-    <link rel="alternate" type="application/rss+xml" title="Antoine Caron Blog" href="/rss.xml">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Antoine Caron Blog"
+      href="/rss.xml"
+    />
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
       // include google-site-verification tag in the heading

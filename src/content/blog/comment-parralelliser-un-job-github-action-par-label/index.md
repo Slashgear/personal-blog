@@ -1,10 +1,10 @@
 ---
-title: 'Github Action : Comment gérer dynamiquement des steps pour chaque label de Pull Request ?'
+title: "Github Action : Comment gérer dynamiquement des steps pour chaque label de Pull Request ?"
 description: Depuis quelque temps, je joue avec les actions github pour voir si je peux facilement reproduire les comportements que j'applique dans mon outil de CI actuel. Je voulais mettre en parallèle les tâches sur chaque label de Pull Request.
 pubDatetime: 2020-11-29
 ogImage: ../how-to-dynamically-run-step-on-each-github-pr-label/github-actions.jpg
 language: fr
-translations: ['en', 'how-to-dynamically-run-step-on-each-github-pr-label']
+translations: ["en", "how-to-dynamically-run-step-on-each-github-pr-label"]
 tags:
   - github
   - action

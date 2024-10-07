@@ -1,5 +1,5 @@
 ---
-title: 'Webpack : an unexpected journey'
+title: "Webpack : an unexpected journey"
 description: Narration of my discover of webpack insideouts based of the hobbit path.
 pubDatetime: 2019-01-18
 ogImage: ./goingonanadventure1.jpg
@@ -90,17 +90,19 @@ You can achieve this in many ways:
 
 ```js
 async function getComponent() {
-  var element = document.createElement('div')
-  const { default: _ } = await import(/* webpackChunkName: "lodash" */ 'lodash')
+  var element = document.createElement("div");
+  const { default: _ } = await import(
+    /* webpackChunkName: "lodash" */ "lodash"
+  );
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ')
+  element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-  return element
+  return element;
 }
 
-getComponent().then((component) => {
-  document.body.appendChild(component)
-})
+getComponent().then(component => {
+  document.body.appendChild(component);
+});
 ```
 
 With this simple trick, you can generate a second bundle containing _lodash_ which will be requested in a second time.
@@ -120,11 +122,11 @@ Ok now you know how to avoid loading all your code app in your first page. But y
 
 ```js
 export function square(x) {
-  return x * x
+  return x * x;
 }
 
 export function cube(x) {
-  return x * x * x
+  return x * x * x;
 }
 ```
 
@@ -184,9 +186,11 @@ RootMyComponent.js
 ```
 
 ```js
-const Component = require(`./customer/${process.env.CUSTOMER_CODE}/MyComponent.js`)
+const Component = require(
+  `./customer/${process.env.CUSTOMER_CODE}/MyComponent.js`
+);
 
-export default Component
+export default Component;
 ```
 
 This code works well for the customer overriding part but it has major issues. Issues that are not only due to the noise in our code structure but also by this heavy directory structure.
@@ -196,7 +200,7 @@ This code works well for the customer overriding part but it has major issues. I
 To understand the Big issue, we have to focus on this specific part.
 
 ```js
-require(`./customer/${process.env.CUSTOMER_CODE}/MyComponent.js`)
+require(`./customer/${process.env.CUSTOMER_CODE}/MyComponent.js`);
 ```
 
 I said before that Wepack is packing our module based on the dependency graph it is building. Here, the dependency is dynamic. So it does not know which module he will have to load. To avoid forgetting one, it will load all the modules that match the pattern below in his **_Context_**.
@@ -222,7 +226,7 @@ The common solution you will see in Github issue/StackOverflow will look like th
 ```js
 const webpackConfig = {
   plugins: [new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /fr/)],
-}
+};
 ```
 
 This simple trick is essential to understand what is coming. Here, we are using a core Webpack plugin that magically reduces our bundle size. But what is it doing ?
@@ -264,9 +268,9 @@ RootMyComponent.js
 ```
 
 ```js
-import Component from './customer/default/MyComponent.js'
+import Component from "./customer/default/MyComponent.js";
 
-export default Component
+export default Component;
 ```
 
 Ok now, there is no duplication left, but the ContextReplacementPlugin doesn’t seem to do the job here. Fortunately another plugin made it: **NormalReplacementPlugin.**
@@ -278,42 +282,39 @@ It really looks like the other plugin but this time the plugin can affect module
 So based on NormalReplacementPlugin implementation, I built a CustomerReplacementPlugin to do the trick (with a really foolish implementation for now)
 
 ```js
-const fs = require('fs')
+const fs = require("fs");
 
 class CustomerReplacementPlugin {
   // To pass the current customer
   constructor(customerName) {
-    this.customerName = customerName
+    this.customerName = customerName;
   }
 
   apply(compiler) {
-    compiler.hooks.normalModuleFactory.tap(
-      'CustomerReplacementPlugin',
-      (nmf) => {
-        // just before thos normal modules have be resolved
-        nmf.hooks.afterResolve.tap('CustomerReplacementPlugin', (result) => {
-          if (!result) return
+    compiler.hooks.normalModuleFactory.tap("CustomerReplacementPlugin", nmf => {
+      // just before thos normal modules have be resolved
+      nmf.hooks.afterResolve.tap("CustomerReplacementPlugin", result => {
+        if (!result) return;
 
-          // if the variant exists for the current customer
-          if (/customer\/default/.test(result.resource)) {
-            const customerResource = result.resource.replace(
-              /\/default\//,
-              `/${this.customerName}/`
-            )
-            if (fs.existsSync(customerResource)) {
-              // I replace the resolved path by the customer path
-              result.resource = customerResource
-            }
+        // if the variant exists for the current customer
+        if (/customer\/default/.test(result.resource)) {
+          const customerResource = result.resource.replace(
+            /\/default\//,
+            `/${this.customerName}/`
+          );
+          if (fs.existsSync(customerResource)) {
+            // I replace the resolved path by the customer path
+            result.resource = customerResource;
           }
+        }
 
-          return result
-        })
-      }
-    )
+        return result;
+      });
+    });
   }
 }
 
-module.exports.CustomerReplacementPlugin = CustomerReplacementPlugin
+module.exports.CustomerReplacementPlugin = CustomerReplacementPlugin;
 ```
 
 I hope this solution will at least help you understand those plugins or even help you enhance your application performances.

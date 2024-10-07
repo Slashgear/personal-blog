@@ -1,5 +1,5 @@
 ---
-title: '🎄 Advent of Code 2021 🎄: my solutions with JS'
+title: "🎄 Advent of Code 2021 🎄: my solutions with JS"
 description: \#adventofcode2021 Javascript solution day by day. I published the solutions I found in a public repository on Github.
 pubDatetime: 2021-12-04
 ogImage: ./advent.jpeg

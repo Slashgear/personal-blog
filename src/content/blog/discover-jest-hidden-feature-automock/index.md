@@ -1,5 +1,5 @@
 ---
-title: 'Discover Jest hidden feature: Automock'
+title: "Discover Jest hidden feature: Automock"
 description: Testing is quite complicated. Even for JS app, libraries. But Jest helps a lot.
 ogImage: ./jest.jpg
 pubDatetime: 2019-07-29
@@ -45,18 +45,18 @@ To activate the _automock_, it's very simple. Just define this in the _jest_ con
 ```js
 module.exports = {
   automock: true,
-}
+};
 ```
 
 Now, all the _import_ you do in your tests will automatically be mocked. Therefore, you will need _unmock_ the module you want to test. With this technique, you no longer need to define 10 lines of _mock_ at the beginning of your file.
 
 ```js
-import dependency from 'dependency'
-import { myMethod } from '../module/foo.js'
+import dependency from "dependency";
+import { myMethod } from "../module/foo.js";
 
 //the lines below are not necessary with automock activated
-jest.mock('../module/foo.js')
-jest.mock('dependency')
+jest.mock("../module/foo.js");
+jest.mock("dependency");
 ```
 
 In the case of a _React_ component test, all the components on which you depend will be mocked. No more risk of breaking several test files when modifying a single component.

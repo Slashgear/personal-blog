@@ -3,7 +3,7 @@ title: Les bases de Docker
 description: En tant qu'enseignant à Polytech Lyon, j'ai eu l'occasion de donner un cours sur Docker en guise d'initiation. Voici les diapositives réalisées avec RevealJS.
 pubDatetime: 2016-09-10
 ogImage: ./igor-ovsyannykov-151127.jpg
-translations: ['en', 'docker-training']
+translations: ["en", "docker-training"]
 language: fr
 tags:
   - formation

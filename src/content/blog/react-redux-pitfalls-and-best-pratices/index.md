@@ -1,11 +1,11 @@
 ---
-title: 'React/Redux: pitfalls and best practices'
+title: "React/Redux: pitfalls and best practices"
 description:
   We use React and Redux for almost 4 years at Bedrock on our video platform named 6play.
   Good practices and mistakes to be avoided have been gathered in this article.
 pubDatetime: 2020-04-04
 ogImage: ./redux.jpg
-translations: ['fr', 'react-redux-pieges-bonnes-pratiques']
+translations: ["fr", "react-redux-pieges-bonnes-pratiques"]
 language: en
 tags:
   - react
@@ -65,12 +65,12 @@ app/
 So in `store.js` all you need to do is combine your different reducers.
 
 ```js
-import { createStore, combineReducers } from 'redux'
-import { user } from './modules/user/user.reducer.js'
-import { product } from './modules/user/product.reducer.js'
-import { account } from './modules/user/account.reducer.js'
+import { createStore, combineReducers } from "redux";
+import { user } from "./modules/user/user.reducer.js";
+import { product } from "./modules/user/product.reducer.js";
+import { account } from "./modules/user/account.reducer.js";
 
-export const store = createStore(combineReducers({ user, product, account }))
+export const store = createStore(combineReducers({ user, product, account }));
 ```
 
 By following this principle, you will:
@@ -88,25 +88,25 @@ A `selector` is a function that has the `state` as a parameter, and retrieves it
 This can also allow you to select only the props needed for the component by decoupling from the state structure.
 
 ```js
-export const getUserName = ({ user: { lastName } }) => lastName
+export const getUserName = ({ user: { lastName } }) => lastName;
 ```
 
 You can also pass parameters to a `selector` by wrapping it with a function.
 
 ```js
 export const getProduct =
-  (productId) =>
+  productId =>
   ({ product: { list } }) =>
-    list.find((product) => product.id === productId)
+    list.find(product => product.id === productId);
 ```
 
 This will allow you to use them in your components using the [useSelector] hook.
 
 ```js
 const MyComponent = () => {
-  const product = useSelector(getProduct(12))
-  return <div>{product.name}</div>
-}
+  const product = useSelector(getProduct(12));
+  return <div>{product.name}</div>;
+};
 ```
 
 It is specified in the `react-redux` doc that the _selector_ is called for each render of the component.
@@ -168,19 +168,19 @@ This function will return a new `state` depending on the type of action and its 
 This is the standard structure for testing [reducer]s with [Jest](https://jestjs.io/):
 
 ```js
-describe('ReducerName', () => {
+describe("ReducerName", () => {
   beforeEach(() => {
     // Init a new state
-  })
-  describe('ACTION', () => {
+  });
+  describe("ACTION", () => {
     // Group tests by action type
-    it('should test action with some params', () => {})
-    it('should test action with other params', () => {})
-  })
-  describe('SECOND_ACTION', () => {
-    it('should test action with some params', () => {})
-  })
-})
+    it("should test action with some params", () => {});
+    it("should test action with other params", () => {});
+  });
+  describe("SECOND_ACTION", () => {
+    it("should test action with some params", () => {});
+  });
+});
 ```
 
 I also recommend that you use the [deep-freeze](https://www.npmjs.com/package/deep-freeze) package on your `state` to ensure that all actions return new references.
@@ -201,18 +201,18 @@ For example, here we want to override the `Rhone.Villeurbanne.postal` value of t
 const state = {
   Rhone: {
     Lyon: {
-      postal: '69000',
+      postal: "69000",
     },
     Villeurbanne: {
-      postal: '',
+      postal: "",
     },
   },
   Isère: {
     Grenoble: {
-      postal: '39000',
+      postal: "39000",
     },
   },
-}
+};
 
 // When you want to change nested state value and use immutability
 const newState = {
@@ -220,19 +220,19 @@ const newState = {
   Rhone: {
     ...state.Lyon,
     Villeurbanne: {
-      postal: '69100',
+      postal: "69100",
     },
   },
-}
+};
 ```
 
 To avoid this, [a member of the Bedrock team](https://github.com/flepretre) released a package that allows to `set` nested attribute while ensuring immutability: [immutable-set]
 This package is much easier to use than tools like [immutable.js] because it does not use Object prototype.
 
 ```js
-import set from 'immutable-set'
+import set from "immutable-set";
 
-const newState = set(state, `Rhone.Villeurbanne.postal`, '69100')
+const newState = set(state, `Rhone.Villeurbanne.postal`, "69100");
 ```
 
 ## Do not use the default case
@@ -244,20 +244,20 @@ Let's imagine the following [reducer]:
 
 ```js
 const initialState = {
-  value: 'bar',
+  value: "bar",
   index: 0,
-}
+};
 
 function reducer(initialState, action) {
   switch (action.type) {
-    case 'FOO':
+    case "FOO":
       return {
-        value: 'foo',
-      }
+        value: "foo",
+      };
     default:
       return {
-        value: 'bar',
-      }
+        value: "bar",
+      };
   }
 }
 ```
@@ -280,16 +280,16 @@ If you want to modify the state with an action from another module, you can do s
 ```js
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case 'FOO':
+    case "FOO":
       return {
-        value: 'foo',
-      }
-    case 'otherModule/BAR':
+        value: "foo",
+      };
+    case "otherModule/BAR":
       return {
-        value: 'bar',
-      }
+        value: "bar",
+      };
     default:
-      return state
+      return state;
   }
 }
 ```
@@ -303,18 +303,18 @@ The most common example is handling HTTP calls during an action that uses `redux
 
 ```js
 export const foo = () =>
-  fetch('https://example.com/api/foo')
-    .then((data) => ({ type: 'FOO', data }))
-    .catch((error) => {
+  fetch("https://example.com/api/foo")
+    .then(data => ({ type: "FOO", data }))
+    .catch(error => {
       // Do something
-    })
+    });
 
 export const bar = () =>
-  fetch('https://example.com/api/bar')
-    .then((data) => ({ type: 'BAR', data }))
-    .catch((error) => {
+  fetch("https://example.com/api/bar")
+    .then(data => ({ type: "BAR", data }))
+    .catch(error => {
       // Do something
-    })
+    });
 ```
 
 These two actions are basically the same thing, we could very well make a factory that would do the code in common.
@@ -330,28 +330,28 @@ Fetch something
 We could very well define a middleware that would take care of this behavior.
 
 ```js
-const http = (store) => (next) => async (action) => {
+const http = store => next => async action => {
   if (action.http) {
     try {
-      action.result = await fetch(action.http)
+      action.result = await fetch(action.http);
     } catch (error) {
       // Do something
     }
   }
-  return next(action)
-}
+  return next(action);
+};
 
 // in redux store init
-const exampleApp = combineReducers(reducers)
-const store = createStore(exampleApp, applyMiddleware(http))
+const exampleApp = combineReducers(reducers);
+const store = createStore(exampleApp, applyMiddleware(http));
 ```
 
 Thus the two preceding actions could be written much more simpler:
 
 ```js
-export const foo = () => ({ type: 'FOO', http: 'https://example.com/api/foo' })
+export const foo = () => ({ type: "FOO", http: "https://example.com/api/foo" });
 
-export const bar = () => ({ type: 'BAR', http: 'https://example.com/api/bar' })
+export const bar = () => ({ type: "BAR", http: "https://example.com/api/bar" });
 ```
 
 The big advantages of using middleware in a complex application:
@@ -371,8 +371,8 @@ Just beware of the following traps.
 Let's imagine the next _selector_:
 
 ```js
-const getUserById = (userId) => (state) =>
-  state.users.find((user) => user.id === userId) || {}
+const getUserById = userId => state =>
+  state.users.find(user => user.id === userId) || {};
 ```
 
 The developer here wanted to ensure that its _selector_ is null safe and always returns an _object_.
@@ -390,7 +390,7 @@ Similarly for the default values in destructuring, you should never do this :
 const getUsers =
   () =>
   ({ users: [] }) =>
-    users
+    users;
 ```
 
 What to do then?
@@ -398,10 +398,10 @@ Whenever possible, the default values should be stored in the reducer.
 Otherwise, the default value must be extracted into a constant so that the reference remains the same.
 
 ```js
-const defaultUser = {}
+const defaultUser = {};
 
-const getUserById = (userId) => (state) =>
-  state.users.find((user) => user.id === userId) || defaultUser
+const getUserById = userId => state =>
+  state.users.find(user => user.id === userId) || defaultUser;
 ```
 
 The same goes for the selector usage that returns a new ref at each call.
@@ -411,9 +411,9 @@ To continue, it is important that [useSelector] does not return a function.
 Basically you should never do this:
 
 ```js
-const getUserById = (state) => (userId) =>
-  state.users.find((user) => user.id === userId)
-const uider = useSelector(getUserById)(userId)
+const getUserById = state => userId =>
+  state.users.find(user => user.id === userId);
+const uider = useSelector(getUserById)(userId);
 ```
 
 A selector should not return a _view_ (a copy) of the state but directly what it contains.
@@ -427,15 +427,15 @@ We would quickly tend to generate it in the component directly.
 
 ```js
 const MyComponent = () => {
-  const user = useSelector(getUser)
+  const user = useSelector(getUser);
 
   return (
     <div>
       <h1>{user.name}</h1>
       <img src={`https://profil-pic.com/${user.id}`} />
     </div>
-  )
-}
+  );
+};
 ```
 
 Here, the url of the image is dynamically computed in the component, and thus at each render.
@@ -450,7 +450,7 @@ switch (action.type) {
         ...action.user,
         profilUrl: `https://profil-pic.com/${action.user.id}`,
       },
-    }
+    };
 }
 ```
 

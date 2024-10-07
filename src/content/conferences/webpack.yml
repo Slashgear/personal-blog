@@ -1,6 +1,7 @@
 title: Webpack workshop
 lang: fr
-description: 2 hours workshop in french and english in order to teach webpack core
+description:
+  2 hours workshop in french and english in order to teach webpack core
   concepts. From zero to hero !
 year: 2019
 events:

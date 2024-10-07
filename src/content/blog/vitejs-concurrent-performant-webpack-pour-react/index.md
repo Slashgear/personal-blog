@@ -1,9 +1,9 @@
 ---
-title: 'Vite, le remplaçant à webpack ?!😮'
+title: "Vite, le remplaçant à webpack ?!😮"
 description: Après avoir étudié des solutions comme Webpack et Esbuild, il me fallait m'intéresser aux outils comme Vite qui fait partie à mes yeux d'une nouvelle génération.
 pubDatetime: 2021-03-26
 ogImage: ./vitejs.jpg
-translations: ['en', 'vite-webpack-killer']
+translations: ["en", "vite-webpack-killer"]
 language: fr
 tags:
   - webpack
@@ -91,7 +91,7 @@ Il nous faut enfin quelques petits fichiers source pour que `Vite` ait quelque c
 _index.html_
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -107,15 +107,15 @@ _index.html_
 _src/main.jsx_
 
 ```jsx
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <h1>Hello world dear readers ! </h1>
   </React.StrictMode>,
-  document.getElementById('app')
-)
+  document.getElementById("app")
+);
 ```
 
 Maintenant il ne vous reste qu'à démarrer le server de developement avec cette commande.
@@ -145,7 +145,7 @@ Il nous suffit ensuite de rajouter un import vers ce nouveau fichier.
 _src/main.jsx_
 
 ```javascript
-import './index.css'
+import "./index.css";
 ```
 
 Voilà, maintenant vous avez une magnifique couleur qui [manque clairement de contraste pour être accessible](https://webaim.org/articles/contrast/) !
@@ -178,12 +178,12 @@ yarn add -D @vitejs/plugin-react-refresh
 _vite.config.js_
 
 ```javascript
-import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import { defineConfig } from "vite";
+import reactRefresh from "@vitejs/plugin-react-refresh";
 
 export default defineConfig({
   plugins: [reactRefresh()],
-})
+});
 ```
 
 Maintenant j'ai voulu tester des features un peu plus avancées qu'on peut espérer avec un bundler de qualité.
@@ -194,7 +194,7 @@ Alors clairement pour le _lazy loading_ c'est clairement simple avec `Vite`, je 
 L'outil détecte immédiatement mon usage de l'import dynamique `import()` pour générer un chunk séparé pour le JS mais aussi le CSS.
 
 ```javascript
-const Content = React.lazy(() => import('./lazy'))
+const Content = React.lazy(() => import("./lazy"));
 ```
 
 ![lazy loading dist screenshot](./lazy.png)

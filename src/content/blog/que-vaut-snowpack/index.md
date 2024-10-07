@@ -1,9 +1,9 @@
 ---
-title: '🗻 Snowpack 🗻 le remplaçant de webpack ?️'
+title: "🗻 Snowpack 🗻 le remplaçant de webpack ?️"
 description: Après des articles sur esbuild, vite, je vous propose de découvrir ensemble snowpack afin de se faire un avis.
 pubDatetime: 2021-06-02
 ogImage: ./social-2.jpeg
-translations: ['en', 'should-snowpack-replace-webpack']
+translations: ["en", "should-snowpack-replace-webpack"]
 language: fr
 tags:
   - webpack

@@ -6,7 +6,7 @@ description:
 pubDatetime: 2020-05-26
 ogImage: ../how-to-deploy-on-github-pages-with-travis-ci/travis-github-pages.png
 language: fr
-translations: ['en', 'how-to-deploy-on-github-pages-with-travis-ci']
+translations: ["en", "how-to-deploy-on-github-pages-with-travis-ci"]
 tags:
   - tutoriel
   - github
@@ -29,7 +29,7 @@ _Ajoutez le fichier `.travis-ci.yml` dans le répertoire racine de ton projet gi
 # C'est la partie obligatoire contenant l'étape de construction pour gatsby
 language: node_js
 node_js:
-  - '12'
+  - "12"
 cache:
   yarn: true
   directories:

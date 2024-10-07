@@ -1,10 +1,10 @@
 ---
-title: 'Github Action: How to dynamically run step on each PR label ?'
+title: "Github Action: How to dynamically run step on each PR label ?"
 description: For some time now I've been playing with github actions to see if I can easily reproduce behaviors I apply in my current CI tool. I wanted to parallelize tasks on each label of a pull request.
 pubDatetime: 2020-11-29
 ogImage: ./github-actions.jpg
 language: en
-translations: ['fr', 'comment-parralelliser-un-job-github-action-par-label']
+translations: ["fr", "comment-parralelliser-un-job-github-action-par-label"]
 tags:
   - github
   - action

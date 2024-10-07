@@ -1,16 +1,17 @@
 ---
-import type { Event } from '../types'
+import type { Event } from "../types";
 export interface Props {
   event: Event;
 }
 
 const { event } = Astro.props;
 
-const date = new Intl.DateTimeFormat('fr-FR').format(event.date)
+const date = new Intl.DateTimeFormat("fr-FR").format(event.date);
 ---
-<li class='event'>
-  <div class='grid grid-cols-1 sm:grid-cols-3 max-w-500px'>
-    <time class='block' datetime={date}>{date}</time>
+
+<li class="event">
+  <div class="grid grid-cols-1 sm:grid-cols-3 max-w-500px">
+    <time class="block" datetime={date}>{date}</time>
     <a href={event.link || event.site}>{event.name}</a>
     {event.video && <a href={event.video}>Captation vidéo</a>}
   </div>

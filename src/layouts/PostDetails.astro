@@ -45,7 +45,7 @@ const layoutProps = {
   canonicalURL,
   ogImage: ogUrl,
   scrollSmooth: true,
-  lang: language || 'en'
+  lang: language || "en",
 };
 
 /* ========== Prev/Next Posts ========== */
@@ -86,7 +86,11 @@ const nextPost =
       className="my-2"
     />
 
-    {ogImageUrl && <img alt='' src={ogImageUrl} class='aspect-video my-10 max-h-25'/>}
+    {
+      ogImageUrl && (
+        <img alt="" src={ogImageUrl} class="aspect-video my-10 max-h-25" />
+      )
+    }
 
     <article id="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />

@@ -3,7 +3,7 @@ title: Un Kata pour jouer avec Git
 description: En tant que professeur d'informatique à temps partiel, je donne souvent des ateliers pour apprendre à utiliser des outils.
 pubDatetime: 2019-07-21
 ogImage: ./git.jpeg
-translations: ['en', 'git-kata']
+translations: ["en", "git-kata"]
 language: fr
 tags:
   - formation
