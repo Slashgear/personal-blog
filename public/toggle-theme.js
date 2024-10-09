@@ -49,11 +49,11 @@ function reflectPreference() {
 // set early so no page flashes / CSS is made aware
 reflectPreference();
 
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   navigator.serviceWorker.getRegistrations().then(function (registrations) {
     //returns installed service workers
     if (registrations.length) {
-      for(let registration of registrations) {
+      for (let registration of registrations) {
         registration.unregister();
       }
     }
