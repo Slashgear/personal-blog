@@ -49,6 +49,17 @@ function reflectPreference() {
 // set early so no page flashes / CSS is made aware
 reflectPreference();
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function (registrations) {
+    //returns installed service workers
+    if (registrations.length) {
+      for(let registration of registrations) {
+        registration.unregister();
+      }
+    }
+  });
+}
+
 window.onload = () => {
   function setThemeFeature() {
     // set on load so screen readers can get the latest value on the button
