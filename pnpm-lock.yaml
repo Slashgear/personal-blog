@@ -75,7 +75,7 @@ devDependencies:
     version: 1.2.4(eslint@9.12.0)(typescript@5.6.3)
   globals:
     specifier: ^15.9.0
-    version: 15.10.0
+    version: 15.11.0
   prettier:
     specifier: ^3.3.3
     version: 3.3.3
@@ -2340,7 +2340,7 @@ packages:
       astro-eslint-parser: 1.0.3(typescript@5.6.3)
       eslint: 9.12.0
       eslint-compat-utils: 0.5.1(eslint@9.12.0)
-      globals: 15.10.0
+      globals: 15.11.0
       postcss: 8.4.47
       postcss-selector-parser: 6.1.2
     transitivePeerDependencies:
@@ -2642,8 +2642,8 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /globals@15.10.0:
-    resolution: {integrity: sha512-tqFIbz83w4Y5TCbtgjZjApohbuh7K9BxGYFm7ifwDR240tvdb7P9x+/9VvUKlmkPoiknoJtanI8UOrqxS3a7lQ==}
+  /globals@15.11.0:
+    resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
     dev: true
 
