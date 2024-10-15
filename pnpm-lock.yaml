@@ -34,7 +34,7 @@ dependencies:
     version: 0.11.2
   tailwindcss:
     specifier: ^3.4.11
-    version: 3.4.13
+    version: 3.4.14
   typescript:
     specifier: ^5.6.2
     version: 5.6.3
@@ -48,10 +48,10 @@ devDependencies:
     version: 3.2.1
   '@astrojs/tailwind':
     specifier: ^5.1.0
-    version: 5.1.2(astro@4.16.4)(tailwindcss@3.4.13)
+    version: 5.1.2(astro@4.16.4)(tailwindcss@3.4.14)
   '@tailwindcss/typography':
     specifier: ^0.5.15
-    version: 0.5.15(tailwindcss@3.4.13)
+    version: 0.5.15(tailwindcss@3.4.14)
   '@types/github-slugger':
     specifier: ^2.0.0
     version: 2.0.0
@@ -231,7 +231,7 @@ packages:
       zod: 3.23.8
     dev: true
 
-  /@astrojs/tailwind@5.1.2(astro@4.16.4)(tailwindcss@3.4.13):
+  /@astrojs/tailwind@5.1.2(astro@4.16.4)(tailwindcss@3.4.14):
     resolution: {integrity: sha512-IvOF0W/dtHElcXvhrPR35nHmhyV3cfz1EzPitMGtU7sYy9Hci3BNK1To6FWmVuuNKPxza1IgCGetSynJZL7fOg==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0
@@ -241,7 +241,7 @@ packages:
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
-      tailwindcss: 3.4.13
+      tailwindcss: 3.4.14
     transitivePeerDependencies:
       - ts-node
     dev: true
@@ -1306,7 +1306,7 @@ packages:
       string.prototype.codepointat: 0.2.1
     dev: false
 
-  /@tailwindcss/typography@0.5.15(tailwindcss@3.4.13):
+  /@tailwindcss/typography@0.5.15(tailwindcss@3.4.14):
     resolution: {integrity: sha512-AqhlCXl+8grUz8uqExv5OTtgpjuVIwFTSXTrh8y9/pw6q2ek7fJ+Y8ZEVw7EB2DCcuCOtEjf9w3+J3rzts01uA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20'
@@ -1315,7 +1315,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.13
+      tailwindcss: 3.4.14
     dev: true
 
   /@types/babel__core@7.20.5:
@@ -4388,8 +4388,8 @@ packages:
       tslib: 2.7.0
     dev: true
 
-  /tailwindcss@3.4.13:
-    resolution: {integrity: sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==}
+  /tailwindcss@3.4.14:
+    resolution: {integrity: sha512-IcSvOcTRcUtQQ7ILQL5quRDg7Xs93PdJEk1ZLbhhvJc7uj/OAhYOnruEiwnGgBvUtaUAJ8/mhSw1o8L2jCiENA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
