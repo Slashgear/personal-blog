@@ -16,7 +16,7 @@ dependencies:
     version: 2.6.2
   astro:
     specifier: ^4.15.6
-    version: 4.16.9(typescript@5.6.3)
+    version: 4.16.10(typescript@5.6.3)
   fuse.js:
     specifier: ^7.0.0
     version: 7.0.0
@@ -48,7 +48,7 @@ devDependencies:
     version: 3.2.1
   '@astrojs/tailwind':
     specifier: ^5.1.0
-    version: 5.1.2(astro@4.16.9)(tailwindcss@3.4.14)
+    version: 5.1.2(astro@4.16.10)(tailwindcss@3.4.14)
   '@tailwindcss/typography':
     specifier: ^0.5.15
     version: 0.5.15(tailwindcss@3.4.14)
@@ -231,13 +231,13 @@ packages:
       zod: 3.23.8
     dev: true
 
-  /@astrojs/tailwind@5.1.2(astro@4.16.9)(tailwindcss@3.4.14):
+  /@astrojs/tailwind@5.1.2(astro@4.16.10)(tailwindcss@3.4.14):
     resolution: {integrity: sha512-IvOF0W/dtHElcXvhrPR35nHmhyV3cfz1EzPitMGtU7sYy9Hci3BNK1To6FWmVuuNKPxza1IgCGetSynJZL7fOg==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.16.9(typescript@5.6.3)
+      astro: 4.16.10(typescript@5.6.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -1793,8 +1793,8 @@ packages:
       - typescript
     dev: true
 
-  /astro@4.16.9(typescript@5.6.3):
-    resolution: {integrity: sha512-DFYzPZooVArKSGu969BBByUV44tJMVDPGKxgqWNFBaIrkvGljdVUqQSVwD+/iPYACoSkI8BRYvDMEBDkathIUQ==}
+  /astro@4.16.10(typescript@5.6.3):
+    resolution: {integrity: sha512-a+nB4bZE50NXHLzVXUHtx/lYct2Aa8kbqZnWNrWqkU97RuhBuWJ5H5/LQbKRnBWGvqChKfJBiMWJe53TY9ieYQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
