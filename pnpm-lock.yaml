@@ -42,7 +42,7 @@ dependencies:
 devDependencies:
   '@astrojs/react':
     specifier: ^3.6.2
-    version: 3.6.3(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1)
+    version: 3.6.3(@types/react-dom@18.3.1)(@types/react@18.3.13)(react-dom@18.3.1)(react@18.3.1)
   '@astrojs/sitemap':
     specifier: ^3.1.6
     version: 3.2.1
@@ -60,7 +60,7 @@ devDependencies:
     version: 4.1.9
   '@types/react':
     specifier: ^18.3.6
-    version: 18.3.12
+    version: 18.3.13
   '@typescript-eslint/parser':
     specifier: ^8.5.0
     version: 8.17.0(eslint@9.16.0)(typescript@5.6.3)
@@ -196,7 +196,7 @@ packages:
     dependencies:
       prismjs: 1.29.0
 
-  /@astrojs/react@3.6.3(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1)(react@18.3.1):
+  /@astrojs/react@3.6.3(@types/react-dom@18.3.1)(@types/react@18.3.13)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-5ihLQDH5Runddug5AZYlnp/Q5T81QxhwnWJXA9rchBAdh11c6UhBbv9Kdk7b2PkXoEU70CGWBP9hSh0VCR58eA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
     peerDependencies:
@@ -205,7 +205,7 @@ packages:
       react: ^17.0.2 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0-beta
     dependencies:
-      '@types/react': 18.3.12
+      '@types/react': 18.3.13
       '@types/react-dom': 18.3.1
       '@vitejs/plugin-react': 4.3.3(vite@5.4.11)
       react: 18.3.1
@@ -1413,11 +1413,11 @@ packages:
   /@types/react-dom@18.3.1:
     resolution: {integrity: sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==}
     dependencies:
-      '@types/react': 18.3.12
+      '@types/react': 18.3.13
     dev: true
 
-  /@types/react@18.3.12:
-    resolution: {integrity: sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==}
+  /@types/react@18.3.13:
+    resolution: {integrity: sha512-ii/gswMmOievxAJed4PAHT949bpYjPKXvXo1v6cRB/kqc2ZR4n+SgyCyvyc5Fec5ez8VnUumI1Vk7j6fRyRogg==}
     dependencies:
       '@types/prop-types': 15.7.13
       csstype: 3.1.3
