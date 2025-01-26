@@ -1,0 +1,14 @@
+title: Tester c'est tricher !
+lang: fr
+year: 2025
+description:
+  Dans le monde du développement logiciel, la pyramide des tests est un modèle souvent pris pour acquis.
+  Pourtant, est-elle vraiment la clé pour garantir une couverture de tests optimale et une maintenance efficace ?
+  Ce talk propose de questionner ce modèle en montrant que "tester, c'est tricher" si l'on se limite à une vision traditionnelle des tests.
+events:
+  - name: Snowcamp 2025
+    date: 1737648000000
+    link: https://app.voxxr.in/events/snowcamp25/talks/cm2aou1w800b4xalmlhxk8psd/details
+cospeakers:
+  - name: Jules Poissonnet
+    site: https://www.linkedin.com/in/jules-poissonnet/
