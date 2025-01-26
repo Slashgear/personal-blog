@@ -23,7 +23,7 @@ export type SocialObjects = {
 export type Event = {
   name: string;
   date: number;
-  site: string;
+  site?: string;
   link?: string;
   video?: string;
 };
@@ -35,6 +35,7 @@ export type Speaker = {
 
 export type Conference = {
   id: string;
+  collection: string;
   data: {
     title: string;
     lang: "fr" | "en";
