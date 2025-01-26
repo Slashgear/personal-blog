@@ -1,9 +1,4 @@
 <h1 align="center">Welcome to slashgear.github.io, Antoine Caron Blog codebase 👋</h1>
-<p>
-  <a href="https://twitter.com/Slashgear_" target="_blank">
-    <img alt="Twitter: Slashgear_" src="https://img.shields.io/twitter/follow/Slashgear_.svg?style=social" />
-  </a>
-</p>
 
 > Antoine Caron personal blog
 
@@ -24,7 +19,7 @@ pnpm start
 👤 **Antoine Caron**
 
 - Website: http://blog.slashgear.dev/
-- Twitter: [@Slashgear\_](https://twitter.com/Slashgear_)
+- Bluesky: [@slashgear.dev](https://bsky.app/profile/slashgear.dev)
 - Github: [@Slashgear](https://github.com/Slashgear)
 
 ## 🤝 Contributing

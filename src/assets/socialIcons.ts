@@ -66,7 +66,6 @@ const socialIcons = {
       <polyline points="3 7 12 13 21 7"></polyline>
     </svg>`,
   NPM: `<svg  xmlns="http://www.w3.org/2000/svg"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon-tabler"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M1 8h22v7h-12v2h-4v-2h-6z" /><path d="M7 8v7" /><path d="M14 8v7" /><path d="M17 11v4" /><path d="M4 11v4" /><path d="M11 11v1" /><path d="M20 11v4" /></svg>`,
-  Twitter: `<svg  xmlns="http://www.w3.org/2000/svg" stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon-tabler"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>`,
   Twitch: `<svg
       xmlns="http://www.w3.org/2000/svg"
       class="icon-tabler"

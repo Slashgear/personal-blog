@@ -307,6 +307,6 @@ exports.config = {
 > And that's all folks !
 
 Have fun covering your application with E2E tests !
-Don't hesitate to @ me on twitter if this _How to_ helped you.
+Don't hesitate to @ me on Bluesky if this _How to_ helped you.
 
 If you need to see the example application I used in this tutorial, take a look at [this example Github repository](https://github.com/Slashgear/example-wdio).
