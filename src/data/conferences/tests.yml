@@ -9,6 +9,10 @@ events:
   - name: Snowcamp 2025
     date: 1737648000000
     link: https://app.voxxr.in/events/snowcamp25/talks/cm2aou1w800b4xalmlhxk8psd/details
+  - name: LyonJS 100
+    date: 1740133800000
+    link: https://www.lyonjs.org/lyonjs-100
+    video: https://www.youtube.com/watch?v=I_zNxGqRI3w
 cospeakers:
   - name: Jules Poissonnet
     site: https://www.linkedin.com/in/jules-poissonnet/
