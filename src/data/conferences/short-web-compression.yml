@@ -1,0 +1,10 @@
+title: "Supercharge Web Performance with Shared Dictionaries: The Next Frontier in HTTP Compression"
+lang: fr
+year: 2025
+description: |
+  Conference in which I presented a focus on web compression about Shared compression dictionaries and how they can be used to improve web performance. 
+  I also discussed the future of HTTP compression and its impact on web development.
+events:
+  - name: DotJs 2025
+    date: 1743681600000
+    site: https://www.dotjs.io/
