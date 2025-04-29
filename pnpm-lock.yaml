@@ -16,7 +16,7 @@ dependencies:
     version: 2.6.2
   astro:
     specifier: ^5.1.9
-    version: 5.7.8(typescript@5.8.3)
+    version: 5.7.9(typescript@5.8.3)
   fuse.js:
     specifier: ^7.0.0
     version: 7.1.0
@@ -42,13 +42,13 @@ dependencies:
 devDependencies:
   '@astrojs/react':
     specifier: ^4.1.6
-    version: 4.2.5(@types/react-dom@19.1.2)(@types/react@19.1.2)(react-dom@19.1.0)(react@19.1.0)
+    version: 4.2.6(@types/react-dom@19.1.2)(@types/react@19.1.2)(react-dom@19.1.0)(react@19.1.0)
   '@astrojs/sitemap':
     specifier: ^3.2.1
     version: 3.3.1
   '@astrojs/tailwind':
     specifier: ^6.0.0
-    version: 6.0.2(astro@5.7.8)(tailwindcss@3.4.17)
+    version: 6.0.2(astro@5.7.9)(tailwindcss@3.4.17)
   '@tailwindcss/typography':
     specifier: ^0.5.15
     version: 0.5.16(tailwindcss@3.4.17)
@@ -200,8 +200,8 @@ packages:
     dependencies:
       prismjs: 1.30.0
 
-  /@astrojs/react@4.2.5(@types/react-dom@19.1.2)(@types/react@19.1.2)(react-dom@19.1.0)(react@19.1.0):
-    resolution: {integrity: sha512-NIBB51z4OP57gYmDQCu2UpQLm61kzdahELud/X8TGcfvcVoMvp5m4810TrRQ3V3vebTGHRGYICoOFTS33nuT+g==}
+  /@astrojs/react@4.2.6(@types/react-dom@19.1.2)(@types/react@19.1.2)(react-dom@19.1.0)(react@19.1.0):
+    resolution: {integrity: sha512-2ql9Q1rjegSRfeG1JLxWhTNNNsrZI3Q3d7z4QPDGb+an9taaRAgannyiwNRwmgiTCc2n/7keppSzvjLSW5vzZg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       '@types/react': ^17.0.50 || ^18.0.21 || ^19.0.0
@@ -246,13 +246,13 @@ packages:
       zod: 3.24.3
     dev: true
 
-  /@astrojs/tailwind@6.0.2(astro@5.7.8)(tailwindcss@3.4.17):
+  /@astrojs/tailwind@6.0.2(astro@5.7.9)(tailwindcss@3.4.17):
     resolution: {integrity: sha512-j3mhLNeugZq6A8dMNXVarUa8K6X9AW+QHU9u3lKNrPLMHhOQ0S7VeWhHwEeJFpEK1BTKEUY1U78VQv2gN6hNGg==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 5.7.8(typescript@5.8.3)
+      astro: 5.7.9(typescript@5.8.3)
       autoprefixer: 10.4.21(postcss@8.5.3)
       postcss: 8.5.3
       postcss-load-config: 4.0.2(postcss@8.5.3)
@@ -1804,8 +1804,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro@5.7.8(typescript@5.8.3):
-    resolution: {integrity: sha512-82ku6+wOGXP5c5+YOkBzEGJ/k8/GVSeN0xD/TNUrPf5nvWpGGpngxtUAwuruKF6wIxRC1/SwlUVCs/4QT98iZQ==}
+  /astro@5.7.9(typescript@5.8.3):
+    resolution: {integrity: sha512-P0cLijpmu4xZEXIh83ROOJqiCWRA7KSo24nhRLIjbMkiPElXu2qL1c28m7xhylCXeHa0lnCGPLyNjs1Wx3GyxA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
