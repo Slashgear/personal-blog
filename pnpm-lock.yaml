@@ -42,7 +42,7 @@ dependencies:
 devDependencies:
   '@astrojs/react':
     specifier: ^4.1.6
-    version: 4.2.7(@types/react-dom@19.1.5)(@types/react@19.1.4)(react-dom@19.1.0)(react@19.1.0)
+    version: 4.2.7(@types/react-dom@19.1.5)(@types/react@19.1.5)(react-dom@19.1.0)(react@19.1.0)
   '@astrojs/sitemap':
     specifier: ^3.2.1
     version: 3.4.0
@@ -60,7 +60,7 @@ devDependencies:
     version: 4.1.9
   '@types/react':
     specifier: ^19.0.0
-    version: 19.1.4
+    version: 19.1.5
   '@typescript-eslint/parser':
     specifier: ^8.5.0
     version: 8.32.1(eslint@9.27.0)(typescript@5.8.3)
@@ -200,7 +200,7 @@ packages:
     dependencies:
       prismjs: 1.30.0
 
-  /@astrojs/react@4.2.7(@types/react-dom@19.1.5)(@types/react@19.1.4)(react-dom@19.1.0)(react@19.1.0):
+  /@astrojs/react@4.2.7(@types/react-dom@19.1.5)(@types/react@19.1.5)(react-dom@19.1.0)(react@19.1.0):
     resolution: {integrity: sha512-/wM90noT/6QyJEOGdDmDbq2D9qZooKTJNG1M8olmsW5ns6bJ7uxG5fzkYxcpA3WUTD6Dj6NtpEqchvb5h8Fa+g==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
@@ -209,8 +209,8 @@ packages:
       react: ^17.0.2 || ^18.0.0 || ^19.0.0
       react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0
     dependencies:
-      '@types/react': 19.1.4
-      '@types/react-dom': 19.1.5(@types/react@19.1.4)
+      '@types/react': 19.1.5
+      '@types/react-dom': 19.1.5(@types/react@19.1.5)
       '@vitejs/plugin-react': 4.4.1(vite@6.3.5)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -1466,16 +1466,16 @@ packages:
     dependencies:
       undici-types: 6.21.0
 
-  /@types/react-dom@19.1.5(@types/react@19.1.4):
+  /@types/react-dom@19.1.5(@types/react@19.1.5):
     resolution: {integrity: sha512-CMCjrWucUBZvohgZxkjd6S9h0nZxXjzus6yDfUb+xLxYM7VvjKNH1tQrE9GWLql1XoOP4/Ds3bwFqShHUYraGg==}
     peerDependencies:
       '@types/react': ^19.0.0
     dependencies:
-      '@types/react': 19.1.4
+      '@types/react': 19.1.5
     dev: true
 
-  /@types/react@19.1.4:
-    resolution: {integrity: sha512-EB1yiiYdvySuIITtD5lhW4yPyJ31RkJkkDw794LaQYrxCSaQV/47y5o1FMC4zF9ZyjUjzJMZwbovEnT5yHTW6g==}
+  /@types/react@19.1.5:
+    resolution: {integrity: sha512-piErsCVVbpMMT2r7wbawdZsq4xMvIAhQuac2gedQHysu1TZYEigE6pnFfgZT+/jQnrRuF5r+SHzuehFjfRjr4g==}
     dependencies:
       csstype: 3.1.3
     dev: true
