@@ -5,11 +5,11 @@ description: |
   Voici mon premier article sur le sujet, où je partage quelques configurations utiles que j’ai mises en place.
 pubDatetime: 2025-06-26
 language: fr
-ogImage: '../home-assistant-backup-scaleway/ha.png'
+ogImage: "../home-assistant-backup-scaleway/ha.png"
 tags:
   - home-assistant
   - Scaleway
-  - how-to 
+  - how-to
 ---
 
 L’année dernière, j’ai acheté trois panneaux solaires de [Beem](https://beemenergy.fr/) pour mon appartement afin de produire ma propre électricité.
@@ -122,7 +122,8 @@ resource "scaleway_iam_policy" "bucket_rw_policy" {
   application_id = scaleway_iam_application.bucket_app.id
 }
 ```
-</details> 
+
+</details>
 
 </details>
 

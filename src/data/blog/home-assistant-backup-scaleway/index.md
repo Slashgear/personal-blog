@@ -5,11 +5,11 @@ description: |
   Here is my first article on the subject, where I share some useful setups I've implemented.
 pubDatetime: 2025-06-26
 language: en
-ogImage: './ha.png'
+ogImage: "./ha.png"
 tags:
   - home-assistant
   - Scaleway
-  - how-to 
+  - how-to
 ---
 
 Last year, I bought three solar panels from [Beem](https://beemenergy.fr/) for my apartment to generate my own electricity.
@@ -40,7 +40,7 @@ To ensure greater reliability, let's configure automatic backups to Scaleway Obj
 
 [If you get stuck at any point, refer to the official tutorial for guidance.](https://www.home-assistant.io/common-tasks/general/#setting-up-an-automatic-backup-process)
 
-## How to configure Backups on Scaleway ? 
+## How to configure Backups on Scaleway ?
 
 Make to have a valid account on Scaleway console.
 
@@ -122,6 +122,7 @@ resource "scaleway_iam_policy" "bucket_rw_policy" {
   application_id = scaleway_iam_application.bucket_app.id
 }
 ```
+
 </details>
 
 </details>
