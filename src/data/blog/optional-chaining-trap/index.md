@@ -50,7 +50,7 @@ var foo =
         : _everything$could$be$.maybe;
 
 // Terser would modify like this
-l, n, o;
+(l, n, o);
 null === (l = everything) ||
   void 0 === l ||
   null === (n = l.could) ||
