@@ -13,6 +13,11 @@ events:
     date: 1740133800000
     link: https://www.lyonjs.org/lyonjs-100
     video: https://www.youtube.com/watch?v=I_zNxGqRI3w
+  - name: SunnyTech 2025
+    date: 1750946400000
+    link: https://sunny-tech.io/sessions/cm3xco7n1006spydesz29k7bo/
+    video: https://www.youtube.com/watch?v=cxUvNNSKYK0
 cospeakers:
   - name: Jules Poissonnet
     site: https://www.linkedin.com/in/jules-poissonnet/
+
