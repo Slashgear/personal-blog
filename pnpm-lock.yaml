@@ -16,7 +16,7 @@ dependencies:
     version: 2.6.2
   astro:
     specifier: ^5.1.9
-    version: 5.12.8(typescript@5.8.3)
+    version: 5.12.9(typescript@5.8.3)
   fuse.js:
     specifier: ^7.0.0
     version: 7.1.0
@@ -48,7 +48,7 @@ devDependencies:
     version: 3.4.2
   '@astrojs/tailwind':
     specifier: ^6.0.0
-    version: 6.0.2(astro@5.12.8)(tailwindcss@3.4.17)
+    version: 6.0.2(astro@5.12.9)(tailwindcss@3.4.17)
   '@tailwindcss/typography':
     specifier: ^0.5.15
     version: 0.5.16(tailwindcss@3.4.17)
@@ -246,13 +246,13 @@ packages:
       zod: 3.25.76
     dev: true
 
-  /@astrojs/tailwind@6.0.2(astro@5.12.8)(tailwindcss@3.4.17):
+  /@astrojs/tailwind@6.0.2(astro@5.12.9)(tailwindcss@3.4.17):
     resolution: {integrity: sha512-j3mhLNeugZq6A8dMNXVarUa8K6X9AW+QHU9u3lKNrPLMHhOQ0S7VeWhHwEeJFpEK1BTKEUY1U78VQv2gN6hNGg==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 5.12.8(typescript@5.8.3)
+      astro: 5.12.9(typescript@5.8.3)
       autoprefixer: 10.4.21(postcss@8.5.6)
       postcss: 8.5.6
       postcss-load-config: 4.0.2(postcss@8.5.6)
@@ -1427,7 +1427,7 @@ packages:
   /@types/fontkit@2.0.8:
     resolution: {integrity: sha512-wN+8bYxIpJf+5oZdrdtaX04qUuWHcKxcDEgRS9Qm9ZClSHjzEn13SxUC+5eRM+4yXIeTYk8mTzLAWGF64847ew==}
     dependencies:
-      '@types/node': 24.2.0
+      '@types/node': 24.2.1
 
   /@types/github-slugger@2.0.0:
     resolution: {integrity: sha512-z/FaJhjFPk5mtrsZWeqyvaJdcZKw6CVCTuynEMrcXtgyozN3yMrtL13xWv8uQV2bWtwSXkdiNM37HEKkEj9x1Q==}
@@ -1472,8 +1472,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
 
-  /@types/node@24.2.0:
-    resolution: {integrity: sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==}
+  /@types/node@24.2.1:
+    resolution: {integrity: sha512-DRh5K+ka5eJic8CjH7td8QpYEV6Zo10gfRkjHCO3weqZHWDtAaSTFtl4+VMqOJ4N5jcuhZ9/l+yy8rVgw7BQeQ==}
     dependencies:
       undici-types: 7.10.0
 
@@ -1852,8 +1852,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro@5.12.8(typescript@5.8.3):
-    resolution: {integrity: sha512-KkJ7FR+c2SyZYlpakm48XBiuQcRsrVtdjG5LN5an0givI/tLik+ePJ4/g3qrAVhYMjJOxBA2YgFQxANPiWB+Mw==}
+  /astro@5.12.9(typescript@5.8.3):
+    resolution: {integrity: sha512-cZ7kZ61jyE5nwSrFKSRyf5Gds+uJELqQxJFqMkcgiWQvhWZJUSShn8Uz3yc9WLyLw5Kim5P5un9SkJSGogfEZQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
