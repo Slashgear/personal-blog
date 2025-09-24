@@ -16,7 +16,7 @@ dependencies:
     version: 2.6.2
   astro:
     specifier: ^5.1.9
-    version: 5.13.10(typescript@5.8.3)
+    version: 5.13.11(typescript@5.8.3)
   fuse.js:
     specifier: ^7.0.0
     version: 7.1.0
@@ -48,7 +48,7 @@ devDependencies:
     version: 3.6.0
   '@astrojs/tailwind':
     specifier: ^6.0.0
-    version: 6.0.2(astro@5.13.10)(tailwindcss@3.4.17)
+    version: 6.0.2(astro@5.13.11)(tailwindcss@3.4.17)
   '@tailwindcss/typography':
     specifier: ^0.5.15
     version: 0.5.16(tailwindcss@3.4.17)
@@ -241,13 +241,13 @@ packages:
       zod: 3.25.76
     dev: true
 
-  /@astrojs/tailwind@6.0.2(astro@5.13.10)(tailwindcss@3.4.17):
+  /@astrojs/tailwind@6.0.2(astro@5.13.11)(tailwindcss@3.4.17):
     resolution: {integrity: sha512-j3mhLNeugZq6A8dMNXVarUa8K6X9AW+QHU9u3lKNrPLMHhOQ0S7VeWhHwEeJFpEK1BTKEUY1U78VQv2gN6hNGg==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 5.13.10(typescript@5.8.3)
+      astro: 5.13.11(typescript@5.8.3)
       autoprefixer: 10.4.21(postcss@8.5.6)
       postcss: 8.5.6
       postcss-load-config: 4.0.2(postcss@8.5.6)
@@ -1908,8 +1908,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro@5.13.10(typescript@5.8.3):
-    resolution: {integrity: sha512-PgIrIYvrR7fCoSPPt1sGlpoYK/FNil1BwKazND1DyaZC7SbWLi9hdIHM3ApdrL2SWK7oiADRPw7cTn80UyDWqA==}
+  /astro@5.13.11(typescript@5.8.3):
+    resolution: {integrity: sha512-qKB+95GtyJSwVn5TDi31FTIcsohzA/nLhyATWn5VWqok1VLzZvm/1KHCk4tNElSrAQ5BisxUIMZWTh+B4X2JvQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -2357,8 +2357,8 @@ packages:
   /destr@2.0.5:
     resolution: {integrity: sha512-ugFTXCtDZunbzasqBxrK93Ik/DRYsO6S/fedkWEMKqt04xZ4csmnmwGDBAb07QWNaGMAmnTIemsYZCksjATwsA==}
 
-  /detect-libc@2.1.0:
-    resolution: {integrity: sha512-vEtk+OcP7VBRtQZ1EJ3bdgzSfBjgnEalLTp5zjJrS+2Z1w2KZly4SBdac/WDU3hhsNAZ9E8SC96ME4Ey8MZ7cg==}
+  /detect-libc@2.1.1:
+    resolution: {integrity: sha512-ecqj/sy1jcK1uWrwpR67UhYrIFQ+5WlGxth34WquCbamhFA6hkkwiu37o6J5xCHdo1oixJRfVRw+ywV+Hq/0Aw==}
     engines: {node: '>=8'}
     requiresBuild: true
     optional: true
@@ -4298,7 +4298,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@img/colour': 1.0.0
-      detect-libc: 2.1.0
+      detect-libc: 2.1.1
       semver: 7.7.2
     optionalDependencies:
       '@img/sharp-darwin-arm64': 0.34.4
