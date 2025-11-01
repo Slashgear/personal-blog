@@ -19,6 +19,7 @@ tags:
 Managing infrastructure as code at scale is challenging. When your organization grows beyond a handful of Terraform modules, you quickly encounter familiar problems: code duplication, inconsistent testing practices, unclear dependencies between modules, and the eternal question of whether to use a monorepo or split everything into separate repositories.
 
 If you've worked with Terraform in a team environment, you've probably faced these pain points:
+
 - Running `terraform fmt` and `terraform validate` across dozens of modules manually
 - Uncertainty about which modules are affected by a change
 - Difficulty enforcing consistent standards across all modules
@@ -55,6 +56,7 @@ The traditional approach to Terraform module management leaves teams choosing be
 ### 1. Intelligent Task Orchestration
 
 Nx understands your project graph - which modules depend on which. When you run a task, Nx:
+
 - Only executes tasks on **affected** projects based on your git diff
 - Runs tasks in the **correct order** based on dependencies
 - Executes independent tasks in **parallel** to maximize speed
@@ -148,10 +150,7 @@ The `project.json` file is where Nx magic happens. Here's an example for the `sc
     "validate": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "terraform init -backend=false",
-          "terraform validate"
-        ],
+        "commands": ["terraform init -backend=false", "terraform validate"],
         "cwd": "modules/scw-vpc",
         "parallel": false
       }
@@ -178,6 +177,7 @@ The `project.json` file is where Nx magic happens. Here's an example for the `sc
 The `nx:run-commands` executor lets us run any shell command - perfect for Terraform CLI commands.
 
 Now you can run:
+
 ```bash
 nx fmt scw-vpc          # Check formatting
 nx validate scw-vpc     # Validate configuration
@@ -254,6 +254,7 @@ nx graph
 ```
 
 This opens an interactive browser view showing all your modules and their relationships. It's incredibly useful for:
+
 - Onboarding new team members
 - Planning large refactors
 - Understanding blast radius of changes
@@ -287,6 +288,7 @@ In your `nx.json`, use `targetDefaults` to create a pipeline:
 ```
 
 The `^` prefix means "dependencies of dependencies". When you run `nx security scw-k8s`:
+
 1. Nx validates all modules that `scw-k8s` depends on
 2. Then formats `scw-k8s`
 3. Then validates `scw-k8s`
@@ -323,10 +325,7 @@ Here's a complete `project.json` with all the targets you'll typically need:
     "validate": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "terraform init -backend=false",
-          "terraform validate"
-        ],
+        "commands": ["terraform init -backend=false", "terraform validate"],
         "cwd": "modules/scw-vpc",
         "parallel": false
       }
@@ -334,10 +333,7 @@ Here's a complete `project.json` with all the targets you'll typically need:
     "lint": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "tflint --init",
-          "tflint"
-        ],
+        "commands": ["tflint --init", "tflint"],
         "cwd": "modules/scw-vpc",
         "parallel": false
       }
@@ -387,38 +383,41 @@ Create a generator in `tools/generators/terraform-module/`:
 
 ```javascript
 // tools/generators/terraform-module/index.js
-const { formatFiles, generateFiles, Tree } = require('@nx/devkit');
-const path = require('path');
+const { formatFiles, generateFiles, Tree } = require("@nx/devkit");
+const path = require("path");
 
 async function terraformModuleGenerator(tree, schema) {
   const { name, cloud, layer } = schema;
   const projectRoot = `modules/${name}`;
 
   // Generate files from templates
-  generateFiles(
-    tree,
-    path.join(__dirname, 'files'),
-    projectRoot,
-    {
-      name,
-      cloud,
-      layer,
-      tmpl: ''
-    }
-  );
+  generateFiles(tree, path.join(__dirname, "files"), projectRoot, {
+    name,
+    cloud,
+    layer,
+    tmpl: "",
+  });
 
   // Update workspace
   const projectConfiguration = {
     name,
-    projectType: 'library',
+    projectType: "library",
     sourceRoot: projectRoot,
     targets: {
-      fmt: { /* ... */ },
-      validate: { /* ... */ },
-      lint: { /* ... */ },
-      test: { /* ... */ }
+      fmt: {
+        /* ... */
+      },
+      validate: {
+        /* ... */
+      },
+      lint: {
+        /* ... */
+      },
+      test: {
+        /* ... */
+      },
     },
-    tags: [`type:terraform`, `cloud:${cloud}`, `layer:${layer}`]
+    tags: [`type:terraform`, `cloud:${cloud}`, `layer:${layer}`],
   };
 
   addProjectConfiguration(tree, name, projectConfiguration);
@@ -428,11 +427,14 @@ async function terraformModuleGenerator(tree, schema) {
 module.exports = terraformModuleGenerator;
 module.exports.schema = {
   properties: {
-    name: { type: 'string' },
-    cloud: { type: 'string', enum: ['scaleway', 'aws', 'gcp', 'azure'] },
-    layer: { type: 'string', enum: ['network', 'compute', 'storage', 'security'] }
+    name: { type: "string" },
+    cloud: { type: "string", enum: ["scaleway", "aws", "gcp", "azure"] },
+    layer: {
+      type: "string",
+      enum: ["network", "compute", "storage", "security"],
+    },
   },
-  required: ['name', 'cloud', 'layer']
+  required: ["name", "cloud", "layer"],
 };
 ```
 
@@ -501,21 +503,20 @@ Testing infrastructure code is critical but often overlooked. With Nx, you can b
 
 **terraform fmt & validate**
 Basic syntax and semantic validation:
+
 ```bash
 nx run-many -t fmt,validate
 ```
 
 **tflint**
 Catch common mistakes and enforce best practices:
+
 ```json
 {
   "lint": {
     "executor": "nx:run-commands",
     "options": {
-      "commands": [
-        "tflint --init",
-        "tflint --format compact"
-      ],
+      "commands": ["tflint --init", "tflint --format compact"],
       "cwd": "modules/scw-vpc",
       "parallel": false
     }
@@ -525,6 +526,7 @@ Catch common mistakes and enforce best practices:
 
 **checkov**
 Security and compliance scanning:
+
 ```bash
 nx run-many -t security  # Runs checkov on all modules
 ```
@@ -571,12 +573,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Important for nx affected
+          fetch-depth: 0 # Important for nx affected
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
@@ -647,6 +649,7 @@ affected:security:
 ### Results
 
 In a real-world scenario with 30+ Terraform modules:
+
 - **Before Nx**: Every PR ran checks on all 30 modules (~15 min)
 - **After Nx**: Most PRs only check 1-3 affected modules (~2 min)
 - **Savings**: 87% reduction in CI time
@@ -740,11 +743,11 @@ Nx automatically generates changelogs for each module:
 
 ### ⚠ BREAKING CHANGES
 
-* **scw-vpc:** VPC module now requires new subnet configuration
+- **scw-vpc:** VPC module now requires new subnet configuration
 
 ### Features
 
-* **scw-vpc:** redesign network architecture ([a1b2c3d](https://github.com/org/repo/commit/a1b2c3d))
+- **scw-vpc:** redesign network architecture ([a1b2c3d](https://github.com/org/repo/commit/a1b2c3d))
 
 ### Authors
 
@@ -777,7 +780,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
 
       - name: Install dependencies
         run: npm ci
@@ -819,11 +822,13 @@ module "vpc" {
 Nx supports two release strategies:
 
 **Independent** (recommended for Terraform modules):
+
 - Each module has its own version
 - Modules only bump when they change
 - `"projectsRelationship": "independent"`
 
 **Fixed** (useful for tightly coupled modules):
+
 - All modules share the same version
 - All versions bump together even if unchanged
 - `"projectsRelationship": "fixed"`
@@ -845,6 +850,7 @@ Let's walk through a concrete example: a SaaS company managing their Scaleway in
 ### The Setup
 
 They have the following modules:
+
 - `scw-vpc` - Private network configuration
 - `scw-k8s` - Kubernetes Kapsule cluster (depends on vpc)
 - `scw-database` - Managed PostgreSQL (depends on vpc)
@@ -907,10 +913,12 @@ nx affected -t validate,lint,security --base=main
 ### The Impact
 
 Before Nx:
+
 - Every PR: validate all 7 modules, run all checks (~20 min)
 - Developers waited, context-switched, lost productivity
 
 After Nx:
+
 - Small changes: 1-2 modules affected (~3 min)
 - VPC changes: 5 modules affected (~8 min)
 - Clear visibility with `nx graph` on what breaks
@@ -926,16 +934,17 @@ Tags enable powerful filtering. Be strategic:
 ```json
 {
   "tags": [
-    "type:terraform",           // All terraform projects
-    "cloud:scaleway",           // Cloud provider
-    "layer:network",            // Infrastructure layer
-    "team:platform",            // Owning team
-    "env:multi"                 // Supports multiple envs
+    "type:terraform", // All terraform projects
+    "cloud:scaleway", // Cloud provider
+    "layer:network", // Infrastructure layer
+    "team:platform", // Owning team
+    "env:multi" // Supports multiple envs
   ]
 }
 ```
 
 Then run targeted commands:
+
 ```bash
 nx run-many -t validate --projects=tag:team:platform
 nx run-many -t security --projects=tag:cloud:scaleway
@@ -944,6 +953,7 @@ nx run-many -t security --projects=tag:cloud:scaleway
 ### 2. Keep Modules Small and Focused
 
 Each module should do one thing well:
+
 - ✅ Good: `scw-vpc`, `scw-k8s`, `scw-database`
 - ❌ Bad: `scw-full-infrastructure`
 
@@ -952,6 +962,7 @@ Small modules = better reusability and easier testing.
 ### 3. Use Target Dependencies Wisely
 
 Define a clear pipeline in `nx.json`:
+
 ```json
 {
   "targetDefaults": {
@@ -970,6 +981,7 @@ This ensures tasks run in the right order automatically.
 ### 4. Document with terraform-docs
 
 Automate documentation generation:
+
 ```json
 {
   "docs": {
@@ -987,6 +999,7 @@ Run `nx run-many -t docs` to update all module docs at once.
 ### 5. Implement Pre-commit Hooks
 
 Use Husky to run quick checks before commits:
+
 ```bash
 npx husky install
 npx husky add .husky/pre-commit "npx nx affected -t fmt-fix,validate"
@@ -999,6 +1012,7 @@ Nx is powerful, but it's not a silver bullet. Here are honest tradeoffs to consi
 ### Learning Curve
 
 Your team needs to learn:
+
 - Nx concepts (projects, targets, affected commands)
 - Node.js/npm basics (even though you're not writing JavaScript)
 - How to write `project.json` files
@@ -1014,6 +1028,7 @@ You now need Node.js in your infrastructure workflows. Some teams find this odd.
 ### State Management Unchanged
 
 Nx doesn't help with:
+
 - Terraform state files
 - State locking
 - Remote backends
@@ -1026,6 +1041,7 @@ You still need proper Terraform state hygiene. Nx is purely about **workspace or
 If you have 1-3 Terraform modules that rarely change, Nx is overkill. The overhead isn't worth it.
 
 **Use Nx when**:
+
 - 5+ modules
 - Frequent changes
 - Multiple team members
@@ -1034,11 +1050,13 @@ If you have 1-3 Terraform modules that rarely change, Nx is overkill. The overhe
 ### Module Source References
 
 Modules in the monorepo use relative paths:
+
 ```hcl
 source = "../scw-vpc"
 ```
 
 External consumers need a different approach:
+
 - Publish to a module registry
 - Use git tags with specific refs
 - Or keep internal modules internal
@@ -1069,23 +1087,28 @@ The future of infrastructure management is smart, graph-aware tooling. Nx brings
 ## Resources
 
 **Nx Documentation**
+
 - [Nx Official Docs](https://nx.dev)
 - [nx:run-commands Executor](https://nx.dev/nx-api/nx/executors/run-commands)
 - [Creating Custom Generators](https://nx.dev/extending-nx/recipes/local-generators)
 
 **Terraform Tooling**
+
 - [terraform-docs](https://terraform-docs.io/) - Automated documentation generation
 - [tflint](https://github.com/terraform-linters/tflint) - Terraform linter
 - [checkov](https://www.checkov.io/) - Security and compliance scanning
 
 **Scaleway Provider**
+
 - [Scaleway Terraform Provider](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs)
 - [Scaleway Documentation](https://www.scaleway.com/en/docs/)
 
 **Community Examples**
+
 - Join the [Nx Community Discord](https://discord.gg/nx) for discussions
 
 **Further Reading**
+
 - [Monorepo Tools](https://monorepo.tools/) - Comparison of monorepo solutions
 - [Terraform Best Practices](https://www.terraform-best-practices.com/)
 
