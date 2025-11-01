@@ -67,6 +67,8 @@ For Terraform, this means running `terraform validate` only on the modules that 
 
 Run `nx graph` and see a visual representation of how your modules relate to each other. This is invaluable for understanding impact and planning refactors.
 
+![Example of Dependency Graph made with NX for this usecase](./graph.png)
+
 ### 3. Code Generation
 
 Nx generators let you scaffold new modules with consistent structure. Want a new Terraform module with the right directory structure, a `project.json`, tests, and documentation? One command.
@@ -1102,10 +1104,6 @@ The future of infrastructure management is smart, graph-aware tooling. Nx brings
 
 - [Scaleway Terraform Provider](https://registry.terraform.io/providers/scaleway/scaleway/latest/docs)
 - [Scaleway Documentation](https://www.scaleway.com/en/docs/)
-
-**Community Examples**
-
-- Join the [Nx Community Discord](https://discord.gg/nx) for discussions
 
 **Further Reading**
 
