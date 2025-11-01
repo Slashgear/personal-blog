@@ -65,7 +65,7 @@ const nextPost =
 
 <Layout {...layoutProps}>
   <Header />
-  <div class="mx-auto flex w-full max-w-4xl justify-start px-2">
+  <div class="mx-auto flex w-full max-w-5xl justify-start px-2">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
@@ -93,7 +93,7 @@ const nextPost =
       )
     }
 
-    <article id="article" class="prose mx-auto mt-8 max-w-3xl">
+    <article id="article" class="prose mx-auto mt-8 max-w-4xl">
       <Content />
     </article>
 
@@ -190,7 +190,7 @@ const nextPost =
 
 <style>
   main {
-    @apply mx-auto w-full max-w-4xl px-4 pb-12;
+    @apply mx-auto w-full max-w-5xl px-4 pb-12;
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
