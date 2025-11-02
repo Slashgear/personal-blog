@@ -28,6 +28,8 @@ If you've worked with Terraform in a team environment, you've probably faced the
 
 What if you could leverage the same powerful tooling that frontend teams use to manage their monorepos? Enter **Nx** - a smart build system that can transform how you manage Terraform modules.
 
+**Want to see this in action?** I've created a [complete demo repository](https://github.com/Slashgear/nx-terraform-demo) showcasing all the concepts covered in this article, with seven Scaleway Terraform modules fully configured with Nx.
+
 ## The Challenge of Managing Terraform Modules at Scale
 
 ### The Multi-Repo Dilemma
@@ -847,7 +849,7 @@ This makes managing dozens of Terraform modules significantly less painful than 
 
 ## Real-World Use Case
 
-Let's walk through a concrete example: a SaaS company managing their Scaleway infrastructure with Nx.
+Let's walk through a concrete example: a SaaS company managing their Scaleway infrastructure with Nx. This example is based on the [nx-terraform-demo repository](https://github.com/Slashgear/nx-terraform-demo), which you can clone and explore yourself.
 
 ### The Setup
 
@@ -856,8 +858,8 @@ They have the following modules:
 - `scw-vpc` - Private network configuration
 - `scw-k8s` - Kubernetes Kapsule cluster (depends on vpc)
 - `scw-database` - Managed PostgreSQL (depends on vpc)
-- `scw-object-storage` - S3-compatible storage
-- `scw-registry` - Container registry
+- `scw-object-storage` - S3-compatible object storage (independent)
+- `scw-registry` - Container registry (depends on vpc)
 - `scw-loadbalancer` - Load balancer (depends on vpc, k8s)
 - `scw-monitoring` - Observability stack (depends on k8s)
 
@@ -868,10 +870,10 @@ scw-vpc
   ├── scw-k8s
   │   ├── scw-loadbalancer
   │   └── scw-monitoring
-  └── scw-database
+  ├── scw-database
+  └── scw-registry
 
 scw-object-storage (independent)
-scw-registry (independent)
 ```
 
 Run `nx graph` to visualize this automatically.
@@ -887,17 +889,17 @@ git checkout -b feat/add-subnet
 
 # Check what's affected
 nx show projects --affected
-# Output: scw-vpc, scw-k8s, scw-database, scw-loadbalancer, scw-monitoring
+# Output: scw-vpc, scw-k8s, scw-database, scw-registry, scw-loadbalancer, scw-monitoring
 
 # Run validation only on affected modules
 nx affected -t validate,lint
-# Validates: vpc → k8s → database, loadbalancer, monitoring
+# Validates: vpc → k8s, database, registry → loadbalancer, monitoring
 
 # Push and CI runs affected checks
-# Only the 5 affected modules are validated, not all 7
+# Only the 6 affected modules are validated, not all 7
 ```
 
-**Result**: Instead of running checks on all modules, only the affected ones run. The independent modules (`scw-object-storage`, `scw-registry`) are skipped entirely.
+**Result**: Instead of running checks on all modules, only the affected ones run. The independent module (`scw-object-storage`) is skipped entirely.
 
 ### Scenario: Adding New Feature to Monitoring
 
@@ -910,7 +912,7 @@ nx show projects --affected
 nx affected -t validate,lint,security --base=main
 ```
 
-**Result**: 6 modules skipped, massive time savings.
+**Result**: All other 6 modules skipped, massive time savings.
 
 ### The Impact
 
@@ -922,7 +924,7 @@ Before Nx:
 After Nx:
 
 - Small changes: 1-2 modules affected (~3 min)
-- VPC changes: 5 modules affected (~8 min)
+- VPC changes: 6 modules affected (~8 min)
 - Clear visibility with `nx graph` on what breaks
 
 ## Best Practices
@@ -1087,6 +1089,10 @@ Start small: pick 3-5 modules, prove the concept, measure the impact. If it work
 The future of infrastructure management is smart, graph-aware tooling. Nx brings us closer to that future today.
 
 ## Resources
+
+**Demo Repository**
+
+- [nx-terraform-demo](https://github.com/Slashgear/nx-terraform-demo) - Complete working example with 7 Scaleway Terraform modules managed with Nx
 
 **Nx Documentation**
 
