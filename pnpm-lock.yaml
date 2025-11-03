@@ -31,7 +31,7 @@ dependencies:
     version: 9.0.0
   satori:
     specifier: ^0.18.0
-    version: 0.18.1
+    version: 0.18.3
   tailwindcss:
     specifier: ^3.4.11
     version: 3.4.18
@@ -4237,8 +4237,8 @@ packages:
     dependencies:
       suf-log: 2.5.3
 
-  /satori@0.18.1:
-    resolution: {integrity: sha512-TQvguO82qSvLlknlAT1D661+KFsiiiYUHgbRxMjAlHNjUyqAcY9LcDqUpt/yM9LEjlxwuvlru616JVcv8YYTUA==}
+  /satori@0.18.3:
+    resolution: {integrity: sha512-T3DzWNmnrfVmk2gCIlAxLRLbGkfp3K7TyRva+Byyojqu83BNvnMeqVeYRdmUw4TKCsyH4RiQ/KuF/I4yEzgR5A==}
     engines: {node: '>=16'}
     dependencies:
       '@shuding/opentype.js': 1.4.0-beta.0
