@@ -17,6 +17,9 @@ events:
     date: 1750946400000
     link: https://sunny-tech.io/sessions/cm3xco7n1006spydesz29k7bo/
     video: https://www.youtube.com/watch?v=cxUvNNSKYK0
+  - name: Devfest Dijon 2025
+    date: 1764927000000
+    link: https://devfest.developers-group-dijon.fr/session/cmcjf8msm010eoe3mig4l6a33/
 cospeakers:
   - name: Jules Poissonnet
     site: https://www.linkedin.com/in/jules-poissonnet/
