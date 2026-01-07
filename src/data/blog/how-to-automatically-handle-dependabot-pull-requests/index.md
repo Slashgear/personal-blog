@@ -54,7 +54,7 @@ It is therefore often necessary to wait for dependabot to rebase the PR by itsel
 ## ♻️ Let's merge it automatically!
 
 Having set up E2E tests on this blog, the check ✅ given by my continuous integration workflow is very reassuring.
-[You can have a look at this article which describes how I set up these tests](/how-to-setup-e2e-tests-with-webdriverio/)
+[You can have a look at this article which describes how I set up these tests](/posts/how-to-setup-e2e-tests-with-webdriverio/)
 
 With this automation, I'm pretty serene when I merge the dependabot update PR.
 So I thought, _"Why not automatically merge the PRs that pass the E2E tests?"_
