@@ -114,7 +114,7 @@ ReactDOM.render(
   <React.StrictMode>
     <h1>Hello world dear readers ! </h1>
   </React.StrictMode>,
-  document.getElementById("app")
+  document.getElementById("app"),
 );
 ```
 

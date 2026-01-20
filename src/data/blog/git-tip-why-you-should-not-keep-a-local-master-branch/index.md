@@ -3,8 +3,7 @@ title: Git TIP -  Why you should not keep a local master branch ?
 description: What is a local branch, what is a remote branch ? Why keeping up to date local branch is a waste of time ?
 ogImage: ./what.jpg
 language: en
-translations:
-  ["fr", "pourquoi-vous-ne-devriez-pas-maintenir-une-branche-master-locale"]
+translations: ["fr", "pourquoi-vous-ne-devriez-pas-maintenir-une-branche-master-locale"]
 pubDatetime: 2019-07-25
 tags:
   - git

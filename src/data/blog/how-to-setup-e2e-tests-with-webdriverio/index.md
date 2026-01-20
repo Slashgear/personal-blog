@@ -4,8 +4,7 @@ description: For some time now I've been playing with github actions to see if I
 pubDatetime: 2021-08-13
 ogImage: ./webdriverio.jpg
 language: en
-translations:
-  ["fr", "comment-mettre-en-place-des-tests-bout-en-bout-avec-webdriverio"]
+translations: ["fr", "comment-mettre-en-place-des-tests-bout-en-bout-avec-webdriverio"]
 tags:
   - github
   - action
@@ -95,7 +94,7 @@ With the steps definitions in `./step-definitions/steps.js`
 ```js
 const { Given, When, Then } = require("@cucumber/cucumber");
 
-Given(/^I am on the (\w+) page$/, async page => {
+Given(/^I am on the (\w+) page$/, async (page) => {
   await browser.url(`https://the-internet.herokuapp.com/${page}`);
 });
 
@@ -105,7 +104,7 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
   await $('button[type="submit"]').click();
 });
 
-Then(/^I should see a flash message saying (.*)$/, async message => {
+Then(/^I should see a flash message saying (.*)$/, async (message) => {
   await expect($("#flash")).toBeExisting();
   await expect($("#flash")).toHaveTextContaining(message);
 });

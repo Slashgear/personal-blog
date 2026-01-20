@@ -82,14 +82,10 @@ export default async (post: CollectionEntry<"blog">) => {
               >
                 "
               </span>
-              <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-                {post.data.author}
-              </span>
+              <span style={{ overflow: "hidden", fontWeight: "bold" }}>{post.data.author}</span>
             </span>
 
-            <span style={{ overflow: "hidden", fontWeight: "bold" }}>
-              {SITE.title}
-            </span>
+            <span style={{ overflow: "hidden", fontWeight: "bold" }}>{SITE.title}</span>
           </div>
         </div>
       </div>
@@ -99,8 +95,8 @@ export default async (post: CollectionEntry<"blog">) => {
       height: 630,
       embedFont: true,
       fonts: (await loadGoogleFonts(
-        post.data.title + post.data.author + SITE.title + "by"
+        post.data.title + post.data.author + SITE.title + "by",
       )) as FontOptions[],
-    }
+    },
   );
 };

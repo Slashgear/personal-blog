@@ -1,0 +1,8 @@
+# Ignore public folder (minified/third-party assets)
+public/
+
+# Ignore pnpm lock file
+pnpm-lock.yaml
+
+# Ignore dist/build output
+dist/

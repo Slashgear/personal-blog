@@ -91,16 +91,14 @@ You can achieve this in many ways:
 ```js
 async function getComponent() {
   var element = document.createElement("div");
-  const { default: _ } = await import(
-    /* webpackChunkName: "lodash" */ "lodash"
-  );
+  const { default: _ } = await import(/* webpackChunkName: "lodash" */ "lodash");
 
   element.innerHTML = _.join(["Hello", "webpack"], " ");
 
   return element;
 }
 
-getComponent().then(component => {
+getComponent().then((component) => {
   document.body.appendChild(component);
 });
 ```
@@ -186,9 +184,7 @@ RootMyComponent.js
 ```
 
 ```js
-const Component = require(
-  `./customer/${process.env.CUSTOMER_CODE}/MyComponent.js`
-);
+const Component = require(`./customer/${process.env.CUSTOMER_CODE}/MyComponent.js`);
 
 export default Component;
 ```
@@ -291,17 +287,14 @@ class CustomerReplacementPlugin {
   }
 
   apply(compiler) {
-    compiler.hooks.normalModuleFactory.tap("CustomerReplacementPlugin", nmf => {
+    compiler.hooks.normalModuleFactory.tap("CustomerReplacementPlugin", (nmf) => {
       // just before thos normal modules have be resolved
-      nmf.hooks.afterResolve.tap("CustomerReplacementPlugin", result => {
+      nmf.hooks.afterResolve.tap("CustomerReplacementPlugin", (result) => {
         if (!result) return;
 
         // if the variant exists for the current customer
         if (/customer\/default/.test(result.resource)) {
-          const customerResource = result.resource.replace(
-            /\/default\//,
-            `/${this.customerName}/`
-          );
+          const customerResource = result.resource.replace(/\/default\//, `/${this.customerName}/`);
           if (fs.existsSync(customerResource)) {
             // I replace the resolved path by the customer path
             result.resource = customerResource;

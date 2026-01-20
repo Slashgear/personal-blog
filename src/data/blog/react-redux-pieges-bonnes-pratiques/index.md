@@ -93,9 +93,9 @@ Vous pouvez également passer des paramètres à un "sélecteur" en l'entourant 
 
 ```js
 export const getProduct =
-  productId =>
+  (productId) =>
   ({ product: { list } }) =>
-    list.find(product => product.id === productId);
+    list.find((product) => product.id === productId);
 ```
 
 Cela vous permettra de les utiliser dans vos composants en utilisant le crochet [useSelector].
@@ -302,15 +302,15 @@ L'exemple le plus courant est la gestion des appels HTTP pendant une action qui 
 ```js
 export const foo = () =>
   fetch("https://example.com/api/foo")
-    .then(data => ({ type: "FOO", data }))
-    .catch(error => {
+    .then((data) => ({ type: "FOO", data }))
+    .catch((error) => {
       // Do something
     });
 
 export const bar = () =>
   fetch("https://example.com/api/bar")
-    .then(data => ({ type: "BAR", data }))
-    .catch(error => {
+    .then((data) => ({ type: "BAR", data }))
+    .catch((error) => {
       // Do something
     });
 ```
@@ -328,7 +328,7 @@ Récupérer quelque chose
 On pourrait très bien définir un middleware qui s'occuperait de ce comportement.
 
 ```js
-const http = store => next => async action => {
+const http = (store) => (next) => async (action) => {
   if (action.http) {
     try {
       action.result = await fetch(action.http);
@@ -369,8 +369,7 @@ Il suffit de se méfier des pièges suivants.
 Imaginons le prochain _sélecteur_ :
 
 ```js
-const getUserById = userId => state =>
-  state.users.find(user => user.id === userId) || {};
+const getUserById = (userId) => (state) => state.users.find((user) => user.id === userId) || {};
 ```
 
 Ici, le développeur voulait s'assurer que son _sélecteur_ est protégé contre les nullités et renvoie toujours un _objet_.
@@ -398,8 +397,8 @@ Sinon, la valeur par défaut doit être extraite dans une constante afin que la 
 ```js
 const defaultUser = {};
 
-const getUserById = userId => state =>
-  state.users.find(user => user.id === userId) || defaultUser;
+const getUserById = (userId) => (state) =>
+  state.users.find((user) => user.id === userId) || defaultUser;
 ```
 
 Il en va de même pour l'utilisation du sélecteur qui renvoie une nouvelle référence à chaque appel.
@@ -409,8 +408,7 @@ Pour continuer, il est important que [useSelector] ne renvoie pas une fonction.
 En fait, vous ne devez jamais faire cela :
 
 ```js
-const getUserById = state => userId =>
-  state.users.find(user => user.id === userId);
+const getUserById = (state) => (userId) => state.users.find((user) => user.id === userId);
 const uider = useSelector(getUserById)(userId);
 ```
 

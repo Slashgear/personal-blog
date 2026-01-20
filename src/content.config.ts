@@ -44,11 +44,9 @@ const conferences = defineCollection({
         site: z.string().optional(),
         link: z.string().optional(),
         video: z.string().optional(),
-      })
+      }),
     ),
-    cospeaker: z
-      .array(z.object({ name: z.string(), site: z.string() }))
-      .optional(),
+    cospeaker: z.array(z.object({ name: z.string(), site: z.string() })).optional(),
   }),
 });
 

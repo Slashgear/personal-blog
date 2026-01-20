@@ -41,8 +41,7 @@ var _everything, _everything$could, _everything$could$be$;
 var foo =
   (_everything = everything) === null || _everything === void 0
     ? void 0
-    : (_everything$could = _everything.could) === null ||
-        _everything$could === void 0
+    : (_everything$could = _everything.could) === null || _everything$could === void 0
       ? void 0
       : (_everything$could$be$ = _everything$could.be.nullable) === null ||
           _everything$could$be$ === void 0

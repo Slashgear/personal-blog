@@ -4,8 +4,7 @@ description: "Comment ne pas jeter son projet au bout de 2 ans ? Retour d'expér
 pubDatetime: 2021-08-25
 ogImage: ./bedrock.jpg
 language: fr
-translations:
-  ["en", "how-not-to-throw-away-your-web-application-after-two-years"]
+translations: ["en", "how-not-to-throw-away-your-web-application-after-two-years"]
 tags:
   - web
   - javascript

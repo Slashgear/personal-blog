@@ -8,8 +8,8 @@
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
-    "format:check": "prettier --check . --plugin=prettier-plugin-astro",
-    "format": "prettier --write . --plugin=prettier-plugin-astro",
+    "format:check": "oxfmt --check .",
+    "format": "oxfmt --write .",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -38,9 +38,7 @@
     "eslint": "^9.10.0",
     "eslint-plugin-astro": "^1.2.4",
     "globals": "^16.0.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.6",
+    "oxfmt": "^0.26.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "typescript-eslint": "^8.5.0"

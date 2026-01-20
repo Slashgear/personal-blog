@@ -161,9 +161,9 @@ require("esbuild")
       entryPoints: ["src/app.js"],
       outdir: "www/js",
       bundle: true,
-    }
+    },
   )
-  .then(server => {
+  .then((server) => {
     // Call "stop" on the web server when you're done
     server.stop();
   });
