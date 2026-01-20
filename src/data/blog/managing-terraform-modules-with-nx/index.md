@@ -142,13 +142,12 @@ The `project.json` file is where Nx magic happens. Here's an example for the `sc
       "options": {
         "command": "terraform fmt -check",
         "cwd": "modules/scw-vpc"
-      }
-    },
-    "fmt-fix": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "terraform fmt",
-        "cwd": "modules/scw-vpc"
+      },
+      "configurations": {
+        "fix": {
+          "command": "terraform fmt",
+          "cwd": "modules/scw-vpc"
+        }
       }
     },
     "validate": {
@@ -157,24 +156,26 @@ The `project.json` file is where Nx magic happens. Here's an example for the `sc
         "commands": ["terraform init -backend=false", "terraform validate"],
         "cwd": "modules/scw-vpc",
         "parallel": false
-      }
+      },
+      "dependsOn": ["fmt", "^validate"]
     },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "tflint",
+        "command": "tflint --init && tflint",
         "cwd": "modules/scw-vpc"
-      }
+      },
+      "dependsOn": ["validate"]
     },
     "docs": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "terraform-docs markdown . > README.md",
+        "command": "terraform-docs markdown table --output-file README.md --output-mode inject .",
         "cwd": "modules/scw-vpc"
       }
     }
   },
-  "tags": ["type:terraform", "cloud:scaleway", "layer:network"]
+  "tags": ["terraform", "infrastructure", "networking", "vpc"]
 }
 ```
 
@@ -183,10 +184,11 @@ The `nx:run-commands` executor lets us run any shell command - perfect for Terra
 Now you can run:
 
 ```bash
-nx fmt scw-vpc          # Check formatting
-nx validate scw-vpc     # Validate configuration
-nx lint scw-vpc         # Run tflint
-nx run-many -t validate # Run validate on all modules
+nx fmt scw-vpc                       # Check formatting
+nx fmt scw-vpc --configuration=fix   # Fix formatting
+nx validate scw-vpc                  # Validate configuration
+nx lint scw-vpc                      # Run tflint
+nx run-many -t validate              # Run validate on all modules
 ```
 
 ## Managing Dependencies Between Terraform Modules
@@ -204,18 +206,18 @@ module "vpc" {
 }
 ```
 
-Nx can detect this relationship. Configure implicit dependencies in your root `nx.json`:
+Nx can detect this relationship. You can also configure named inputs for better cache invalidation in your root `nx.json`:
 
 ```json
 {
-  "pluginsConfig": {
-    "@nx/dependency-checks": {
-      "checkVersionMismatch": false
-    }
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"],
+    "terraform": ["{projectRoot}/**/*.tf", "{projectRoot}/**/*.tfvars"]
   },
   "targetDefaults": {
     "validate": {
-      "dependsOn": ["^validate"]
+      "cache": true,
+      "dependsOn": ["fmt"]
     }
   }
 }
@@ -276,16 +278,24 @@ In your `nx.json`, use `targetDefaults` to create a pipeline:
 {
   "targetDefaults": {
     "fmt": {
+      "cache": true,
       "dependsOn": []
     },
     "validate": {
-      "dependsOn": ["^validate", "fmt"]
+      "cache": true,
+      "dependsOn": ["fmt"]
     },
     "lint": {
+      "cache": true,
       "dependsOn": ["validate"]
     },
     "security": {
+      "cache": true,
       "dependsOn": ["lint"]
+    },
+    "docs": {
+      "cache": true,
+      "dependsOn": []
     }
   }
 }
@@ -317,13 +327,12 @@ Here's a complete `project.json` with all the targets you'll typically need:
       "options": {
         "command": "terraform fmt -check",
         "cwd": "modules/scw-vpc"
-      }
-    },
-    "fmt-fix": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "terraform fmt",
-        "cwd": "modules/scw-vpc"
+      },
+      "configurations": {
+        "fix": {
+          "command": "terraform fmt",
+          "cwd": "modules/scw-vpc"
+        }
       }
     },
     "validate": {
@@ -332,32 +341,34 @@ Here's a complete `project.json` with all the targets you'll typically need:
         "commands": ["terraform init -backend=false", "terraform validate"],
         "cwd": "modules/scw-vpc",
         "parallel": false
-      }
+      },
+      "dependsOn": ["fmt", "^validate"]
     },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["tflint --init", "tflint"],
-        "cwd": "modules/scw-vpc",
-        "parallel": false
-      }
+        "command": "tflint --init && tflint",
+        "cwd": "modules/scw-vpc"
+      },
+      "dependsOn": ["validate"]
     },
     "security": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "checkov -d .",
+        "command": "checkov -d . --quiet --compact",
         "cwd": "modules/scw-vpc"
-      }
+      },
+      "dependsOn": ["lint"]
     },
     "docs": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "terraform-docs markdown . > README.md",
+        "command": "terraform-docs markdown table --output-file README.md --output-mode inject .",
         "cwd": "modules/scw-vpc"
       }
     }
   },
-  "tags": ["type:terraform", "cloud:scaleway", "layer:network"]
+  "tags": ["terraform", "infrastructure", "networking", "vpc"]
 }
 ```
 
@@ -374,7 +385,7 @@ nx affected -t validate,lint
 nx run-many -t fmt,validate,lint,security
 
 # Run on modules with specific tags
-nx run-many -t validate --projects=tag:cloud:scaleway
+nx run-many -t validate --projects=tag:terraform
 ```
 
 ## Code Generation and Scaffolding
@@ -520,10 +531,10 @@ Catch common mistakes and enforce best practices:
   "lint": {
     "executor": "nx:run-commands",
     "options": {
-      "commands": ["tflint --init", "tflint --format compact"],
-      "cwd": "modules/scw-vpc",
-      "parallel": false
-    }
+      "command": "tflint --init && tflint",
+      "cwd": "modules/scw-vpc"
+    },
+    "dependsOn": ["validate"]
   }
 }
 ```
@@ -575,41 +586,50 @@ jobs:
   affected:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Important for nx affected
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: "18"
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.6.0
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Install tflint
         run: |
           curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
 
+      - name: Install Checkov
+        run: pip install checkov
+
       - name: Derive SHAs for affected command
-        uses: nrwl/nx-set-shas@v3
+        uses: nrwl/nx-set-shas@v4
 
       - name: Run affected format check
-        run: npx nx affected -t fmt --base=$NX_BASE --head=$NX_HEAD
+        run: pnpm nx affected -t fmt --base=$NX_BASE --head=$NX_HEAD
 
       - name: Run affected validate
-        run: npx nx affected -t validate --base=$NX_BASE --head=$NX_HEAD
+        run: pnpm nx affected -t validate --base=$NX_BASE --head=$NX_HEAD
 
       - name: Run affected lint
-        run: npx nx affected -t lint --base=$NX_BASE --head=$NX_HEAD --parallel=3
+        run: pnpm nx affected -t lint --base=$NX_BASE --head=$NX_HEAD --parallel=3
 
       - name: Run affected security scans
-        run: npx nx affected -t security --base=$NX_BASE --head=$NX_HEAD
+        run: pnpm nx affected -t security --base=$NX_BASE --head=$NX_HEAD
 ```
 
 ### What This Does
@@ -627,10 +647,13 @@ stages:
   - security
 
 .nx-affected:
-  image: node:18
+  image: node:20
   before_script:
-    - npm ci
+    - corepack enable
+    - corepack prepare pnpm@latest --activate
+    - pnpm install --frozen-lockfile
     - curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+    - pip install checkov
   variables:
     NX_BASE: $CI_MERGE_REQUEST_DIFF_BASE_SHA
     NX_HEAD: $CI_COMMIT_SHA
@@ -639,13 +662,13 @@ affected:validate:
   extends: .nx-affected
   stage: validate
   script:
-    - npx nx affected -t validate,lint --base=$NX_BASE --head=$NX_HEAD --parallel=3
+    - pnpm nx affected -t validate,lint --base=$NX_BASE --head=$NX_HEAD --parallel=3
 
 affected:security:
   extends: .nx-affected
   stage: security
   script:
-    - npx nx affected -t security --base=$NX_BASE --head=$NX_HEAD
+    - pnpm nx affected -t security --base=$NX_BASE --head=$NX_HEAD
   only:
     - merge_requests
 ```
@@ -673,28 +696,34 @@ First, configure Nx Release in your `nx.json`:
 ```json
 {
   "release": {
-    "projects": ["modules/*"],
     "projectsRelationship": "independent",
+    "projects": ["modules/*"],
+    "releaseTagPattern": "{projectName}-v{version}",
     "version": {
-      "generatorOptions": {
-        "packageRoot": "{projectRoot}",
-        "currentVersionResolver": "git-tag"
-      }
+      "conventionalCommits": true
     },
     "changelog": {
       "projectChangelogs": {
         "createRelease": "github",
-        "file": "{projectRoot}/CHANGELOG.md",
         "renderOptions": {
           "authors": true,
-          "commitReferences": true
+          "commitReferences": true,
+          "versionTitleDate": true
+        }
+      },
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "renderOptions": {
+          "authors": true,
+          "commitReferences": true,
+          "versionTitleDate": true
         }
       }
     },
     "git": {
       "commit": true,
       "tag": true,
-      "commitMessage": "chore(release): publish {projectName} {version}"
+      "commitMessage": "chore(release): publish {version}"
     }
   }
 }
@@ -709,10 +738,10 @@ When you're ready to release modules that have changed:
 nx release --dry-run
 
 # Release only affected modules with automatic version bump
-nx release --projects=tag:cloud:scaleway
+nx release
 
 # Release a specific module with a specific version
-nx release scw-vpc --specifier=1.2.0
+nx release version --specifier=1.2.0
 ```
 
 ### Automated Semantic Versioning
@@ -732,7 +761,7 @@ git commit -m "feat(scw-vpc)!: redesign network architecture
 BREAKING CHANGE: VPC module now requires new subnet configuration"
 
 # Run release
-nx release --projects=tag:cloud:scaleway --dry-run
+nx release --dry-run
 # Nx will suggest: scw-vpc: 1.2.3 → 2.0.0, scw-k8s: 1.5.0 → 1.6.0
 ```
 
@@ -760,56 +789,91 @@ Nx automatically generates changelogs for each module:
 
 ### Release Workflow in CI
 
-Automate releases with GitHub Actions:
+Automate releases with GitHub Actions. Since Terraform modules don't have `package.json` files, the workflow dynamically creates them for Nx Release compatibility:
 
 ```yaml
 # .github/workflows/release.yml
 name: Release
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version type (auto, patch, minor, major, prerelease)"
+        required: true
+        default: "auto"
+        type: choice
+        options:
+          - auto
+          - patch
+          - minor
+          - major
+          - prerelease
+      dry-run:
+        description: "Dry run (no actual release)"
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: "18"
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Create package.json for each module
+        run: |
+          for dir in modules/*/; do
+            name=$(basename "$dir")
+            echo "{\"name\": \"$name\", \"version\": \"0.0.0\"}" > "$dir/package.json"
+          done
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx nx release --skip-publish
+          if [ "${{ inputs.dry-run }}" = "true" ]; then
+            pnpm nx release --dry-run
+          else
+            pnpm nx release ${{ inputs.version != 'auto' && format('--specifier={0}', inputs.version) || '' }}
+            git push --follow-tags
+          fi
 ```
 
 ### Tagging Strategy
 
-Nx creates git tags for each module release:
+Nx creates git tags for each module release using the `releaseTagPattern`:
 
 ```bash
-# Tags created by Nx
-scw-vpc@2.0.0
-scw-k8s@1.6.0
-scw-database@1.3.1
+# Tags created by Nx (pattern: {projectName}-v{version})
+scw-vpc-v2.0.0
+scw-k8s-v1.6.0
+scw-database-v1.3.1
 ```
 
 External consumers can reference specific versions:
@@ -817,7 +881,7 @@ External consumers can reference specific versions:
 ```hcl
 # Using git tags to reference specific module versions
 module "vpc" {
-  source = "git::https://github.com/org/terraform-modules.git//modules/scw-vpc?ref=scw-vpc@2.0.0"
+  source = "git::https://github.com/org/terraform-modules.git//modules/scw-vpc?ref=scw-vpc-v2.0.0"
 }
 ```
 
@@ -859,7 +923,7 @@ They have the following modules:
 - `scw-k8s` - Kubernetes Kapsule cluster (depends on vpc)
 - `scw-database` - Managed PostgreSQL (depends on vpc)
 - `scw-object-storage` - S3-compatible object storage (independent)
-- `scw-registry` - Container registry (depends on vpc)
+- `scw-registry` - Container registry (independent)
 - `scw-loadbalancer` - Load balancer (depends on vpc, k8s)
 - `scw-monitoring` - Observability stack (depends on k8s)
 
@@ -870,10 +934,10 @@ scw-vpc
   ├── scw-k8s
   │   ├── scw-loadbalancer
   │   └── scw-monitoring
-  ├── scw-database
-  └── scw-registry
+  └── scw-database
 
 scw-object-storage (independent)
+scw-registry (independent)
 ```
 
 Run `nx graph` to visualize this automatically.
@@ -889,17 +953,17 @@ git checkout -b feat/add-subnet
 
 # Check what's affected
 nx show projects --affected
-# Output: scw-vpc, scw-k8s, scw-database, scw-registry, scw-loadbalancer, scw-monitoring
+# Output: scw-vpc, scw-k8s, scw-database, scw-loadbalancer, scw-monitoring
 
 # Run validation only on affected modules
 nx affected -t validate,lint
-# Validates: vpc → k8s, database, registry → loadbalancer, monitoring
+# Validates: vpc → k8s, database → loadbalancer, monitoring
 
 # Push and CI runs affected checks
-# Only the 6 affected modules are validated, not all 7
+# Only the 5 affected modules are validated, not all 7
 ```
 
-**Result**: Instead of running checks on all modules, only the affected ones run. The independent module (`scw-object-storage`) is skipped entirely.
+**Result**: Instead of running checks on all modules, only the affected ones run. The independent modules (`scw-object-storage` and `scw-registry`) are skipped entirely.
 
 ### Scenario: Adding New Feature to Monitoring
 
@@ -924,7 +988,7 @@ Before Nx:
 After Nx:
 
 - Small changes: 1-2 modules affected (~3 min)
-- VPC changes: 6 modules affected (~8 min)
+- VPC changes: 5 modules affected (~8 min)
 - Clear visibility with `nx graph` on what breaks
 
 ## Best Practices
@@ -933,16 +997,15 @@ After implementing Nx with Terraform modules across multiple teams, here are the
 
 ### 1. Use Meaningful Tags
 
-Tags enable powerful filtering. Be strategic:
+Tags enable powerful filtering. Keep them simple and practical:
 
 ```json
 {
   "tags": [
-    "type:terraform", // All terraform projects
-    "cloud:scaleway", // Cloud provider
-    "layer:network", // Infrastructure layer
-    "team:platform", // Owning team
-    "env:multi" // Supports multiple envs
+    "terraform", // All terraform projects
+    "infrastructure", // Infrastructure type
+    "networking", // Functional area
+    "vpc" // Specific component
   ]
 }
 ```
@@ -950,8 +1013,8 @@ Tags enable powerful filtering. Be strategic:
 Then run targeted commands:
 
 ```bash
-nx run-many -t validate --projects=tag:team:platform
-nx run-many -t security --projects=tag:cloud:scaleway
+nx run-many -t validate --projects=tag:terraform
+nx run-many -t security --projects=tag:networking
 ```
 
 ### 2. Keep Modules Small and Focused
@@ -965,33 +1028,39 @@ Small modules = better reusability and easier testing.
 
 ### 3. Use Target Dependencies Wisely
 
-Define a clear pipeline in `nx.json`:
+Define a clear pipeline in `nx.json` with caching enabled:
 
 ```json
 {
   "targetDefaults": {
     "validate": {
-      "dependsOn": ["^validate", "fmt"]
+      "cache": true,
+      "dependsOn": ["fmt"]
     },
-    "test": {
-      "dependsOn": ["^test", "validate", "lint"]
+    "lint": {
+      "cache": true,
+      "dependsOn": ["validate"]
+    },
+    "security": {
+      "cache": true,
+      "dependsOn": ["lint"]
     }
   }
 }
 ```
 
-This ensures tasks run in the right order automatically.
+This ensures tasks run in the right order automatically, and caching avoids re-running unchanged tasks.
 
 ### 4. Document with terraform-docs
 
-Automate documentation generation:
+Automate documentation generation with `--output-mode inject` to update specific sections in your README:
 
 ```json
 {
   "docs": {
     "executor": "nx:run-commands",
     "options": {
-      "command": "terraform-docs markdown table --output-file README.md .",
+      "command": "terraform-docs markdown table --output-file README.md --output-mode inject .",
       "cwd": "modules/scw-vpc"
     }
   }
@@ -1006,7 +1075,7 @@ Use Husky to run quick checks before commits:
 
 ```bash
 npx husky install
-npx husky add .husky/pre-commit "npx nx affected -t fmt-fix,validate"
+npx husky add .husky/pre-commit "npx nx affected -t fmt --configuration=fix && npx nx affected -t validate"
 ```
 
 ## Limitations and Considerations
