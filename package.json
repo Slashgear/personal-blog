@@ -37,7 +37,7 @@
     "astro-eslint-parser": "^1.0.3",
     "eslint": "^9.10.0",
     "eslint-plugin-astro": "^1.2.4",
-    "globals": "^16.0.0",
+    "globals": "^17.0.0",
     "oxfmt": "^0.26.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
