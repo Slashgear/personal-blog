@@ -35,7 +35,7 @@
     "@types/react": "^19.0.0",
     "@typescript-eslint/parser": "^8.5.0",
     "astro-eslint-parser": "^1.0.3",
-    "eslint": "^9.10.0",
+    "eslint": "^10.0.0",
     "eslint-plugin-astro": "^1.2.4",
     "globals": "^16.0.0",
     "oxfmt": "^0.26.0",
