@@ -84,13 +84,12 @@ RUN find /app/dist/client -type f \( -name "*.js" -o -name "*.css" -o -name "*.h
 Côté HonoJS, il suffit d'activer l'option `precompressed: true` pour servir les fichiers pré-compressés.
 **Zéro CPU runtime** pour la compression.
 
-
-| Format | Niveau | JS bundle |
-|---|---|---|
-| GZIP 6 (à la volée) | Standard | ~21.5 Ko |
-| Zopfli (build time) | Optimal GZIP | ~20.8 Ko |
-| Brotli 11 (build time) | Optimal | ~18.9 Ko |
-| Zstd 22 (build time) | Ultra | ~19.1 Ko |
+| Format                 | Niveau       | JS bundle |
+| ---------------------- | ------------ | --------- |
+| GZIP 6 (à la volée)    | Standard     | ~21.5 Ko  |
+| Zopfli (build time)    | Optimal GZIP | ~20.8 Ko  |
+| Brotli 11 (build time) | Optimal      | ~18.9 Ko  |
+| Zstd 22 (build time)   | Ultra        | ~19.1 Ko  |
 
 ```mermaid
 ---
@@ -124,11 +123,11 @@ J'ai aussi supprimé une classe `.sr-only` qui était dupliquée (déjà fournie
 
 ## Récapitulatif : v2.16.0 vs v3.2.0
 
-| Métrique | v2.16.0 | v3.2.0 | Gain |
-|---|---|---|---|
-| JS bundle (gzip) | ~95 Ko | ~21 Ko | **-78%** |
-| CSS bundle | ~27.78 Ko | ~21.51 Ko | **-22%** |
-| Build time | ~2.1s | ~0.6s | **-72%** |
+| Métrique         | v2.16.0   | v3.2.0    | Gain     |
+| ---------------- | --------- | --------- | -------- |
+| JS bundle (gzip) | ~95 Ko    | ~21 Ko    | **-78%** |
+| CSS bundle       | ~27.78 Ko | ~21.51 Ko | **-22%** |
+| Build time       | ~2.1s     | ~0.6s     | **-72%** |
 
 ```mermaid
 ---
