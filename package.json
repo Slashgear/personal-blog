@@ -33,7 +33,7 @@
     "@types/github-slugger": "^2.0.0",
     "@types/lodash.kebabcase": "^4.1.9",
     "@types/react": "^19.0.0",
-    "oxfmt": "^0.26.0",
+    "oxfmt": "^0.34.0",
     "oxlint": "^1.48.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
