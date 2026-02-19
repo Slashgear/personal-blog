@@ -41,6 +41,9 @@ Pour une app qui affiche des cartes de poker et synchronise un état simple, c'�
 
 ## Étape 1 : Drop React pour Preact
 
+Ce qui m'a mis la puce à l'oreille, c'est le travail de [Julien Sulpis](https://www.jsulpis.dev/) qui a publié [js-frameworks-bundle-benchmark](https://github.com/jsulpis/js-frameworks-bundle-benchmark), une comparaison du poids des frameworks front modernes.
+Les chiffres sont édifiants : Preact est drastiquement plus léger que React.
+
 La première question à se poser : **ai-je vraiment besoin de React ?**
 
 [Preact](https://preactjs.com/) est un drop-in replacement de React qui pèse une fraction du poids original.
