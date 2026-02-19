@@ -81,8 +81,82 @@ RUN find /app/dist/client -type f \( -name "*.js" -o -name "*.css" -o -name "*.h
     -exec zopfli --i100 {} \;
 ```
 
-Côté HonoJS, il suffit d'activer l'option `precompressed: true` pour servir les fichiers pré-compressés.
+Côté serveur, il suffit de configurer le serving de fichiers pré-compressés.
 **Zéro CPU runtime** pour la compression.
+
+Dans mon cas j'utilise HonoJS avec l'option `precompressed: true`, mais cette approche fonctionne avec n'importe quel serveur web.
+
+<details>
+<summary>Exemple avec Nginx</summary>
+
+Activez le module `ngx_http_gzip_static_module` pour servir les fichiers `.gz` pré-compressés, et le module `ngx_http_brotli_static_module` pour les `.br` :
+
+```nginx
+server {
+    # Sert les .gz pré-compressés au lieu de compresser à la volée
+    gzip_static on;
+
+    # Sert les .br pré-compressés (module brotli)
+    brotli_static on;
+
+    location /assets/ {
+        root /var/www/html;
+    }
+}
+```
+
+</details>
+
+<br>
+
+<details>
+<summary>Exemple avec Apache</summary>
+
+Avec les modules `mod_deflate` et `mod_rewrite`, Apache peut servir les fichiers pré-compressés :
+
+```apache
+# Servir les fichiers .br si le navigateur supporte Brotli
+RewriteEngine On
+RewriteCond %{HTTP:Accept-Encoding} br
+RewriteCond %{REQUEST_FILENAME}.br -f
+RewriteRule ^(.*)$ $1.br [L]
+
+# Servir les fichiers .gz si le navigateur supporte gzip
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{REQUEST_FILENAME}.gz -f
+RewriteRule ^(.*)$ $1.gz [L]
+
+# Indiquer le bon Content-Type et Content-Encoding
+<FilesMatch "\.br$">
+    Header set Content-Encoding br
+    RemoveLanguage .br
+</FilesMatch>
+<FilesMatch "\.gz$">
+    Header set Content-Encoding gzip
+</FilesMatch>
+```
+
+</details>
+
+<br>
+
+<details>
+<summary>Exemple avec Caddy</summary>
+
+Caddy gère nativement les fichiers pré-compressés avec la directive `file_server` :
+
+```caddy
+example.com {
+    root * /var/www/html
+    file_server {
+        precompressed zstd br gzip
+    }
+}
+```
+
+C'est tout. Caddy cherche automatiquement les fichiers `.zst`, `.br` et `.gz` et les sert s'ils existent.
+
+</details>
 
 | Format                 | Niveau       | JS bundle |
 | ---------------------- | ------------ | --------- |
@@ -174,7 +248,7 @@ J'ai aussi supprimé une classe `.sr-only` qui était dupliquée (déjà fournie
 
 ## Pour aller plus loin
 
-La conférence d'[Hubert Sablonnière](https://www.hsablonniere.com/) sur la compression web est une mine d'or sur le sujet :
+La conférence d'[Hubert Sablonnière](https://www.hsablonniere.com/) et moi-même sur la compression web est une mine d'or sur le sujet :
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AF99cb1SCqMgra" title="Hubert Sablonnière - Compression web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
