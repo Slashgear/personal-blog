@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
+  "rules": {
+    "no-unused-expressions": "off",
+    "typescript/no-require-imports": "off",
+    "typescript/triple-slash-reference": "off"
+  },
+  "ignorePatterns": ["dist/**", ".astro/**", "*.d.ts", "public/**"]
+}

@@ -10,7 +10,7 @@
     "astro": "astro",
     "format:check": "oxfmt --check .",
     "format": "oxfmt --write .",
-    "lint": "eslint ."
+    "lint": "oxlint ."
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -33,14 +33,9 @@
     "@types/github-slugger": "^2.0.0",
     "@types/lodash.kebabcase": "^4.1.9",
     "@types/react": "^19.0.0",
-    "@typescript-eslint/parser": "^8.5.0",
-    "astro-eslint-parser": "^1.0.3",
-    "eslint": "^9.10.0",
-    "eslint-plugin-astro": "^1.2.4",
-    "globals": "^16.0.0",
     "oxfmt": "^0.26.0",
+    "oxlint": "^1.48.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript-eslint": "^8.5.0"
+    "react-dom": "^19.0.0"
   }
 }
