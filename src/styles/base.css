@@ -72,6 +72,12 @@
   .prose h2#table-of-contents + p {
     @apply hidden;
   }
+  .prose iframe[src*="youtube"],
+  .prose iframe[src*="vimeo"] {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
 
   /* ===== scrollbar ===== */
   html {
