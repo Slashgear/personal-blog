@@ -91,22 +91,31 @@ Côté HonoJS, il suffit d'activer l'option `precompressed: true` pour servir le
 | Brotli 11 (build time) | Optimal      | ~18.9 Ko  |
 | Zstd 22 (build time)   | Ultra        | ~19.1 Ko  |
 
-```mermaid
----
-config:
-  theme: base
-  themeVariables:
-    xyChart:
-      plotColorPalette: "#7c3aed,#8b5cf6,#a78bfa,#c4b5fd"
----
-xychart-beta
-  accTitle: Taille JS bundle par format de compression
-  accDescr: Comparaison de la taille du JS bundle selon le format de compression. GZIP 6 : 21.5 Ko, Zopfli : 20.8 Ko, Brotli 11 : 18.9 Ko, Zstd 22 : 19.1 Ko.
-  title "Taille JS bundle par format de compression (Ko)"
-  x-axis ["GZIP 6", "Zopfli", "Brotli 11", "Zstd 22"]
-  y-axis "Ko" 17 --> 22
-  bar [21.5, 20.8, 18.9, 19.1]
-```
+<figure>
+<svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="chart-formats-title chart-formats-desc" style="max-width:460px;width:100%;font-family:system-ui,sans-serif">
+  <title id="chart-formats-title">Taille JS bundle par format de compression</title>
+  <desc id="chart-formats-desc">GZIP 6 : 21.5 Ko, Zopfli : 20.8 Ko, Brotli 11 : 18.9 Ko, Zstd 22 : 19.1 Ko. Brotli offre le meilleur ratio.</desc>
+  <rect width="460" height="220" fill="#fff" rx="8"/>
+  <text x="230" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">Taille JS bundle par format de compression (Ko)</text>
+  <line x1="60" y1="40" x2="60" y2="175" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="60" y1="175" x2="440" y2="175" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="60" y1="75" x2="440" y2="75" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="60" y1="110" x2="440" y2="110" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="60" y1="145" x2="440" y2="145" stroke="#f1f5f9" stroke-width="1"/>
+  <rect x="80" y="55" width="70" height="120" rx="4" fill="#7c3aed"/>
+  <text x="115" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">21.5</text>
+  <rect x="170" y="62" width="70" height="113" rx="4" fill="#8b5cf6"/>
+  <text x="205" y="57" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">20.8</text>
+  <rect x="260" y="80" width="70" height="95" rx="4" fill="#a78bfa"/>
+  <text x="295" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">18.9</text>
+  <rect x="350" y="76" width="70" height="99" rx="4" fill="#c4b5fd"/>
+  <text x="385" y="71" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">19.1</text>
+  <text x="115" y="195" text-anchor="middle" font-size="10" fill="#334155">GZIP 6</text>
+  <text x="205" y="195" text-anchor="middle" font-size="10" fill="#334155">Zopfli</text>
+  <text x="295" y="195" text-anchor="middle" font-size="10" fill="#334155">Brotli 11</text>
+  <text x="385" y="195" text-anchor="middle" font-size="10" fill="#334155">Zstd 22</text>
+</svg>
+</figure>
 
 ## Étape 3 : Optimisation Tailwind CSS
 
@@ -129,22 +138,39 @@ J'ai aussi supprimé une classe `.sr-only` qui était dupliquée (déjà fournie
 | CSS bundle       | ~27.78 Ko | ~21.51 Ko | **-22%** |
 | Build time       | ~2.1s     | ~0.6s     | **-72%** |
 
-```mermaid
----
-config:
-  theme: base
-  themeVariables:
-    xyChart:
-      plotColorPalette: "#6d28d9,#a78bfa,#6d28d9,#a78bfa"
----
-xychart-beta
-  accTitle: Comparaison des bundles JS et CSS entre v2.16.0 et v3.2.0
-  accDescr: Le JS bundle gzip passe de 95 Ko à 21 Ko (-78%) et le CSS bundle passe de 27.78 Ko à 21.51 Ko (-22%).
-  title "Taille des bundles v2.16.0 vs v3.2.0 (Ko)"
-  x-axis ["JS v2.16.0", "JS v3.2.0", "CSS v2.16.0", "CSS v3.2.0"]
-  y-axis "Ko" 0 --> 100
-  bar [95, 21, 27.78, 21.51]
-```
+<figure>
+<svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="chart-compare-title chart-compare-desc" style="max-width:500px;width:100%;font-family:system-ui,sans-serif">
+  <title id="chart-compare-title">Comparaison des bundles v2.16.0 vs v3.2.0</title>
+  <desc id="chart-compare-desc">JS bundle gzip : 95 Ko en v2.16.0 contre 21 Ko en v3.2.0 (-78%). CSS bundle : 27.78 Ko contre 21.51 Ko (-22%).</desc>
+  <rect width="500" height="260" fill="#fff" rx="8"/>
+  <text x="250" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">Taille des bundles v2.16.0 vs v3.2.0 (Ko)</text>
+  <!-- Légende -->
+  <rect x="150" y="36" width="14" height="14" rx="3" fill="#6d28d9"/>
+  <text x="170" y="48" font-size="11" fill="#0f172a">v2.16.0</text>
+  <rect x="270" y="36" width="14" height="14" rx="3" fill="#a78bfa"/>
+  <text x="290" y="48" font-size="11" fill="#0f172a">v3.2.0</text>
+  <!-- JS -->
+  <text x="55" y="88" text-anchor="end" font-size="12" fill="#0f172a">JS</text>
+  <rect x="60" y="72" width="370" height="26" rx="4" fill="#6d28d9"/>
+  <text x="420" y="90" font-size="11" fill="#fff" font-weight="bold">95 Ko</text>
+  <rect x="60" y="103" width="82" height="26" rx="4" fill="#a78bfa"/>
+  <text x="70" y="121" font-size="11" fill="#0f172a" font-weight="bold">21 Ko</text>
+  <text x="152" y="121" font-size="11" fill="#059669" font-weight="bold">-78%</text>
+  <!-- CSS -->
+  <text x="55" y="163" text-anchor="end" font-size="12" fill="#0f172a">CSS</text>
+  <rect x="60" y="147" width="108" height="26" rx="4" fill="#6d28d9"/>
+  <text x="70" y="165" font-size="11" fill="#fff" font-weight="bold">27.78 Ko</text>
+  <rect x="60" y="178" width="84" height="26" rx="4" fill="#a78bfa"/>
+  <text x="70" y="196" font-size="11" fill="#0f172a" font-weight="bold">21.51 Ko</text>
+  <text x="154" y="196" font-size="11" fill="#059669" font-weight="bold">-22%</text>
+  <!-- Build time -->
+  <text x="55" y="235" text-anchor="end" font-size="12" fill="#0f172a">Build</text>
+  <rect x="60" y="219" width="162" height="26" rx="4" fill="#6d28d9"/>
+  <text x="70" y="237" font-size="11" fill="#fff" font-weight="bold">2.1s</text>
+  <rect x="60" y="249" width="46" height="4" rx="2" fill="#a78bfa"/>
+  <text x="116" y="256" font-size="11" fill="#059669" font-weight="bold">0.6s (-72%)</text>
+</svg>
+</figure>
 
 ## Pour aller plus loin
 

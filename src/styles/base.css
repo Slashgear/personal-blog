@@ -38,11 +38,11 @@
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
-  svg:not([id^="mermaid-"]) {
+  svg:not([role="img"]) {
     @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
   }
-  svg[id^="mermaid-"] {
-    max-width: 100% !important;
+  svg[role="img"] {
+    max-width: 100%;
     height: auto;
     width: 100%;
   }
