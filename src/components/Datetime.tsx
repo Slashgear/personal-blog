@@ -15,9 +15,7 @@ export default function Datetime({ pubDatetime, modDatetime, size = "sm", classN
     <div className={`flex items-center space-x-2 opacity-80 ${className}`.trim()}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className={`${
-          size === "sm" ? "h-5 w-5" : "h-6 w-6"
-        } shrink-0 fill-skin-base`}
+        className={`${size === "sm" ? "h-5 w-5" : "h-6 w-6"} shrink-0 fill-skin-base`}
         aria-hidden="true"
       >
         <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
