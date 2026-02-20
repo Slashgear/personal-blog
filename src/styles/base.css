@@ -107,6 +107,8 @@
   /* ===== Code Blocks & Syntax Highlighting ===== */
   pre:has(code) {
     @apply border border-skin-line;
+    overflow-x: auto;
+    max-width: 100%;
   }
   code,
   blockquote {
@@ -115,6 +117,8 @@
 
   pre > code {
     white-space: pre;
+    display: inline-block;
+    min-width: 100%;
   }
 
   /* Apply Dark Theme (if multi-theme specified) */
