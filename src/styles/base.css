@@ -72,6 +72,13 @@
   .prose h2#table-of-contents + p {
     @apply hidden;
   }
+  .prose ol {
+    padding-inline-start: 1.25em;
+  }
+  .prose ol > li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
   .prose iframe[src*="youtube"],
   .prose iframe[src*="vimeo"] {
     width: 100%;
