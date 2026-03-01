@@ -92,6 +92,10 @@ Voilà globalement comment les échanges se passent :
 <figcaption>Quand un client vote, le serveur broadcast un événement SSE à tous les clients connectés à la room.</figcaption>
 </figure>
 
+La présentation de [M4DZ](https://m4dz.net/) lors du meetup LyonJS de février 2026 est une excellente ressource pour creuser le sujet :
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DdZnG81I1uI" title="M4DZ - LyonJS février 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Les SSE, c'est élégant.
 Mais j'avais un doute.
 
@@ -101,7 +105,7 @@ Est-ce que les SSE tiennent vraiment la charge ?
 Est-ce que ça ne va pas flancher dès qu'il y a un peu de monde sur l'application ?
 
 Il n'y a qu'une seule façon de le savoir : mesurer.
-C'est quelque chose que j'ai appris chez Bedrock Streaming, notamment grâce à [Yann Verry](https://www.yannverry.com/).
+C'est quelque chose que j'ai appris chez Bedrock Streaming, notamment grâce à [Yann Verry](https://verry.org/).
 
 J'avais déjà utilisé plusieurs outils pour ça dans le passé : **Gatling** et **Artillery**.
 
@@ -135,12 +139,6 @@ Quelques conseils tirés de cette expérience :
 - **Pour les SSE**, il n'y a pas de support natif d'`EventSource` dans k6. J'ai simulé les connexions longues via des requêtes HTTP persistantes, ce qui reste représentatif pour mesurer la tenue en charge du serveur.
 
 Ce que je n'ai pas encore exploré : l'intégration avec **Grafana Cloud** pour visualiser les métriques en temps réel, et le mode **k6 browser** qui permet de piloter un vrai Chromium pour simuler des interactions utilisateur côté front.
-
-## Pour aller plus loin
-
-La présentation de [M4DZ](https://m4dz.net/) lors du meetup LyonJS de février 2026 est une excellente ressource pour creuser le sujet :
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DdZnG81I1uI" title="M4DZ - LyonJS février 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Et vous ?
 
