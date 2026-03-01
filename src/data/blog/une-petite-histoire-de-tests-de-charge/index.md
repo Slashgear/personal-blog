@@ -30,6 +30,7 @@ Par rapport aux WebSockets, c'est bien plus simple à mettre en place — pas de
 Pour un cas d'usage comme le mien — diffuser un état partagé à plusieurs clients — c'est largement suffisant.
 
 Si vous voulez voir comment c'est implémenté, le code est disponible :
+
 - [Côté serveur](https://github.com/Slashgear/poker-planning/blob/main/server/openapi.ts) — avec `streamSSE` de HonoJS, un keep-alive toutes les 30 secondes, et un broadcast via un `Map` de callbacks par room
 - [Côté front](https://github.com/Slashgear/poker-planning/blob/main/src/hooks/useRoom.ts) — un simple `EventSource` dans un hook Preact
 
@@ -124,13 +125,13 @@ On code un test comme on coderait un script — pas de YAML, pas de DSL ésotér
 
 J'ai mis en place [cinq scénarios](https://github.com/Slashgear/poker-planning/tree/main/tests/load) pour couvrir différentes situations :
 
-| Scénario | Objectif | Charge simulée |
-|---|---|---|
-| `basic-workflow` | Valider le flux nominal | 10–20 utilisateurs |
-| `spike-test` | Tester une montée brutale | 5 → 100 utilisateurs en 10s |
-| `stress-test` | Trouver le point de rupture | Jusqu'à 1 000 utilisateurs |
-| `realistic-sessions` | Simuler de vraies sessions | 500 utilisateurs, 50–100 rooms |
-| `sse-endurance` | Tester la tenue des connexions longues | 1 000 connexions SSE pendant 20 min |
+| Scénario             | Objectif                               | Charge simulée                      |
+| -------------------- | -------------------------------------- | ----------------------------------- |
+| `basic-workflow`     | Valider le flux nominal                | 10–20 utilisateurs                  |
+| `spike-test`         | Tester une montée brutale              | 5 → 100 utilisateurs en 10s         |
+| `stress-test`        | Trouver le point de rupture            | Jusqu'à 1 000 utilisateurs          |
+| `realistic-sessions` | Simuler de vraies sessions             | 500 utilisateurs, 50–100 rooms      |
+| `sse-endurance`      | Tester la tenue des connexions longues | 1 000 connexions SSE pendant 20 min |
 
 Quelques conseils tirés de cette expérience :
 
@@ -140,6 +141,151 @@ Quelques conseils tirés de cette expérience :
 
 Ce que je n'ai pas encore exploré : l'intégration avec **Grafana Cloud** pour visualiser les métriques en temps réel, et le mode **k6 browser** qui permet de piloter un vrai Chromium pour simuler des interactions utilisateur côté front.
 
+Pour illustrer la flexibilité de k6, voici trois exemples de scénarios sur un site fictif (il y a d'autres exemples sur [la documentation officielle de k6](https://grafana.com/docs/k6/latest/examples/)) :
+
+<details>
+<summary>Scénario HTTP — flux nominal</summary>
+
+Le cas le plus courant : simuler des utilisateurs qui naviguent sur un site et appellent une API.
+
+```javascript
+import http from "k6/http";
+import { sleep, check } from "k6";
+
+export const options = {
+  stages: [
+    { duration: "30s", target: 20 },
+    { duration: "1m", target: 20 },
+    { duration: "15s", target: 0 },
+  ],
+  thresholds: {
+    http_req_failed: ["rate<0.01"],
+    http_req_duration: ["p(95)<500"],
+  },
+};
+
+export default function () {
+  // Créer une room
+  const create = http.post(
+    "https://example.com/api/rooms",
+    JSON.stringify({ name: `room-${__VU}` }),
+    { headers: { "Content-Type": "application/json" } },
+  );
+  check(create, { "room créée": (r) => r.status === 201 });
+
+  const { code } = create.json();
+
+  // Voter
+  const vote = http.post(
+    `https://example.com/api/rooms/${code}/vote`,
+    JSON.stringify({ value: 5 }),
+    { headers: { "Content-Type": "application/json" } },
+  );
+  check(vote, { "vote accepté": (r) => r.status === 200 });
+
+  sleep(1);
+}
+```
+
+</details>
+
+<details>
+<summary>Scénario Browser — interactions réelles via Chromium</summary>
+
+Le module `k6/browser` pilote un vrai Chromium : idéal pour mesurer les Core Web Vitals et tester les interactions UI sous charge.
+
+```javascript
+import { browser } from "k6/browser";
+import { check } from "k6";
+
+export const options = {
+  scenarios: {
+    ui: {
+      executor: "constant-vus",
+      vus: 3,
+      duration: "30s",
+      options: {
+        browser: { type: "chromium" },
+      },
+    },
+  },
+  thresholds: {
+    browser_web_vital_lcp: ["p(75)<2500"],
+    browser_web_vital_fid: ["p(75)<100"],
+  },
+};
+
+export default async function () {
+  const page = await browser.newPage();
+
+  try {
+    await page.goto("https://example.com");
+
+    // Remplir le nom et rejoindre une room
+    await page.locator('input[placeholder="Votre nom"]').fill(`User ${__VU}`);
+    await page.locator('button[data-action="join"]').click();
+    await page.waitForSelector(".room-board");
+
+    check(page, {
+      "board affiché": () => page.locator(".room-board").isVisible(),
+    });
+
+    // Voter
+    await page.locator('.card[data-value="5"]').click();
+  } finally {
+    await page.close();
+  }
+}
+```
+
+</details>
+
+<details>
+<summary>Scénario MQTT — charge sur un broker de messages</summary>
+
+Via l'extension [`k6/x/mqtt`](https://github.com/pmalhaire/xk6-mqtt), k6 peut aussi tester des brokers MQTT — utile pour les apps IoT ou les systèmes de messagerie temps réel.
+
+```javascript
+import mqtt from "k6/x/mqtt";
+import { check } from "k6";
+import { sleep } from "k6";
+
+export const options = {
+  vus: 10,
+  duration: "30s",
+  thresholds: {
+    checks: ["rate>0.99"],
+  },
+};
+
+export default function () {
+  const client = new mqtt.Client({
+    brokerAddr: "broker.example.com:1883",
+    clientId: `k6-vu-${__VU}-${__ITER}`,
+  });
+
+  client.connect();
+  check(client, { connecté: (c) => c.isConnected() });
+
+  // Publier un événement
+  client.publish(
+    "rooms/updates",
+    JSON.stringify({ vu: __VU, vote: 8, ts: Date.now() }),
+    /* qos */ 1,
+    /* retain */ false,
+  );
+
+  // S'abonner et attendre un message de retour
+  const msg = client.subscribe("rooms/ack", /* qos */ 1, /* timeout ms */ 2000);
+  check(msg, { "ack reçu": (m) => m !== null });
+
+  sleep(1);
+  client.disconnect();
+}
+```
+
+</details>
+
 ## Et vous ?
 
 Vous avez déjà mis en place des tests de charge sur vos projets ?
@@ -147,5 +293,7 @@ Vous avez déjà mis en place des tests de charge sur vos projets ?
 En tout cas, de mon côté, le verdict est rassurant : l'appli tient bien la charge.
 
 [^sse]: Server-Sent Events — mécanisme HTTP permettant au serveur de pousser des événements vers le client via une connexion persistante unidirectionnelle.
+
 [^dx]: DX (Developer Experience) — qualité de l'expérience de développement offerte par un outil ou une API.
+
 [^p95]: P95 (95e percentile) — valeur en dessous de laquelle se situent 95 % des mesures. Un P95 à 500ms signifie que 95 % des requêtes répondent en moins de 500ms.
