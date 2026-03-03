@@ -1,0 +1,21 @@
+title: "Au secours ! Mes images pourrissent mes perfs"
+year: 2026
+lang: fr
+description: |
+  Les images représentent souvent plus de 50% du poids d'une page web. Mal optimisées ou mal servies,
+  elles deviennent un goulot d'étranglement pour les performances (notamment le LCP) et l'expérience utilisateur...
+
+  Pourtant, gérer les images ne se limite pas à choisir entre JPEG, WebP ou AVIF : cela touche aussi à l'architecture du projet.
+
+  Dans ce talk, nous partagerons notre retour d'expérience sur la gestion des images dans des projets web : formats adaptés,
+  responsive, lazy load, automatisation de l'optimisation dans la chaîne de build, mais aussi choix d'architectures
+  pour servir efficacement les assets.
+events:
+  - name: Touraine Tech
+    date: 1770985800000
+    site: https://touraine.tech/
+    link: https://touraine.tech/talk/cmgah8mo800fj1elbs7lmahsn?day=2
+    video: https://www.youtube.com/watch?v=QzjJQZqn5z4
+cospeakers:
+  - name: Mathieu Mure
+    site: https://twitter.com/mathieumure?lang=fr
