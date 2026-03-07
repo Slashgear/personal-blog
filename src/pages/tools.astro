@@ -1,0 +1,471 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+
+const myProjects = [
+  {
+    name: "git-kata",
+    description:
+      "Katas to train on the hardest git situations you face day-to-day. You know the basics but get stuck on edge cases? This is for you.",
+    url: "https://github.com/Slashgear/git-kata",
+    stars: 132,
+    tags: ["git", "learning", "team"],
+    emoji: "🥋",
+    featured: true,
+  },
+  {
+    name: "shortvid.io",
+    description:
+      "Co-built. Generate short videos for social media with your code snippets and your own branding. Powered by Remotion.",
+    url: "https://shortvid.io",
+    stars: 0,
+    tags: ["video", "social", "content"],
+    emoji: "📱",
+    featured: true,
+  },
+  {
+    name: "roadmap-maker",
+    description:
+      "Self-hosted roadmap builder with Gantt chart visualization. Stack: Hono, Preact, SQLite, Bun. For EMs who want to stay in control.",
+    url: "https://github.com/Slashgear/roadmap-maker",
+    stars: 0,
+    tags: ["project-management", "self-hosted", "bun"],
+    emoji: "🗺️",
+    featured: true,
+  },
+  {
+    name: "action-check-pr-title",
+    description:
+      "Zero-config GitHub Action to validate Pull Request titles against a JS regexp. No runner setup needed.",
+    url: "https://github.com/Slashgear/action-check-pr-title",
+    stars: 33,
+    tags: ["github-action", "ci", "lint"],
+    emoji: "🏷️",
+    featured: false,
+  },
+  {
+    name: "gdpr-cookie-scanner",
+    description:
+      "CLI to scan websites for GDPR cookie consent compliance. Powered by Playwright, outputs a ready-to-share report.",
+    url: "https://github.com/Slashgear/gdpr-cookie-scanner",
+    stars: 16,
+    tags: ["gdpr", "cli", "compliance"],
+    emoji: "🍪",
+    featured: false,
+  },
+  {
+    name: "poker-planning",
+    description:
+      "Real-time planning poker app for agile team estimation using the Fibonacci sequence. Runs on SSE, no heavy backend.",
+    url: "https://github.com/Slashgear/poker-planning",
+    stars: 13,
+    tags: ["agile", "team", "real-time"],
+    emoji: "🃏",
+    featured: false,
+  },
+  {
+    name: "linkedin-carousel-gen",
+    description:
+      "Generate LinkedIn carousel posts as PDFs from code. Great for sharing tech content with syntax highlighting.",
+    url: "https://github.com/Slashgear/linkedin-carousel-gen",
+    stars: 4,
+    tags: ["linkedin", "content", "pdf"],
+    emoji: "📊",
+    featured: false,
+  },
+  {
+    name: "flo-du-bot",
+    description:
+      "GitHub Action that enforces tests are added for every new feature or bug fix in a pull request.",
+    url: "https://github.com/Slashgear/flo-du-bot",
+    stars: 3,
+    tags: ["github-action", "testing", "quality"],
+    emoji: "🤖",
+    featured: false,
+  },
+];
+
+const communityTools = [
+  {
+    name: "Opencode",
+    description:
+      "Open-source AI coding agent that lives in your terminal. Autonomous, fast, and remarkably effective on complex engineering tasks.",
+    url: "https://opencode.ai",
+    tags: ["AI", "terminal", "coding"],
+    emoji: "🤖",
+  },
+  {
+    name: "DevStral 2",
+    description:
+      "Mistral's coding-focused model. Excellent for code review, refactoring, and tackling complex engineering problems.",
+    url: "https://mistral.ai/news/devstral",
+    tags: ["AI", "LLM", "coding"],
+    emoji: "🧠",
+  },
+  {
+    name: "Handy",
+    description:
+      "Open-source speech-to-text app you run locally. Press a shortcut, speak, and the transcribed text pastes straight into your active field.",
+    url: "https://handy.computer/",
+    tags: ["productivity", "speech-to-text", "open-source"],
+    emoji: "🎙️",
+  },
+  {
+    name: "Remotion",
+    description:
+      "Create videos programmatically using React. Perfect for automating high-quality video content generation.",
+    url: "https://www.remotion.dev",
+    tags: ["video", "react", "content"],
+    emoji: "🎬",
+  },
+];
+---
+
+<Layout title={`My tools galaxy | ${SITE.title}`}>
+  <Header activeNav="tools" />
+  <Breadcrumbs />
+  <main id="main-content" class="mx-auto max-w-5xl px-4">
+    <div class="galaxy-hero">
+      <div class="stars" aria-hidden="true"></div>
+      <h1 class="galaxy-title">🌌 My tools galaxy</h1>
+      <p class="galaxy-subtitle">
+        Open-source projects I built and tools that are part of my daily life as
+        an Engineering Manager.
+      </p>
+    </div>
+
+    <div class="mb-16">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-badge my">⚡ My creations</span>
+        </h2>
+        <p class="section-desc">
+          Open-source projects I built and still use today.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        {
+          myProjects.map(project => (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`project-card ${project.featured ? "featured" : ""}`}
+            >
+              <div class="card-top">
+                <span class="card-emoji">{project.emoji}</span>
+                {project.stars > 0 && (
+                  <span class="stars-badge">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="12"
+                      height="12"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                    {project.stars}
+                  </span>
+                )}
+              </div>
+              <h3 class="card-name">{project.name}</h3>
+              <p class="card-desc">{project.description}</p>
+              <div class="card-tags">
+                {project.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="mb-28">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="section-badge community">🛸 Tools I love</span>
+        </h2>
+        <p class="section-desc">
+          Community projects that changed the way I work.
+        </p>
+      </div>
+
+      <div class="community-grid">
+        {
+          communityTools.map(tool => (
+            <a
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="community-card"
+            >
+              <span class="card-emoji">{tool.emoji}</span>
+              <h3 class="card-name">{tool.name}</h3>
+              <p class="card-desc">{tool.description}</p>
+              <div class="card-tags">
+                {tool.tags.map(tag => (
+                  <span class="tag community-tag">{tag}</span>
+                ))}
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Galaxy Hero ── */
+  .galaxy-hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(var(--color-accent), 0.08) 0%,
+      transparent 70%
+    );
+    border: 1px solid rgba(var(--color-border), 0.4);
+  }
+
+  /* Pure CSS star particles */
+  .stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(
+        1px 1px at 10% 20%,
+        rgba(var(--color-accent), 0.6) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1px 1px at 30% 60%,
+        rgba(var(--color-accent), 0.4) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1.5px 1.5px at 50% 15%,
+        rgba(var(--color-accent), 0.5) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1px 1px at 70% 40%,
+        rgba(var(--color-accent), 0.6) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1px 1px at 85% 75%,
+        rgba(var(--color-accent), 0.3) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        2px 2px at 20% 80%,
+        rgba(var(--color-accent), 0.4) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1px 1px at 60% 85%,
+        rgba(var(--color-accent), 0.5) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1.5px 1.5px at 90% 10%,
+        rgba(var(--color-accent), 0.6) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1px 1px at 45% 50%,
+        rgba(var(--color-accent), 0.3) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        1px 1px at 5% 45%,
+        rgba(var(--color-accent), 0.5) 0%,
+        transparent 100%
+      );
+    pointer-events: none;
+    animation: twinkle 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .galaxy-title {
+    @apply relative z-10 text-3xl font-bold tracking-tight sm:text-5xl;
+    margin-bottom: 1rem;
+  }
+
+  .galaxy-subtitle {
+    @apply relative z-10 text-lg opacity-75;
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+
+  /* ── Section headers ── */
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 0.4rem;
+  }
+
+  .section-badge {
+    @apply inline-flex items-center gap-2 rounded-full px-4 py-1 text-xl font-semibold;
+  }
+
+  .section-badge.my {
+    @apply bg-skin-accent text-skin-inverted;
+  }
+
+  .section-badge.community {
+    border: 2px solid rgb(var(--color-accent));
+    @apply text-skin-accent;
+  }
+
+  .section-desc {
+    @apply text-sm opacity-60;
+    margin-top: 0.5rem;
+    padding-left: 0.25rem;
+  }
+
+  /* ── Projects bento grid ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-card.featured {
+      grid-column: span 2;
+    }
+  }
+
+  .project-card {
+    @apply block rounded-xl p-5 transition-all duration-200;
+    border: 1px solid rgba(var(--color-border), 0.5);
+    background: rgba(var(--color-fill), 0.4);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-card:hover {
+    border-color: rgb(var(--color-accent));
+    background: rgba(var(--color-accent), 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px rgba(var(--color-accent), 0.12);
+  }
+
+  .project-card.featured {
+    background: rgba(var(--color-accent), 0.04);
+    border-color: rgba(var(--color-accent), 0.3);
+  }
+
+  /* ── Community grid ── */
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .community-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .community-card {
+    @apply block rounded-xl p-5 transition-all duration-200;
+    border: 1px dashed rgba(var(--color-border), 0.5);
+    background: rgba(var(--color-fill), 0.2);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .community-card:hover {
+    border-style: solid;
+    border-color: rgb(var(--color-accent));
+    background: rgba(var(--color-accent), 0.05);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(var(--color-accent), 0.1);
+  }
+
+  /* ── Card internals ── */
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-emoji {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  .stars-badge {
+    @apply flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold;
+    background: rgba(var(--color-accent), 0.15);
+    color: rgb(var(--color-accent));
+  }
+
+  .stars-badge svg {
+    fill: rgb(var(--color-accent));
+  }
+
+  .card-name {
+    @apply text-base font-bold;
+    margin: 0;
+  }
+
+  .card-desc {
+    @apply text-sm opacity-70;
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-top: 0.25rem;
+  }
+
+  .tag {
+    @apply rounded px-2 py-0.5 text-xs;
+    background: rgba(var(--color-accent), 0.1);
+    color: rgb(var(--color-accent));
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .community-tag {
+    background: rgba(var(--color-text-base), 0.08);
+    color: rgb(var(--color-text-base));
+  }
+</style>
