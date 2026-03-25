@@ -67,7 +67,7 @@ L'application est une **SPA full statique**.
 Les fichiers ne changent jamais entre deux déploiements.
 Alors pourquoi les compresser à chaque requête ?
 
-Comme le rappelle l'[almanac HTTP Archive](https://almanac.httparchive.org/en/2024/compression), la compression au build time permet d'utiliser les niveaux de compression les plus élevés sans impact sur le temps de réponse.
+Comme le rappelle l'[almanac HTTP Archive](https://almanac.httparchive.org/en/2024/page-weight#compression), la compression au build time permet d'utiliser les niveaux de compression les plus élevés sans impact sur le temps de réponse.
 
 J'ai mis en place **3 formats de pré-compression** :
 
@@ -253,9 +253,9 @@ J'ai aussi supprimé une classe `.sr-only` qui était dupliquée (déjà fournie
 
 La conférence d'[Hubert Sablonnière](https://www.hsablonniere.com/) et moi-même sur la compression web est une mine d'or sur le sujet :
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AF99cb1SCqMgra" title="Hubert Sablonnière - Compression web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JARVYdwNSrI?si=znIESxQtjcqbVcFN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-L'article [24 jours de web 2024](https://www.24joursdeweb.fr/2024/compresser-les-donnees-http) détaille aussi les mécanismes de compression HTTP.
+L'article [24 jours de web 2024](https://www.24joursdeweb.fr/2024/la-compression-web) détaille aussi les mécanismes de compression HTTP.
 
 ## Ce qu'il faut retenir
 
