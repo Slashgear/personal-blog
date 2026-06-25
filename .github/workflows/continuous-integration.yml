@@ -18,16 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
       - name: Install, build, and upload your site output
-        uses: withastro/action@v5
+        uses: withastro/action@v6
         with:
-          node-version: "22"
-          package-manager: "pnpm@9"
+          package-manager: bun@latest
       - name: Check format
-        run: pnpm format:check
+        run: bun run format:check
 
   deploy:
     needs: build
