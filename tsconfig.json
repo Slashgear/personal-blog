@@ -1,5 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "exclude": ["public/slide-barchart.js", "dist"],
   "compilerOptions": {
     "baseUrl": "src",
     "jsx": "react-jsx",

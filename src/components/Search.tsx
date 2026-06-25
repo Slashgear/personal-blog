@@ -1,5 +1,5 @@
 import Fuse from "fuse.js";
-import { useEffect, useRef, useState, useMemo, type FormEvent } from "react";
+import { useEffect, useRef, useState, useMemo, type ChangeEvent } from "react";
 import Card from "@components/Card";
 import type { CollectionEntry } from "astro:content";
 
@@ -24,7 +24,7 @@ export default function SearchBar({ searchList }: Props) {
   const [inputVal, setInputVal] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[] | null>(null);
 
-  const handleChange = (e: FormEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputVal(e.currentTarget.value);
   };
 
