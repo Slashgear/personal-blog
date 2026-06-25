@@ -11,13 +11,28 @@ Professional Frontend developer passionate about his job. Very involved in the s
 
 ### Engineering Manager Frontend - Scaleway
 
-_Since july 2023, full-remote from Lyon (France)_
+_Since July 2023 · Full-remote from Lyon, France_
 
-Leading a team of 6 frontend dev to create awesome website for Scaleway company.
+Lead a team of 6 frontend engineers owning Scaleway's public web presence: main marketing site, documentation platform, and event/conference pages. Reported to the VP Engineering, operated cross-functionally with Product, Design, and Backend teams.
 
-- Main website of Scaleway
-- Documentation website
-- conference and event website
+#### Technical migration
+
+Drove the full migration of the frontend stack from Gatsby (JavaScript) + CSS-in-JS to **Next.js (TypeScript)** backed by Strapi as headless CMS. The new stack reduced build times, improved developer experience, and opened the path to incremental delivery of content-heavy pages.
+
+#### Agile transformation & continuous delivery
+
+Transformed the team's delivery model from infrequent big-bang releases to **continuous deployment**: simplified the release pipeline, automated quality gates, and reduced feedback loops. The team went from shipping every few weeks to being able to deliver value multiple times per week with confidence.
+
+#### Cross-team initiatives
+
+- Defined and rolled out frontend coding standards and code-review practices shared across the engineering organisation
+- Structured onboarding for new frontend hires and contractors
+- Ran technical guilds and cross-squad knowledge-sharing sessions on performance, accessibility, and architecture
+- Contributed to hiring: sourcing, technical interviews, and grading
+
+#### Product delivery
+
+Shipped multiple high-stakes campaigns and product pages aligned with Scaleway's go-to-market priorities, coordinating design, content, SEO, and engineering under tight deadlines.
 
 ### Lead Frontend Developer - M6web / Bedrock Streaming
 
