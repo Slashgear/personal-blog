@@ -1,6 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+
+  --color-skin-fill: rgb(var(--color-fill));
+  --color-skin-accent: rgb(var(--color-accent));
+  --color-skin-base: rgb(var(--color-text-base));
+  --color-skin-inverted: rgb(var(--color-fill));
+  --color-skin-card: rgb(var(--color-card));
+  --color-skin-card-muted: rgb(var(--color-card-muted));
+  --color-skin-line: rgb(var(--color-border));
+
+  --font-family-mono: "IBM Plex Mono", monospace;
+}
 
 @layer base {
   :root,
@@ -36,7 +52,7 @@
     @apply mx-auto max-w-4xl px-4;
   }
   a {
-    @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
+    @apply outline-2 outline-offset-1 outline-skin-accent focus-visible:no-underline focus-visible:outline-dashed;
   }
   svg:not([role="img"]) {
     @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
@@ -143,7 +159,8 @@
   .display-none {
     @apply hidden;
   }
-  .focus-outline {
-    @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
-  }
+}
+
+@utility focus-outline {
+  @apply outline-2 outline-offset-1 outline-skin-accent focus-visible:no-underline focus-visible:outline-dashed;
 }
