@@ -202,6 +202,47 @@ propagent de la même façon.
 je le dis, car c'est ça qui devient la norme de l'équipe, bien plus que
 n'importe quelle consigne explicite.
 
+## La sécurité psychologique : une responsabilité de leader
+
+> "Chaque leader de chaque groupe d'influence est responsable de la sécurité
+> psychologique de son groupe d'influence." (Léa Coston, dans son talk
+> [*Les gens ne savent pas ce qu'ils font, la plupart du
+> temps !*](https://www.youtube.com/watch?v=a670TeroQS0))
+
+En tant qu'engineering manager, on est le leader du groupe d'influence que
+constitue son équipe. La sécurité psychologique n'est pas un supplément
+d'âme ou une option "sympa à avoir" : c'est une responsabilité structurelle
+du rôle.
+
+Une équipe en sécurité psychologique, c'est une équipe qui ose dire qu'elle
+s'est trompée, qui ose remonter un problème avant qu'il ne devienne
+critique, qui ose ne pas être d'accord avec vous. Une équipe qui n'a pas
+cette sécurité apprend vite à se taire, et vous perdez l'information la plus
+précieuse : celle qui arrive tôt.
+
+Ça rejoint directement l'effet miroir vu plus haut : la sécurité
+psychologique ne se décrète pas, elle se construit par la façon dont vous
+réagissez, en particulier quand quelque chose se passe mal.
+
+## Le bâton de pouvoir
+
+> "Le bâton de pouvoir" (une phrase lue quelque part, dont la source
+> m'échappe malheureusement)
+
+![Main de pouvoir en ivoire sertie de pierres précieuses, montée sur un bâton doré](./main-pouvoir.jpg)
+
+*Photo : [collection du musée du Louvre](https://collections.louvre.fr/ark:/53355/cl010110048).*
+
+Lorsqu'on décide de vous nommer responsable d'une équipe, cela signifie
+qu'on a confiance en vous pour vous donner ce pouvoir de décision. Ce
+pouvoir est un acte de confiance important, mais c'est aussi un fardeau : il
+faut, dans la mesure du possible, éviter de trop l'utiliser au sein de votre
+équipe.
+
+Les décisions doivent rester collectives, mais il vous faudra parfois
+arbitrer, plusieurs fois. C'est ce qu'on attend de vous, et non d'escalader
+la décision plus haut si son scope ne concerne que votre équipe.
+
 ## Et la suite ?
 
 C'est le premier article de cette série sur mon retour d'expérience en tant
