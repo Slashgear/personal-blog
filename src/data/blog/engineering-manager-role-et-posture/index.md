@@ -73,7 +73,7 @@ ce serait de la magie.
 ## Le rôle du manager vs. celui de l'IC : hands on, hands off
 
 > "Tout ce que tu fais, l'équipe doit savoir et pouvoir le faire, mis à part
-> les aspects de management." (Florent Dubost)
+> les aspects de management." ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/))
 
 Tous mes modèles en management d'équipe d'ingénierie ont toujours gardé un
 aspect technique dans leur travail. Le pourcentage varie d'une personne à
@@ -93,7 +93,8 @@ de développement, de planification, ou des tâches spécifiques ?
 
 > "Ta priorité c'est ton équipe, puis les individus qui composent ton
 > équipe, et enfin les projets que ton équipe doit réaliser."
-> (Kenny Dits, mon chef pendant de nombreuses années chez M6)
+> ([Kenny Dits](https://www.linkedin.com/in/kenny-d-3761b59b/), mon chef
+> pendant de nombreuses années chez M6)
 
 J'ai eu la chance d'avoir des managers humanistes. Je pense qu'il est
 nécessaire de prioriser l'équipe pour construire de la confiance, et qu'avec
@@ -160,8 +161,8 @@ alternant : [*Tester c'est tricher !*](https://www.youtube.com/watch?v=I_zNxGqRI
 
 ## La posture de challenge : débloquer et faire grandir
 
-> "Qu'est-ce qui t'en empêche ?" (Yann Very, mon ancien collègue, qui me l'a
-> dit plusieurs fois)
+> "Qu'est-ce qui t'en empêche ?" ([Yann Verry](https://verry.org/), mon
+> ancien collègue, qui me l'a dit plusieurs fois)
 
 Un manager, c'est aussi quelqu'un qui challenge et qui permet à son équipe
 de sortir de ses blocages. C'est aussi être là pour débloquer des
@@ -173,8 +174,9 @@ composent son équipe puissent s'épanouir et progresser.
 ## Ce que "servir" son équipe veut dire concrètement
 
 > "Je fonctionne comme ça, je fais confiance de base et après si besoin je
-> discute avec toi si il y a des choses à revoir." (Étienne de Thoury, mon
-> actuel Head of chez Scaleway)
+> discute avec toi si il y a des choses à revoir."
+> ([Étienne de Thoury](https://www.linkedin.com/in/%C3%A9tienne-de-thoury-a9290795/),
+> mon actuel Head of chez Scaleway)
 
 L'idée est simple : éviter le micromanagement, laisser de la liberté.
 
@@ -185,7 +187,7 @@ retrouver à vouloir tout suivre, tout gérer.
 
 > "Quand tu réagis ou tu parles mal d'un projet ou d'une équipe en tant que
 > manager, tu peux être sûr que ton équipe réagira en x10 dans quelques
-> semaines." (Florent Dubost)
+> semaines." ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/))
 
 Qu'on le veuille ou non, un manager est un modèle. Son équipe observe ses
 réactions, son ton, la façon dont il parle d'un projet, d'une autre équipe,
