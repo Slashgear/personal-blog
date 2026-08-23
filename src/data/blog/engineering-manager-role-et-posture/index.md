@@ -30,8 +30,8 @@ et les principes que des personnes qui ont compté dans mon parcours
 quotidien. Ce premier épisode porte sur le rôle et la posture d'engineering
 manager.
 
-Si ce partage peut aider ne serait-ce qu'une seule personne, ce sera déjà une
-victoire.
+Si ces articles ouvrent des voies à quelques personnes, alors j'en serai
+déjà ravi.
 
 <!--
 TODO: une fois l'image de couverture composée à partir du livre déposée dans
@@ -50,9 +50,8 @@ Us*](https://www.engmanagement.dev/) de Sarah Drasner.
 
 C'est une vraie recommandation, du contenu de grande qualité. En un format
 relativement court, elle aborde énormément de sujets et formalise une
-multitude de concepts et de conseils de façon très simple. Si j'arrive, avec
-cette série d'articles, à apporter ne serait-ce que 10 % de ce qu'elle
-apporte dans ce livre, ce sera déjà une réussite.
+multitude de concepts et de conseils de façon très simple. Si vous ne devez
+lire qu'un seul livre sur le sujet, c'est celui-là.
 
 <!--
 TODO: déposer la photo de la dédicace de Sarah Drasner dans ce dossier
@@ -183,6 +182,13 @@ L'idée est simple : éviter le micromanagement, laisser de la liberté.
 Quand on devient manager, on peut parfois ressentir du stress et se
 retrouver à vouloir tout suivre, tout gérer.
 
+J'en ai une autre lecture, qui me parle tout autant : ce stress est souvent
+moins une question de contrôle que de confiance en soi. Si je vous confie
+une tâche alors que moi-même je ne suis pas certain à 100 % du résultat, que
+je n'ai pas confiance en moi pour la mener à bien, il me sera impossible de
+vous faire confiance pour la réaliser. Et cette incertitude finit par
+retomber sur le dos de la personne, ou de l'équipe.
+
 ## L'effet miroir
 
 > "Quand tu réagis ou tu parles mal d'un projet ou d'une équipe en tant que
@@ -244,6 +250,15 @@ faut, dans la mesure du possible, éviter de trop l'utiliser au sein de votre
 Les décisions doivent rester collectives, mais il vous faudra parfois
 arbitrer, plusieurs fois. C'est ce qu'on attend de vous, et non d'escalader
 la décision plus haut si son scope ne concerne que votre équipe.
+
+## Se créer un réseau de managers
+
+Un dernier point, essentiel selon moi : se créer un réseau de managers, dans
+son entreprise ou ailleurs, avec qui échanger sur ces sujets, prendre des
+avis, des conseils. Je vous assure que ça aide, énormément.
+
+Si vous n'en avez pas encore, des communautés en ligne existent, comme le
+Slack [Engineering Managers Community](https://engmanagers.github.io/).
 
 ## Et la suite ?
 
