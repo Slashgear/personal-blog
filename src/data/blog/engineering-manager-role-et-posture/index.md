@@ -255,6 +255,9 @@ Un dernier point, essentiel selon moi : se créer un réseau de managers, dans
 son entreprise ou ailleurs, avec qui échanger sur ces sujets, prendre des
 avis, des conseils. Je vous assure que ça aide, énormément.
 
+Une pensée pour les managers avec qui j'échange régulièrement : ils se
+reconnaîtront, merci à eux.
+
 Si vous n'en avez pas encore, des communautés en ligne existent, comme le
 Slack [Engineering Managers Community](https://engmanagers.github.io/).
 
