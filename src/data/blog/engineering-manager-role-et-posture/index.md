@@ -7,7 +7,7 @@ description: |
   les conseils de mentors et collègues qui m'ont marqué, et ce qu'ils
   m'apportent au quotidien.
 pubDatetime: 2026-08-21
-draft: true
+draft: false
 language: fr
 # TODO: décommenter une fois l'image de couverture déposée dans ce dossier
 # (idée : composer un visuel à partir de la couverture du livre de Sarah Drasner)
