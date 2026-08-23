@@ -40,13 +40,12 @@ ce dossier (ex. cover.jpg),
 - remplacer ce commentaire par : ![Illustration à ajouter](./cover.jpg)
 -->
 
-
 ## Une référence avant les citations : "Engineering Management for the Rest of Us"
 
 Avant d'entrer dans les citations qui ont individuellement marqué mon
 parcours, je ne peux pas commencer cette série sans mentionner une
-référence : le livre [*Engineering Management for the Rest of
-Us*](https://www.engmanagement.dev/) de Sarah Drasner.
+référence : le livre [_Engineering Management for the Rest of
+Us_](https://www.engmanagement.dev/) de Sarah Drasner.
 
 C'est une vraie recommandation, du contenu de grande qualité. En un format
 relativement court, elle aborde énormément de sujets et formalise une
@@ -155,8 +154,7 @@ Oui, c'est une référence troll à la pyramide des tests, un modèle que tout l
 monde connaît, que tout le monde cite, et que tout le monde finit par
 retoucher à sa sauce tant il ne veut plus dire grand-chose. J'en ai
 justement parlé dans une conférence avec Jules Poissonnet, mon ancien
-alternant : [*Tester c'est tricher !*](https://www.youtube.com/watch?v=I_zNxGqRI3w).
-
+alternant : [_Tester c'est tricher !_](https://www.youtube.com/watch?v=I_zNxGqRI3w).
 
 ## La posture de challenge : débloquer et faire grandir
 
@@ -214,8 +212,8 @@ n'importe quelle consigne explicite.
 
 > "Chaque leader de chaque groupe d'influence est responsable de la sécurité
 > psychologique de son groupe d'influence." (Léa Coston, dans son talk
-> [*Les gens ne savent pas ce qu'ils font, la plupart du
-> temps !*](https://www.youtube.com/watch?v=a670TeroQS0))
+> [_Les gens ne savent pas ce qu'ils font, la plupart du
+> temps !_](https://www.youtube.com/watch?v=a670TeroQS0))
 
 En tant qu'engineering manager, on est le leader du groupe d'influence que
 constitue son équipe. La sécurité psychologique n'est pas un supplément
@@ -239,7 +237,7 @@ réagissez, en particulier quand quelque chose se passe mal.
 
 ![Main de pouvoir en ivoire sertie de pierres précieuses, montée sur un bâton doré](./main-pouvoir.jpg)
 
-*Photo : [collection du musée du Louvre](https://collections.louvre.fr/ark:/53355/cl010110048).*
+_Photo : [collection du musée du Louvre](https://collections.louvre.fr/ark:/53355/cl010110048)._
 
 Lorsqu'on décide de vous nommer responsable d'une équipe, cela signifie
 qu'on a confiance en vous pour vous donner ce pouvoir de décision. Ce
