@@ -9,9 +9,7 @@ description: |
 pubDatetime: 2026-08-21
 draft: false
 language: fr
-# TODO: décommenter une fois l'image de couverture déposée dans ce dossier
-# (idée : composer un visuel à partir de la couverture du livre de Sarah Drasner)
-# ogImage: "./cover.jpg"
+ogImage: "./cover.webp"
 tags:
   - engineering-management
 ---
@@ -33,13 +31,6 @@ manager.
 Si ces articles ouvrent des voies à quelques personnes, alors j'en serai
 déjà ravi.
 
-<!--
-TODO: une fois l'image de couverture composée à partir du livre déposée dans
-ce dossier (ex. cover.jpg),
-- décommenter le champ `ogImage` dans le frontmatter ci-dessus
-- remplacer ce commentaire par : ![Illustration à ajouter](./cover.jpg)
--->
-
 ## Une référence avant les citations : "Engineering Management for the Rest of Us"
 
 Avant d'entrer dans les citations qui ont individuellement marqué mon
@@ -52,12 +43,9 @@ relativement court, elle aborde énormément de sujets et formalise une
 multitude de concepts et de conseils de façon très simple. Si vous ne devez
 lire qu'un seul livre sur le sujet, c'est celui-là.
 
-<!--
-TODO: déposer la photo de la dédicace de Sarah Drasner dans ce dossier
-(ex. dedicace.jpg), puis remplacer ce commentaire par :
-![Dédicace de Sarah Drasner dans mon exemplaire du livre](./dedicace.jpg)
-*Merci Sarah pour cette dédicace.*
--->
+![Dédicace de Sarah Drasner dans mon exemplaire du livre](./dedicace.webp)
+*Merci Sarah pour cette dédicace, obtenue lors de la DotJS 2025 où nous étions
+tous les deux speakers et avons pu échanger brièvement.*
 
 Je citerai quand même un conseil tiré du livre : demander explicitement les
 attentes qu'ont vos managés de vous.
@@ -180,6 +168,13 @@ L'idée est simple : éviter le micromanagement, laisser de la liberté.
 Quand on devient manager, on peut parfois ressentir du stress et se
 retrouver à vouloir tout suivre, tout gérer.
 
+C'est aussi souvent nos propres managers qui nous poussent, sans le
+vouloir, vers ce travers : quand un n+1 demande un reporting ultra précis,
+il ne reste pas beaucoup d'autre choix que de commencer à tout suivre. Je le
+vois autrement : l'information en elle-même n'est pas un pouvoir. Savoir
+vers qui la renvoyer l'est bien plus, car elle sera toujours plus pertinente
+venant de la personne qui la maîtrise réellement.
+
 J'en ai une autre lecture, qui me parle tout autant : ce stress est souvent
 moins une question de contrôle que de confiance en soi. Si je vous confie
 une tâche alors que moi-même je ne suis pas certain à 100 % du résultat, que
@@ -220,11 +215,22 @@ constitue son équipe. La sécurité psychologique n'est pas un supplément
 d'âme ou une option "sympa à avoir" : c'est une responsabilité structurelle
 du rôle.
 
+Ce n'est d'ailleurs pas qu'une conviction personnelle : le [projet
+Aristote](https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness)
+mené par Google, qui a étudié des centaines d'équipes internes, a montré que
+le facteur le plus déterminant de la performance d'une équipe n'était ni les
+compétences individuelles ni l'ancienneté, mais bien son niveau de sécurité
+psychologique.
+
 Une équipe en sécurité psychologique, c'est une équipe qui ose dire qu'elle
 s'est trompée, qui ose remonter un problème avant qu'il ne devienne
 critique, qui ose ne pas être d'accord avec vous. Une équipe qui n'a pas
 cette sécurité apprend vite à se taire, et vous perdez l'information la plus
 précieuse : celle qui arrive tôt.
+
+Il y a là un vrai enjeu d'exemplarité : être capable de dire à son équipe
+qu'on peut se tromper, qu'on s'est trompé, ou qu'on ne sait pas, ça rassure
+chacun sur sa propre capacité à faire ou dire la même chose.
 
 Ça rejoint directement l'effet miroir vu plus haut : la sécurité
 psychologique ne se décrète pas, elle se construit par la façon dont vous
@@ -248,6 +254,10 @@ faut, dans la mesure du possible, éviter de trop l'utiliser au sein de votre
 Les décisions doivent rester collectives, mais il vous faudra parfois
 arbitrer, plusieurs fois. C'est ce qu'on attend de vous, et non d'escalader
 la décision plus haut si son scope ne concerne que votre équipe.
+
+Une décision collective embarquera toujours bien plus l'équipe qu'une
+décision descendante. Faire émerger le maximum d'intelligence collective
+est, à mes yeux, l'une des missions les plus importantes d'un manager.
 
 ## Se créer un réseau de managers
 
