@@ -241,7 +241,7 @@ réagissez, en particulier quand quelque chose se passe mal.
 > "Le bâton de pouvoir" (une phrase lue quelque part, dont la source
 > m'échappe malheureusement)
 
-![Main de pouvoir en ivoire sertie de pierres précieuses, montée sur un bâton doré](./main-pouvoir.jpg)
+![Main de pouvoir en ivoire sertie de pierres précieuses, montée sur un bâton doré](./main-pouvoir.webp)
 
 _Photo : [collection du musée du Louvre](https://collections.louvre.fr/ark:/53355/cl010110048)._
 
