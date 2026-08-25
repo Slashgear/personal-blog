@@ -44,8 +44,8 @@ multitude de concepts et de conseils de façon très simple. Si vous ne devez
 lire qu'un seul livre sur le sujet, c'est celui-là.
 
 ![Dédicace de Sarah Drasner dans mon exemplaire du livre](./dedicace.webp)
-*Merci Sarah pour cette dédicace, obtenue lors de la DotJS 2025 où nous étions
-tous les deux speakers et avons pu échanger brièvement.*
+_Merci Sarah pour cette dédicace, obtenue lors de la DotJS 2025 où nous étions
+tous les deux speakers et avons pu échanger brièvement._
 
 Je citerai quand même un conseil tiré du livre : demander explicitement les
 attentes qu'ont vos managés de vous.
