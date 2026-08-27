@@ -127,6 +127,37 @@ l'équipe. Cherchez l'équité, pas l'égalité : donnez plus à celles et ceux
 qui en ont le plus besoin. C'est à vous de vous adapter à l'équipe, pas
 l'inverse.
 
+## Le syndrome du sauveteur compulsif
+
+> « Des fois j'y arrive, souvent j'me trompe, donc j'recommence, et puis
+> j'apprends. » (Orelsan — et je citerai qui je veux, hein)
+
+Quand on reçoit la responsabilité de manager, on a envie de protéger son
+équipe, de lui éviter les erreurs dans lesquelles on est soi-même tombé.
+L'intention est louable, mais elle prive l'équipe de l'essentiel de son
+apprentissage. L'image que je me fais du rôle, c'est plutôt : « je dois
+laisser mon équipe échouer pour qu'elle progresse. » C'est frustrant.
+
+Certains managers se diront « si je le fais moi-même, j'en ai pour dix
+minutes ». En réalité, vous en avez pour dix minutes _plus_ vos années
+d'expérience. La personne que vous managez, elle, n'a pas ces années : elle
+est en train de les construire. Laissez-la échouer.
+
+Vous allez me trouver vilain, mais il m'est arrivé de créer sciemment des
+situations où je « soulève légèrement le tapis » pour qu'une personne de
+l'équipe s'y prenne les pieds. Rassurez-vous, c'est une image : mon équipe
+n'est pas sponsorisée par les crèmes à l'arnica. Provoquer des situations
+qui font grandir l'équipe fait partie du rôle. C'est dans une certaine zone
+d'inconfort que vos managés apprennent et progressent, pas en refaisant ce
+qu'ils maîtrisent déjà.
+
+Votre alarme interne doit évidemment continuer de sonner : il s'agit
+d'éviter que l'équipe échoue trop fort, ou se fasse vraiment mal. Pour
+distinguer l'incident formateur du vrai problème, je me sers d'un test
+simple : si je m'imagine y repenser dans deux ans et que je le trouve
+encore grave à ce moment-là, alors il est grave aujourd'hui et je dois
+intervenir. Sinon, je laisse faire.
+
 ## Étaler ses 1:1 dans la semaine
 
 Qu'il s'agisse des 1:1 de vos managés ou de vos apprenants, placez-les dans
