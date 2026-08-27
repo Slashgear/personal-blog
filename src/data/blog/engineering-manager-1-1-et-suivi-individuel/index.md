@@ -48,6 +48,47 @@ La réponse, c'est d'instaurer un rendez-vous régulier avec chaque personne
 de l'équipe : un temps dédié, qui vous revient d'initier, pour échanger,
 prendre la température et vous donner mutuellement du feedback.
 
+<figure>
+  <svg
+    viewBox="0 0 520 320"
+    role="img"
+    aria-label="À gauche, des sollicitations dispersées tout au long de la semaine ; à droite, les mêmes échanges regroupés dans quelques créneaux réguliers"
+    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>Porte ouverte contre rendez-vous réguliers</title>
+    <text x="40" y="34" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Porte ouverte</text>
+    <rect x="40" y="46" width="440" height="60" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" rx="3" />
+    <g fill="rgb(var(--color-accent))" fill-opacity="0.85">
+      <rect x="58" y="78" width="4" height="24" /><rect x="74" y="66" width="4" height="36" />
+      <rect x="103" y="82" width="4" height="20" /><rect x="131" y="58" width="4" height="44" />
+      <rect x="149" y="80" width="4" height="22" /><rect x="187" y="70" width="4" height="32" />
+      <rect x="223" y="62" width="4" height="40" /><rect x="256" y="84" width="4" height="18" />
+      <rect x="288" y="72" width="4" height="30" /><rect x="317" y="60" width="4" height="42" />
+      <rect x="349" y="82" width="4" height="20" /><rect x="372" y="68" width="4" height="34" />
+      <rect x="404" y="78" width="4" height="24" /><rect x="431" y="64" width="4" height="38" />
+      <rect x="455" y="80" width="4" height="22" />
+    </g>
+    <text x="40" y="126" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">Sollicitations dispersées, en continu — la charge repose sur le managé</text>
+    <path d="M250 148 l0 26 M242 166 l8 8 l8 -8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1.5" />
+    <text x="266" y="170" fill="rgb(var(--color-text-base))" font-size="11" font-style="italic">on canalise</text>
+    <text x="40" y="212" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Rendez-vous réguliers</text>
+    <rect x="40" y="224" width="440" height="60" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" rx="3" />
+    <g fill="rgb(var(--color-accent))" fill-opacity="0.85">
+      <rect x="86" y="234" width="56" height="40" rx="3" />
+      <rect x="232" y="234" width="56" height="40" rx="3" />
+      <rect x="378" y="234" width="56" height="40" rx="3" />
+    </g>
+    <g fill="rgb(var(--color-fill))" font-size="10" font-weight="600" text-anchor="middle">
+      <text x="114" y="258">1:1</text><text x="260" y="258">1:1</text><text x="406" y="258">1:1</text>
+    </g>
+    <text x="40" y="304" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">Mêmes échanges, regroupés dans des créneaux dédiés et prévisibles</text>
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    La porte ouverte laisse les sollicitations arriver n'importe quand ; le
+    1:1 régulier les rassemble dans un temps prévu pour ça.
+  </figcaption>
+</figure>
+
 ## Une régularité par individu
 
 > « Tu veux qu'on se voie à quelle régularité ? »
@@ -126,6 +167,51 @@ Ne soyez donc pas surpris que les besoins soient déséquilibrés dans
 l'équipe. Cherchez l'équité, pas l'égalité : donnez plus à celles et ceux
 qui en ont le plus besoin. C'est à vous de vous adapter à l'équipe, pas
 l'inverse.
+
+<figure>
+  <svg
+    viewBox="0 0 520 260"
+    role="img"
+    aria-label="Part du temps de management consacré à chaque personne de l'équipe sur une semaine : les barres sont très inégales, de 50 % pour l'une à 5 % pour une autre"
+    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>Temps de management par personne, sur une semaine type</title>
+    <g stroke="rgb(var(--color-border))" stroke-width="1" stroke-opacity="0.35">
+      <line x1="240" y1="24" x2="240" y2="232" />
+      <line x1="380" y1="24" x2="380" y2="232" />
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="10" opacity="0.6" text-anchor="middle">
+      <text x="240" y="248">25 %</text>
+      <text x="380" y="248">50 %</text>
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="12" text-anchor="end">
+      <text x="92" y="46">Personne A</text>
+      <text x="92" y="86">Personne B</text>
+      <text x="92" y="126">Personne C</text>
+      <text x="92" y="166">Personne D</text>
+      <text x="92" y="206">Personne E</text>
+    </g>
+    <g fill="rgb(var(--color-accent))" fill-opacity="0.85">
+      <rect x="100" y="30" width="280" height="22" rx="2" />
+      <rect x="100" y="70" width="112" height="22" rx="2" />
+      <rect x="100" y="110" width="84" height="22" rx="2" />
+      <rect x="100" y="150" width="56" height="22" rx="2" />
+      <rect x="100" y="190" width="28" height="22" rx="2" />
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="11" font-weight="600">
+      <text x="390" y="46">50 %</text>
+      <text x="222" y="86">20 %</text>
+      <text x="194" y="126">15 %</text>
+      <text x="166" y="166">10 %</text>
+      <text x="138" y="206">5 %</text>
+    </g>
+    <line x1="100" y1="24" x2="100" y2="232" stroke="rgb(var(--color-border))" stroke-width="1" />
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    Un exemple : sur une semaine, une personne peut mobiliser la moitié de
+    votre temps de management, une autre à peine 5 %. C'est normal.
+  </figcaption>
+</figure>
 
 ## Le syndrome du sauveteur compulsif
 
@@ -343,6 +429,11 @@ regarder, il vaut le détour.
      ============================================================ -->
 
 ## Et la suite ?
+
+Cet article est évidemment loin de couvrir tous les sujets autour du 1:1 et
+du suivi individuel. Si vous voulez que je précise un point ou que
+j'aborde un thème en particulier, mes réseaux sont accessibles depuis ce
+blog : écrivez-moi, je serai ravi de vous lire.
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
 article consacré à **« Donner des objectifs et de la vision »**. Comme
