@@ -33,18 +33,20 @@ qui se joue autour pour accompagner les individus dans la durée.
 > « Ma porte est toujours ouverte. » (une phrase que j'ai entendue de la
 > bouche de plusieurs managers, que je ne citerai pas ici)
 
-Dire que sa porte est ouverte, ce n'est vraiment pas dingue. Ça ne fait
-qu'industrialiser le « je vous autorise à venir me déranger dès que vous en
-avez besoin ». Ça peut fonctionner avec une petite équipe, mais clairement
-pas avec une grande.
+Annoncer que sa porte est ouverte, ce n'est pas si généreux qu'il n'y
+paraît. Au fond, cela ne fait qu'ériger en principe le « venez me déranger
+quand vous en avez besoin » : la charge de provoquer l'échange repose
+entièrement sur le managé. Dans une petite équipe, ça peut suffire. Passé
+une certaine taille, ça ne tient plus.
 
-Bien sûr, en cas d'urgence ou de situation qui le nécessite, votre porte
-doit rester ouverte. Mais pas en permanence : c'est un modèle qui ne passe
-pas à l'échelle.
+En cas d'urgence ou de situation qui le réclame, votre porte doit
+évidemment rester ouverte. Mais une disponibilité permanente n'est pas un
+dispositif de suivi : c'est un modèle qui ne passe pas à l'échelle, et qui
+laisse de côté ceux qui ne viennent jamais frapper.
 
-La solution, c'est de rythmer les rendez-vous entre vous et les individus de
-votre équipe. Un moment dédié pour échanger, prendre la température et se
-donner des feedbacks.
+La réponse, c'est d'instaurer un rendez-vous régulier avec chaque personne
+de l'équipe : un temps dédié, qui vous revient d'initier, pour échanger,
+prendre la température et vous donner mutuellement du feedback.
 
 ## Une régularité par individu
 
@@ -52,14 +54,15 @@ donner des feedbacks.
 > ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/),
 > mon manager pendant plusieurs années)
 
-Et là encore, le caractère individuel compte. Chaque personne a besoin de
-voir son manager pour une durée et à une fréquence différentes. Si vous
-décidez de voir tout le monde 30 minutes toutes les deux semaines, vous
-pouvez être certain que ça ne répondra pas à tous les besoins.
+Là encore, tout est affaire d'individu. Chacun a besoin de voir son manager
+à une fréquence et pour une durée qui lui sont propres. Décréter « je vois
+tout le monde trente minutes toutes les deux semaines », c'est la garantie
+de ne répondre au besoin de personne : certains étoufferont, d'autres
+tourneront en rond faute de matière.
 
-D'où l'importance de définir cette régularité avec chaque managé. Elle peut
-évoluer dans le temps, rien n'est figé, mais une fois posée, il faut s'y
-tenir.
+Cette cadence se négocie donc avec chaque managé. Elle n'a rien de figé et
+peut évoluer au fil du temps, mais une fois posée, elle devient un
+engagement : on ne l'annule pas, on la décale.
 
 ## Et la suite ?
 
