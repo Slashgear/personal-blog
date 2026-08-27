@@ -324,12 +324,14 @@ tout enchaîner ; pour moi, ce serait un vrai cauchemar.
 > force 3… » (pas la citation d'un mentor cette fois, juste l'image qui m'a
 > servi de modèle)
 
-![Double page manuscrite du livre de bord de la frégate néerlandaise Medea, 1786 : croquis de profils de côtes et relevés quotidiens](./cover.webp)
-
-_Page du livre de bord de la frégate_ Medea _(1786), tenu par A.A. Buyskes.
-Source : [Nationaal Archief](https://www.nationaalarchief.nl/), domaine
-public. Des siècles avant nos outils de suivi, on notait déjà, chaque jour,
-ce qu'on observait._
+L'image en tête de cet article est une double page du livre de bord de la
+frégate néerlandaise _Medea_, tenu en 1786 par son commandant A.A. Buyskes
+([Nationaal Archief](https://www.nationaalarchief.nl/), domaine public). On y
+voit des profils de côtes dessinés à main levée et le relevé quotidien de la
+navigation : cap, vent, mouillages, incidents. Des siècles avant nos outils
+de suivi, la pratique était déjà là — noter chaque jour, factuellement, ce
+qu'on observe, pour pouvoir s'y reporter plus tard. C'est exactement l'usage
+que je vous propose d'en faire avec votre équipe.
 
 Avant même de parler du document qui me sert à structurer le suivi de mes
 managés, il y a un préalable : disposer quelque part d'un espace de notes.
