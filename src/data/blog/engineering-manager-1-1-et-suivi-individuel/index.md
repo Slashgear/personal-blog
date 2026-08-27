@@ -335,6 +335,6 @@ regarder, il vaut le détour.
 ## Et la suite ?
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
-article consacré à **« Communiquer et planifier »**. Comme toujours, vous
-pouvez retrouver l'ensemble de la série via le tag
+article consacré à **« Donner des objectifs et de la vision »**. Comme
+toujours, vous pouvez retrouver l'ensemble de la série via le tag
 [engineering-management](/tags/engineering-management).
