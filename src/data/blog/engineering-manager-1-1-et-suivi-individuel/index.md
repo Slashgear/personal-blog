@@ -174,6 +174,74 @@ tout enchaîner ; pour moi, ce serait un vrai cauchemar.
   </figcaption>
 </figure>
 
+## Tenir un journal de bord
+
+> « Journal de bord : mer calme, embarquement de 4 passagers, vent NE
+> force 3… » (pas la citation d'un mentor cette fois, juste l'image qui m'a
+> servi de modèle)
+
+Avant même de parler du document qui me sert à structurer le suivi de mes
+managés, il y a un préalable : disposer quelque part d'un espace de notes.
+Vous observez votre équipe en continu, dans ses réussites comme dans ses
+ratés, à l'échelle collective comme individuelle. Avec une petite équipe, on
+a vite envie de s'en remettre à sa mémoire ; elle finit toujours par être
+débordée.
+
+Je conseille donc de tenir un journal de bord : un endroit où consigner les
+événements de la vie de l'équipe. Il vous est strictement personnel, et sa
+seule contrainte est de vous obliger à rester factuel.
+
+On peut y noter la mise en production d'une fonctionnalité, un incident, la
+réussite marquante d'une personne, une communication qui est mal passée, un
+oubli de standup, ou encore une période où quelqu'un s'est visiblement
+beaucoup investi. Relus quelques semaines plus tard, au moment d'un 1:1 ou
+d'un point de carrière, ces faits datés valent bien mieux qu'une impression
+générale.
+
+Je vous montrerais bien le mien, mais comme je l'ai dit, il est privé. À
+vous de faire le vôtre.
+
+<figure>
+  <svg
+    viewBox="0 0 520 360"
+    role="img"
+    aria-label="Page d'un journal de bord de manager avec des entrées datées et factuelles : mise en production, incident, investissement d'une personne, communication maladroite, oubli récurrent"
+    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>Exemple de journal de bord</title>
+    <rect x="24" y="16" width="472" height="328" rx="4" fill="rgb(var(--color-card))" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <line x1="72" y1="16" x2="72" y2="344" stroke="rgb(var(--color-accent))" stroke-width="1.5" stroke-opacity="0.6" />
+    <text x="88" y="46" fill="rgb(var(--color-text-base))" font-size="15" font-weight="700">Journal de bord</text>
+    <g stroke="rgb(var(--color-border))" stroke-width="1" stroke-opacity="0.5">
+      <line x1="72" y1="70" x2="480" y2="70" />
+      <line x1="72" y1="116" x2="480" y2="116" />
+      <line x1="72" y1="162" x2="480" y2="162" />
+      <line x1="72" y1="208" x2="480" y2="208" />
+      <line x1="72" y1="254" x2="480" y2="254" />
+      <line x1="72" y1="300" x2="480" y2="300" />
+    </g>
+    <g fill="rgb(var(--color-accent))" font-size="11" font-weight="700" text-anchor="end">
+      <text x="66" y="90">12/03</text>
+      <text x="66" y="136">18/03</text>
+      <text x="66" y="182">21/03</text>
+      <text x="66" y="228">26/03</text>
+      <text x="66" y="274">02/04</text>
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="12">
+      <text x="84" y="90">Mise en prod de la recherche v2, sans accroc</text>
+      <text x="84" y="136">Incident paiement, ~40 min. Bien géré par C.</text>
+      <text x="84" y="182">A. a porté seul·e la migration sur 3 semaines</text>
+      <text x="84" y="228">Standup : remarque sèche sur l'équipe voisine</text>
+      <text x="84" y="274">R. a manqué le point client — 2e fois ce mois-ci</text>
+    </g>
+    <text x="84" y="322" fill="rgb(var(--color-text-base))" font-size="12" opacity="0.5">…</text>
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    Des entrées courtes, datées et factuelles : ni interprétation ni
+    jugement, juste ce qui s'est passé.
+  </figcaption>
+</figure>
+
 ## Et la suite ?
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
