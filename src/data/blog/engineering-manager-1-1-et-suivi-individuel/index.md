@@ -101,6 +101,32 @@ L'arrivée d'un alternant ou d'un stagiaire, ça se prépare. J'y reviendrai
 plus en détail dans un article dédié à l'onboarding, l'offboarding et le
 recrutement.
 
+## Des besoins qui ne s'équilibrent pas
+
+> « Il est normal que certaines personnes de vos équipes nécessitent un
+> accompagnement plus fort que d'autres. » (Sarah Drasner, dans le livre
+> [cité dans l'article
+> précédent](/posts/engineering-manager-role-et-posture))
+
+Ça peut être frustrant quand on débute dans le rôle, mais avec l'expérience,
+ça devient une évidence. Chaque personne de l'équipe est différente, et
+l'accompagnement que vous lui apportez n'est ni le même ni comparable d'un
+individu à l'autre. Oui, vous aurez peut-être quelqu'un qui occupera à lui
+seul la moitié de votre temps de management sur une semaine. Avec le recul,
+ça ne me choque plus.
+
+Et tout cela évolue. Une personne que vous suivez de loin à un moment donné
+sera peut-être bien plus demandeuse l'année suivante. Rien n'est
+nécessairement corrélé à l'expérience ou à l'autonomie du managé : un profil
+junior vous mobilisera souvent davantage, mais vous croiserez aussi des
+juniors qui gagnent très vite en autonomie et se jettent dans les ronces
+avec appétit pour apprendre. Dans ce cas, laissez-les faire.
+
+Ne soyez donc pas surpris que les besoins soient déséquilibrés dans
+l'équipe. Cherchez l'équité, pas l'égalité : donnez plus à celles et ceux
+qui en ont le plus besoin. C'est à vous de vous adapter à l'équipe, pas
+l'inverse.
+
 ## Étaler ses 1:1 dans la semaine
 
 Qu'il s'agisse des 1:1 de vos managés ou de vos apprenants, placez-les dans
@@ -245,7 +271,7 @@ vous de faire le vôtre.
 ## Le brag document : se souvenir de ses réussites
 
 > « Si on me demande quels sont mes succès de l'année, c'est très dur d'être
-> exhaustif. » (Anne-Laure de Boissieu, une ancienne collègue)
+> exhaustif. » (Anne-Laure de Boissieu, une ancienne collègue et amie)
 
 Dans une [conférence que je recommande
 vivement](https://www.youtube.com/watch?v=vktamvlVBx8), mon ancienne
