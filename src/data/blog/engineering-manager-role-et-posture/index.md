@@ -6,7 +6,7 @@ description: |
   d'ingénierie. Plutôt que mes propres principes, je partage les citations et
   les conseils de mentors et collègues qui m'ont marqué, et ce qu'ils
   m'apportent au quotidien.
-pubDatetime: 2026-08-21
+pubDatetime: 2026-08-27
 draft: false
 language: fr
 ogImage: "./cover.webp"
