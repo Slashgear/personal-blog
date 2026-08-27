@@ -7,6 +7,7 @@ description: |
   collègues m'ont transmis sur le sujet.
 pubDatetime: 2026-08-27
 language: fr
+ogImage: "./cover.webp"
 tags:
   - engineering-management
 ---
@@ -322,6 +323,13 @@ tout enchaîner ; pour moi, ce serait un vrai cauchemar.
 > « Journal de bord : mer calme, embarquement de 4 passagers, vent NE
 > force 3… » (pas la citation d'un mentor cette fois, juste l'image qui m'a
 > servi de modèle)
+
+![Double page manuscrite du livre de bord de la frégate néerlandaise Medea, 1786 : croquis de profils de côtes et relevés quotidiens](./cover.webp)
+
+_Page du livre de bord de la frégate_ Medea _(1786), tenu par A.A. Buyskes.
+Source : [Nationaal Archief](https://www.nationaalarchief.nl/), domaine
+public. Des siècles avant nos outils de suivi, on notait déjà, chaque jour,
+ce qu'on observait._
 
 Avant même de parler du document qui me sert à structurer le suivi de mes
 managés, il y a un préalable : disposer quelque part d'un espace de notes.
