@@ -159,6 +159,14 @@
   .display-none {
     @apply hidden;
   }
+
+  /* Tailwind Typography auto-adds curly quotes around blockquotes (it lands
+     in the utilities layer, so !important is needed to beat it from here);
+     our citations already type their own quote marks, so disable those. */
+  .prose blockquote p:first-of-type::before,
+  .prose blockquote p:last-of-type::after {
+    content: none !important;
+  }
 }
 
 @utility focus-outline {
