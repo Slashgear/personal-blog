@@ -109,6 +109,71 @@ pour visualiser d'un coup d'œil comment vos entretiens se répartissent. Le
 but est d'éviter la journée entièrement remplie de 1:1. Certains préfèrent
 tout enchaîner ; pour moi, ce serait un vrai cauchemar.
 
+<figure>
+  <svg
+    viewBox="0 0 520 340"
+    role="img"
+    aria-label="Semaine type d'un manager : les 1:1 sont répartis un par jour, du lundi au vendredi, entre les réunions d'équipe"
+    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>Répartition des 1:1 sur la semaine</title>
+    <!-- jours -->
+    <text x="105" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="600">Lun</text>
+    <text x="193" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="600">Mar</text>
+    <text x="281" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="600">Mer</text>
+    <text x="369" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="600">Jeu</text>
+    <text x="457" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="600">Ven</text>
+    <!-- heures -->
+    <text x="48" y="44" text-anchor="end" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">9h</text>
+    <text x="48" y="104" text-anchor="end" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">11h</text>
+    <text x="48" y="164" text-anchor="end" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">13h</text>
+    <text x="48" y="224" text-anchor="end" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">15h</text>
+    <text x="48" y="284" text-anchor="end" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">17h</text>
+    <!-- grille -->
+    <rect x="56" y="32" width="440" height="270" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <line x1="144" y1="32" x2="144" y2="302" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <line x1="232" y1="32" x2="232" y2="302" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <line x1="320" y1="32" x2="320" y2="302" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <line x1="408" y1="32" x2="408" y2="302" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <!-- réunions d'équipe (daily + points collectifs) -->
+    <g fill="rgb(var(--color-border))" fill-opacity="0.55">
+      <rect x="60" y="34" width="80" height="14" rx="2" />
+      <rect x="148" y="34" width="80" height="14" rx="2" />
+      <rect x="236" y="34" width="80" height="14" rx="2" />
+      <rect x="324" y="34" width="80" height="14" rx="2" />
+      <rect x="412" y="34" width="80" height="14" rx="2" />
+      <rect x="324" y="205" width="80" height="42" rx="2" />
+      <rect x="412" y="235" width="80" height="42" rx="2" />
+    </g>
+    <text x="364" y="230" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="10">Point équipe</text>
+    <text x="452" y="260" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="10">Rétro</text>
+    <!-- 1:1, un par jour, étalés -->
+    <g fill="rgb(var(--color-accent))" fill-opacity="0.85">
+      <rect x="60" y="95" width="80" height="30" rx="3" />
+      <rect x="148" y="185" width="80" height="30" rx="3" />
+      <rect x="236" y="65" width="80" height="30" rx="3" />
+      <rect x="324" y="140" width="80" height="30" rx="3" />
+      <rect x="412" y="95" width="80" height="30" rx="3" />
+    </g>
+    <g fill="rgb(var(--color-fill))" font-size="10" font-weight="600" text-anchor="middle">
+      <text x="100" y="114">1:1</text>
+      <text x="188" y="204">1:1</text>
+      <text x="276" y="84">1:1</text>
+      <text x="364" y="159">1:1</text>
+      <text x="452" y="114">1:1</text>
+    </g>
+    <!-- légende -->
+    <rect x="56" y="316" width="14" height="12" rx="2" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+    <text x="76" y="326" fill="rgb(var(--color-text-base))" font-size="11">1:1 individuel</text>
+    <rect x="196" y="316" width="14" height="12" rx="2" fill="rgb(var(--color-border))" fill-opacity="0.55" />
+    <text x="216" y="326" fill="rgb(var(--color-text-base))" font-size="11">Réunions d'équipe</text>
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    Une semaine type : un 1:1 par jour, à des horaires différents, plutôt
+    qu'une demi-journée entière d'entretiens enchaînés.
+  </figcaption>
+</figure>
+
 ## Et la suite ?
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
