@@ -332,6 +332,16 @@ situations :
 Je ne rends pas justice ici à la richesse du talk d'Anne-Laure : allez le
 regarder, il vaut le détour.
 
+<!-- ============================================================
+     À RÉDIGER (reprise prévue le 28/08 après-midi) — chaque
+     section suit le format citation + reformulation des notes :
+
+     - Donner du feedback
+     - Le template de page de suivi individuel (+ illustration ?)
+     - Les valeurs et les préférences
+     - Suivre et encourager l'apprentissage
+     ============================================================ -->
+
 ## Et la suite ?
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
