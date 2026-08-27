@@ -6,65 +6,31 @@ description: |
   à quoi sert ce temps, comment le préparer, et ce que des mentors et
   collègues m'ont transmis sur le sujet.
 pubDatetime: 2026-08-27
-draft: true
 language: fr
 tags:
   - engineering-management
 ---
 
-<!-- TODO: rédaction. Squelette basé sur la structure du premier article
-     (citations de mentors/collègues + ce qu'elles m'apportent). -->
+C'est le deuxième article de ma série sur ce que le rôle d'engineering
+manager m'a appris. Comme pour le premier épisode, ce qui suit n'est ni une
+méthode ni une vérité générale : c'est un retour d'expérience personnel,
+structuré autour des citations et des principes que des personnes qui ont
+compté dans mon parcours m'ont transmis, et de ce qu'ils m'apportent au
+quotidien.
 
-Deuxième article de la série. Après le [rôle et la
-posture](/posts/engineering-manager-role-et-posture) de l'engineering manager,
-ce billet se concentre sur le 1:1 et le suivi individuel.
+Le premier épisode portait sur le [rôle et la posture
+d'engineering manager](/posts/engineering-manager-role-et-posture) ; si vous
+ne l'avez pas lu, c'est une bonne entrée en matière avant celui-ci. Vous
+pouvez aussi retrouver tous les articles de la série sur la page du tag
+[engineering-management](/tags/engineering-management).
 
-Comme pour le premier épisode : ce n'est ni une méthode ni une vérité
-générale, juste un retour d'expérience personnel, structuré autour des
-citations et principes que des personnes qui ont compté dans mon parcours
-m'ont transmis.
-
-## À quoi sert un 1:1 (et à quoi il ne sert pas)
-
-> "TODO: citation"
-
-<!-- Le 1:1 appartient au managé, pas au manager. Ce n'est pas un point
-     projet ni un status report. -->
-
-## La régularité avant tout
-
-> "TODO: citation"
-
-<!-- Cadence fixe, on ne l'annule pas, on le décale. Ce que dit une
-     annulation systématique. -->
-
-## Préparer et donner de la matière
-
-> "TODO: citation"
-
-<!-- Ordre du jour partagé, notes suivies dans le temps, actions. -->
-
-## Écouter plus que parler
-
-> "TODO: citation"
-
-<!-- Silence, questions ouvertes, ratio de parole. -->
-
-## Le suivi individuel dans la durée
-
-> "TODO: citation"
-
-<!-- Suivre les attentes, la progression, les signaux faibles entre deux
-     1:1. Historique. -->
-
-## Le feedback
-
-> "TODO: citation"
-
-<!-- Feedback continu vs. moments formels, ne pas garder pour la review. -->
+Ce billet-ci se concentre sur le 1:1 et le suivi individuel : ce temps
+dédié, régulier, en tête-à-tête avec chaque personne de l'équipe, et tout ce
+qui se joue autour pour accompagner les individus dans la durée.
 
 ## Et la suite ?
 
-Deuxième article de cette série. Le prochain épisode abordera **TODO**. Vous
-pouvez retrouver tous les articles de la série via le tag
+Ce thème des citations et principes reçus se poursuivra dans un prochain
+article consacré à **« Communiquer et planifier »**. Comme toujours, vous
+pouvez retrouver l'ensemble de la série via le tag
 [engineering-management](/tags/engineering-management).
