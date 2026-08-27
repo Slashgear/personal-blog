@@ -64,6 +64,11 @@ Cette cadence se négocie donc avec chaque managé. Elle n'a rien de figé et
 peut évoluer au fil du temps, mais une fois posée, elle devient un
 engagement : on ne l'annule pas, on la décale.
 
+Concrètement, je recommande de fixer explicitement, en échangeant avec la
+personne, la fréquence et la durée du 1:1, puis de les consigner quelque
+part. Un accord tacite se perd ; un accord écrit se relit et se révise
+quand le besoin change.
+
 ## Et la suite ?
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
