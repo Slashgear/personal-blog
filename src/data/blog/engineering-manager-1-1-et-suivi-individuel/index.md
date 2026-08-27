@@ -419,14 +419,35 @@ Je ne rends pas justice ici à la richesse du talk d'Anne-Laure : allez le
 regarder, il vaut le détour.
 
 <!-- ============================================================
-     À RÉDIGER (reprise prévue le 28/08 après-midi) — chaque
-     section suit le format citation + reformulation des notes :
-
-     - Donner du feedback
-     - Le template de page de suivi individuel (+ illustration ?)
-     - Les valeurs et les préférences
-     - Suivre et encourager l'apprentissage
+     SECTIONS À RÉDIGER (reprise prévue le 28/08 après-midi).
+     Format : citation + reformulation des notes. Retirer les
+     blocs TODO avant publication.
      ============================================================ -->
+
+## Donner du feedback
+
+> « TODO : citation » (TODO : auteur·ice)
+
+<!-- TODO : rédiger. Notes à venir. -->
+
+## Le template de page de suivi individuel
+
+> « TODO : citation » (TODO : auteur·ice)
+
+<!-- TODO : rédiger + illustration du template (structure de la page :
+     attentes, régularité, historique, feedbacks, objectifs…). -->
+
+## Les valeurs et les préférences
+
+> « TODO : citation » (TODO : auteur·ice)
+
+<!-- TODO : rédiger. Notes à venir. -->
+
+## Suivre et encourager l'apprentissage
+
+> « TODO : citation » (TODO : auteur·ice)
+
+<!-- TODO : rédiger. Notes à venir. -->
 
 ## Et la suite ?
 
