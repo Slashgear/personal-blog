@@ -107,7 +107,7 @@ Qu'il s'agisse des 1:1 de vos managés ou de vos apprenants, placez-les dans
 un agenda partagé. Pourquoi pas un agenda dédié, avec sa propre couleur,
 pour visualiser d'un coup d'œil comment vos entretiens se répartissent. Le
 but est d'éviter la journée entièrement remplie de 1:1. Certains préfèrent
-tout enchaîner ; pour moi, c'est un vrai cauchemar.
+tout enchaîner ; pour moi, ce serait un vrai cauchemar.
 
 ## Et la suite ?
 
