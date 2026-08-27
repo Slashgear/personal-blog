@@ -242,6 +242,39 @@ vous de faire le vôtre.
   </figcaption>
 </figure>
 
+## Le brag document : se souvenir de ses réussites
+
+> « Si on me demande quels sont mes succès de l'année, c'est très dur d'être
+> exhaustif. » (Anne-Laure de Boissieu, une ancienne collègue)
+
+Dans une [conférence que je recommande
+vivement](https://www.youtube.com/watch?v=vktamvlVBx8), mon ancienne
+collègue et amie Anne-Laure présente un concept que je ne connaissais pas et
+qui m'a beaucoup servi depuis : le _brag document_.
+
+C'est un document proche du journal de bord, à ceci près qu'il ne recense
+que les fiertés, les sujets que l'on considère personnellement comme des
+succès. Notre cerveau fonctionne ainsi : on oublie très vite ce dont on
+devrait être fier, pendant que le problème sur lequel on bloque depuis deux
+semaines occupe presque tout l'espace.
+
+D'où l'intérêt de tenir un brag document avec chaque managé, et un autre
+pour l'équipe dans son ensemble. Chaque personne y historise avec vous, au
+fil de l'année, les fiertés qu'elle a eues : un titre, une date, une courte
+description. À vous de faire le même exercice à l'échelle de l'équipe.
+
+À quoi bon, me direz-vous ? Ce document se révèle précieux dans plusieurs
+situations :
+
+- accompagner un membre de l'équipe en questionnement, qui n'a pas
+  l'impression de progresser ou qui traverse un syndrome de l'imposteur ;
+- préparer les périodes d'évaluation annuelle en s'appuyant sur tous les
+  succès de l'année, et pas seulement sur ceux des deux derniers mois ;
+- défendre l'impact et la vision de votre équipe dans l'entreprise.
+
+Je ne rends pas justice ici à la richesse du talk d'Anne-Laure : allez le
+regarder, il vaut le détour.
+
 ## Et la suite ?
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
