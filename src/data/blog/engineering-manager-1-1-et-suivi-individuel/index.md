@@ -69,6 +69,46 @@ personne, la fréquence et la durée du 1:1, puis de les consigner quelque
 part. Un accord tacite se perd ; un accord écrit se relit et se révise
 quand le besoin change.
 
+## Le cas des alternants, stagiaires et profils juniors
+
+> « Je ne sais pas si je suis suffisamment à l'aise pour prendre un
+> alternant… » (un collègue, en pleine crise de confiance)
+
+Le suivi des profils en apprentissage fait souvent peur : celle de mal s'en
+occuper, ou celle d'être sollicité en permanence. J'ai eu la chance de
+donner des cours, et l'expérience d'une classe de quarante étudiants qui
+vous demandent chacun à leur tour « il faut faire quoi, monsieur ? » forge
+assez vite l'envie de se doter d'une stratégie.
+
+Comme pour n'importe quel managé, la réponse passe par un suivi régulier,
+mais nettement plus soutenu. Ce que j'ai appliqué le plus souvent : deux
+créneaux d'une heure par semaine, bloqués dans le calendrier, généralement
+un le mardi et un le jeudi, pendant lesquels je leur consacre du temps pour
+avancer ensemble sur leur sujet. Ces points réguliers créent des
+respirations dans la semaine : la personne sait qu'un moment est prévu pour
+poser ses questions et ses blocages, ce qui évite les sollicitations
+permanentes. C'est aussi ce qui rend possible l'accompagnement de plusieurs
+apprenants en parallèle : votre capacité, c'est le temps que vous êtes prêt
+à bloquer chaque semaine.
+
+Un autre réflexe utile : confier deux sujets à la fois. Le premier, « l'os »,
+est le sujet difficile, celui sur lequel la personne peut rester coincée.
+Le second est un sujet sans blocage connu, sur lequel elle peut continuer à
+avancer librement quand l'os résiste. Elle n'est jamais complètement à
+l'arrêt, et vous n'êtes pas le seul goulot d'étranglement de sa semaine.
+
+L'arrivée d'un alternant ou d'un stagiaire, ça se prépare. J'y reviendrai
+plus en détail dans un article dédié à l'onboarding, l'offboarding et le
+recrutement.
+
+## Étaler ses 1:1 dans la semaine
+
+Qu'il s'agisse des 1:1 de vos managés ou de vos apprenants, placez-les dans
+un agenda partagé. Pourquoi pas un agenda dédié, avec sa propre couleur,
+pour visualiser d'un coup d'œil comment vos entretiens se répartissent. Le
+but est d'éviter la journée entièrement remplie de 1:1. Certains préfèrent
+tout enchaîner ; pour moi, c'est un vrai cauchemar.
+
 ## Et la suite ?
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
