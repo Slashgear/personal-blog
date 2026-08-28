@@ -468,8 +468,8 @@ occasions de feedback prêtes à l'emploi. Et vous verrez qu'une personne
 ajoute bien plus facilement une ligne à son brag document quand vous avez
 commencé par reconnaître la chose vous-même.
 
-C'est quand, la dernière fois que vous avez dit à quelqu'un de votre équipe
-qu'il ou elle avait fait du bon travail ?
+_C'est quand, la dernière fois que vous avez dit à quelqu'un de votre équipe
+qu'il ou elle avait fait du bon travail ?_
 
 Vient ensuite le feedback plus difficile : les rectifications, les axes
 d'amélioration.
@@ -498,9 +498,27 @@ un échange en tête-à-tête avec la personne.
 
 ## Les valeurs et les préférences
 
-> « TODO : citation » (TODO : auteur·ice)
+> « Tu verras que la source première des conflits dans une équipe, ce sont
+> des conflits de valeurs. Et l'ego, bien sûr. »
+> ([Kenny Dits](https://www.linkedin.com/in/kenny-d-3761b59b/))
 
-<!-- TODO : rédiger. Notes à venir. -->
+Si les frictions naissent surtout d'un désaccord sur ce qui compte, alors
+une partie du travail de suivi consiste à savoir ce qui compte pour chacun,
+avant que ça ne coince.
+
+Sarah Drasner propose pour cela un exercice tout simple dans son livre :
+poser directement la question à vos managés, en 1:1. Trois questions
+suffisent :
+
+- Dans ton travail, quelles sont les trois choses les plus importantes pour
+  toi ?
+- Qu'est-ce que tu préfères faire ?
+- Qu'est-ce que tu aimes le moins faire ?
+
+Les réponses sont souvent éclairantes, et rarement celles qu'on aurait
+devinées. Elles se rangent dans la page de suivi de la personne, et vous y
+reviendrez : pour répartir les sujets, pour comprendre une tension, pour
+vérifier de temps en temps que ce qui comptait il y a un an compte encore.
 
 ## Suivre et encourager l'apprentissage
 
