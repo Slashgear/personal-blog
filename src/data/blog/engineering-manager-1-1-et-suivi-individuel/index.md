@@ -96,8 +96,8 @@ prendre la température et vous donner mutuellement du feedback.
 > ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/),
 > mon manager pendant plusieurs années)
 
-Là encore, tout est affaire d'individu. Chacun a besoin de voir son manager
-à une fréquence et pour une durée qui lui sont propres. Décréter « je vois
+Tout est affaire d'individu. Chacun a besoin de voir son manager à une
+fréquence et pour une durée qui lui sont propres. Décréter « je vois
 tout le monde trente minutes toutes les deux semaines », c'est la garantie
 de ne répondre au besoin de personne : certains étoufferont, d'autres
 tourneront en rond faute de matière.
@@ -575,11 +575,10 @@ trouver des compromis qui ménagent les valeurs des deux.
   </figcaption>
 </figure>
 
-L'exercice est très simple et vous apprendra énormément sur votre équipe. Il
-se fait en 1:1 ; mais quand l'équipe est suffisamment à l'aise, il devient
-un bon jeu collectif : chacun arrive avec ses trois post-it par question, on
-mélange le tout, et l'équipe doit retrouver quelle réponse va à qui, et dans
-quel ordre.
+Cet exercice se fait en 1:1. Mais quand l'équipe est suffisamment à l'aise,
+il devient aussi un bon jeu collectif : chacun arrive avec ses trois post-it
+par question, on mélange le tout, et l'équipe doit retrouver quelle réponse
+va à qui, et dans quel ordre.
 
 Connaître les préférences, ensuite, ce n'est pas pour ne distribuer que des
 tâches que chacun adore et cloisonner l'équipe. C'est pour savoir ce que les
@@ -627,7 +626,7 @@ vérifier de temps en temps que ce qui comptait il y a un an compte encore.
 > de conférences tech internes, le dernier vendredi du mois, pour que les
 > gens racontent ce qu'ils font. Dès la deuxième édition ce n'était plus le
 > dernier vendredi, mais peu importe. »
-> ([Kenny Dits](https://www.linkedin.com/in/kenny-d-3761b59b/))
+> ([Kenny Dits](https://www.linkedin.com/in/kenny-d-3761b59b/) — encore lui)
 
 Le manager a le devoir d'accompagner l'apprentissage de son équipe, sur deux
 axes qui vont ensemble : s'assurer que chacun a le temps et les moyens
@@ -724,10 +723,10 @@ qu'on cherche à y adresser : c'est un sujet à part entière.
 
 ## Et la suite ?
 
-Cet article est évidemment loin de couvrir tous les sujets autour du 1:1 et
-du suivi individuel. Si vous voulez que je précise un point ou que
-j'aborde un thème en particulier, mes réseaux sont accessibles depuis ce
-blog : écrivez-moi, je serai ravi de vous lire.
+Il reste d'autres aspects du 1:1 et du suivi que je n'ai pas abordés ici. Si
+vous voulez que je précise un point ou que j'aborde un thème en particulier,
+mes réseaux sont accessibles depuis ce blog : écrivez-moi, je serai ravi de
+vous lire.
 
 Ce thème des citations et principes reçus se poursuivra dans un prochain
 article consacré à **« Donner des objectifs et de la vision »**. Comme
