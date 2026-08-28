@@ -66,7 +66,7 @@ aspect technique dans leur travail. Le pourcentage varie d'une personne à
 l'autre, mais iels ont toujours eu les mains dedans.
 
 Pour moi, engineering manager est un rôle étendu du rôle de contributeur
-individuel, pas un rôle qui s'y substitue.
+individuel — l'IC[^ic] —, pas un rôle qui s'y substitue.
 
 C'est aussi ce que j'en interprète : se réserver des tâches et des sujets en
 tant que "chef" est une mauvaise pratique. Si on veut pouvoir compter sur son
@@ -277,3 +277,8 @@ C'est le premier article de cette série sur mon retour d'expérience en tant
 qu'engineering manager. Le prochain épisode abordera le **1:1 et le suivi
 individuel**. Vous pouvez retrouver tous les articles de la série via le tag
 engineering-management.
+
+[^ic]:
+    IC, pour _individual contributor_ (contributeur individuel) : un membre
+    de l'équipe qui contribue directement à la production — code, design,
+    etc. — sans responsabilité de management.
