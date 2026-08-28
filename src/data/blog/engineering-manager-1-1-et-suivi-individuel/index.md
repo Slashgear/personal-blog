@@ -537,6 +537,47 @@ Mais si vous le savez, et que vous savez maintenant comment chacun
 fonctionne, vous pouvez mettre un peu d'eau dans leurs vins respectifs et
 trouver des compromis qui ménagent les valeurs des deux.
 
+<figure>
+  <svg
+    viewBox="0 0 520 258"
+    role="img"
+    aria-label="Le top 3 de deux personnes de la même équipe : les priorités et leur ordre diffèrent, et une préoccupation commune n'a pas le même rang chez l'une et chez l'autre"
+    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>Deux classements de priorités très différents</title>
+    <text x="145" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Personne A</text>
+    <text x="395" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Personne B</text>
+    <g>
+      <rect x="40" y="36" width="210" height="52" rx="6" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+      <text x="60" y="67" fill="rgb(var(--color-fill))" font-size="12" font-weight="700">1</text>
+      <text x="80" y="67" fill="rgb(var(--color-fill))" font-size="12">Impact utilisateur</text>
+      <rect x="40" y="96" width="210" height="52" rx="6" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+      <text x="60" y="127" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">2</text>
+      <text x="80" y="127" fill="rgb(var(--color-text-base))" font-size="12">Ambiance d'équipe</text>
+      <rect x="40" y="156" width="210" height="52" rx="6" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+      <text x="60" y="187" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">3</text>
+      <text x="80" y="187" fill="rgb(var(--color-text-base))" font-size="12">Aller vite</text>
+    </g>
+    <g>
+      <rect x="290" y="36" width="210" height="52" rx="6" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+      <text x="310" y="67" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">1</text>
+      <text x="330" y="67" fill="rgb(var(--color-text-base))" font-size="12">Qualité du code</text>
+      <rect x="290" y="96" width="210" height="52" rx="6" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+      <text x="310" y="127" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">2</text>
+      <text x="330" y="127" fill="rgb(var(--color-text-base))" font-size="12">Réflexion posée</text>
+      <rect x="290" y="156" width="210" height="52" rx="6" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+      <text x="310" y="187" fill="rgb(var(--color-fill))" font-size="12" font-weight="700">3</text>
+      <text x="330" y="187" fill="rgb(var(--color-fill))" font-size="12">Impact utilisateur</text>
+    </g>
+    <path d="M250 62 C 270 62, 270 182, 290 182" fill="none" stroke="rgb(var(--color-accent))" stroke-width="1.5" stroke-dasharray="4 3" stroke-opacity="0.7" />
+    <text x="260" y="238" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">Même préoccupation, rang 1 pour l'une, rang 3 pour l'autre</text>
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    Le même exercice, deux classements très différents — et une préoccupation
+    commune qui ne pèse pas du tout le même poids d'une personne à l'autre.
+  </figcaption>
+</figure>
+
 Connaître les préférences, ensuite, ce n'est pas pour ne distribuer que des
 tâches que chacun adore et cloisonner l'équipe. C'est pour savoir ce que les
 gens aiment et ce qu'ils détestent. On a tous une jauge intérieure : elle se
