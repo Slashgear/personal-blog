@@ -5,7 +5,9 @@ description: |
   qu'engineering manager. Ce billet porte sur le 1:1 et le suivi individuel :
   à quoi sert ce temps, comment le préparer, et ce que des mentors et
   collègues m'ont transmis sur le sujet.
-pubDatetime: 2026-09-03
+# AVANT MERGE : repasser pubDatetime à 2026-09-03 (sinon l'article reste
+# masqué dans la preview de déploiement, cf. src/utils/postFilter.ts)
+pubDatetime: 2026-08-28
 language: fr
 ogImage: "./cover.webp"
 tags:
