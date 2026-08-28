@@ -143,6 +143,12 @@ L'arrivée d'un alternant ou d'un stagiaire, ça se prépare. J'y reviendrai
 plus en détail dans un article dédié à l'onboarding, l'offboarding et le
 recrutement.
 
+![Jules Poissonnet et moi sur scène, micro en main, lors d'un talk](./lyonJS39.webp)
+
+_Avec Jules Poissonnet, mon ancien alternant, sur la scène de LyonJS 100
+pour un talk sur les stratégies de test. Accompagner un profil junior, c'est
+aussi l'amener jusqu'à partager devant une salle._
+
 ## Des besoins qui ne s'équilibrent pas
 
 > « Il est normal que certaines personnes de vos équipes nécessitent un
