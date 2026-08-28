@@ -253,6 +253,15 @@ pour visualiser d'un coup d'œil comment vos entretiens se répartissent. Le
 but est d'éviter la journée entièrement remplie de 1:1. Certains préfèrent
 tout enchaîner ; pour moi, ce serait un vrai cauchemar.
 
+Un 1:1 demande une écoute pleine et entière. En enchaîner cinq dans la même
+journée, c'est arriver au dernier vidé de son attention, à écouter à moitié
+la personne qui n'y est pour rien si elle passe en fin de liste. Chaque
+entretien laisse aussi du travail derrière lui : une note à prendre, une
+relance à faire, un sujet difficile à digérer avant de pouvoir passer à
+autre chose. Il faut un peu d'air entre deux pour ça. Enfin, espacer les
+1:1 leur laisse la souplesse de déborder : si l'un a besoin d'un quart
+d'heure de plus, il ne fait pas s'effondrer les quatre suivants.
+
 <figure>
   <svg
     viewBox="0 0 520 340"
