@@ -445,9 +445,49 @@ regarder, il vaut le détour.
 
 ## Donner du feedback
 
-> « TODO : citation » (TODO : auteur·ice)
+> « Praise in public, feedback in private. » (Sarah Drasner)
 
-<!-- TODO : rédiger. Notes à venir. -->
+Un manager passe une part énorme de son temps à donner du feedback. Je ne
+vais pas détailler ici _comment_ le formuler : le sujet mérite un article à
+lui seul. Je m'en tiens à quelques clés que l'expérience, et la lecture du
+livre de Sarah, m'ont fait comprendre.
+
+Commençons par le feedback positif. Quand quelqu'un de votre équipe fait
+quelque chose que vous trouvez franchement bien, vous _devez_ le dire,
+positivement, devant toute l'équipe. Et le redire lors du 1:1 suivant.
+
+Pourquoi deux fois ? Parce que chacun des deux canaux, seul, laisse un
+doute. En privé uniquement : « il me dit ça pour me faire plaisir, il ne le
+pense pas vraiment ». En public uniquement : « il le dit devant tout le
+monde, mais je ne sais pas ce qu'il en pense réellement ». Les deux
+ensemble lèvent l'ambiguïté.
+
+Tout cela suppose d'avoir noté ce qui s'est passé — c'est l'un des usages de
+mon journal de bord. Des faits consignés factuellement, ce sont des
+occasions de feedback prêtes à l'emploi. Et vous verrez qu'une personne
+ajoute bien plus facilement une ligne à son brag document quand vous avez
+commencé par reconnaître la chose vous-même.
+
+C'est quand, la dernière fois que vous avez dit à quelqu'un de votre équipe
+qu'il ou elle avait fait du bon travail ?
+
+Vient ensuite le feedback plus difficile : les rectifications, les axes
+d'amélioration.
+
+Sur ce terrain, l'expérience m'a appris qu'il existe très peu de situations
+qui justifient un feedback direct, sur le moment. La principale exception :
+le danger immédiat. Si quelqu'un dit ou fait quelque chose qui peut nuire
+directement à une autre personne, là, j'interviens tout de suite.
+
+En dehors de ça, laisser le feedback mijoter est plutôt une bonne chose.
+Qu'est-ce qui vous empêche de noter les faits et d'en reparler à froid lors
+d'un prochain 1:1 ? Ce délai vous laisse réfléchir à la manière d'amener les
+choses, et, la plupart du temps, il fait retomber la pression : « en fait,
+ce n'est pas si grave ». Si un feedback ne vaut pas la peine d'attendre une
+à deux semaines pour être donné, est-ce vraiment un feedback pertinent ?
+
+À l'inverse du feedback positif, celui-ci se donne uniquement en privé, dans
+un échange en tête-à-tête avec la personne.
 
 ## Le template de page de suivi individuel
 
