@@ -585,6 +585,35 @@ vide quand on fait des choses qui nous pèsent, elle se recharge quand on
 fait des choses qui nous plaisent. En connaissant les deux, vous pouvez
 aider chacun à tenir cet équilibre.
 
+<figure>
+  <svg
+    viewBox="0 0 520 250"
+    role="img"
+    aria-label="Une jauge intérieure : les tâches qui pèsent la vident, les tâches qui plaisent la rechargent ; le rôle du manager est d'aider à maintenir l'équilibre sur la durée"
+    style="width: 100%; max-width: 520px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>La jauge intérieure</title>
+    <rect x="234" y="20" width="52" height="10" rx="2" fill="rgb(var(--color-border))" />
+    <rect x="210" y="30" width="100" height="180" rx="12" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" />
+    <clipPath id="jauge-tank"><rect x="212" y="32" width="96" height="176" rx="10" /></clipPath>
+    <g clip-path="url(#jauge-tank)">
+      <rect x="212" y="120" width="96" height="88" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+    </g>
+    <line x1="210" y1="120" x2="310" y2="120" stroke="rgb(var(--color-border))" stroke-width="1" stroke-dasharray="3 3" />
+    <path d="M150 60 L150 140 M138 122 L150 142 L162 122" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="150" y="168" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Tâches qui pèsent</text>
+    <text x="150" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">la jauge se vide</text>
+    <path d="M370 140 L370 60 M358 78 L370 58 L382 78" fill="none" stroke="rgb(var(--color-accent))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="370" y="168" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Tâches qui plaisent</text>
+    <text x="370" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">la jauge se recharge</text>
+    <text x="260" y="234" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">L'équilibre se joue sur la durée, pas sur une seule journée</text>
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    Chacun porte cette jauge. Le travail de suivi, c'est de faire en sorte
+    qu'elle ne tombe pas durablement à zéro.
+  </figcaption>
+</figure>
+
 L'exercice est très simple et vous apprendra énormément sur votre équipe. Il
 se fait en 1:1 ; mais quand l'équipe est suffisamment à l'aise, il devient
 un bon jeu collectif : chacun arrive avec ses trois post-it par question, on
