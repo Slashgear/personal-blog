@@ -440,8 +440,10 @@ situations :
   succès de l'année, et pas seulement sur ceux des deux derniers mois ;
 - défendre l'impact et la vision de votre équipe dans l'entreprise.
 
-Je ne rends pas justice ici à la richesse du talk d'Anne-Laure : allez le
-regarder, il vaut le détour.
+Je ne rends pas justice ici à la richesse du talk d'Anne-Laure. Il vaut
+vraiment le détour :
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vktamvlVBx8" title="Talk d'Anne-Laure de Boissieu sur le brag document" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <!-- ============================================================
      SECTIONS À RÉDIGER (reprise prévue le 28/08 après-midi).
