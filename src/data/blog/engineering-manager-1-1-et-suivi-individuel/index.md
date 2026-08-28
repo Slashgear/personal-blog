@@ -626,9 +626,47 @@ vérifier de temps en temps que ce qui comptait il y a un an compte encore.
 
 ## Suivre et encourager l'apprentissage
 
-> « TODO : citation » (TODO : auteur·ice)
+> « Un jour j'ai monté un truc, les _Last Friday Talks_ : une demi-journée
+> de conférences tech internes, le dernier vendredi du mois, pour que les
+> gens racontent ce qu'ils font. Dès la deuxième édition ce n'était plus le
+> dernier vendredi, mais peu importe. »
+> ([Kenny Dits](https://www.linkedin.com/in/kenny-d-3761b59b/))
 
-<!-- TODO : rédiger. Notes à venir. -->
+Le manager a le devoir d'accompagner l'apprentissage de son équipe, sur deux
+axes qui vont ensemble : s'assurer que chacun a le temps et les moyens
+d'apprendre, et s'assurer que personne ne se disperse.
+
+J'ai fini par en faire un petit rituel. On liste ensemble, dans un tableau,
+les sujets de veille technique que la personne veut explorer, avec pour
+chacun : le sujet, son état, la date de départ, une durée estimée, une
+courte description et un pourcentage d'avancement. Tout y passe : des
+conférences à voir en replay, des articles à lire, des _proof of concept_
+d'outils ou de technos, des formations, des certifications.
+
+| Sujet                      | État     | Départ     | Durée est. | Avancement |
+| -------------------------- | -------- | ---------- | ---------- | ---------- |
+| Talk « Local-first » dotJS | partagé  | 2026-02-10 | 2 h        | 100 %      |
+| PoC OpenTelemetry          | terminé  | 2026-01-15 | 1 j        | 100 %      |
+| Rust pour l'embarqué       | en cours | 2026-03-02 | 3 j        | 60 %       |
+| Certification CKA          | demandé  | —          | 5 j        | 0 %        |
+
+Une seule règle : on ne démarre un sujet que s'il n'y en a pas déjà deux en
+cours. Autrement dit, pour en commencer un nouveau, il faut d'abord en
+terminer un, ou l'abandonner assumé.
+
+Les états possibles : _demandé_, _rejeté_ (très rare — sauf si quelqu'un
+vous annonce qu'il aimerait apprendre le saut en parachute), _en cours_,
+_terminé_, et _partagé_.
+
+Ce dernier état est le plus important. Pour moi, un apprentissage n'est
+vraiment terminé que lorsqu'il a été partagé : à l'équipe, à la guilde, à la
+communauté. C'est là que la citation de Kenny prend tout son sens — un
+espace de partage régulier, même bancal, même plus vraiment le dernier
+vendredi du mois, donne une destination à tout ce travail de veille.
+
+Je dois avouer qu'une fois le principe bien ancré et adopté par l'équipe, le
+suivi dans le tableau n'est plus vraiment nécessaire. Mais il aide à poser
+les bases.
 
 ## Et la suite ?
 
