@@ -515,9 +515,43 @@ suffisent :
 - Qu'est-ce que tu préfères faire ?
 - Qu'est-ce que tu aimes le moins faire ?
 
-Les réponses sont souvent éclairantes, et rarement celles qu'on aurait
-devinées. Elles se rangent dans la page de suivi de la personne, et vous y
-reviendrez : pour répartir les sujets, pour comprendre une tension, pour
+Rien qu'en posant ces questions, vous découvrirez que tout le monde ne
+classe pas les choses dans le même ordre que vous. L'un vous parlera des
+collègues et de l'ambiance, l'autre de la qualité du code, un troisième de
+l'impact pour les utilisateurs, un quatrième de cohérence. C'est très varié.
+Cet exercice vous fait mieux connaître les personnes de votre équipe et vous
+évite de leur plaquer un archétype construit sur vous-même ou sur un autre
+collègue.
+
+Vous remarquerez aussi que certaines personnes n'évoquent pas du tout
+certaines thématiques dans leur top 3. Ça ne veut pas dire que ça ne compte
+pas pour elles, seulement que ce n'est pas leur priorité. Et ces
+non-équivalences de priorité sont souvent à la racine des problèmes
+d'équipe.
+
+Imaginez A, « j'aime quand on règle vite les soucis des utilisateurs sans
+trop débattre », et B, « j'aime quand on prend le temps de réfléchir au
+problème pour trouver une solution qui répond parfaitement au besoin ».
+Inutile de faire un dessin : A et B finiront par se retrouver en tension.
+Mais si vous le savez, et que vous savez maintenant comment chacun
+fonctionne, vous pouvez mettre un peu d'eau dans leurs vins respectifs et
+trouver des compromis qui ménagent les valeurs des deux.
+
+Connaître les préférences, ensuite, ce n'est pas pour ne distribuer que des
+tâches que chacun adore et cloisonner l'équipe. C'est pour savoir ce que les
+gens aiment et ce qu'ils détestent. On a tous une jauge intérieure : elle se
+vide quand on fait des choses qui nous pèsent, elle se recharge quand on
+fait des choses qui nous plaisent. En connaissant les deux, vous pouvez
+aider chacun à tenir cet équilibre.
+
+L'exercice est très simple et vous apprendra énormément sur votre équipe. Il
+se fait en 1:1 ; mais quand l'équipe est suffisamment à l'aise, il devient
+un bon jeu collectif : chacun arrive avec ses trois post-it par question, on
+mélange le tout, et l'équipe doit retrouver quelle réponse va à qui, et dans
+quel ordre.
+
+Toutes ces réponses se rangent dans la page de suivi de la personne, et vous
+y reviendrez : pour répartir les sujets, pour comprendre une tension, pour
 vérifier de temps en temps que ce qui comptait il y a un an compte encore.
 
 ## Suivre et encourager l'apprentissage
