@@ -5,7 +5,7 @@ description: |
   qu'engineering manager. Ce billet porte sur le 1:1 et le suivi individuel :
   à quoi sert ce temps, comment le préparer, et ce que des mentors et
   collègues m'ont transmis sur le sujet.
-pubDatetime: 2026-08-27
+pubDatetime: 2026-09-03
 language: fr
 ogImage: "./cover.webp"
 tags:
@@ -104,7 +104,7 @@ tourneront en rond faute de matière.
 
 Cette cadence se négocie donc avec chaque managé. Elle n'a rien de figé et
 peut évoluer au fil du temps, mais une fois posée, elle devient un
-engagement : on ne l'annule pas, on la décale.
+engagement : **on ne l'annule pas, on la décale**.
 
 Concrètement, je recommande de fixer explicitement, en échangeant avec la
 personne, la fréquence et la durée du 1:1, puis de les consigner quelque
@@ -148,108 +148,6 @@ recrutement.
 _Avec Jules Poissonnet, mon ancien alternant, sur la scène de LyonJS 100
 pour un talk sur les stratégies de test. Accompagner un profil junior, c'est
 aussi l'amener jusqu'à partager devant une salle._
-
-## Des besoins qui ne s'équilibrent pas
-
-> « Il est normal que certaines personnes de vos équipes nécessitent un
-> accompagnement plus fort que d'autres. » (Sarah Drasner, dans le livre
-> [cité dans l'article
-> précédent](/posts/engineering-manager-role-et-posture))
-
-Ça peut être frustrant quand on débute dans le rôle, mais avec l'expérience,
-ça devient une évidence. Chaque personne de l'équipe est différente, et
-l'accompagnement que vous lui apportez n'est ni le même ni comparable d'un
-individu à l'autre. Oui, vous aurez peut-être quelqu'un qui occupera à lui
-seul la moitié de votre temps de management sur une semaine. Avec le recul,
-ça ne me choque plus.
-
-Et tout cela évolue. Une personne que vous suivez de loin à un moment donné
-sera peut-être bien plus demandeuse l'année suivante. Rien n'est
-nécessairement corrélé à l'expérience ou à l'autonomie du managé : un profil
-junior vous mobilisera souvent davantage, mais vous croiserez aussi des
-juniors qui gagnent très vite en autonomie et se jettent dans les ronces
-avec appétit pour apprendre. Dans ce cas, laissez-les faire.
-
-Ne soyez donc pas surpris que les besoins soient déséquilibrés dans
-l'équipe. Cherchez l'équité, pas l'égalité : donnez plus à celles et ceux
-qui en ont le plus besoin. C'est à vous de vous adapter à l'équipe, pas
-l'inverse.
-
-<figure>
-  <svg
-    viewBox="0 0 520 260"
-    role="img"
-    aria-label="Part du temps de management consacré à chaque personne de l'équipe sur une semaine : les barres sont très inégales, de 50 % pour l'une à 5 % pour une autre"
-    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
-  >
-    <title>Temps de management par personne, sur une semaine type</title>
-    <g stroke="rgb(var(--color-border))" stroke-width="1" stroke-opacity="0.35">
-      <line x1="240" y1="24" x2="240" y2="232" />
-      <line x1="380" y1="24" x2="380" y2="232" />
-    </g>
-    <g fill="rgb(var(--color-text-base))" font-size="10" opacity="0.6" text-anchor="middle">
-      <text x="240" y="248">25 %</text>
-      <text x="380" y="248">50 %</text>
-    </g>
-    <g fill="rgb(var(--color-text-base))" font-size="12" text-anchor="end">
-      <text x="92" y="46">Personne A</text>
-      <text x="92" y="86">Personne B</text>
-      <text x="92" y="126">Personne C</text>
-      <text x="92" y="166">Personne D</text>
-      <text x="92" y="206">Personne E</text>
-    </g>
-    <g fill="rgb(var(--color-accent))" fill-opacity="0.85">
-      <rect x="100" y="30" width="280" height="22" rx="2" />
-      <rect x="100" y="70" width="112" height="22" rx="2" />
-      <rect x="100" y="110" width="84" height="22" rx="2" />
-      <rect x="100" y="150" width="56" height="22" rx="2" />
-      <rect x="100" y="190" width="28" height="22" rx="2" />
-    </g>
-    <g fill="rgb(var(--color-text-base))" font-size="11" font-weight="600">
-      <text x="390" y="46">50 %</text>
-      <text x="222" y="86">20 %</text>
-      <text x="194" y="126">15 %</text>
-      <text x="166" y="166">10 %</text>
-      <text x="138" y="206">5 %</text>
-    </g>
-    <line x1="100" y1="24" x2="100" y2="232" stroke="rgb(var(--color-border))" stroke-width="1" />
-  </svg>
-  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
-    Un exemple : sur une semaine, une personne peut mobiliser la moitié de
-    votre temps de management, une autre à peine 5 %. C'est normal.
-  </figcaption>
-</figure>
-
-## Le syndrome du sauveteur compulsif
-
-> « Des fois j'y arrive, souvent j'me trompe, donc j'recommence, et puis
-> j'apprends. » (Orelsan — et je citerai qui je veux, hein)
-
-Quand on reçoit la responsabilité de manager, on a envie de protéger son
-équipe, de lui éviter les erreurs dans lesquelles on est soi-même tombé.
-L'intention est louable, mais elle prive l'équipe de l'essentiel de son
-apprentissage. L'image que je me fais du rôle, c'est plutôt : « je dois
-laisser mon équipe échouer pour qu'elle progresse. » C'est frustrant.
-
-Certains managers se diront « si je le fais moi-même, j'en ai pour dix
-minutes ». En réalité, vous en avez pour dix minutes _plus_ vos années
-d'expérience. La personne que vous managez, elle, n'a pas ces années : elle
-est en train de les construire. Laissez-la échouer.
-
-Vous allez me trouver vilain, mais il m'est arrivé de créer sciemment des
-situations où je « soulève légèrement le tapis » pour qu'une personne de
-l'équipe s'y prenne les pieds. Rassurez-vous, c'est une image : mon équipe
-n'est pas sponsorisée par les crèmes à l'arnica. Provoquer des situations
-qui font grandir l'équipe fait partie du rôle. C'est dans une certaine zone
-d'inconfort que vos managés apprennent et progressent, pas en refaisant ce
-qu'ils maîtrisent déjà.
-
-Votre alarme interne doit évidemment continuer de sonner : il s'agit
-d'éviter que l'équipe échoue trop fort, ou se fasse vraiment mal. Pour
-distinguer l'incident formateur du vrai problème, je me sers d'un test
-simple : si je m'imagine y repenser dans deux ans et que je le trouve
-encore grave à ce moment-là, alors il est grave aujourd'hui et je dois
-intervenir. Sinon, je laisse faire.
 
 ## Étaler ses 1:1 dans la semaine
 
@@ -333,6 +231,109 @@ d'heure de plus, il ne fait pas s'effondrer les quatre suivants.
   </figcaption>
 </figure>
 
+## Des besoins qui ne s'équilibrent pas
+
+> « Il est normal que certaines personnes de vos équipes nécessitent un
+> accompagnement plus fort que d'autres. » (Sarah Drasner, dans le livre
+> [cité dans l'article
+> précédent](/posts/engineering-manager-role-et-posture))
+
+Ça peut être frustrant quand on débute dans le rôle, mais avec l'expérience,
+ça devient une évidence. Chaque personne de l'équipe est différente, et
+l'accompagnement que vous lui apportez n'est ni le même ni comparable d'un
+individu à l'autre. Oui, vous aurez peut-être quelqu'un qui occupera à lui
+seul la moitié de votre temps de management sur une semaine. Avec le recul,
+ça ne me choque plus.
+
+Et tout cela évolue. Une personne que vous suivez de loin à un moment donné
+sera peut-être bien plus demandeuse l'année suivante. Rien n'est
+nécessairement corrélé à l'expérience ou à l'autonomie du managé : un profil
+junior vous mobilisera souvent davantage, mais vous croiserez aussi des
+juniors qui gagnent très vite en autonomie et se jettent dans les ronces
+avec appétit pour apprendre. Dans ce cas, laissez-les faire.
+
+Ne soyez donc pas surpris que les besoins soient déséquilibrés dans
+l'équipe. **Cherchez l'équité, pas l'égalité** : donnez plus à celles et
+ceux qui en ont le plus besoin. **C'est à vous de vous adapter à l'équipe,
+pas l'inverse.**
+
+<figure>
+  <svg
+    viewBox="0 0 520 260"
+    role="img"
+    aria-label="Part du temps de management consacré à chaque personne de l'équipe sur une semaine : les barres sont très inégales, de 50 % pour l'une à 5 % pour une autre"
+    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>Temps de management par personne, sur une semaine type</title>
+    <g stroke="rgb(var(--color-border))" stroke-width="1" stroke-opacity="0.35">
+      <line x1="240" y1="24" x2="240" y2="232" />
+      <line x1="380" y1="24" x2="380" y2="232" />
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="10" opacity="0.6" text-anchor="middle">
+      <text x="240" y="248">25 %</text>
+      <text x="380" y="248">50 %</text>
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="12" text-anchor="end">
+      <text x="92" y="46">Personne A</text>
+      <text x="92" y="86">Personne B</text>
+      <text x="92" y="126">Personne C</text>
+      <text x="92" y="166">Personne D</text>
+      <text x="92" y="206">Personne E</text>
+    </g>
+    <g fill="rgb(var(--color-accent))" fill-opacity="0.85">
+      <rect x="100" y="30" width="280" height="22" rx="2" />
+      <rect x="100" y="70" width="112" height="22" rx="2" />
+      <rect x="100" y="110" width="84" height="22" rx="2" />
+      <rect x="100" y="150" width="56" height="22" rx="2" />
+      <rect x="100" y="190" width="28" height="22" rx="2" />
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="11" font-weight="600">
+      <text x="390" y="46">50 %</text>
+      <text x="222" y="86">20 %</text>
+      <text x="194" y="126">15 %</text>
+      <text x="166" y="166">10 %</text>
+      <text x="138" y="206">5 %</text>
+    </g>
+    <line x1="100" y1="24" x2="100" y2="232" stroke="rgb(var(--color-border))" stroke-width="1" />
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    Un exemple : sur une semaine, une personne peut mobiliser la moitié de
+    votre temps de management, une autre à peine 5 %. C'est normal.
+  </figcaption>
+</figure>
+
+## Le syndrome du sauveteur compulsif
+
+> « Des fois j'y arrive, souvent j'me trompe, donc j'recommence, et puis
+> j'apprends. » (Orelsan — et pourquoi pas Dorothée tant qu'on y est ? je
+> cite qui je veux, hein)
+
+Quand on reçoit la responsabilité de manager, on a envie de protéger son
+équipe, de lui éviter les erreurs dans lesquelles on est soi-même tombé.
+L'intention est louable, mais elle prive l'équipe de l'essentiel de son
+apprentissage. L'image que je me fais du rôle, c'est plutôt : « je dois
+laisser mon équipe échouer pour qu'elle progresse. » C'est frustrant.
+
+Certains managers se diront « si je le fais moi-même, j'en ai pour dix
+minutes ». En réalité, **vous en avez pour dix minutes _plus_ vos années
+d'expérience**. La personne que vous managez, elle, n'a pas ces années :
+elle est en train de les construire. Laissez-la échouer.
+
+Vous allez me trouver vilain, mais il m'est arrivé de créer sciemment des
+situations où je « soulève légèrement le tapis » pour qu'une personne de
+l'équipe s'y prenne les pieds. Rassurez-vous, c'est une image : mon équipe
+n'est pas sponsorisée par les crèmes à l'arnica. Provoquer des situations
+qui font grandir l'équipe fait partie du rôle. C'est dans une certaine zone
+d'inconfort que vos managés apprennent et progressent, pas en refaisant ce
+qu'ils maîtrisent déjà.
+
+Votre alarme interne doit évidemment continuer de sonner : il s'agit
+d'éviter que l'équipe échoue trop fort, ou se fasse vraiment mal. Pour
+distinguer l'incident formateur du vrai problème, je me sers d'un test
+simple : si je m'imagine y repenser dans deux ans et que je le trouve
+encore grave à ce moment-là, alors il est grave aujourd'hui et je dois
+intervenir. Sinon, je laisse faire.
+
 ## Tenir un journal de bord
 
 > « Journal de bord : mer calme, embarquement de 4 passagers, vent NE
@@ -357,7 +358,7 @@ débordée.
 
 Je conseille donc de tenir un journal de bord : un endroit où consigner les
 événements de la vie de l'équipe. Il vous est strictement personnel, et sa
-seule contrainte est de vous obliger à rester factuel.
+seule contrainte est de **vous obliger à rester factuel**.
 
 On peut y noter la mise en production d'une fonctionnalité, un incident, la
 réussite marquante d'une personne, une communication qui est mal passée, un
@@ -485,8 +486,9 @@ En dehors de ça, laisser le feedback mijoter est plutôt une bonne chose.
 Qu'est-ce qui vous empêche de noter les faits et d'en reparler à froid lors
 d'un prochain 1:1 ? Ce délai vous laisse réfléchir à la manière d'amener les
 choses, et, la plupart du temps, il fait retomber la pression : « en fait,
-ce n'est pas si grave ». Si un feedback ne vaut pas la peine d'attendre une
-à deux semaines pour être donné, est-ce vraiment un feedback pertinent ?
+ce n'est pas si grave ». **Si un feedback ne vaut pas la peine d'attendre
+une à deux semaines pour être donné, est-ce vraiment un feedback
+pertinent ?**
 
 À l'inverse du feedback positif, celui-ci se donne uniquement en privé, dans
 un échange en tête-à-tête avec la personne.
@@ -520,15 +522,15 @@ collègue.
 
 Vous remarquerez aussi que certaines personnes n'évoquent pas du tout
 certaines thématiques dans leur top 3. Ça ne veut pas dire que ça ne compte
-pas pour elles, seulement que ce n'est pas leur priorité. Et ces
+pas pour elles, seulement que ce n'est pas leur priorité. Et **ces
 non-équivalences de priorité sont souvent à la racine des problèmes
-d'équipe.
+d'équipe**.
 
-Imaginez A, « j'aime quand on règle vite les soucis des utilisateurs sans
-trop débattre », et B, « j'aime quand on prend le temps de réfléchir au
+Imaginez Alex, « j'aime quand on règle vite les soucis des utilisateurs sans
+trop débattre », et Sam, « j'aime quand on prend le temps de réfléchir au
 problème pour trouver une solution qui répond parfaitement au besoin ».
-Inutile de faire un dessin : A et B finiront par se retrouver en tension.
-Mais si vous le savez, et que vous savez maintenant comment chacun
+Inutile de faire un dessin : Alex et Sam finiront par se retrouver en
+tension. Mais si vous le savez, et que vous savez maintenant comment chacun
 fonctionne, vous pouvez mettre un peu d'eau dans leurs vins respectifs et
 trouver des compromis qui ménagent les valeurs des deux.
 
@@ -540,8 +542,8 @@ trouver des compromis qui ménagent les valeurs des deux.
     style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
   >
     <title>Deux classements de priorités très différents</title>
-    <text x="145" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Personne A</text>
-    <text x="395" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Personne B</text>
+    <text x="145" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Alex</text>
+    <text x="395" y="22" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="700">Sam</text>
     <g>
       <rect x="40" y="36" width="210" height="52" rx="6" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
       <text x="60" y="67" fill="rgb(var(--color-fill))" font-size="12" font-weight="700">1</text>
@@ -572,6 +574,12 @@ trouver des compromis qui ménagent les valeurs des deux.
     commune qui ne pèse pas du tout le même poids d'une personne à l'autre.
   </figcaption>
 </figure>
+
+L'exercice est très simple et vous apprendra énormément sur votre équipe. Il
+se fait en 1:1 ; mais quand l'équipe est suffisamment à l'aise, il devient
+un bon jeu collectif : chacun arrive avec ses trois post-it par question, on
+mélange le tout, et l'équipe doit retrouver quelle réponse va à qui, et dans
+quel ordre.
 
 Connaître les préférences, ensuite, ce n'est pas pour ne distribuer que des
 tâches que chacun adore et cloisonner l'équipe. C'est pour savoir ce que les
@@ -609,12 +617,6 @@ aider chacun à tenir cet équilibre.
   </figcaption>
 </figure>
 
-L'exercice est très simple et vous apprendra énormément sur votre équipe. Il
-se fait en 1:1 ; mais quand l'équipe est suffisamment à l'aise, il devient
-un bon jeu collectif : chacun arrive avec ses trois post-it par question, on
-mélange le tout, et l'équipe doit retrouver quelle réponse va à qui, et dans
-quel ordre.
-
 Toutes ces réponses se rangent dans la page de suivi de la personne, et vous
 y reviendrez : pour répartir les sujets, pour comprendre une tension, pour
 vérifier de temps en temps que ce qui comptait il y a un an compte encore.
@@ -638,6 +640,8 @@ courte description et un pourcentage d'avancement. Tout y passe : des
 conférences à voir en replay, des articles à lire, des _proof of concept_
 d'outils ou de technos, des formations, des certifications.
 
+Un extrait, colonne _description_ mise de côté pour la lisibilité :
+
 | Sujet                      | État     | Départ     | Durée est. | Avancement |
 | -------------------------- | -------- | ---------- | ---------- | ---------- |
 | Talk « Local-first » dotJS | partagé  | 2026-02-10 | 2 h        | 100 %      |
@@ -653,9 +657,9 @@ Les états possibles : _demandé_, _rejeté_ (très rare — sauf si quelqu'un
 vous annonce qu'il aimerait apprendre le saut en parachute), _en cours_,
 _terminé_, et _partagé_.
 
-Ce dernier état est le plus important. Pour moi, un apprentissage n'est
-vraiment terminé que lorsqu'il a été partagé : à l'équipe, à la guilde, à la
-communauté. C'est là que la citation de Kenny prend tout son sens — un
+Ce dernier état est le plus important. Pour moi, **un apprentissage n'est
+vraiment terminé que lorsqu'il a été partagé** : à l'équipe, à la guilde, à
+la communauté. C'est là que la citation de Kenny prend tout son sens — un
 espace de partage régulier, même bancal, même plus vraiment le dernier
 vendredi du mois, donne une destination à tout ce travail de veille.
 
@@ -716,8 +720,7 @@ notes de chaque 1:1 deviennent des pages enfant de cette page : le suivi
 dans la durée d'un côté, le fil des échanges de l'autre.
 
 Ce que je ne détaille pas ici, c'est ce qu'on se dit réellement en 1:1 et ce
-qu'on cherche à y adresser. C'est un sujet à part entière ; je pourrai
-l'écrire si on me le demande, mais cet article est déjà bien assez long.
+qu'on cherche à y adresser : c'est un sujet à part entière.
 
 ## Et la suite ?
 
