@@ -445,12 +445,6 @@ vraiment le détour :
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vktamvlVBx8" title="Talk d'Anne-Laure de Boissieu sur le brag document" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<!-- ============================================================
-     SECTIONS À RÉDIGER (reprise prévue le 28/08 après-midi).
-     Format : citation + reformulation des notes. Retirer les
-     blocs TODO avant publication.
-     ============================================================ -->
-
 ## Donner du feedback
 
 > « Praise in public, feedback in private. » (Sarah Drasner)
@@ -496,13 +490,6 @@ ce n'est pas si grave ». Si un feedback ne vaut pas la peine d'attendre une
 
 À l'inverse du feedback positif, celui-ci se donne uniquement en privé, dans
 un échange en tête-à-tête avec la personne.
-
-## Le template de page de suivi individuel
-
-> « TODO : citation » (TODO : auteur·ice)
-
-<!-- TODO : rédiger + illustration du template (structure de la page :
-     attentes, régularité, historique, feedbacks, objectifs…). -->
 
 ## Les valeurs et les préférences
 
@@ -675,6 +662,62 @@ vendredi du mois, donne une destination à tout ce travail de veille.
 Je dois avouer qu'une fois le principe bien ancré et adopté par l'équipe, le
 suivi dans le tableau n'est plus vraiment nécessaire. Mais il aide à poser
 les bases.
+
+## Le template de page de suivi individuel
+
+Tout ce qui précède se range quelque part. Ce que j'ai fini par construire,
+c'est une page unique par managé — un _hub_ de suivi. Chez moi elle vit dans
+Confluence, mais Notion, un Google Doc ou n'importe quel autre outil font
+tout aussi bien l'affaire. Le point important : elle n'est accessible qu'à
+deux personnes, la personne concernée et moi.
+
+Elle rassemble, au même endroit :
+
+- l'identité et la date d'arrivée ;
+- les **valeurs et préférences** : le top 3 de ce qui compte, les sujets
+  préférés, les sujets moins aimés ;
+- le **brag document** : titre, date, description ;
+- l'**apprentissage supervisé** : le tableau vu plus haut.
+
+Voici un squelette que vous pouvez copier tel quel :
+
+```markdown
+# Suivi — Prénom NOM
+
+- **Date d'arrivée :** AAAA-MM-JJ
+
+## Valeurs et préférences
+
+- **Ce qui compte le plus (top 3) :**
+  1. …
+  2. …
+  3. …
+- **Sujets préférés :** …
+- **Sujets moins aimés :** …
+
+## Brag document
+
+| Titre | Date       | Description |
+| ----- | ---------- | ----------- |
+| …     | AAAA-MM-JJ | …           |
+
+## Apprentissage supervisé
+
+<!-- États : demandé · rejeté · en cours · terminé · partagé -->
+<!-- Règle : jamais plus de 2 sujets « en cours » en même temps -->
+
+| Sujet | État | Départ     | Durée est. | Description | Avancement |
+| ----- | ---- | ---------- | ---------- | ----------- | ---------- |
+| …     | …    | AAAA-MM-JJ | …          | …           | … %        |
+```
+
+Ce hub, c'est en quelque sorte le résumé matériel de cet article. Et les
+notes de chaque 1:1 deviennent des pages enfant de cette page : le suivi
+dans la durée d'un côté, le fil des échanges de l'autre.
+
+Ce que je ne détaille pas ici, c'est ce qu'on se dit réellement en 1:1 et ce
+qu'on cherche à y adresser. C'est un sujet à part entière ; je pourrai
+l'écrire si on me le demande, mais cet article est déjà bien assez long.
 
 ## Et la suite ?
 
