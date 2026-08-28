@@ -595,20 +595,20 @@ aider chacun à tenir cet équilibre.
     style="width: 100%; max-width: 520px; height: auto; margin: 0 auto; display: block;"
   >
     <title>La jauge intérieure</title>
-    <rect x="234" y="20" width="52" height="10" rx="2" fill="rgb(var(--color-border))" />
-    <rect x="210" y="30" width="100" height="180" rx="12" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" />
-    <clipPath id="jauge-tank"><rect x="212" y="32" width="96" height="176" rx="10" /></clipPath>
+    <rect x="238" y="20" width="44" height="10" rx="2" fill="rgb(var(--color-border))" />
+    <rect x="216" y="30" width="88" height="180" rx="12" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" />
+    <clipPath id="jauge-tank"><rect x="218" y="32" width="84" height="176" rx="10" /></clipPath>
     <g clip-path="url(#jauge-tank)">
-      <rect x="212" y="120" width="96" height="88" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+      <rect x="218" y="120" width="84" height="88" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
     </g>
-    <line x1="210" y1="120" x2="310" y2="120" stroke="rgb(var(--color-border))" stroke-width="1" stroke-dasharray="3 3" />
-    <path d="M150 60 L150 140 M138 122 L150 142 L162 122" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="150" y="168" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Tâches qui pèsent</text>
-    <text x="150" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">la jauge se vide</text>
-    <path d="M370 140 L370 60 M358 78 L370 58 L382 78" fill="none" stroke="rgb(var(--color-accent))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="370" y="168" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Tâches qui plaisent</text>
-    <text x="370" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">la jauge se recharge</text>
-    <text x="260" y="234" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">L'équilibre se joue sur la durée, pas sur une seule journée</text>
+    <line x1="216" y1="120" x2="304" y2="120" stroke="rgb(var(--color-border))" stroke-width="1" stroke-dasharray="3 3" />
+    <path d="M112 60 L112 140 M100 122 L112 142 L124 122" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="112" y="168" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Tâches qui pèsent</text>
+    <text x="112" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">la jauge se vide</text>
+    <path d="M408 140 L408 60 M396 78 L408 58 L420 78" fill="none" stroke="rgb(var(--color-accent))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="408" y="168" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Tâches qui plaisent</text>
+    <text x="408" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">la jauge se recharge</text>
+    <text x="260" y="236" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">L'équilibre se joue sur la durée, pas sur une seule journée</text>
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
     Chacun porte cette jauge. Le travail de suivi, c'est de faire en sorte
