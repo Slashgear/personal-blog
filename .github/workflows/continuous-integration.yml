@@ -34,6 +34,23 @@ jobs:
           configPath: "./.lighthouserc.json"
           uploadArtifacts: true
           temporaryPublicStorage: true
+      - name: Accessibility audit (pa11y)
+        # Non-blocking for now: pa11y-ci's default threshold is 0, so any
+        # finding across the whole sitemap exits non-zero, and some older
+        # posts already have real WCAG issues to work through. Reporting
+        # only until there's a plan to burn down the backlog.
+        # Runs via npx (not the project's bun-installed pa11y-ci) so
+        # Puppeteer's postinstall always downloads Chromium, regardless of
+        # bun's script-execution policy.
+        continue-on-error: true
+        run: |
+          bun run preview -- --port 4321 &
+          for i in $(seq 1 30); do curl -sf http://localhost:4321/ > /dev/null && break; sleep 1; done
+          npx --yes pa11y-ci@4.1.1 \
+            --config ./.pa11yci.json \
+            --sitemap http://localhost:4321/sitemap-0.xml \
+            --sitemap-find "https://blog.slashgear.dev" \
+            --sitemap-replace "http://localhost:4321"
 
   deploy:
     needs: build
