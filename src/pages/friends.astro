@@ -15,35 +15,76 @@ type Friend = {
   };
 };
 
-const friends: Friend[] = await getCollection("friends");
+const friends: Friend[] = (await getCollection("friends")).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name)
+);
+
+function hostname(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
 ---
 
 <Layout title={`Friends you should follow | ${SITE.title}`}>
   <Header activeNav="friends" />
   <Breadcrumbs />
-  <main id="main-content">
-    <section id="about" class="prose mb-28 max-w-5xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-4xl">
-        Friends you should follow
-      </h1>
-      <div class="grid grid-cols-3 gap-4 auto-rows-fr">
-        {
-          friends.map(friend => (
+  <main id="main-content" class="mx-auto max-w-5xl px-4">
+    <h1 class="friends-title">Friends you should follow</h1>
+    <p class="friends-subtitle">
+      People I've worked, learned, or shared a beer with — and whose work is
+      worth your time.
+    </p>
+    <ul class="friends-grid">
+      {
+        friends.map(friend => (
+          <li>
             <a
               href={friend.data.site}
               target="_blank"
               rel="noopener noreferrer"
-              class="block"
+              class="friend-card group"
             >
-              <figure>
-                <img alt={friend.data.name} src={friend.data.image} />
-                <figcaption>{friend.data.name}</figcaption>
-              </figure>
+              <img
+                alt=""
+                src={friend.data.image}
+                loading="lazy"
+                class="friend-avatar"
+              />
+              <span class="friend-name">{friend.data.name}</span>
+              <span class="friend-site">{hostname(friend.data.site)}</span>
             </a>
-          ))
-        }
-      </div>
-    </section>
+          </li>
+        ))
+      }
+    </ul>
   </main>
   <Footer />
 </Layout>
+
+<style>
+  @reference "../styles/base.css";
+  .friends-title {
+    @apply mt-8 text-2xl font-bold tracking-wider sm:text-4xl;
+  }
+  .friends-subtitle {
+    @apply mb-8 mt-2 max-w-2xl opacity-70;
+  }
+  .friends-grid {
+    @apply mb-28 grid grid-cols-2 gap-4 sm:grid-cols-4;
+  }
+  .friend-card {
+    @apply flex flex-col items-center gap-3 rounded-xl border border-skin-line bg-skin-card/20 p-4 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-skin-accent hover:bg-skin-accent/5;
+  }
+  .friend-avatar {
+    @apply aspect-square w-full rounded-full object-cover ring-1 ring-skin-line group-hover:ring-skin-accent;
+  }
+  .friend-name {
+    @apply font-medium text-skin-base;
+  }
+  .friend-site {
+    @apply -mt-2 text-xs opacity-60;
+  }
+</style>
