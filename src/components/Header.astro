@@ -187,6 +187,11 @@ const { activeNav } = Astro.props;
   nav ul li:nth-last-child(2) {
     @apply col-span-1;
   }
+  /* Visually separate the icon actions (search, theme toggle) from the
+     text nav links once they sit in a single row. */
+  nav ul li:nth-last-child(2) {
+    @apply sm:ml-2 sm:border-l sm:border-skin-line sm:pl-4;
+  }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;
   }

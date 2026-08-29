@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
+import Card, { type CardImage } from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE, SOCIALS } from "@config";
@@ -19,6 +19,31 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+
+// Pre-resolve an optimized thumbnail for each post that has a local cover
+// image, so the (client-hydratable) Card component only ever needs a plain
+// <img>, never Astro's build-time-only <Image>.
+async function getThumb(
+  ogImage: (typeof sortedPosts)[number]["data"]["ogImage"],
+  width: number
+): Promise<CardImage | undefined> {
+  if (!ogImage || typeof ogImage === "string") return undefined;
+  const optimized = await getImage({ src: ogImage, width });
+  return {
+    src: optimized.src,
+    width: optimized.attributes.width,
+    height: optimized.attributes.height,
+  };
+}
+
+const featuredThumbs = await Promise.all(
+  featuredPosts.map(({ data }) => getThumb(data.ogImage, 900))
+);
+const recentThumbs = await Promise.all(
+  recentPosts
+    .slice(0, SITE.postPerIndex)
+    .map(({ data }) => getThumb(data.ogImage, 224))
+);
 ---
 
 <Layout>
@@ -32,10 +57,15 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           width={120}
           height={120}
           densities={[1, 2, 3]}
-          class="max-w-30 block aspect-square rounded-full"
+          class="max-w-30 block aspect-square rounded-full ring-2 ring-skin-accent/60 ring-offset-4 ring-offset-skin-fill"
         />
       </aside>
       <article>
+        <p class="prompt-line" aria-hidden="true">
+          <span class="prompt-user">antoine@slashgear</span><span
+            class="prompt-sep">:</span
+          ><span class="prompt-path">~</span><span class="prompt-sep">$</span> whoami
+        </p>
         <h1>Slashgear</h1>
         <a
           target="_blank"
@@ -56,22 +86,21 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
         <p>
           Written by <strong>Antoine Caron</strong> who lives and works in Lyon (France)
-          building useful things at <a
-            href="www.scaleway.com"
-            class="text-skin-accent">Scaleway</a
+          building useful things at <a href="www.scaleway.com" class="prose-link"
+            >Scaleway</a
           >, previously at <a
             href="https://www.bedrockstreaming.com/"
-            class="text-skin-accent">Bedrock</a
+            class="prose-link">Bedrock</a
           >. You should follow him <a
             href="https://bsky.app/profile/slashgear.dev"
-            class="text-skin-accent">on Bluesky</a
-          >. Take a look at <a href="/friends" class="text-skin-accent"
+            class="prose-link">on Bluesky</a
+          >. Take a look at <a href="/friends" class="prose-link"
             >my friends websites</a
-          >. You could also <a href="/conferences" class="text-skin-accent"
+          >. You could also <a href="/conferences" class="prose-link"
             >take a look at the conferences I gave</a
           >. If you want to see my professional background, <a
             href="/resume"
-            class="text-skin-accent">my resume is available here</a
+            class="prose-link">my resume is available here</a
           >.
         </p>
         {
@@ -93,14 +122,36 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <>
           <section id="featured">
             <h2>Featured</h2>
-            <ul>
-              {featuredPosts.map(({ data, id }) => (
-                <Card
-                  href={`/posts/${id}/`}
-                  frontmatter={data}
-                  secHeading={false}
-                />
-              ))}
+            <ul class={`featured-list ${featuredPosts.length === 1 ? "featured-list--solo" : ""}`}>
+              {featuredPosts.map(({ data, id }, index) => {
+                const thumb = featuredThumbs[index];
+                const isFrench = data.language === "fr";
+                const title = isFrench ? `🇫🇷 ${data.title}` : data.title;
+                return (
+                  <li class="featured-card">
+                    <a href={`/posts/${id}/`} class="featured-card-link group">
+                      {thumb && (
+                        <img
+                          src={thumb.src}
+                          width={thumb.width}
+                          height={thumb.height}
+                          loading="eager"
+                          alt=""
+                          class="featured-card-image"
+                        />
+                      )}
+                      <span class="featured-card-body">
+                        <span class="featured-card-title" lang={data.language}>
+                          {title}
+                        </span>
+                        <span class="featured-card-description" lang={data.language}>
+                          {data.description}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </section>
           {recentPosts.length > 0 && <Hr />}
@@ -120,6 +171,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                     href={`/posts/${id}/`}
                     frontmatter={data}
                     secHeading={false}
+                    image={recentThumbs[index]}
                   />
                 )
             )}
@@ -150,7 +202,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl;
+    @apply my-2 inline-block text-4xl font-bold sm:my-3 sm:text-5xl;
   }
   #hero .rss-link {
     @apply mb-6;
@@ -160,6 +212,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   #hero p {
     @apply my-2;
+  }
+  .prompt-line {
+    @apply mb-0 text-sm opacity-70 sm:text-base;
+  }
+  .prompt-user {
+    @apply text-skin-accent;
+  }
+  .prompt-sep {
+    @apply opacity-60;
+  }
+  .prose-link {
+    @apply underline decoration-dashed underline-offset-4 hover:text-skin-accent;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;
@@ -179,5 +243,43 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
+  }
+
+  /* ===== Featured cards ===== */
+  .featured-list {
+    @apply mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2;
+  }
+  .featured-list--solo {
+    @apply sm:grid-cols-1;
+  }
+  .featured-card {
+    @apply overflow-hidden rounded-lg border border-skin-line bg-skin-card/40 transition-transform hover:-translate-y-0.5;
+  }
+  .featured-card-link {
+    @apply flex h-full flex-col;
+  }
+  .featured-list--solo .featured-card-link {
+    @apply sm:flex-row;
+  }
+  .featured-card-image {
+    @apply aspect-video w-full object-cover;
+  }
+  .featured-list--solo .featured-card-image {
+    @apply sm:aspect-auto sm:h-auto sm:w-2/5;
+  }
+  .featured-card-body {
+    @apply flex flex-1 flex-col gap-2 p-4;
+  }
+  .featured-list--solo .featured-card-body {
+    @apply sm:justify-center sm:p-6;
+  }
+  .featured-card-title {
+    @apply text-xl font-semibold text-skin-accent decoration-dashed underline-offset-4 group-hover:underline;
+  }
+  .featured-list--solo .featured-card-title {
+    @apply sm:text-2xl;
+  }
+  .featured-card-description {
+    @apply text-sm opacity-80;
   }
 </style>
