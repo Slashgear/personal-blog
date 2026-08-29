@@ -102,6 +102,32 @@
     height: auto;
   }
 
+  /* ===== Resume: give each job entry a clear, scannable header =====
+     Each job is an h3 immediately followed by an italic
+     "<dates> · <location>" paragraph. Style that pair as a timeline
+     node (dot + badge) with generous separation from the next job,
+     without touching the markdown content itself. Needs #about's
+     higher specificity to beat .prose's !important heading color. */
+  #about h3 {
+    @apply relative !mb-1 !mt-16 border-t border-skin-line pl-5 pt-8 !text-xl !not-italic !text-skin-accent first-of-type:!mt-8 first-of-type:border-t-0 first-of-type:pt-0;
+  }
+  #about h3::before {
+    @apply absolute left-0 top-[2.25rem] h-2.5 w-2.5 rounded-full bg-skin-accent;
+    content: "";
+  }
+  #about h3:first-of-type::before {
+    @apply top-2;
+  }
+  #about h3 + p {
+    @apply relative mb-4 mt-1 inline-block rounded-full bg-skin-card/60 px-3 py-1 text-sm !not-italic opacity-80;
+  }
+  #about h4 {
+    @apply !text-base !font-semibold opacity-90;
+  }
+  #about h2 {
+    @apply !mt-16 first-of-type:!mt-0;
+  }
+
   /* ===== scrollbar ===== */
   html {
     overflow-y: scroll;
