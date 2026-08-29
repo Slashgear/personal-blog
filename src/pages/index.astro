@@ -66,23 +66,22 @@ const recentThumbs = await Promise.all(
             class="prompt-sep">:</span
           ><span class="prompt-path">~</span><span class="prompt-sep">$</span> whoami
         </p>
-        <h1>Slashgear</h1>
-        <a
-          target="_blank"
-          href="/rss.xml"
-          class="rss-link"
-          aria-label="rss feed"
-          title="RSS Feed"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-            ><path
-              d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-            ></path><path
-              d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-            ></path><circle cx="6" cy="18" r="2"></circle>
-          </svg>
-          <span class="sr-only">RSS Feed</span>
-        </a>
+        <div class="title-row">
+          <h1>Slashgear</h1>
+          <a target="_blank" href="/rss.xml" class="rss-link" title="RSS Feed">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="rss-icon"
+              aria-hidden="true"
+              ><path
+                d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+              ></path><path
+                d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+              ></path><circle cx="6" cy="18" r="2"></circle>
+            </svg>
+            RSS Feed
+          </a>
+        </div>
 
         <p>
           Written by <strong>Antoine Caron</strong> who lives and works in Lyon (France)
@@ -204,11 +203,14 @@ const recentThumbs = await Promise.all(
   #hero h1 {
     @apply my-2 inline-block text-4xl font-bold sm:my-3 sm:text-5xl;
   }
+  .title-row {
+    @apply mb-4 flex flex-wrap items-center gap-3 sm:gap-4;
+  }
   #hero .rss-link {
-    @apply mb-6;
+    @apply flex items-center gap-1.5 rounded-full border border-skin-accent/40 px-3 py-1 text-sm font-medium text-skin-accent transition-colors hover:border-skin-accent hover:bg-skin-accent/10;
   }
   #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+    @apply h-4 w-4 fill-skin-accent;
   }
   #hero p {
     @apply my-2;
