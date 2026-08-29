@@ -1,6 +1,7 @@
 # build output
 dist/
 .output/
+.lighthouseci/
 
 # dependencies
 node_modules/

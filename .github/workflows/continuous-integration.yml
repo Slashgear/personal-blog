@@ -24,6 +24,15 @@ jobs:
           package-manager: bun@latest
       - name: Check format
         run: bun run format:check
+      - name: Lighthouse CI
+        # Non-blocking for now: no score assertions are configured, so this
+        # only reports. continue-on-error is an extra safety net so a flaky
+        # upload to temporary public storage can never fail the build.
+        uses: treosh/lighthouse-ci-action@v12
+        continue-on-error: true
+        with:
+          configPath: "./.lighthouserc.json"
+          uploadArtifacts: true
 
   deploy:
     needs: build
