@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
@@ -9,6 +10,7 @@ import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { SITE, SOCIALS } from "@config";
+import pictureOfMe from "@assets/picture-of-me.png";
 
 const posts = await getCollection("blog");
 
@@ -24,9 +26,12 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <main id="main-content">
     <section id="hero" class="flex justify-center gap-5 align-middle">
       <aside class="hidden flex-col justify-center sm:flex">
-        <img
-          src="/picture_of_me.png"
+        <Image
+          src={pictureOfMe}
           alt="Antoine Caron"
+          width={120}
+          height={120}
+          densities={[1, 2, 3]}
           class="max-w-30 block aspect-square rounded-full"
         />
       </aside>

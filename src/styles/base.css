@@ -15,7 +15,7 @@
   --color-skin-card-muted: rgb(var(--color-card-muted));
   --color-skin-line: rgb(var(--color-border));
 
-  --font-family-mono: "IBM Plex Mono", monospace;
+  --font-mono: "IBM Plex Mono", monospace;
 }
 
 @layer base {

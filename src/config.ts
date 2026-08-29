@@ -6,7 +6,7 @@ export const SITE: Site = {
   profile: "https://blog.slashgear.dev/",
   desc: "Antoine Caron personal blog where you can read news about his open-source courses, packages.",
   title: "Antoine Caron",
-  ogImage: "picture-of-me.png",
+  ogImage: "og.png",
   lightAndDarkMode: true,
   postPerIndex: 6,
   postPerPage: 6,
