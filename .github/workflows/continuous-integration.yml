@@ -24,6 +24,40 @@ jobs:
           package-manager: bun@latest
       - name: Check format
         run: bun run format:check
+      - name: Upload dist for audits
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    name: "Deploy 🚀"
+    if: ${{ github.ref == 'refs/heads/main' }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+  audits:
+    needs: build
+    runs-on: ubuntu-latest
+    name: "Audits 🔍"
+    # Runs alongside deploy, not before it: these are reporting-only checks
+    # (see continue-on-error below on each step) and shouldn't add minutes
+    # to the deploy critical path. Serves the downloaded dist/ with a plain
+    # static server, so this job never needs `bun install`.
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: dist
+          path: dist
       - name: Lighthouse CI
         # Non-blocking for now: no score assertions are configured, so this
         # only reports. continue-on-error is an extra safety net so a flaky
@@ -39,28 +73,14 @@ jobs:
         # finding across the whole sitemap exits non-zero, and some older
         # posts already have real WCAG issues to work through. Reporting
         # only until there's a plan to burn down the backlog.
-        # Runs via npx (not the project's bun-installed pa11y-ci) so
-        # Puppeteer's postinstall always downloads Chromium, regardless of
-        # bun's script-execution policy.
+        # Runs via npx so Puppeteer's postinstall always downloads
+        # Chromium, regardless of the runner's script-execution policy.
         continue-on-error: true
         run: |
-          bun run preview -- --port 4321 &
+          python3 -m http.server 4321 --directory dist &
           for i in $(seq 1 30); do curl -sf http://localhost:4321/ > /dev/null && break; sleep 1; done
           npx --yes pa11y-ci@4.1.1 \
             --config ./.pa11yci.json \
             --sitemap http://localhost:4321/sitemap-0.xml \
             --sitemap-find "https://blog.slashgear.dev" \
             --sitemap-replace "http://localhost:4321"
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    name: "Deploy 🚀"
-    if: ${{ github.ref == 'refs/heads/main' }}
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
