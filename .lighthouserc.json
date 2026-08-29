@@ -2,11 +2,7 @@
   "ci": {
     "collect": {
       "staticDistDir": "./dist",
-      "url": [
-        "/",
-        "/posts/",
-        "/posts/managing-terraform-modules-with-nx/"
-      ],
+      "url": ["/", "/posts/", "/posts/managing-terraform-modules-with-nx/"],
       "numberOfRuns": 1
     },
     "upload": {
