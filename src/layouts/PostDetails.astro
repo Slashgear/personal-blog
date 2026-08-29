@@ -9,6 +9,7 @@ import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 import { render } from "astro:content";
+import { Image } from "astro:assets";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -88,8 +89,20 @@ const nextPost =
     />
 
     {
-      ogImageUrl && (
-        <img alt="" src={ogImageUrl} class="w-full my-10 rounded-sm" />
+      typeof ogImage === "string" ? (
+        ogImage && <img alt="" src={ogImage} class="w-full my-10 rounded-sm" />
+      ) : (
+        ogImage && (
+          <Image
+            src={ogImage}
+            alt=""
+            widths={[400, 768, 1000]}
+            sizes="(max-width: 768px) 100vw, 992px"
+            loading="eager"
+            fetchpriority="high"
+            class="w-full my-10 rounded-sm"
+          />
+        )
       )
     }
 
