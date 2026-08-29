@@ -11,7 +11,7 @@
     "format:check": "oxfmt --check .",
     "format": "oxfmt --write .",
     "lint": "oxlint .",
-    "a11y": "pa11y-ci --config .pa11yci.json --sitemap http://localhost:4321/sitemap-0.xml --sitemap-find https://blog.slashgear.dev --sitemap-replace http://localhost:4321"
+    "a11y": "npx --yes pa11y-ci@4.1.1 --config .pa11yci.json --sitemap http://localhost:4321/sitemap-0.xml --sitemap-find https://blog.slashgear.dev --sitemap-replace http://localhost:4321"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -36,7 +36,6 @@
     "@types/react": "^19.2.18",
     "oxfmt": "^0.65.0",
     "oxlint": "^1.80.0",
-    "pa11y-ci": "4.1.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   }
