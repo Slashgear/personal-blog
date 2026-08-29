@@ -426,7 +426,7 @@ const g = window,
         a,
         h = -1,
         c = 0;
-      for (; c < s.length && ((n.lastIndex = c), (a = n.exec(s)), null !== a); )
+      for (; c < s.length && ((n.lastIndex = c), (a = n.exec(s)), null !== a);)
         ((c = n.lastIndex),
           n === x
             ? "!--" === a[1]
@@ -476,7 +476,7 @@ class D {
         e = t.firstChild;
       (e.remove(), t.append(...e.childNodes));
     }
-    for (; null !== (i = R.nextNode()) && l.length < n; ) {
+    for (; null !== (i = R.nextNode()) && l.length < n;) {
       if (1 === i.nodeType) {
         if (i.hasAttributes()) {
           const t = [];
@@ -511,7 +511,7 @@ class D {
         if (i.data === y) l.push({ type: 2, index: r });
         else {
           let t = -1;
-          for (; -1 !== (t = i.data.indexOf(b, t + 1)); )
+          for (; -1 !== (t = i.data.indexOf(b, t + 1));)
             (l.push({ type: 7, index: r }), (t += b.length - 1));
         }
       r++;
@@ -563,7 +563,7 @@ class B {
       n = 0,
       l = 0,
       a = i[0];
-    for (; void 0 !== a; ) {
+    for (; void 0 !== a;) {
       if (n === a.index) {
         let e;
         (2 === a.type

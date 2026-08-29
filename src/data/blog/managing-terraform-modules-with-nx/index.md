@@ -419,18 +419,10 @@ async function terraformModuleGenerator(tree, schema) {
     projectType: "library",
     sourceRoot: projectRoot,
     targets: {
-      fmt: {
-        /* ... */
-      },
-      validate: {
-        /* ... */
-      },
-      lint: {
-        /* ... */
-      },
-      test: {
-        /* ... */
-      },
+      fmt: {/* ... */},
+      validate: {/* ... */},
+      lint: {/* ... */},
+      test: {/* ... */},
     },
     tags: [`type:terraform`, `cloud:${cloud}`, `layer:${layer}`],
   };
