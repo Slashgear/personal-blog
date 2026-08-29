@@ -198,3 +198,64 @@
 @utility focus-outline {
   @apply focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-skin-accent focus-visible:no-underline focus-visible:outline-dashed;
 }
+
+/* ===== Print ===== */
+@media print {
+  /* Force the light palette on paper, regardless of the reader's
+     dark-mode preference — ink and page backgrounds don't mix. */
+  html[data-theme="dark"] {
+    --color-fill: 251, 254, 251 !important;
+    --color-text-base: 40, 39, 40 !important;
+    --color-accent: 126, 64, 196 !important;
+    --color-card: 230, 230, 230 !important;
+    --color-card-muted: 205, 205, 205 !important;
+    --color-border: 126, 64, 196 !important;
+  }
+
+  * {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  header,
+  footer,
+  nav.breadcrumb,
+  #skip-to-content,
+  #back-to-top,
+  .progress-container,
+  .copy-code {
+    display: none !important;
+  }
+
+  body {
+    background: rgb(var(--color-fill)) !important;
+  }
+
+  /* Paper doesn't hyperlink, so spell external URLs out next to the
+     link text. Internal links (nav, "#anchor" TOC entries, etc.) are
+     either hidden already or meaningless once printed. */
+  #about a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    opacity: 0.7;
+  }
+
+  /* Keep each resume entry's heading glued to what follows it instead
+     of stranding a title alone at the bottom of a page. */
+  #about h2,
+  #about h3,
+  #about h4 {
+    break-after: avoid;
+  }
+  #about li {
+    break-inside: avoid;
+  }
+
+  /* The screen version's generous spacing is a waste of paper. */
+  #about h3 {
+    @apply !mt-8 pt-4;
+  }
+  #about h2 {
+    @apply !mt-8;
+  }
+}

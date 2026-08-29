@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "Resume"
+printable: true
 ---
 
 ## Profile

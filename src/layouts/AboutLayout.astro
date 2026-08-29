@@ -9,6 +9,7 @@ export interface Props {
   frontmatter: {
     title: string;
     description?: string;
+    printable?: boolean;
   };
 }
 
@@ -20,9 +21,35 @@ const { frontmatter } = Astro.props;
   <Breadcrumbs />
   <main id="main-content">
     <section id="about" class="prose mb-28 max-w-5xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-4xl">{frontmatter.title}</h1>
+      <div class="flex items-center justify-between gap-4">
+        <h1 class="text-2xl tracking-wider sm:text-4xl">{frontmatter.title}</h1>
+        {
+          frontmatter.printable && (
+            <button id="print-btn" class="print-btn print:hidden">
+              🖨️ Print / Save as PDF
+            </button>
+          )
+        }
+      </div>
       <slot />
     </section>
   </main>
   <Footer />
 </Layout>
+
+{
+  frontmatter.printable && (
+    <script>
+      document
+        .getElementById("print-btn")
+        ?.addEventListener("click", () => window.print());
+    </script>
+  )
+}
+
+<style>
+  @reference "../styles/base.css";
+  .print-btn {
+    @apply focus-outline whitespace-nowrap rounded border border-skin-line px-3 py-1.5 text-sm hover:border-skin-accent hover:text-skin-accent;
+  }
+</style>
