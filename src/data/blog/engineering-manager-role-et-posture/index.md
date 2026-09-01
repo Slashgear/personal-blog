@@ -185,7 +185,7 @@ retomber sur le dos de la personne, ou de l'équipe.
 ## L'effet miroir
 
 > "Quand tu réagis ou tu parles mal d'un projet ou d'une équipe en tant que
-> manager, tu peux être sûr que ton équipe réagira en x10 dans quelques
+> manager, tu peux être sûr que ton équipe réagira en ×10 dans quelques
 > semaines." ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/))
 
 Qu'on le veuille ou non, un manager est un modèle. Son équipe observe ses
