@@ -232,6 +232,8 @@ abordés ici. Si vous voulez que je précise un point ou que j'aborde un
 thème en particulier, mes réseaux sont accessibles depuis ce blog :
 écrivez-moi, je serai ravi de vous lire.
 
-Le prochain épisode portera sur le **recrutement et l'onboarding**. Comme
-toujours, vous pouvez retrouver l'ensemble de la série via le tag
+Le lead time n'est qu'une métrique parmi d'autres : le prochain épisode
+portera sur **les métriques que je surveille en tant qu'engineering
+manager**, pour aller plus loin. Comme toujours, vous pouvez retrouver
+l'ensemble de la série via le tag
 [engineering-management](/tags/engineering-management).
