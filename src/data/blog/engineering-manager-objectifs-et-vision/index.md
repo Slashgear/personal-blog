@@ -216,7 +216,8 @@ TBD » pour le second semestre.
 
 ## SMART, et le piège du silo
 
-> « Un objectif malin, c'est SMART. » (un coach agile)
+> « Un objectif malin, c'est SMART. »
+> ([Caroline Le Lay](https://www.linkedin.com/in/caroline-le-lay-leme/))
 
 Un petit rappel s'impose : un objectif [SMART](https://fr.wikipedia.org/wiki/Objectifs_et_indicateurs_SMART) est **S**pécifique,
 **M**esurable, **A**tteignable, **R**éaliste (ou pertinent) et **T**emporel.
