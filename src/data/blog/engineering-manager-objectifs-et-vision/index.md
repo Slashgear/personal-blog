@@ -80,7 +80,7 @@ que de prétendre à une précision qu'on n'a pas.**
 <figure>
   <style>
     .macula-diagram .macula-rect {
-      animation: macula-reveal 0.5s ease-out backwards;
+      animation: macula-reveal 6s ease-in-out infinite;
     }
     .macula-diagram .macula-rect:nth-child(1) { animation-delay: 0s; }
     .macula-diagram .macula-rect:nth-child(2) { animation-delay: 0.1s; }
@@ -92,11 +92,13 @@ que de prétendre à une précision qu'on n'a pas.**
       animation: macula-flow 2.5s linear infinite;
     }
     @keyframes macula-reveal {
-      from {
+      0%,
+      100% {
         opacity: 0;
         transform: translateX(-6px);
       }
-      to {
+      10%,
+      85% {
         opacity: 1;
         transform: translateX(0);
       }
