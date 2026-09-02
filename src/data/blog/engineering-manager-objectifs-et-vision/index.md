@@ -5,12 +5,11 @@ description: |
   qu'engineering manager. Ce billet porte sur les objectifs et la vision :
   comment fixer des horizons, aligner le rythme de l'équipe sur celui de
   l'entreprise, et donner du sens à ce qu'on demande de faire.
-# TODO avant merge : cover.webp, pubDatetime définitif (voir commentaire
-# dans le frontmatter des deux articles précédents pour la logique de
-# postFilter.ts), et repasser draft à false.
-pubDatetime: 2026-09-01
+# TODO avant merge : relecture par l'auteur, puis repasser draft à false.
+pubDatetime: 2026-09-10
 draft: true
 language: fr
+ogImage: "./cover.webp"
 tags:
   - engineering-management
 ---
@@ -171,6 +170,13 @@ Petite parenthèse : c'est en cherchant justement ce format visuel, simple
 à tenir à jour, que j'ai fini par construire mon propre petit outil de
 roadmap, disponible ici : [roadmap.slashgear.dev](https://roadmap.slashgear.dev/).
 
+![Exemple de roadmap générée avec roadmap.slashgear.dev : une section « This month » dense et confirmée, puis « Next quarter » avec moins de détail, puis « H2 direction » réduite à une seule barre floue « scope TBD »](./roadmap-example.webp)
+
+Vous remarquerez que cet exemple applique lui-même le principe de la
+macula vu plus haut : beaucoup de détail confirmé sur le mois en cours,
+un peu moins sur le trimestre suivant, et un unique bandeau flou « scope
+TBD » pour le second semestre.
+
 ## SMART, et le piège du silo
 
 > « Un objectif malin, c'est SMART. » (un coach agile)
@@ -185,7 +191,7 @@ il est atteint.
 Mais définir un objectif SMART ne dit rien de qui le porte, et c'est là que
 se cache le vrai piège. Je préfère, autant que possible, donner des
 objectifs à l'équipe plutôt que des objectifs individuels. Un objectif
-individuel a tendance à silotter le travail : chacun défend son bout de
+individuel a tendance à siloter le travail : chacun défend son bout de
 périmètre, et l'entraide en pâtit, parfois sans même qu'on s'en rende
 compte. Un objectif d'équipe pousse au contraire tout le monde à avancer
 ensemble, à s'entraider pour l'atteindre, plutôt qu'à optimiser
