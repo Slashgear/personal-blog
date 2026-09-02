@@ -59,8 +59,8 @@ Pour fixer ces horizons, je recommande de s'aligner sur le calendrier de
 l'entreprise. Si elle revoit ses objectifs tous les six mois, construire
 des projets qui tiennent sur six mois est une bonne idée ; pareil pour
 trois mois, ou pour quatre semaines. Appelons ça, comme en musique, la
-**Mesure** : l'unité de temps qui rythme le travail de l'équipe. La
-question qui en découle, à se poser à chaque nouvelle Mesure : « qu'est-ce
+_Mesure_[^mesure] : l'unité de temps qui rythme le travail de l'équipe. La
+question qui en découle, à se poser à chaque nouvelle _Mesure_ : « qu'est-ce
 qu'on peut faire de mieux pour répondre à ce problème en X semaines ? »
 
 ## La macula : net de près, flou de loin
@@ -113,12 +113,12 @@ Expliquer ce qu'on va faire est important, mais exprimer pourquoi on va le
 faire, en quoi c'est nécessaire, est un besoin tout aussi fort — j'y
 reviens dans la section sur la répétition, un peu plus loin.
 
-Il y a un moment où cette netteté se rejoue : la bascule d'une Mesure à la
+Il y a un moment où cette netteté se rejoue : la bascule d'une _Mesure_ à la
 suivante. C'est souvent là qu'il faut consacrer plus de temps que
-d'habitude, en deux temps. D'abord faire les comptes de la Mesure qui se
+d'habitude, en deux temps. D'abord faire les comptes de la _Mesure_ qui se
 termine : est-ce que les objectifs sont atteints, est-ce qu'on a fini ce
 qu'on voulait faire. Ensuite regarder ce qu'on veut faire dans la
-suivante, et le valider avec l'équipe. On ne bascule pas une Mesure en
+suivante, et le valider avec l'équipe. On ne bascule pas une _Mesure_ en
 mode automatique ; on la clôt, puis on en ouvre une nouvelle.
 
 ## Mesurer le lead time
@@ -137,7 +137,7 @@ Je tiens, de mon côté, une petite liste personnelle où je note et je
 mesure le lead time des projets de mon équipe. Ce n'est pas un outil de
 flicage : c'est un instrument de calibrage. Mon objectif en tant
 qu'engineering manager, c'est que la médiane des lead time de mon équipe
-reste inférieure à la Mesure de temps de l'entreprise vue plus haut. Si
+reste inférieure à la _Mesure_ de temps de l'entreprise vue plus haut. Si
 l'entreprise raisonne à six mois et que la médiane de mes projets dépasse
 six mois, quelque chose ne va pas dans la façon dont je les découpe ou dont
 je les priorise — et la citation ci-dessus finit tôt ou tard par devenir
@@ -157,7 +157,7 @@ l'impression d'avoir été parfaitement clair la première fois.
 Concrètement, pour la vision et les objectifs, je fais vivre la même
 information sous plusieurs formes :
 
-- une réunion en fin de Mesure pour présenter et discuter la suivante ;
+- une réunion en fin de _Mesure_ pour présenter et discuter la suivante ;
 - en 1:1, une question que je pose régulièrement à chacun : « est-ce que tu
   vois où on va ? est-ce qu'il y a un projet, chez nous, qui te semble pas
   clair ? » ;
@@ -183,7 +183,7 @@ TBD » pour le second semestre.
 Un petit rappel s'impose : un objectif SMART est **S**pécifique,
 **M**esurable, **A**tteignable, **R**éaliste (ou pertinent) et **T**emporel.
 « Améliorer la qualité » n'est pas un objectif SMART ; « réduire de 30 % le
-nombre de tickets de support ouverts par mois d'ici la fin de la Mesure »
+nombre de tickets de support ouverts par mois d'ici la fin de la _Mesure_ »
 en est un. La différence, c'est qu'on sait, sans ambiguïté possible, quand
 il est atteint.
 
@@ -200,13 +200,13 @@ Concrètement, sur un même sujet, ça peut donner deux objectifs tout aussi
 SMART l'un que l'autre, mais avec des effets opposés :
 
 - **À éviter — objectif individuel :** « Chaque développeur ferme au
-  moins 15 tickets de support par Mesure. » Chacun va naturellement
+  moins 15 tickets de support par _Mesure_. » Chacun va naturellement
   piocher les tickets faciles pour faire son quota ; le ticket compliqué
   qui traîne depuis trois semaines, personne n'y touche, puisqu'il ne
   rapporte rien à personne en particulier.
 - **À privilégier — objectif d'équipe :** « L'équipe réduit de 30 % le
   nombre de tickets de support ouverts par mois d'ici la fin de la
-  Mesure. » Peu importe qui ferme quoi : seul le chiffre global compte,
+  _Mesure_. » Peu importe qui ferme quoi : seul le chiffre global compte,
   donc s'entraider sur le ticket compliqué devient rationnel plutôt que
   perçu comme du temps perdu.
 
@@ -268,3 +268,11 @@ portera sur **les métriques que je surveille en tant qu'engineering
 manager**, pour aller plus loin. Comme toujours, vous pouvez retrouver
 l'ensemble de la série via le tag
 [engineering-management](/tags/engineering-management).
+
+[^mesure]:
+    _Mesure_ : terme que j'emploie ici comme en musique, pour désigner
+    l'unité de temps qui se répète et rythme le travail de l'équipe (un
+    mois, un trimestre, six mois — selon le calendrier de l'entreprise).
+    Une _Mesure_ n'est pas un sprint : c'est l'horizon sur lequel se
+    fixent les objectifs, avant de faire les comptes et d'en ouvrir une
+    nouvelle.
