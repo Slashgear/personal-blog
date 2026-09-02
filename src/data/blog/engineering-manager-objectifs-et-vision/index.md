@@ -196,6 +196,32 @@ compte. Un objectif d'équipe pousse au contraire tout le monde à avancer
 ensemble, à s'entraider pour l'atteindre, plutôt qu'à optimiser
 chacun dans son coin.
 
+Concrètement, sur un même sujet, ça peut donner deux objectifs tout aussi
+SMART l'un que l'autre, mais avec des effets opposés :
+
+- **À éviter — objectif individuel :** « Chaque développeur ferme au
+  moins 15 tickets de support par Mesure. » Chacun va naturellement
+  piocher les tickets faciles pour faire son quota ; le ticket compliqué
+  qui traîne depuis trois semaines, personne n'y touche, puisqu'il ne
+  rapporte rien à personne en particulier.
+- **À privilégier — objectif d'équipe :** « L'équipe réduit de 30 % le
+  nombre de tickets de support ouverts par mois d'ici la fin de la
+  Mesure. » Peu importe qui ferme quoi : seul le chiffre global compte,
+  donc s'entraider sur le ticket compliqué devient rationnel plutôt que
+  perçu comme du temps perdu.
+
+Même chose sur un projet plus large :
+
+- **À éviter — objectif individuel :** « Le lead technique livre la
+  migration vers la nouvelle API de paiement. » Un seul point de
+  défaillance : si cette personne part en vacances, change d'équipe ou
+  tombe malade, le projet s'arrête net, et personne d'autre n'a le
+  contexte pour reprendre.
+- **À privilégier — objectif d'équipe :** « L'équipe a basculé 100 % du
+  trafic de paiement vers la nouvelle API d'ici la fin du trimestre. »
+  N'importe qui peut reprendre la suite, parce que le contexte est
+  partagé dès le départ plutôt que concentré dans une seule tête.
+
 ## Pas de ticket pour dans six mois
 
 > « Écrire un ticket pour un sujet potentiel à faire dans six mois, c'est
