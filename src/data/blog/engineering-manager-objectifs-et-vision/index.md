@@ -45,7 +45,7 @@ pour tenir les délais.
 La question à garder en tête en permanence, c'est : est-ce que l'important
 c'est que ça sorte à telle date, quitte à ce que le scope bouge ? Ou est-ce
 que l'important c'est ce qui doit sortir, quitte à ce que la date bouge ?
-Un projet sans réponse claire à cette question navigue à vue.
+**Un projet sans réponse claire à cette question navigue à vue.**
 
 Se donner des dates et des jalons, ce n'est pas de la rigidité gratuite :
 c'est se forcer à se demander régulièrement « comment je peux rapidement
@@ -74,8 +74,8 @@ C'est l'image que je préfère pour parler de roadmap : celle de la macula,
 cette petite zone au centre de la rétine qui capte le détail net, entourée
 d'une vision périphérique bien plus floue. D'abord avoir une vision claire
 du mois prochain, avant d'essayer de savoir précisément ce qu'on fera dans
-six mois. Se laisser de la place sur le moyen et le long terme, plutôt que
-de prétendre à une précision qu'on n'a pas.
+six mois. **Se laisser de la place sur le moyen et le long terme, plutôt
+que de prétendre à une précision qu'on n'a pas.**
 
 <figure>
   <svg
@@ -134,8 +134,8 @@ implacable : elle ne s'intéresse pas à combien de temps vous avez
 l'idée pour devenir réalité.
 
 Je tiens, de mon côté, une petite liste personnelle où je note et je
-mesure le lead time des projets de mon équipe. Ce n'est pas un outil de
-flicage : c'est un instrument de calibrage. Mon objectif en tant
+mesure le lead time des projets de mon équipe. **Ce n'est pas un outil de
+flicage : c'est un instrument de calibrage.** Mon objectif en tant
 qu'engineering manager, c'est que la médiane des lead time de mon équipe
 reste inférieure à la _Mesure_ de temps de l'entreprise vue plus haut. Si
 l'entreprise raisonne à six mois et que la médiane de mes projets dépasse
@@ -149,10 +149,10 @@ vraie dans ma propre équipe.
 > l'époque où je donnais des cours à la fac)
 
 Donner des cours m'a appris quelque chose que j'ai réemployé sans arrêt en
-tant que manager : pour qu'une information soit transmise et vraiment
-comprise, il faut la répéter, et la répéter sous des formats différents.
-Une seule annonce, un seul support, ne suffit jamais — même quand on a
-l'impression d'avoir été parfaitement clair la première fois.
+tant que manager : **pour qu'une information soit transmise et vraiment
+comprise, il faut la répéter, et la répéter sous des formats
+différents.** Une seule annonce, un seul support, ne suffit jamais — même
+quand on a l'impression d'avoir été parfaitement clair la première fois.
 
 Concrètement, pour la vision et les objectifs, je fais vivre la même
 information sous plusieurs formes :
@@ -231,8 +231,8 @@ Même chose sur un projet plus large :
 Le coût de maintenance d'un ticket ouvert pour dans six mois est énorme,
 même à l'ère de l'IA qui promet d'en absorber une partie. On finit avec un
 backlog de 600 tickets, dont certains ont deux ou trois ans, et dont plus
-personne ne connaît vraiment le détail. Un backlog de 2 000 tickets n'est
-pas une roadmap : c'est un cimetière d'intentions.
+personne ne connaît vraiment le détail. **Un backlog de 2 000 tickets
+n'est pas une roadmap : c'est un cimetière d'intentions.**
 
 Si un sujet est vraiment important, il reviendra. Pas besoin de lui
 réserver une place dans le backlog pour ça. Ce que je fais à la place :
