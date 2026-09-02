@@ -218,7 +218,7 @@ TBD » pour le second semestre.
 
 > « Un objectif malin, c'est SMART. » (un coach agile)
 
-Un petit rappel s'impose : un objectif SMART est **S**pécifique,
+Un petit rappel s'impose : un objectif [SMART](https://fr.wikipedia.org/wiki/Objectifs_et_indicateurs_SMART) est **S**pécifique,
 **M**esurable, **A**tteignable, **R**éaliste (ou pertinent) et **T**emporel.
 « Améliorer la qualité » n'est pas un objectif SMART ; « réduire de 30 % le
 nombre de tickets de support ouverts par mois d'ici la fin de la _Mesure_ »
