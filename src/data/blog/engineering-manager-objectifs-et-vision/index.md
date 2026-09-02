@@ -5,9 +5,8 @@ description: |
   qu'engineering manager. Ce billet porte sur les objectifs et la vision :
   comment fixer des horizons, aligner le rythme de l'équipe sur celui de
   l'entreprise, et donner du sens à ce qu'on demande de faire.
-# TODO avant merge : relecture par l'auteur, puis repasser draft à false.
 pubDatetime: 2026-09-10
-draft: true
+draft: false
 language: fr
 ogImage: "./cover.webp"
 tags:
