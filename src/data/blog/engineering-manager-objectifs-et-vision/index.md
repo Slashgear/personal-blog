@@ -78,7 +78,43 @@ six mois. **Se laisser de la place sur le moyen et le long terme, plutôt
 que de prétendre à une précision qu'on n'a pas.**
 
 <figure>
+  <style>
+    .macula-diagram .macula-rect {
+      animation: macula-reveal 0.5s ease-out backwards;
+    }
+    .macula-diagram .macula-rect:nth-child(1) { animation-delay: 0s; }
+    .macula-diagram .macula-rect:nth-child(2) { animation-delay: 0.1s; }
+    .macula-diagram .macula-rect:nth-child(3) { animation-delay: 0.2s; }
+    .macula-diagram .macula-rect:nth-child(4) { animation-delay: 0.3s; }
+    .macula-diagram .macula-rect:nth-child(5) { animation-delay: 0.4s; }
+    .macula-diagram .macula-rect:nth-child(6) { animation-delay: 0.5s; }
+    .macula-diagram .macula-arrow {
+      animation: macula-flow 2.5s linear infinite;
+    }
+    @keyframes macula-reveal {
+      from {
+        opacity: 0;
+        transform: translateX(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes macula-flow {
+      to {
+        stroke-dashoffset: -18;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .macula-diagram .macula-rect,
+      .macula-diagram .macula-arrow {
+        animation: none;
+      }
+    }
+  </style>
   <svg
+    class="macula-diagram"
     viewBox="0 0 520 220"
     role="img"
     aria-label="Une ligne temporelle où la netteté décroît de gauche à droite : demain est net et détaillé, le mois prochain un peu moins, et l'horizon à six mois-un an n'est plus qu'une direction floue"
@@ -87,14 +123,14 @@ que de prétendre à une précision qu'on n'a pas.**
     <title>La macula appliquée à la roadmap</title>
     <line x1="30" y1="140" x2="490" y2="140" stroke="rgb(var(--color-border))" stroke-width="1" />
     <g fill="rgb(var(--color-accent))">
-      <rect x="40" y="70" width="46" height="46" rx="3" fill-opacity="1" />
-      <rect x="96" y="76" width="46" height="40" rx="3" fill-opacity="0.9" />
-      <rect x="152" y="82" width="46" height="34" rx="3" fill-opacity="0.75" />
-      <rect x="208" y="88" width="46" height="28" rx="3" fill-opacity="0.55" />
-      <rect x="264" y="94" width="46" height="22" rx="3" fill-opacity="0.35" />
-      <rect x="320" y="98" width="46" height="18" rx="3" fill-opacity="0.2" />
+      <rect class="macula-rect" x="40" y="70" width="46" height="46" rx="3" fill-opacity="1" />
+      <rect class="macula-rect" x="96" y="76" width="46" height="40" rx="3" fill-opacity="0.9" />
+      <rect class="macula-rect" x="152" y="82" width="46" height="34" rx="3" fill-opacity="0.75" />
+      <rect class="macula-rect" x="208" y="88" width="46" height="28" rx="3" fill-opacity="0.55" />
+      <rect class="macula-rect" x="264" y="94" width="46" height="22" rx="3" fill-opacity="0.35" />
+      <rect class="macula-rect" x="320" y="98" width="46" height="18" rx="3" fill-opacity="0.2" />
     </g>
-    <path d="M382 107 L470 107" stroke="rgb(var(--color-border))" stroke-width="2" stroke-dasharray="4 5" />
+    <path class="macula-arrow" d="M382 107 L470 107" stroke="rgb(var(--color-border))" stroke-width="2" stroke-dasharray="4 5" />
     <path d="M462 100 L472 107 L462 114" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     <text x="63" y="60" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" font-weight="600">Demain</text>
     <text x="230" y="60" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" font-weight="600">Ce mois-ci</text>
