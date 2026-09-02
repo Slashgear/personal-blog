@@ -225,6 +225,20 @@ nombre de tickets de support ouverts par mois d'ici la fin de la _Mesure_ »
 en est un. La différence, c'est qu'on sait, sans ambiguïté possible, quand
 il est atteint.
 
+Un exemple vécu : quelqu'un dans l'équipe se plaint de porter trop de
+tickets de bug tout seul, et aimerait que ça se répartisse mieux.
+L'équipe se fixe alors comme objectif de « mieux répartir les tickets de
+bug ». Pas très SMART : comment sait-on, concrètement, qu'on l'a atteint ?
+
+Une première piste pour le rendre SMART : que chacun traite au moins un
+ticket de bug par _Mesure_. Juste un ? Ça paraît dérisoire, dit comme ça.
+Mais si la situation de départ, c'est zéro ticket de bug traité par la
+moitié de l'équipe, passer de zéro à un pour tout le monde, franchement,
+ça paraît déjà pas mal, non ? C'est un objectif atteignable, sur lequel
+personne ne peut dire « ça ne me concerne pas » — et rien n'empêche de
+relever la barre à la _Mesure_ suivante une fois que ce premier palier
+est acquis.
+
 Mais définir un objectif SMART ne dit rien de qui le porte, et c'est là que
 se cache le vrai piège. Je préfère, autant que possible, donner des
 objectifs à l'équipe plutôt que des objectifs individuels. Un objectif
