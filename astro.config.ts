@@ -28,6 +28,10 @@ export default defineConfig({
       wrap: true,
     },
   },
+  image: {
+    layout: "constrained",
+    responsiveStyles: true,
+  },
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
