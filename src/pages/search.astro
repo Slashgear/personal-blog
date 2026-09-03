@@ -31,7 +31,7 @@ const searchList = sortedPosts.map(({ data, id }) => ({
 <Layout title={`Search | ${SITE.title}`}>
   <Header activeNav="search" />
   <Main pageTitle="Search" pageDesc="Search any article ...">
-    <SearchBar client:load searchList={searchList} />
+    <SearchBar client:idle searchList={searchList} />
   </Main>
   <Footer />
 </Layout>

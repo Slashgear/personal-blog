@@ -50,7 +50,10 @@ function hostname(url: string) {
               <img
                 alt=""
                 src={friend.data.image}
+                width="200"
+                height="200"
                 loading="lazy"
+                decoding="async"
                 class="friend-avatar"
               />
               <span class="friend-name">{friend.data.name}</span>
