@@ -11,6 +11,7 @@
     "format:check": "oxfmt --check .",
     "format": "oxfmt --write .",
     "lint": "oxlint .",
+    "test": "bun test",
     "a11y": "npx --yes pa11y-ci@4.1.1 --config .pa11yci.json --sitemap http://localhost:4321/sitemap-0.xml --sitemap-find https://blog.slashgear.dev --sitemap-replace http://localhost:4321"
   },
   "dependencies": {
@@ -34,6 +35,7 @@
     "@astrojs/react": "^6.0.4",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/typography": "^0.5.20",
+    "@types/bun": "^1.4.0",
     "@types/lodash.kebabcase": "^4.1.9",
     "@types/react": "^19.2.18",
     "oxfmt": "^0.65.0",

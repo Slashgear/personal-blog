@@ -24,6 +24,10 @@ jobs:
           package-manager: bun@1.4.0
       - name: Check format
         run: bun run format:check
+      - name: Lint
+        run: bun run lint
+      - name: Unit tests
+        run: bun test
       - name: Upload dist for audits
         uses: actions/upload-artifact@v7
         with:
@@ -59,9 +63,10 @@ jobs:
           name: dist
           path: dist
       - name: Lighthouse CI
-        # Non-blocking for now: no score assertions are configured, so this
-        # only reports. continue-on-error is an extra safety net so a flaky
-        # upload to temporary public storage can never fail the build.
+        # Budgets live in .lighthouserc.json (mostly `warn`, a few `error`).
+        # Still continue-on-error: the flaky part is the temporary-public-
+        # storage upload, not the assertions — flip this to `false` once the
+        # warn-level findings are burned down and gating is wanted.
         uses: treosh/lighthouse-ci-action@v12
         continue-on-error: true
         with:
