@@ -9,7 +9,7 @@ import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 import { render } from "astro:content";
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -32,7 +32,15 @@ const {
 
 const { Content } = await render(post);
 
-const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
+// For a local cover, `ogImage.src` points at the raw multi-MB original.
+// Social crawlers (LinkedIn especially) also want JPEG/PNG, not WebP — so
+// derive a bounded JPEG for the OG/Twitter tags.
+const ogCover =
+  ogImage && typeof ogImage !== "string"
+    ? await getImage({ src: ogImage, width: 1200, format: "jpeg", quality: 80 })
+    : null;
+
+const ogImageUrl = typeof ogImage === "string" ? ogImage : ogCover?.src;
 const ogUrl = new URL(
   ogImageUrl ?? `/posts/${slugifyStr(title)}.png`,
   Astro.url.origin
@@ -97,8 +105,10 @@ const nextPost =
           <Image
             src={ogImage}
             alt=""
-            widths={[400, 768, 1000]}
+            width={1024}
+            widths={[640, 1024, 2048]}
             sizes="(max-width: 768px) 100vw, 992px"
+            quality={78}
             loading="eager"
             fetchpriority="high"
             class="w-full my-10 rounded-sm"
