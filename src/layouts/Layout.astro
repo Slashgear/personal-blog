@@ -11,6 +11,7 @@ export interface Props {
   profile?: string;
   description?: string;
   ogImage?: string;
+  ogType?: "website" | "article";
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
@@ -24,6 +25,7 @@ const {
   profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage,
+  ogType = "website",
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
   pubDatetime,
   modDatetime,
@@ -36,21 +38,39 @@ const socialImageURL = new URL(
   Astro.url.origin
 ).href;
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      url: `${profile}`,
-    },
-  ],
-};
+const ogLocale = lang === "fr" ? "fr_FR" : "en_US";
+
+// Emit BlogPosting only on actual articles (they pass pubDatetime); every
+// other page describes the site itself. A BlogPosting with
+// `datePublished: "undefined"` is invalid structured data.
+const structuredData = pubDatetime
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: `${title}`,
+      image: `${socialImageURL}`,
+      datePublished: pubDatetime.toISOString(),
+      ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+      author: [
+        {
+          "@type": "Person",
+          name: `${author}`,
+          url: `${profile}`,
+        },
+      ],
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: SITE.title,
+      url: SITE.website,
+      description: SITE.desc,
+      author: {
+        "@type": "Person",
+        name: SITE.author,
+        url: SITE.profile,
+      },
+    };
 ---
 
 <!doctype html>
@@ -76,8 +96,8 @@ const structuredData = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
-    <meta property="og:local" content={lang} />
-    <meta property="og:type" content="article" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:type" content={ogType} />
 
     <!-- Article Published/Modified time -->
     {
@@ -130,7 +150,6 @@ const structuredData = {
     </noscript>
 
     <meta name="theme-color" content="darkgrey" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link
       rel="alternate"
       type="application/rss+xml"

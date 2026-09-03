@@ -9,9 +9,17 @@ export interface CardImage {
   height: number;
 }
 
+// Card only reads these five fields. Typing it as a Pick (rather than the
+// whole entry) lets the search page hand it a trimmed object instead of
+// serialising every post's full frontmatter into the page.
+export type CardFrontmatter = Pick<
+  CollectionEntry<"blog">["data"],
+  "title" | "pubDatetime" | "modDatetime" | "description" | "language"
+>;
+
 export interface Props {
   href?: string;
-  frontmatter: CollectionEntry<"blog">["data"];
+  frontmatter: CardFrontmatter;
   secHeading?: boolean;
   image?: CardImage;
 }

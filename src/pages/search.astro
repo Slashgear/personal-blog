@@ -12,12 +12,19 @@ import getSortedPosts from "@utils/getSortedPosts";
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
-// List of items to search in
+// List of items to search in. Keep this lean — the whole array is
+// serialised into the page and shipped to the client, so only send the
+// fields Fuse searches on (data.title / data.description) plus what
+// <Card> renders.
 const searchList = sortedPosts.map(({ data, id }) => ({
-  title: data.title,
-  description: data.description,
-  data,
   id,
+  data: {
+    title: data.title,
+    description: data.description,
+    pubDatetime: data.pubDatetime,
+    modDatetime: data.modDatetime,
+    language: data.language,
+  },
 }));
 ---
 
