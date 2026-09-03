@@ -39,5 +39,6 @@
     "oxlint": "^1.80.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
-  }
+  },
+  "packageManager": "bun@1.4.0"
 }

@@ -21,7 +21,7 @@ jobs:
       - name: Install, build, and upload your site output
         uses: withastro/action@v6
         with:
-          package-manager: bun@latest
+          package-manager: bun@1.4.0
       - name: Check format
         run: bun run format:check
       - name: Upload dist for audits
