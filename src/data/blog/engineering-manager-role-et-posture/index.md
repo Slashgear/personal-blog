@@ -59,7 +59,7 @@ ce serait de la magie.
 ## Le rôle du manager vs. celui de l'IC : hands on, hands off
 
 > "Tout ce que tu fais, l'équipe doit savoir et pouvoir le faire, mis à part
-> les aspects de management." ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/))
+> les aspects de management." ([Florent Dubost](https://www.linkedin.com/in/florentdubost/))
 
 Tous mes modèles en management d'équipe d'ingénierie ont toujours gardé un
 aspect technique dans leur travail. Le pourcentage varie d'une personne à
