@@ -93,7 +93,7 @@ prendre la température et vous donner mutuellement du feedback.
 ## Une régularité par individu
 
 > « Tu veux qu'on se voie à quelle régularité ? »
-> ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/),
+> ([Florent Dubost](https://www.linkedin.com/in/florentdubost/),
 > mon manager pendant plusieurs années)
 
 Tout est affaire d'individu. Chacun a besoin de voir son manager à une
