@@ -10,6 +10,7 @@ import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 import { render } from "astro:content";
 import { Image, getImage } from "astro:assets";
+import { getPostAlternates } from "../data/translations";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -46,6 +47,20 @@ const ogUrl = new URL(
   Astro.url.origin
 ).href;
 
+// Reciprocal hreflang tags when this post also exists in the other language.
+const alt = getPostAlternates(post.id);
+const postUrl = (id: string) => new URL(`/posts/${id}/`, Astro.site).href;
+const alternates = alt
+  ? [
+      { hreflang: alt.self, href: postUrl(post.id) },
+      { hreflang: alt.otherLang, href: postUrl(alt.otherId) },
+      {
+        hreflang: "x-default",
+        href: postUrl(alt.self === "en" ? post.id : alt.otherId),
+      },
+    ]
+  : [];
+
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
   author,
@@ -53,6 +68,7 @@ const layoutProps = {
   pubDatetime,
   modDatetime,
   canonicalURL,
+  alternates,
   ogImage: ogUrl,
   ogType: "article" as const,
   scrollSmooth: true,

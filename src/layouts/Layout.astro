@@ -13,6 +13,7 @@ export interface Props {
   ogImage?: string;
   ogType?: "website" | "article";
   canonicalURL?: string;
+  alternates?: { hreflang: string; href: string }[];
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
@@ -27,6 +28,7 @@ const {
   ogImage = SITE.ogImage,
   ogType = "website",
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  alternates = [],
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
@@ -82,6 +84,11 @@ const structuredData = pubDatetime
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL} />
+    {
+      alternates.map(alt => (
+        <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+      ))
+    }
     <meta name="generator" content={Astro.generator} />
 
     <!-- General Meta Tags -->
