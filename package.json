@@ -11,12 +11,14 @@
     "format:check": "oxfmt --check .",
     "format": "oxfmt --write .",
     "lint": "oxlint .",
+    "test": "bun test",
     "a11y": "npx --yes pa11y-ci@4.1.1 --config .pa11yci.json --sitemap http://localhost:4321/sitemap-0.xml --sitemap-find https://blog.slashgear.dev --sitemap-replace http://localhost:4321"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
     "@astrojs/markdown-remark": "^7.2.4",
     "@astrojs/rss": "^4.0.19",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.9",
@@ -26,17 +28,20 @@
     "remark-toc": "^9.0.0",
     "satori": "^0.33.4",
     "tailwindcss": "^4.3.3",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@astrojs/react": "^6.0.4",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/typography": "^0.5.20",
+    "@types/bun": "^1.4.0",
     "@types/lodash.kebabcase": "^4.1.9",
     "@types/react": "^19.2.18",
     "oxfmt": "^0.65.0",
     "oxlint": "^1.80.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
-  }
+  },
+  "packageManager": "bun@1.4.0"
 }

@@ -59,7 +59,7 @@ ce serait de la magie.
 ## Le rôle du manager vs. celui de l'IC : hands on, hands off
 
 > "Tout ce que tu fais, l'équipe doit savoir et pouvoir le faire, mis à part
-> les aspects de management." ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/))
+> les aspects de management." ([Florent Dubost](https://www.linkedin.com/in/florentdubost/))
 
 Tous mes modèles en management d'équipe d'ingénierie ont toujours gardé un
 aspect technique dans leur travail. Le pourcentage varie d'une personne à
@@ -185,7 +185,7 @@ retomber sur le dos de la personne, ou de l'équipe.
 ## L'effet miroir
 
 > "Quand tu réagis ou tu parles mal d'un projet ou d'une équipe en tant que
-> manager, tu peux être sûr que ton équipe réagira en x10 dans quelques
+> manager, tu peux être sûr que ton équipe réagira en ×10 dans quelques
 > semaines." ([Florent Dubost](https://www.linkedin.com/in/florent-dubost-914346181/))
 
 Qu'on le veuille ou non, un manager est un modèle. Son équipe observe ses

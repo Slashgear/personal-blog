@@ -11,7 +11,9 @@ export interface Props {
   profile?: string;
   description?: string;
   ogImage?: string;
+  ogType?: "website" | "article";
   canonicalURL?: string;
+  alternates?: { hreflang: string; href: string }[];
   pubDatetime?: Date;
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
@@ -24,7 +26,9 @@ const {
   profile = SITE.profile,
   description = SITE.desc,
   ogImage = SITE.ogImage,
+  ogType = "website",
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  alternates = [],
   pubDatetime,
   modDatetime,
   scrollSmooth = false,
@@ -36,21 +40,39 @@ const socialImageURL = new URL(
   Astro.url.origin
 ).href;
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      url: `${profile}`,
-    },
-  ],
-};
+const ogLocale = lang === "fr" ? "fr_FR" : "en_US";
+
+// Emit BlogPosting only on actual articles (they pass pubDatetime); every
+// other page describes the site itself. A BlogPosting with
+// `datePublished: "undefined"` is invalid structured data.
+const structuredData = pubDatetime
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: `${title}`,
+      image: `${socialImageURL}`,
+      datePublished: pubDatetime.toISOString(),
+      ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+      author: [
+        {
+          "@type": "Person",
+          name: `${author}`,
+          url: `${profile}`,
+        },
+      ],
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: SITE.title,
+      url: SITE.website,
+      description: SITE.desc,
+      author: {
+        "@type": "Person",
+        name: SITE.author,
+        url: SITE.profile,
+      },
+    };
 ---
 
 <!doctype html>
@@ -62,6 +84,11 @@ const structuredData = {
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL} />
+    {
+      alternates.map(alt => (
+        <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+      ))
+    }
     <meta name="generator" content={Astro.generator} />
 
     <!-- General Meta Tags -->
@@ -76,8 +103,8 @@ const structuredData = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
-    <meta property="og:local" content={lang} />
-    <meta property="og:type" content="article" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:type" content={ogType} />
 
     <!-- Article Published/Modified time -->
     {
@@ -111,26 +138,9 @@ const structuredData = {
       set:html={JSON.stringify(structuredData)}
     />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      rel="preload"
-      as="style"
-      crossorigin
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-        rel="stylesheet"
-        crossorigin
-      />
-    </noscript>
+    <!-- IBM Plex Mono is self-hosted via @fontsource (see src/styles/base.css) -->
 
     <meta name="theme-color" content="darkgrey" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link
       rel="alternate"
       type="application/rss+xml"

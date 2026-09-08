@@ -1,13 +1,10 @@
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState, useMemo, type ChangeEvent } from "react";
-import Card from "@components/Card";
-import type { CollectionEntry } from "astro:content";
+import Card, { type CardFrontmatter } from "@components/Card";
 
 export type SearchItem = {
-  title: string;
-  description: string;
-  data: CollectionEntry<"blog">["data"];
   id: string;
+  data: CardFrontmatter;
 };
 
 interface Props {
@@ -31,7 +28,7 @@ export default function SearchBar({ searchList }: Props) {
   const fuse = useMemo(
     () =>
       new Fuse(searchList, {
-        keys: ["title", "description"],
+        keys: ["data.title", "data.description"],
         includeMatches: true,
         minMatchCharLength: 2,
         threshold: 0.5,

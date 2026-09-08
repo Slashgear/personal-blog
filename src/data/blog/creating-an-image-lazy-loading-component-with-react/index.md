@@ -69,7 +69,7 @@ Now let's try to trigger real image loading when the user really need it.
 For that, we would need to have an API that let us know if an element is visible in user viewport.
 That is exactly what [IntersectionObserver](https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API) provides us.
 
-![IntersectionObserver support in March 2019](/assets/blog/intersection-observer-caniuse.png)
+![IntersectionObserver support in March 2019](./intersection-observer-caniuse.png)
 
 Intersection observer API provides us observe method to check on the visibility of an HTML element using its own ref.
 In order to follow last React API, I used _Hooks_ to keep a simple functional component with state and lifecycle.
