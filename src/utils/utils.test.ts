@@ -4,6 +4,7 @@ import { slugifyStr, slugifyAll } from "./slugify";
 import postFilter from "./postFilter";
 import getSortedPosts from "./getSortedPosts";
 import getUniqueTags from "./getUniqueTags";
+import { shouldIncludeInSitemap } from "./sitemapFilter";
 
 type Blog = CollectionEntry<"blog">;
 
@@ -78,5 +79,28 @@ describe("getUniqueTags", () => {
       post("drop", { pubDatetime: new Date(Date.now() - DAY), draft: true, tags: ["hidden"] }),
     ];
     expect(getUniqueTags(posts).map((t) => t.tag)).toEqual(["kept"]);
+  });
+});
+
+describe("shouldIncludeInSitemap", () => {
+  it("keeps the homepage and static pages", () => {
+    expect(shouldIncludeInSitemap("/")).toBe(true);
+    expect(shouldIncludeInSitemap("/conferences/")).toBe(true);
+  });
+  it("keeps the blog listing page 1", () => {
+    expect(shouldIncludeInSitemap("/posts/")).toBe(true);
+  });
+  it("keeps article pages", () => {
+    expect(shouldIncludeInSitemap("/posts/mon-article/")).toBe(true);
+  });
+  it("drops numbered post-pagination pages", () => {
+    expect(shouldIncludeInSitemap("/posts/1/")).toBe(false);
+    expect(shouldIncludeInSitemap("/posts/2/")).toBe(false);
+    expect(shouldIncludeInSitemap("/posts/10/")).toBe(false);
+  });
+  it("drops all tag pages", () => {
+    expect(shouldIncludeInSitemap("/tags/")).toBe(false);
+    expect(shouldIncludeInSitemap("/tags/angular/")).toBe(false);
+    expect(shouldIncludeInSitemap("/tags/angular/1/")).toBe(false);
   });
 });

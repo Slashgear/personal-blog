@@ -1,11 +1,6 @@
 ---
 title: "Engineering manager : rôle et posture"
-description: |
-  Premier article d'une série sur mon retour d'expérience en tant qu'engineering
-  manager, ce billet porte sur le rôle et la posture du manager d'équipe
-  d'ingénierie. Plutôt que mes propres principes, je partage les citations et
-  les conseils de mentors et collègues qui m'ont marqué, et ce qu'ils
-  m'apportent au quotidien.
+description: "Premier article de ma série sur mon métier d'engineering manager : le rôle et la posture du manager d'équipe, à travers les conseils de mes mentors et collègues."
 pubDatetime: 2026-08-27
 draft: false
 language: fr

@@ -1,10 +1,6 @@
 ---
 title: "Engineering manager : le 1:1 et le suivi individuel"
-description: |
-  Deuxième article de la série sur mon retour d'expérience en tant
-  qu'engineering manager. Ce billet porte sur le 1:1 et le suivi individuel :
-  à quoi sert ce temps, comment le préparer, et ce que des mentors et
-  collègues m'ont transmis sur le sujet.
+description: "Deuxième article de ma série sur l'engineering manager : le 1:1 et le suivi individuel, comment le préparer, et les conseils de mes mentors et collègues."
 pubDatetime: 2026-09-03
 language: fr
 ogImage: "./cover.webp"

@@ -73,7 +73,19 @@ const layoutProps = {
   ogType: "article" as const,
   scrollSmooth: true,
   lang: language || "en",
+  headline: title,
+  keywords: tags,
+  articleSection: tags[0],
+  wordCount: post.body?.trim().split(/\s+/).filter(Boolean).length,
 };
+
+// Related posts sharing at least one tag, to strengthen internal linking.
+const relatedPosts = posts
+  .filter(
+    p =>
+      p.id !== post.id && p.data.tags.some(t => tags.includes(slugifyStr(t)))
+  )
+  .slice(0, 3);
 
 /* ========== Prev/Next Posts ========== */
 
@@ -90,6 +102,34 @@ const nextPost =
 ---
 
 <Layout {...layoutProps}>
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: new URL("/", Astro.site).href,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Posts",
+          item: new URL("/posts/", Astro.site).href,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: title,
+          item: postUrl(post.id),
+        },
+      ],
+    })}
+  />
   <Header />
   <div class="mx-auto flex w-full max-w-5xl justify-start px-2">
     <button
@@ -115,12 +155,12 @@ const nextPost =
 
     {
       typeof ogImage === "string" ? (
-        ogImage && <img alt="" src={ogImage} class="w-full my-10 rounded-sm" />
+        ogImage && <img alt={title} src={ogImage} class="w-full my-10 rounded-sm" />
       ) : (
         ogImage && (
           <Image
             src={ogImage}
-            alt=""
+            alt={title}
             width={1024}
             widths={[640, 1024, 2048]}
             sizes="(max-width: 768px) 100vw, 992px"
@@ -224,6 +264,21 @@ const nextPost =
         )
       }
     </div>
+
+    {
+      relatedPosts.length > 0 && (
+        <section aria-label="Related posts">
+          <h2 class="related-title">Related posts</h2>
+          <ul class="related-list">
+            {relatedPosts.map(p => (
+              <li>
+                <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
   </main>
   <Footer />
 </Layout>
@@ -235,6 +290,15 @@ const nextPost =
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
+  }
+  .related-title {
+    @apply mt-8 text-lg font-semibold;
+  }
+  .related-list {
+    @apply mt-3 list-disc space-y-1 pl-5;
+  }
+  .related-list a {
+    @apply text-skin-accent decoration-dashed underline underline-offset-4 hover:opacity-80;
   }
 </style>
 
