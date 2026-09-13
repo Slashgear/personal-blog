@@ -7,6 +7,7 @@ import Datetime from "@components/Datetime";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
+import TableOfContents from "@components/TableOfContents.astro";
 import { SITE } from "@config";
 import { render } from "astro:content";
 import { Image, getImage } from "astro:assets";
@@ -31,7 +32,9 @@ const {
   language,
 } = post.data;
 
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
+
+const tocHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
 
 // For a local cover, `ogImage.src` points at the raw multi-MB original.
 // Social crawlers (LinkedIn especially) also want JPEG/PNG, not WebP — so
@@ -173,13 +176,35 @@ const nextPost =
       )
     }
 
-    <article id="article" class="prose max-w-none mt-8">
-      <Content />
-    </article>
+    {
+      tocHeadings.length > 0 ? (
+        <div class="post-grid">
+          <div class="post-content">
+            <article id="article" class="prose max-w-none mt-8">
+              <Content />
+            </article>
 
-    <ul class="my-8">
-      {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
-    </ul>
+            <ul class="my-8">
+              {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
+            </ul>
+          </div>
+
+          <aside class="post-toc">
+            <TableOfContents headings={headings} />
+          </aside>
+        </div>
+      ) : (
+        <>
+          <article id="article" class="prose max-w-none mt-8">
+            <Content />
+          </article>
+
+          <ul class="my-8">
+            {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
+          </ul>
+        </>
+      )
+    }
 
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
@@ -286,10 +311,19 @@ const nextPost =
 <style>
   @reference "../styles/base.css";
   main {
-    @apply mx-auto w-full max-w-5xl px-4 pb-12;
+    @apply mx-auto w-full max-w-7xl px-4 pb-12;
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
+  }
+  .post-grid {
+    @apply grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_16rem];
+  }
+  .post-content {
+    @apply min-w-0;
+  }
+  .post-toc {
+    @apply hidden lg:block;
   }
   .related-title {
     @apply mt-8 text-lg font-semibold;
