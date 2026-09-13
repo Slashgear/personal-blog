@@ -274,18 +274,18 @@ dimension est au vert.
 
 Chaque axe correspond à une question précise sur la santé de l'équipe :
 
-| Axe            | Ce que ça mesure                                                        |
-| -------------- | ---------------------------------------------------------------------- |
-| Collaboration  | Une communication constante et de qualité, respectueuse.               |
-| Fun            | Une ambiance agréable, le plaisir à travailler ensemble.               |
-| Apprentissages | Des compétences qui progressent, itération après itération.            |
-| Mission        | L'alignement sur les objectifs de l'entreprise et la création de valeur.|
-| Ownership      | L'autonomie, la capacité à décider par soi-même.                       |
-| Process        | Des processus qui aident à créer de la valeur, sans ralentir ni bloquer.|
-| Ressources     | L'accès aux moyens matériels et au support nécessaires.                |
-| Rôles          | Des rôles et responsabilités clairs, toutes les compétences présentes. |
-| Vitesse        | De la valeur produite en respectant les dates, à un rythme sain.       |
-| Valeur         | Une valeur mesurable, quantifiable et réalisable par l'équipe.         |
+| Axe            | Ce que ça mesure                                                         |
+| -------------- | ------------------------------------------------------------------------ |
+| Collaboration  | Une communication constante et de qualité, respectueuse.                 |
+| Fun            | Une ambiance agréable, le plaisir à travailler ensemble.                 |
+| Apprentissages | Des compétences qui progressent, itération après itération.              |
+| Mission        | L'alignement sur les objectifs de l'entreprise et la création de valeur. |
+| Ownership      | L'autonomie, la capacité à décider par soi-même.                         |
+| Process        | Des processus qui aident à créer de la valeur, sans ralentir ni bloquer. |
+| Ressources     | L'accès aux moyens matériels et au support nécessaires.                  |
+| Rôles          | Des rôles et responsabilités clairs, toutes les compétences présentes.   |
+| Vitesse        | De la valeur produite en respectant les dates, à un rythme sain.         |
+| Valeur         | Une valeur mesurable, quantifiable et réalisable par l'équipe.           |
 
 Un détail pratique qui change tout : j'envoie le formulaire à l'avance. Si
 chacun remplit son positionnement avant la séance, la rétro elle-même ne sert
