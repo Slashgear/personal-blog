@@ -5,29 +5,197 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { getCollection } from "astro:content";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
-import type { Conference as ConferenceType } from "../types";
+import type { Conference as ConferenceType, Podcast as PodcastType } from "../types";
 import Conference from "../components/Conference.astro";
+import Podcast from "../components/Podcast.astro";
 
 const conferences: ConferenceType[] = await getCollection("conferences");
 const sortedConference = conferences
   .sort((a, b) => a.data.year - b.data.year)
   .reverse();
+
+const podcasts: PodcastType[] = await getCollection("podcasts");
+const sortedPodcasts = podcasts
+  .sort((a, b) => a.data.date - b.data.date)
+  .reverse();
+
+const byYear = new Map<number, ConferenceType[]>();
+for (const conference of sortedConference) {
+  const year = conference.data.year;
+  const bucket = byYear.get(year) ?? [];
+  bucket.push(conference);
+  byYear.set(year, bucket);
+}
+
+const talksCount = conferences.length;
+const eventsCount = conferences.reduce(
+  (sum, c) => sum + c.data.events.length,
+  0
+);
 ---
 
-<Layout title={`Liste des conférences | ${SITE.title}`} lang="fr">
+<Layout title={`Conférences & podcasts | ${SITE.title}`} lang="fr">
   <Header activeNav="conferences" />
   <Breadcrumbs />
-  <main id="main-content">
-    <section id="about" class="prose mb-28 max-w-5xl prose-img:border-0">
-      <h1 class="text-2xl tracking-wider sm:text-4xl">Liste des conférences</h1>
-      <ul>
-        {
-          sortedConference.map(conference => (
-            <Conference conference={conference} />
-          ))
-        }
-      </ul>
+  <main id="main-content" class="mx-auto max-w-5xl px-4">
+    <section class="passport-cover" aria-labelledby="tour-title">
+      <div class="cover-emblem" aria-hidden="true">🛂</div>
+      <p class="cover-kicker">MES PRISES DE PAROLE</p>
+      <h1 id="tour-title" class="cover-title">Conférences & Podcasts</h1>
+      <p class="cover-sub">
+        Les conférences, workshops et podcasts qui m'ont fait voyager — chaque
+        tampon est un endroit où j'ai pris la parole.
+      </p>
+
+      <div class="cover-stats">
+        <div class="cover-stat">
+          <span class="cover-stat-value">{talksCount}</span>
+          <span class="cover-stat-label">VISAS</span>
+        </div>
+        <div class="cover-stat">
+          <span class="cover-stat-value">{eventsCount}</span>
+          <span class="cover-stat-label">TAMPONS</span>
+        </div>
+        <div class="cover-stat">
+          <span class="cover-stat-value">{sortedPodcasts.length}</span>
+          <span class="cover-stat-label">PODCASTS</span>
+        </div>
+      </div>
+    </section>
+
+    {
+      [...byYear.entries()].map(([year, yearConferences]) => (
+        <section class="tour-chapter">
+          <div class="chapter-header">
+            <span class="chapter-line" aria-hidden="true"></span>
+            <h2 class="chapter-year">ANNÉE {year}</h2>
+            <span class="chapter-count">
+              {yearConferences.length} visa{yearConferences.length > 1 ? "s" : ""}
+            </span>
+          </div>
+          <ul class="chapter-pages">
+            {yearConferences.map(conference => (
+              <Conference conference={conference} />
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+
+    <section class="tour-chapter">
+      <div class="chapter-header">
+        <span class="chapter-line" aria-hidden="true"></span>
+        <h2 class="chapter-year">ÉPISODES AUDIO</h2>
+        <span class="chapter-count">
+          {sortedPodcasts.length} épisode{sortedPodcasts.length > 1 ? "s" : ""}
+        </span>
+      </div>
+      {
+        sortedPodcasts.length > 0 ? (
+          <ul class="podcast-list">
+            {sortedPodcasts.map(podcast => <Podcast podcast={podcast} />)}
+          </ul>
+        ) : (
+          <p class="podcast-empty">
+            Les prochains épisodes arrivent bientôt.
+          </p>
+        )
+      }
     </section>
   </main>
   <Footer />
 </Layout>
+
+<style>
+  @reference "../styles/base.css";
+  /* ── Passport cover hero ── */
+  .passport-cover {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: 1rem 0 3.5rem;
+    padding: 3rem 1.5rem 2.75rem;
+    border-radius: 1.25rem;
+    border: 1px dashed rgba(var(--color-border), 0.45);
+    background: radial-gradient(
+      ellipse at 50% 0%,
+      rgba(var(--color-accent), 0.1) 0%,
+      transparent 60%
+    );
+  }
+  .cover-emblem {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+  }
+  .cover-kicker {
+    @apply m-0 text-[10px] font-semibold uppercase opacity-60;
+    letter-spacing: 0.3em;
+  }
+  .cover-title {
+    @apply m-0 text-4xl font-bold tracking-tight sm:text-6xl;
+    margin: 0.25rem 0 0.75rem;
+    letter-spacing: 0.06em;
+    background-image: linear-gradient(
+      120deg,
+      rgb(var(--color-accent)) 0%,
+      rgba(var(--color-accent), 0.5) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .cover-sub {
+    @apply m-0 mx-auto max-w-xl text-base opacity-80;
+    line-height: 1.55;
+  }
+  .cover-stats {
+    @apply mx-auto mt-8 flex max-w-xl flex-wrap items-center justify-center gap-5;
+  }
+  .cover-stat {
+    @apply flex aspect-square w-24 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-dashed;
+    border-color: rgba(var(--color-accent), 0.7);
+    background: rgba(var(--color-accent), 0.05);
+    transform: rotate(-3deg);
+  }
+  .cover-stat:nth-child(even) {
+    transform: rotate(2deg);
+  }
+  .cover-stat-value {
+    @apply text-2xl font-bold;
+    color: rgb(var(--color-accent));
+  }
+  .cover-stat-label {
+    @apply text-[9px] font-semibold uppercase opacity-70;
+    letter-spacing: 0.15em;
+  }
+
+  /* ── Chapters / years ── */
+  .tour-chapter {
+    margin-bottom: 3rem;
+  }
+  .chapter-header {
+    @apply mb-5 flex items-center gap-4;
+  }
+  .chapter-line {
+    @apply h-px flex-1 bg-skin-line/60;
+  }
+  .chapter-year {
+    @apply m-0 whitespace-nowrap text-xl font-bold tracking-widest;
+    color: rgb(var(--color-accent));
+  }
+  .chapter-count {
+    @apply whitespace-nowrap rounded-full border border-dashed border-skin-line/60 px-2.5 py-0.5 text-xs opacity-70;
+  }
+  .chapter-pages {
+    @apply m-0 flex list-none flex-col gap-5 p-0;
+  }
+
+  .podcast-list {
+    @apply m-0 flex list-none flex-col gap-3 p-0;
+  }
+  .podcast-empty {
+    @apply text-sm opacity-60;
+  }
+</style>

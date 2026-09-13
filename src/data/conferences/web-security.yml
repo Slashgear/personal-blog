@@ -1,6 +1,7 @@
 title: Sécurisons nos utilisateurs grâce au Mozilla Observatory!
 lang: fr
 year: 2023
+image: ./web-security/cover.webp
 description: La sécurité d'une application web est un sujet complexe. Il n'est pas aisé de savoir si son site est suffisamment sécurisé et si celui-ci respecte des recommendations usuelles. La fondation Mozilla propose un outil gratuit d'audit qui permet de rapidement savoir si son site respecte un ensemble de règles. Ce n'est bien évidement pas suffisant, mais si le web respectait ses pratiques, il serait déjà bien plus sur pour tous. Durant un livecoding, je vous propose de faire passer un site labelisé F à A+ dans le Mozilla Observatory.
 events:
   - name: "Lyon JS #90"

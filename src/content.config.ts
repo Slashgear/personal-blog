@@ -33,22 +33,38 @@ const friends = defineCollection({
 
 const conferences = defineCollection({
   loader: glob({ pattern: "**/*.yml", base: "./src/data/conferences" }),
-  schema: z.object({
-    title: z.string(),
-    lang: z.enum(["fr", "en"]),
-    year: z.number(),
-    description: z.string(),
-    events: z.array(
-      z.object({
-        name: z.string(),
-        date: z.number(),
-        site: z.string().optional(),
-        link: z.string().optional(),
-        video: z.string().optional(),
-      }),
-    ),
-    cospeaker: z.array(z.object({ name: z.string(), site: z.string() })).optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      lang: z.enum(["fr", "en"]),
+      year: z.number(),
+      type: z.enum(["talk", "workshop"]).default("talk"),
+      description: z.string(),
+      image: image().optional(),
+      events: z.array(
+        z.object({
+          name: z.string(),
+          date: z.number(),
+          site: z.string().optional(),
+          link: z.string().optional(),
+          video: z.string().optional(),
+        }),
+      ),
+      cospeakers: z.array(z.object({ name: z.string(), site: z.string() })).optional(),
+    }),
 });
 
-export const collections = { blog, friends, conferences };
+const podcasts = defineCollection({
+  loader: glob({ pattern: "**/*.yml", base: "./src/data/podcasts" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      show: z.string(),
+      date: z.number(),
+      link: z.string(),
+      description: z.string().optional(),
+      image: image().optional(),
+    }),
+});
+
+export const collections = { blog, friends, conferences, podcasts };

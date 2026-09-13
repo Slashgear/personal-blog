@@ -1,6 +1,7 @@
 title: La compression web
 lang: fr
 year: 2024
+image: ./web-compression/cover.jpg
 description: |
   Saviez-vous que toute la journée, nos serveurs compressent nos réponses HTTP et que nos navigateurs les décompressent ? 
   C'est comme si on passait notre temps à plier des T-shirts et à les déplier. Cette compression est partout sur le Web, et pourtant ses subtilités nous échappent souvent.

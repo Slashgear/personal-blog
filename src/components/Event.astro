@@ -6,13 +6,72 @@ export interface Props {
 
 const { event } = Astro.props;
 
-const date = new Intl.DateTimeFormat("fr-FR").format(event.date);
+const date = new Intl.DateTimeFormat("fr-FR", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+}).format(new Date(event.date));
+
+const href = event.link || event.site;
+
+// Petit tilt pseudo-aléatoire mais stable pour chaque tampon,
+// comme de vrais tampons apposés à la main.
+const rot =
+  (event.name.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 9) - 4;
 ---
 
-<li class="event">
-  <div class="grid grid-cols-1 sm:grid-cols-3 max-w-500px">
-    <time class="block" datetime={date}>{date}</time>
-    <a href={event.link || event.site}>{event.name}</a>
-    {event.video && <a href={event.video}>Captation vidéo</a>}
-  </div>
+<li class="stamp" style={`--rot: ${rot}deg`}>
+  <time class="stamp-date" datetime={date}>{date}</time>
+  <span class="stamp-name">{event.name}</span>
+  <span class="stamp-actions">
+    {event.video && (
+      <a
+        href={event.video}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={`Vidéo de ${event.name}`}
+        aria-label={`Vidéo de ${event.name}`}
+        >🎥</a
+      >
+    )}
+    {href && (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={`Détails de ${event.name}`}
+        aria-label={`Détails de ${event.name}`}
+        >↗</a
+      >
+    )}
+  </span>
 </li>
+
+<style>
+  @reference "../styles/base.css";
+  .stamp {
+    @apply relative inline-flex aspect-square w-28 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-dashed px-1 py-2 text-center;
+    border-color: rgba(var(--color-accent), 0.75);
+    background: rgba(var(--color-accent), 0.04);
+    transform: rotate(var(--rot));
+    list-style: none;
+  }
+  .stamp::after {
+    content: "";
+    @apply pointer-events-none absolute inset-1 rounded-full border border-skin-line/30;
+  }
+  .stamp-date {
+    @apply text-[9px] uppercase leading-tight tracking-wide opacity-60;
+  }
+  .stamp-name {
+    @apply text-[10px] font-bold uppercase leading-tight;
+    color: rgb(var(--color-accent));
+  }
+  .stamp-actions {
+    @apply flex items-center gap-1.5 text-sm;
+  }
+  .stamp-actions a {
+    @apply inline-flex h-7 min-w-7 items-center justify-center no-underline opacity-70 transition-opacity hover:opacity-100;
+    text-decoration: none;
+  }
+</style>

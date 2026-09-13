@@ -1,6 +1,7 @@
 title: "Remotion : le 7ème art à portée de composants web et d'API 🎬"
 lang: fr
 year: 2022
+image: ./remotion/cover.jpg
 description: Un jour, lorsque Mickaël Alves venait d'arriver chez Bedrock, il a eu le malheur de demander à Antoine Caron sur quoi il travaillait entre midi et deux, et ce qui semblait tant l'amuser. Quelle erreur pour ce développeur franco-portugais ! Il n'avait pas encore idée de la folie de son nouveau tech lead.
 events:
   - name: "Mixit 2023"

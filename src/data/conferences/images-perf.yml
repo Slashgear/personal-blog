@@ -1,6 +1,7 @@
 title: "Au secours ! Mes images pourrissent mes perfs"
 year: 2026
 lang: fr
+image: ./images-perf/cover.jpg
 description: |
   Les images représentent souvent plus de 50% du poids d'une page web. Mal optimisées ou mal servies,
   elles deviennent un goulot d'étranglement pour les performances (notamment le LCP) et l'expérience utilisateur...
