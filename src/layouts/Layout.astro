@@ -18,6 +18,11 @@ export interface Props {
   modDatetime?: Date | null;
   scrollSmooth?: boolean;
   lang?: string;
+  noindex?: boolean;
+  headline?: string;
+  keywords?: string[];
+  wordCount?: number;
+  articleSection?: string;
 }
 
 const {
@@ -33,6 +38,11 @@ const {
   modDatetime,
   scrollSmooth = false,
   lang,
+  noindex = false,
+  headline = title,
+  keywords = [],
+  wordCount,
+  articleSection,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -49,8 +59,10 @@ const structuredData = pubDatetime
   ? {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
-      headline: `${title}`,
+      headline,
+      description,
       image: `${socialImageURL}`,
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonicalURL },
       datePublished: pubDatetime.toISOString(),
       ...(modDatetime && { dateModified: modDatetime.toISOString() }),
       author: [
@@ -60,6 +72,15 @@ const structuredData = pubDatetime
           url: `${profile}`,
         },
       ],
+      publisher: {
+        "@type": "Person",
+        name: `${author}`,
+        url: `${profile}`,
+      },
+      inLanguage: lang ?? "en",
+      ...(keywords.length && { keywords: keywords.join(", ") }),
+      ...(articleSection && { articleSection }),
+      ...(wordCount && { wordCount }),
     }
   : {
       "@context": "https://schema.org",
@@ -72,11 +93,19 @@ const structuredData = pubDatetime
         name: SITE.author,
         url: SITE.profile,
       },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${new URL("/search/", SITE.website).href}?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
     };
 ---
 
 <!doctype html>
-<html lang=`${lang ?? "en"}` class={`${scrollSmooth && "scroll-smooth"}`}>
+<html lang={`${lang ?? "en"}`} class={`${scrollSmooth ? "scroll-smooth" : ""}`}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -84,6 +113,7 @@ const structuredData = pubDatetime
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
     {
       alternates.map(alt => (
         <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
@@ -125,11 +155,11 @@ const structuredData = pubDatetime
     }
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={socialImageURL} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
 
     <!-- Google JSON-LD Structured data -->
     <script

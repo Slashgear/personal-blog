@@ -1,10 +1,6 @@
 ---
 title: "Engineering manager : donner des objectifs et de la vision"
-description: |
-  Troisième article de la série sur mon retour d'expérience en tant
-  qu'engineering manager. Ce billet porte sur les objectifs et la vision :
-  comment fixer des horizons, aligner le rythme de l'équipe sur celui de
-  l'entreprise, et donner du sens à ce qu'on demande de faire.
+description: "Troisième article de ma série sur l'engineering manager : fixer des objectifs et une vision, aligner l'équipe sur l'entreprise et donner du sens au travail."
 pubDatetime: 2026-09-10
 draft: false
 language: fr

@@ -6,11 +6,17 @@ import sitemap from "@astrojs/sitemap";
 import { unified } from "@astrojs/markdown-remark";
 import tailwindcss from "@tailwindcss/vite";
 import { SITE } from "./src/config";
+import { shouldIncludeInSitemap } from "./src/utils/sitemapFilter";
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      filter: (page) => shouldIncludeInSitemap(new URL(page).pathname),
+    }),
+  ],
   markdown: {
     processor: unified({
       remarkPlugins: [
