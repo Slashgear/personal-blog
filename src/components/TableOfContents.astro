@@ -1,0 +1,100 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+
+// Keep only h2 (depth 2) and h3 (depth 3) for the sidebar summary.
+const toc = headings.filter(h => h.depth === 2 || h.depth === 3);
+---
+
+{
+  toc.length > 0 && (
+    <nav aria-label="Table of contents" class="toc">
+      <p class="toc-title">On this page</p>
+      <ul class="toc-list">
+        {
+          toc.map(h => (
+            <li class={h.depth === 3 ? "toc-sub" : "toc-item"}>
+              <a href={`#${h.slug}`} data-toc-link>{h.text}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  )
+}
+
+<style>
+  @reference "../styles/base.css";
+  .toc {
+    @apply sticky top-8 border-l border-skin-line pl-4;
+  }
+  .toc-title {
+    @apply mb-2 text-xs font-semibold uppercase tracking-wide text-skin-base opacity-70;
+  }
+  .toc-list {
+    @apply list-none;
+  }
+  .toc-item {
+    @apply mt-1;
+  }
+  .toc-sub {
+    @apply mt-1 pl-3;
+  }
+  .toc a {
+    @apply block border-l border-transparent -ml-4 pl-4 text-sm leading-5 text-skin-base opacity-75 decoration-dashed underline-offset-4 hover:text-skin-accent hover:opacity-100;
+  }
+  .toc a[data-toc-active] {
+    @apply border-skin-accent text-skin-accent opacity-100;
+  }
+</style>
+
+<script is:inline data-astro-rerun>
+  /** Highlight the summary entry for the section currently in view. */
+  function initTocScrollSpy() {
+    const links = Array.from(document.querySelectorAll("[data-toc-link]"));
+    if (links.length === 0) return;
+
+    const targets = links
+      .map(link => {
+        const id = link.getAttribute("href")?.slice(1);
+        return id ? document.getElementById(id) : null;
+      })
+      .filter(Boolean);
+
+    if (targets.length === 0) return;
+
+    const setActive = active => {
+      for (const link of links) {
+        if (active && link.getAttribute("href")?.slice(1) === active.id) {
+          link.setAttribute("data-toc-active", "");
+        } else {
+          link.removeAttribute("data-toc-active");
+        }
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length > 0) {
+          setActive(visible[0].target);
+        }
+      },
+      { rootMargin: "-80px 0px -70% 0px", threshold: 0 }
+    );
+
+    for (const target of targets) observer.observe(target);
+  }
+  initTocScrollSpy();
+</script>

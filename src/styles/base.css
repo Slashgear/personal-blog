@@ -12,6 +12,7 @@
 @theme {
   --breakpoint-*: initial;
   --breakpoint-sm: 640px;
+  --breakpoint-lg: 1024px;
 
   --color-skin-fill: rgb(var(--color-fill));
   --color-skin-accent: rgb(var(--color-accent));
