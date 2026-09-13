@@ -1,23 +1,140 @@
 ---
+import { getImage } from "astro:assets";
 import type { Conference } from "../types";
-import Cospeakers from "./Cospeakers.astro";
 import Event from "./Event.astro";
+
 export interface Props {
   conference: Conference;
 }
 
 const { conference } = Astro.props;
+const { title, year, lang, type, description, events, cospeakers, image } =
+  conference.data;
+
+const cover = image ? await getImage({ src: image, width: 1200 }) : undefined;
+
+const typeLabel = type === "workshop" ? "WORKSHOP" : "TALK";
+const langLabel = lang === "fr" ? "🇫🇷 FR" : "🇬🇧 EN";
 ---
 
-<li>
-  <h2>{conference.data.title}</h2>
-  {
-    conference.data.cospeakers && conference.data.cospeakers.length > 0 && (
-      <Cospeakers conference={conference} />
-    )
-  }
-  <p class="italic text-sm">{conference.data.description}</p>
-  <ul>
-    {conference.data.events.map(event => <Event event={event} />)}
-  </ul>
+<li class="passport">
+  {cover && (
+    <div class="passport-photo">
+      <img
+        src={cover.src}
+        width={cover.attributes.width}
+        height={cover.attributes.height}
+        alt={`${title} — photo de la conférence`}
+        loading="lazy"
+      />
+      <span class="photo-label">PHOTO</span>
+    </div>
+  )}
+
+  <div class="visa">
+    <div class="visa-head">
+      <span class="visa-type">{typeLabel}</span>
+      <span class="visa-lang">{langLabel}</span>
+      <span class="visa-validity">
+        <span class="meta-key">VALIDITÉ</span>
+        <span class="meta-value">{year}</span>
+      </span>
+    </div>
+    <h2 class="visa-title">{title}</h2>
+    <p class="visa-desc">{description}</p>
+
+    {
+      cospeakers && cospeakers.length > 0 && (
+        <p class="visa-cospeakers">
+          <span class="meta-key">VOYAGE EN COMPAGNIE DE</span>
+          {cospeakers.map(speaker => (
+            <a href={speaker.site} target="_blank" rel="noopener noreferrer">
+              {speaker.name}
+            </a>
+          ))}
+        </p>
+      )
+    }
+  </div>
+
+  <div class="stamps">
+    <span class="stamps-label">TAMPONS</span>
+    <ul class="stamps-grid">
+      {events.map(event => <Event event={event} />)}
+    </ul>
+  </div>
 </li>
+
+<style>
+  @reference "../styles/base.css";
+  .passport {
+    @apply flex flex-col gap-5 overflow-hidden rounded-xl border p-6 transition-all duration-200;
+    border-color: rgba(var(--color-border), 0.4);
+    background: rgba(var(--color-fill), 0.4);
+    list-style: none;
+  }
+  .passport:hover {
+    border-color: rgb(var(--color-accent));
+    background: rgba(var(--color-accent), 0.04);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px rgba(var(--color-accent), 0.12);
+  }
+
+  /* Photo (cover) */
+  .passport-photo {
+    @apply relative -m-6 mb-0 overflow-hidden border-b-2 border-dashed border-skin-line/60;
+  }
+  .passport-photo img {
+    @apply aspect-video w-full object-cover;
+  }
+  .photo-label {
+    @apply absolute bottom-0 right-0 rounded-tl bg-skin-fill/90 px-2 py-0.5 text-[9px] uppercase tracking-widest opacity-70;
+  }
+
+  /* Visa */
+  .visa {
+    @apply flex flex-col gap-3;
+  }
+  .visa-head {
+    @apply flex flex-wrap items-center gap-2;
+  }
+  .visa-type {
+    @apply rounded border-2 border-dashed border-skin-accent px-2.5 py-0.5 text-xs font-bold tracking-widest text-skin-accent;
+  }
+  .visa-lang {
+    @apply text-xs opacity-60;
+  }
+  .visa-validity {
+    @apply ml-auto flex items-baseline gap-1.5;
+  }
+  .visa-title {
+    @apply m-0 text-2xl font-bold leading-snug;
+  }
+  .meta-key {
+    @apply text-[10px] font-semibold uppercase tracking-widest opacity-70;
+  }
+  .meta-value {
+    @apply text-lg font-bold text-skin-accent;
+  }
+  .visa-desc {
+    @apply m-0 text-sm opacity-80;
+    line-height: 1.6;
+  }
+  .visa-cospeakers {
+    @apply m-0 flex flex-wrap items-baseline gap-1.5 text-sm;
+  }
+  .visa-cospeakers a {
+    @apply text-skin-accent underline decoration-dashed underline-offset-4 hover:opacity-80;
+  }
+
+  /* Stamps */
+  .stamps {
+    @apply flex flex-col gap-3 border-t border-dashed border-skin-line/50 pt-4;
+  }
+  .stamps-label {
+    @apply text-[10px] font-semibold uppercase tracking-widest opacity-70;
+  }
+  .stamps-grid {
+    @apply m-0 flex list-none flex-wrap gap-4 p-0;
+  }
+</style>

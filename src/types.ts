@@ -1,3 +1,4 @@
+import type { ImageMetadata } from "astro";
 import type socialIcons from "@assets/socialIcons";
 
 export type Site = {
@@ -40,8 +41,23 @@ export type Conference = {
     title: string;
     lang: "fr" | "en";
     year: number;
+    type: "talk" | "workshop";
     description: string;
+    image?: ImageMetadata;
     events: Event[];
     cospeakers?: Speaker[];
+  };
+};
+
+export type Podcast = {
+  id: string;
+  collection: string;
+  data: {
+    title: string;
+    show: string;
+    date: number;
+    link: string;
+    description?: string;
+    image?: ImageMetadata;
   };
 };

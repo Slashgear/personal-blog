@@ -1,6 +1,7 @@
 title: Tester c'est tricher !
 lang: fr
 year: 2025
+image: ./tests/cover.jpg
 description:
   Dans le monde du développement logiciel, la pyramide des tests est un modèle souvent pris pour acquis.
   Pourtant, est-elle vraiment la clé pour garantir une couverture de tests optimale et une maintenance efficace ?

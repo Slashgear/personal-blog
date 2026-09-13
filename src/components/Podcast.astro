@@ -1,0 +1,138 @@
+---
+import { getImage } from "astro:assets";
+import type { Podcast } from "../types";
+export interface Props {
+  podcast: Podcast;
+}
+
+const { podcast } = Astro.props;
+const { title, show, date, link, description, image } = podcast.data;
+
+const dateLabel = new Intl.DateTimeFormat("fr-FR", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+}).format(new Date(date));
+
+const cover = image
+  ? await getImage({ src: image, width: 160, quality: 80 })
+  : null;
+---
+
+<li class="podcast-item">
+  <a
+    class="podcast-cover-wrap"
+    href={link}
+    target={link.startsWith("http") ? "_blank" : undefined}
+    rel="noopener noreferrer"
+  >
+    {cover ? (
+      <img
+        class="podcast-cover"
+        src={cover.src}
+        alt={`Écouter ${show}`}
+        loading="lazy"
+      />
+    ) : (
+      <span class="podcast-emoji" aria-hidden="true">🎙️</span>
+    )}
+  </a>
+  <div class="podcast-body">
+    <p class="podcast-meta">
+      <span class="podcast-show-name">{show}</span>
+      <span class="podcast-sep" aria-hidden="true">·</span>
+      <time datetime={dateLabel}>{dateLabel}</time>
+    </p>
+    <a
+      class="podcast-title"
+      href={link}
+      target={link.startsWith("http") ? "_blank" : undefined}
+      rel="noopener noreferrer"
+      >{title}</a
+    >
+    {description && <p class="podcast-desc">{description}</p>}
+  </div>
+  <a
+    class="podcast-listen"
+    href={link}
+    target={link.startsWith("http") ? "_blank" : undefined}
+    rel="noopener noreferrer"
+    >Écouter<span class="listen-arrow" aria-hidden="true">↗</span></a
+  >
+</li>
+
+<style>
+  @reference "../styles/base.css";
+  .podcast-item {
+    @apply flex items-center gap-5 rounded-xl border border-dashed border-skin-line/60 bg-skin-card/40 p-4 pr-5 transition-all duration-200;
+    list-style: none;
+  }
+  .podcast-item:hover {
+    border-style: solid;
+    border-color: rgb(var(--color-accent));
+    background: rgba(var(--color-accent), 0.05);
+    transform: translateY(-2px);
+  }
+  .podcast-cover-wrap {
+    @apply relative block shrink-0 overflow-hidden rounded-lg ring-1 ring-skin-line/60;
+    width: 128px;
+    aspect-ratio: 16 / 9;
+  }
+  .podcast-cover-wrap:hover {
+    box-shadow: 0 0 0 1px rgb(var(--color-accent));
+  }
+  .podcast-cover {
+    @apply h-full w-full object-cover transition-transform duration-300;
+  }
+  .podcast-cover-wrap:hover .podcast-cover {
+    transform: scale(1.05);
+  }
+  .podcast-emoji {
+    @apply flex h-full w-full items-center justify-center;
+    font-size: 2rem;
+    background: rgba(var(--color-accent), 0.08);
+  }
+  .podcast-body {
+    @apply flex min-w-0 flex-1 flex-col gap-1;
+  }
+  .podcast-meta {
+    @apply m-0 flex items-center gap-2 text-xs;
+  }
+  .podcast-show-name {
+    @apply font-semibold uppercase tracking-wide;
+    color: rgb(var(--color-accent));
+  }
+  @media (prefers-color-scheme: dark) {
+    .podcast-show-name {
+      color: rgb(205, 170, 255);
+    }
+  }
+  .podcast-sep {
+    @apply opacity-40;
+  }
+  .podcast-meta time {
+    @apply opacity-60;
+  }
+  .podcast-title {
+    @apply text-lg font-semibold leading-snug hover:text-skin-accent;
+  }
+  .podcast-desc {
+    @apply m-0 text-sm opacity-70;
+    line-height: 1.5;
+  }
+  .podcast-listen {
+    @apply flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-dashed px-4 py-2 text-sm font-medium transition-colors;
+    border-color: rgba(var(--color-accent), 0.6);
+    color: rgb(var(--color-accent));
+  }
+  .podcast-listen:hover {
+    @apply border-solid;
+    background: rgba(var(--color-accent), 0.1);
+  }
+  .listen-arrow {
+    @apply transition-transform duration-200;
+  }
+  .podcast-listen:hover .listen-arrow {
+    transform: translate(2px, -2px);
+  }
+</style>
