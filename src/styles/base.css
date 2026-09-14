@@ -131,6 +131,14 @@
   #about h4 {
     @apply !text-base !font-semibold opacity-90;
   }
+  #about ul {
+    list-style: disc outside;
+    overflow: visible;
+    padding-left: 1.5rem;
+  }
+  #about li::marker {
+    color: rgb(var(--color-accent));
+  }
   #about h2 {
     @apply !mt-16 first-of-type:!mt-0;
   }

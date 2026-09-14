@@ -134,77 +134,68 @@ const nextPost =
     })}
   />
   <Header />
-  <div class="mx-auto flex w-full max-w-5xl justify-start px-2">
-    <button
-      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
-      onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path
-          d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-        ></path>
-      </svg><span>Go back</span>
-    </button>
-  </div>
 
   <main id="main-content">
-    <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-    <Datetime
-      pubDatetime={pubDatetime}
-      modDatetime={modDatetime}
-      size="lg"
-      className="my-2"
-    />
+    <div class="post-grid">
+      <div class="post-content">
+        <button
+          class="go-back focus-outline flex hover:opacity-75"
+          onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg"
+            ><path
+              d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+            ></path
+          ></svg><span>Go back</span>
+        </button>
 
-    {
-      typeof ogImage === "string" ? (
-        ogImage && <img alt={title} src={ogImage} class="w-full my-10 rounded-sm" />
-      ) : (
-        ogImage && (
-          <Image
-            src={ogImage}
-            alt={title}
-            width={1024}
-            widths={[640, 1024, 2048]}
-            sizes="(max-width: 768px) 100vw, 992px"
-            quality={78}
-            loading="eager"
-            fetchpriority="high"
-            class="w-full my-10 rounded-sm"
+        <div class="post-header">
+          <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+          <Datetime
+            pubDatetime={pubDatetime}
+            modDatetime={modDatetime}
+            size="lg"
+            className="my-2"
           />
-        )
-      )
-    }
 
-    {
-      tocHeadings.length > 0 ? (
-        <div class="post-grid">
-          <div class="post-content">
-            <article id="article" class="prose max-w-none mt-8">
-              <Content />
-            </article>
+          {
+            typeof ogImage === "string" ? (
+              ogImage && <img alt={title} src={ogImage} class="post-cover" />
+            ) : (
+              ogImage && (
+                <Image
+                  src={ogImage}
+                  alt={title}
+                  width={1024}
+                  widths={[640, 1024, 2048]}
+                  sizes="(max-width: 768px) 100vw, 992px"
+                  quality={78}
+                  loading="eager"
+                  fetchpriority="high"
+                  class="post-cover"
+                />
+              )
+            )
+          }
+        </div>
 
-            <ul class="my-8">
-              {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
-            </ul>
-          </div>
+        <article id="article" class="prose max-w-none mt-8">
+          <Content />
+        </article>
 
+        <ul class="my-8">
+          {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
+        </ul>
+      </div>
+
+      {
+        tocHeadings.length > 0 && (
           <aside class="post-toc">
             <TableOfContents headings={headings} />
           </aside>
-        </div>
-      ) : (
-        <>
-          <article id="article" class="prose max-w-none mt-8">
-            <Content />
-          </article>
-
-          <ul class="my-8">
-            {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}
-          </ul>
-        </>
-      )
-    }
+        )
+      }
+    </div>
 
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
@@ -311,16 +302,25 @@ const nextPost =
 <style>
   @reference "../styles/base.css";
   main {
-    @apply mx-auto w-full max-w-7xl px-4 pb-12;
+    @apply mx-auto w-full max-w-6xl px-4 pb-12;
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;
+  }
+  .go-back {
+    @apply mb-2 mt-8;
   }
   .post-grid {
     @apply grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_16rem];
   }
   .post-content {
     @apply min-w-0;
+  }
+  .post-header {
+    @apply max-w-4xl;
+  }
+  .post-cover {
+    @apply my-10 block h-auto w-full max-h-[50vh] rounded-sm object-cover;
   }
   .post-toc {
     @apply hidden lg:block;

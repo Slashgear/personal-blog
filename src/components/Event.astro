@@ -13,25 +13,19 @@ const date = new Intl.DateTimeFormat("fr-FR", {
 }).format(new Date(event.date));
 
 const href = event.link || event.site;
-
-// Petit tilt pseudo-aléatoire mais stable pour chaque tampon,
-// comme de vrais tampons apposés à la main.
-const rot =
-  (event.name.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0) % 9) - 4;
 ---
 
-<li class="stamp" style={`--rot: ${rot}deg`}>
-  <time class="stamp-date" datetime={date}>{date}</time>
-  <span class="stamp-name">{event.name}</span>
-  <span class="stamp-actions">
+<li class="event">
+  <time class="event-date" datetime={date}>{date}</time>
+  <span class="event-name">{event.name}</span>
+  <span class="event-actions">
     {event.video && (
       <a
         href={event.video}
         target="_blank"
         rel="noopener noreferrer"
-        title={`Vidéo de ${event.name}`}
         aria-label={`Vidéo de ${event.name}`}
-        >🎥</a
+        >Vidéo ↗</a
       >
     )}
     {href && (
@@ -39,9 +33,8 @@ const rot =
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        title={`Détails de ${event.name}`}
         aria-label={`Détails de ${event.name}`}
-        >↗</a
+        >Détails ↗</a
       >
     )}
   </span>
@@ -49,29 +42,27 @@ const rot =
 
 <style>
   @reference "../styles/base.css";
-  .stamp {
-    @apply relative inline-flex aspect-square w-28 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-dashed px-1 py-2 text-center;
-    border-color: rgba(var(--color-accent), 0.75);
-    background: rgba(var(--color-accent), 0.04);
-    transform: rotate(var(--rot));
+  .event {
+    @apply flex flex-wrap items-center gap-x-3 gap-y-1 text-sm;
     list-style: none;
   }
-  .stamp::after {
-    content: "";
-    @apply pointer-events-none absolute inset-1 rounded-full border border-skin-line/30;
+  .event-date {
+    @apply shrink-0 text-xs uppercase tracking-wide opacity-60;
   }
-  .stamp-date {
-    @apply text-[9px] uppercase leading-tight tracking-wide opacity-60;
+  .event-name {
+    flex: 1 0 auto;
+    min-width: 8rem;
+    font-weight: 500;
   }
-  .stamp-name {
-    @apply text-[10px] font-bold uppercase leading-tight;
-    color: rgb(var(--color-accent));
+  .event-actions {
+    @apply ml-auto flex shrink-0 items-center gap-2;
   }
-  .stamp-actions {
-    @apply flex items-center gap-1.5 text-sm;
-  }
-  .stamp-actions a {
-    @apply inline-flex h-7 min-w-7 items-center justify-center no-underline opacity-70 transition-opacity hover:opacity-100;
+  .event-actions a {
+    @apply inline-flex items-center gap-1 whitespace-nowrap rounded-md border border-skin-line/50 px-2.5 py-1 text-xs no-underline transition-colors;
     text-decoration: none;
+  }
+  .event-actions a:hover {
+    border-color: rgb(var(--color-accent));
+    color: rgb(var(--color-accent));
   }
 </style>

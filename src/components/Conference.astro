@@ -17,9 +17,9 @@ const typeLabel = type === "workshop" ? "WORKSHOP" : "TALK";
 const langLabel = lang === "fr" ? "🇫🇷 FR" : "🇬🇧 EN";
 ---
 
-<li class="passport">
+<li class="talk">
   {cover && (
-    <div class="passport-photo">
+    <div class="talk-cover">
       <img
         src={cover.src}
         width={cover.attributes.width}
@@ -27,26 +27,22 @@ const langLabel = lang === "fr" ? "🇫🇷 FR" : "🇬🇧 EN";
         alt={`${title} — photo de la conférence`}
         loading="lazy"
       />
-      <span class="photo-label">PHOTO</span>
     </div>
   )}
 
-  <div class="visa">
-    <div class="visa-head">
-      <span class="visa-type">{typeLabel}</span>
-      <span class="visa-lang">{langLabel}</span>
-      <span class="visa-validity">
-        <span class="meta-key">VALIDITÉ</span>
-        <span class="meta-value">{year}</span>
-      </span>
+  <div class="talk-body">
+    <div class="talk-head">
+      <span class="talk-type">{typeLabel}</span>
+      <span class="talk-lang">{langLabel}</span>
+      <span class="talk-year">{year}</span>
     </div>
-    <h2 class="visa-title">{title}</h2>
-    <p class="visa-desc">{description}</p>
+    <h2 class="talk-title">{title}</h2>
+    <p class="talk-desc">{description}</p>
 
     {
       cospeakers && cospeakers.length > 0 && (
-        <p class="visa-cospeakers">
-          <span class="meta-key">VOYAGE EN COMPAGNIE DE</span>
+        <p class="talk-cospeakers">
+          <span class="meta-key">Avec</span>
           {cospeakers.map(speaker => (
             <a href={speaker.site} target="_blank" rel="noopener noreferrer">
               {speaker.name}
@@ -57,9 +53,9 @@ const langLabel = lang === "fr" ? "🇫🇷 FR" : "🇬🇧 EN";
     }
   </div>
 
-  <div class="stamps">
-    <span class="stamps-label">TAMPONS</span>
-    <ul class="stamps-grid">
+  <div class="talks-events">
+    <span class="meta-key">Prises de parole</span>
+    <ul class="events-list">
       {events.map(event => <Event event={event} />)}
     </ul>
   </div>
@@ -67,74 +63,62 @@ const langLabel = lang === "fr" ? "🇫🇷 FR" : "🇬🇧 EN";
 
 <style>
   @reference "../styles/base.css";
-  .passport {
-    @apply flex flex-col gap-5 overflow-hidden rounded-xl border p-6 transition-all duration-200;
+  .talk {
+    @apply flex min-w-0 flex-col gap-5 overflow-hidden rounded-xl border p-6 transition-all duration-200;
     border-color: rgba(var(--color-border), 0.4);
     background: rgba(var(--color-fill), 0.4);
     list-style: none;
   }
-  .passport:hover {
+  .talk:hover {
     border-color: rgb(var(--color-accent));
     background: rgba(var(--color-accent), 0.04);
     transform: translateY(-2px);
     box-shadow: 0 4px 24px rgba(var(--color-accent), 0.12);
   }
 
-  /* Photo (cover) */
-  .passport-photo {
-    @apply relative -m-6 mb-0 overflow-hidden border-b-2 border-dashed border-skin-line/60;
+  .talk-cover {
+    @apply -mx-6 -mt-6 mb-0 min-w-0 overflow-hidden;
   }
-  .passport-photo img {
-    @apply aspect-video w-full object-cover;
-  }
-  .photo-label {
-    @apply absolute bottom-0 right-0 rounded-tl bg-skin-fill/90 px-2 py-0.5 text-[9px] uppercase tracking-widest opacity-70;
+  .talk-cover img {
+    @apply aspect-video w-full min-w-0 object-cover;
   }
 
-  /* Visa */
-  .visa {
-    @apply flex flex-col gap-3;
+  .talk-body {
+    @apply flex min-w-0 flex-col gap-3;
   }
-  .visa-head {
+  .talk-head {
     @apply flex flex-wrap items-center gap-2;
   }
-  .visa-type {
-    @apply rounded border-2 border-dashed border-skin-accent px-2.5 py-0.5 text-xs font-bold tracking-widest text-skin-accent;
+  .talk-type {
+    @apply rounded border border-skin-accent px-2.5 py-0.5 text-xs font-bold tracking-widest text-skin-accent;
   }
-  .visa-lang {
+  .talk-lang {
     @apply text-xs opacity-60;
   }
-  .visa-validity {
-    @apply ml-auto flex items-baseline gap-1.5;
+  .talk-year {
+    @apply ml-auto text-lg font-bold text-skin-accent;
   }
-  .visa-title {
+  .talk-title {
     @apply m-0 text-2xl font-bold leading-snug;
   }
   .meta-key {
     @apply text-[10px] font-semibold uppercase tracking-widest opacity-70;
   }
-  .meta-value {
-    @apply text-lg font-bold text-skin-accent;
-  }
-  .visa-desc {
+  .talk-desc {
     @apply m-0 text-sm opacity-80;
     line-height: 1.6;
   }
-  .visa-cospeakers {
+  .talk-cospeakers {
     @apply m-0 flex flex-wrap items-baseline gap-1.5 text-sm;
   }
-  .visa-cospeakers a {
+  .talk-cospeakers a {
     @apply text-skin-accent underline decoration-dashed underline-offset-4 hover:opacity-80;
   }
 
-  /* Stamps */
-  .stamps {
-    @apply flex flex-col gap-3 border-t border-dashed border-skin-line/50 pt-4;
+  .talks-events {
+    @apply flex flex-col gap-3 border-t border-skin-line/50 pt-4;
   }
-  .stamps-label {
-    @apply text-[10px] font-semibold uppercase tracking-widest opacity-70;
-  }
-  .stamps-grid {
-    @apply m-0 flex list-none flex-wrap gap-4 p-0;
+  .events-list {
+    @apply m-0 flex list-none flex-col gap-2 p-0;
   }
 </style>

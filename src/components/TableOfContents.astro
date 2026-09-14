@@ -35,10 +35,10 @@ const toc = headings.filter(h => h.depth === 2 || h.depth === 3);
 <style>
   @reference "../styles/base.css";
   .toc {
-    @apply sticky top-8 border-l border-skin-line pl-4;
+    @apply sticky top-20 mt-16 max-h-[calc(100vh-8rem)] overflow-y-auto border-l border-skin-line pl-4 [scrollbar-width:thin] [scrollbar-color:var(--color-skin-line)_transparent];
   }
   .toc-title {
-    @apply mb-2 text-xs font-semibold uppercase tracking-wide text-skin-base opacity-70;
+    @apply sticky top-0 mb-2 bg-skin-fill text-xs font-semibold uppercase tracking-wide text-skin-base opacity-70;
   }
   .toc-list {
     @apply list-none;

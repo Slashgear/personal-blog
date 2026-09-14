@@ -64,7 +64,7 @@ const cover = image
 <style>
   @reference "../styles/base.css";
   .podcast-item {
-    @apply flex items-center gap-5 rounded-xl border border-dashed border-skin-line/60 bg-skin-card/40 p-4 pr-5 transition-all duration-200;
+    @apply flex flex-wrap items-center gap-5 rounded-xl border border-dashed border-skin-line/60 bg-skin-card/40 p-4 pr-5 transition-all duration-200;
     list-style: none;
   }
   .podcast-item:hover {
@@ -96,10 +96,10 @@ const cover = image
     @apply flex min-w-0 flex-1 flex-col gap-1;
   }
   .podcast-meta {
-    @apply m-0 flex items-center gap-2 text-xs;
+    @apply m-0 flex min-w-0 items-center gap-2 text-xs;
   }
   .podcast-show-name {
-    @apply font-semibold uppercase tracking-wide;
+    @apply min-w-0 truncate font-semibold uppercase tracking-wide;
     color: rgb(var(--color-accent));
   }
   @media (prefers-color-scheme: dark) {

@@ -37,28 +37,27 @@ const eventsCount = conferences.reduce(
 <Layout title={`Conférences & podcasts | ${SITE.title}`} lang="fr">
   <Header activeNav="conferences" />
   <Breadcrumbs />
-  <main id="main-content" class="mx-auto max-w-5xl px-4">
-    <section class="passport-cover" aria-labelledby="tour-title">
-      <div class="cover-emblem" aria-hidden="true">🛂</div>
+  <main id="main-content" class="mx-auto w-full max-w-5xl min-w-0 px-4">
+    <section class="page-hero" aria-labelledby="tour-title">
       <p class="cover-kicker">MES PRISES DE PAROLE</p>
       <h1 id="tour-title" class="cover-title">Conférences & Podcasts</h1>
       <p class="cover-sub">
-        Les conférences, workshops et podcasts qui m'ont fait voyager — chaque
-        tampon est un endroit où j'ai pris la parole.
+        Les conférences, workshops et podcasts où j'ai pris la parole — talks,
+        ateliers et échanges, avec les dates de chaque passage.
       </p>
 
       <div class="cover-stats">
         <div class="cover-stat">
           <span class="cover-stat-value">{talksCount}</span>
-          <span class="cover-stat-label">VISAS</span>
+          <span class="cover-stat-label">Conférences</span>
         </div>
         <div class="cover-stat">
           <span class="cover-stat-value">{eventsCount}</span>
-          <span class="cover-stat-label">TAMPONS</span>
+          <span class="cover-stat-label">Prises de parole</span>
         </div>
         <div class="cover-stat">
           <span class="cover-stat-value">{sortedPodcasts.length}</span>
-          <span class="cover-stat-label">PODCASTS</span>
+          <span class="cover-stat-label">Podcasts</span>
         </div>
       </div>
     </section>
@@ -70,7 +69,7 @@ const eventsCount = conferences.reduce(
             <span class="chapter-line" aria-hidden="true"></span>
             <h2 class="chapter-year">ANNÉE {year}</h2>
             <span class="chapter-count">
-              {yearConferences.length} visa{yearConferences.length > 1 ? "s" : ""}
+              {yearConferences.length} conférence{yearConferences.length > 1 ? "s" : ""}
             </span>
           </div>
           <ul class="chapter-pages">
@@ -108,26 +107,20 @@ const eventsCount = conferences.reduce(
 
 <style>
   @reference "../styles/base.css";
-  /* ── Passport cover hero ── */
-  .passport-cover {
+  /* ── Page hero ── */
+  .page-hero {
     position: relative;
     overflow: hidden;
     text-align: center;
-    margin: 1rem 0 3.5rem;
+    margin: 1rem auto 3.5rem;
     padding: 3rem 1.5rem 2.75rem;
     border-radius: 1.25rem;
-    border: 1px dashed rgba(var(--color-border), 0.45);
+    border: 1px solid rgba(var(--color-border), 0.35);
     background: radial-gradient(
       ellipse at 50% 0%,
-      rgba(var(--color-accent), 0.1) 0%,
+      rgba(var(--color-accent), 0.08) 0%,
       transparent 60%
     );
-  }
-  .cover-emblem {
-    font-size: 2rem;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-    opacity: 0.85;
   }
   .cover-kicker {
     @apply m-0 text-[10px] font-semibold uppercase opacity-60;
@@ -151,24 +144,20 @@ const eventsCount = conferences.reduce(
     line-height: 1.55;
   }
   .cover-stats {
-    @apply mx-auto mt-8 flex max-w-xl flex-wrap items-center justify-center gap-5;
+    @apply mx-auto mt-8 flex max-w-xl flex-wrap items-center justify-center gap-4;
   }
   .cover-stat {
-    @apply flex aspect-square w-24 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-dashed;
-    border-color: rgba(var(--color-accent), 0.7);
+    @apply flex flex-col items-center gap-0.5 rounded-lg border px-6 py-3;
+    border-color: rgba(var(--color-accent), 0.5);
     background: rgba(var(--color-accent), 0.05);
-    transform: rotate(-3deg);
-  }
-  .cover-stat:nth-child(even) {
-    transform: rotate(2deg);
   }
   .cover-stat-value {
     @apply text-2xl font-bold;
     color: rgb(var(--color-accent));
   }
   .cover-stat-label {
-    @apply text-[9px] font-semibold uppercase opacity-70;
-    letter-spacing: 0.15em;
+    @apply text-[10px] font-semibold uppercase opacity-70;
+    letter-spacing: 0.12em;
   }
 
   /* ── Chapters / years ── */
@@ -176,7 +165,7 @@ const eventsCount = conferences.reduce(
     margin-bottom: 3rem;
   }
   .chapter-header {
-    @apply mb-5 flex items-center gap-4;
+    @apply mb-5 flex min-w-0 items-center gap-4;
   }
   .chapter-line {
     @apply h-px flex-1 bg-skin-line/60;
