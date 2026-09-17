@@ -206,9 +206,9 @@ connaissant le pire cas, pas le meilleur.
 
 ## Le deploy frequency et mon rapport au déploiement continu
 
-Des métriques DORA, celle que j'exploite principalement, c'est la _deploy
-frequency_ : la fréquence à laquelle on met en production. C'est la plus
-parlante pour l'équipe, parce qu'elle raconte directement le rythme de
+Des métriques DORA[^dora], celle que j'exploite principalement, c'est la
+_deploy frequency_ : la fréquence à laquelle on met en production. C'est la
+plus parlante pour l'équipe, parce qu'elle raconte directement le rythme de
 livraison, celui qu'on ressent au quotidien.
 
 Cela dit, je n'applique pas le modèle « déploiement continu à chaque merge
@@ -383,9 +383,9 @@ dont plus personne ne se demande pourquoi il est ce qu'il est.
 
 Et surtout, une métrique ne doit jamais devenir une cible à atteindre à
 tout prix : sinon elle cesse de mesurer la réalité et commence à la
-déformer. Le jour où un chiffre devient un jugement sur les personnes plutôt
-qu'un instrument de compréhension, il faut savoir le ranger. C'est le
-meilleur garde-fou que je connaisse.
+déformer[^goodhart]. Le jour où un chiffre devient un jugement sur les
+personnes plutôt qu'un instrument de compréhension, il faut savoir le
+ranger. C'est le meilleur garde-fou que je connaisse.
 
 ## Et la suite ?
 
@@ -398,3 +398,14 @@ Le prochain épisode portera sur **le recrutement, l'onboarding et
 l'offboarding**, un sujet que j'ai déjà évoqué en passant dans le deuxième
 article. Comme toujours, vous pouvez retrouver l'ensemble de la série via le
 tag [engineering-management](/tags/engineering-management).
+
+[^dora]:
+    Les métriques DORA (_DevOps Research and Assessment_) regroupent quatre
+    indicateurs de performance : la deploy frequency, le lead time, la change
+    failure rate et le mean time to recovery. Stéphane Robert les présente
+    très bien sur son blog : [_DORA, les métriques
+    devops_](https://blog.stephane-robert.info/docs/devops/fondamentaux/dora/).
+
+[^goodhart]:
+    C'est la [loi de Goodhart](https://fr.wikipedia.org/wiki/Loi_de_Goodhart) :
+    quand une mesure devient une cible, elle cesse d'être une bonne mesure.
