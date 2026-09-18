@@ -3,7 +3,6 @@ title: "🗻 Snowpack 🗻 le remplaçant de webpack ?️"
 description: Après des articles sur esbuild, vite, je vous propose de découvrir ensemble snowpack afin de se faire un avis.
 pubDatetime: 2021-06-02
 ogImage: ./social-2.jpeg
-translations: ["en", "should-snowpack-replace-webpack"]
 language: fr
 tags:
   - webpack
@@ -12,7 +11,7 @@ tags:
   - bundler
 ---
 
-Après [webpack](/fr/webpack), [esbuild](/fr/esbuild) et [vitejs](/fr/vitejs), prenons le temps d'étudier le cas de [snowpack](/fr/snowpack).
+Après [webpack](/posts/hunting-webpack-performances/), [esbuild](/posts/esbuild-bundler-incroyablement-rapide-et-prometteur/) et [vitejs](/posts/vitejs-concurrent-performant-webpack-pour-react/), prenons le temps d'étudier le cas de snowpack.
 Ce dernier semble se faire un petit nom dans l'écosystème des bundlers depuis quelques années maintenant.
 Je vous propose donc qu'on étudie ses fonctionnalités, ses points forts mais également ses points faibles.
 
@@ -36,7 +35,7 @@ Les packagers comme webpack et rollup se reposent sur la construction d'un arbre
 L'étape de build des fichiers modifiés reste nécessaire, cependant l'opération de packaging (fusion des différents modules sous la forme de bundle qu'on envoie au navigateur) n'est plus nécessaire.
 [Nos navigateurs savent maintenant gérer les ESModules](https://caniuse.com/?search=esmodule), il n'est donc plus nécessaire de packager nos modules sources pour les fusionner.
 
-> C'est la même idée qu'Evan You a repris dans [Vite](/fr/vitejs-concurrent-performant-webpack-pour-react)
+> C'est la même idée qu'Evan You a repris dans [Vite](/posts/vitejs-concurrent-performant-webpack-pour-react/)
 
 Avec ce principe, la modification d'un fichier ne déclenche que le build de ce fichier, et ce fichier uniquement.
 Vous pourrez avoir un projet avec des milliers de modules javascript, le temps de build à chaque modification ne se retrouvera pas affecté.
@@ -58,7 +57,7 @@ Rassurez vous! Snowpack n'est pas compatible qu'avec React, vous pouvez utiliser
 ### Une config riche (trop)
 
 À la manière de webpack, snowpack propose de configurer son utilisation par un objet.
-Je dois vous avouer qu'[après avoir joué avec vite](/fr/vitejs-concurrent-performant-webpack-pour-react/), je suis un peu déçu.
+Je dois vous avouer qu'[après avoir joué avec vite](/posts/vitejs-concurrent-performant-webpack-pour-react/), je suis un peu déçu.
 Je vois une maigre [page de documentation](https://www.snowpack.dev/reference/configuration) qui semble pourtant décrire de nombreuses clés paramètrables.
 
 Si vous venez de webpack, vous ne serez pas perdu, c'est très ressemblant sans pour autant être exactement la même chose.

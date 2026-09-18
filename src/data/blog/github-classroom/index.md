@@ -20,7 +20,7 @@ enseignants sur Github](https://education.github.community). Une communauté tr�
 principal de discussion est **Github classroom**. J'ai alors décortiqué cette solution proposée par Github
 afin de la tester au plus vite avec mes étudiants.
 
-# Constat, en TP on est très mal équipé
+## Constat, en TP on est très mal équipé
 
 Avant de vous décrire le fonctionnement et la mise en place de cet outil avec vos étudiants,
 je préfère faire une petite liste des problèmes que j'ai pu rencontrer en tant que professeur
@@ -56,7 +56,7 @@ ou même en tant qu'étudiant lors de la réalisation d'un TP.
   configuré son projet un peu bizarrement et il vous faudra au moins 10 minutes pour comprendre
   ce qu'il a fait.
 
-# Préparer un TP avec Github Classroom
+## Préparer un TP avec Github Classroom
 
 Alors déjà pour être clair, utiliser un outil comme **Github Classroom** nécessite du temps
 de préparation supplémentaire. Il y a tout un tas de choses à configurer avant la première séance

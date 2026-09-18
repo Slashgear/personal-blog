@@ -4,7 +4,6 @@ description: We use React and Redux for almost 4 years at Bedrock on our video p
   Good practices and mistakes to be avoided have been gathered in this article.
 pubDatetime: 2020-04-04
 ogImage: ./redux.jpg
-translations: ["fr", "react-redux-pieges-bonnes-pratiques"]
 language: en
 tags:
   - react
@@ -378,7 +377,7 @@ This is something we see quite often.
 
 Each time this selector will be called for a `user` not present in the state, it will return a new object, a new reference.
 
-> With [useSelector](<>), returning a new object every time will always force a re-render by default.
+> With [useSelector](https://react-redux.js.org/api/hooks#useselector), returning a new object every time will always force a re-render by default.
 > [Doc of react-redux](https://react-redux.js.org/api/hooks#equality-comparisons-and-updates)
 
 However in the case of an object, as in the example above (or an array), the reference of this default value is new each time the selector is executed.

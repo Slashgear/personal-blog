@@ -4,7 +4,6 @@ description: "How not to throw away your project after 2 years? Feedback based o
 pubDatetime: 2021-09-05
 ogImage: ../comment-ne-pas-jeter-son-application-au-bout-de-deux-ans/bedrock.jpg
 language: en
-translations: ["fr", "comment-ne-pas-jeter-son-application-au-bout-de-deux-ans"]
 tags:
   - web
   - javascript

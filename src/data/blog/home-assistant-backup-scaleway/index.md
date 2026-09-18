@@ -1,6 +1,6 @@
 ---
 title: How to store Home Assistant Backups on Scaleway Object Storage ?
-description: |
+description: >
   I recently set up a Home Assistant for my personal flat in order to optimize the use of my solar panels.
   Here is my first article on the subject, where I share some useful setups I've implemented.
 pubDatetime: 2025-06-26

@@ -4,7 +4,6 @@ description: Once again, I play with Github Action to see if it can answer the C
 pubDatetime: 2020-12-01
 ogImage: ./github-actions.jpg
 language: en
-translations: ["fr", "comment-lancer-des-actions-github-en-simultane-sur-des-sous-dossiers"]
 tags:
   - github
   - action

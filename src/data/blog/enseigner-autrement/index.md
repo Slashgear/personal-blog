@@ -13,7 +13,7 @@ Depuis septembre j'ai pu m'initier à l'enseignement dans le supérieur pour des
 Polytech Lyon. Je vous propose ici un petit REX de mon expérence en tant que professeur, me permettant par la même occasion de vous partager
 les méthodes d'enseignement que j'ai pu tester avec mes 80 étudiants.
 
-# Enseignants / Étudiants, des objectifs qui diffèrent
+## Enseignants / Étudiants, des objectifs qui diffèrent
 
 Je vois aujourd'hui deux soucis dans l'enseignement supérieur (mais cela reste valable à plusieurs niveaux)
 
@@ -86,7 +86,7 @@ La remédiation peut se réaliser de plusieurs manières mais elle a toujours le
 
 Pour réussir à coup sûr votre passage à la remédiation :
 
-- Outillez-vous, j'en ai déjà parlé dans [un autre article](/posts/github-classroom).
+- Outillez-vous, j'en ai déjà parlé dans [un autre article](/posts/github-classroom/).
 - Responsabilisez vos étudiants jusqu'au bout en leur demandant de choisir leur dealine pour leur itération.
   (les étudiants ont plein de travaux à rendre, leur permettre de souffler quand ils sont chargés sera grandement apprécié).
 - La première fois que vous le mettez en place avec un groupe d'étudiants, vous ne devez pas leur dire qu' ils seront notés deux fois.
@@ -95,7 +95,7 @@ Pour réussir à coup sûr votre passage à la remédiation :
 - Rappelez vous qu'il faut à tout prix éviter de laisser les étudiants vous rendre un travail non terminé en fin de première itération.
   N'hésitez pas à ne pas corriger le travail d'un élève si il vous fournit un travail non terminé ou baclé.
 
-# Conseils pour futurs professeurs
+## Conseils pour futurs professeurs
 
 Si vous aussi, vous avez l'envie de partager vos compétences, votre passion avec des étudiants, je ne peux que vous inciter à
 tenter l'aventure. N'hésitez pas à contacter vos anciennes écoles, ou bien les écoles proches de chez vous et voir avec eux s'ils recherchent
@@ -117,7 +117,7 @@ mais également sur le contenu de votre cours.
 **Partager vos cours** Quelqu'un a peut-être eu la même idée d'atelier, ce serait vraiment dommage que vous ne
 partagiez pas vos exéperiences. Dans le domaine de l'informatique, la plafeforme [Github Classroom community](https://education.github.community) possède un forum très actif pour les enseignants en informatique.
 
-# Prochain objectif, automatiser la notation
+## Prochain objectif, automatiser la notation
 
 Pour l'année prochaine, je souhaite complètement automatiser la notation des tests et des TPs que je donne aux étudiants.
 J'y vois plusieurs intérêts : premièrement c'est un sacré challenge, deuxièmement je pense y gagner pas mal de temps.

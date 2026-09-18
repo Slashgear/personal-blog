@@ -4,7 +4,6 @@ description: Annonce de la publication d'un package open source pour la gestion 
 pubDatetime: 2020-05-01
 ogImage: ./useReducedMotion.jpg
 language: fr
-translations: ["en", "use-reduced-motion"]
 tags:
   - react
   - a11y

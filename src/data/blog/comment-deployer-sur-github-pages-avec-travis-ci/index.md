@@ -6,7 +6,6 @@ description:
 pubDatetime: 2020-05-26
 ogImage: ../how-to-deploy-on-github-pages-with-travis-ci/travis-github-pages.png
 language: fr
-translations: ["en", "how-to-deploy-on-github-pages-with-travis-ci"]
 tags:
   - tutoriel
   - github

@@ -4,7 +4,6 @@ description: Encore une fois, je joue avec les Github Action pour voir si elles 
 pubDatetime: 2020-12-01
 ogImage: ../how-to-split-test-by-folder-with-github-action/github-actions.jpg
 language: fr
-translations: ["en", "how-to-split-test-by-folder-with-github-action"]
 tags:
   - github
   - action

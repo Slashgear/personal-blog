@@ -1,6 +1,6 @@
 ---
 title: "Engineering manager : les métriques que je surveille"
-description: |
+description: >
   Quatrième article de la série sur mon retour d'expérience en tant
   qu'engineering manager. Ce billet porte sur les métriques que je surveille :
   lesquelles ont vraiment de la valeur, lesquelles ne veulent pas dire grand-chose,

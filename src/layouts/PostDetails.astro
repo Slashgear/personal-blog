@@ -50,6 +50,11 @@ const ogUrl = new URL(
   Astro.url.origin
 ).href;
 
+// Generated template OG images are always 1200x630; derived JPEG covers
+// report their own dimensions from `getImage`.
+const ogImageWidth = typeof ogImage === "string" ? 1200 : ogCover?.attributes.width;
+const ogImageHeight = typeof ogImage === "string" ? 630 : ogCover?.attributes.height;
+
 // Reciprocal hreflang tags when this post also exists in the other language.
 const alt = getPostAlternates(post.id);
 const postUrl = (id: string) => new URL(`/posts/${id}/`, Astro.site).href;
@@ -73,6 +78,8 @@ const layoutProps = {
   canonicalURL,
   alternates,
   ogImage: ogUrl,
+  ogImageWidth,
+  ogImageHeight,
   ogType: "article" as const,
   scrollSmooth: true,
   lang: language || "en",

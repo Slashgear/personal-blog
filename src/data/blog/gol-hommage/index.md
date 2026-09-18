@@ -4,7 +4,6 @@ description: Essai d'implémentation du Jeu de la Vie en Javascript dans le navi
 pubDatetime: 2020-04-20
 ogImage: ../gol-tribute/gol.jpg
 language: fr
-translations: ["en", "gol-tribute"]
 tags:
   - javascript
   - canvas

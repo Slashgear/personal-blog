@@ -4,7 +4,6 @@ description: Depuis quelque temps, je joue avec les actions github pour voir si 
 pubDatetime: 2020-11-29
 ogImage: ../how-to-dynamically-run-step-on-each-github-pr-label/github-actions.jpg
 language: fr
-translations: ["en", "how-to-dynamically-run-step-on-each-github-pr-label"]
 tags:
   - github
   - action

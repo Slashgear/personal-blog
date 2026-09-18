@@ -4,7 +4,6 @@ description: Playing with traditional bundlers like webpack for several years, I
 pubDatetime: 2021-03-14
 ogImage: ../esbuild-bundler-incroyablement-rapide-et-prometteur/esbuild.png
 language: en
-translations: ["fr", "esbuild-bundler-incroyablement-rapide-et-prometteur"]
 tags:
   - webpack
   - javascript
@@ -12,7 +11,7 @@ tags:
 ---
 
 I've been playing with JS bundlers for several years.
-Still convinced of the necessity of using these tools (don't let me believe that you don't package your JS modules in production 😅), I played a lot with [webpack](/en/webpack/).
+Still convinced of the necessity of using these tools (don't let me believe that you don't package your JS modules in production 😅), I played a lot with [webpack](/posts/webpack-an-unexpected-journey/).
 Especially for performance, optimization and custom plugins usage issues.
 
 I still think that in 2021, webpack is the most industrial and successful solution to _bundle_ my web applications.

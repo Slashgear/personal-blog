@@ -4,7 +4,6 @@ description: For some time now I've been playing with github actions to see if I
 pubDatetime: 2021-08-13
 ogImage: ./webdriverio.jpg
 language: en
-translations: ["fr", "comment-mettre-en-place-des-tests-bout-en-bout-avec-webdriverio"]
 tags:
   - github
   - action

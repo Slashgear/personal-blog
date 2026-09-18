@@ -12,7 +12,7 @@ tags:
 
 The subject of this article will be about Jest and the mocks. **I do not wish to advocate the use of "unit tests" here. Everyone is also free to define what is for him/her what is unitary.** I just want to show you how Jest manages its _mock_ and how _automocking_ could be useful to you on a daily basis. **It is important to know the basics of jest in order to understand the purpose of this article.**
 
-# TL;DR
+## TL;DR
 
 Jest _automock_ is fast and will help you add test easily. Consider using _automock_ when you always want to isolate your tests. This will simplify the use of mock by harmonizing the way they are created.
 
@@ -78,7 +78,7 @@ To summarize, we can say that the default mock does what we would hope if we wan
 
 `Automock` is working just like `jest.mock` but for all the imported module of your test. It'll save you a lot of time.
 
-# What is great with _automock_ ?
+## What is great with _automock_ ?
 
 For me, activating Jest's automock means taking full advantage of jest's ability to generate a mocked version of a module.
 

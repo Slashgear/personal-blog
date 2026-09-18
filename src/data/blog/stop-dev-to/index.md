@@ -13,7 +13,7 @@ First things first: I'm not an Internet warrior. I do not wish to make Dev.to's 
 
 Instead, I would like to warn people of a trend that is endangering the web as we know it.
 
-# TL;DR
+## TL;DR
 
 I don't think Dev.to is a problem but how authors use it. Authors should not post their content only on dev.to. You should not publish content on Dev.to. You should **share** content on Dev.to.
 
@@ -39,7 +39,7 @@ I'm not saying Dev.to will suffer the same fate. I'm not a medium, I don't have 
 
 You really have to trust the team so that Dev.to doesn't go in the wrong direction. I would very much like to hear Ben Halpern's opinion on this subject.
 
-# So we should stop writing on Dev.to ?
+## So we should stop writing on Dev.to ?
 
 **The answer is NO**
 
