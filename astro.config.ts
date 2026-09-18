@@ -7,6 +7,9 @@ import { unified } from "@astrojs/markdown-remark";
 import tailwindcss from "@tailwindcss/vite";
 import { SITE } from "./src/config";
 import { shouldIncludeInSitemap } from "./src/utils/sitemapFilter";
+import { getPostLastmodMap, serializeSitemapItem } from "./src/utils/sitemapEnrichment";
+
+const postLastmod = getPostLastmodMap();
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,6 +18,7 @@ export default defineConfig({
     react(),
     sitemap({
       filter: (page) => shouldIncludeInSitemap(new URL(page).pathname),
+      serialize: (item) => serializeSitemapItem(item, postLastmod),
     }),
   ],
   markdown: {
