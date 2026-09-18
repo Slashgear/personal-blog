@@ -4,7 +4,7 @@ export const SITE: Site = {
   website: "https://blog.slashgear.dev/", // replace this with your deployed domain
   author: "Antoine Caron",
   profile: "https://blog.slashgear.dev/",
-  desc: "Antoine Caron personal blog where you can read news about his open-source courses, packages.",
+  desc: "Blog personnel d'Antoine Caron : actualités sur ses cours et packages open source, retours d'expérience et articles techniques.",
   title: "Antoine Caron",
   ogImage: "og.png",
   lightAndDarkMode: true,

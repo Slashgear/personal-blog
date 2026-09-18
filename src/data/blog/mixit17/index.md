@@ -155,7 +155,7 @@ je suis allé voir une présentation typiquement alien sur l'univers et les trou
 et ne semble pas avoir déçu la foule présente dans la salle. On notera quand même sur les panneaux de feedback que
 cette présentation manquait cruellement de démo.
 
-# Conclusion
+## Conclusion
 
 Encore une super édition concoctée par les bénévoles de MiXiT. Merci à eux.
 Je reste quand même sur ma faim avec certaines keynotes, mais le cru 2017 reste quand même une

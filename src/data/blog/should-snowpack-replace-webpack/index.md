@@ -3,7 +3,6 @@ title: "Should we replace webpack by 🗻 Snowpack 🗻?️"
 description: After articles on esbuild, quickly, I propose you to discover together snowpack to make an opinion.
 pubDatetime: 2021-06-02
 ogImage: ../que-vaut-snowpack/social-2.jpeg
-translations: ["fr", "que-vaut-snowpack"]
 language: en
 tags:
   - webpack
@@ -12,7 +11,7 @@ tags:
   - bundler
 ---
 
-After [webpack](/webpack), [esbuild](/esbuild) and [vitejs](/vitejs), let's take a look at [snowpack](/snowpack).
+After [webpack](/posts/webpack-an-unexpected-journey/), [esbuild](/posts/esbuild-incredibly-fast-and-promising/) and [vitejs](/posts/vite-webpack-killer/), let's take a look at snowpack.
 The latter seems to be making a name for itself in the bundler ecosystem for a few years now.
 So I suggest that we study its functionalities, its strong points but also its weak points.
 
@@ -36,7 +35,7 @@ Packagers such as webpack and rollup rely on the construction of a dependency tr
 The build step of the modified files is still necessary, but the packaging operation (merging the different modules in the form of a bundle that is sent to the browser) is no longer necessary.
 Our browsers now know how to manage ESModules](https://caniuse.com/?search=esmodule), so it is no longer necessary to package our source modules to merge them.
 
-> This is the same idea that Evan You has taken up in [Vite](/vite-webpack-killer)
+> This is the same idea that Evan You has taken up in [Vite](/posts/vite-webpack-killer/)
 
 With this principle, the modification of a file triggers only the build of this file, and this file only.
 You can have a project with thousands of javascript modules, the build time for each modification will not be affected.
@@ -58,7 +57,7 @@ Don't worry! Snowpack is not only compatible with React, you can use Vue, Svelte
 ### A rich configuration (maybe too much)
 
 Like webpack, snowpack proposes to configure its use by an object.
-I must admit that [after playing with it quickly](/vitejs-concurrent-performant-webpack-for-react/), I am a bit disappointed.
+I must admit that [after playing with it quickly](/posts/vite-webpack-killer/), I am a bit disappointed.
 I see a meager [documentation page](https://www.snowpack.dev/reference/configuration) that seems to describe many parameterizable keys.
 
 If you come from webpack, you won't be lost, it's very similar without being exactly the same.

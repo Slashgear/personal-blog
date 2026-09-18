@@ -4,7 +4,6 @@ description: Depuis quelque temps, je joue avec les actions github pour voir si 
 pubDatetime: 2021-08-16
 ogImage: ../how-to-setup-e2e-tests-with-webdriverio/webdriverio.jpg
 language: fr
-translations: ["en", "how-to-setup-e2e-tests-with-webdriverio"]
 tags:
   - github
   - action

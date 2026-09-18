@@ -4,7 +4,6 @@ description: Nous utilisons React et Redux depuis presque 4 ans chez Bedrock sur
 pubDatetime: 2021-03-23
 ogImage: ../react-redux-pitfalls-and-best-pratices/redux.jpg
 language: fr
-translations: ["en", "react-redux-pitfalls-and-best-pratices"]
 tags:
   - react
   - redux
@@ -377,7 +376,7 @@ C'est quelque chose que nous voyons assez souvent.
 
 Chaque fois que ce sélecteur sera appelé pour un `utilisateur` non présent dans l'état, il retournera un nouvel objet, une nouvelle référence.
 
-> Avec [useSelector](<>), retourner un nouvel objet à chaque fois forcera toujours un re-rendu par défaut.
+> Avec [useSelector](https://react-redux.js.org/api/hooks#useselector), retourner un nouvel objet à chaque fois forcera toujours un re-rendu par défaut.
 > [Doc de react-redux](https://react-redux.js.org/api/hooks#equality-comparisons-and-updates)
 
 Cependant, dans le cas d'un objet, comme dans l'exemple ci-dessus (ou d'un tableau), la référence de cette valeur par défaut est nouvelle à chaque fois que le sélecteur est exécuté.

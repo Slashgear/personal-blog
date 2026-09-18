@@ -2,6 +2,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ChangeFreqEnum } from "@astrojs/sitemap";
 import type { SitemapItem } from "@astrojs/sitemap";
+import { translationPairs } from "../data/translations";
 
 /**
  * Build a map of post path -> lastmod by reading the blog frontmatter directly.
@@ -50,6 +51,22 @@ export function serializeSitemapItem(
   postLastmod: Map<string, string>,
 ): SitemapItem {
   const pathname = new URL(item.url).pathname;
+
+  // Emit reciprocal hreflang alternates for translated posts, mirroring the
+  // `<link rel="alternate" hreflang>` tags already present on the pages.
+  const postId = pathname.match(/^\/posts\/([^/]+)\/$/)?.[1];
+  if (postId) {
+    const pair = translationPairs.find(([en, fr]) => en === postId || fr === postId);
+    if (pair) {
+      const [enId, frId] = pair;
+      const origin = new URL(item.url).origin;
+      item.links = [
+        { lang: "fr", url: `${origin}/posts/${frId}/` },
+        { lang: "en", url: `${origin}/posts/${enId}/` },
+        { lang: "x-default", url: `${origin}/posts/${enId}/` },
+      ];
+    }
+  }
 
   if (pathname === "/") {
     item.changefreq = ChangeFreqEnum.WEEKLY;

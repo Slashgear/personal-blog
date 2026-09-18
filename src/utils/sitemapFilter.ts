@@ -7,6 +7,8 @@
  */
 export function shouldIncludeInSitemap(pathname: string): boolean {
   if (pathname.startsWith("/tags/")) return false;
+  // The search page is a client-side, JS-driven UI with no indexable content.
+  if (pathname === "/search/") return false;
   // Any numbered post-pagination page (e.g. "/posts/2/"); "/posts/" itself
   // (the blog listing, page 1) is not numbered and must be kept.
   if (/^\/posts\/\d+\/$/.test(pathname)) return false;

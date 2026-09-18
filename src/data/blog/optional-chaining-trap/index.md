@@ -19,7 +19,7 @@ It is a **great news** for Javascript ! This feature is awesome but...
 
 Please agree with me, this feature will not be available tomorrow in our browsers. In stage 3, it is very likely that this feature will be added in the next release of ES.
 
-# But
+## But
 
 We will need to babel it for a very long time.
 
@@ -65,7 +65,7 @@ You're going to tell me,
 
 > "What the heck! Antoine, it's not the first time we've used a not-so-great polyfill to be able to use a new feature of EcmaScript"
 
-# Yeah
+## Yeah
 
 Ok but this time we can still look a few minutes to propose an implementation of a less trivial polyfill. This solution cannot really be applied in a world where the web developer turns into a `Ko` hunter.
 

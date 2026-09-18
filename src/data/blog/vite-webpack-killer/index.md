@@ -3,7 +3,6 @@ title: "Vite, a new webpack killer ?!😮"
 description: After studying solutions such as Webpack and Esbuild, I had to look at tools such as Vite which, in my eyes, is part of a new generation.
 pubDatetime: 2021-03-26
 ogImage: ../vitejs-concurrent-performant-webpack-pour-react/vitejs.jpg
-translations: ["fr", "vitejs-concurrent-performant-webpack-pour-react"]
 language: en
 tags:
   - webpack
@@ -12,10 +11,10 @@ tags:
   - bundler
 ---
 
-After having dealt on this blog [in several articles about webpack](/en/webpack/), I have started a new series of articles about new generation bundlers.
+After having dealt on this blog [in several articles about webpack](/posts/webpack-an-unexpected-journey/), I have started a new series of articles about new generation bundlers.
 It seems that we are now entering a new era of web tooling.
 
-Having introduced [esbuild and its interesting features](../esbuild-bundler-incredibly-fast-and-promising), it seems logical to me to deal with the _"little brothers"_ bundlers.
+Having introduced [esbuild and its interesting features](../esbuild-incredibly-fast-and-promising), it seems logical to me to deal with the _"little brothers"_ bundlers.
 So let's start with Vite, a project from the VueJS community and started by [Evan You](https://github.com/yyx990803).
 
 ## Same starting point
@@ -26,7 +25,7 @@ Globally the community is happy with the current tools even if they have some pe
 As I said in my previous article, having a big JS project today often means having a dev and prod environment that is sometimes a bit slow.
 Between the choice of tools that do not sufficiently exploit parallelization or memory optimization, or repetitive operations that exploit caching very little, it is easy to identify culprits for these slowness.
 
-NB: I have proposed some solutions to [improve the performance of your webpack build in this article](/hunting-webpack-performances/).\_
+NB: I have proposed some solutions to [improve the performance of your webpack build in this article](/posts/hunting-webpack-performances/).\_
 
 Moreover, the _second generation_ tools (like webpack, Rollup, Parcel) could not handle from the beginning [recent features of our browsers like ESmodules](https://caniuse.com/?search=es6).
 

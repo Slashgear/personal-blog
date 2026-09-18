@@ -1,6 +1,6 @@
 ---
 title: Comment stocker les sauvegardes Home Assistant sur Scaleway Object Storage ?
-description: |
+description: >
   J'ai récemment mis en place un Home Assistant pour mon appartement afin d’optimiser l’utilisation de mes panneaux solaires.
   Voici mon premier article sur le sujet, où je partage quelques configurations utiles que j’ai mises en place.
 pubDatetime: 2025-06-26

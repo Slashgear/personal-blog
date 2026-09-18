@@ -3,7 +3,6 @@ title: "Vite, le remplaçant à webpack ?!😮"
 description: Après avoir étudié des solutions comme Webpack et Esbuild, il me fallait m'intéresser aux outils comme Vite qui fait partie à mes yeux d'une nouvelle génération.
 pubDatetime: 2021-03-26
 ogImage: ./vitejs.jpg
-translations: ["en", "vite-webpack-killer"]
 language: fr
 tags:
   - webpack
@@ -12,7 +11,7 @@ tags:
   - bundler
 ---
 
-Après avoir traité sur ce blog [dans plusieurs articles de webpack](/fr/webpack/), j'ai commencé une nouvelle série d'articles sur les bundlers nouvelles générations.
+Après avoir traité sur ce blog [dans plusieurs articles de webpack](/posts/hunting-webpack-performances/), j'ai commencé une nouvelle série d'articles sur les bundlers nouvelles générations.
 Il semblerait qu'on rentre aujourd'hui dans une nouvelle ère du tooling web.
 
 Ayant présenté [esbuild et ses features intéressantes](../esbuild-bundler-incroyablement-rapide-et-prometteur), il me semble logique de traiter les bundler _"petits frères"_.
@@ -26,7 +25,7 @@ Globalement la communauté est contente des outils actuels même s'ils accusent 
 Comme je le disais dans mon précédent article, avoir un gros projet JS aujourd'hui c'est souvent avoir un environnement de dev et de prod parfois un peu lent.
 Entre le choix des outils qui n'exploitent pas suffisamment la parallelization ou l'optimisation mémoire, ou les opérations répétitives qui n'exploitent que très peu le caching, on peut facilement identifier des coupables à ces lenteurs.
 
-_NB: J'ai proposé quelques solutions pour [améliorer les performances de vos build webpack dans cet article](/hunting-webpack-performances/)._
+_NB: J'ai proposé quelques solutions pour [améliorer les performances de vos build webpack dans cet article](/posts/hunting-webpack-performances/)._
 
 De plus, les outils de _deuxième génération_ (comme Webpack, Rollup, Parcel) n'ont pas pu gérer dès leur début [des fonctionnalités récentes de nos navigateurs comme les ESmodules](https://caniuse.com/?search=es6).
 

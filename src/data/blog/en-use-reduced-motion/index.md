@@ -4,7 +4,6 @@ description: Announcement of the publication of an open source package for the m
 pubDatetime: 2020-05-01
 ogImage: ./useReducedMotion.jpg
 language: en
-translations: ["fr", "use-reduced-motion"]
 tags:
   - react
   - a11y
