@@ -94,20 +94,20 @@ note par la pondération.
     style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
   >
     <title>De la fiche de poste à la note finale</title>
-    <rect x="30" y="20" width="200" height="46" rx="6" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="130" y="48" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Fiche de poste</text>
-    <path d="M230 43 L270 43" stroke="rgb(var(--color-accent))" stroke-width="2" />
+    <rect x="30" y="24" width="200" height="46" rx="6" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="130" y="52" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Fiche de poste</text>
+    <path d="M230 47 L270 47" stroke="rgb(var(--color-accent))" stroke-width="2" />
     <g font-size="11">
-      <rect x="275" y="16" width="215" height="24" rx="4" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
-      <text x="382" y="32" text-anchor="middle" fill="rgb(var(--color-fill))" font-weight="600">Compétence · note /100 · pondération</text>
-      <rect x="275" y="46" width="215" height="24" rx="4" fill="rgb(var(--color-accent))" fill-opacity="0.7" />
-      <text x="382" y="62" text-anchor="middle" fill="rgb(var(--color-fill))">Compétence · note /100 · pondération</text>
-      <rect x="275" y="76" width="215" height="24" rx="4" fill="rgb(var(--color-accent))" fill-opacity="0.45" />
-      <text x="382" y="92" text-anchor="middle" fill="rgb(var(--color-fill))">Compétence · note /100 · pondération</text>
+      <rect x="275" y="12" width="215" height="26" rx="4" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+      <text x="382" y="30" text-anchor="middle" fill="rgb(var(--color-fill))" font-weight="600">Compétence</text>
+      <rect x="275" y="44" width="215" height="26" rx="4" fill="rgb(var(--color-accent))" fill-opacity="0.7" />
+      <text x="382" y="62" text-anchor="middle" fill="rgb(var(--color-fill))">Note /100</text>
+      <rect x="275" y="76" width="215" height="26" rx="4" fill="rgb(var(--color-accent))" fill-opacity="0.45" />
+      <text x="382" y="94" text-anchor="middle" fill="rgb(var(--color-fill))">Pondération</text>
     </g>
-    <path d="M382 100 L382 140" stroke="rgb(var(--color-border))" stroke-width="2" stroke-dasharray="4 4" />
-    <rect x="282" y="140" width="200" height="46" rx="6" fill="none" stroke="rgb(var(--color-accent))" stroke-width="2" />
-    <text x="382" y="168" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="600">Note finale = Σ note × pondération</text>
+    <path d="M382 102 L382 138" stroke="rgb(var(--color-border))" stroke-width="2" stroke-dasharray="4 4" />
+    <rect x="267" y="142" width="230" height="46" rx="6" fill="none" stroke="rgb(var(--color-accent))" stroke-width="2" />
+    <text x="382" y="170" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" font-weight="600">Note finale = Σ note × pondération</text>
     <text x="382" y="212" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">Comparaison objective des candidats</text>
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
