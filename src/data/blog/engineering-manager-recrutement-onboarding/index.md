@@ -312,3 +312,7 @@ en particulier, mes réseaux sont accessibles depuis ce blog : écrivez-moi, je
 serai ravi de vous lire. Et comme toujours, vous pouvez retrouver l'ensemble
 de la série via le tag
 [engineering-management](/tags/engineering-management).
+
+Dans un prochain épisode, je compte m'attarder sur l'intelligence
+artificielle : ce qu'elle change concrètement dans mon quotidien de manager,
+et ce qu'elle ne change pas.
