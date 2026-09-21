@@ -38,7 +38,7 @@ l'équipe soit autonome et contribue vite, sans y passer des semaines.
 
 > « La seule question à laquelle on essaie de répondre en entretien, c'est
 > "est-ce que je me vois travailler avec cette personne ?" » ([Nicolas
-> Cuillery](https://www.linkedin.com/in/nicolas-cuillery-81913931/), un ancien
+> Cuillery](https://www.linkedin.com/in/nicolas-cuillery/), un ancien
 > collègue)
 
 J'ai longtemps cru que recruter, c'était surtout vérifier des compétences
@@ -52,7 +52,7 @@ temps éveillé avec son équipe. Et c'est une décision collective : chacun,
 dans l'équipe, a son propre capteur de cette question, et c'est leur somme
 qui fait le bon choix.
 
-C'est aussi là que la série se rejoint. L'[effet
+C'est aussi un écho à toute la série. L'[effet
 miroir](/posts/engineering-manager-role-et-posture) dont je parlais au premier
 épisode vaut pour le recrutement : la personne que vous choisissez va diffuser
 son énergie dans l'équipe pendant des années. Et le _top 3_ des [valeurs et
@@ -64,9 +64,9 @@ fonctionne.
 
 ## De la fiche de poste à la matrice d'évaluation
 
-> « À partir de l'entretien, il est bien de se poser et d'établir une liste
-> de compétences qu'on souhaite évaluer sur la personne qui rejoint son
-> équipe. » (moi, en résumant ce que je mets en place)
+> « À partir de l'entretien, il est bon de se poser un moment pour établir
+> une liste de compétences qu'on souhaite évaluer sur la personne qui rejoint
+> son équipe. » (moi, en résumant ce que je mets en place)
 
 « Est-ce que je me vois travailler avec cette personne ? » est une question
 essentielle, mais elle a un défaut : elle est terriblement subjective. Or,
@@ -142,12 +142,9 @@ pondération. Voici une fausse grille, avec trois candidats notés sur 100 :
 La note finale de chaque candidat est la somme, compétence par compétence, de
 la note multipliée par la pondération :
 
-- **Candidat A :** 85 × 0,30 + 90 × 0,15 + 75 × 0,15 + 80 × 0,15 + 95 × 0,15
-  - 70 × 0,10 = **83,5**
-- **Candidat C :** 95 × 0,30 + 80 × 0,15 + 70 × 0,15 + 75 × 0,15 + 60 × 0,15
-  - 90 × 0,10 = **80,25**
-- **Candidat B :** 60 × 0,30 + 70 × 0,15 + 85 × 0,15 + 90 × 0,15 + 80 × 0,15
-  - 75 × 0,10 = **74,25**
+- **Candidat A :** 85 × 0,30 + 90 × 0,15 + 75 × 0,15 + 80 × 0,15 + 95 × 0,15 + 70 × 0,10 = **83,5**
+- **Candidat C :** 95 × 0,30 + 80 × 0,15 + 70 × 0,15 + 75 × 0,15 + 60 × 0,15 + 90 × 0,10 = **80,25**
+- **Candidat B :** 60 × 0,30 + 70 × 0,15 + 85 × 0,15 + 90 × 0,15 + 80 × 0,15 + 75 × 0,10 = **74,25**
 
 Regardez ce qui se passe ici. Le candidat C est le plus fort techniquement
 (95 en React), mais il décroche sur la collaboration. Le candidat A, solide
@@ -164,14 +161,25 @@ l'équipe ? », et c'est une décision assumée, pas un accident.
 Un point que je m'efforce de garder en tête, parce qu'il est facile de
 l'oublier dans l'excitation d'un recrutement : en France, l'évaluation d'un
 candidat doit reposer sur des **critères objectifs, précis et liés au poste**,
-et ne doit en aucun cas être discriminatoire : pas de critère lié au genre, à
-l'âge, à l'origine, à la situation familiale, à l'apparence, aux opinions, etc.
+et ne doit en aucun cas être discriminatoire. Le principe est posé par
+[l'article L. 1132-1 du code du
+travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045391841) :
+« aucune personne ne peut être écartée d'une procédure de recrutement » en
+raison de son origine, de son sexe, de son âge, de sa situation de famille,
+de son apparence physique, de ses opinions, de ses convictions religieuses,
+de son état de santé, de son handicap, et ainsi de suite. La liste des motifs
+protégés est longue, et elle est énumérée par la loi.
 
 La bonne nouvelle, c'est que la matrice que je viens de décrire va
 naturellement dans ce sens : en partant de la fiche de poste, elle ancre
-l'évaluation dans ce qui est réellement nécessaire pour tenir le rôle. C'est
-exactement le type d'outil qui permet de répondre, la conscience tranquille,
-à l'exigence de non-discrimination.
+l'évaluation dans ce qui est réellement nécessaire pour tenir le rôle. Le
+code du travail le prévoit d'ailleurs : certaines différences de traitement
+sont autorisées quand elles répondent à une « exigence professionnelle
+essentielle et déterminante »
+([article L. 1133-1 du code du
+travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018881575)).
+C'est exactement le type d'outil qui permet de répondre, la conscience
+tranquille, à l'exigence de non-discrimination.
 
 Et il y a un bénéfice pratique que je n'avais pas anticipé au début : cette
 matrice rend bien plus facile la **réponse aux candidats refusés**. Certains
@@ -233,10 +241,37 @@ cloner, d'installer et de lancer les projets toute seule, sans appeler à l'aide
 Pour y arriver, il y a un préalable que je considère comme non négociable :
 imposer un **`CONTRIBUTING.md`**, comme on en trouve dans les projets open
 source. Ce fichier, à la racine du dépôt, explique comment installer le projet
-**from scratch**, mais aussi comment **releases** et comment **rollback**. Si
-la doc d'installation est claire et à jour, la personne qui arrive peut faire
-son setup seule ; si elle ne l'est pas, c'est une excellente occasion de la
-corriger.
+**from scratch**, mais aussi comment faire une **release** et un **rollback**.
+Si la doc d'installation est claire et à jour, la personne qui arrive peut
+faire son setup seule ; si elle ne l'est pas, c'est une excellente occasion de
+la corriger.
+
+Un squelette de `CONTRIBUTING.md`, que vous pouvez adapter :
+
+```markdown
+# CONTRIBUTING.md
+
+## Installation (from scratch)
+
+1. Prérequis : … (versions de Node, base de données, etc.)
+2. `git clone <url>` puis `cd <projet>`
+3. `cp .env.example .env` et renseigner les variables
+4. `bun install` (ou votre gestionnaire de paquets)
+5. `bun run dev` pour lancer le projet en local
+
+## Faire une release
+
+1. Créer une branche `release/x.y.z`
+2. Mettre à jour la version et le changelog
+3. Ouvrir une PR, puis la merger
+4. Créer le tag `x.y.z` et le pousser
+
+## Rollback
+
+1. Repousser la version précédente (ou `git revert`)
+2. Suivre la procédure de déploiement inverse
+3. Vérifier les métriques d'erreur après le retour en arrière
+```
 
 Et il y a un truc que j'aime beaucoup pour la toute première contribution :
 laisser la nouvelle personne corriger de **petites typos dans la doc
@@ -273,6 +308,51 @@ rapides valent mieux qu'un grand chantier flou. La première contribution peut
 être une typo dans la doc ; la deuxième, un petit ticket ; et ainsi de suite,
 jusqu'à ce que la personne porte un vrai sujet, sur le rythme de la _Mesure_
 de l'équipe. Chaque palier atteint renforce l'autonomie et l'envie.
+
+<figure>
+  <svg
+    viewBox="0 0 560 200"
+    role="img"
+    aria-label="Frise d'onboarding : préparation avant l'arrivée (J-7), arrivée et setup autonome (J0), premières contributions (S1), premiers vrais sujets (M1), autonomie complète (M3)"
+    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+  >
+    <title>Frise d'onboarding</title>
+    <line x1="50" y1="88" x2="530" y2="88" stroke="rgb(var(--color-border))" stroke-width="2" />
+    <g fill="rgb(var(--color-accent))">
+      <circle cx="90" cy="88" r="8" />
+      <circle cx="200" cy="88" r="8" />
+      <circle cx="310" cy="88" r="8" />
+      <circle cx="420" cy="88" r="8" />
+    </g>
+    <circle cx="510" cy="88" r="8" fill="none" stroke="rgb(var(--color-accent))" stroke-width="2" />
+    <g fill="rgb(var(--color-text-base))" font-size="12" font-weight="600" text-anchor="middle">
+      <text x="90" y="68">J-7</text>
+      <text x="200" y="68">J0</text>
+      <text x="310" y="68">S1</text>
+      <text x="420" y="68">M1</text>
+      <text x="510" y="68">M3</text>
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="10" text-anchor="middle" opacity="0.85">
+      <text x="90" y="120">Tout est prêt</text>
+      <text x="200" y="120">Arrivée</text>
+      <text x="310" y="120">Contributions</text>
+      <text x="420" y="120">Premiers sujets</text>
+      <text x="510" y="120">Autonomie</text>
+    </g>
+    <g fill="rgb(var(--color-text-base))" font-size="9" text-anchor="middle" opacity="0.6">
+      <text x="90" y="136">matériel, accès, CONTRIBUTING.md</text>
+      <text x="200" y="136">setup autonome</text>
+      <text x="310" y="136">typos, petits tickets</text>
+      <text x="420" y="136">valeur produite</text>
+      <text x="510" y="136">intégration complète</text>
+    </g>
+    <text x="280" y="176" text-anchor="middle" fill="rgb(var(--color-accent))" font-size="11" font-weight="600">Objectif : moins d'une demi-journée pour être ready à contribuer</text>
+  </svg>
+  <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
+    De la préparation avant l'arrivée à l'autonomie complète : chaque palier
+    est une petite victoire qui rend la suite plus facile.
+  </figcaption>
+</figure>
 
 ## Le parrain, ou buddy
 
