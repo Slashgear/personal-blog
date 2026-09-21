@@ -340,11 +340,11 @@ de l'équipe. Chaque palier atteint renforce l'autonomie et l'envie.
       <text x="510" y="120">Autonomie</text>
     </g>
     <g fill="rgb(var(--color-text-base))" font-size="9" text-anchor="middle" opacity="0.6">
-      <text x="90" y="136">matériel, accès, CONTRIBUTING.md</text>
+      <text x="90" y="136">matériel, accès, doc</text>
       <text x="200" y="136">setup autonome</text>
-      <text x="310" y="136">typos, petits tickets</text>
+      <text x="310" y="136">typos, tickets</text>
       <text x="420" y="136">valeur produite</text>
-      <text x="510" y="136">intégration complète</text>
+      <text x="510" y="136">intégration</text>
     </g>
     <text x="280" y="176" text-anchor="middle" fill="rgb(var(--color-accent))" font-size="11" font-weight="600">Objectif : moins d'une demi-journée pour être ready à contribuer</text>
   </svg>
