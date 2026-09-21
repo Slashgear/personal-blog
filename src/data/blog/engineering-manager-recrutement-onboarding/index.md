@@ -295,6 +295,14 @@ personne qui arrive, motivée, et qui passe ses deux premiers jours à attendre
 qu'on lui donne un ordinateur ou un accès. Ce temps-là, c'est le temps de
 l'enthousiasme initial, et il ne se rattrape pas.
 
+Je parle en connaissance de cause : sur une de mes missions, j'ai dû attendre
+deux mois avant d'avoir mon ordinateur, et j'ai travaillé pendant tout ce
+temps sur celui de mon ESN de l'époque[^esn], parce que le service
+informatique du client ne m'en fournissait pas. Deux mois. Alors imaginez
+l'effet quand, en plus de découvrir une équipe, un produit et des
+technologies, il faut aussi batailler des semaines pour un poste de travail.
+Ce temps-là ne se rattrape jamais.
+
 ## Premiers jours, premiers objectifs
 
 Les premières semaines sont un investissement : c'est là que se construit la
@@ -384,6 +392,16 @@ rassure. L'objectif reste le même (l'autonomie), le chemin est simplement
 plus long, et c'est normal. Ce qui compte, c'est que la progression soit
 visible et partagée, pas qu'elle soit rapide à tout prix.
 
+Un dernier point, que je considère comme un vrai levier de progression : il
+faut accompagner les alternants et les nouveaux venus vers des sujets
+**variés**, et les empêcher de s'enfermer dans ce qu'ils savent déjà faire.
+C'est très tentant de confier à la personne ce qu'elle maîtrise, parce que ça
+avance vite et sans friction. Mais c'est aussi la meilleure façon de la
+laisser stagner. J'appelle parfois cela la **zone d'inconfort
+d'apprentissage** : c'est en y restant un peu, accompagné, qu'on apprend
+vraiment. L'enjeu, c'est que cette zone soit inconfortable à la juste dose,
+jamais écrasante : on y met les pieds un pas à la fois, avec un filet.
+
 ## Et la suite ?
 
 Il reste d'autres aspects du recrutement et de l'onboarding que je n'ai pas
@@ -400,3 +418,7 @@ et ce qu'elle ne change pas.
 _Photo de couverture : [Yolk CoWorking -
 Krakow](https://unsplash.com/fr/@yolk_coworking_krakow) sur
 [Unsplash](https://unsplash.com/fr/photos/AQdyCfXWxB4)._
+
+[^esn]:
+    ESN, pour _entreprise de services du numérique_ (l'ancienne SSII) : la
+    société qui emploie le consultant et le place en mission chez un client.
