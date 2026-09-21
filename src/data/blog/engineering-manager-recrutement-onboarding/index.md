@@ -396,3 +396,7 @@ de la série via le tag
 Dans un prochain épisode, je compte m'attarder sur l'intelligence
 artificielle : ce qu'elle change concrètement dans mon quotidien de manager,
 et ce qu'elle ne change pas.
+
+_Photo de couverture : [Yolk CoWorking -
+Krakow](https://unsplash.com/fr/@yolk_coworking_krakow) sur
+[Unsplash](https://unsplash.com/fr/photos/AQdyCfXWxB4)._
