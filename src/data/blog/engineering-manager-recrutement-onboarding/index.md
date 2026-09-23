@@ -6,7 +6,7 @@ description: |
   construire une matrice d'évaluation objective dès l'entretien, l'utiliser
   pendant la période d'essai, et rendre une nouvelle personne autonome dès le
   premier jour.
-pubDatetime: 2026-09-24
+pubDatetime: 2026-09-23
 language: fr
 ogImage: "./cover.webp"
 tags:
