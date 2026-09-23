@@ -3,6 +3,7 @@ import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
+import rehypePrettyCode from "rehype-pretty-code";
 import { unified } from "@astrojs/markdown-remark";
 import tailwindcss from "@tailwindcss/vite";
 import type { Element, Root } from "hast";
@@ -45,6 +46,9 @@ export default defineConfig({
     }),
   ],
   markdown: {
+    // rehype-pretty-code is the only highlighter; Astro's own Shiki must be
+    // disabled or it would run first (github-dark) and clash with it.
+    syntaxHighlight: false,
     processor: unified({
       remarkPlugins: [
         remarkToc,
@@ -55,12 +59,20 @@ export default defineConfig({
           },
         ],
       ],
-      rehypePlugins: [wrapTables],
+      rehypePlugins: [
+        wrapTables,
+        [
+          rehypePrettyCode,
+          {
+            theme: { light: "min-light", dark: "night-owl" },
+            defaultLang: "plaintext",
+            grid: false,
+            keepBackground: true,
+            bypassInlineCode: true,
+          },
+        ],
+      ],
     }),
-    shikiConfig: {
-      themes: { light: "min-light", dark: "night-owl" },
-      wrap: true,
-    },
   },
   image: {
     layout: "constrained",

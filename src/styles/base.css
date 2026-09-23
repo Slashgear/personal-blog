@@ -172,30 +172,9 @@
   }
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
-  pre:has(code) {
-    @apply border border-skin-line;
-    overflow-x: auto;
-    max-width: 100%;
-  }
   code,
   blockquote {
     word-wrap: break-word;
-  }
-
-  pre > code {
-    white-space: pre;
-    display: inline-block;
-    min-width: 100%;
-  }
-
-  /* Apply Dark Theme (if multi-theme specified) */
-  html[data-theme="dark"] pre:has(code),
-  html[data-theme="dark"] pre:has(code) span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-    font-style: var(--shiki-dark-font-style) !important;
-    font-weight: var(--shiki-dark-font-weight) !important;
-    text-decoration: var(--shiki-dark-text-decoration) !important;
   }
 }
 
@@ -210,6 +189,70 @@
   .prose blockquote p:first-of-type::before,
   .prose blockquote p:last-of-type::after {
     content: none !important;
+  }
+
+  /* ===== Code Blocks & Syntax Highlighting (rehype-pretty-code) =====
+     Each block is <figure data-rehype-pretty-code-figure> >
+     (<figcaption>) > pre > code > [data-line]. Tokens carry the
+     --shiki-light / --shiki-dark custom properties (no inline color), so
+     both palettes are resolved here. Sits in the components layer with
+     !important where it must beat typography's .prose pre/code rules. */
+  figure[data-rehype-pretty-code-figure] {
+    @apply relative my-6 overflow-hidden rounded border border-skin-line;
+    background-color: var(--shiki-light-bg);
+  }
+  figure[data-rehype-pretty-code-figure] pre {
+    @apply my-0;
+    overflow-x: auto;
+    max-width: 100%;
+    padding: 1rem 0 !important;
+    border-width: 0 !important;
+    border-radius: 0;
+    color: var(--shiki-light) !important;
+    background-color: var(--shiki-light-bg) !important;
+  }
+  figure[data-rehype-pretty-code-figure] pre code {
+    @apply block bg-transparent p-0;
+    width: max-content;
+    min-width: 100%;
+    color: var(--shiki-light) !important;
+    background-color: transparent !important;
+  }
+  figure[data-rehype-pretty-code-figure] [data-line] {
+    display: block;
+    padding: 0 1rem;
+  }
+  figure[data-rehype-pretty-code-figure] pre span {
+    color: var(--shiki-light);
+    font-style: var(--shiki-light-font-style);
+    font-weight: var(--shiki-light-font-weight);
+    text-decoration: var(--shiki-light-text-decoration);
+  }
+  figure[data-rehype-pretty-code-figure] figcaption {
+    @apply border-b border-skin-line bg-skin-card px-4 py-2 text-xs font-medium text-skin-base;
+    opacity: 1;
+  }
+
+  /* Apply Dark Theme */
+  html[data-theme="dark"] figure[data-rehype-pretty-code-figure] {
+    background-color: var(--shiki-dark-bg);
+  }
+  html[data-theme="dark"] figure[data-rehype-pretty-code-figure] pre {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+  }
+  html[data-theme="dark"] figure[data-rehype-pretty-code-figure] pre code {
+    color: var(--shiki-dark) !important;
+    background-color: transparent !important;
+  }
+  html[data-theme="dark"] figure[data-rehype-pretty-code-figure] pre span {
+    color: var(--shiki-dark);
+    font-style: var(--shiki-dark-font-style);
+    font-weight: var(--shiki-dark-font-weight);
+    text-decoration: var(--shiki-dark-text-decoration);
+  }
+  html[data-theme="dark"] figure[data-rehype-pretty-code-figure] figcaption {
+    @apply border-skin-line bg-skin-card text-skin-base;
   }
 }
 

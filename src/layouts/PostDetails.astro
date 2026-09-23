@@ -409,43 +409,71 @@ const nextPost =
   addHeadingLinks();
 
   /** Attaches copy buttons to code blocks in the document,
-   * allowing users to copy code easily. */
+   * allowing users to copy code easily. The button lives on the
+   * <figure> wrapper (not inside the scrollable <pre>), so it stays
+   * pinned to the top-right corner even on horizontal scroll. */
   function attachCopyButtons() {
-    const copyButtonLabel = "Copy";
-    const codeBlocks = Array.from(document.querySelectorAll("pre"));
+    const blocks = Array.from(
+      document.querySelectorAll("figure[data-rehype-pretty-code-figure]")
+    );
+    if (!blocks.length) return;
 
-    for (const codeBlock of codeBlocks) {
-      const wrapper = document.createElement("div");
-      wrapper.style.position = "relative";
+    const isFrench = (document.documentElement.lang || "en").startsWith("fr");
+    const copyLabel = isFrench ? "Copier le code" : "Copy code";
+    const copiedLabel = isFrench ? "Copié" : "Copied";
+    const copyText = isFrench ? "Copier" : "Copy";
+    const copiedText = isFrench ? "Copié" : "Copied";
+
+    const copyIcon =
+      '<svg aria-hidden="true" fill-none stroke-current viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
+    const checkIcon =
+      '<svg aria-hidden="true" fill-none stroke-current viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M20 6 9 17l-5-5"/></svg>';
+
+    for (const block of blocks) {
+      if (block.querySelector(".copy-code")) continue;
 
       const copyButton = document.createElement("button");
+      copyButton.type = "button";
       copyButton.className =
-        "copy-code absolute right-3 -top-3 rounded bg-skin-card px-2 py-1 text-xs leading-4 text-skin-base font-medium";
-      copyButton.innerHTML = copyButtonLabel;
-      codeBlock.setAttribute("tabindex", "0");
-      codeBlock.appendChild(copyButton);
+        "copy-code absolute right-3 top-3 z-10 inline-flex items-center gap-1.5 rounded border border-skin-line bg-skin-card px-2 py-1 text-xs leading-4 font-medium text-skin-base hover:border-skin-accent hover:text-skin-accent";
+      copyButton.setAttribute("aria-label", copyLabel);
+      copyButton.innerHTML = `${copyIcon}<span class="copy-code-label">${copyText}</span>`;
+      block.appendChild(copyButton);
 
-      // wrap codebock with relative parent element
-      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
-      wrapper.appendChild(codeBlock);
-
-      copyButton.addEventListener("click", async () => {
-        await copyCode(codeBlock, copyButton);
+      copyButton.addEventListener("click", () => {
+        copyCode(block, copyButton);
       });
     }
 
     async function copyCode(block, button) {
-      const code = block.querySelector("code");
-      const text = code?.innerText;
+      const code = block.querySelector("pre code");
+      // textContent preserves the source newlines, unlike innerText which
+      // merges soft-wrapped lines back into one.
+      const text = code?.textContent ?? "";
 
-      await navigator.clipboard.writeText(text ?? "");
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      }
 
-      // visual feedback that task is completed
-      button.innerText = "Copied";
+      button.setAttribute("aria-label", copiedLabel);
+      button.innerHTML = `${checkIcon}<span class="copy-code-label">${copiedText}</span>`;
+      button.classList.add("copy-code-copied");
 
       setTimeout(() => {
-        button.innerText = copyButtonLabel;
-      }, 700);
+        button.setAttribute("aria-label", copyLabel);
+        button.innerHTML = `${copyIcon}<span class="copy-code-label">${copyText}</span>`;
+        button.classList.remove("copy-code-copied");
+      }, 1500);
     }
   }
   attachCopyButtons();

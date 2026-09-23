@@ -24,9 +24,11 @@
     "astro": "^7.2.9",
     "fuse.js": "^7.5.0",
     "lodash.kebabcase": "^4.1.1",
+    "rehype-pretty-code": "^0.14.5",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
     "satori": "^0.33.4",
+    "shiki": "4.3.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
     "zod": "^4.5.4"
