@@ -78,6 +78,9 @@
   .prose a {
     @apply break-words hover:!text-skin-accent;
   }
+  .prose .table-wrapper {
+    @apply overflow-x-auto;
+  }
   .prose thead th:first-child,
   tbody td:first-child,
   tfoot td:first-child {
