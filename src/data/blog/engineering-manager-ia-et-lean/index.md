@@ -10,6 +10,8 @@ ogImage: "./cover.webp"
 language: fr
 tags:
   - engineering-management
+  - lean
+  - ia
 ---
 
 C'est le sixième article de ma série sur ce que le rôle d'engineering
@@ -18,7 +20,7 @@ précédents, ce qui suit n'est ni une méthode ni une vérité générale :
 c'est un retour d'expérience personnel sur ce que l'IA change, ou pas, dans la
 façon dont je conçois le travail d'une équipe d'ingénierie.
 
-Les épisodes précédents portaient sur le [rôle et la posture
+Les épisodes déjà publiés portaient sur le [rôle et la posture
 d'engineering manager](/posts/engineering-manager-role-et-posture), [le 1:1
 et le suivi individuel](/posts/engineering-manager-1-1-et-suivi-individuel),
 [les objectifs et la vision](/posts/engineering-manager-objectifs-et-vision)
@@ -37,14 +39,12 @@ l'apport de valeur de nos contributions.
 
 ## Aller plus vite n'est pas une fin en soi
 
-> « Deux prompts et quinze minutes pour une feature, ça ne fait pas une
-> feature à quinze minutes de valeur. » (moi, en résumant une conversation
-> qui revient souvent)
-
-Le premier réflexe quand on parle d'IA dans une équipe d'ingénierie, c'est la
-vitesse. « On va livrer plus vite. » C'est vrai, et c'est une vraie
-opportunité. Mais la vitesse n'est pas une fin en soi : elle ne devient
-intéressante que si elle s'applique à quelque chose qui a de la valeur.
+Deux prompts et quinze minutes pour une feature ne font pas une feature à
+quinze minutes de valeur. Le premier réflexe quand on parle d'IA dans une
+équipe d'ingénierie, c'est pourtant la vitesse. « On va livrer plus vite. »
+C'est vrai, et c'est une vraie opportunité. Mais la vitesse n'est pas une fin
+en soi : elle ne crée de la valeur que lorsqu'elle s'applique à quelque chose
+qui en a déjà.
 
 Il y a deux façons d'aller plus vite qui ne servent à rien :
 
@@ -53,9 +53,8 @@ Il y a deux façons d'aller plus vite qui ne servent à rien :
 
 Dans les deux cas, la vitesse ne crée rien. Elle produit juste plus vite ce
 qu'on n'aurait pas dû produire, ou elle remplit un tuyau qui ne se vide pas.
-C'est le point que j'essayais de poser dans l'article sur les métriques : la
-seule question qui compte, c'est de savoir si on livre, en valeur, ce qu'on
-avait prévu de livrer. La vitesse ne répond pas à cette question.
+On l'avait vu dans l'article sur les métriques : la seule question qui compte,
+c'est de savoir si on livre, en valeur, ce qu'on avait prévu de livrer.
 
 <figure>
   <svg
@@ -187,14 +186,9 @@ mais réel. Avec l'IA, le coût marginal de production d'une feature,
 d'une fonctionnalité, d'un bout de code, tombe vers zéro. On peut produire du
 muda en quantité industrielle, presque gratuitement.
 
-Ce que ça change, c'est que la chasse au muda devient plus importante
-qu'avant, pas moins. Le frein naturel a disparu : il ne reste que la
-discipline. C'est le cœur de ma lecture des 3M avec l'IA : la technologie
-abaisse le coût de l'erreur, elle n'abaisse pas son coût de réparation.
-
-> « L'IA ne rend pas le travail sans valeur moins cher à porter, elle le rend
-> juste moins cher à produire. » (moi, en essayant de mettre le paragraphe
-> ci-dessus dans une phrase)
+La chasse au muda devient donc plus importante qu'avant, pas moins. Le frein
+naturel a disparu : il ne reste que la discipline, et c'est elle qui empêche
+de remplir le codebase de ce qui n'aurait jamais dû y entrer.
 
 Mais il y a un deuxième visage du muda avec l'IA, et il est vertueux. Le muda,
 dans le logiciel, c'est aussi tout ce toil, toutes ces tâches répétitives qui
@@ -205,20 +199,21 @@ qui est du vrai muda, c'est retirer du gaspillage sans en créer à la place.
 C'est l'usage de l'IA que je trouve le plus sain : pas produire plus, mais
 débarrasser l'équipe de ce qui n'apporte pas de valeur.
 
-## Mura : l'IA et les goulots d'étranglement
+## Mura : l'irrégularité que l'IA amplifie
 
-Le deuxième angle, c'est le mura : l'irrégularité, les à-coups.
+Le deuxième M, c'est le mura : l'irrégularité de la charge, les à-coups.
 
-L'IA accélère la production de code. Mais la production de code n'est pas
-toute la chaîne. Derrière, il y a la revue, la validation, les tests, le
-déploiement, l'analyse, la donnée, les décisions produit. Si l'un de ces
-maillons est le goulot, accélérer la production ne fait que créer du stock :
-du code qui attend, du travail en cours qui s'accumule, des choses qu'on
-commence et qu'on ne finit pas.
+Dans le lean, c'est la cause racine : une charge irrégulière oblige à
+dimensionner l'aval pour les pics, ce qui est de la surcapacité, et quand le
+pic ne passe pas, c'est du stock qui attend. L'irrégularité fabrique donc les
+deux autres M : elle pousse à surcharger (muri), et elle génère du gaspillage
+(muda).
 
-C'est exactement le mura : produire plus vite que le reste de la chaîne ne
-peut absorber, c'est créer de l'irrégularité, des à-coups, du travail qui
-s'empile.
+L'IA, elle, produit par rafales. Zéro code un jour, dix pull requests le
+lendemain, au gré des prompts et de l'élan du moment. Or le reste de la
+chaîne, lui, ne varie pas : la revue, la validation, les tests, le
+déploiement, la donnée, les décisions produit ont une capacité fixe. Résultat
+: du code qui s'accumule, du travail en cours qui ne finit pas.
 
 <figure>
   <svg
@@ -254,18 +249,20 @@ s'empile.
     <text x="280" y="240" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">Produire plus vite que le goulot ne peut absorber, c'est créer du stock.</text>
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
-    L'IA accélère la production, mais si la revue reste le goulot, le code
-    s'accumule avant de passer : du stock, pas de la valeur livrée.
+    Produire par rafales, c'est envoyer à la revue plus qu'elle ne peut
+    absorber : du code qui s'accumule, du stock, pas de la valeur livrée.
   </figcaption>
 </figure>
 
-La logique du lean, ici, c'est de ne pas accélérer plus vite que le goulot
-d'étranglement. Si le goulot, c'est la revue, alors produire deux fois plus de
-pull requests n'a aucun intérêt : ça fait juste deux fois plus de PR à relire.
-L'IA ne déplace pas le goulot ; elle le fait juste apparaître plus vite. Et
-quand on a un goulot, la bonne question n'est pas « comment produire plus
-vite », mais « comment faire passer le goulot plus vite », ou comment ne pas
-lui envoyer ce qui n'a pas de valeur.
+La réponse du lean, c'est le lissage : au lieu de produire par à-coups,
+produire à un rythme régulier que l'aval peut absorber. Concrètement, cela
+veut dire ne pas lancer dix pull requests le même jour, borner ce qu'on envoie
+en revue, ne pas accélérer plus vite que le goulot. Si le goulot, c'est la
+revue, produire deux fois plus n'a aucun intérêt : ça fait juste deux fois
+plus de PR à relire. L'IA ne déplace pas le goulot ; elle le fait juste
+apparaître plus vite. Et quand on a un goulot, la bonne question n'est pas
+« comment produire plus vite », mais « comment faire passer le goulot plus
+vite », ou comment ne pas lui envoyer ce qui n'a pas de valeur.
 
 ## Muri : l'IA qui surcharge
 
@@ -297,7 +294,7 @@ agent IA. Chaque question correspond à un M, et chaque M à un piège :
 | ------------------------------------------------------ | ------------ | ------------------------------------------------------------------ |
 | Ce que je demande a-t-il de la valeur ?                | **Muda**     | La vitesse ne changera rien : ne pas le faire du tout.             |
 | Le goulot est-il en aval ?                             | **Mura**     | Accélérer ne fera que créer du stock : lisser, ou traiter le goulot d'abord. |
-| L'agent est-il fiable, et la relecture soutenable ?    | **Muri**     | Découper, cadrer, ou ne pas déléguer ce qui exige un jugement que l'agent n'a pas. |
+| L'agent est-il fiable pour cette tâche ?               | **Muri**     | Cadrer (découper, contexte), garder une relecture soutenable ; sinon ne pas déléguer ce qui exige un jugement que l'agent n'a pas. |
 
 Un exemple pour rendre la grille concrète : une migration technique que
 l'équipe traîne depuis des mois. Est-ce que ça a de la valeur ? Oui, on retire
@@ -314,6 +311,24 @@ Trois questions, trois angles sur la même obsession : la valeur. Ce n'est pas
 une check-list magique, c'est un réflexe. Et comme pour les autres outils de
 la série, je l'utilise comme un instrument de calibrage : elle ne dit pas quoi
 faire, elle dit où regarder avant de décider.
+
+## Ce que ça change pour le manager
+
+Tout ça a une conséquence directe sur ma façon de concevoir le travail
+d'équipe. Si la production n'est plus le goulot, le rôle du manager change :
+il ne s'agit plus d'aider l'équipe à produire plus, mais de faire en sorte
+que ce qui est produit serve. Concrètement :
+
+- refuser ou faire questionner les sujets sans valeur, même s'ils ne coûtent
+  que deux prompts : un muda refusé est le plus efficace des muda éliminés ;
+- surveiller les goulots d'abord, la production ensuite : si la revue ou la
+  validation est saturée, accélérer la production n'est pas un progrès ;
+- faire des limites de fiabilité des agents un sujet d'équipe, pas une affaire
+  individuelle : savoir ce qu'on peut déléguer sans que la relecture devienne
+  le nouveau goulot, et comment le cadrer ;
+- réorienter la capacité que l'IA libère vers de la valeur, et pas vers plus
+  de production : c'est là que l'IA devient un levier de réduction de muda
+  plutôt qu'une usine à muda.
 
 ## Pour conclure
 
