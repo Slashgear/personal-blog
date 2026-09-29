@@ -31,3 +31,6 @@ pnpm-debug.log*
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# openchamber local artifacts
+.openchamber/

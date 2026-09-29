@@ -293,11 +293,11 @@ doivent rester. Si je devais résumer tout ça en un livrable, ce serait une
 grille de trois questions à se poser avant de déléguer quelque chose à un
 agent IA. Chaque question correspond à un M, et chaque M à un piège :
 
-| Avant de déléguer à un agent…                          | Le M         | Si ça coince                                                       |
-| ------------------------------------------------------ | ------------ | ------------------------------------------------------------------ |
-| Ce que je demande a-t-il de la valeur ?                | **Muda**     | La vitesse ne changera rien : ne pas le faire du tout.             |
-| Le goulot est-il en aval ?                             | **Mura**     | Accélérer ne fera que créer du stock : lisser, ou traiter le goulot d'abord. |
-| L'agent est-il fiable, et la relecture soutenable ?    | **Muri**     | Découper, cadrer, ou ne pas déléguer ce qui exige un jugement que l'agent n'a pas. |
+| Avant de déléguer à un agent…                       | Le M     | Si ça coince                                                                       |
+| --------------------------------------------------- | -------- | ---------------------------------------------------------------------------------- |
+| Ce que je demande a-t-il de la valeur ?             | **Muda** | La vitesse ne changera rien : ne pas le faire du tout.                             |
+| Le goulot est-il en aval ?                          | **Mura** | Accélérer ne fera que créer du stock : lisser, ou traiter le goulot d'abord.       |
+| L'agent est-il fiable, et la relecture soutenable ? | **Muri** | Découper, cadrer, ou ne pas déléguer ce qui exige un jugement que l'agent n'a pas. |
 
 Un exemple pour rendre la grille concrète : une migration technique que
 l'équipe traîne depuis des mois. Est-ce que ça a de la valeur ? Oui, on retire
@@ -322,6 +322,9 @@ change nos manières de travailler, pas notre objectif. Elle rend le gaspillage
 moins cher, elle amplifie les goulots, elle déplace la surcharge, et dans les
 trois cas, la réponse n'est pas dans l'outil, elle est dans une discipline que
 le lean nomme depuis longtemps.
+
+La parenthèse refermée, la série reprend son fil : le prochain épisode
+portera sur [le triangle et le suivi des irritants](/posts/engineering-manager-triangle-et-suivi-des-irritants).
 
 Comme toujours, vous pouvez retrouver l'ensemble de la série via le tag
 [engineering-management](/tags/engineering-management).
