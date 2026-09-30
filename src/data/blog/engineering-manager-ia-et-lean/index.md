@@ -5,7 +5,7 @@ description: >
   parenthèse. L'IA bouleverse nos manières de travailler, pas notre objectif :
   maximiser la valeur apportée. Un détour par le lean et les 3M (Muda, Mura,
   Muri) pour lire ce que l'IA change, et surtout ce qu'elle ne change pas.
-pubDatetime: 2026-10-01
+pubDatetime: 2026-09-30
 ogImage: "./cover.webp"
 language: fr
 tags:
