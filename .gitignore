@@ -23,6 +23,9 @@ pnpm-debug.log*
 # ignore .astro directory
 .astro
 
+# openchamber session artifacts (screenshots, etc.)
+.openchamber/
+
 # yarn
 .yarn/*
 !.yarn/patches
