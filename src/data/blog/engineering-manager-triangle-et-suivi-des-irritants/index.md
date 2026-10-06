@@ -3,25 +3,21 @@ title: "Engineering manager : le triangle et le suivi des irritants"
 description: >
   Septième article de la série sur mon retour d'expérience en tant
   qu'engineering manager. Ce billet porte sur le triangle que forme la
-  relation de management (toi, moi, l'entreprise) et sur le suivi des
+  relation de management (moi, toi, l'entreprise) et sur le suivi des
   irritants remontés en 1:1, pour qu'une remontée serve toujours à quelque
   chose.
 pubDatetime: 2026-10-07
+ogImage: "./cover.webp"
 language: fr
-# TODO(antoine): ajouter l'image de couverture (cover.webp) et décommenter ogImage une fois la piste choisie — ne rien télécharger sans accord.
-# ogImage: "./cover.webp"
 tags:
   - engineering-management
 ---
 
-<!-- TODO(antoine): confirmer la date de publication (2026-10-07 par défaut, un mercredi). -->
-
 C'est le septième article de ma série sur ce que le rôle d'engineering
 manager m'a appris. Comme pour les épisodes précédents, ce qui suit n'est ni
 une méthode ni une vérité générale : c'est un retour d'expérience personnel,
-structuré autour des citations et des principes que des personnes qui ont
-compté dans mon parcours m'ont transmis, et de ce qu'ils m'apportent au
-quotidien.
+une poignée d'idées et de principes que je me suis forgés, et de ce qu'ils
+m'apportent au quotidien.
 
 Les épisodes précédents portaient sur le [rôle et la posture d'engineering
 manager](/posts/engineering-manager-role-et-posture), [le 1:1 et le suivi
@@ -41,8 +37,9 @@ en 1:1, et qui doivent, pour rester vivantes, servir à quelque chose.
 
 ## Le triangle
 
-> « TODO(antoine): mettre ici la citation du brouillon sur le triangle (ou
-> l'idée de départ). »
+> « Un 1:1, ce n'est pas une ligne entre deux personnes : c'est un triangle,
+> et le troisième sommet — l'entreprise — est toujours dans la pièce, même
+> quand personne ne le nomme. » (moi, en résumant ma lecture du 1:1)
 
 Quand j'ai commencé à manager, je voyais la relation avec chaque membre de
 l'équipe comme une ligne : deux personnes en face à face, un 1:1. Avec
@@ -52,36 +49,37 @@ est toujours dans la pièce, même quand personne ne le nomme.
 
 <figure>
   <svg
-    viewBox="0 0 560 360"
+    viewBox="0 0 580 380"
     role="img"
     aria-label="Le triangle du management : trois sommets, Moi en haut, Toi à droite, L'entreprise à gauche, reliés par des flèches doubles indiquant que les questions circulent dans les deux sens, du manager vers le managé et du managé vers le manager"
-    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+    style="width: 100%; max-width: 580px; height: auto; margin: 0 auto; display: block;"
   >
     <defs>
       <marker id="tri-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
         <path d="M0 0 L10 5 L0 10 z" fill="rgb(var(--color-accent))" />
       </marker>
     </defs>
-    <title>Le triangle Toi / Moi / L'entreprise</title>
+    <title>Le triangle Moi / Toi / L'entreprise</title>
     <polygon
-      points="280,60 500,300 60,300"
+      points="290,65 510,315 70,315"
       fill="rgb(var(--color-accent))"
       fill-opacity="0.06"
       stroke="rgb(var(--color-border))"
       stroke-width="1.5"
     />
-    <line x1="478" y1="290" x2="82" y2="290" stroke="rgb(var(--color-border))" stroke-width="1.5" stroke-dasharray="5 4" />
-    <line x1="305" y1="84" x2="470" y2="266" stroke="rgb(var(--color-accent))" stroke-width="2" marker-start="url(#tri-arrow)" marker-end="url(#tri-arrow)" />
-    <line x1="256" y1="84" x2="90" y2="266" stroke="rgb(var(--color-accent))" stroke-width="2" marker-start="url(#tri-arrow)" marker-end="url(#tri-arrow)" />
-    <text x="420" y="150" text-anchor="middle" fill="rgb(var(--color-accent))" font-size="11" font-weight="600">les deux sens</text>
-    <text x="128" y="150" text-anchor="middle" fill="rgb(var(--color-accent))" font-size="11" font-weight="600">les deux sens</text>
-    <circle cx="280" cy="60" r="32" fill="rgb(var(--color-accent))" fill-opacity="0.85" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="280" y="66" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="13" font-weight="700">Moi</text>
-    <circle cx="500" cy="300" r="32" fill="rgb(var(--color-accent))" fill-opacity="0.6" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="500" y="306" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="13" font-weight="700">Toi</text>
-    <circle cx="60" cy="300" r="36" fill="rgb(var(--color-accent))" fill-opacity="0.45" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="60" y="306" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="13" font-weight="700">L'entreprise</text>
-    <text x="280" y="346" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" opacity="0.7">Le 1:1, c'est le côté du triangle que je peux faire vivre.</text>
+    <line x1="128" y1="315" x2="466" y2="315" stroke="rgb(var(--color-border))" stroke-width="1.5" stroke-dasharray="5 4" />
+    <line x1="319" y1="98" x2="481" y2="282" stroke="rgb(var(--color-accent))" stroke-width="2.5" marker-start="url(#tri-arrow)" marker-end="url(#tri-arrow)" />
+    <line x1="261" y1="98" x2="108" y2="272" stroke="rgb(var(--color-accent))" stroke-width="2.5" marker-start="url(#tri-arrow)" marker-end="url(#tri-arrow)" />
+    <text x="290" y="200" text-anchor="middle" fill="rgb(var(--color-accent))" font-size="14" font-weight="600">les deux sens</text>
+    <circle cx="290" cy="65" r="44" fill="rgb(var(--color-accent))" fill-opacity="0.85" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="290" y="72" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="19" font-weight="700">Moi</text>
+    <circle cx="510" cy="315" r="44" fill="rgb(var(--color-accent))" fill-opacity="0.6" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="510" y="322" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="19" font-weight="700">Toi</text>
+    <circle cx="70" cy="315" r="58" fill="rgb(var(--color-accent))" fill-opacity="0.45" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="70" y="308" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="15" font-weight="700">
+      <tspan x="70" dy="0">L'</tspan>
+      <tspan x="70" dy="18">entreprise</tspan>
+    </text>
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
     Ma lecture du 1:1 : pas une ligne entre deux personnes, mais un triangle
@@ -89,21 +87,29 @@ est toujours dans la pièce, même quand personne ne le nomme.
   </figcaption>
 </figure>
 
-Sur chacun des côtés, les questions circulent dans les deux sens. Entre le
-managé et moi, j'ai des questions à lui poser — comment ça va, qu'est-ce qui
-te bloque, qu'est-ce qui te fait du bien — et il en a à me poser aussi : ce
-que j'attends de lui, ce que je peux faire pour lui, ce que je ne peux pas.
+Sur chacun des côtés, les questions circulent dans les deux sens.
+
+Du manager vers le managé, des questions à lui poser en 1:1 :
+
+- comment ça va, vraiment ;
+- qu'est-ce qui te bloque ;
+- qu'est-ce qui te fait du bien.
+
+Du managé vers le manager, ce qu'il a le droit de me demander :
+
+- ce que j'attends de lui ;
+- ce que je peux faire pour lui ;
+- ce que je ne peux pas.
+
 Le premier réflexe, c'est de ne faire circuler qu'un sens : le manager
 questionne, le managé répond. Or la valeur du 1:1, c'est justement de
 laisser la parole aller dans l'autre sens, et de prendre en compte le sommet
 silencieux qui pèse sur les deux autres.
 
-<!-- TODO(antoine): si le brouillon comportait un tableau de questions, le retranscrire ici. Je propose plutôt deux listes à puces (« du manager vers le managé » / « du managé vers le manager »), qui rendent mieux sur mobile qu'une grille large. -->
-
 ## Le triangle se retourne
 
-> « TODO(antoine): mettre ici la citation du brouillon sur le triangle qui
-> se retourne. »
+> « Quand le recrutement bloque au-dessus de ma tête, je redeviens un managé
+> comme les autres : je relaie, j'absorbe, j'explique. » (moi)
 
 Le triangle se retourne quand la situation vous place vous-même du côté de
 celui qui subit. Un recrutement bloqué au-dessus de votre tête, un budget
@@ -121,7 +127,9 @@ faire le trait d'union.
 
 ## Les irritants
 
-> « TODO(antoine): mettre ici la citation du brouillon sur les irritants. »
+> « Un irritant n'est pas un incident : ça ne casse rien, ça use. Et si
+> personne n'y revient, on finit par arrêter de le dire, pas d'en souffrir. »
+> (moi, en résumant ce que j'observe en 1:1)
 
 Un irritant, c'est cette petite chose qui gratte : une doc jamais mise à
 jour, un rituel devenu inutile, une décision mal expliquée, une
@@ -135,8 +143,9 @@ L'irritant n'a pas disparu, il est juste descendu un peu plus profond.
 
 ## Remonter un irritant doit servir à quelque chose
 
-> « TODO(antoine): mettre ici la citation du brouillon sur la boucle de
-> suivi. »
+> « Le problème d'un irritant, ce n'est pas la gêne qu'il provoque : c'est
+> le silence qui s'installe quand on finit par ne plus le remonter. » (moi,
+> en résumant ce que je redoute le plus en 1:1)
 
 Pour qu'une remontée ne soit pas lettre morte, je m'oblige à une petite
 boucle, qui recoupe ce que je décrivais dans l'article sur [le 1:1 et le
@@ -146,10 +155,10 @@ individuel](/posts/engineering-manager-1-1-et-suivi-individuel#le-template-de-pa
 
 <figure>
   <svg
-    viewBox="0 0 560 420"
+    viewBox="0 0 600 470"
     role="img"
     aria-label="La boucle de suivi d'un irritant : remonté en 1:1, noté dans la page de suivi, suivi d'une action ou d'une simple écoute, puis revu au 1:1 suivant avec la question « ça va mieux ? », pour aboutir à résolu, ou non résolu mais expliqué"
-    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+    style="width: 100%; max-width: 600px; height: auto; margin: 0 auto; display: block;"
   >
     <defs>
       <marker id="loop-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
@@ -157,33 +166,36 @@ individuel](/posts/engineering-manager-1-1-et-suivi-individuel#le-template-de-pa
       </marker>
     </defs>
     <title>La boucle de suivi d'un irritant</title>
-    <rect x="56" y="50" width="200" height="62" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="156" y="74" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">1:1</text>
-    <text x="156" y="94" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11">l'irritant est remonté</text>
-    <line x1="256" y1="81" x2="292" y2="81" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
-    <rect x="300" y="50" width="200" height="62" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="400" y="74" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">Page de suivi</text>
-    <text x="400" y="94" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11">on le note pour y revenir</text>
-    <line x1="400" y1="112" x2="400" y2="146" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
-    <rect x="300" y="150" width="200" height="62" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="400" y="174" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">Action ou écoute</text>
-    <text x="400" y="194" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11">une réponse, même passive</text>
-    <line x1="300" y1="181" x2="266" y2="181" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
-    <rect x="56" y="150" width="200" height="62" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="156" y="174" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">1:1 suivant</text>
-    <text x="156" y="194" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11">« ça va mieux ? »</text>
-    <line x1="156" y1="150" x2="156" y2="114" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
-    <line x1="156" y1="212" x2="156" y2="248" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
-    <text x="156" y="238" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11" font-weight="600">Résolu ?</text>
-    <polygon points="156,252 170,266 156,280 142,266" fill="rgb(var(--color-card))" stroke="rgb(var(--color-border))" stroke-width="1.5" />
-    <line x1="170" y1="266" x2="226" y2="266" stroke="rgb(var(--color-accent))" stroke-width="2" marker-end="url(#loop-arrow)" />
-    <rect x="230" y="232" width="150" height="68" rx="8" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
-    <text x="305" y="258" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="12" font-weight="700">Résolu ✓</text>
-    <text x="305" y="278" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="10">on peut le refermer</text>
-    <path d="M156 280 L156 310 L230 310 L230 330" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
-    <rect x="20" y="330" width="272" height="70" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1.5" />
-    <text x="156" y="356" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12" font-weight="700">Non résolu, mais expliqué</text>
-    <text x="156" y="376" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="11">pourquoi ça ne peut pas changer — rien n'est occulté</text>
+    <rect x="40" y="50" width="230" height="68" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="155" y="78" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="14" font-weight="700">1:1</text>
+    <text x="155" y="100" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13">l'irritant est remonté</text>
+    <line x1="270" y1="84" x2="326" y2="84" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
+    <rect x="330" y="50" width="230" height="68" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="445" y="78" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="14" font-weight="700">Page de suivi</text>
+    <text x="445" y="100" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13">on le note pour y revenir</text>
+    <line x1="445" y1="118" x2="445" y2="156" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
+    <rect x="330" y="158" width="230" height="68" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="445" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="14" font-weight="700">Action ou écoute</text>
+    <text x="445" y="208" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13">une réponse, même passive</text>
+    <line x1="330" y1="192" x2="274" y2="192" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
+    <rect x="40" y="158" width="230" height="68" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
+    <text x="155" y="186" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="14" font-weight="700">1:1 suivant</text>
+    <text x="155" y="208" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13">« ça va mieux ? »</text>
+    <line x1="155" y1="158" x2="155" y2="122" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
+    <line x1="155" y1="226" x2="155" y2="258" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
+    <text x="155" y="250" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="13" font-weight="600">Résolu ?</text>
+    <polygon points="155,268 170,283 155,298 140,283" fill="rgb(var(--color-card))" stroke="rgb(var(--color-border))" stroke-width="1.5" />
+    <line x1="170" y1="283" x2="241" y2="283" stroke="rgb(var(--color-accent))" stroke-width="2" marker-end="url(#loop-arrow)" />
+    <rect x="245" y="249" width="170" height="68" rx="8" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+    <text x="330" y="278" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="14" font-weight="700">Résolu ✓</text>
+    <text x="330" y="300" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="12">on peut le refermer</text>
+    <path d="M155 298 L155 335 L220 335 L220 360" fill="none" stroke="rgb(var(--color-border))" stroke-width="2" marker-end="url(#loop-arrow)" />
+    <rect x="20" y="360" width="400" height="100" rx="8" fill="none" stroke="rgb(var(--color-border))" stroke-width="1.5" />
+    <text x="220" y="390" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="14" font-weight="700">Non résolu, mais expliqué</text>
+    <text x="220" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="12">
+      <tspan x="220" y="412">pourquoi ça ne peut pas changer</tspan>
+      <tspan x="220" y="430">— rien n'est occulté</tspan>
+    </text>
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
     Une remontée n'est jamais lettre morte : elle est notée, suivie, revue.
@@ -220,8 +232,8 @@ que je n'ai pas abordés ici. Si vous voulez que je précise un point ou que
 j'aborde un thème en particulier, mes réseaux sont accessibles depuis ce
 blog : écrivez-moi, je serai ravi de vous lire.
 
-Le prochain épisode portera sur TODO(antoine): annoncer le sujet de
-l'article 8. Comme toujours, vous pouvez retrouver l'ensemble de la série
-via le tag [engineering-management](/tags/engineering-management).
+Comme toujours, vous pouvez retrouver l'ensemble de la série via le tag
+[engineering-management](/tags/engineering-management).
 
-<!-- TODO(antoine): phrase de mention de l'image de couverture, selon la piste retenue. Ne pas télécharger sans accord. -->
+_Photo de couverture : [Sepehr Hashemi](https://unsplash.com/fr/@sipbikardi) sur
+[Unsplash](https://unsplash.com/fr/photos/une-table-et-deux-chaises-devant-une-fenetre-8J5YU29ENJo)._
