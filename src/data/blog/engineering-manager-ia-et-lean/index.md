@@ -338,6 +338,9 @@ moins cher, elle amplifie les goulots, elle déplace la surcharge, et dans les
 trois cas, la réponse n'est pas dans l'outil, elle est dans une discipline que
 le lean nomme depuis longtemps.
 
+La parenthèse refermée, la série reprend son fil : le prochain épisode
+portera sur [le triangle et le suivi des irritants](/posts/engineering-manager-triangle-et-suivi-des-irritants).
+
 Comme toujours, vous pouvez retrouver l'ensemble de la série via le tag
 [engineering-management](/tags/engineering-management).
 

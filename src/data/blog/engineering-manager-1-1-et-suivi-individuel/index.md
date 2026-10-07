@@ -714,8 +714,9 @@ Ce hub, c'est en quelque sorte le résumé matériel de cet article. Et les
 notes de chaque 1:1 deviennent des pages enfant de cette page : le suivi
 dans la durée d'un côté, le fil des échanges de l'autre.
 
-Ce que je ne détaille pas ici, c'est ce qu'on se dit réellement en 1:1 et ce
-qu'on cherche à y adresser : c'est un sujet à part entière.
+Ce que je ne détaille pas ici, c'est [ce qu'on se dit réellement en 1:1 et ce
+qu'on cherche à y adresser](/posts/engineering-manager-triangle-et-suivi-des-irritants)
+: c'est un sujet à part entière.
 
 ## Et la suite ?
 
