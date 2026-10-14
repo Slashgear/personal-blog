@@ -162,89 +162,84 @@ subit ; un gel découvert en novembre se vit comme une trahison.
 
 <figure>
   <svg
-    viewBox="0 0 540 360"
+    viewBox="0 0 620 360"
     role="img"
     aria-label="Calendrier annuel d'une équipe : des périodes critiques où les congés de confort sont refusés, un gel technique en fin d'année, des ponts et jours fériés français marqués tout au long de l'année"
-    style="width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block;"
+    style="width: 100%; max-width: 620px; height: auto; margin: 0 auto; display: block;"
   >
     <title>Calendrier annuel d'une équipe, périodes critiques et jours fériés</title>
     <!-- titres des lignes -->
     <g fill="rgb(var(--color-text-base))" font-size="11" text-anchor="end" opacity="0.8">
-      <text x="52" y="52">Périodes critiques</text>
-      <text x="52" y="108">Ponts et fériés</text>
-      <text x="52" y="164">Gel technique</text>
-      <text x="52" y="220">Reste de l'année</text>
+      <text x="138" y="58">Périodes critiques</text>
+      <text x="138" y="114">Ponts et fériés</text>
+      <text x="138" y="170">Gel technique</text>
+      <text x="138" y="226">Reste de l'année</text>
     </g>
     <!-- bande de l'année, partagée en 4 lignes -->
     <g stroke="rgb(var(--color-border))" stroke-width="1" fill="none">
-      <rect x="60" y="32" width="450" height="40" rx="3" />
-      <rect x="60" y="88" width="450" height="40" rx="3" />
-      <rect x="60" y="144" width="450" height="40" rx="3" />
-      <rect x="60" y="200" width="450" height="40" rx="3" />
+      <rect x="148" y="36" width="450" height="40" rx="3" />
+      <rect x="148" y="92" width="450" height="40" rx="3" />
+      <rect x="148" y="148" width="450" height="40" rx="3" />
+      <rect x="148" y="204" width="450" height="40" rx="3" />
     </g>
     <!-- mois (en bas) -->
     <g fill="rgb(var(--color-text-base))" font-size="10" text-anchor="middle">
-      <text x="79" y="256">Jan</text><text x="116" y="256">Fév</text><text x="154" y="256">Mar</text>
-      <text x="191" y="256">Avr</text><text x="229" y="256">Mai</text><text x="266" y="256">Juin</text>
-      <text x="304" y="256">Juil</text><text x="341" y="256">Aoû</text><text x="379" y="256">Sep</text>
-      <text x="416" y="256">Oct</text><text x="454" y="256">Nov</text><text x="491" y="256">Déc</text>
+      <text x="167" y="262">Jan</text><text x="204" y="262">Fév</text><text x="241" y="262">Mar</text>
+      <text x="279" y="262">Avr</text><text x="316" y="262">Mai</text><text x="354" y="262">Juin</text>
+      <text x="391" y="262">Juil</text><text x="429" y="262">Aoû</text><text x="466" y="262">Sep</text>
+      <text x="504" y="262">Oct</text><text x="541" y="262">Nov</text><text x="578" y="262">Déc</text>
     </g>
     <!-- PÉRIODES CRITIQUES -->
     <!-- mi-février → fin mars -->
-    <rect x="118" y="32" width="54" height="40" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
-    <text x="145" y="50" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9" font-weight="700">Critique</text>
-    <text x="145" y="64" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9">bouclage Q1</text>
+    <rect x="206" y="36" width="54" height="40" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+    <text x="233" y="60" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9" font-weight="700">Critique</text>
     <!-- mi-septembre → fin octobre -->
-    <rect x="348" y="32" width="67" height="40" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
-    <text x="381" y="50" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9" font-weight="700">Critique</text>
-    <text x="381" y="64" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9">rentrée + release</text>
+    <rect x="435" y="36" width="67" height="40" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+    <text x="468" y="60" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9" font-weight="700">Critique</text>
     <!-- PONTS ET FÉRIÉS ( France ) -->
     <g fill="rgb(var(--color-border))" fill-opacity="0.7">
       <!-- 1er mai -->
-      <rect x="225" y="88" width="8" height="40" />
+      <rect x="312" y="92" width="8" height="40" />
       <!-- 8 mai -->
-      <rect x="240" y="88" width="8" height="40" />
+      <rect x="327" y="92" width="8" height="40" />
       <!-- Ascension (mi-mai) -->
-      <rect x="249" y="88" width="8" height="40" />
+      <rect x="336" y="92" width="8" height="40" />
       <!-- Lundi Pentecôte -->
-      <rect x="258" y="88" width="8" height="40" />
+      <rect x="345" y="92" width="8" height="40" />
       <!-- 14 juillet -->
-      <rect x="298" y="88" width="8" height="40" />
+      <rect x="386" y="92" width="8" height="40" />
       <!-- Assomption 15 août -->
-      <rect x="335" y="88" width="8" height="40" />
+      <rect x="423" y="92" width="8" height="40" />
       <!-- Toussaint 1er nov -->
-      <rect x="408" y="88" width="8" height="40" />
+      <rect x="496" y="92" width="8" height="40" />
       <!-- 11 novembre -->
-      <rect x="448" y="88" width="8" height="40" />
+      <rect x="536" y="92" width="8" height="40" />
       <!-- Noël + jour de l'an -->
-      <rect x="485" y="88" width="14" height="40" />
+      <rect x="573" y="92" width="14" height="40" />
     </g>
-    <text x="375" y="106" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" opacity="0.7">ponts et fériés français</text>
     <!-- GEL TECHNIQUE : décembre -->
-    <rect x="475" y="144" width="35" height="40" fill="rgb(var(--color-border))" fill-opacity="0.55" />
-    <text x="492" y="162" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" font-weight="700">Gel</text>
-    <text x="492" y="176" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9">tech</text>
+    <rect x="563" y="148" width="35" height="40" fill="rgb(var(--color-border))" fill-opacity="0.55" />
+    <text x="580" y="172" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" font-weight="700">Gel</text>
     <!-- RESTE DE L'ANNÉE : zones flexibles -->
     <g fill="rgb(var(--color-accent))" fill-opacity="0.18">
-      <rect x="60" y="200" width="58" height="40" />
-      <rect x="172" y="200" width="53" height="40" />
-      <rect x="266" y="200" width="32" height="40" />
-      <rect x="343" y="200" width="5" height="40" />
-      <rect x="355" y="200" width="120" height="40" />
+      <rect x="148" y="204" width="58" height="40" />
+      <rect x="260" y="204" width="52" height="40" />
+      <rect x="354" y="204" width="81" height="40" />
+      <rect x="443" y="204" width="120" height="40" />
     </g>
-    <text x="280" y="226" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" opacity="0.7">congés de confort possibles</text>
+    <text x="373" y="228" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" opacity="0.7">congés de confort possibles</text>
     <!-- légende -->
     <g fill="rgb(var(--color-text-base))" font-size="10">
-      <rect x="60" y="284" width="14" height="10" rx="2" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
-      <text x="80" y="293">Période critique</text>
-      <rect x="190" y="284" width="14" height="10" rx="2" fill="rgb(var(--color-border))" fill-opacity="0.7" />
-      <text x="210" y="293">Pont ou férié</text>
-      <rect x="305" y="284" width="14" height="10" rx="2" fill="rgb(var(--color-border))" fill-opacity="0.55" />
-      <text x="325" y="293">Gel technique</text>
-      <rect x="415" y="284" width="14" height="10" rx="2" fill="rgb(var(--color-accent))" fill-opacity="0.18" />
-      <text x="435" y="293">Zone flexible</text>
+      <rect x="148" y="286" width="14" height="10" rx="2" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
+      <text x="168" y="295">Période critique</text>
+      <rect x="278" y="286" width="14" height="10" rx="2" fill="rgb(var(--color-border))" fill-opacity="0.7" />
+      <text x="298" y="295">Pont ou férié</text>
+      <rect x="393" y="286" width="14" height="10" rx="2" fill="rgb(var(--color-border))" fill-opacity="0.55" />
+      <text x="413" y="295">Gel technique</text>
+      <rect x="503" y="286" width="14" height="10" rx="2" fill="rgb(var(--color-accent))" fill-opacity="0.18" />
+      <text x="523" y="295">Zone flexible</text>
     </g>
-    <text x="285" y="316" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" opacity="0.6">Calendrier illustratif à adapter à votre équipe et à votre entreprise.</text>
+    <text x="373" y="318" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" opacity="0.6">Calendrier illustratif à adapter à votre équipe et à votre entreprise.</text>
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
     Les périodes critiques et le gel technique se communiquent en avance. Les
