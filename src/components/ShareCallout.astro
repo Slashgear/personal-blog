@@ -1,0 +1,228 @@
+---
+import LinkButton from "./LinkButton.astro";
+import socialIcons from "@assets/socialIcons";
+import pictureOfMe from "@assets/picture-of-me.png";
+import { Image } from "astro:assets";
+import { shareLinks } from "@utils/shareLinks";
+
+interface Props {
+  lang?: "fr" | "en";
+}
+
+const { lang } = Astro.props;
+
+const URL = Astro.url;
+
+const message =
+  lang === "en"
+    ? "Hey! Like this article? Why not share it on your social networks?"
+    : "Hey ! Cet article te plaît ? Et si tu le partageais sur tes réseaux ?";
+
+const title =
+  lang === "en" ? "Share this post" : "Partager cet article";
+---
+
+<div id="share-callout" class="share-callout" data-share-callout aria-hidden="true" inert>
+  <div class="share-callout-anchor">
+    <div class="share-callout-inner">
+      <aside class="share-callout-card">
+        <Image
+          src={pictureOfMe}
+          alt=""
+          width={64}
+          height={64}
+          quality={85}
+          class="share-callout-avatar"
+        />
+        <p class="share-callout-message">{message}</p>
+        <ul class="share-callout-links">
+          {
+            shareLinks.map(social => (
+              <li>
+                <LinkButton
+                  href={`${social.href}${URL}`}
+                  title={social.linkTitle}
+                >
+                  <Fragment set:html={socialIcons[social.name]} />
+                  <span class="sr-only">{social.linkTitle}</span>
+                </LinkButton>
+              </li>
+            ))
+          }
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<style>
+  @reference "../styles/base.css";
+
+  .share-callout {
+    /* Never shown on small screens/tablets. */
+    @apply hidden;
+  }
+
+  @media (min-width: 1024px) {
+    .share-callout {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      /* The overlay itself is click-through; only the card is interactive. */
+      pointer-events: none;
+    }
+
+    /* Mirrors the grid container (main is max-w-5xl mx-auto px-4) so that
+       an absolutely-positioned child aligns with the right column at any
+       viewport width >= lg, matching the TableOfContents column. */
+    .share-callout-anchor {
+      position: absolute;
+      inset: 0;
+    }
+
+    .share-callout-inner {
+      position: relative;
+      max-width: 64rem;
+      margin-inline: auto;
+      height: 100%;
+      padding-inline: 1rem;
+    }
+
+    .share-callout-card {
+      position: absolute;
+      right: 1rem;
+      bottom: 1.5rem;
+      @apply flex w-60 flex-col items-center gap-3 rounded-xl border border-skin-line bg-skin-card p-4;
+      opacity: 0;
+      transform: translateY(0.75rem);
+      visibility: hidden;
+      box-shadow:
+        0 10px 30px -10px rgb(0 0 0 / 0.35),
+        0 0 0 1px rgb(0 0 0 / 0.05);
+      transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        visibility 0.45s;
+    }
+
+    .share-callout[data-share-callout="visible"] {
+      pointer-events: none;
+    }
+
+    .share-callout[data-share-callout="visible"] .share-callout-card {
+      pointer-events: auto;
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+
+    .share-callout-avatar {
+      @apply aspect-square rounded-full border-2 border-skin-accent/50;
+      height: 4rem;
+      width: 4rem;
+      object-fit: cover;
+    }
+
+    .share-callout-message {
+      @apply m-0 text-center text-sm leading-5;
+    }
+
+    .share-callout-links {
+      @apply m-0 flex list-none items-center justify-center gap-2 p-0;
+    }
+
+    .share-callout-links a {
+      @apply rounded p-1.5 text-skin-base hover:text-skin-accent;
+    }
+
+    .share-callout-links svg.icon-tabler {
+      @apply h-5 w-5;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .share-callout-card {
+      transition: none;
+    }
+  }
+</style>
+
+<script is:inline data-astro-rerun>
+  (() => {
+    const callout = document.getElementById("share-callout");
+    if (!callout) return;
+
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    // Desktop only — the callout is display:none on smaller screens.
+    const desktop = window.matchMedia("(min-width: 1024px)");
+
+    // Tunable thresholds: only reveal on long-ish articles, once the
+    // reader has scrolled well into the body, and hide before the
+    // footer share block so we don't double up.
+    const MIN_ARTICLE_PX = 1200; // page must be this long to ever show
+    const MIN_SCROLL_PX = 400; // px scrolled into the article body
+    const ENTER_RATIO = 0.3; // reveal at 30% of the article
+    const EXIT_RATIO = 0.85; // fade out at 85% of the article
+
+    let visible = false;
+    let ticking = false;
+
+    const setVisible = show => {
+      if (show === visible) return;
+      visible = show;
+      if (show) {
+        callout.setAttribute("data-share-callout", "visible");
+        callout.removeAttribute("inert");
+        callout.setAttribute("aria-hidden", "false");
+      } else {
+        callout.removeAttribute("data-share-callout");
+        callout.setAttribute("inert", "");
+        callout.setAttribute("aria-hidden", "true");
+      }
+    };
+
+    const update = () => {
+      ticking = false;
+
+      // Never show on non-desktop viewports.
+      if (!desktop.matches) {
+        setVisible(false);
+        return;
+      }
+
+      const top = article.getBoundingClientRect().top + window.scrollY;
+      const height = article.getBoundingClientRect().height;
+
+      if (height < MIN_ARTICLE_PX) {
+        setVisible(false);
+        return;
+      }
+
+      const scrolled = window.scrollY - top;
+      const ratio = height > 0 ? scrolled / height : 0;
+      const show =
+        scrolled >= MIN_SCROLL_PX &&
+        ratio >= ENTER_RATIO &&
+        ratio <= EXIT_RATIO;
+
+      setVisible(show);
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    // Re-evaluate when crossing the desktop breakpoint.
+    desktop.addEventListener("change", update);
+
+    // Evaluate once in case the page loads while already scrolled.
+    update();
+  })();
+</script>

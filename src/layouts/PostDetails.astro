@@ -8,6 +8,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import TableOfContents from "@components/TableOfContents.astro";
+import ShareCallout from "@components/ShareCallout.astro";
 import { SITE } from "@config";
 import { render } from "astro:content";
 import { Image, getImage } from "astro:assets";
@@ -304,6 +305,7 @@ const nextPost =
     }
   </main>
   <Footer />
+  <ShareCallout lang={language === "en" ? "en" : "fr"} />
 </Layout>
 
 <style>
