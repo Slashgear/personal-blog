@@ -7,8 +7,7 @@ description: |
   dépourvu, et faire du calendrier un vrai outil de management.
 pubDatetime: 2026-10-14
 language: fr
-# TODO(antoine): ajouter l'image de couverture (cover.webp) et décommenter ogImage une fois la piste choisie. Ne rien télécharger sans accord.
-# ogImage: "./cover.webp"
+ogImage: "./cover.webp"
 tags:
   - engineering-management
 ---
@@ -472,3 +471,6 @@ le tag [engineering-management](/tags/engineering-management).
 
 <!-- TODO(antoine): phrase de mention de l'image de couverture, selon la piste
 retenue. Ne pas télécharger sans accord. -->
+
+_Photo de couverture : [Jess Bailey](https://unsplash.com/fr/@jessbaileydesigns)
+sur [Unsplash](https://unsplash.com/fr/photos/a-notepad-with-a-pen-next-to-it-daom3fHSVMQ)._
