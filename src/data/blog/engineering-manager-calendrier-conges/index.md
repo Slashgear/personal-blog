@@ -7,7 +7,7 @@ description: |
   dépourvu, et faire du calendrier un vrai outil de management.
 pubDatetime: 2026-10-14
 language: fr
-# TODO(antoine): ajouter l'image de couverture (cover.webp) et décommenter ogImage une fois la piste choisie — ne rien télécharger sans accord.
+# TODO(antoine): ajouter l'image de couverture (cover.webp) et décommenter ogImage une fois la piste choisie. Ne rien télécharger sans accord.
 # ogImage: "./cover.webp"
 tags:
   - engineering-management
@@ -38,7 +38,7 @@ pouvez retrouver tous les articles de la série sur la page du tag
 Ce billet-ci se concentre sur le calendrier de l'équipe et la gestion des
 congés et des absences : comment faire du calendrier un outil de management à
 part entière, anticiper les absences, s'assurer qu'on n'est jamais pris au
-dépourvu, et garder l'équipe couverte — et sereine — toute l'année.
+dépourvu, et garder l'équipe couverte, et sereine, toute l'année.
 
 ## Le constat : des congés sous responsabilité de manager
 
@@ -68,7 +68,7 @@ calendrier est un outil de management à part entière. Et un outil, ça se
 regarde. **Ce qui n'est pas regardé n'est pas géré** : les soldes qui
 s'ennuient en silence, ça ne se corrige pas tout seul.
 
-## Un rappel du droit du travail — avec les vraies règles
+## Un rappel du droit du travail, avec les vraies règles
 
 > « Ce n'est pas parce que c'est légal que c'est souhaitable. Et ce n'est
 > pas parce que c'est illégal que ça n'arrive pas. » (moi, après quelques
@@ -78,14 +78,14 @@ On n'est pas juriste. Mais il y a une poignée de règles que j'ai dû
 apprendre, souvent par l'erreur, et qui permettent de savoir ce qui se
 négocie et ce qui se décide. Tout salarié acquiert **2,5 jours ouvrables de
 congés payés par mois de travail**, dans la limite de **30 jours ouvrables
-par an** — cinq semaines ([L. 3141-3 du code du
+par an**, soit cinq semaines ([L. 3141-3 du code du
 travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033020826)).
 Ça, c'est commun à tout le monde.
 
 La grande différence entre un salarié non cadre et un cadre se joue
 ailleurs : sur le **forfait jours** et les jours qu'on appelle « RTT ». Les
-RTT ne sont pas un droit automatique. Au forfait jours — 218 jours par an en
-général, fixé par accord —, ce qu'on appelle RTT sont en réalité des **jours
+RTT ne sont pas un droit automatique. Au forfait jours (218 jours par an en
+général, fixé par accord), ce qu'on appelle RTT sont en réalité des **jours
 de repos supplémentaires**, dont l'existence comme les modalités de prise
 dépendent de l'accord d'entreprise ([L. 3121-58 du code du
 travail](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033003228)).
@@ -108,7 +108,7 @@ méconnus, y compris de managers expérimentés. Les voici :
 
 2. **Les congés imposés par l'employeur.** L'employeur fixe les dates de
    départ et l'ordre des départs ([L. 3141-16](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000035652687)),
-   et il peut fermer l'établissement — auquel cas l'accord du salarié pour
+   et il peut fermer l'établissement, auquel cas l'accord du salarié pour
    fractionner n'est pas requis ([L. 3141-19](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033020751)).
    Et s'il a validé des dates, il ne peut plus les modifier moins d'un mois
    avant le départ, sauf circonstances exceptionnelles. En clair : le manager
@@ -132,7 +132,7 @@ méconnus, y compris de managers expérimentés. Les voici :
 
 Et l'humilité qui va avec : tout ce qui précède est un rappel de grands
 principes, pas un conseil juridique. **Chaque entreprise est couverte par
-des accords de branche et d'entreprise qui ajustent ces règles** — périodes
+des accords de branche et d'entreprise qui ajustent ces règles** : périodes
 de report, compte épargne temps, jours de fractionnement… Avant de
 communiquer quoi que ce soit à l'équipe sur des soldes ou des échéances, je
 passe la question aux RH. Mon réflexe : je ne diffuse jamais une information
@@ -146,7 +146,7 @@ erreur là-dessus est vécue très durement par un salarié.
 > source)
 
 Je fonctionne avec des modèles, que j'ai trouvés dans des livres de
-management dont j'ai perdu la source — je l'assume, à charge pour vous
+management dont j'ai perdu la source, je l'assume, à charge pour vous
 d'aller creuser. Le premier, c'est d'identifier les **périodes charnières**
 de l'année de l'équipe : celles où un sous-effectif se ferait vraiment
 sentir. Un lancement, une échéance client, un trimestre de bouclage.
@@ -155,13 +155,13 @@ Ces périodes-là, on les **annonce** à l'équipe, explicitement et en avance.
 J'appelle les plus critiques des **périodes rouges** : pas de congés de
 confort, seuls les congés pour raison impérieuse sont acceptés. Attention,
 « raison impérieuse » se définit : sinon, l'arbitraire entre en scène et
-tout le monde le sent. C'est d'ailleurs le piège classique — une période
+tout le monde le sent. C'est d'ailleurs le piège classique : une période
 rouge sans définition, c'est juste une excuse pour dire non au dernier
 arrivé.
 
 Il y a aussi les **périodes de gel technique** : pas de mise en production,
 pas de changement de feature. Ce n'est pas la même chose qu'une période
-rouge — on peut y poser des congés — mais il faut que l'équipe le sache pour
+rouge (on peut y poser des congés), mais il faut que l'équipe le sache pour
 ne pas construire une roadmap sur du sable. Un gel annoncé en janvier se
 subit ; un gel découvert en novembre se vit comme une trahison.
 
@@ -186,24 +186,24 @@ subit ; un gel découvert en novembre se vit comme une trahison.
     <rect x="118" y="46" width="44" height="52" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
     <text x="140" y="68" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9" font-weight="700">Rouge</text>
     <text x="140" y="82" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9">trimestre</text>
-    <text x="140" y="96" text-anchor="middle" fill="rgb(var(--color-border))" font-size="9">—</text>
+    <text x="140" y="96" text-anchor="middle" fill="rgb(var(--color-border))" font-size="9"></text>
     <!-- période rouge : mi-septembre → début novembre -->
     <rect x="348" y="46" width="67" height="52" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
     <text x="381" y="68" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9" font-weight="700">Rouge</text>
     <text x="381" y="82" text-anchor="middle" fill="rgb(var(--color-fill))" font-size="9">release</text>
-    <text x="381" y="96" text-anchor="middle" fill="rgb(var(--color-border))" font-size="9">—</text>
+    <text x="381" y="96" text-anchor="middle" fill="rgb(var(--color-border))" font-size="9"></text>
     <!-- gel technique : décembre -->
     <rect x="435" y="46" width="75" height="52" fill="rgb(var(--color-border))" fill-opacity="0.55" />
     <text x="472" y="68" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9" font-weight="700">Gel</text>
     <text x="472" y="82" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9">technique</text>
-    <text x="472" y="96" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9">—</text>
+    <text x="472" y="96" text-anchor="middle" fill="rgb(var(--color-text-base))" font-size="9"></text>
     <!-- légende -->
     <rect x="88" y="160" width="16" height="12" rx="2" fill="rgb(var(--color-accent))" fill-opacity="0.85" />
-    <text x="110" y="170" fill="rgb(var(--color-text-base))" font-size="11">Période rouge — congés de confort refusés, raisons impérieuses acceptées</text>
+    <text x="110" y="170" fill="rgb(var(--color-text-base))" font-size="11">Période rouge : congés de confort refusés, raisons impérieuses acceptées</text>
     <rect x="88" y="184" width="16" height="12" rx="2" fill="rgb(var(--color-border))" fill-opacity="0.55" />
-    <text x="110" y="194" fill="rgb(var(--color-text-base))" font-size="11">Gel technique — pas de mise en production</text>
+    <text x="110" y="194" fill="rgb(var(--color-text-base))" font-size="11">Gel technique : pas de mise en production</text>
     <rect x="88" y="208" width="16" height="12" rx="2" fill="none" stroke="rgb(var(--color-border))" stroke-width="1" />
-    <text x="110" y="218" fill="rgb(var(--color-text-base))" font-size="11">Reste de l'année — congés de confort possibles</text>
+    <text x="110" y="218" fill="rgb(var(--color-text-base))" font-size="11">Reste de l'année : congés de confort possibles</text>
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
     Exemple illustratif de calendrier annuel : les périodes rouges et les gels
@@ -226,14 +226,14 @@ de trois habitudes que j'essaie de tenir.
 **Exiger un délai.** J'aime bien demander aux personnes de poser leurs
 congés environ un mois avant le départ. Ce délai laisse le temps de regarder
 la couverture, de décaler une réunion, de redistribuer un sujet. Une demande
-arrivée la veille pour le lendemain met tout le monde sous tension —
+arrivée la veille pour le lendemain met tout le monde sous tension,
 inutilement.
 
 **Répondre vite.** Le réflexe « j'y répondrai au prochain 1:1 » est un
 piège. Une demande de congés, c'est le moment où votre managé vous tend un
 sujet qui le touche personnellement ; la laisser sans réponse, c'est lui
 envoyer que ses congés sont un embêtement qu'on remet à plus tard. Répondre
-rapidement — ne serait-ce qu'un « c'est noté, je te confirme demain » —,
+rapidement, ne serait-ce qu'un « c'est noté, je te confirme demain »,
 c'est montrer l'exemple. Et c'est cohérent avec une conviction de toute la
 série : **si vous voulez que votre équipe fasse quelque chose, commencez par
 le faire vous-même.**
@@ -255,17 +255,17 @@ Prenons une hypothèse courante : congés payés soldés **de mai à mai**, RTT
 soldées au **31 décembre**. Dans ce cadre, je me suis fixé quatre jalons de
 rappel, un par trimestre à peu près :
 
-- **1er septembre** — le point de la rentrée : ce qui reste sur la fin de
+- **1er septembre** : le point de la rentrée, ce qui reste sur la fin de
   l'année, ce qui n'a pas été consommé l'été, avec un focus sur les RTT qui
   se solderont au 31 décembre.
-- **1er décembre** — le point de fin d'année : les derniers RTT et, si votre
+- **1er décembre** : le point de fin d'année, les derniers RTT et, si votre
   entreprise le permet, les sujets de **compte épargne temps**. Et un conseil
   pratique : le service RH est lui aussi en congés en fin d'année. Ce n'est
   pas le 22 décembre qu'on règle un passage en CET.
-- **1er mars** — le point sur les congés qui se solderont à fin mai. C'est le
+- **1er mars** : le point sur les congés qui se solderont à fin mai. C'est le
   jalon qui m'évite le scénario d'un mois de mai où 80 % de l'équipe est
   absente. Je l'ai vécu une fois ; on ne le vit pas deux fois.
-- **1er juin** — le point d'avant l'été : organiser les absences, vérifier la
+- **1er juin** : le point d'avant l'été, organiser les absences, vérifier la
   couverture de juillet et d'août pendant que tout le monde est encore là
   pour en discuter.
 
@@ -281,7 +281,7 @@ rappel, un par trimestre à peu près :
     <!-- axe -->
     <line x1="70" y1="150" x2="500" y2="150" stroke="rgb(var(--color-border))" stroke-width="2" />
     <text x="70" y="172" text-anchor="start" fill="rgb(var(--color-text-base))" font-size="10" opacity="0.7">début du solde de congés (mai)</text>
-    <text x="500" y="172" text-anchor="end" fill="rgb(var(--color-text-base))" font-size="10" opacity="0.7">31 déc — solde des RTT</text>
+    <text x="500" y="172" text-anchor="end" fill="rgb(var(--color-text-base))" font-size="10" opacity="0.7">31 déc : solde des RTT</text>
     <!-- noeuds -->
     <g fill="rgb(var(--color-accent))">
       <circle cx="95" cy="150" r="7" />
@@ -323,12 +323,12 @@ rappel, un par trimestre à peu près :
   </svg>
   <figcaption style="text-align: center; font-size: 0.875rem; margin-top: 0.5rem;">
     Quatre jalons dans l'année, chacun avec son focus. L'hypothèse des soldes
-    est à adapter à votre entreprise — encore une fois, demandez aux RH.
+    est à adapter à votre entreprise, encore une fois, demandez aux RH.
   </figcaption>
 </figure>
 
 Concrètement, ce n'est pas une réunion de plus. J'envoie un **message privé
-à chaque managé** avec l'état de son solde — jours restants, échéance — et
+à chaque managé** avec l'état de son solde (jours restants, échéance) et
 ça suffit dans la grande majorité des cas à déclencher la pose. Pas de
 tableau d'honneur, pas de réunion dédiée : juste l'information, juste au bon
 moment. Le geste est minuscule ; il change tout, parce qu'il dit « tes
@@ -353,7 +353,7 @@ l'avance, connues de tous. Quelques principes qui m'aident :
   exemple : les congés d'été se posent avant telle date, ensuite on arbitre
   ensemble, calmement, avant que l'angoisse ne monte.
 - **Premier arrivé, premier servi** comme règle par défaut, avec des
-  exceptions assumées — contraintes familiales, départs impératifs.
+  exceptions assumées (contraintes familiales, départs impératifs).
   L'important, c'est que la règle soit connue avant d'en avoir besoin.
 - **La transparence.** Quand je refuse ou que j'arbitre, j'explique le
   raisonnement à toute l'équipe concernée, pas seulement à l'intéressé. Ça
@@ -362,8 +362,8 @@ l'avance, connues de tous. Quelques principes qui m'aident :
 
 Et un dernier point, peut-être le plus important : même en conflit, la
 conversation reste humaine. On parle de semaines de repos de personnes
-réelles, souvent de familles. Une règle claire ne remplace pas l'empathie du
-refus — elle la rend possible.
+réelles, souvent de familles. Une règle claire ne remplace pas l'empathie
+du refus, c'est elle qui le rend possible.
 
 ## Et la suite ?
 
