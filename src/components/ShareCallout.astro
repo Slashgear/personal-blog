@@ -92,11 +92,10 @@ const title =
     .share-callout-card {
       position: absolute;
       right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 1.5rem;
       @apply flex w-60 flex-col items-center gap-3 rounded-xl border border-skin-line bg-skin-card p-4;
       opacity: 0;
-      transform: translateY(calc(-50% + 0.75rem));
+      transform: translateY(0.75rem);
       visibility: hidden;
       box-shadow:
         0 10px 30px -10px rgb(0 0 0 / 0.35),
@@ -114,7 +113,7 @@ const title =
     .share-callout[data-share-callout="visible"] .share-callout-card {
       pointer-events: auto;
       opacity: 1;
-      transform: translateY(-50%);
+      transform: translateY(0);
       visibility: visible;
     }
 
