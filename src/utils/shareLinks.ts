@@ -6,28 +6,28 @@
  */
 export const shareLinks = [
   {
-    name: "WhatsApp",
-    href: "https://wa.me/?text=",
-    linkTitle: `Share this post via WhatsApp`,
+    name: "Slack",
+    href: "https://slack.com/share?url=",
+    linkTitle: `Share this post on Slack`,
   },
   {
-    name: "Facebook",
-    href: "https://www.facebook.com/sharer.php?u=",
-    linkTitle: `Share this post on Facebook`,
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/sharing/share-offsite/?url=",
+    linkTitle: `Share this post on LinkedIn`,
   },
   {
-    name: "Telegram",
-    href: "https://t.me/share/url?url=",
-    linkTitle: `Share this post via Telegram`,
+    name: "Bluesky",
+    href: "https://bsky.app/intent/compose?text=",
+    linkTitle: `Share this post on Bluesky`,
   },
   {
-    name: "Pinterest",
-    href: "https://pinterest.com/pin/create/button/?url=",
-    linkTitle: `Share this post on Pinterest`,
+    name: "Reddit",
+    href: "https://www.reddit.com/submit?url=",
+    linkTitle: `Share this post on Reddit`,
   },
   {
-    name: "Mail",
-    href: "mailto:?subject=See%20this%20post&body=",
-    linkTitle: `Share this post via email`,
+    name: "X",
+    href: "https://twitter.com/intent/tweet?url=",
+    linkTitle: `Share this post on X`,
   },
 ] as const;
