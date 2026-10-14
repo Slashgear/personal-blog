@@ -258,44 +258,14 @@ ponts de la figure à votre calendrier réel. -->
 
 ## Les ponts et les jours fériés
 
-> « En France, on a onze jours fériés. Et le réflexe de faire le pont,
-> lui, n'est pas férié. » (moi, en regardant un mois de mai s'effondrer)
+En général, j'identifie les ponts et les jours fériés à l'avance et je les
+suggère à mon équipe. Sauf si ça tombe sur une période critique.
 
-On a tendance à oublier les jours fériés jusqu'à ce qu'ils nous tombent
-dessus. La France en compte **onze jours fériés légaux**, et les ponts en
-rajoutent une couche. Un calendrier d'équipe qui ne les anticipe pas est un
-calendrier qui se casse la figure en mai.
-
-La période la plus redoutée, c'est le mois de mai : 1er mai, 8 mai,
-Ascension, lundi de Pentecôte. Quatre jours fériés, dont trois tombent
-souvent en milieu de semaine, et qui, si on fait le pont, transforment le
-mois en pointillés. Ajoutez-y les congés payés de printemps, et vous pouvez
-vous retrouver avec une équipe à 30 % d'effectif sur trois semaines. À
-découvrir le 2 mai, c'est trop tard.
-
-Mon réflexe, c'est de **cartographier les fériés dès le début de l'année**,
-avant que quiconque ne pose ses congés. Le 1er mai et le 8 mai sont fixes ;
-l'Ascension et Pentecôte glissent, mais ils sont connus des années à
-l'avance. Le 14 juillet et l'Assomption en juillet-août ont un effet
-double : ils raccourcissent la semaine, et ils attirent les congés. La
-Toussaint, le 11 novembre et Noël ferment l'année en pointillés.
-
-À partir de là, deux choses :
-
-- **Identifier les semaines « à risque ».** Les semaines qui contiennent un
-  férié en milieu de semaine sont celles où le pont se fera, et où les
-  demandes de congés vont affluer. Les anticiper, c'est les gérer.
-- **Adapter les rituels.** Un daily le lundi de Pentecôte, ça ne se tient
-  pas. Une rétro la semaine d'Ascension, ça se décale. Les sprints qui
-  tombent sur une semaine à trois jours, ça se redimensionne. Le calendrier
-  des rituels de l'équipe se construit en fonction des fériés, pas en dépit
-  d'eux.
-
-L'anticipation des ponts n'est pas un détail de RH. C'est un sujet de
-delivery : une semaine à 30 % d'effectif, ce n'est pas une semaine de
-production, c'est une semaine de maintenance. Si vous le savez, vous
-cadrez vos releases en conséquence ; si vous l'ignorez, c'est l'incident de
-production qui vous le rappellera.
+C'est aussi simple que ça. Pas besoin d'en faire un chapitre : la France a ses
+onze jours fériés, ils sont connus des années à l'avance, et le réflexe de
+faire le pont est légitime. Le seul travail du manager, c'est de regarder le
+calendrier en début d'année, de repérer les semaines qui vont se vider, et
+de les signaler tôt pour que les gens s'organisent avant que ça coince.
 
 ## Poser un congé : le contrat implicite
 
