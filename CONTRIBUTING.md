@@ -104,6 +104,8 @@ bun run build          # runs `astro check` first, then the build
 
 `bun run build` is the closest local equivalent to what CI runs, so make sure it passes.
 
+If the build feels slow, `bun run build:timings` prints where the time goes (build phases, Vite and Markdown plugins, slowest pages, image transforms). Image optimization is by far the largest share today.
+
 ## Reporting issues
 
 Open an issue and include the page URL, what you expected, and what happened. Screenshots are welcome for visual or accessibility problems.

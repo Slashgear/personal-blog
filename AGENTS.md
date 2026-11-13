@@ -15,6 +15,7 @@ Guidance for AI agents working in this repository. For human-facing guidance, se
 bun install           # install dependencies
 bun run dev           # dev server on http://localhost:4321
 bun run build         # astro check + astro build (equivalent of CI gate)
+bun run build:timings # build + per-phase/plugin/page/image timing report (Astro 7.4+)
 bun run preview       # preview production build
 bun run sync          # regenerate astro content types
 bun run format        # oxfmt --write .
