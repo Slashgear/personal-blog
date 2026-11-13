@@ -5,6 +5,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
+    "build:timings": "astro build --timings",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
