@@ -17,6 +17,11 @@ events:
     site: https://touraine.tech/
     link: https://touraine.tech/talk/cmgah8mo800fj1elbs7lmahsn?day=2
     video: https://www.youtube.com/watch?v=QzjJQZqn5z4
+  - name: BDX I/O 2026
+    date: 1793367000000
+    site: https://bdxio.fr/
+    link: https://bdxio.fr/talks/861
+    video: https://www.youtube.com/watch?v=rzhar026b8k
 cospeakers:
   - name: Mathieu Mure
     site: https://twitter.com/mathieumure?lang=fr
